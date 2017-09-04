@@ -1,0 +1,262 @@
+   <h1>Petit lexique du NuTyXien</h1>
+
+    <a name='ID000'></a>
+    <h2>Cards</h2>
+     <p>
+      Cards signifie 'Create, Add, Remove and Download System' (Système de Création , d'Ajout, de Suppression et de Téléchargement des <a href="#ID005">paquets</a>).
+      C'est un jeu d'utilitaires pour la gestion de vos logiciels installés sur votre NuTyX-linux.
+     <p>
+      Cards permet également la gestion des <a href="#ID005">dépendances</a> pour la compilation.
+      Il gére les <a href="#ID005">dépendances</a> pour le fonctionnement de manière autonome.
+      Cela signifie que dans 95 % des cas, les <a href="#ID005">dépendances</a> pour le fonctionnement ne doivent pas être spécifiées dans la <a href="#ID060">recette</a> de construction.
+
+    <a name='ID005'></a>
+    <h2>Un paquet</h2>
+     <p>
+      Un paquet est une archive contenant un ensemble de fichiers.
+      Ces fichiers peuvent être de différente nature.
+      On y trouvera des librairies, des applications en ligne de commande,
+      des applications utilisées dans un environnement graphique, 
+      des informations de configuration, etc
+     <p>
+      Lorsque le paquet est installé sur votre NuTyX, il sera géré par le 
+      gestionnaire de <a href="#ID005">paquets</a> <a href="#ID000">cards</a>
+     <p>
+      <b>Syntaxe d'une archive</b></p>
+      <ul>
+       <li>
+        <b>name</b>: (nom-du-port)
+       <li>
+        <b>.group-name</b>: seulement si le paquet fait partie d'un groupe. Voir configuration: 'PKGMK_GROUPS'
+       <li>
+        <b>.locale-name</b>: seulement si le paquet fait partie d'une locale. Voir configuration: 'PKGMK_LOCALES'
+       <li>
+        <b>build-version</b>: Unité de temps en 10 chiffres représentant la date de construction du paquet. Voir aussi 'PKGMK_BUILDVER'
+       <li>
+        <b>architecture</b>: &quot;any&quot; ou l'architecture pour laquelle le paquet est destiné: par ex. ("$(uname -m)" x86_64)
+       <li>
+        <b>.extension</b>: l'extension prédéfinie par cards sans compression.
+       <li>
+        <b>.compression-extension</b>: seulement si le paquet est compressé. Voir configuration: 'PKGMK_COMPRESS_PACKAGE'
+      </ul>
+
+    <a name='ID010'></a>
+    <h2>Une collection</h2>
+     <p>
+      Une collection regroupe un jeu de <a href="#ID005">paquets</a> qui constitue un ensemble de fonctionnalités.
+     <p>
+      Losque vous installez le système de base depuis l'ISO MINI ou depuis le <a href="#ID050">script</a>,
+      vous installez la <a href="http://nutyx.org/fr/?branch=stable&arch=x86_64&searchpkg=base">collection base</a>.
+     <p>
+      Par exemple, la <a href="http://nutyx.org/fr/?branch=stable&arch=x86_64&searchpkg=gui">collection gui</a> permet d'avoir une inteface utilisateur graphique. 
+      Sur cette interface graphique, on choisira son gestionnaire de fenêtres favori.
+     <p>
+      Sous NuTyX, il est possible d'installer les <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=kde5">collections kde5</a>,
+      <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=gnome">gnome</a>,
+      <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate">mate</a>
+      ou <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=xfce4">xfce4</a>.
+ 
+    <a name='ID006'></a>
+    <h2>Une dépendance</h2>
+     <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est necessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
+     <p>Le <a href="#ID005">paquet</a> <i>gtk3</i> est une dépendance utilisée par de nombreux <a href="#ID005">paquets</a> de la <a href="./?branch=stable&arch=x86_64&searchpkg=gnome">collection gnome</a>
+
+    <a name='ID020'></a>
+    <h2>Une famille</h2>
+     <p>
+      Sous NuTyX, une famille de <a href="#ID005">paquets</a> désigne un ensemble de <a href="#ID005">paquets</a> dont le commencement du nom est commun (paquet père): 
+      Un exemple de famille de <a href="#ID005">paquets</a> sous NuTyX:</p>
+     <ul>
+      <li>
+       gstreamer1
+      <li>
+       gstreamer1-plugins-bad
+      <li>
+       gstreamer1-plugin-good
+      <li>
+       gstreamer1-plugin-libav
+      <li>
+       gstreamer1-...
+     </ul>
+      <p>
+       Une famille de <a href="#ID005">paquets</a> se trouve toujours dans une même <a href="#ID010">collection</a>
+      <p>
+       Une famille de <a href="#ID005">paquets</a> peut partager les mêmes variables telles que la <b>version</b>, les <b>sources</b>, etc
+
+    <a name='ID025'></a>
+    <h2>Un groupe</h2>
+     <p>
+      Un groupe de paquets constitue un ensemble de paquets fournissant un usage précis,
+      par exemple le <a href="./?branch=stable&arch=x86_64&searchpkg=devel">groupe devel</a> fournira les outils necessaires pour la compilation.
+     <p>
+      Le nom du groupe d'un paquet est déterminé par la partie du nom qui suit le point.
+     <p>
+      Chaque locale constitue également un groupe de paquets.
+     <p>
+      Par exemple, le paquet <b>gcc.devel</b> fait partie du groupe <b>devel</b>.
+     <p>
+      La plupart des paquets sont répartis dans ces groupes.
+     <p>
+      Les groupes actuels sont: <a href="./?branch=stable&arch=x86_64&searchpkg=devel">devel</a>, <a href="./?branch=stable&arch=x86_64&searchpkg=man">man</a>,
+      <a href="./?branch=stable&arch=x86_64&searchpkg=doc">doc</a>, lib et
+      <a href="./?branch=stable&arch=x86_64&searchpkg=service">service</a> ainsi que chaque locale disponible
+     <b>
+      fr, de, da, it, pt, tr, ru, sv, nn, es, nl et fi</b>
+
+    <a name='ID030'></a>
+    <h2>Une catégorie</h2>
+     <p>Une catégorie définie un ensemble d'applications ayant des fonctionnalités similaires: 
+     Un exemple typique de catégorie est "Internet" qui regroupera les navigateurs, 
+     les client d'email, clients discussions instantanées, etc</p>
+
+    <a name='ID040'></a>
+    <h2>Le système de base</h2>
+     <p>
+      Le système de base de NuTyX est constitué d'un ensemble minimum de <a href="#ID005">paquets</a> qui ne sera JAMAIS supprimé.
+     <p>
+      La liste des <a href="#ID005">paquets</a> à garder lors du retour à un système de base est définie
+      dans le fichier <i>/etc/cards.conf</i>. Le mot clé en début de ligne est: <i>base</i>.
+
+    <a name='ID050'></a>
+    <h2>Un script</h2>
+     <p>
+      Le script est utilisé, comme en cinéma, pour définir chaque action 
+      devant être exécutée par l'interpréteur. Dans le cadre de cet article, 
+      le script sera donc l'ensemble des actions ordonnées à faire pour 
+      la construction d'un <a href="#ID005">paquet</a>.
+     <p>
+      Un script peut également être utilisé pour installer 
+      une NuTyX depuis une autre distribution linux ou depuis une autre 
+      NuTyX déjà installée.
+
+    <a name='ID060'></a>
+    <h2>Une recette</h2>
+     <p>Une recette définie la construction d'un <a href="#ID005">paquet</a>. 
+     Sous NuTyX, la recette d'un <a href="#ID005">paquet</a> se trouve dans 
+     le fichier <a href="#ID080">Pkgfile</a>.
+
+    <a name='ID070'></a> 
+    <h2>Un port</h2>
+     <p>
+      Sur NuTyX, un port est constitué d'un dossier contenant tous les fichiers 
+      necessaires pour la construction d'un <a href="#ID005">paquet</a>. 
+      Il contiendra toujours au minimum un fichier appelé <a href="#ID080">Pkgfile</a>.
+     <p>
+      Le port peut également, dans certains cas, contenir  un <a href="#ID050">script</a> de 
+     pré-installation ou de post-installation. Il peut également contenir 
+     un fichier README décrivant diverses options, actions, configutations possibles du port.
+     <p>
+      Le terme <i>port</i> fait référence à un dépot distant contenant des <i>ports</i> et
+     utilise un programme client capable de télécharger ces <i>ports</i> depuis ce dépot distant
+     <p>
+      NuTyX utilise l'utilitaire <i>ports</i> pour le téléchargement des <i>ports</i> depuis 
+     le dépot distant et les place dans le dossier <i>/usr/ports/&lt;nom_de_<a href="#ID010">collection</a>&gt;</i>
+
+    <a name='ID080'></a> 
+    <h2>Le fichier 'Pkgfile'</h2>
+     <p>
+      Le Pkgfile est un fichier texte. Il contient 
+     la <a href="#ID060">recette</a> de construction d'une application. 
+     Le résultat de la construction sera un <a href="#ID005">paquet</a> 
+     qui pourra être installé par le gestionnaire de 
+     <a href="#ID005">paquets</a> <a href="#ID000">cards</a>
+     Le contenu de ce fichier texte suit un schéma standard et est composé de trois parties:
+     <ol>
+      <li>
+        Les informations générales (optionnelles mais vivement recommandées) sur le <a href="#ID005">paquet</a>: Description, URL, Developeur(s), Empaqueteu(r), <a href="#ID006">dépendances</a>
+      <li>
+        Les informations indispensables pour la construction du <a href="#ID005">paquet</a>:
+      Nom, version, release
+      <li>
+        La fonction "build" définit la construction proprement dite du <a href="#ID005">paquet</a>.
+     </ol>
+     <p>
+        Il est indispensable de placer le fichier <a href="#ID080">Pkgfile</a> dans un dossier portant le même nom que la variable <i>name</i> définie dans ce fichier <a href="#ID080">Pkgfile</a>.
+     <p>
+      Exemple d'un tel Pkgfile situé dans le dossier <i>monpaquet</i>:
+      <pre class="output"># Depends on: glib atk
+
+description="Mon premier paquet"
+url="http://downloads.nutyx.org"
+packager="tnut <tnut@nutyx.org>"
+
+name=monpaquet
+version=1.0
+release=1
+source=(${url}/files/$name-$version.tar.xz)
+
+build() {
+
+cd ${name}-$version
+
+./configure --prefix=/usr \
+--disable-static
+
+make
+
+make DESTDIR=$PKG install
+}</pre>     
+
+    <a name='ID100'></a>
+    <h2>Une chroot</h2>
+     <p>
+      Une chroot est un environnement de travail dans lequel on construit toutes les <a href="#ID060">recettes</a> provenant de différents <a href="#ID070">ports</a>.
+      Votre NuTyX principale n'utilise pas et donc n'a pas de paquets de développement installés. 
+     <p>
+      Sous NuTyX, une chroot est indispensable les raisons suivantes:
+      <ul>
+       <li>
+        L'environnement de travail étant isolé de la distribution principale
+       <li>
+        Etant isolé, votre chroot ne pourra jamais endommager le système d'exploitation hôte.
+       <li>
+        La chroot étant une NuTyX fraîchement installée, vous controlez entierement les dépendances nécessaires.
+       <li>
+        La chroot vous assure qu'aucune <a href="#ID006">dépendance</a> ne sera installée depuis ou sur le système d'exploitation hôte à votre insus.
+     </ul>
+    <a name='ID200'></a>
+    <h2>Les niveaux</h2>
+     <p>
+      Lorsque <a href="#ID000">cards</a> compile un <a href="#ID005">paquet</a>,
+      il doit connaître le niveau de compilation de celui-ci.
+     <p>
+      Chaque <a href="#ID005">paquet</a> peut ou pas contenir des <a href="#ID006">dépendances</a>.
+     <p>
+      Si un <a href="#ID005">paquet</a> appelé <i>AAAA</i> ne contient aucune <a href="#ID006">dépendance</a>s, il sera au premier Niveau cad 0 (zero).
+     <p>
+      Si un paquet appelé <i>BBBB</i> contient une <a href="#ID006">dépendance</a> appelé <i>AAAA</i>, ce paquet sera au deuxième Niveau, cad 1.
+     <p>
+      La liste des <a href="#ID006">dépendances</a> de compilation d'un <a href="#ID005">paquet</a> 
+      se définie à la ligne:
+<pre class="output"># Depends on: glib atk pango gtk xorg-libx11</pre> du <a href="#ID080">Pkgfile</a>.
+
+     <a name='ID300'></a>
+    <h2>Les alias</h2>
+     <p>
+      Il faut savoir que certaines commandes mentionnées sur les pages du site peuvent être remplacées par des alias,
+      c'est à dire un racourci de la commande originale. Si vous souhaitez connaître la liste des alias, utilisez la commande:
+<pre class="command_user"><kbd>alias</kbd></pre>
+     <p>Si vous souhaitez modifier les alias définis dans votre NuTyX,
+     vous devez éditer le fichier <b><span style="color: #007a00;">.bashrc</span></b> qui se trouve dans le dossier personnel du compte concerné.
+     <div>Extrait de <b>/root/.bashrc</b>:</div>
+     <pre class="output">if [ -f "/etc/bashrc" ] ; then
+  source /etc/bashrc
+fi
+if [ $EUID -eq 0 ]; then
+         alias del='cards remove'
+         alias get='cards install'
+         alias up='cards install -u'
+         alias check='cards sync;cards diff'
+else
+         alias del='sudo cards remove'
+         alias get='sudo cards install'
+         alias up='sudo cards install -u'
+         alias check='sudo cards sync;sudo cards diff'
+fi
+alias search='cards search'
+alias ll='ls -l'
+alias l='ls -alh'
+alias duh='du -h --max-depth=1'
+alias dfh='df -h'
+alias pkgfind='cards list| grep -i'
+# End ~/.bashrc</pre>

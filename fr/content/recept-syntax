@@ -1,0 +1,70 @@
+ <h1>La syntaxe d'une recette</h1>
+  <p>
+   Un paquet est défini par la collection qui l'héberge,
+   le fichier de pré-installation,
+   le fichier de post-installation et
+   la recette contenue dans le fichier <b>Pkgfile</b>.
+  <h2>Collection</h2>
+  <h2><name>.pre-install</h2>
+  <h2><name>.post-install</h2>
+  <h2>Le Pkgfile</h2>
+   <p>
+    Le Pkgfile est composé de 3 parties:
+    <ul>
+     <li>
+      La liste des dépendances
+     <li>
+      Les variables d'initialisation
+     <li>
+      La fonction de construction build() { ..}
+     </ul> 
+   <h3># Depends on:</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+   <h3>description</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+   <h3>url</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+   <h3>packager</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+   <h3>maintainer</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+   <h3>name</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+    <h4>Exemple</h4>
+   <h3>version</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+    <h4>Exemple</h4>
+   <h3>release</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+    <h4>Exemple</h4>
+   <h3>source</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+    <h4>Exemple</h4>
+   <h3>build() { ... }</h3>   
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+    <h4>Exemple</h4>
+  

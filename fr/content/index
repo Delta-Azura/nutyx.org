@@ -1,0 +1,133 @@
+  <div style="float:right;clear=right;">
+    <img src=http://downloads.nutyx.org/ScreenShots/1406572766.png   width="400" height="270" >
+  </div>
+
+  <h1>Bienvenue</h1>
+   <p>
+    NuTyX est une distribution GNU/Linux complète très flexible grâce au concept des <a href="dictionary#ID010">collections</a>. 
+    Vous trouverez un jeu identique de <a href="packages">paquets</a> en 32 bits et en 64 bits.
+   <p>
+    Elle se base sur la documentation du site <a href="http://www.linuxfromscratch.org">LFS</a>
+    et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
+   <p>
+    Il est bon de posséder quelques connaissances sur le système GNU/Linux.
+   <p>
+    C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine
+    et développer leur connaîssances sur les fonctionnements d'une distribution GNU/Linux.
+   <p>
+    NuTyX propose les interfaces graphiques 
+   <a href="http://www.gnome.org">GNOME</a>, 
+   <a href="http://www.mate-desktop.com">MATE</a>, 
+   <a href="http://www.lxde.org">LXDE</a>, 
+   <a href="http://www.kde.org">KDE5</a> 
+   et <a href="http://www.xfce.org">XFCE</a> en binaires.
+   <p>
+    Une <a href="documentation">documentation</a> très détaillée est disponible en ligne.
+   <p>
+    NuTyX dispose de son propre gestionnaire 
+   de <a href="dictionary#ID005">paquets</a> 
+   <a href="dictionary#ID000">CARDS</a></p>
+   <p>
+    Vous pouvez <a href="faq#4">choisir</a> d'utiliser le système de <a href="dictionary#ID070">ports</a>,
+    compiler et installer vos <a href="dictionary#ID005">paquets</a> depuis leurs sources,
+    ils seront intégrés nativement au système, leur gestion sera transparente.
+ 
+    <div style="font-size:150%"><b>Les 10 atouts de NuTyX</b></div>     
+ 
+    <ol>
+     <li>
+      Sa capacité d'être installée depuis quasi n'importe quelle autre distribution 
+      grâce à l'utilisation d'un <a href="http://downloads.nutyx.org/install-nutyx">script bash</a> 
+      qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
+      Le script fait un check des outils necessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
+      Tous les détails et explications se trouvent <a href="install-offline">ici</a>
+     <br>
+     <br>
+     <li>
+      La hiérarchie des <a href="dictionary#ID010">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilitée maximale dans la gestion de ceux-ci.
+      Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
+      Les quelques commandes ci-dessous donnent une petite idée de la flexibilitée des <a href="dictionary#ID010">collections</a>. 
+      Imaginez que vous ayez installé un bureau kde5 avec les applications classiques: libreoffice, firefox, etc etc.
+      Vous souhaitez remplacer l'environnement graphique <a href="http://www.kde.org">kde5</a> 
+      par l'environnement graphique <a href="http://www.gnome.org">gnome</a> sans devoir tout réinstaller et sans perdre vos applications classiques:
+      <pre class="command"><kbd>init 3</kbd></pre>
+      Vous vous loguez en console non graphique avec votre compte ou celui de root et tapez:
+      <pre class="command"><kbd>del kde5 kde5-extra
+get gnome gnome-extra
+init 5</kbd></pre>
+      et vous êtes sur gnome, toutes vos autres applications sont là et fonctionnelles et vous n'avez même pas rebooté.
+     <br>
+     <br>
+     <li>
+      La syntaxe d'une <a href="dictionary#ID060">recette</a> d'un <a href="dictionary#ID005">paquet</a> est probablement la plus simple que l'on puisse trouver.
+      Elle peux s'écrire dans la plupart des cas en moins de 10 lignes. 
+      Les <a href="dictionary#ID006">dépendances</a> (si on le souhaite) peuvent également être gérées.
+      Les <a href="dictionary#ID005">paquets</a> personnels créés localement peuvent également être gérés par
+      le gestionnaire de <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
+     <br>
+     <br>
+     <li>
+      Une fois installée dans un dossier, il est très facile de produire une ISO de sa NuTyX.
+      L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
+     <br>
+     <br>
+     <li>
+      Un <a href="dictionary#ID005">paquet</a> est constitué de plusieurs "parties" un <a href="dictionary#ID005">paquet</a> "dit de base" indispensable 
+      au fonctionnement du système d'exploitation et ses sous-<a href="dictionary#ID005">paquets</a> (optionnels). 
+      Comme exemple de sous-<a href="dictionary#ID005">paquets</a> 
+      on trouve les locales, la documentation, les fichiers nécessaires au développement.
+     <br>
+     <br>
+     <li>
+      La création d'une partition ou disque séparé pour la séparation des 
+      données personnelles et du système est superflue en effet, l'installateur 
+      est capable de (ré)installer NuTyX sans avoir à formater.
+     <br>
+     <br>
+     <li>
+      L'installateur ne FORMATTERA JAMAIS de son propre gré une partition cible pour l'installation de NuTyX.
+      Cela signifie que NuTyX peut être installée sur une partition contenant (par exemple) ses données personnelles, 
+      des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes
+     <br>
+     <br>
+     <li>
+      Une simple commande permet de revenir sur <a href="dictionary#ID040">un système de base</a> et permet par exemple de changer complètement son environnement graphique 
+      (par ex. de KDE vers XFCE) sans devoir tout réinstaller et sans devoir tout retélécharger, les <a href="dictionary#ID005">paquets</a> déjà téléchargés (et à jour) seront simplement réinstallés.
+     <br>
+     <br>
+     <li>
+      Le gestionnaire de <a href="dictionary#ID005">paquets</a> tout à fait unique écrit spécialement pour les besoins de NuTyX.
+      Il est constitué de modules cohérents et extensibles. <b>Un de ses points fort est certainement la possibilité 
+      de trouver automatiquement les <a href="dictionary#ID006">dépendances</a> pour le fonctionnement d'un <a href="dictionary#ID005">paquet</a></b>.
+     <br>
+     <br>
+     <li>
+      Tous les <a href="dictionary#ID005">paquets</a> sont soigneusement compilés par <a href="dictionary#ID200">niveau</a> dans un <a href="build-bot">serveur de compilation</a> dédié.
+      Après compilation, toutes les <a href="dictionary#ID006">dépendances</a> de fonctionnement des <a href="dictionary#ID005">paquets</a> sont revérifiées pour ne pas avoir de liens cassés.
+     <br>
+     <br>
+    </ol>
+   <p>
+    L'équipe vous accueille sur:
+    <ul>
+     <li>
+      <a class="url" href="http://webchat.freenode.net/?channels=nutyx">le salon de discussions #nutyx sur irc.freenode.org</a>.
+     <li>
+      <a class="url" href="https://discord.gg/jgeSWVr">le salon discord de NuTyX</a>.
+    </ul>
+   <p>
+    Retrouvez NuTyX sur les platformes:
+    <ul>
+     <li>
+      <a class="url" href="https://fr.wikipedia.org/wiki/NuTyX">Wikipédia</a>
+     <li>
+       <a class="url" href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g">YouTube</a>
+     <li>
+       <a class="url" href="https://plus.google.com/u/0/communities/115738264560160961893">Google+</a> 
+     <li>
+      <a class="url" href="https://twitter.com/nutyx_linux">twitter</a>
+     <li>
+       <a class="url" href="https://www.facebook.com/groups/62674847880/">facebook</a>
+    </ul>
+   <p>
+    NuTyX peut "vous ouvrir toutes les portes du libre", à vous de décider de les passer ou pas.

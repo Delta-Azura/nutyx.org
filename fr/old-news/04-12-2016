@@ -1,0 +1,57 @@
+<h1>Le 04-12-2016</h1>
+ <h2>NuTyX 8.2.91 disponible avec cards 2.1.100</h2>
+  <p>
+   L'équipe de NuTyX est très fière de vous proposer une nouvelle version de dévelopement de NuTyX 8.2.91 .
+  <p>
+   Près de  1000 commits depuis la version 8.2
+    <p>
+     Une nouvelle iso est disponible en 64 bits. La taille est 217M.
+     <ul>
+      <li>
+      linux lts 4.4.8 -> 4.4.38
+      <li>
+      linux 4.7.4 -> 4.8.12
+      <li>
+      cards 2.1.94 -> 2.1.100
+      <li>
+      util-linux 2.28.1 -> 2.29
+      <li>
+      btrfs-progs 4.6 -> btrfs 4.8.3
+      <li>
+      curl 7.50.1 -> 7.51.0
+      <li>
+      sqlite 3.11.1 -> 3.15.2
+      <li>
+      dhcpcd 6.11.2 -> 6.11.5
+      <li>
+      cups 2.1.4 -> 2.2.1
+      <li>
+      python 3.5.1 -> python 3.5.2
+      <li>
+      gtk 3.20.9 -> 3.22.4
+      <li>
+      kf5 5.26 -> 5.28
+      <li>
+      plasma 5.7.95 -> 5.8.4
+      <li>
+      mate 1.14 -> 1.16
+     </ul>
+ <h2>Le kernel et kernel-lts</h2>
+    <p>
+     Avec cette version de NuTyX, il n'y a plus necessaire de spécifier une initrd,
+     les systèmes de fichiers courants sont compilés dans le kernel.
+ <h2>Le wifi</h2>
+     <p>
+      Pour la gestion du wifi, c'est désormais le paquet networkmanager qui est préféré.
+      Sa grand souplesse permet de configurer votre wifi très facilement.
+     Pour cette raison, l'outil wicd basé sur python est désormais déprécié et sera probablement supprimé à l'avenir.
+  <h2>Le site NuTyX</h2>
+    <p>
+     Le moteur de recherche des paquets s'est étoffé. On peut rechercher
+     dans la branche de developement ou stable, spécifier une arch et une collection.
+     Un lien vers la recette de construction est désormais disponible.
+    <p>
+     Les derniers messages du forum sont désormais affiché sur le site.
+  <h2>La traduction en multiple langues a commencé</h2>
+    <p>
+    Si vous souhaitez participer à la traduction de cards dans votre langue maternelle, soyez le bienvenue 

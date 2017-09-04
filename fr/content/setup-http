@@ -1,0 +1,40 @@
+<h1>Mise en place d'un serveur HTTP</h1>
+ <h2>Introduction</h2>
+  <p>
+   Un serveur http peut s'avérer utile si l'on souhaite par exemple tester des pages html sur un vrai serveur.
+   Si l'on souhaite créer son propre site web familial uniquement accéssible depuis la maison ou pourquoi pas le rendre disponible sur la toile
+ <h2>Les paquets à installer</h2>
+  <p>
+   Pour installer et activer le service http, vous allez voir c'est très simple.
+   On ouvre un terminal:
+   <pre class="command_user"><kbd>get apache apache.service</kbd></pre>
+  <p>
+   Et voilà, l'installation est déjà terminée. 
+ <h2>Configuration</h2>
+  <p>
+   La configuration par défaut du serveur http apache est basique, 
+   il est donc recommendé de procéder à une configuration personnalisée.
+  <p>
+   On commence par se créer un fichier html personnalisé
+  <p>
+   En root donc:
+   <pre class="command"><kbd>cat &gt; /srv/www/index.html &lt;&lt; EOF
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;HTML&gt;
+   &lt;HEAD&gt;
+      &lt;TITLE&gt;Bienvenue sur votre serveur HTML&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;BODY&gt;
+    &lt;H1&gt;Votre serveur http NuTyX fonctionne&lt;/H1&gt;
+      &lt;P&gt;Bonjour tout le monde !
+   &lt;/BODY&gt;
+&lt;/HTML&gt;
+EOF</kbd></pre>
+ <h2>Lancement du service</h2>
+  <p>
+   On active le service http via le terminal toujours en root:
+   <pre class="command"><kbd>/etc/rc.d/init.d/httpd start</kbd></pre>
+   <pre class="output">  *   Starting Apache HTTP daemon... [  OK  ]</pre>
+  <p>
+   Vous pouvez vérifier le bon fonctionnement de votre serveur http, en allant à l'adresse: <a href=http://localhost/>http://localhost/</a> avec votre navigateur favori.

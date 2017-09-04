@@ -1,0 +1,282 @@
+   <h1>Mise en place d'un serveur de compilation</h1>
+    <h2>Introduction</h2>
+     <div class="important">
+        <img alt="[Important]" src="../graphics/caution.gif" />
+        <img alt="[Important]" src="../graphics/caution.gif" />
+        <img alt="[Important]" src="../graphics/caution.gif" />
+        <img alt="[Important]" src="../graphics/caution.gif" />
+        Cet article s'adresse à un public qui maîtrise parfaitement sa NuTyX et la construction de binaires.
+     </div>
+     <div class="important">
+        Toutes les manipulations DOIVENT se faire dans un MÊME terminal. Ne pas utiliser plus d'un terminal
+     </div>
+    <h2>Les étapes</h2>
+     <p>
+      On va:
+     <ol>
+      <li>
+       Installer les outils.
+      <li>
+       Choisir la collection en spécifiant les bonnes variables.
+      <li>
+       Mettre en place le dossier utilisateur.
+      <li>
+       Récupérer les recettes depuis le projet git.
+       <li>
+       Mettre en place les dossiers pour le script de compilation.
+     <li>
+       Récupérer les binaires disponibles depuis le serveur de dépot.
+      <li>
+       Mettre en place le fichier de configuration <b>/etc/fstab</b>.
+      <li>
+       Et enfin lancer le script.
+     </ol>
+     <h2>Les outils (paquets à installer)</h2>
+      <p>
+       On part du principe que votre NuTyX est vierge de tout paquet de dévelopement.
+       On commence donc par installer les utilitaires:
+       <pre class="command_user"><kbd>get rsync git</kbd></pre>
+     <h2>Configuration de l'architecture</h2>
+      <p>
+       La première variables pour notre travail définie sur l'architecture (32 ou 64 Bits):
+       <pre class="command_user"><kbd>ARCH=`uname -m`</kbd></pre>
+     <h2>Choix de la version</h2>
+      <p>
+       Les paquets de NuTyX sont disponibles dans 3 versions.
+       Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
+       <table>
+        <caption>
+         <EM>
+          Liste des version disponibles, copiez-collez les variables en fonction de votre choix:
+         </EM>
+         <tr class="sidebar">
+          <th>
+           Version
+          <th>
+           Branche
+         <th>
+          Variables à utiliser
+        <tr class="even">
+         <td>
+          stable
+         <td>
+          stable
+         <td>
+         <pre class="command_user"><kbd>VERSION=stable
+BRANCH=stable</kbd></pre>
+         <tr class="odd">
+          <td>
+           current
+          <td>
+           current
+          <td>
+           <pre class="command_user"><kbd>VERSION=current
+BRANCH=current</kbd></pre>
+         <tr class="even">
+          <td>
+           development
+         <td>
+           master
+         <td>
+          <pre class="command_user"><kbd>VERSION=development
+BRANCH=master</kbd></pre>
+       </table>
+      
+     <h2>Structure des projects disponibles</h2>
+      <p>
+       Choisissez la collection et la version que vous souhaitez travailler.
+       Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
+      <table>
+       <caption>
+        <EM>
+         Liste des collections disponibles par project, copiez-collez les variables en fonction de votre choix:
+        </EM>
+       </caption>
+       <tr class="sidebar">
+        <th>
+         Collection
+        <th>
+         Projet
+        <th>
+         Variables à utiliser
+       <tr class="even">
+        <td>
+         base
+        <td>
+         core
+        <td>
+         <pre class="command_user"><kbd>PROJECT=core
+COLLECTION=base
+RSYNC=(base)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         cli
+        <td>
+         core
+        <td>
+         <pre class="command_user"><kbd>PROJECT=core
+COLLECTION=cli
+RSYNC=(base cli)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         gui
+        <td>
+         core
+        <td>
+         <pre class="command_user"><kbd>PROJECT=core
+COLLECTION=gui
+RSYNC=(base cli gui)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         cli-extra
+        <td>
+         extra
+        <td>
+         <pre class="command_user"><kbd>PROJECT=extra
+COLLECTION=cli-extra
+RSYNC=(base cli cli-extra)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         gui-extra
+        <td>
+         extra
+        <td>
+         <pre class="command_user"><kbd>PROJECT=extra
+COLLECTION=gui-extra
+RSYNC=(base cli gui cli-extra gui-extra)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         mate et mate-extra
+        <td>
+         mate
+        <td>
+         <pre class="command_user"><kbd>PROJECT=mate
+COLLECTION=mate
+RSYNC=(base cli gui)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         gnome et gnome-extra
+        <td>
+         gnome
+        <td>
+         <pre class="command_user"><kbd>PROJECT=gnome
+COLLECTION=gnome
+RSYNC=(base cli gui)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         xfce4 et xfce4-extra
+        <td>
+         xfce4
+        <td>
+         <pre class="command_user"><kbd>PROJECT=xfce4
+COLLECTION=xfce4
+RSYNC=(base cli gui)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         kde5 et kde5-extra
+        <td>
+         kde5
+        <td>
+         <pre class="command_user"><kbd>PROJECT=kde5
+COLLECTION=kde5
+RSYNC=(base cli gui)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         nup et nup-extra
+        <td>
+         nup
+        <td>
+         <pre class="command_user"><kbd>PROJECT=nup
+COLLECTION=nup
+RSYNC=(base cli gui)</kbd></pre>
+
+     </table>
+
+
+     <h2>Le dossier git utilisateur à créer</h2>
+      <p>
+       La mise en place d'un serveur de compilation demande beaucoup d'espace disque.
+      <p>
+       Il faut prévoir un bon 10 Gb pour être tranquille.
+      <p>
+       Tous les dossiers necessaires pour la compilation se trouvent sous:
+      <pre class="output">/srv/www/</pre>
+      et
+      <pre class="output">/home/$USER/git/$VERSION</pre>
+      <p>
+       Les recettes se trouvent dans son dossier personnel.
+      <p>
+       On peut maintenant créer le dossiers necessaire, sous son propre compte:
+      <pre class="command_user"><kbd> mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
+      <pre class="output">mkdir: created directory '/home/moi/git'
+mkdir: created directory '/home/moi/git/current'</pre>
+
+     <h2>Récupération des ports de "$COLLECTION" depuis le projet git</h2>
+      <p>
+       On récupère les ports de la collection <b>$COLLECTION</b> pour la compilation:
+      <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+      <p>
+       On crée maintenant les dossiers necessaires pour le script:
+      <pre class="command_user"><kbd>sudo mkdir -pv \
+/srv/www/{logs/$ARCH/$VERSION/$COLLECTION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
+     <h2>Récupération des collections définies dans la variable $RSYNC</h2>
+      <p>
+       Cette commande peut prendre un certain temps si votre connection internet n'est pas très rapide:
+      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
+       Tapez cette commande à chaque fois que vous souhaitez mettre à jour votre copie des collections binaires base, cli et gui originales
+      </div>
+      <pre class="command_user"><kbd>for i in ${RSYNC[@]}
+do
+  sudo rsync -av --delete rsync://downloads.nutyx.org/nutyx/$ARCH/$VERSION/$i/ \
+  /srv/www/$ARCH/$VERSION/$i/
+done</kbd></pre>
+     <h2>Le fichier de configuration /etc/fstab</h2>
+       Nous devons adapter 1 fichier de configuration:
+
+      <pre class="command_user"><kbd>sudo echo "
+#    PROJECT $PROJECT
+##   COLLECTION $COLLECTION
+###  VERSION $VERSION
+#### GIT
+/home/$USER/git/$VERSION/$PROJECT \
+/$VERSION/$COLLECTION/root/$PROJECT none noauto,bind" \
+| sudo tee --append /etc/fstab</kbd></pre>
+   <h2>Finalisation et manipulations à reproduire</h2>
+    <p>
+     Vous êtes enfin prêt pour travailler avec le script de compilation.
+     La commande ci-dessous est à reproduire:
+     <ul>
+      <li>
+       La première fois.
+      <li>
+       Quand vous cassez votre chroot et donc par conséquent vos binaires.
+      <li>
+       Quand vous souhaitez revenir sur les collections base, cli et gui originales.
+     </ul>
+     <pre class="command_user"><kbd>for i in ${RSYNC[@]}
+do
+  sudo rsync -av --delete rsync://downloads.nutyx.org/nutyx/$ARCH/$VERSION/$i/ \
+  /srv/www/$ARCH/$VERSION/$i/
+done</kbd></pre>
+   <h2>Lancement du script</h2>
+    <p>
+     Si vous avez bien suivi ce tutoriel, vous pouvez maintenant lancer la compilation de l'ensemble des ports <b>$COLLECTION</b> et <b>$COLLECTION-extra</b>:
+    <pre class="command_user"><kbd>sudo ROOTMOUNT=/srv/www build-collection /$VERSION/$COLLECTION</kbd></pre>
+    <pre><class="output">CHROOT: &lt;your collection&gt;
+COLLECTION: &lt;your collection&gt;
+VERSION: &lt;your version&gt;
+The command: KERNEL=NONE LFS=/&lt;your version&gt;/&lt;your collection&gt; DEPOT=/DEPOT install-nutyx
+DEVEL: cards.devel &&
+cd /root/&lt;your collection&gt; &&
+bash scripts/&lt;your collection&gt; -a &&
+bash scripts/&lt;your collection&gt;-extra -a  OK ? (y)</pre>
+<pre class="command_user"><kbd>y</kbd></pre>

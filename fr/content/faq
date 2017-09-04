@@ -1,0 +1,135 @@
+  <h1>Foire aux questions</h1>
+
+   <h2>Comment s'inscrire sur la liste de diffusion</h2>
+    <p>
+     Cela se fait en plusieurs étapes :
+     <ul>
+      <li>
+       Vous envoyez un courriel à &lt;Nom_de_la_Liste_de_diffusion&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> par exemple) en y mettant:
+       <b><i>subscribe</i></b> dans le sujet.
+      <li>
+       Vous allez recevoir un courriel de confirmation. Vérifier si le message est considéré comme un spam.
+      <li>
+       Répondez simplement ce dernier courriel en choisissant "Répondre" sur votre logiciel favori.
+      <li>
+       Après quelques minutes vous recevrez un dernier courriel confirmant votre adhésion à la liste de diffusion.
+      </ul>
+      <table>
+       <caption><EM>Liste de diffusion disponibles:</EM></caption>
+       <tr class="sidebar">
+        <th>Nom de la Liste de diffusion:
+        <th>Adresse courriel:
+        <th>Brève description:
+       <tr class="even"><td>nutyx-support<td>nutyx-support@nutyx.org<td>Pour obtenir du support concernant l'utilisation de NuTyX
+       <tr class="odd"><td>nutyx-annonce<td>nutyx-annonce@nutyx.org<td>Pour recevoir les nouvelles concernant l'avancement de NuTyX
+       <tr class="even"><td>nutyx-dev<td>nutyx-dev@nutyx.org<td>Pour discuter du développement de NuTyX
+     </table>
+     <p>
+      Les archives des listes de diffusions sont disponibles à l'adresse: <a href="https://listengine.tuxfamily.org/nutyx.org/">https://listengine.tuxfamily.org/nutyx.org/</a>
+
+   <h2>NuTyX n'est pas une multi-lib</h2>
+    <p>
+     La mise en oeuvre d'une distribution multilib demande beaucoup plus de travail. Normalement toutes les librairies doivent être compilées en 64 et en 32 bits.
+    <p>
+     Actuellement, il n'est pas possible de produire une multi-lib puisque des liens sont créés lors de la construction / installation de NuTyX (lib64->lib) sous /lib et sous /usr.
+
+   <h2>L'installateur installe NuTyX sur une seule partition</h2>
+    <p>
+     Cette question nous a tellement été posée, je vais essayer d'apporter le plus d'arguments possible afin d'expliquer la raison.
+    <p>
+     Aujourd'hui, un utilisateur utilise très souvent de grosses quantités de données,
+     la taille du dossier personnel peut très très vite grossir: Les  MP3, les photos, les vidéos sont souvent des fichiers très gourmants
+     en espace disque. Imaginons que vous avez un disque dur de 250 Gbytes.
+     Vous vous dîtes: OK je prends 100  G pour le système et 150 pour mes données.
+     Super, vous venez de "découper" votre disque dur en 2 et la partition de données sera plus vite remplie que si vous aviez gardé une seule partition.
+     Donc si on pouvait éviter de <span style="text-decoration: underline;">devoir</span> découper son disque dur en partitions
+     tout en pouvant s'assurer en cas de réinstallation de NuTyX de ne pas devoir "toucher" à la partition sur laquelle se trouve ses données personnelles,
+     ce serait l'idéal. <span style="text-decoration: underline;">C'est exactement l'idée de l'installateur de NuTyX.</span>
+   <ul>
+    <li>
+     L'installateur ne formate jamais une partition déjà formatée sans une intervention volontaire de votre part.
+    <li>
+     Si vous avez une distribution (NuTyX ou autre) avec vos données personnelles et le système sur la même partition.
+      Lors de  l'installation, l'installateur vous signalera qu'il existe déjà une distribution mais ne formatera pas la partition.
+      Il vous proposera de l'effacer, c'est à dire effacer les dossiers système /var, /proc, /sys, /usr, /sbin et /etc
+     mais ne touchera pas <span style="text-decoration: underline;">aux autres dossiers</span>
+     comme le /home, /MP3, /srv, etc. Donc vos données personnels sont conservées.
+    <li>
+     Aujourd'hui il est très facile de configurer un serveur de données,
+     les utilisateurs utilisent de plus en plus un serveur de fichiers en s'y connectant via NFS par exemple
+    <li>
+     Si vous avez configuré une partition pour la mémoire d'échange (swap) <span style="text-decoration: underline;">avant</span> l'installation de NuTyX,
+     la partition sera reconnue par l'installeur et donc utilisable directement par la NuTyX installée.
+    </ul>
+
+   <h2>La construction des paquets dans une chroot. Quand et Pourquoi ?</h2>
+    <p>
+     L'ISO de NuTyX installe un système de base ce qui offre à l'utilisateur le choix entre deux scénarios d'utilisation de la distribution:
+
+    <h3>NuTyX peut être considérée comme une distribution dite "binaires"</h3>
+       L'utilisateur installe ses applications préférées depuis le serveur distant.
+      <p>
+       Une fois le système de base installé, l'utilisateur installe ses applications préférés comme expliqué dans la docummentation.
+      <p>
+       Une installation typique ressemble à:
+       <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
+      <p>
+       Les paquets binaires étant divisés en paquet de base et sous paquets (devel, doc, man, etc), seul le paquet de base sera installé.
+       Cela signifie que si l'utilisateur souhaite compiler des paquets non présents en binaire,
+       <a href="build-in-chroot">il devra impérativement compiler ces paquets dans une chroot</a> sinon la compilation échouera par manque de dépendances de development.
+
+    <h3>NuTyX peut être considérée comme une distribution dite "sources"</h3>
+       L'utilisateur compile ses applications préférées sur sa machine locale.
+      <p>
+       Une fois le système de base installé, l' utilisateur installe les outils de développement:
+       <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+      <p>
+       Il rapatrie les recettes disponibles:
+       <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
+      <p>
+       Il ajuste le fichier de configuration <b>/etc/cards.conf</b> comme ceci:
+       <pre class="output">dir /usr/ports/kde5-extra
+dir /usr/ports/kde5
+dir /usr/ports/gnome-extra
+dir /usr/ports/gnome
+dir /usr/ports/mate-extra
+dir /usr/ports/mate
+dir /usr/ports/xfce4-extra
+dir /usr/ports/xfce4
+dir /usr/ports/gui-extra
+dir /usr/ports/gui
+dir /usr/ports/cli-extra
+dir /usr/ports/base
+base /usr/ports/base
+logdir /var/log/pkgbuild</pre>
+      Et peut maintenant compiler ses paquets <u><b>sans devoir être dans une chroot</b></u>. Pour compiler le server graphique xorg par exemple:
+      <pre class="command_user"><kbd>sudo cards depcreate xorg</kbd></pre>
+
+   <h2>Est-il possible de mettre à jour sa NuTyX (plus ancienne que la 9.0) vers NuTyX 9.X sans devoir tout réinstaller ?</h2>
+    <p>
+     Il n'est pas possible de mettre à jour une ancienne version de NuTyX (plus ancienne que la version 9.0) vers NuTyX 9.X,
+     le nombre de changements est trop important.
+     Il faut savoir aussi que tous les <a href="dictionary#ID005">paquets</a> sont à chaque mise à jour majeur recompiler
+     sur une nouvelle chaîne de compilation glibc+gcc+binutis,
+     cela permet d'avoir un système cohérent et très robuste.
+     Comme expliqué plus haut, il suffit d'effacer la NuTyX actuelle,
+     le dossier /home et tous vos MP3 qui se trouvent dans /MP3 (par exemple) restent intacts,
+     ensuite vous installez directement la NuTyX 9.X sur la même partition.
+   <h2>Comment activer le compte root ?</h2>
+    <p>
+     Par défaut, NuTyX n'active pas le compte root, si vous souhaitez compilez vos propres paquets, il est plus simple d'activer le compte root.
+     C'est très simple, tapez:
+     <pre class="command_user"><kbd>nu</kbd></pre>
+      et choisissez <b>root</b> comme utilisateur
+     <p>
+       <img src="graphics/faq/ActivateRoot1.png" alt="Figure 1: Spécifier le nom du compte root" title="Figure 1: Spécifier le nom du compte root"/>
+     <p>
+      choisissez un nouveau mot de passe
+     <p>
+      <img src="graphics/faq/ActivateRoot2.png" alt="Figure 2: Spécifier un mot de passe" title="Figure 2: Spécifier un mot de passe"/>
+     <p>
+      et confirmez le nouveau mot de passe
+     <p>
+      <img src="graphics/faq/ActivateRoot3.png" alt="Figure 3: Confirmer le mot de passe" title="Figure 3: Confirmer le mot de passe"/>
+     <p>
+      et c'est tout.

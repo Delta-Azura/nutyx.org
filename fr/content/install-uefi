@@ -1,0 +1,99 @@
+  <h1>Installation classique de NuTyX sur une seule partition en mode UEFI</h1>
+   <p>
+    Ces captures d'écrans vous montrent une installation classique sur une seule partition en mode UEFI.
+    Le disque dur est de 8 goctets.
+    La première partition est la partition réservée pour l'UEFI.
+    Elle doit être de type EFI et sera formatée (automatiquement après demande) en vfat.
+    Sa taille est de 500Mb.
+    La deuxième partiton est la partition d'échange et sa taille est de 2Goctets.
+    Tout le reste de la place est disponible pour la partition sur laquelle est installée NuTyX.
+   <p>
+    La taille mémoire minimum recommandée est de 1 Goctet.
+   <p>
+    L'iso est transférée sur CD. Vous pouvez évidement utiliser une clé USB si votre PC le permet.
+   <p>
+    Le disque est totalement vierge et n'a jamais été formaté.
+    <h2>Démarrer la clé / le CD sur la(le)quel se trouve l'ISO</h2>
+      <table align="center">
+       <tr><td><img src="../../graphics/install-uefi/BootUefi.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/SelectLanguage.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/HowToProceed.png"></td></tr>
+      </table>
+    <h2>Création des partitions (optionnel)</h2>
+      <p>
+       La création de la partition n'est pas indispensable.
+       Si vous avez déjà les partitions disponibles <a href="#3">vous pouvez directement passer au formatage de la partition.</a>
+      <p>
+       Veuillez choisir <b>gpt</b> comme type d'étiquette de partitions, si vous choisissez <b>dos</b>, l'amorçage de NuTyX en mode UEFI échouera.
+      <table align="center">
+       <tr><td><img src="graphics/install-uefi/CreateYoursPartitions.png"></td></tr>
+       <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionTypeSelection.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/EmptyDisk1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate2.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate3.png"></td></tr>
+      </table>
+
+    <h2>Formatage de la partition NuTyX (optionnel)</h2>
+     <p>
+      Le formatage des partitions n'est à faire que si vous venez de les créer ou vous souhaitez effacer l'intégralité de son contenu.
+      Si au contraire vous souhaitez conserver certains dossiers, vous pouvez alors supprimer uniquement
+      les dossiers <b>opt, bin, etc, root, run, sbin, usr et var</b> qui se trouvent sur la partition de destination.
+      Cette méthode permet de conserver vos données personnelles par exemple.
+      <a href='#4'>Si la partition de destination est vierge et déjà formatée,
+      vous pouvez directement passer à l'installation de NuTyX.</a>
+      <table align="center">
+       <tr><td><img src="graphics/install-uefi/FormatPartition.png"></td></tr>
+       <tr><td><img src="graphics/install/AvailableFileSystems.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/LaunchFormatSda3Btrfs.png"></td></tr>
+      </table>
+
+    <h2>Installation de NuTyX</h2>
+      <p>
+       L'installation de NuTyX se fait sans connection réseau.
+      <p>
+       Elle ne prend que quelques secondes.
+      <table align="center">
+       <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/LaunchFormatSda1vfat.png"></td></tr>
+       <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
+       <tr><td><img src="graphics/install/Init1.png"></td></tr>
+      </table>
+    <h2>Configuration de NuTyX</h2>
+      <p>
+       Une fois installée, NuTyX se lance immédiatement sans avoir besoin de redémarrer la machine.
+      <p>
+       La configuration est très directe: réglage de la carte réseau, de la date, de l'heure
+       et création du premier utilisateur.
+      <table align="center">
+       <tr><td><img src="graphics/install/ConfigureEth0.png"></td></tr>
+       <tr><td><img src="graphics/install/ConfigureUTC.png"></td></tr>
+       <tr><td><img src="graphics/install/ConfigureDate.png"></td></tr>
+       <tr><td><img src="graphics/install/ConfigureTime.png"></td></tr>
+       <tr><td><img src="graphics/install/ConfigureUser.png"></td></tr>
+       <tr><td><img src="graphics/install/AutomaticUpdate.png"></td></tr>
+       <tr><td><img src="graphics/install/FirstLogin.png"></td></tr>
+      </table>
+      <p>
+       Une fois la configuration terminée, vous vous connectez
+       en utilisant le nom d'utilisateur que vous avez créé à l'instant.
+    <h2>Ajuster l'emplacement du fichier kernel en cas d'utilisation de GRUB</h2>
+     <p>
+       Une installation de NuTyX en mode UEFI peut se faire sans gestionnaire d'amorçage.
+       C'est l'UEFI qui se charge de lancer le kernel directement.
+     <p>
+      Si vous décidez d'utiliser GRUB pour lancer votre NuTyX, il est impératif de faire une manipulation en console et en <a href="faq#8">root</a>.
+     <p>
+      Dans l'exemple ci-dessous, NuTyX est installée sur la 3ième partition et le nom du kernel est <b>kernel-4.9.16-NuTyX-lts</b>:
+     <pre class="command"><kbd>cd /boot
+rm kernel-4.9.16-NuTyX-lts
+mv efi/EFI/BOOT/3/kernel.efi kernel-4.9.16-NuTyX-lts
+ln -svf kernel-4.9.16-NuTyX-lts kernel</kbd></pre>
+     <p>
+      Vous pouvez maintenant ajuster votre fichier grub.cfg pour que GRUB prenne en charge l'amorçage de votre NuTyX.
+       
+    <h2>Première prise en main</h2>
+      <p>
+       Je vous invite à prendre connaîssance <a href="finish-up">des quelques commandes nécessaires pour
+       que vous puissiez terminer votre installation avec une interface graphique par exemple.</a>

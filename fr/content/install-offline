@@ -1,0 +1,162 @@
+  <h1>Installation de NuTyX via le script sans connection internet</h1>
+  
+
+   <h2>Introduction</h2>
+    <div class="note">
+     <img alt="[Note]" src="../graphics/note.gif" />
+      Dans cet article, la partition de destination sera la <b>/dev/sda4</b>.
+    </div>
+    <div class="note">
+     <img alt="[Note]" src="../graphics/note.gif" />
+      L'installation de la procédure d'amorçage n'est pas reprise dans cet article.
+      Cela sous-entend que la machine est déjà amorçable et 
+      il suffit donc d'ajuster le fichier <b>/boot/grub/grub.cfg</b>
+      pour y ajouter une nouvelle entrée <u>NuTyX sur /dev/sda4</u>.
+    </div>
+    <div class="note">
+     <img alt="[Note]" src="../graphics/note.gif" />
+      Dans cet article, toutes les commandes doivent s'éffectuer via le compte root.
+    </div>
+    <div class="important">
+     <img alt="[Important]" src="../graphics/caution.gif" />
+     <img alt="[Important]" src="../graphics/caution.gif" />
+      L'auteur ne peut donc pas être responsable pour les pertes de données
+      qui pourrait être le résultat d'une mauvaise manipulation.
+      Cet article s'adresse à un public averti.
+    </div>
+    <p>
+    La marche à suivre est:
+     <ol>
+      <li>
+       Mise en place de la partition de destination
+      <li>
+       Récupération des paquets binaires NuTyX base
+      <li>
+       Récupération et vérification du script d'installation depuis 
+      le serveur de téléchargement.
+      <li>
+       Mise en place du fichier <b>/etc/install-nutyx.conf.d/cards.conf</b>
+      <li>
+       Installation de NuTyX
+      <li>
+       Mise à jour du fichier d'amorçage grub
+     </ol>
+
+
+   <h2>Mise en place de la partition de destination</h2>
+
+    <p>
+     Dans cet article, la partition de destination sera la <b>/dev/sda4</b>.
+     Une taille de 15 Gigabyte minimum permet d'y installer toutes les interfaces graphiques disponibles à ce jour:
+     <b>xfce4, lxde, gnome, mate et kde5</b> ainsi que d'y garder un jeu complet des binaires.
+    <p>
+     Le script d'installation effectue toutes ses actions en fonction de la définition de certaines variables.
+     La variable la plus importante est:
+    <pre class="output">LFS</pre>
+    <p>
+     Nous allons donc la (re)définir pour que le script puisse s'en servir:
+    <pre class="command"><kbd>export LFS=/mnt/NuTyX</kbd></pre>
+    <p>
+     On formate la partition de destination.
+     Le choix du système de fichiers est le <b>ext4</b>
+     Ext4 permet de se passer de l'initrd lors du démarrage:
+    <pre class="command"><kbd>mkfs.ext4 /dev/sda4</kbd></pre>
+    <p>
+     On monte la partition formatée sur le dossier défini par la variable LFS.
+    <pre class="command"><kbd>mkdir -p $LFS
+mount /dev/sda4 $LFS</kbd></pre>
+    <p>
+     Tout est en place pour récupérer les binaires NuTyX qui serviront à l'installation de NuTyX.
+
+
+   <h2>Récupération des paquets binaires NuTyX base</h2>
+
+    <p>
+     Pour cet opération, nous utilisons la commande <b>rsync</b>.
+     Assurez-vous que la commande est installée sur votre distribution.
+    <p>
+     Une NuTyX de base amorçable nécéssite uniquement la collection <b>base</b>,
+     nous allons donc dans un premier temps télécharger uniquement cette collection.
+    <p>
+     Nous les plaçons directement au bon endroit:
+    <pre class="command"><kbd>mkdir -p $LFS/var/lib/pkg/depot
+rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/9.0/base/ \
+$LFS/var/lib/pkg/depot/base/</kbd></pre>
+     <p>
+      Une fois la commande terminée, on peut maintenant récupérer le script d'installation depuis le serveur.
+
+
+   <h2>Récupération du script d'installation depuis le serveur de téléchargement</h2>
+
+    <p>
+     Pour cet opération, nous utilisons la commande <b>wget</b>.
+     Assurez-vous que la commande est installée sur votre distribution.
+    <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
+    <p>
+     On vérifie l'intégrité du script avant son utilisation.
+    <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
+    <pre class="output">install-nutyx: OK</pre>
+    <p>
+     Avant de lancer le script d'installation en y passant les bonnes variables.
+     Il reste encore à mettre en place le fichier <b>/etc/install-nutyx.conf.d/cards.conf</b>.
+
+
+   <h2>Mise en place du fichier /etc/install-nutyx.conf.d/cards.conf</h2>
+
+    <p>
+     Le script <b>install-nutyx</b> permet la préconfiguration de nombreux fichiers.
+     C'est à dire que si il trouve l'un de ces fichiers dans le dossier <b>/etc/install-nutyx.conf.d/</b>,
+     le script se servira du fichier trouvé au lieu de la configuration interne du script.
+     Nous allons donc adapter le fichier <b>cards.conf</b> de notre NuTyX pour une installation "offline"
+     en y mentionnant la seule collection disponible pour l'installation
+    <b>base</b> <u>sans spécifier l'adresse de téléchargement</u>.
+    <pre class="command"><kbd>mkdir -p /etc/install-nutyx.conf.d
+cat &gt; /etc/install-nutyx.conf.d/cards.conf  &lt;&lt; EOF
+dir /var/lib/pkg/depot/base
+base /var/lib/pkg/depot/base
+locale fr
+EOF</kbd></pre>
+    <p>
+     Nous sommes prêt pour l'installation de NuTyX proprement dite.
+
+
+   <h2>Installation de NuTyX</h2>
+
+    <p>
+     Si vous avez procédé à chaque étape comme expliqué ci-dessus,
+     l'installation peut-être lancée via le script téléchargé:
+    <pre class="command"><kbd>bash install-nutyx</kbd></pre>
+    <p>
+     L'installation se fait donc sur la partition <b>/dev/sda4</b>
+    montée sur le dossier <b>/mnt/NuTyX</b>.
+    <p>
+     Aucun téléchargement n'est effectué.
+    <pre class="output">....
+...
+..
+****************************************************
+      Installation of NuTyX 9.0 installed
+      in /mnt/NuTyX sucessfully
+****************************************************
+
+****************************************************
+* Thanks for installing NuTyX                      *
+*                                                  *
+* Check http://www.nutyx.org/en/documentation.html *
+* or http://www.nutyx.org/fr/documentation.html    *
+*                                                  *
+* Make sure to review /etc/cards.conf              *
+* to meet your requirements in packages selection  *
+*                                                  *
+****************************************************</pre>
+
+
+   <h2>Mise à jour du fichier d'amorçage grub</h2>
+
+    <p>
+     Mettez à jour votre fichier de configuration <b>/boot/grub/grub.cfg</b>
+    en y ajoutant l'entrée:
+    <pre class="output">menuentry "NuTyX x86_64 ext4 on /dev/sda4" {
+ set root=(hd0,4)
+ linux /boot/kernel root=/dev/sda4 ro quiet 
+}</pre>

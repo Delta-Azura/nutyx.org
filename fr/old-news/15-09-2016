@@ -1,0 +1,38 @@
+<h1>Le 15-09-2016</h1>
+   <h2>NuTyX 8.2-rc1 disponible avec cards 2.1.92</h2>
+      <p>
+       L'équipe de NuTyX est très fière de vous proposer la nouvelle version 8.2-rc1.
+      <p>
+       Une <a href="http://downloads.nutyx.org/?C=M;O=D">nouvelle ISO 64bits MINI</a>
+       est proposée pour cette nouvelle version. Sa taille fait 217M.
+      <p>
+       Pensez à vérifier leur somme MD5 avant de les transférer sur clé USB, CD-RW ou DVD-RW
+     <h3>Nouveautées pour l'utilisateur</h3>
+      <p>
+       La nouvelle ISO propose la possibilitée d'effacer votre NuTyX pour pouvoir
+       faire une mise à jour en toute sécurtité. L'installateur efface uniquement
+       les dossiers concernés par une nouvelle installation cad les dossiers <b>bin etc lib run sbin usr var</b>.
+       Vous pourrez directement poursuivre avec l'installation
+       de la nouvelle version de NuTyX sans devoir formater
+       et sans perdre vos données personnelles..
+      <p>
+       Lorsque l'installation est terminée, la configuration
+       se poursuit et permet désormais la configuration
+       d'une carte wifi si disponible et l'accès à votre point d'accès favori.
+     <h3>Nouveautées sous le capot</h3>
+      <p>
+      <b>Cards</b> intégre désormais les scripts indispensables pour la construction de ports en grande quantité.
+      <p>
+      Le script <b>install-nutyx</b> fait parti de votre NuTyX installée.
+      <p>
+      Le même script a été considérablement simplifié.
+      Plus besoin si pas necessaire d'utiliser d'arguments ou variable.
+      Le script installera automatiquement dans le dossier <b>/mnt/hd</b>. Les commandes de base suffisent,
+      il n'est plus necessaire d'installer d'outils supplémentaires.
+      <p>
+       Le script <b>bash</b> <a href="http://downloads.nutyx.org/install-nutyx-8.2-rc1">install-nutyx-8.2-rc1</a>
+       permet d'installer NuTyX depuis votre NuTyX 8.1 stable ou depuis n'importe quel autre distribution.
+    <h3>La suite</h3>
+      <p>
+       Si aucun problème majeur n'est découvert,
+       la prochaine version sera la version stable 8.2 au plus tard en début d'octobre.

@@ -1,0 +1,224 @@
+<h1>Scénario C</h1>
+
+ <a name='1'></a>
+ <h2>Introduction</h2>
+  <p>
+   Vous avez des envies de compilation à grande échelle,
+   vous êtes convaincu que c'est le meilleur scénario pour gérer une NuTyX.
+   Vous n'avez aucune envie d'utiliser les binaires proposés.
+  <p>
+   La plus part des paquets que vous utilisez ne sont pas présents et ceux qui le sont, seront compilés par vous-même.
+  <p>
+   Vous souhaitez obtenir les maj des ports disponibles.
+  <p>
+   Et bien évidement, vous souhaitez que les dépendances soient compilées automatiquement.
+  <p>
+   Vous l'avez compris, ce scenario est sans doute le plus "attirant" et le plus proche des distributions "dite" sources telle que CRUX ou gentoo.
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif"/>
+     Pour construire ses propres paquets, il est important de "démarrer" avec une installation minimale dite de base.
+   </div> 
+
+ <a name='2'></a>
+ <h2>Le fichier /etc/cards.conf</h2>
+  <p>
+   Un dossier contenant mes recettes personnelles est ajouté.
+   Ce dossier ainsi que les collections ne <u>doivent jamais</u> être mis à jour par la commande <b>cards sync</b>, donc on ne spécifie aucune adresse URL.
+  <p>
+   Seule la collection <b>base</b> doit rester active afin de pouvoir installer les outils de développement.
+  <p>
+   Mon processeur est un 4 coeurs, donc autant en profiter:
+  <p>
+   Le dossier contenant les logs de compilation est défini</p>
+  <p>
+   Les dossiers définissant le système de base, en cas de retour à un système de base sont définis.
+  <p>
+   Le contenu typique de votre fichier <b>/etc/cards.conf</b> pour le scénario <b>C</b>:
+   <pre class="output">dir /usr/ports/personnel
+dir /usr/ports/gui
+dir /usr/ports/cli
+dir /usr/ports/base
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+logdir /var/log/pkgbuild
+locale fr
+locale it
+base /usr/ports/base
+base /usr/ports/aconserver</pre>
+
+ <a name='3'></a>
+ <h2>Installation des outils de développement</h2>
+  <p>
+   On peut maintenant commencer par installer les paquets de développement,
+   cad un compilateur, les librairies C et C++ les outils autoconf, automake, etc etc.. .
+   On commence par créer les dossiers necessaires:
+   <pre class="command_user"><kbd>sudo mkdir -p /usr/ports/{personnel,aconserver}
+sudo mkdir -p /srv/www/sources</kbd></pre>
+  <p>
+   Et maintenant on installe les outils:
+   <pre class="command_user"><kbd>sudo cards sync</kbd></pre>
+   <pre class="output">/var/lib/pkg/depotrepo/base/.PKGREPO</pre>
+   <pre class="command_user"><kbd>sudo cards install cards.devel</kbd></pre>
+   <pre class="output">Retrieve info about the 66 packages: 100 %
+/var/lib/pkg/depot/base/cards/.PKGREPO
+/var/lib/pkg/depot/base/cards/cards.devel1429192050x86_64.cards.tar.xz
+661020 Bytes - 671821 Bytes/Sec - 100% - 0 Sec remain  remain 
+/var/lib/pkg/depot/base/acl/.PKGREPO
+/var/lib/pkg/depot/base/acl/acl.devel1412540285x86_64.cards.tar.xz
+...</pre>
+
+ <a name='4'></a>
+ <h2>Le fichier /etc/pkgmk.conf</h2>
+  <p>
+   Pour ce scénario, il est indispensable de vérifier toutes les variables
+   necessaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>
+   <pre class="output">export MAKEFLAGS="-j4"</pre>
+  <p>
+   Les sources sont stockées dans un dossier commun, je ne souhaite pas qu'elles soient effacées.
+   Je souhaite que le dossier de travail reste dans le dossier du port,
+   cela me permettra eventuellement de compiler plusieurs ports sans perdre le travail.
+   C'est très utile pour vérifier.
+   <pre class="output">PKGMK_SOURCE_DIR="/srv/www/sources"
+PKGMK_KEEP_SOURCES="yes"
+PKGMK_WORK_DIR="$PWD/work"</pre>
+  <p>
+   Dans ce scénario, je souhaite gérer les dépendances de façon automatique lors de la compilation
+   et donc j'ai besoin du fichier <b>.PKGREPO</b> généré dans le dossier du port.
+   Je souhaite pouvoir utiliser la commande <b>cards install</b> ou <b>get</b>
+   pour pouvoir réinstaller mes binaires disponibles.
+   La commande <b>pkgmk</b> doit donc générer le <b>.PKGREPO</b>
+   de la collection concernée (dossier parent).
+   Je utilise le duo <b>cards/pkgmk</b>:
+   <pre class="output">PKGMK_IGNORE_REPO="no"
+PKGMK_IGNORE_COLLECTION="no"</pre>
+  <p>
+   Je ne souhaite pas que <b>pkgmk</b> split le binaire en paquet et sous paquets (devel, doc, man, etc).
+   Je me contente du paquet de base puisque je le compile moi-même.
+   Pour les locales, si elles existent, je me contenterai des locale françaises et italiennes <b>fr</b> et <b>it</b>:
+   <pre class="output">PKGMK_GROUPS=()
+PKGMK_LOCALES=(fr it)</pre>
+  <p>
+   Je souhaite que <b>pkgmk</b> compresse mon paquet au format gz (parce que l'algo est beaucoup plus rapide qu'en xz ) une fois construit et qu'il soit conservé une fois installé pour usage ultérieur.
+   Par exemple si je souhaite revenir à un système de base via la commande <b>cards base</b>:
+   <pre class="output">PKGMK_COMPRESS_PACKAGE="yes"
+PKGMK_COMPRESSION_MODE="gz"
+PKGMK_CLEAN="no"</pre>
+  <p>
+   Voici à quoi peut ressembler votre fichier <b>/etc/pkgmk.conf</b> pour le scénario <b>C</b>:
+   <pre class="output">export CFLAGS="-O2 -pipe"
+export CXXFLAGS="${CFLAGS}"
+case ${PKGMK_ARCH} in
+    "x86_64"|"")
+       export MAKEFLAGS="-j4"
+       ;;
+    "i686")
+       export CFLAGS="${CFLAGS} -m32"
+       export CXXFLAGS="${CXXFLAGS} -m32"
+       export LDFLAGS="${LDFLAGS} -m32"
+       export MAKEFLAGS="-j4"
+       ;;
+    *)
+       echo "Unknown architecture selected! Exiting."
+       exit 1
+       ;;
+esac
+PKGMK_SOURCE_DIR="/srv/www/sources"
+PKGMK_KEEP_SOURCES="yes"
+PKGMK_WORK_DIR="$PWD/work"
+PKGMK_IGNORE_REPO="no"
+PKGMK_IGNORE_COLLECTION="no"
+PKGMK_GROUPS=()
+PKGMK_LOCALES=(fr it)
+PKGMK_COMPRESS_PACKAGE="yes"
+PKGMK_COMPRESSION_MODE="gz"
+PKGMK_CLEAN="no"</pre>
+
+  <p>
+   On peut maintenant récupérer les ports disponibles de NuTyX:</p>
+   <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
+   <pre class="output">Updating file list from downloads.nutyx.org::nutyx/ports/8.1/base/
+Updating collection base
+ Checkout ./
+ Checkout aaabasicfs/
+ Checkout aaabasicfs/Pkgfile
+...</pre>
+
+ <a name='5'></a>
+ <h2>Compiler un paquet avec quelques dépendances</h2>
+  <ol>
+
+   <li>
+
+   <a name='51'></a>
+   <h3>Avertissement</h3>
+  <p>
+   Si vous lisez ceci, assurez-vous d'avoir effectué toutes les manipulations pour <a href="#1">ce scénario</a>.
+  <p>
+   Les dépendances d'un paquet sont souvent le casse tête d'un empaqueteur.
+   Il est en effet jamais facile de connaître exactement quelles sont les dépendances indispensables
+   pour que le paquet en chantier se compile sans problème.
+  <p>
+   En plus des dépendances indispensables, il y a aussi les dépendance optionnelles
+   qui permettent d'avoir plus de fonctionnalitées.
+   Par principe, sous NuTyX nous essayons de proposer le maximum de fonctionalitées.
+  <p>
+   Le paquet que nous allons construire n'apportera certainement pas grand chose à votre NuTyX.
+   C'est surtout la methode utilisée qui nous intéresse ici:
+   Nous allons donc prendre le paquet <b>clipit</b> qui d'après le README est (en anglais dans le texte)
+  <p>
+   <i>ClipIt is a lightweight GTK+ clipboard manager.</i>
+  <p>
+   <i>Project website: http://clipit.rspwn.com/</i>
+  <p>
+   <i>Requirements:</i>
+  <p>
+   <i>* gtk+ >= 2.10.0</i>
+
+   <li>
+
+    <a name='52'></a>
+    <h3>Créer le dossier</h3>
+    <pre class="command"><kbd>mkdir -p /usr/ports/personnel/clipit</kbd></pre>
+
+   <li>
+
+    <a name='53'></a>
+    <h3>Créer le fichier Pkgfile</h3>
+     <p>
+      Completez le fichier <b>/usr/ports/personnel/clipit/Pkgfile</b> avec ceci:
+      <pre class="command"><kbd># Depends on: gtk2
+description="ClipIt is a lightweight GTK+ clipboard manager."
+url="http://clipit.rspwn.com/"
+maintainer="Gilberto Xyhthyx &lt;xyhthyx at gmail dot com&gt;"
+packager="François Perrin"
+name=clipit
+version=1.4.2
+release=1
+source=(https://github.com/downloads/shantzu/ClipIt/$name-$version.tar.gz)
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr \
+  --sysconfdir=/etc
+  make
+  make DESTDIR=$PKG install
+}</kbd></pre>
+
+ <li>
+
+  <a name='54'></a>
+  <h3>Compilez le paquet.</h3>
+   <pre class="command"><kbd>cards depcreate clipit</kbd></pre>
+   <p>
+    La commande <b>cards depcreate</b> compile les dépendances, installe les dépendances, compile le paquet final et l'installe.
+    <div><img src="../graphics/yippee.gif" alt="yippee"/> C'est magique <img src="../graphics/yippee.gif" alt="yippee"/></div>
+  </ol>
+
+  <a name='6'></a>
+  <h2>Conclusion</h2>
+   <p>
+    Pour ce scénario, les commandes à retenir sont:
+    <pre class="command"><kbd>ports -u
+cards depends
+cards depcreate
+cards level</kbd></pre>
+   <p>
+    Pour connaître en détail la fonctionnalitée de ces commandes, je vous invite à lire le man de cards:
+   <pre class="command"><kbd>man cards</kbd></pre>

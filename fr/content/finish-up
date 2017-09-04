@@ -1,0 +1,89 @@
+<h1>Finalisation de l'installation</h1>
+ <h2>Et maintenant ?</h2>
+   Vous voici avec une NuTyX de base fraîchement installée.
+   Si vous connaîssez déjà NuTyX, vous pouvez directement vous diriger sur la documentation du site.
+   Par contre si vous vous demandez comment installer une interface graphique complète, continuez la lecture.
+ <h2>Mise à jour des informations concernant les paquets disponibles</h2>
+  Il faut commencer par renseigner les paquets disponibles à votre nouvelle installation. 
+  Un <a href="dictionary#ID300">alias</a> est disponible à cet effet:
+  <pre class="command_user"><kbd>check</kbd></pre>
+  <pre class="output">[sudo] password for thierry:</pre>
+  Vous entrez le mot de passe que vous avez choisi lors de l'installation et la synchronisation démarre:
+  <pre class="output">/var/lib/pkg/depot/gnome-extra/.PKGREPO
+/var/lib/pkg/depot/gnome/.PKGREPO
+/var/lib/pkg/depot/mate-extra/.PKGREPO
+/var/lib/pkg/depot/mate/.PKGREPO
+/var/lib/pkg/depot/kde5-extra/.PKGREPO
+/var/lib/pkg/depot/kde5/.PKGREPO
+/var/lib/pkg/depot/xfce4-extra/.PKGREPO
+/var/lib/pkg/depot/xfce4/.PKGREPO
+/var/lib/pkg/depot/gui-extra/.PKGREPO
+/var/lib/pkg/depot/gui/.PKGREPO
+/var/lib/pkg/depot/cli-extra/.PKGREPO
+/var/lib/pkg/depot/cli/.PKGREPO
+/var/lib/pkg/depot/base/.PKGREPO</pre>
+ <h2>Installation d'une interface graphique et d'un des bureaux disponible</h2>
+ La synchronisation est terminée.
+ Vous êtes à présent prêt à installer le reste des paquets pour obtenir une NuTyX utilisable.
+ Commençons donc par installer le serveur graphique:
+ <pre class="command_user"><kbd>get xorg</kbd></pre>
+  <pre class="output">[sudo] password for thierry:</pre>
+  Vous entrez le mot de passe que vous avez choisi lors de l'installation et l'installation démarre:
+  <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
+  ...</pre>
+  Vous pouvez maintenant choisir votre bureau préféré.
+  Sous NuTyX, vous avez le choix entre: kde5, xfce4, mate, gnome, lxde, openbox, flwm, ratpoison, etc
+  <p>
+      <table>
+       <caption><EM>Bureau disponibles:</EM></caption>
+       <tr class="sidebar">
+        <th>Nom du bureau:
+        <th>Commande:
+       <tr class="even">
+         <td>
+          kde5 kde5-extra
+         <td>
+          <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
+       <tr class="odd">
+         <td>
+          gnome gnome-extra
+         <td>
+          <pre class="command_user"><kbd>get gnome gnome-extra</kbd></pre>
+       <tr class="even">
+         <td>
+          xfce4 xfce4-extra
+         <td>
+          <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         mate mate-extra
+        <td>
+         <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         lxde
+        <td>
+         <pre class="command_user"><kbd>get lxde</kbd></pre>
+       <tr class="odd">
+        <td>
+         openbox
+        <td>
+         <pre class="command_user"><kbd>get openbox</kbd></pre>
+     </table>
+  <p>
+   Quelque soit le choix de votre bureau, vous allez devoir installer le gestionnaire de connection graphique.
+   Vous avez le choix entre lxdm et slim.
+   Pour lxdm, installez:
+   <pre class="command_user"><kbd>get lxdm</kbd></pre>
+   <p>
+    Vous installez maintenant les outils qui vous semblent utiles, par exemple:
+    <pre class="command_user"><kbd>get zip unzip xdg-user-dirs gvfs alsa-utils ntfs-3g firefox libreoffice pidgin thunderbird</kbd></pre>
+   <p>
+    Si vous utilisez un réseau sans fils ou êtes en mode itinérant, installez le gestionnaire de connections réseaux et son applet:
+    <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
+ <h2>Et pour finir</h2>
+   Le plus simple maintenant redémarrez votre machine. Après le redémarrage, vous serez accueilli par le gestionnaire de connection lxdm ou slim.
+   Pour ce dernier, pressez la touche F1 pour choisir le bureau adéquat.
+   <pre class="command_user"><kbd>sudo reboot</kbd></pre>
+ <h2>Conclusion</h2>
+  Je vous invite à prendre connaîssance <a href="base-commands">des commandes de base pour que vous puissiez allez plus loin dans votre installation.</a>

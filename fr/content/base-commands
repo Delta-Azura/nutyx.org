@@ -1,0 +1,92 @@
+  <h1>Les commandes de base...</h1>
+   <h2>Première prise en main</h2>
+    <p>
+     Afin de profiter pleinement de votre NuTyX fraîchement installée, voici les commandes indispensables que vous allez utiliser quotidiennement.
+     Cet article reprend les commandes essentielles et spécifiques à NuTyX. Il est conseillé de bien les connaître.
+    <p>
+     NuTyX ne dispose pas (encore) d'outils graphiques pour son administration.
+     Vous allez donc utiliser le terminal comme interface.
+     Si vous n'y êtes pas habitué, ce n'est pas grave.
+     Cet article vous expliquera pas à pas les commandes à taper au clavier.
+    <p>
+     Sous NuTyX (contrairement à d'autres systèmes d'exploitation) la <a href="http://fr.wikipedia.org/wiki/Sensibilit%C3%A9_%C3%A0_la_casse">casse</a> doit être respectée, il faut donc toujours veiller à taper les commandes <b>en minuscules</b>.
+    <p>
+     Commençons donc par ouvrir un terminal... ça y est ? alors on peut commencer <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />
+    <p>
+     Une commande peut être composée d'un seul mot dans le cas où aucune option n'est nécessaire.
+     Mais la majorité des commandes peut être entrée à l'aide d'options diverses.
+     Sachez par exemple que l'option la plus utile sera (en fonction de la commande)
+     <pre class="command_user"><kbd>nomdelacommande help</kbd></pre> ou
+     <pre class="command_user"><kbd>nomdelacommande --help</kbd></pre> ou
+     <pre class="command_user"><kbd>nomdelacommande -h</kbd></pre>
+    <p>
+     le <i>help</i> permet d'obtenir un aperçu des possibilités de la <b>nomdelacommande</b>, <i>--help</i> ou <i>-h</i> sont aussi des options permettant l'affichage de l'aide.
+   <h2>Vérifier si il y a des mises à jour disponibles</h2>
+    <p>
+     La commande <b>cards sync</b> permet d'obtenir le dernier état des mises à jour disponibles sur votre système.
+    <p>
+     La commande <b>cards diff</b> affichera la liste des paquets obsolètes.
+    <p>
+     Essayez les commandes:
+    <pre class="command_user"><kbd>sudo cards sync
+sudo cards diff</kbd></pre>
+    <pre class="output">Synchronizing /var/lib/pkg/depot/gui from http://..<br />/var/lib/pkg/depot/cli//MD5SUM<br />..<br />gcc
+glibc</pre>
+   <h2>Mettre à jour un paquet</h2>
+    <p>
+     Pour mettre à jour un paquet, la commande <b>cards install -u</b> suivi du logiciel sera utilisée.
+     Il faut évidemment que la mise à jour soit possible:
+     <pre class="command_user"><kbd>sudo cards install -u gcc</kbd></pre>
+   <p>
+     mettra le paquet <b>gcc</b> à jour.
+   <h2>Recherche d'un paquet</h2>
+    <p>
+     Rechercher un paquet sous NuTyX est très simple, la commande:
+     <pre class="command_user"><kbd>cards search <b>chaîne_à_trouver</b></kbd></pre>
+    <p>
+     retournera tous les paquets dont le nom ou la description contient la <b>chaîne_à_trouver</b>.
+     Par exemple si vous souhaitez connaître les navigateurs disponibles
+    <pre class="command_user"><kbd>cards search browser</kbd></pre>
+    <p>
+     devrait retourner quelque chose comme:
+    <pre class="output">(gui-extra) chromium 53.0.2785.116 The open-source project behind Google Chrome,
+an attempt at creating a safer, faster, and more stable browser
+(gui-extra) conkeror git A highly programmable web browser based on Mozilla XULRunner
+(gui-extra) dillo 3.0.5 A small, fast graphical web browser built on FLTK
+(gui-extra) firefox 48.0.2 Standalone web browser from mozilla.org
+(gui-extra) midori 0.5.11 Midori is a lightweight web browser that uses WebKitGTK+.
+(gui-extra) xombrero 1.6.4 Simple browser based on gtk and using the webkit engine
+...</pre>
+   <h2>Ajout d'un paquet</h2>
+    <p>
+     Pour ajouter un paquet, la commande <b>cards install</b> suivie du nom du paquet à installer sera utilisée:
+     <pre class="command_user"><kbd>sudo cards install xfce4</kbd></pre>
+    <p>
+     Le téléchargement de l'application <b>xfce4</b> commence immédiatement, une fois le paquet téléchargé, ses dépendances seront à leur tour téléchargées.
+     Quand le téléchargement est terminé, tous les paquets seront installés dans le bon ordre.
+     Dans cet exemple, une fois la commande terminée, vous aurez un bureau <a href="http://www.xfce.org">xfce4</a> installé sur votre NuTyX.
+   <h2>Ajout d'un utilisateur</h2>
+    <p>
+     Pour ajouter un utilisateur sous NuTyX, c'est également très simple, la commande <b>nu</b> ouvre une fenêtre de dialogue.
+     Vous n'avez qu'a répondre aux questions en remplissant les champs à disposition:
+     <pre class="command_user"><kbd>nu</kbd></pre>
+    <p>
+     permet d'ajouter un utilisateur.
+<pre class="output">Utilisateur: francois
+Description: François Perrin</pre>
+    <p>
+     Vous devez bien noter que le nom d'utilisateur ne peut pas contenir certains caractères et ne peut pas contenir d'espace ni de majuscule.
+   <h2>Conclusion</h2>
+    <p>
+     Vous l'avez compris, les seules commandes à connaître pour commencer à utiliser NuTyX sont donc les 2 commandes suivantes:
+    <pre class="command"><kbd>nu
+cards</kbd></pre>
+    <p>
+     Cette dernière est d'ailleurs expliquée plus en détail via son aide:
+    <pre class="command_user"><kbd>cards help</kbd></pre>
+    <p>
+     Je vous souhaite beaucoup de plaisir avec votre nouvelle NuTyX installée.
+    <p>
+     Vous souhaitez installer d'autre paquets et pourquoi pas construire et compilez vos propres paquets.
+    <p>
+      Vous trouverez toute <a href="build-package">la documentation necessaire.</a>

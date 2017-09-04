@@ -1,0 +1,184 @@
+<h1>Le 02-10-2016</h1>
+ <h2>NuTyX 8.2 disponible avec cards 2.1.94</h2>
+  <p>
+   L'équipe de NuTyX est très fière de vous proposer la nouvelle version 
+   stable de NuTyX 8.2 .
+  <p>
+   Les nouvelles iso sont disponible. La taille est 217M pour la 64 bits 
+   et 212M pour la 32 bits.
+ <h2>Quelques chiffres</h2>
+  <p>
+   4 versions Beta et 2 version RC ont été proposées.
+  <p>
+   Six mois se sont écoulés depuis la sortie de la 8.1 et un total de 
+  près de 3000 commits ont été fait sur les diverses collections.
+  <p>
+   Un an depuis la sortie de la première version 8.0 .
+ <h2>Liste des mise à jour principales </h2>
+ <ul>
+  <li>
+  glibc 2.23 -> glibc 2.24
+  <li>
+  gcc 5.3.0 -> gcc 6.2.0
+  <li>
+  binutils 2.26 -> 2.27
+  <li>
+  linux lts 4.4.8 -> 4.4.21
+  <li>
+  cards 2.1.1 -> 2.1.94
+  <li>
+  grub 2.00 -> 2.02 beta3
+  <li>
+  util-linux 2.27.1 -> 2.28.1
+  <li>
+  btrfs-progs 4.1 -> btrfs 4.6
+  <li>
+  e2fsprogs 1.42.13 -> 1.43.1
+  <li>
+  diffutils 3.3 -> 3.5
+  <li>
+  curl 7.47.1 -> 7.50.1
+  <li>
+  sqlite 3.11.1 -> 3.14.1
+  <li>
+  dhcpcd 6.10.1 -> 6.11.2
+  <li>
+  apache 2.4.18 -> 2.4.20
+  <li>
+  cups 2.1.3 -> 2.1.4
+  <li>
+  samba 4.3.6 -> 4.4.5
+  <li>
+  eudev 3.1.5 -> 3.2
+  <li>
+  glib 2.46.2 -> glib 2.48.2
+  <li>
+  gtk 3.20.2 -> 3.20.9
+  <li>
+  qt 5.6.0 -> 5.7.0
+  <li>
+  gimp 2.8.14 -> 2.8.16
+  <li>
+  firefox 46.0.1 -> 49.0.1
+  <li>
+  gnumeric 1.12.28 -> 1.12.32
+  <li>
+  libreoffice 5.1.2 -> 5.2.1
+  <li>
+  chromium 51.0.2704 -> 53.0.2785.116
+  <li>
+  mate 1.14.0 -> 1.14.1
+  <li>
+  gnome 3.18.2 -> 3.20.2
+  <li>
+  kf5 5.23.0 -> 5.26.0
+  <li>
+  plasma 5.6.5 -> 5.7.95
+  <li>
+  ...
+  </ul> 
+ <h2>Nouveautées pour l'utilisateur</h2>
+  <h3>L'installateur</h3>
+   <p>
+    Le démarrage de l'installateur est revu, Le choix de démarrage en mode
+   debogguage est à nouveau possible.
+   <p>
+    L'installateur utilise une initrd revue à la baisse ce qui comme conséquence 
+   a permit de réduire la taille de l'iso MINI de près de 20MB.
+   <p>
+    L'ordre des actions à faire pour installer NuTyX suit un ordre logique.
+   <p>
+    Il est possible d'effacer une NuTyX déjà installée pour la remplacer avec
+   une NuTyX 8.2.
+   <p>
+    Le choix du système de fichiers est désormais recommandé.
+   <p>
+    La gestion d'une partition d'échange se fait de manière transparente. 
+    Si la partition d'échange est créé lors de la création des partitions ou 
+    si elle existe déjà, 
+    celle-ci sera automatiquement reconnue et ajoutée ds le fichier fstab sans 
+    aucune intervention manuelle supplémentaire.
+   <p>
+    L'installation, la configuration de NuTyX ,l'ajout et 
+    suppression de paquets sont suivi dans un journal. Le fichier se trouve
+    dans à l'emplacement <b>/var/log/install.log</b>.
+   <p>
+    Une fois la NuTyX 8.2 installée, l'installateur vous demande de créer un 
+    nouvel utilisateur. C'est désormais avec ce même compte utilisateur que vous
+    vous connectez la première fois. Le compte root n'est pas activé par défaut.
+   <p>
+    Si vous souhaitez activer le compte root, utilisez la commande:
+   <pre class="command"><kbd>nu</kbd></pre>
+   <p>
+    et choisissez <b>root</b> comme nom d'utilisateur.
+   <p>
+    Si votre machine dispose d'une carte wifi reconnue par NuTyX, l'installateur 
+   vous propose de choisir parmis les points d'accès disponible. Si aucun point d'accès
+   n'est disponible au moment de la première configuration, vous avez la possibilité
+   d'entrer le nom du réseau (ESSID) à la main.
+   <p>
+    Et enfin si vous le souhaitez vous pouvez activer les mises à jour automatiques.
+  <h3>Configuration de grub</h3>
+   <p>
+    Si vous avez choisi <b>btrfs</b> ou <b>ext4</b> comme système de fichiers, vous pouvez 
+   vous affranchir de l'inirtd, et donc gagnez quelques secondes au démarrage de la machine:
+   <p>Un fichier grub.cfg typique serait:</p>
+   <pre class="output">menuentry "8.2 64bits sur sda6" {
+   set root=(hd0,6)
+   linux /boot/kernel root=/dev/sda6 ro quiet
+}</pre>
+  <h3>Les diverses outils NuTyX</h3>
+   <p>
+    Le script <b>install-nutyx</b> fait parti du paquet <b>nutyx 8.2</b>.
+    Il ne faut donc plus le télécharger, il est désormais dans le dossier <b>/sbin/</b>.
+   <p>
+    Le script <b>setup-nutyx</b> dispose de nouvelles options
+    pour la configuration de NuTyX:
+   <p>
+    Pour créer un nouvel utilisateur:
+   <pre class="command"><kbd>setup-nutyx -cu</kbd></pre>
+   <p>
+    Pour activer/déactiver les maj automatiques:
+   <pre class="command"><kbd>setup-nutyx -cU</kbd></pre>
+   <p>
+    Pour configurer le réseau wifi:
+   <pre class="command"><kbd>setup-nutyx -cw</kbd></pre>
+  <h3>Le site nutyx.org</h3>
+   <p>
+    Le nouveau site est mis en place. Il est également propulsé par cards 
+    pour le rendu des pages web. A l'avenir, un moteur de recherche
+    de l'information sur le site (articles et paquets) sera mis en place.
+  <h3>Cards 2.1.94</h3>
+   <p>
+    Cards permet d'effacer une collection complète, une suite de paquets ou un 
+    groupe de paquets. Le nom de la collection est stocké dans la base de données
+    et s'affiche lors de la demande d'information sur un paquet.
+   <p>
+    Cards permet l'utilisation d'alias dans les noms de paquets installés.
+    Si un alias existe, par exemple pour le paquet <b>xorg-mesa</b>,
+    vous pouvez utiliser  un de ces alias pour obtenir des informations:
+    <pre class="command"><kbd>cards info mesa</kbd></pre>
+    <pre class="output">Retrieve info about the 483 packages: 100 %
+Name           : xorg-mesa
+Alias          : Mesa Mesa3D mesa mesa3 mesa3d 
+Description    : Mesa is an OpenGL compatible 3D graphics library.
+Series(base)   : xorg
+Group          : 
+Collection     : gui
+URL            : http://www.xorg-mesa3d.org
+Maintainer(s)  : none
+Packager(s)    : pierre at nutyx dot org, tnut at nutyx dot org
+Version        : 12.0.1
+Release        : 1
+Build date     : Tue Aug 23 15:17:12 2016
+Installed date : Wed Sep 28 22:55:03 2016
+Installed Size : 37.59 Mbytes
+Number of Files: 65 file(s)
+Arch           : x86_64</pre>
+  <h2>Remerciements</h2>
+   <p>
+    Merci à Pierre pour son enorme investissement dans la distribution et pour
+    son superbe travail effectué sur kde5.
+   <p>
+    Merci à vous tous pour vos retours qui ont permis d'améliorer la qualité 
+    de cette nouvelle NuTyX 8.2.

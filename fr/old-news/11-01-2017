@@ -1,0 +1,102 @@
+<h1>Dernière nouvelle 11-01-2017</h1>
+<h2>NuTyX 8.2.93 disponible avec cards 2.1.105</h2>
+<p>
+ L'équipe de NuTyX est très fière de vous proposer une nouvelle version de dévelopement de NuTyX 8.2.93.
+<p>
+ Plus de 1500 commits depuis la version 8.2
+<p>
+ Des nouvelles isos sont disponible en 32 et 64 bits.
+ Leurs tailles sont respectivement 219 MB et 224 MB.
+<p>
+ Les interfaces graphiques disponible sont:
+ kde5, gnome, mate, xfce4, lxde, flwm, twm, jwm, blackbox, openbox, ratpoison.
+<p>
+ Troisième version de dévelopement de la prochaine version stable NuTyX 8.3 prévu pour début mars au plus tard.
+<h2>L'installateur</h2>
+ La post-configuration du wifi a été amélioré. Le bug de l'ESSID corrigé. Un nom composé est désormais possible.
+<p>
+ L'initrd n'étant plus necessaire, celle-ci n'est plus copiée dans l'installation.
+ La ligne initrd est commentée dans le fichier grub.cfg. 
+<h2>Cards 2.1.105</h2>
+ Cards affiche plus de résultats lors d'une recherche de paquets.
+ Si le paquet trouvé est déjà installé, celui-ci s'affichera en vert dans le résultat de la recherche.
+ Désormais, celle-ci s'effectue également dans les alias et les groupes.
+<h2>Python 3 est désormais la version par défaut</h2>
+ La version de Python est passée en version 3.6.0.
+<p>
+ L'occasion pour l'équipe de NuTyX de renommer les ports python en python2 et python3 en python. 
+<p>
+ Tous les paquets ayant comme dépendances Python (version 2 et 3) ont été recompilés.
+<h2>La version Qt par défaut est la version 5.8-rc</h2>
+ Qt est désormais splité en suivant les recommandations de l'équipe de developement.
+<p>
+ KDE 5 nécessite seulement une partie de Qt.
+<p>
+ Tous les paquets ayant comme dépendances un des modules de Qt (version 5) ou Qt4 ont été recompilés.
+<h2>Autres Modification de noms de paquets</h2>
+ <p>
+  xorg-mesa s'appelle mesa
+ <p>
+  fltk1 s'appelle fltk
+ <h2>Liste des mise à jour principales</h2>
+   <ul>
+    <li>
+     linux lts 4.4.38 -> 4.9.2
+    <li>
+    cards 2.1.94 -> 2.1.105
+   <li>
+    gcc 6.2.0 -> gcc 6.3.0
+   <li>
+    curl 7.50.1 -> 7.51.1
+   <li>
+    sqlite 3.11.1 -> 3.16.2
+   <li>
+    dhcpcd 6.11.2 -> 6.11.5
+   <li>
+    cups 2.1.4 -> 2.2.1
+   <li>
+    python3 3.5.1 -> python 3.6.0
+   <li>
+    python 2.7.13 -> python2 2.7.13
+   <li>
+    glib 2.48.2 -> 2.50.2
+   <li>
+    dbus 1.10.8 -> 1.10.14
+   <li>
+    xorg-mesa 12.0.1 -> mesa 13.0.3
+   <li>
+    xorg-server 1.18.4 -> xorg-server 1.19.0
+   <li>
+    lxdm 0.5.3
+   <li>
+    slim 1.3.6
+   <li>
+    gtk 3.20.9 -> 3.22.6
+   <li>
+    Qt5 5.7.0 -> Qt 5.8.0-rc
+   <li> 
+    KDE Applications 16.08.1 -> 16.12.0
+   <li>
+    kf5 5.26 -> 5.29
+   <li>
+    plasma 5.7.95 -> 5.8.5
+   <li>
+    mate-desktop 1.14.1 -> 1.16.1
+   <li>
+    lxde-session 0.5.2 -> 0.5.3
+   <li>
+    avidemux 2.6.16
+   <li>
+    hexchat 2.12.4
+   <li>
+    firefox 49.0.2 -> 50.1.0
+   <li>
+    chromium 53.0.2785.116 -> 55.0.2883.87
+   <li>
+    libreoffice 5.2.1.1 -> 5.2.4.2
+  </ul>
+  <h2>Remerciements</h2>
+   <p>
+    Même si je dois me répéter, merci à Pierre pour son investissement dans la distribution et pour l'énorme travail effectué sur kde5..
+
+ 

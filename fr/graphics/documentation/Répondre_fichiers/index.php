@@ -1,0 +1,2 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body style="color: black; background-color: white; font-size: 78%; font-family: &quot;Verdana&quot;,&quot;Arial&quot;,&quot;Helvetica&quot;,&quot;sans-serif&quot;; border: medium none; padding: 1px; margin: 0px;" class="rich_editor" contenteditable="true"></body></html>

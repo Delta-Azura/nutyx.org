@@ -1,0 +1,47 @@
+<h1>Produire une ISO personalisée</h1>
+ <div class="note"><img alt="[NOTE IMPORTANTE]" src="../graphics/note.gif"/>
+  Toutes les commandes mentionnées dans cet article doivent se faire en root
+ </div>
+ <h2>Intallation d'une NuTyX</h2>
+  <h3>Assurez vous d'avoir installé les logiciels nécessaires</h3>
+   <pre class="command"><kbd>cards install git cdrkit syslinux libisoburn grub-efi dosfstools</kbd></pre>
+  <h3>Récupérer les outils</h3>
+   <pre class="command"><kbd>git clone git://github.com/NuTyX/core.git</kbd></pre>
+  <h3>La variable indispensable pour la construction sera utilisée tout au long du processus</h3>
+   <p>
+    La variable LFS DOIT être définie.
+   <pre class="command"><kbd>export LFS=/ISO-MINI</kbd></pre>
+   <p>
+    La chroot sera donc dans le dossier "/ISO-MINI". Libre à vous de choisir un autre dossier.
+  <h3>Installer le système de base 'houaphan'</h3>
+   <pre class="command"><kbd>install-nutyx</kbd></pre>
+  <h3>Copier les fichiers pour l'iso</h3>
+   <pre class="command"><kbd>cp -av core/iso $LFS/ISO</kbd></pre>
+ <h2>Génération de l'iso</h2>
+  <h3>Entrer dans la chroot</h3>
+   <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
+  <h3>Mettre le kernel et l'initrd au bon endroit</h3>
+   <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf
+cp -v /boot/kernel-* /ISO/isolinux/kernel
+cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
+  <h3>Supprimer les archives des binaires</h3>
+   <pre class="command"><kbd>cards purge</kbd></pre>
+  <h3>Générer les fichiers squashfs</h3>
+   <pre class="command"><kbd>mkdir -p /ISO/isolinux/boot/
+cd /
+for dir in opt bin etc lib lib64 root run sbin usr var home
+do
+  [ -f ISO/isolinux/boot/$dir.squashfs ] && rm ISO/isolinux/boot/$dir.squashfs
+  mksquashfs $dir ISO/isolinux/boot/$dir.squashfs
+done</kbd></pre>
+  <h3>Quitter NuTyX chroot</h3>
+   <pre class="command"><kbd>exit</kbd></pre>
+  <h3>Générer l'ISO</h3>
+   <pre class="command"><kbd>bash core/scripts/mkiso</kbd></pre>
+ <h2>Conclusion</h2>
+  <p>
+   La taille de l'iso ne devrait pas dépasser 300 MB si vous n'avez rien ajouté de plus que les paquets ci-dessus.
+   Vous la trouverez dans le dossier $LFS.
+   <pre class="command"><kbd>ls $LFS</kbd></pre>
+   <pre class="output">bin   dev  home  lib  NuTyX_x86_64-20160914.iso     proc  run   srv  tmp  var
+boot  etc  ISO   mnt  NuTyX_x86_64-20160914.md5sum  root  sbin  sys  usr</pre>

@@ -1,0 +1,147 @@
+  <h1>Scénario D</h1>
+
+   <a name='1'></a>
+   <h2>Introduction</h2>
+    <p>
+     Vous souhaitez utiliser les binaires disponibles des collection <b>base, cli, cli-extra, gui</b> et <b>gui-extra</b>. 
+    <p>
+     Vos nouvelles recettes doivent utiliser les dépendances provenant des binaires existants.
+    <p>
+     Ce scénario est un peu long à mettre en oeuvre mais une fois tout en place, l'ajout de paquets personnels se fait très rapidement.
+
+   <a name='2'></a>
+   <h2>Le fichier /etc/cards.conf</h2>
+    <p>
+     Un dossier contenant mes recettes personnelles est ajouté, ce dossier ainsi que les collections ne <u>doivent jamais</u> être mis à jour par la commande <b>cards sync</b>.
+     On ne spécifie donc aucune URL.
+   <p>
+     Seule la collection <b>base</b> doit rester active le temps de récupérer la commande <b>rsync</b> si pas encore installée.
+   <p>
+     Le dossier contenant les logs de compilation est défini.
+   <p>
+     Je n'ai pas besoin de spécifier les locales, elles seront toujours toutes installées.
+   <p>
+     Les dossiers définissant le système de base, en cas de retour à un système de base sont définis.
+   <p>
+     Le contenu typique de votre fichier <b>/etc/cards.conf</b> pour le scénario <b>D</b>:
+   <pre class="output">dir /srv/www/nutyx/x86_64/personnel
+dir /srv/www/nutyx/x86_64/stable/gui
+dir /srv/www/nutyx/x86_64/stable/cli
+dir /srv/www/nutyx/x86_64/stable/base|http://downloads.nutyx.org
+logdir /var/log/pkgbuild
+base /srv/www/nutyx/x86_64/stable/base
+base /srv/www/nutyx/x86_64/aconserver</pre>
+
+   <a name='3'></a>
+   <h2>Installation des outils de développement</h2>
+    <p>
+     On peut maintenant commencer par installer les outils de développement, cad compilateur, librairies C et C++ etc.
+    <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+    <p>
+     On peut maintenant supprimer les lignes pointant sur l'url du miroir de NuTyX pour déactiver définitivement la commande <b>cards sync</b>.
+    <p>
+     Le nouveau fichier <b>/etc/cards.conf</b>:
+    <pre class="output">dir /srv/www/nutyx/personnel
+dir /srv/www/nutyx/x86_64/stable/gui
+dir /srv/www/nutyx/x86_64/stable/cli
+dir /srv/www/nutyx/x86_64/stable/base
+logdir /var/log/pkgbuild
+base /srv/www/nutyx/x86_64/stable/base
+base /srv/www/nutyx/aconserver</pre>
+
+   <a name='4'></a>
+   <h2>Synchronisation des binaires via rsync</h2>
+    <p>
+     Cette opération consiste à rapatrier les paquets contenus dans les collections <b>base, cli et gui</b> disponibles en binaires.
+     Elle peut durer entre quelques minutes et quelques heures en fonction de votre connection.
+    <p>
+     Heureusement, cette opération n'est longue que la première fois
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+    <p>
+     Notez bien le dossier de destination, j'ai choisi de "déposer" les binaires à la racine du serveur http.
+     <img src="../graphics/smiley-tongue-out.gif" alt="Tongue out" title="Tongue out" />
+    <p>
+     Il faut commencer par créer les dossiers.
+    <pre class="command_user"><kbd>sudo mkdir -p /srv/www/nutyx/x86_64/stable/{personnel,aconserver}</kbd></pre>
+    <p>
+     On peut maintenant synchroniser l'ensemble des binaires:
+    <pre class="command_user"><kbd>for i in base cli gui; do sudo rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/x86_64/stable/$i/ \
+/srv/www/nutyx/x86_64/stable/$i/;done</kbd></pre>
+    <p>
+     Allez peut-être boire un café, manger une pizza ou un bon paquet de frites
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />,
+     ça peut-être long...
+
+   <a name='5'></a>
+   <h2>Le fichier /etc/pkgmk.conf</h2>
+    <p>
+     Pour ce scénario, il est indispensable de vérifier toutes les variables necessaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>.
+    <p>
+     Mon processeur est un double coeur et je suis en 64bits.
+    <p>
+     Les sources sont stockées dans un dossier commun, je ne souhaite pas qu'elles soient effacées.
+     Pour ne pas polué ni perdre le travail effectué lors d'un:
+     <b>for i in base cli gui; do sudo  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/8.0/x86_64/$i /srv/www/nutyx/x86_64/$i;done</b>,
+     je préfère utiliser un dossier de travail temporaire:
+     <pre class="output">PKGMK_SOURCE_DIR="/srv/www/sources"
+PKGMK_KEEP_SOURCES="yes"
+PKGMK_WORK_DIR="/tmp/work"</pre>
+    <p>
+     Dans ce scénario, je souhaite que les dépendances soient installées mais non compilées.
+     J'ai besoin du fichier <b>.PKGREPO</b> généré dans le dossier du port.
+     Je souhaite pouvoir utiliser la commande <b>cards install</b> ou <b>get</b> pour pouvoir réinstaller mes binaires disponibles.
+     La commande <b>pkgmk</b> doit donc générer le <b>.PKGREPO</b> de ma collection personnelle.
+    <pre class="output">PKGMK_IGNORE_REPO="no"
+PKGMK_IGNORE_COLLECTION="no"</pre>
+    <p>
+     Puisque les dépendances proviennent des binaires existantes et que ces binaires sont splités.
+     Il est préférable de conserver cette fonctionnalitée pour les paquets personnels.
+     Les locales produites seront les 11 locales produites par défaut.
+    <pre class="output">PKGMK_GROUPS=(devel man doc service)
+PKGMK_LOCALES=(fr de it es nl pt da nn sv fi)</pre>
+    <p>
+     Les binaires produits seront dans le même format de compression que les binaires officielles, même si ce n'est pas une obligation, on veut garder une certaine cohérence entre les binaires.
+     Je ne souhaite pas supprimer mes binaires produits une fois installés.
+    <pre class="output">PKGMK_COMPRESS_PACKAGE="yes"
+PKGMK_COMPRESSION_MODE="xz"
+PKGMK_CLEAN="no"</pre>
+    <p>
+     Voici à quoi peut ressembler votre fichier <b>/etc/pkgmk.conf</b> pour le scénario <b>D</b>:
+    <pre class="output">export CFLAGS="-O2 -pipe"
+export CXXFLAGS="${CFLAGS}"
+case ${PKGMK_ARCH} in
+    "x86_64"|"")
+       export MAKEFLAGS="-j2"
+       ;;
+    "i686")
+       export CFLAGS="${CFLAGS} -m32"
+       export CXXFLAGS="${CXXFLAGS} -m32"
+       export LDFLAGS="${LDFLAGS} -m32"
+       ;;
+    *)
+       echo "Unknown architecture selected! Exiting."
+       exit 1
+       ;;
+esac
+PKGMK_SOURCE_DIR="/srv/www/sources"
+PKGMK_KEEP_SOURCES="yes"
+PKGMK_WORK_DIR="/tmp/work"
+PKGMK_IGNORE_REPO="no"
+PKGMK_IGNORE_COLLECTION="no"
+PKGMK_GROUPS=(devel man doc service)
+PKGMK_LOCALES=(fr de it es nl pt da nn sv fi)
+PKGMK_COMPRESS_PACKAGE="yes"
+PKGMK_COMPRESSION_MODE="xz"
+PKGMK_CLEAN="no"</pre>
+
+     <a name='6'></a>
+     <h2>Conclusion</h2>
+      <p>
+       Pour ce scénario, les commandes à retenir sont:
+      <pre class="command"><kbd>cards level
+cards base -r
+cards create
+for i in base cli gui;do rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/x86_64/stable/$i/ \
+/srv/www/nutyx/x86_64/stable/$i/;done</kbd></pre>

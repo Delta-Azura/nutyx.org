@@ -1,0 +1,61 @@
+<h1>Scénario A</h1>
+
+ <a name='1'></a>
+ <h2>Introduction</h2>
+  <p>
+   Vous ne souhaitez pas compiler dans votre NuTyX.
+   Ce qui est tout à fait possible si vous n'avez pas besoin de programmes particuliers et que les binaires proposés vous suffisent.
+   Ce scénario est aussi valable dans le cas où vous gérez plusieurs installations sur lesquelles aucune compilation n'est necessaire.
+
+ <a name='2'></a>
+ <h2>Le fichier /etc/cards.conf</h2>
+  <p>
+   Les collections binaires sont activées.
+  <p>
+   La(les) langue(s) utilisée(s) sur la machine est ajustée(s).
+  <p>
+   Les dossiers définissant le système de base, en cas de retour à un système de base sont définis.
+  <p>
+   Le contenu typique de votre fichier <b>/etc/cards.conf</b>:
+   <pre class="output">dir /var/lib/pkg/depot/xfce4-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/xfce4|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/gui|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/gui-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/cli-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+locale fr
+locale de
+base /var/lib/pkg/depot/base</pre>
+  <p>
+   Les cinq collections standard <b>base</b>, <b>cli</b>, <b>cli-extra</b>, <b>gui</b> et <b>gui-extra</b> sont activées,
+   ainsi que les collections <b>xfce4</b> et <b>xfce4-extra</b>.
+  <p>
+   Les langues qui doivent être installées sont le français <b>fr</b> et l'allemand <b>de</b>.
+   Le dossier contenant les paquets de base sont ceux de la collection standard <b>base</b>.
+   <pre class="output">base /var/lib/pkg/depot/base</pre>
+
+ <a name='3'></a>
+ <h2>Le fichier /etc/pkgmk.conf</h2>
+  <p>
+   Pour le scénario <b>A</b>, même si le fichier <b>/etc/pkgmk.conf</b> est présent,
+   ne sera pas utilisé puisque vous ne devez rien compiler.
+   Les outils de développement ne sont pas présents et pas nécessaires.
+
+ <a name='4'></a>
+ <h2>Conclusion</h2>
+  <p>
+   C'est tout ce qu'il faut savoir pour la configuration de votre NuTyX.
+   Vous souhaitez mettre à jour votre base de données et
+   voir si il y a des mise à jour disponibles.
+   <pre class="command"><kbd>check</kbd></pre>
+  <p>
+   Vous souhaitez installer un paquet:
+   <pre class="command"><kbd>get firefox</kbd></pre>
+  <p>
+   Vous souhaitez supprimer un paquet:
+   <pre class="command"><kbd>del firefox</kbd></pre>
+  <p>
+   C'est tout ce qu'il faut savoir
+   <img src="../graphics/smiley-tongue-out.gif" alt="Tongue out" title="Tongue out" />.
+   J'espère que vous allez vous en sortir.

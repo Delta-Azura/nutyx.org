@@ -1,0 +1,176 @@
+<h1>Dernière nouvelle 23-03-2017</h1>
+
+<h2>NuTyX 9.0-RC1 disponible avec cards 2.2</h2>
+<p>
+ L'équipe de NuTyX est très fière de vous proposer une première version quasi stable (RC1) de la prochaine NuTyX 9.0.
+<p>
+ NuTyX 9.2 RC1 propose le kernel 4.10.6, kernel lts 4.9.16, glibc 2.25, gcc 6.3.0, binutils 2.28, python 3.6.0,
+ xorg-server 1.19.2, qt 5.8.0, plasma 5.9.4, kf5 5.31.0, gnome 3.22.2, mate 1.16.1, xfce4 4.12.3, firefox 52.0.1 et beaucoup d'autres mise à jour.
+
+<p>
+ Plus de 2500 commits depuis la version 8.2
+
+<p>
+ Des nouvelles isos sont disponible en 32 et 64 bits.
+ Leur tailles sont respectivement 246 MB et 247 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ Les interfaces graphiques disponibles sont:
+ kde5, gnome, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, openbox, twm, etc.
+
+<h2>Mise à jour majeure</h2>
+ <p>
+  Cette nouvelle version est le résultat de plus de 6 mois de dévelopement.
+  Une mise à jour la 8.2.1 est peut-être possible, mais risquée, l'équipe de NuTyX recommande de faire une nouvelle installation.
+<h2>Nouveautés dans les ISOs</h2>
+<p>
+ Ces nouvelles isos peuvent être lancées sur des machines configurées en mode UEFI.
+ Si tel est le cas, l'installateur aide l'utilisateur à faire les bons choix lors de l'installation et l'uefi se chargera de l'amorçage de la machine, aucun gestionnaire d'amorçage tiers n'est utilisé par défaut.
+ Libre à l'utilisateur d'en installer un si il le souhaite
+ <p>
+ L'ISO peut se charger à 100 % en ram si la machine cible dispose plus qu'1Gb de ram..
+ La clé USB peut donc être déconnectée et ainsi libérer le port USB.
+ Utile ds le cas de l'installation sur tablette ne disposant que d'un seul port USB
+
+<h2>Nouveau kernel LTS</h2>
+<p>
+ Le support à long terme du kernel est passé de la version 4.4 -> 4.9.
+<h2>Plus d'initrd par défaut</h2>
+<p>
+L'initrd étant devenue obsolète, il n'est plus necessaire de spécifier la ligne initrd dans le fichier d'amorçage grub.
+les systèmes de fichiers reconnues par NuTyX sont compilés dans le kernel.
+
+<h2>Les composants principaux de la chaîne de compilation sont mis à jour.</h2>
+<p>
+ Les composants principaux de la chaîne d'outils cad en-têtes du noyau, compilateur, editeur de liens, assembleur et librairie C sont désormais à jour,
+ les versions respectives de chaque composant se trouvent dans la liste ci-dessous.
+
+<h2>Collection base-extra supprimée</h2>
+<p>
+ La collection base-extra est désormais intégrée dans la collection base.
+<p>
+ Le nombre de collections officielles est donc désormais 13 collections:
+ <ul>
+  <li>
+    base
+  <li>
+    cli, cli-extra
+  <li>
+    gui, gui-extra
+  <li>
+    xfce4, xfce4-extra
+  <li>
+    mate, mate-extra
+  <li>
+    gnome, gnome-extra
+  <li>
+    kde5, kde5-extra
+ </ul>
+ 
+<h2>Renommage et Splitting</h2> 
+<p>
+ Le renommage de python3 en python, le split de qt5 et les dernières mise à jour ont eu de grosses répercussions sur les paquets qui en dépendent et ont entrainé plus de travail que prévu.
+ C'est pourquoi l'équipe de NuTyX a décidé de recompiler toutes les collections.
+
+<ul>
+ <li>
+   python -> python2
+ <li>
+  python3 -> python
+ <li>
+  qt5 -> qt
+ <li>
+  fltk1 -> fltk
+ <li>
+  xorg-mesa -> mesa
+</ul>
+
+<h2>Cards 2.2</h2>
+<p>
+ Il s'agit d'une mise à jour majeure. Cards est intégralement traduit en français.
+<p>
+  Cards affiche plus de résultats lors d'une recherche de paquets.
+  Si le paquet trouvé est déjà installé, celui-ci s'affichera en vert dans le résultat de la recherche.
+  Désormais, celle-ci s'effectue également dans les alias et les groupes.
+  
+<h2>Structure des dossiers simplifiée</h2>
+<p>
+ Les liens /usr/lib64 -&gt; /usr/lib et /lib64 -&gt; /lib sont supprimés.
+<p>
+ Le dossier /usr/lib64 ne doit plus être présent.
+<p>
+ Le dossier /lib64 ne doit contenir que 2 liens vers le même fichier /lib/ld-linux-x86-64.so.2
+
+<h2>Le wifi</h2>
+  <p>
+   Pour la gestion du wifi, c'est désormais le paquet networkmanager qui est préféré.
+   Sa grande souplesse permet de configurer votre wifi très facilement.
+   L'outil wicd basé sur python est toujours disponible comme alternative pour se connecter en wifi.
+  <p>
+   La post-configuration du wifi a été amélioré. Le bug de l'ESSID corrigé. Un nom composé est désormais possible.
+
+<h2>Liste des mises à jour principales</h2>
+ <ul>
+  <li>
+   cards 2.1.94 -> 2.2
+  <li>
+   kernel 4.7.4 -> 4.10.4
+  <li>
+   kernel lts 4.4.21 -> 4.9.16
+  <li>
+   gcc 6.2.0 -> 6.3.0
+  <li>
+   glibc 2.24 -> glibc 2.25
+  <li>
+   binutils 2.27 -> 2.28
+  <li>
+   python 3.5.1 -> python 3.6.0
+  <li>
+   alsa 1.1.2 -> 1.1.3
+  <li>
+   cups 2.1.4 -> 2.2.2
+  <li>
+   samba 4.4.5 -> 4.5.5
+  <li>
+   mesa 12.0.6 -> 17.0.1
+  <li>
+   libdrm 2.4.70 -> 2.4.75
+  <li>
+   xorg-server 1.18.4 -> 1.19.2
+  <li>
+   qt5 5.7.0 -> qt 5.8.0 
+  <li>
+   gtk3 3.20.9 -> 3.22.9
+  <li>
+   firefox 49.0.2 -> 52.0.1
+  <li>
+   thunderbird 45.3.0 -> 45.8.0
+  <li>
+   chromium 53.0.2785.116 -> 56.0.2924.10
+  <li>
+   libreoffice 5.2.1.1 -> 5.3.1.3
+  <li>
+   kf5 5.26.0 -> 5.31.0
+  <li>
+   plasma 5.7.95 -> 5.9.4
+  </ul>
+
+ <h2>Une chaîne YouTube</h2>
+ <p>
+  <a href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g">https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g</a>
+ <p>
+  Plusieurs fois demandées, vous pouvez désormais visionnez une installation en UEFI ou en bios.
+ <p>
+  Une nouvelle chaîne YouTube est ouverte. Elle contiendra les tutoriels disponibles sur le site.
+ <p>
+ <h2>Remerciements</h2>
+ <p>
+  Merci à Pierre pour son travail sur l'interface kde5.
+ <p>
+  Merci à Guy pour son aide précieuse sur la construction des isos désormais compatible uefi.
+ <p>
+  Merci Sipomatador d'avoir trouvé le bug concernant les différentes familles de microcesseurs.
+ <p>
+  Merci à Timcowchip pour son travail sur la collection rework, ses pull request vont permettre à certains paquets de rejoindre leur collection d'origine.
+ <p>
+  Et un énorme merci à l'équipe de "Linux From Scratch" pour la mise à disposition de la documentation de la LFS/BLFS 8.0.
+  

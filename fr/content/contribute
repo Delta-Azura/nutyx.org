@@ -1,0 +1,18 @@
+ <table width="100%" cellspacing="0">
+   <tr>
+   </tr>
+   <tr>
+    <td width="30%" class="lien_article" ><h3><a class="url" href="bash-basics">Quelles sont les connaissances requises ?</a></h3></td><td width="70%">Pour pouvoir contribuer il ne faut pas être un programmeur averti. Quelques notions rudimentaires du langage BASH suffisent, si vous n'avez aucune idée du langage BASH cet article vous expliquera les notions de base pour réaliser une recette sans se prendre la tête</td>
+    </tr>
+    <tr>
+    <td width="30%" class="lien_article" ><h3><a class="url" href="recept">Qu'est-ce qu'un port (ou une recette) ?</a></h3></td><td width="70%">Le port est un dossier contenant un certain nombre de fichiers nécessaire pour la construction d'un paquet. La commande pkgmk permet de "construire" le paquet qui sera ensuite installable.</td>
+   </tr>
+   <tr>
+    <td width="30%" class="lien_article" ><h3><a class="url" href="port-syntax">Syntaxe minimale d'un port</a></h3></td><td width="70%">Voici un petit exemple de recette minimale avec tous les commentaires pour vous permettre de comprendre le principe de fonctionnement</td>
+   </tr>
+   <tr>
+    <td width="30%" class="lien_article" ><h3><a class="url" href="build-receipt">Exemple pratique de recette</a></h3></td><td width="70%">Un exemple pratique complet d'une recette minimale pour vous permettre de comprendre le principe de fonctionnement</td>
+   </tr>   
+   <tr>
+   </tr>
+  </table>

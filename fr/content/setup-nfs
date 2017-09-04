@@ -1,0 +1,107 @@
+<h1>Mise en place d'un serveur NFS</h1>
+ <h2>Introduction</h2>
+  <p>
+   NFS signifie <a href="https://fr.wikipedia.org/wiki/Network_File_System">Network File System</a>.
+   Il vous permet de partager des fichiers
+   entre différentes machines. La seule condition, les machines DOIVENT supporter
+   le service NFS. Heureusement pour nous TOUTES les distributions le supportent
+ <h2>Les paquets à installer</h2>
+  <p>
+   Pour mettre en oeuvre un serveur NFS c'est assez simple. 
+   Il suffit de l'installer, le configurer et le lancer.
+   On va donc installer tout ce petit monde:
+  <h3>Sur le serveur</h3>
+   <pre class="command_user"><kbd>get nfs-utils nfs-utils.service</kbd></pre>
+  <h3>Sur les clients</h3>
+   <pre class="command_user"><kbd>get nfs-utils</kbd></pre>
+ <h2>Configuration</h2>
+  <p>
+   Il y a seulement 2 fichiers à configurer: Un sur le serveur, un sur chaque
+  client:
+  <p>
+   Dans notre exemple, c'est le dossier <b>/home/tnut/documents</b> que l'on souhaite partager:
+   <h3>Configuration du serveur</h3>
+    <p>
+     Passez-en root:
+     <pre class="command_user"><kbd>su -</kbd></pre>
+    <p>
+     Créez le fichier /etc/exports avec ceci:
+     <pre class="command"><kbd>cat  &gt; /etc/exports &lt;&lt; EOF
+/home/tnut/documents 192.168.1.0/24(rw,no_root_squash,subtree_check,anonuid=99,anongid=99)
+EOF</kbd></pre>
+    <p>
+     On souhaite donc partager le dossier <b>/home/tnut/documents</b> et le rendre accessible
+     depuis toutes les machines ayant une adresse ip comprise entre 192.168.1.1 et 192.168.1.254
+    <p>
+     La configuration est déjà terminée, passons au(x) client(s)
+    <h3>Configuration de(s) client(s)</h3>
+     <pre class="command"><kbd>cat &gt;&gt; /etc/fstab &lt;&lt; EOF
+192.168.1.20:/home/tnut/documents /home/tnut/documents nfs auto,rw,vers=3,_netdev,rsize=8192,wsize=8192 0 0
+EOF</kbd></pre>
+    <p>
+     Dans cet exemple, le serveur NFS est à l'adresse <b>192.168.1.20</b>
+ <h2>Lancement des services</h2>
+  <p>
+   Il ne nous reste plus qu'a lancer le service sur le serveur en le redémarrant ou en tapant:
+   <h3>Sur le serveur</h3>
+    <pre class="command"><kbd>/etc/rc.d/init.d/rpcbind start
+/etc/rc.d/init.d/netfs start
+/etc/rc.d/init.d/nfs-server start</kbd></pre>
+   <h3>Sur le(s) client(s)</h3>
+    <pre class="command"><kbd>/etc/rc.d/init.d/rpcbind start
+/etc/rc.d/init.d/netfs start</kbd></pre>
+    <p>
+     Si vous le préférer, vous pouvez relancer les machines
+ <h2>Tester le service</h2>
+  <p>
+   Tous les services sont configurés, aucun message d'erreur ne s'affiche lors de leur lancement.
+  <h3>Sur le serveur</h3>
+   <p>
+    Le serveur nfs étant <u>aussi</u> un client c'est tout à fait possible de commencer par tester celui-ci
+   <p>
+    Sur le serveur, commençons par créer un dossier "bidon":
+   <p>
+    En root:
+    <pre class="command"><kbd>mkdir /root/bidon</kbd></pre>
+   <p>
+    Et maintenant le test de montage (toujours sur le serveur):
+    <pre class="command"><kbd>mount -o vers=3 192.168.1.20:/home/tnut/documents /root/bidon</kbd></pre>
+   <p>
+    Aucun message d'erreur ne doit apparaître. Le montage est effectué.
+   <p>
+    Pour vérifier, on regarde son contenu:
+   <pre class="command"><kbd>ls -l /root/bidon</kbd></pre>
+   <pre class="output">....
+Mes lettres
+Images
+MP3
+...
+...</pre>
+   <p>
+    Le test sur le serveur est terminé. On démonte le dosier
+    <pre class="command"><kbd>umount /root/bidon</kbd></pre>
+   <p>
+    Une fois démonté vous pouvez supprimer le dossier, si celui-ci est bien démonté et vide</p> la commande:
+    <pre class="command"><kbd>rm -d /root/bidon</kbd></pre>
+    devrait fonctionner sans provoquer d'erreur.
+   <p>
+    On peut peut procéder au tests sur le client
+  <h3>Sur un client</h3>
+   <p>
+    Le test est exactement identique, cette fois on test le dossier qui sera monté automatiquement
+    au lancement du client:
+    <pre class="command"><kbd>mount -o vers=3 192.168.1.20:/home/tnut/documents /home/tnut/documents</kbd></pre>
+   <p>
+    Aucun message d'erreur ne doit apparaître. Le montage est effectué.
+   <p>
+    Pour vérifier, on regarde son contenu:
+    <pre class="command"><kbd>ls -l /home/tnut/documents</kbd></pre>
+    <pre class="output">....
+Mes lettres
+Images
+MP3
+...
+...</pre>
+ <h2>Conclusions</h2>
+   <p>
+    Félicitations, votre serveur NFS est désormais opérationnel.

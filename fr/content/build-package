@@ -1,0 +1,144 @@
+ <h1>Comment construire un paquet ?</h1>
+  <h2>Introduction</h2>
+   <p>Nous connaissons les <a href="why-contribute">raisons de contribuer</a>,
+   <a href="bash-basics">les connaissances requises</a>,
+   <a href="base-commands">les commandes de base à notre disposition</a>,
+   le <a href="recept">format minimum d'une recette</a> et
+   enfin quelles sont <a href="packages">les recettes existantes</a>.
+  <p>
+   Il est temps de passer à l'action et de construire et installer son premier paquet dans les règles de l'art (de NuTyX) <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+ <h2>Construire votre premier paquet</h2>
+  <p>
+   Nous allons d'abord voir ensemble comment construire un premier paquet binaire NuTyX
+   au format <b>&lt;MonpaquetDateArch.cards.tar&gt;</b> depuis son code source sans entrer dans les détails de configurations pour l'instant.
+  <p>
+   Ce paquet fonctionnel pourra être installé et désinstallé dans votre NuTyX grâce à ses outils de gestion de paquets.
+  <p>
+   Vous aurrez besoin des outils cards.devel installés pour compiler celui-ci.
+  <p>
+   Ce tutoriel simple peut être testé sur votre NuTyX quelle que soit sa configuration.
+   <p>
+    La recette du paquet choisi est un petit éditeur de texte ne necessitant aucune dépendances.
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+      Pour ce paquet, on n'utilisera pas d'environnement isolé aussi appelé <a href="dictionary#ID100">chroot</a>.
+      On verra dans un prochain article, comment construire dans cet environnement isolé.
+      Parce que c'est la seule methode qui fonctionnera si l'on doit construire un paquet ayant des dépendances.
+     </div>
+
+
+ <h2>Un minimum d'explication</h2>
+   <p>
+    Tous les <a href="dictionary#ID005">paquets</a> disponible sous NuTyX utilisent <a href="dictionary#ID060">une recette</a>.
+   <p>
+    Cette recette (<a href="dictionary#ID080">Pkgfile</a>) est rangée dans un dossier au nom du paquet
+    qui est lui-même rangé dans une <a href="dictionary#ID010">collection</a>.
+   <p>
+    Les Collections se trouvent (par défaut) dans le dossier /usr/ports.
+ <h2>La recette</h2>
+  <p>
+   On crée les répertoires nécessaires: la collection "perso" et le dossier du paquet.
+<pre class="command_user"><kbd>sudo mkdir -p /usr/ports/perso/nano</kbd></pre>
+  <pre class="command"><kbd>echo '
+description="Command line Text Editor"
+maintainer="Nano team"
+packager="François Perrin francois dot perrin at myworld dot com"
+url="http://www.nano-editor.org/"
+
+name=nano
+version=2.7.2
+release=1
+
+source=(${url}/dist/v${version:0:3}/$name-$version.tar.xz)
+
+build() {
+cd $name-$version
+./configure --prefix=/usr \
+--sysconfdir=/etc \
+--enable-utf8 \
+--enable-color \
+--enable-multibuffer \
+--enable-nanorc \
+--docdir=/usr/share/doc/$name-$version
+make
+make DESTDIR=$PKG install
+rm $PKG/usr/share/info/dir
+}' &gt; /usr/ports/perso/nano/Pkgfile</kbd></pre>
+
+ <h2>Installation des paquets de dévelopement</h2>
+  <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+ <h2>Compilation du paquet</h2>
+   <pre class="command_user"><kbd>cd /usr/ports/perso/nano
+pkgmk -d</kbd></pre>
+ <h2>Installation du paquet</h2>
+   <pre class="command_user"><kbd>sudo pkgadd nano1*</kbd></pre>
+
+
+  <h2>Les différents fichiers de configuration</h2>
+   <h3>Le fichier /etc/cards.conf</h3>
+    <p>
+     Ce fichier est toujours présent dans une installation NuTyX.
+    <p>
+     C'est un peu "la colonne vertebrale" de votre NuTyX.
+    <p>
+     C'est le fichier <b>/etc/cards.conf</b> qui reflètera votre façon d'utiliser NuTyX.
+    <p>
+     Toutes les <a href="dictionary#ID010">collections</a> que vous souhaitez utiliser dans votre NuTyX peuvent y être spécifiées sous 2 formes possibles:
+     <ol>
+      <li>
+        exemple de configuration de la collection <b>cli</b> en binaires depuis un serveur de dépot distant
+        <pre class="output">dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org</pre>
+      <li>
+        exemple de configuration de la collection <b>cli</b> en ports locals
+        <pre class="output">dir /usr/ports/cli</pre>
+     </ol>
+    <p>
+     Il est également responsable de la liste des paquets que vous souhaitez conserver lorsque vous executez la commande:
+     <pre class="command"><kbd>cards base -r</kbd></pre>
+     Et enfin il spécifie quelle locale seront installées
+    <p>
+     Vous trouverez plus d'information en consultant le manuel de cards.conf
+     <pre class="command"><kbd>man cards.conf</kbd></pre>
+         
+   <h3>Le fichier /etc/pkgmk.conf</h3>
+    <p>
+     Ce fichier est utilisé lors de la compilation de nouveaux ports.
+     Il spécifie toutes les variables reconnues par la commande <b>pkgmk</b>
+    <p>
+     Veuillez prendre note des différentes variables qui sont à votre disposition en consultant le manuel de pkgmk.conf
+     <pre class="command"><kbd>man pkgmk.conf</kbd></pre>
+   <h3>Exemple de fichier /etc/pkgmk.conf</h3>
+<pre class="output">export CFLAGS="-O2 -pipe"
+export CXXFLAGS="${CFLAGS}"
+
+case ${PKGMK_ARCH} in
+        "x86_64")
+		export MAKEFLAGS="-j$(getconf _NPROCESSORS_ONLN)"
+                ;;
+        "i686")
+                export CFLAGS="${CFLAGS} -m32"
+                export CXXFLAGS="${CXXFLAGS} -m32"
+                export LDFLAGS="${LDFLAGS} -m32"
+                ;;
+        *)
+                echo "Unknown architecture selected! Exiting."
+                exit 1
+                ;;
+esac
+# Those settings are typically set for packaging
+# without sub packages and only french locale
+# They are also the default ones
+#
+# PKGMK_GROUPS=()
+# PKGMK_LOCALES=(fr)
+# PKGMK_COMPRESS_PACKAGE="no"
+# PKGMK_CLEAN="yes"
+# PKGMK_IGNORE_FOOTPRINT="yes"
+# PKGMK_KEEP_SOURCES="no"
+# PKGMK_SOURCE_DIR="$PWD"
+# PKGMK_WORK_DIR="$PWD/work"
+# PKGMK_IGNORE_REPO="yes"
+# PKGMK_IGNORE_COLLECTION="yes"
+# PKGMK_IGNORE_RUNTIMEDEPS="yes"</pre>
+<h2>Conclusion</h2>
+<p>
+ Nous voilà prêt pour construire nos paquets <a href="build-in-chroot">dans une chroot.</a>

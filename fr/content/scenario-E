@@ -1,0 +1,213 @@
+  <h1>Scénario E</h1>
+
+   <a name='1'></a>
+   <h2>Introduction</h2>
+    <p>
+     Ce scénario est un peu l'aboutissement de mon travail.
+     Ici on propose un mélange de différents scénarios.
+     On installe une NuTyX dans un dossier dédié dans lequel on produit nos paquets personnels.
+     Cela signifie que l'on doit parler de DEUX NuTyX.
+    <p>
+     Ce scénario est donc la combinaison de DEUX scénarios, dont un sera ... le scénario A
+     ( <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" /> maintenant vous savez pourquoi j'ai tenu à en parler ).
+     Le deuxième scénario qui est celui de votre environnement isolé celui que vous préféréz entre les 3 autres (B, C et D).
+     A partir de maintenant on ne parle plus d'environnement isolé mais de la <b>chroot</b>.
+    <p>
+     Quelques avantages par rapports aux précédents:
+    <ol>
+     <li>
+      Comme vous n'installerez jamais de paquets de developpement sur votre NuTyX principale, celle-ci gardera une taille raisonnable.
+     <li>
+      Bien que vous devez prévoir quelques Giga pour votre <b>chroot</b>, sachez que si vous devez la supprimer, un simple:
+      <pre class="command"><kbd>rm -r /&lt;chemin-de-votre-chroot&gt;</kbd></pre> et vous retrouverez votre NuTyX principale.
+     <li>
+      Tous vos paquets seront donc compilés dans la  <b>chroot</b>, ce qui épargne toute fausse manoeuvre sur votre NuTyX principale.
+     <li>
+      Votre <b>chroot</b> peut être un système de base, c'est même vivement recommandé alors que sur votre principale, vous utilisez très probablement une interface graphique.
+    </ol>
+
+   <a name='2'></a>
+   <h2>Les fichiers /etc/cards.conf</h2>
+        <u>   *** NuTyX Principale ***   </u>
+        <pre class="output">
+dir /mnt/hd/usr/ports/personnel
+dir /var/lib/pkg/depot/gui|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/gui-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/cli-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+locale fr
+base /var/lib/pkg/depot/base</pre>
+        <p>
+         Vous noterez que j'ai volontairement ajouté la ligne:
+        <pre class="output">dir /chroot/usr/ports/personnel</pre>
+        <p>
+         En effet, on veut pouvoir installer les paquets de la <b>chroot</b> dans la principale.
+        <p>
+         Je choisis le scenario <b>C</b> pour ma <b>chroot</b>.
+        <u>   *** NuTyX chroot     *** Scénario C ***  </u>
+        <pre class="output">
+dir /usr/ports/personnel
+dir /usr/ports/gui
+dir /usr/ports/cli
+dir /usr/ports/base
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+logdir /var/log/pkgbuild
+locale fr
+base /usr/ports/base
+base /usr/ports/aconserver</pre>
+
+   <h2><span id='3'>Le fichier /etc/pkgmk.conf</span></h2>
+    <p>
+     Comme dit plus haut, le scenario <b>A</b> n'a pas besoin de fichier de configuration <b>/etc/pkgmk.conf</b>.
+     On peut directement configurer le <b>/etc/pkgmk.conf</b> de notre <b>chroot</b>.
+    <u>   *** NuTyX chroot     *** Scénario C ***  </u>
+    <pre class="output">export CFLAGS="-O2 -pipe"
+export CXXFLAGS="${CFLAGS}"
+case ${PKGMK_ARCH} in
+    "x86_64"|"")
+       export MAKEFLAGS="-j4"
+       ;;
+    "i686")
+       export CFLAGS="${CFLAGS} -m32"
+       export CXXFLAGS="${CXXFLAGS} -m32"
+       export LDFLAGS="${LDFLAGS} -m32"
+       ;;
+    *)
+       echo "Unknown architecture selected! Exiting."
+       exit 1
+       ;;
+esac
+PKGMK_SOURCE_DIR="/srv/www/sources"
+PKGMK_KEEP_SOURCES="yes"
+PKGMK_WORK_DIR="$PWD/work"
+PKGMK_IGNORE_REPO="no"
+PKGMK_IGNORE_COLLECTION="no"
+PKGMK_GROUPS=()
+PKGMK_LOCALES=(fr)
+PKGMK_COMPRESS_PACKAGE="yes"
+PKGMK_COMPRESSION_MODE="gz"
+PKGMK_CLEAN="no"</pre>
+
+  <a name='4'></a>  
+  <h2>Construction dans un environnement isolé aussi appelé "chroot"</h2>
+   <p>
+    Cette méthode n'est pas indispensable mais fortement recommandée.
+   <p>
+    Elle permet en effet d'éviter de "casser" la NuTyX qu'on utilise tous les jours.
+    Dans un environnement isolé, vous vous assurerez de préserver votre NuTyX principale contre toute fausse manoeuvre.
+   <p>
+    On appellera désormais notre environnement isolé: <b> chroot</b>.
+   <p>
+    On va commencer par installer la chroot:
+   <pre class="command"><kbd>install-nutyx</kbd></pre>
+   <p>
+    Et l'installation commence.
+   <pre class="output">This installation will be on /mnt/hd                                     [ INFO ]
+*******************************************
+downloads of cards.devel1412543016x86_64.cards.tar.xz
+
+.....
+...
+ADD: cards-0.10.81.3, 9 files: 100 %                                     [  OK  ]
+Downloading ca-certificates...                                           [ INFO ]
+Retrieve info about the 62 packages: 100 %
+pre-install: start
+pre-install: finish
+ADD: ca-certificates-20141001, 323 files: 100 %                          [  OK  ]
+"***************************************************"
+"* Installation finish. Tanks for installing NuTyX *"
+"*                                                 *"
+"* Dont forget to choose a valid kernel before you *"
+"*      want to boot on your install NuTyX         *"
+"*                                                 *"
+"*        For more info, come to visit us:         *"
+"*                                                 *"
+"*              http://www.nutyx.org               *"
+"*                                                 *"
+"***************************************************"</pre>
+   <p>
+    Pour pouvoir travailler dans la chroot il est necessaire de pouvoir rentrer (et sortir) facilement de l'environnement, pour ce faire, nous allons utiliser le même script.
+    Vous êtes toujours en root tapez donc ceci dans votre terminal:
+   <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
+   <p>
+    Ce script vous permet donc également d'entrer et de sortir très simplement de votre chroot.
+   <div class="important"><img src="../graphics/caution.gif" width="10" height="10" alt="!!!" />Désormais pour entrer dans votre chroot, utilisez UNIQUEMENT la commande en root:</div>
+   <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
+   <p>
+    Le gros avantage de travailler dans une chroot est que si vous faîtes une manipulation douteuse, comme vous êtes dans la chroot, ce ne sera jamais très grave,
+   <div class="important"><img src="../graphics/caution.gif" width="10" height="10" alt="!!!" /> En revanche si vous n'êtes pas dans la chroot, et que vous tapez certaines commandes mentionnées dans cet article, je ne peux pas vous garantir le résultat et donc le fonctionnement de votre NuTyX.</div>
+   <p>
+    <img src="../graphics/yippee.gif" alt="yippee" />
+    Tout est en place, on peut maintenant <a href="scenario-C#2">compiler un paquet avec quelques dépendances</a>.
+   <p>
+    <img src="../graphics/clap.gif" alt="clap" />
+    Ca c'est vraiment cool non <img src="../graphics/clap.gif" alt="clap" />
+   <p>
+    Votre premier paquet est compilé et installé.
+    Le gestionnaire de paquets (de votre chroot) l'a intégré dans sa base de données.
+    Petite remarque, si vous avez suivi ce tuto, vous avez sans doute remarqué
+    que toutes les commandes ont été effectuées depuis la racine de votre chroot ... <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />.
+   <p>
+    Tapez maintenant la commande suivante:
+   <pre class="command"><kbd>cards info clipit</kbd></pre>
+   <pre class="output">Retrieve info about the 123 packages: 100 %
+Name           : clipit
+Description    : ClipIt is a lightweight GTK+ clipboard manager.
+Maintainer     : Gilberto Xyhthyx &lt;xyhthyx at gmail dot com&gt;
+Packager       : François Perrin
+Version        : 1.4.2
+Release        : 1
+Build date     : Sun Oct 26 22:27:45 2014
+Size           : 1117696
+Number of Files: 70
+Arch           : x86_64</pre>
+
+  <a name='5'></a>
+  <h2>Installer mon premier paquet sur la NuTyX principale</h2>
+    <p>
+     <img src="../graphics/wall.gif" alt="wall" />
+     Super j'ai un nouveau paquet...
+    <p>
+     <img src="../graphics/question.gif" width="16" height="15" alt="?" />
+     Mais comment je fais pour l'installer dans ma NuTyX principale... ?
+    <p>
+     <img src="../graphics/answer.gif" width="15" height="15" alt="!!" />
+     Pas de problème tout est prévu.
+    <p>
+     On peut maintenant quitter la chroot:
+    <pre class="command"><kbd>exit</kbd></pre>
+    <div class="important"><img src="../graphics/caution.gif" width="10" height="10" alt="!!!" /> A partir d'ici, vous êtes de nouveau dans votre NuTyX principale</div>
+    <p>
+     Donc si vous faites maintenant:
+    <pre class="command"><kbd>cards info -b clipit</kbd></pre>
+    <pre class="output">Name           : clipit
+Description    : ClipIt is a lightweight GTK+ clipboard manager.
+Maintainer     : Gilberto Xyhthyx &lt;xyhthyx at gmail dot com&gt;
+Packager       : François Perrin
+Version        : 1.4.2
+Release        : 1
+Build date     : Sun Oct 26 23:27:45 2014
+Arch           : x86_64
+Url            :
+Local Directory: /mnt/hd/usr/ports/personnel</pre>
+    <div><img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" /><img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" /><img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" /></div>
+    <p>
+     Il ne nous reste plus qu'à l'installer: <img src="../graphics/smiley-surprised.gif" alt="Surprised" title="Surprised" />
+    <pre class="command_user"><kbd>get clipit</kbd></pre>
+    <pre class="output">Retrieve info about the 622 packages: 100 %
+ADD: (personnel) clipit-1.4.2, 71 files: 100 %</pre>
+
+  <a name='6'></a>      
+  <h2>Conclusion</h2>
+    <p>
+     Dans ce scénario, (une petite piqure de rappel ne fait jamais de tort), sur la principale, ce seront les commandes:</p>
+     <pre class="command"><kbd>cards install
+cards install -u
+cards remove</kbd></pre>
+    <p>
+     et dans la <b>chroot</b>, on utilisera:
+     <pre class="command"><kbd>cards depends
+cards depcreate
+cards level
+cards base -r</kbd></pre>

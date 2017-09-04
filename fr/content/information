@@ -1,0 +1,132 @@
+ <h1>Information</h1>
+  <h2>Les licences de NuTyX</h2>
+   <div>NuTyX est regroupé sous différentes licences</div>
+    <h3>Les paquets de logiciels</h3>
+     <div>
+      NuTyX est une distribution GNU/linux qui contient des logiciels écrits par un grand nombre de développeurs.
+      Chaque paquet de logiciel est donc fourni avec sa propre licence d'utilisation choisie par son (ses) auteur(s).
+      Pour connaître le type de licence utilisée pour un paquet particulier, veuillez consulter les codes sources dudit paquet.
+     </div>
+    <h3>Les scripts</h3>
+     <div>
+      Les scripts provenant du projet Linux From Scratch sont sous licence <a class="url" href="http://lfs.traduc.org/view/lfs-svn/appendices/creat-comm.html" target="_blank" title="Lire dans une autre fenêtre"  >http://lfs.traduc.org/view/lfs...tml&gt;Creative Commons License 2.0.</a>.
+      Certains scripts sont ajustés pour l'usage de NuTyX par Thierry Nuttens.
+     </div>
+    <h3>L'installateur (MINI iso)</h3>
+     <div>
+      L'installateur est développé depuis zéro par Thierry Nuttens et sous licence <a class="url" href="http://www.gnu.org/copyleft/gpl.html" target="_blank" title="Lire dans une autre fenêtre">http://www.gnu.org/copyleft/gpl.html</a>
+     </div>
+  <h2>L'équipe</h2>
+   <p>
+    L'équipe de NuTyX est composée de personnes bénévoles qui permettent de rendre ce projet viable.
+    N'hésitez pas à leur poser les questions qui vous intriguent.
+     <h3>Tnut</h3>
+      <b><a class="url" href="https://github.com/tnut?tab=activity">Tnut</a></b> créateur et fondateur de NuTyX supervise la totalité du projet avec l'aide des contributeurs.
+      La gestion du site, les paquets de base, les paquets de xorg.
+      L'assemblage de l'initrd (et de l'installateur) ainsi que le script d'installation.
+      La gestion des bots build... Un peu tout ce qu'il reste à faire.
+
+     <h3>Pierre</h3>
+      <b>Pierre</b> empaqueteur des collection kde5 et kde5-extra et divers paquets dans les autres collections.
+     <h3>Guth</h3>
+      <b>Guth</b> est une personne très très discrête mais sans lui, le serveur downloads.nutyx.org n'existerait pas. Merci encore pour ton excellent support.
+     <h3>Guy</h3>
+      <p>
+       Il suit de très près la distribution et donne des avis motivés et de qualité.
+       Guy a également participé au projet depuis très longtemps en nous signalant régulièrement des petits bugs.
+  <h2>Anciens contributeurs</h2>
+   <div>
+    Merci pour toutes les personnes qui ont contribué de près ou de loin.
+   </div>
+   <p>
+     <div>
+      <b><a class="url" href="https://github.com/sh4d0w31410?tab=activity">Sh4d0w</a></b> empaqueteur des collections enlightenment et enlightenment-extra et divers paquets dans les autre collections.
+     </div>
+    <p>
+     <div>
+      <b>Peter (Peter1000)</b> a participé au dévelopement du gestionnaire de paquets de NuTyX <a class="url" href="dictionary#ID000">cards</a>
+     </div>
+    <p>
+     <div>
+      <b>Alienus (fredg)</b> empaqueteur de divers paquets, travaux sur le forum et sur le site.
+     </div>
+    <p>
+     <div>
+      <b>Timcowchip</b> empaqueteur de divers paquets
+      </div>
+    <p>
+    <div>
+     <b>Berlius</b> initiateur du portage de NuTyX sur architecture arm et empaqueteur de divers paquets.
+    </div>
+    <p>
+     <div>
+      <b>Jmilot</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>John </b> traducteur anglais du site de NuTyX.
+     </div>
+    <p>
+     <div>
+      <b>Piernov</b> empaqueteur de divers paquets, travaux sur les scripts de lancement, le forum et sur le site.
+     </div>
+    <p>
+     <div>
+      <b>Manu</b> empaqueteur de gnome, razor-qt.
+     </div>
+    <p>
+     <div>
+      <b>Geantbrun</b> empaqueteur de openbox.
+     </div>
+    <p>
+     <div>
+      <b>Fanch</b> empaqueteur de gnome.
+     </div>
+    <p>
+     <div>
+      <b>Tyrry</b> empaqueteur de xfce, travaux sur les fonds d'écrans.
+     </div>
+    <p>
+     <div>
+      <b>Blacksad</b> travaux sur le logo et sur les fonds d'écrans et thèmes.
+      </div>
+    <p>
+     <div>
+      <b>Cobex</b> travaux sur les services, php, etc. Initiateur de twitter.
+      </div>
+    <p>
+     <div>
+      <b>Skingrapher</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>Eko2291</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>Skippy</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>Olivier D.</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>Arnaud F.</b> empaqueteur de divers paquets. Travaux sur le site. Gestionnaire graphique basé sur Qt4.
+     </div>
+    <p>
+     <div>
+      <b>Tux03</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>Lukc</b> empaqueteur de divers paquets.
+     </div>
+    <p>
+     <div>
+      <b>Fredjo</b> empaqueteur de gnome.
+     </div>
+    <p>
+     <div>
+      <b>Cabaflo</b> empaqueteur de kde3.
+     </div>

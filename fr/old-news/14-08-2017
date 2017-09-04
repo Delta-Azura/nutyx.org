@@ -1,0 +1,139 @@
+<h1>Dernière nouvelle 14-08-2017</h1>
+
+<h2>NuTyX 9.0.93 disponible avec cards 2.3.93</h2>
+<p>
+ L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.0.93
+<p>
+ NuTyX 9.0.93 propose le kernel 4.12.7, kernel lts 4.9.43, glibc 2.26, gcc 7.2.0, binutils 2.29, python 3.6.2,
+ xorg-server 1.19.3, qt 5.9.1, mate 1.18.0, xfce4 4.12.3, firefox 55.0.1 et beaucoup d'autres mise à jour.
+
+<p>
+ Plus de 4000 commits depuis la version 9.0
+
+<p>
+ Une nouvelle iso 64 bits est disponible.
+ La taille est de 246 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ Puisque toutes les collections sont en cours de recompilations, aucune interfaces n'est actuellement disponible
+
+<h2>Mise à jour majeure</h2>
+ <p>
+  Cette nouvelle version est le résultat de plus de 4 mois de dévelopement.
+  Une mise à jour la 9.0 n'est pas possible car risquée, l'équipe de NuTyX recommande de faire une nouvelle installation.
+<h2>Nouveautées dans les ISOs</h2>
+<p>
+ Cette iso peut fonctionner en mode live, cad que si vous avez assez de mémoire, il n'est pas necessaire de l'installer, vous pouvez tester cette nouvelle NuTyX entièrement en RAM
+<p>
+ La clé USB peut donc être déconnectée et ainsi libérer le port USB.
+ Utile dans le cas de l'installation sur tablette ne disposant que d'un seul port USB
+
+<h2>Les composants principaux de la chaîne de compilation sont mis à jour.</h2>
+<p>
+ Les composants principaux de la chaîne d'outils cad en-têtes du noyau, compilateur, editeur de liens, assembleur et librairie C sont désormais à jour,
+ les versions respectives de chaque composant se trouvent dans la liste ci-dessous.
+
+<p>
+ Le nombre de collections officielles passe de 13 à 11 collections:
+ <ul>
+  <li>
+    base
+  <li>
+    cli, cli-extra
+  <li>
+    gui, gui-extra
+  <li>
+    xfce4, xfce4-extra
+  <li>
+    mate, mate-extra
+  <li>
+    gnome, gnome-extra
+ </ul>
+ 
+<h2>Renommage et Splitting</h2> 
+<p>
+ Le renommage de gstreamer1 en gstreamer et d'autres paquets qui en dépendent entraîne plus de travail que prévu.
+ L'équipe de NuTyX recompile toutes les collections.
+
+<ul>
+ <li>
+  webkit2gtk2 -> webkit
+ <li>
+  gstreamer1 -> gstreamer
+ <li>
+  ancienne version de gstreamer supprimée
+ <li>
+  qt4 supprimée
+</ul>
+
+<h2>Cards 2.3.93</h2>
+<p>
+ Beaucoup d'améliorations ont été faites sur la construction des paquets
+<p>
+  En hommage à Pierre qui nous a quitté il y a quelques semaines, Cards affiche désormais le nom de tous les contributeurs.
+  Son nom ne sera jamais oublié au sein de l'équipe
+  Cards recherche également dans le nom du packager.
+  Cards peut désormais installer un paquet ou une collection ou un fichier archive ou un mélange des trois.
+  Il peut désormais supprimer une famille de paquets cad un ensemble de paquets dont le début du nom est commun.
+  Si le paquet trouvé est déjà installé, celui-ci s'affichera en vert dans le résultat de la recherche.
+  Désormais, celle-ci s'effectue également dans les alias et les groupes.
+  Des nouvelles post-installations génériques sont désormais intégrées dans cards.
+  Un site reprenant la documentation complète de cards a été créé:
+  <a href="http://cards.nutyx.org">http://cards.nutyx.org</a>
+  
+<h2>La chaîne YouTube</h2>
+ <p>
+  <a href="https://www.youtube.com/channel/UCsC5wcPghioAzIv6Zu9xD6g">https://www.youtube.com/channel/UCsC5wcPghioAzIv6Zu9xD6g</a>
+<p>
+  Une nouvelle chaîne YouTube sera ouverte le 30 septembre 2017. Elle complètera <a href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g/videos">les divers tutoriels déjà existant</a> et disponibles sur le site.
+
+<h2>Liste des mises à jour principales de la NuTyX 9.0.93</h2>
+ <ul>
+  <li>
+   cards 2.2 -> 2.3.93
+  <li>
+   kernel 4.10.8 -> 4.12.7
+  <li>
+   kernel lts 4.9.20 -> 4.9.43
+  <li>
+   gcc 6.3.0 -> 7.2.0
+  <li>
+   glibc 2.25 -> 2.26
+  <li>
+   binutils 2.28 -> 2.29
+  <li>
+   python 3.6.0 -> 3.6.2
+  <li>
+   alsa 1.1.3 -> 1.1.4-1
+  <li>
+   cups 2.2.2 -> 2.2.4
+  <li>
+   samba 4.5.5 -> 4.6.6
+  <li>
+   mesa 17.0.1 -> 17.1.6
+  <li>
+   libdrm 2.4.75 -> 2.4.82
+  <li>
+   xorg-server 1.19.2 -> 1.19.3
+  <li>
+   qt5 qt 5.8.0 -> qt 5.9.1
+  <li>
+   gtk3 3.22.9 -> 3.22.18
+  <li>
+   firefox 52.0.2 -> 55.0.1
+  </ul>
+ <p>
+ <h2>Remerciements</h2>
+   J'ai le regret d'annoncer la disparition d'un membre très important de NuTyX.
+   La famille de Pierre B. m'a informé il a y a quelques temps de son décès le vendredi 30 juin 2017.
+   Pierre était un contributeur NuTyX depuis près de 9 ans.
+   Il est l'auteur de nombreux paquets sous NuTyX tel que KDE, Firefox, Libreoffice, thunderbird, etc.
+  <p>
+   Je ne pourrai jamais assez te remercier pour tes contributions au dévelopement de NuTyX.
+
+ <p>
+  Merci à Greg pour son travail sur les collections.
+ <p>
+  Merci à Harold pour son travail sur les traductions.
+ <p>
+  Et une fois n'est pas coutume, un énorme merci à l'équipe de "Linux From Scratch" pour l'aide précieux apporté pour la construction de la nouvelle toolchain.
+  

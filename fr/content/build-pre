@@ -1,0 +1,61 @@
+   <h1>Préparation de la construction</h1>
+
+	<h2>Si vous êtes sous NuTyX</h2>
+
+	 <p>Assurez-vous que les outils sont installés:
+     <pre class="command_user"><kbd>get cards.devel git</kbd></pre>
+
+    <h2>Si vous n'êtes pas sous NuTyX</h2>
+      <p>
+       Vous devez télécharger le script d'installation <b>install-nutyx</b>.
+      <p>
+       Afin de rendre l'article transparent pour tous lecteurs ( NuTyXiens ou non NuTyXiens), vous devez placer le script téléchargé dans un dossier standard après l'avoir rendu exécutable.
+       Vous pourrez l'effacer  à la fin de la création de NuTyX:
+      <p>
+       Passez en root:
+      <pre class="command_user"><kbd>su -</kbd></pre>
+      <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}
+md5sum -c install-nutyx.md5sum</kbd></pre>
+      <pre class="output">install-nutyx: OK</pre>
+      <pre class="command"><kbd>chmod -v 755 install-nutyx</kbd></pre>
+      <pre class="output">mode of 'install-nutyx' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)</pre>
+      <pre class="command"><kbd>mv -v install-nutyx /usr/bin/install-nutyx</kbd></pre>
+      <pre class="output">'install-nutyx' -> '/usr/bin/install-nutyx'</pre>
+      <p>Utilisez l'interpréteur BASH</p>
+      <p>
+       Assurez-vous que le paquet <b>bsdtar</b> est installé sur votre distribution.
+      <p>
+       Vérifiez que toutes les conditions soient remplies en consultant cette <a  class="url" href="http://www.fr.linuxfromscratch.org/view/lfs-svn/prologue/hostreqs.html" target="_blank">page</a>
+
+    <h2>Si vous avez déjà lancé une fois tout le processus de construction</h2>
+     <p>
+      Il faut d'abord supprimer toutes les infos liées au compte utilisateur lfs ainsi que son dossier personnel.
+     <p>
+      Donc si tel est le cas, supprimez toutes les infos existantes:
+     <pre class="command"><kbd>userdel lfs
+rm -r /home/lfs</kbd></pre>
+     <p>
+      Normalement, en supprimant l'utilisateur, son groupe est également supprimé. 
+      Si vous n'êtes pas certain, vous pouvez lancer la commande ci-dessous sans crainte:</p>
+     <pre class="command"><kbd>groupdel lfs</kbd></pre>
+
+    <h2>Préparation de la partition.</h2>
+     <p>
+      Pour pouvoir commencer la première passe sans trop de soucis, nous allons voir les préparatifs à faire.
+      C'est assez direct.
+     <p>
+      Normalement si l'on construit une linux, il faut prévoir une partition pour y mettre sa construction.
+      Ce n'est cependant pas indispensable. 
+      On peut très bien construire la distribution dans un dossier et ensuite faire une sauvegarde de son contenu sur une clé USB ou directement utiliser la commande rsync pour transférer sur la partition ou le disque de destination.
+     <p>
+      Donc si vous décidez d'utiliser une partition, il faut la formater dans le système de fichier de votre choix ensuite la monter l sur le dossier qui est défini par la variable LFS.
+     <p>
+      Dans tous les articles, on utilisera le même dossier, on se servira de la variable LFS à cet effet:
+     <pre class="command"><kbd>export LFS=/mnt/lfs</kbd></pre>
+      Une fois la partition formatée, il suffit de créér le dossier et de monter la partition.
+      Dans mon exemple, je choisis la partition Nr 2 du premier disque, ajustez cette valeur à votre choix:
+    <pre class="command"><kbd>mkdir -pv $LFS
+mount /dev/sda2 $LFS</kbd></pre>
+      Pensez juste à toujours monter la partition avant de commencer la passe 1 ou 2. Une fois la partition montée.
+      On peut se lancer dans la première pass
+      <div class="pied_page"><a class="url" href="build-pass-1">Il est temps de commencer la pass 1...</a></div>

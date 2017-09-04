@@ -1,0 +1,510 @@
+/* Normal, standard links. */
+.main-title {
+ font-family: "Trebuchet MS", Georgia, Verdana, Tahoma, Sans-serif, serif;
+ font-size: 32px;
+ font-weight: normal;
+ color: #cdcdcd;
+ background: url(images/logo_bg.jpg) top left no-repeat;
+}
+.title-text {
+ padding-top: 20px;
+ padding-left: 25px;
+}
+a.top-menu:link, a.top-menu:visited, a.top-menu:active {
+ font-family: "Trebuchet MS", Georgia, Verdana, Tahoma, Sans-serif, serif;
+ font-size: 11px;
+ font-weight: bold;
+ text-transform: capitalize;
+ color: #ffffff;
+ border-bottom: 2px solid transparent;
+ text-decoration: none;
+}
+a.top-menu:hover {
+ border-bottom: 2px solid #ffffff;
+ text-decoration: none;
+}
+a:link, a:visited, a:active
+{
+	color: #953c00;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #504b48;
+	text-decoration: underline;
+}
+
+/* Navigation links - for the link tree. */
+.nav-box
+{
+	background-color: inherit;
+	border-top: 0px solid #e3e3e3;
+	border-left: 0px solid #e3e3e3;
+	border-bottom: 0px solid #808080;
+	border-right: 0px solid #808080;
+	padding-top: 10px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Verdana, Tahoma, Sans-serif, serif;
+}
+
+a.nav:link, a.nav:visited, a.nav:active
+{
+	color: #953c00;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.nav:hover
+{
+	color: #000000;
+	text-decoration: underline;
+}
+
+/* Tables should show empty cells. */
+table
+{
+	empty-cells: show;
+}
+
+/* By default (td, body..) use verdana in black. */
+body, td, th , tr
+{
+	color: #000000;
+	font-size: 12px;
+	font-family: Arial, Verdana, Helvetica, Sans-serif, serif;
+}
+
+/* The main body of the entire forum. */
+body
+{
+	background-color: #8a8a8a;
+	background-image: url("images/main_bg.jpg");
+	background-position: top left;
+	background-repeat: repeat-x;
+	margin: 0px;
+	padding: 0px 0px 4px 0px;
+}
+
+/* Input boxes - just a bit smaller than normal so they align well. */
+input, textarea, button, select
+{
+	color: #000000;
+	font-family: verdana, sans-serif;
+}
+input, button
+{
+	font-size: 90%;
+}
+
+textarea
+{
+ font-family: Arial,Helvetica,Sans-serif,serif;
+ font-size: 11px;
+ font-weight: bold;
+ color: #282828;
+ background-color: #d3d3d3;
+ border-top: 1px solid #282828;
+ border-right: 1px solid #f5f5f5;
+ border-bottom: 1px solid #f5f5f5;
+ border-left: 1px solid #282828;
+ padding-left: 3px;
+ background-image: url("images/input_bg.jpg");
+ background-repeat: repeat-x;
+ background-position: top left;
+}
+}
+
+/******Styles for the input boxes*******/
+.input1
+{
+ font-family: Arial,Helvetica,Sans-serif,serif;
+ font-size: 11px;
+ font-weight: bold;
+ color: #282828;
+ background-color: #d3d3d3;
+ border-top: 1px solid #282828;
+ border-right: 1px solid #f5f5f5;
+ border-bottom: 1px solid #f5f5f5;
+ border-left: 1px solid #282828;
+ padding-left: 3px;
+ background-image: url("images/input_bg.jpg");
+ background-repeat: repeat-x;
+ background-position: top left;
+}
+
+/********The submit buttons for login and search******/
+.button
+{
+ font-family: Arial,Helvetica,Sans-serif,serif;
+ font-size: 11px;
+ font-weight: bold;
+ color: #282828;
+ background-color: #b1b1b1;
+ border-top: 1px solid #885538;
+ border-left: 1px solid #f5f5f5;
+ border-right: 1px solid #282828;
+ border-bottom: 1px solid #282828;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ height: 21px;
+ background-image: url("images/bg_button.jpg");
+ background-repeat: repeat-x;
+ background-position: top left;
+}
+
+/* All input elements that are checkboxes or radio buttons. */
+input.check
+{
+}
+
+/* Selects are a bit smaller, because it makes them look even better 8). */
+select
+{
+	font-size: 90%;
+}
+
+/* Standard horizontal rule.. ([hr], etc.) */
+hr, .hrcolor
+{
+	height: 1px;
+	border: 0;
+	color: #666666;
+	background-color: #666666;
+}
+
+/* No image should have a border when linked */
+a img{
+border: 0;
+}
+/* A quote, perhaps from another post. */
+.quote
+{
+	color: #000000;
+	background-color: #b1b1b1;
+	border: 1px solid #504b48;
+	margin: 1px;
+	padding: 1px;
+	font-size: 11px;
+	line-height: 1.4em;
+}
+
+/* A code block - maybe even PHP ;). */
+.code
+{
+	color: #504b48;
+	background-color: #b1b1b1;
+	font-family: "courier new", "times new roman", monospace;
+	font-size: 11px;
+	line-height: 1.3em;
+	/* Put a nice border around it. */
+	border: 1px solid #504b48;
+	margin: 1px auto 1px auto;
+	padding: 1px;
+	width: 99%;
+	/* Don't wrap its contents, and show scrollbars. */
+	white-space: nowrap;
+	overflow: auto;
+	/* Stop after about 24 lines, and just show a scrollbar. */
+	max-height: 24em;
+}
+
+/* The "Quote:" and "Code:" header parts... */
+.quoteheader, .codeheader
+{
+	color: #000000;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	font-size: x-small;
+	line-height: 1.2em;
+}
+
+/* Generally, those [?] icons.  This makes your cursor a help icon. */
+.help
+{
+	cursor: help;
+}
+
+/* /me uses this a lot. (emote, try typing /me in a post.) */
+.meaction
+{
+	color: red;
+}
+
+/* The main post box - this makes it as wide as possible. */
+.editor
+{
+	width: 96%;
+}
+
+/* Highlighted text - such as search results. */
+.highlight
+{
+	background-color: yellow;
+	font-weight: bold;
+	color: black;
+}
+
+/* Alternating backgrounds for posts, and several other sections of the forum. */
+.windowbg
+{
+	color: #000000;
+	background-color: #bbbbbb;
+	border-top: 1px solid #d7d7d7;
+	border-left: 1px solid #d7d7d7;
+}
+.windowbg2
+{
+	color: #000000;
+	background-color: #cdcdcd;
+	border-top: 1px solid #e3e3e3;
+	border-left: 1px solid #e3e3e3;
+}
+.windowbg3
+{
+	color: #000000;
+	background-color: #cdcdcd;
+	border-top: 1px solid #e3e3e3;
+	border-left: 1px solid #e3e3e3;
+}
+/* the today container in calendar */
+.calendar_today
+{
+	background-color: #FFFFFF;
+}
+
+/* These are used primarily for titles, but also for headers (the row that says what everything in the table is.) */
+.titlebg, tr.titlebg th, tr.titlebg td, .titlebg2, tr.titlebg2 th, tr.titlebg2 td
+{
+	color: #000000;
+	font-style: normal;
+	background-color: #949494;
+	background-image: url("images/catbg.jpg");
+	border-bottom: solid 1px #000000;
+	border-top: solid 1px #949494;
+	background-repeat: repeat-x;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.titlebg, .titlebg a:link, .titlebg a:visited
+{
+	font-weight: bold;
+	color: #000000;
+	font-style: normal;
+}
+
+.titlebg a:hover
+{
+	color: #504b48;
+}
+/* same as titlebg, but used where bold text is not needed */
+.titlebg2 a:link, .titlebg2 a:visited
+{
+	color: #000000;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+.titlebg2 a:hover
+{
+	text-decoration: underline;
+}
+
+/* This is used for categories, page indexes, and several other areas in the forum.
+.catbg and .catbg2 is for boardindex, while .catbg3 is for messageindex and display headers*/
+.catbg , tr.catbg td , .catbg3 , tr.catbg3 td
+{
+	background-color: #202020;
+	background-image: url("images/titlebg.jpg");
+	height: 20px;
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.catbg2 , tr.catbg2 td
+{
+	background-color: #202020;
+	background-image: url(images/titlebg.jpg);
+	height: 20px;
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.catbg, .catbg2, .catbg3
+{
+	border-top: 0px solid #afbbc7;
+	border-right: 0px solid #afbbc7;
+	border-left: 0px solid #afbbc7;
+	border-bottom: solid 0px #2c6ec0;
+	background-repeat: repeat-x;
+}
+.catbg, .catbg2
+{
+	font-weight: bold;
+}
+.catbg3, tr.catbg3 td, .catbg3 a:link, .catbg3 a:visited
+{
+	font-size: 95%;
+	color: #ffffff;
+	text-decoration: none;
+}
+.catbg a:link, .catbg a:visited , .catbg2 a:link, .catbg2 a:visited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.catbg a:hover, .catbg2 a:hover, .catbg3 a:hover
+{
+	color: #ffffff;
+}
+/* This is used for tables that have a grid/border background color (such as the topic listing.) */
+.bordercolor
+{
+	background-color: #808080;
+	padding: 0px;
+}
+
+/* This is used on tables that should just have a border around them. */
+.tborder
+{
+	border: 1px solid #000000;
+	background-color: #000000;
+	padding: 0px;
+}
+
+/* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
+.smalltext
+{
+	font-size: x-small;
+	font-family: verdana, sans-serif;
+}
+.middletext
+{
+	font-size: 90%;
+}
+.normaltext
+{
+	font-size: small;
+}
+.largetext
+{
+	font-size: large;
+}
+
+
+/* Posts and personal messages displayed throughout the forum. */
+.post, .personalmessage
+{
+	width: 100%;
+	overflow: auto;
+	line-height: 1.3em;
+}
+
+/* All the signatures used in the forum.  If your forum users use Mozilla, Opera, or Safari, you might add max-height here ;). */
+.signature
+{
+	width: 100%;
+	overflow: auto;
+	padding-bottom: 3px;
+	line-height: 1.3em;
+}
+
+/* Sometimes there will be an error when you post */
+.error{
+color: red;
+}
+
+/* definitions for the mirror tab */
+.mirrortab_first, .mirrortab_back, .mirrortab_last, .mirrortab_active_first, .mirrortab_active_back, .mirrortab_active_last
+{
+	background-position: left top;
+	color: black;
+	text-transform: uppercase;
+	vertical-align: top;
+
+}
+.mirrortab_back, .mirrortab_active_back
+{
+	color: #000000;
+	text-decoration: none;
+	font-size: 9px;
+	vertical-align: bottom;
+	padding: 6px 6px 2px 6px;
+	font-family: tahoma, sans-serif;
+}
+
+.mirrortab_first
+{
+	background-repeat: no-repeat;
+	width: 10px;
+}
+.mirrortab_back
+{
+	background-repeat: repeat-x;
+}
+.mirrortab_last
+{
+	background-repeat: no-repeat;
+	width: 6px;
+}
+.mirrortab_active_first
+{
+	background-repeat: no-repeat;
+	width: 0px;
+}
+.mirrortab_active_back
+{
+	background-repeat: repeat-x;
+}
+.mirrortab_active_last
+{
+	background-repeat: no-repeat;
+	width: 0px;
+}
+
+/* how links behave in mirror tab. */
+.mirrortab_back a:link , .mirrortab_back a:visited, .mirrortab_back a:active
+{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+	border-top: 2px solid #000000;
+}
+
+.mirrortab_back a:hover, .mirrortab_active_back a:hover
+{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+	border-top: 2px solid #843200;
+}
+.mirrortab_active_back a:link , .mirrortab_active_back a:visited, .mirrortab_active_back a:active {
+	color: #000000;font-weight: bold;
+	text-decoration: none;
+	border-top: 2px solid #843200;
+}
+.mirrortab_active_back a:hover {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+	border-top: 2px solid #ce4e00;
+}
+/* The AJAX notifier */
+#ajax_in_progress
+{
+	background: #32CD32;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18pt;
+	padding: 3px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
