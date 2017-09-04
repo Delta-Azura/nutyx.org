@@ -2,3 +2,5 @@
 .mysql.conf
 .visits
 /index.cgi
+/depoinfo
+/depoinfo/*
