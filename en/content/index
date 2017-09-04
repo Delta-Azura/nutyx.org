@@ -1,0 +1,89 @@
+  <div style="float:right;clear=right;">
+    <img src=http://downloads.nutyx.org/ScreenShots/1406572766.png   width="400" height="270" >
+  </div>
+
+  <h1>Welcome</h1>
+    <p>
+     NuTyX is a complete GNU/Linux distribution with high flexibility, thanks to the <a href="dictionary#ID010">collection</a> concept. 
+    <p>
+     It is based on the excellent Linux From Scratch books <a href="http://www.linuxfromscratch.org/lfs/">LFS</a> and <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
+    <p>
+     We recommend that potential users first acquire some knowledge about the GNU/Linux system.
+    <p>
+     It's an excellent operating system for persons who want to commit themselves in developing their skills further and learn how a Linux system is put together.
+    <p>
+     NuTyX offers the <a href="http://www.gnome.org">GNOME</a>, <a href="http://www.mate-desktop.com">MATE</a>, <a href="http://www.lxde.org">LXDE</a>, <a href="http://www.kde.org">KDE5</a> and <a href="http://www.xfce.org">XFCE</a> in binary form.
+    <p>
+     Details <a href="documentation">instructions</a> are available online
+    <p>
+     NuTyX use it's own <a href="dictionary#ID005">package manager</a> named <a href="dictionary#ID001">CARDS</a>.
+    <p>
+     It is up to <a href="faq#4">you to decide</a> whether to use the <a href="dictionary#ID070">ports</a> system to compile and install your own source <a href="dictionary#ID005">packages</a> or to be content with the binary packages that are natively integrated into the system.
+    <div style="font-size:150%"><b>
+	 The 10 benefits of NuTyX
+	</b></div>
+    <ol>
+      <li>
+       You can install NuTyX from almost any other distribution, thanks to the BASH <a href="http://downloads.nutyx.org/install-nutyx">script named install-nutyx</a>.
+       This can be downloaded, study it carefully to see what it will do, then launch it from the host distribution.
+       Briefly, the script will check for all the necessary tools, then start the download of a minimal set of packages and finally install them in the location you specified.
+       Details and explanations can be found <a href="install-offline">here</a>.
+      <br>
+      <br>
+      <li>
+       The hierarchical <a href="dictionary#ID070">ports</a> <a href="dictionary#ID010">collection</a> system provides maximum flexibility in managing software.
+       Each <a href="dictionary#ID010">collection</a> is divided into a mandatory and an extra part.
+      <br>
+      <br>
+      <li>
+       A very simple method called <b>porting</b> allows you to download a <a href="dictionary#ID060">recipe</a> from our repositories.
+       This recipe is very similar to the scripts used in CRUX, and is usually less than 10 lines long.
+       It can also determine and apply all needed <a href="dictionary#ID006">Dependencies</a>.
+      <br>
+      <br>
+      <li>
+       It has the ability, once installed in a folder, to produce a personalized installable ISO version of NuTyX. 
+       The new live version can also be re-installed on other machines,  should you so desire.
+      <br>
+      <br>
+      <li>
+       It allows you to install a complete base binary <a href="dictionary#ID005">package</a> or a selection of individual base binaries <a href="dictionary#ID005">packages</a>.
+       For example: devel, man, doc and lib.
+      <br>
+      <br>
+      <li>
+       It has no need of a separate HDD or partition.
+       The NuTyX installer creates a virtual environment and therefore is able to install/re-install without formatting the target disk or partition.
+      <br>
+      <br>
+      <li>
+       It has unique installation coding, that prevents the NuTyX installer from FORMATTING the target partition.
+       This means that NuTyX can be installed on a partition containing data: (for example) personal files and various non-system folders.
+      <br>
+      <br>
+      <li>
+       It has a very powerful, yet simple command which allows you to revert to <a href="dictionary#ID040">the base system</a> and completely change the graphical user interface (for example from KDE to XFCE).
+       This makes it unnecessary to reinstall or download every <a href="dictionary#ID005">package</a> again. 
+       The already downloaded <a href="dictionary#ID005">packages</a>  will be simply be reinstalled automatically if still uptodate.
+      <br>
+      <br>
+      <li>
+       It has a totally unique <a href="dictionary#ID000">package manager</a> made of expandable modules. 
+       It has no <a href="dictionary#ID006">dependencies</a> except glibc.
+       One of its strong points is the ability to discover binary (run-time) <a href="dictionary#ID006">dependencies</a> automatically.
+      <br>
+      <br>
+      <li>
+       It has the ability to compile all the <a href="dictionary#ID005">packages</a> 
+       properly per <a href="dictionary#ID200">level</a> in a <a href="build-bot">dedicated chroot</a> environment.
+       After compilation, all the <a href="dictionary#ID006">dependencies</a> are again checked to make sure no broken links are found.
+      <br>
+      <br>
+    </ol>
+    <p>The NuTyX team wish you a very warm welcome on the <a class="url" href="http://webchat.freenode.net/?channels=nutyx">IRC channel irc.freenode.org</a>.</p>
+    <p>
+     You can also follow us either on
+     <a class="url" href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g">YouTube</a>,
+     on <a class="url" href="https://plus.google.com/u/0/communities/115738264560160961893">Google+</a>,
+     on <a class="url" href="https://twitter.com/nutyx_linux">twitter</a> or
+     on <a class="url" href="https://www.facebook.com/groups/62674847880/">facebook</a></p>

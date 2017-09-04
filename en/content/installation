@@ -1,0 +1,43 @@
+<h1>Installation</h1>
+ <p>
+  Make sure you have enough space on your hard disk. 8 GiB to 15 GiB should be enough.
+ <h2>Download the latest version of NuTyX</h2>
+  <p>
+   The current stable release of NuTyX is named <b>9.0</b>.
+   They are available in 32 bits and in 64 bits.
+   The available ISO image can be used to install a base system without the need of internet.
+   It is also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
+  <p>
+   If you have more then 1 Gbyte of RAM memory, you can remove the key once you see the first dialog screen.
+   Means you can insert a usb keyboard for example.
+  <p>
+   Both isos are <b>+- 246 Mb</b>.
+  <p>
+   All the available ISO images can be downloaded at:
+   <a class="url" href="http://downloads.nutyx.org/?C=M;O=D" target="_blank" >http://downloads.nutyx.org</a></p>
+ <h2>Create a bootable USB key</h2>
+  <p>
+   If you are currently running GNU/linux on your machine:
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />As root </div>
+  <p>
+   With the help of fdisk, find out where your usb key is located:
+   <pre class="command"><kbd>fdisk -l</kbd></pre>
+  <p>
+   Then by using the command <b>dd</b>, create a bootable key:
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-9.0.iso of=/dev/sdX </kbd></pre>
+  <p>
+   The <b>sdX</b> value is the one that you have previously found using fdisk.
+  <p>
+   If you are using Windows, it is easier to burn the ISO image onto a CD.
+ <h2>Typical installation of NuTyX on a single partition</h2>
+  <p>
+   <a class="url" href="install">How to install NuTyX from scratch on your PC</a>.
+ <h2>Installing a bootloader</h2>
+  <p>
+   <a class="url" href="grub-install">How to install and configure the bootloader for your PC</a></p>
+  <p>
+   With grub version 2.XX, the following entry can be added to your grub.cfg:
+   <pre class="command"><kbd>menuentry "NuTyX sur /dev/sda1" {
+   set root=(hd0,1)
+   linux /boot/kernel root=/dev/sda1 ro quiet
+}</kbd></pre>

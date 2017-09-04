@@ -1,0 +1,63 @@
+ <h1><span>Why should you contribute ?</span></h1>
+<div class="introduction">
+  Today NuTyX has about <a href="packages" title="Read in another windows" class="external" onclick="window.open(this.href); return false;">1,400 applications</a> available in binary form.
+  In one sense, that's a lot.
+  But it really isn't when you consider that new programs are released on the net every day, many under open source licences.
+ </div>
+ <p>
+  It's clear that you will never see all these programs ready for installation on NuTyX.
+  Just using the <a href="https://github.com/">github</a> web site, we can find more then 52,000,000 repositories for all platforms. 
+ <p>
+  If you find the application of your dreams,
+  you will have to find all the dependencies,
+  compile it yourself,
+  install it and make it work on NuTyX.
+  That why we are asking you to contribute a little bit.
+  It is you who will build the package... if you want to of course.
+<p>Building an application is often something like:</p>
+<ul>
+ <li>
+   Find an application not available in NuTyX.
+ <li>
+   Download the source code of the application.
+ <li>
+   Check the MD5SUM (strongly recommended but not always possible).
+ <li>
+   Extract sources into a working directory.
+ <li>
+   Enter this working directory
+ <li>
+   Check that all the dependencies of the package are installed in NuTyX.
+   (otherwise the build will not succeed)
+ <li>
+   Type the three magic commands (in most cases; there are exceptions)
+</ul>
+<pre class="output">./configure --prefix=/usr
+make
+make install</pre>
+<p>
+ The &quot;make install&quot; step must be carried out as root. 
+<p>
+  That's it! Your new program is built and installed on your NuTyX system.
+<p>
+  That's one way to go... but as you can see, there are a few disadvantages:
+<ul>
+ <li>
+   You do not know what files have been installed.
+ <li>
+   You cannot easily get information about the installed package such as its name, version, description, etc...
+ <li>
+   You cannot share the application with another NuTyX installation.
+ <li>
+   This method is tedious because it needs to be repeated whenever there is an update available.
+ <li>
+   Your NuTyX system is no longer really clean, since you have added files that are not tracked by the package manager.
+</ul>
+<p>
+  NuTyX has nice tools to help you with the integration of new programs.
+  You will be then able to track them and maintain them.
+  The package manager will treat them like other NuTyX packages.
+<p>
+  I suggest you to have a look <a href="faq#4">at the FAQ</a> to get an idea about the compilation modus under NuTyX.
+<p>
+  If you're ready, I invite you to follow the guide, <a href="bash-basics">here it is :)</a>.

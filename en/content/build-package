@@ -1,0 +1,130 @@
+<h1><span>How to build a package</span></h1>
+ <h2>Introduction</h2>
+  <p>
+   We have provided the <a href="bash-basics">required Know-how</a>,
+   the <a href="base-commands">available base commands</a>,
+   the <a href="recept">minimum syntax of instructions</a> and
+   a list of <a href="packages">available packages</a> for you to choose from.
+  <p>
+   Come and join the many participants of all ages, male and female, from all over the world, and venture along this exciting road we call NuTyX.
+   We can promise you a rewarding experience as you build your very first NuTyX system, following our (NuTyX) rules <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+
+ <h2>Build my first package</h2>
+  <p>
+   We will see how to build and install a first package in a very straigtforward way.
+  <p>
+   This tutorial explain you in a very simple way the construction of your first binary package.
+  <p>
+   They are no prerequest, this exercice can be done regardless the state of your NuTyX.
+  <p>
+   The choosen receipt is a little text editor which don't need any dependencies.
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+    For this package, we won't use an isolate environment named <a href="dictionary#ID100">chroot</a>.
+    We will see in the next article, how to build in such isolate environment.
+    Because that's the only working method if we need to build a package having dependencies.
+   </div>
+ <h2>Make the recept</h2>
+  <pre class="command_user"><kbd>sudo mkdir -p /usr/ports/perso/nano</kbd></pre>
+  <pre class="command"><kbd>echo '
+description="Text Editor"
+maintainer="Nano team"
+packager="François Perrin francois dot perrin at myworld dot com"
+url="http://www.nano-editor.org/"
+
+name=nano
+version=2.7.2
+release=1
+
+source=(${url}/dist/v${version:0:3}/$name-$version.tar.xz)
+
+build() {
+cd $name-$version
+./configure --prefix=/usr \
+--sysconfdir=/etc \
+--enable-utf8 \
+--enable-color \
+--enable-multibuffer \
+--enable-nanorc \
+--docdir=/usr/share/doc/$name-$version
+make
+make DESTDIR=$PKG install
+rm $PKG/usr/share/info/dir
+}' &gt; /usr/ports/perso/nano/Pkgfile</kbd></pre>     
+
+ <h2>Install the development packages</h2>
+  <pre class="command_user"><kbd>get cards.devel</kbd></pre> 
+ <h2>Compile the package</h2>
+  <pre class="command_user"><kbd>cd /usr/ports/perso/nano
+sudo pkgmk -d</kbd></pre>
+ <h2>Install the package</h2>
+  <pre class="command_user"><kbd>sudo pkgadd nano1*</kbd></pre>
+
+ <h2>The configuration files</h2>
+  <h3>The /etc/cards.conf file</h3>
+   <p>
+    This file is always present on a NuTyX installation.</p>
+   <p>
+    It's a bit like "the spine" of your NuTyX.
+   <p>
+    The <b>/etc/cards.conf</b> file will reflect the way you use NuTyX. 
+   <p>
+    All the <a href="dictionary#ID010">collections</a> that you want to use in your NuTyX can be specified in two way:
+     <ol>
+      <li>
+       configuration example of <b>cli</b> collection in  binaries from a remote server
+       <pre class="output">dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org</pre>
+      <li>
+       configuration example of <b>cli</b> in local ports
+       <pre class="output">dir /usr/ports/cli</pre>
+     </ol>
+    <p>
+     This file is also responsible for the list of packages you want to keep when you execute the command:
+     <pre class="command"><kbd>cards base -r</kbd></pre>
+     And finaly, it's specify which locale should be installed.
+    <p>
+     You can find more information by reading the cards.conf manual
+     <pre class="command"><kbd>man cards.conf</kbd></pre>     
+   <h3>The /etc/pkgmk.conf file</h3>
+    <p>
+     This file is used when compiling news ports.
+     It specify all the variables used by the <b>pkgmk</b> command.
+    <p>
+     Please take the time to read the man page of pkgmk.conf
+     <pre class="command"><kbd>man pkgmk.conf</kbd></pre>
+    <h3>Example of /etc/pkgmk.conf file</h3>
+<pre class="output">export CFLAGS="-O2 -pipe"
+export CXXFLAGS="${CFLAGS}"
+
+case ${PKGMK_ARCH} in
+        "x86_64"|"")
+		export MAKEFLAGS="-j$(getconf _NPROCESSORS_ONLN)"
+                ;;
+        "i686")
+                export CFLAGS="${CFLAGS} -m32"
+                export CXXFLAGS="${CXXFLAGS} -m32"
+                export LDFLAGS="${LDFLAGS} -m32"
+                ;;
+        *)
+                echo "Unknown architecture selected! Exiting."
+                exit 1
+                ;;
+esac
+# Those settings are typically set for packaging
+# without sub packages and only french locale
+# They are also the default ones
+#
+# PKGMK_GROUPS=()
+# PKGMK_LOCALES=(fr)
+# PKGMK_COMPRESS_PACKAGE="no"
+# PKGMK_CLEAN="yes"
+# PKGMK_IGNORE_FOOTPRINT="yes"
+# PKGMK_KEEP_SOURCES="no"
+# PKGMK_SOURCE_DIR="$PWD"
+# PKGMK_WORK_DIR="$PWD/work"
+# PKGMK_IGNORE_REPO="yes"
+# PKGMK_IGNORE_COLLECTION="yes"
+# PKGMK_IGNORE_RUNTIMEDEPS="yes"</pre>
+
+<h2>Conclusion</h2>
+<p>
+ We are now ready to build our packages <a href="build-in-chroot">in a chroot.</a>

@@ -1,0 +1,115 @@
+<h1>On 2016-10-02</h1>
+ <h2>NuTyX 8.2 available with cards 2.1.94</h2>
+  <p>The NuTyX team is please to annonce the final release of NuTyX 8.2</p>
+  <p>New Isos are available. The size is 217M for the 64 bits version and
+  212M for the 32 bits version.</p>
+ <h2>Main Updated Package list</h2>
+ <ul>
+  <li>glibc 2.23 -> glibc 2.24</li>
+  <li>gcc 5.3.0 -> gcc 6.2.0</li>
+  <li>binutils 2.26 -> 2.27</li>
+  <li>linux lts 4.4.8 -> 4.4.21</li>
+  <li>cards 2.1.1 -> 2.1.94</li>
+  <li>grub 2.00 -> 2.02 beta3</li>
+  <li>util-linux 2.27.1 -> 2.28.1</li>
+  <li>btrfs-progs 4.1 -> btrfs 4.6</li>
+  <li>e2fsprogs 1.42.13 -> 1.43.1</li>
+  <li>diffutils 3.3 -> 3.5</li>
+  <li>curl 7.47.1 -> 7.50.1</li>
+  <li>sqlite 3.11.1 -> 3.14.1</li>
+  <li>dhcpcd 6.10.1 -> 6.11.2</li>
+  <li>apache 2.4.18 -> 2.4.20</li>
+  <li>cups 2.1.3 -> 2.1.4</li>
+  <li>samba 4.3.6 -> 4.4.5</li>
+  <li>eudev 3.1.5 -> 3.2</li>
+  <li>glib 2.46.2 -> glib 2.48.2</li>
+  <li>gtk 3.20.2 -> 3.20.9</li>
+  <li>qt 5.6.0 -> 5.7.0</li>
+  <li>gimp 2.8.14 -> 2.8.16</li>
+  <li>firefox 46.0.1 -> 49.0.1</li>
+  <li>gnumeric 1.12.28 -> 1.12.32</li>
+  <li>libreoffice 5.1.2 -> 5.2.1</li>
+  <li>chromium 51.0.2704 -> 53.0.2785.116</li>
+  <li>mate 1.14.0 -> 1.14.1</li>
+  <li>gnome 3.18.2 -> 3.20.2</li>
+  <li>kf5 5.23.0 -> 5.26.0</li>
+  <li>plasma 5.6.5 -> 5.7.95</li>
+  <li>...</li>
+ </ul>
+ <h2>News for the user</h2>
+  <h3>Installer</h3>
+   <p>The boot of the installer is changed. It is possible to choose a debug mode.</p>
+   <p>The installer use a new initrd. As a result, the size of the ISO is about
+   20 MB less.</p>
+   <p>The actions order to do for installing NuTyX is following the logic of a
+   typical installation sequence.</p>
+   <p>It's possible to erase an already installed NuTyX and then directly replace
+   it with a 8.2 version.</p>
+   <p>The choice of filesystems is now recommended.</p>
+   <p>If a swap partition is created with the partition tool or already existing, 
+   it will be activate immediatly in the installation. No further action is needed.</p>
+   <p>The installation, the configuration of NuTyX , add and remove of packages 
+   are tracks into a log file. The file is located at <b>/var/log/install.log</b>.</p>
+   <p>Once NuTyX 8.2 is installed, the installer asky you to create a new user. 
+   You will connect with this new user. The root account is not activated automatically
+   anymore.</p>
+   <p>If you want to activate the root account anyway, you can use the command:
+   <pre class="command"><kbd>nu</kbd></pre>
+   <p>and choose <b>root</b> as username.</p>
+   <p>If your machine is buildin with a wireless cards supported by NuTyX, 
+   the installer will ask you to choose the access point you want to connect to (ESSID). 
+   If they are no access point available at that time you can still enter manualy the 
+   name of the network (ESSID).</p>
+   <p>And finally the installer will ask you if you want to activate the automatic updates.</p>
+  <h3>Configuration of grub</h3>
+   <p>If you did choose <b>btrfs</b> or <b>ext4</b> as file system, you can get rid of the
+   inirtd, and then spare a few seconds at the boot of your machine:</p>
+   <p>A typical grub.cfg file would be:</p>
+   <pre class="output">menuentry "8.2 64bits on sda6" {
+   set root=(hd0,6)
+   linux /boot/kernel root=/dev/sda6 ro quiet
+}</pre>
+  <h3>Various NuTyX tools</h3>
+   <p>The <b>install-nutyx</b> script is integrated into the <b>nutyx 8.2</b> package. 
+   It's no need to download it anymore, you can find it in the <b>/sbin/</b>. directory.</p>
+   <p>The <b>setup-nutyx</b> script is now proposing news options for the 
+   configuration of your NuTyX:</p>
+   <p>To create a new user:</p>
+   <pre class="command"><kbd>setup-nutyx -cu</kbd></pre>
+   <p>To activate/deactivate automatic updates:</p>
+   <pre class="command"><kbd>setup-nutyx -cU</kbd></pre>
+   <p>To configure the wireless network:</p>
+   <pre class="command"><kbd>setup-nutyx -cw</kbd></pre>
+  <h3>The nutyx.org website</h3>
+   <p>The new website is in place. It's powered by cards as well. In the near future,
+   we will implement a search tool for getting information about articles and packages 
+   on the website .</p>
+  <h3>Cards 2.1.94</h3>
+   <p>Cards is able to delete a all collection, a suite of packages or a group 
+   of packages. The name of the collection is stored in the database and is
+   printed out when a request of information about a package is issue.</p>
+   <p>Cards is able to use alias in the names of installed packages. If an alias
+   exist, for example, the package <b>xorg-mesa</b>, you can use one of it's alias 
+   when asking for infomation:</p>
+   <pre class="command"><kbd>cards info mesa</kbd></pre>
+   <pre class="output">Retrieve info about the 483 packages: 100 %
+Name           : xorg-mesa
+Alias          : Mesa Mesa3D mesa mesa3 mesa3d 
+Description    : Mesa is an OpenGL compatible 3D graphics library.
+Series(base)   : xorg
+Group          : 
+Collection     : gui
+URL            : http://www.xorg-mesa3d.org
+Maintainer(s)  : none
+Packager(s)    : pierre at nutyx dot org, tnut at nutyx dot org
+Version        : 12.0.1
+Release        : 1
+Build date     : Tue Aug 23 15:17:12 2016
+Installed date : Wed Sep 28 22:55:03 2016
+Installed Size : 37.59 Mbytes
+Number of Files: 65 file(s)
+Arch           : x86_64</pre>
+  <h2>Thanks</h2>
+   <p>Thanks to Pierre for it's incredible work done on kde5 packages.</p>
+   <p>Thanks to all of you for your feedbacks which have permit to improved the 
+   quality of this new NuTyX 8.2 .</p>

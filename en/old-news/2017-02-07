@@ -1,0 +1,79 @@
+<h1>Latest news 2017-02-07</h1>
+<h2>NuTyX 8.2.94 available with cards 2.1.106</h2>
+<p>
+ The NuTyX team is please to annonce the development release 8.2.94 of NuTyX.
+<p>
+ NuTyX 8.2.94 comes with cards 2.1.106, kernel 4.9.8, glibc 2.22, gcc 6.3.0, binutils 2.27, python 3.6.0,
+ xorg-server 1.19.1, qt 5.8.0, plasma 5.9.0, kf5 5.30.0, gnome 3.22.2, mate 1.16.1, xfce4 4.12.3 and many others updates.
+<p>
+ More then 2000 commits since the 8.2 version.
+<p>
+ New Isos are available in 32 and 64 bits.
+ There  sizes are respectively about  220 MB and 225 MB. on http://downloads.nutyx.org/?C=M;O=D
+<p>
+ The available graphical interface are:
+ kde5, gnome, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, openbox, twm, etc.
+<p>
+ Fourth development version for the next stable version of NuTyX 8.3.
+
+<h2>Renaming and Splitting</h2> 
+<p>
+ Renaming of python3 in python,
+ the split of qt5 and the latest updates had big impacts on all the packages.
+ As a result, the NuTyX team decides to recompile ALL the packages for this new version.
+<p>
+ We took the opportunity to adjust a few others things.
+<p>
+<ul>
+ <li>
+  The base-extra collection is now integrated in the base collection.
+ <li>
+   The /usr/lib64 -&gt; /usr/lib and /lib64 -&gt; /lib links are removed.
+</ul>
+   The /usr/lib64 directory should not exist anymore.
+ <h2>Cards 2.1.106</h2>
+  <p>
+   The cards default configuration files are corrected so they are adapted to the new collections list.
+   The base-extra collection is delete from the configuration files and in documentation.
+  <p>
+   The french translation is almost complete. Others translations are very welcome.
+ <h2>Main Updated Package List</h2>
+ <ul>
+  <li>
+   cards 2.1.94 -> 2.1.106
+  <li>
+   kernel lts 4.4.21 -> 4.9.8
+  <li>
+   gcc 6.2.0 -> 6.3.0
+  <li>
+   python 3.5.1 -> python 3.6.0
+  <li>
+   alsa 1.1.2 -> 1.1.3
+  <li>
+   cups 2.1.4 -> 2.2.1
+  <li>
+   xorg-server 1.18.4 -> 1.19.1
+  <li>
+   qt5 5.7.0 -> qt 5.8.0 
+  <li>
+   gtk3 3.20.9 -> 3.22.7
+  <li>
+   firefox 49.0.2 -> 51.0.1
+  <li>
+   thunderbird 45.3.0 -> 45.7.0
+  <li>
+   chromium 53.0.2785.116 -> 56.0.2924.76
+  <li>
+   libreoffice 5.2.1.1 -> 5.2.5.1
+  <li>
+   kf5 5.26.0 -> 5.30.0
+  <li>
+   plasma 5.7.95 -> 5.9.0
+ </ul>
+ <h2>Thanks</h2>
+ <p>
+  A big thanks to Pierre for it's great work on kde5 graphical interface.
+ <p>
+  Thanks to Timcowchip for it's work on the rework collection, the pull request he did will able to some packages to return to they original collection.
+ <p>
+  And a big thanks to the linux from scratch team for offering us a such good documentation 

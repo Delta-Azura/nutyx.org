@@ -1,0 +1,16 @@
+ <table width="100%" cellspacing="0">
+   <tr>
+   </tr>
+   <tr>
+    <td width="30%">
+     <h3>
+      <a class="url" href="build-receipt.html">How to build a package ?</a>
+     </h3>
+    </td>
+    <td width="70%">
+     This document will explain you how to build a receipt from scratch for NuTyX, it will guide you step by step.
+    </td>
+   </tr>
+   <tr>
+  </table>
+  </div>

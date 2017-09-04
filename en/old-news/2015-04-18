@@ -1,0 +1,70 @@
+  <h1>On the 2015-04-18</h1>
+   <h2>cards 0.10.90 available</h2>
+    <p>
+    The <b>cards</b> tool has been completely re-worked.
+    The synchronisation now takes a few seconds.
+    The separation between binaries and ports is a lot clearer.
+    <p>
+    News commands added:
+
+<pre class="command"><kbd>cards purge</kbd></pre>
+flush old binaries and other obsolets files.
+
+<pre class="command"><kbd>cards help <file></kbd></pre>
+provide an help about cards.
+
+<pre class="command"><kbd>cards depcreate</kbd></pre>
+Compile a port and its dépendencies in the right order. Similar to the <b>prt-get</b> and <b>depinst</b> commands.
+
+<p>
+Additional man command: <b>man cards</b> and <b>man cards.conf</b>
+
+<p>
+Note: Following commands altered:
+
+<pre class="command"><kbd>cards sync -i
+cards list -i
+cards info -i <paquet>
+cards diff -b</kbd></pre>
+
+Are now more streamlined and becomes:
+
+<pre class="command"><kbd>cards sync
+cards list
+cards info <paquet>
+cards diff</kbd></pre>
+
+   <h2>Updated the documentation on the site</h2>
+    <p>
+    Articles <a href="recept">What's a port</a>, <a href="build-package">How to build a package</a>, <a href="generate-iso">Produce a customised ISO</a> are review.
+    <h2>New kernels</h2>
+    <p>
+    A new <b>kernel</b> is now available, we have migrated to the improved and more stable version 3.19.4, thus removing all problematic incidences.
+    <p>A new long term support kernel 3.18 is also available.
+    It can be installed in parallel on the standard kernel. It has just two links to adjust in the boot folder. (initrd and kernel).
+    <h2>Next ISO</h2>
+    <p>
+    The openssh service will not be implemented in the ISO anymore for security reasons.
+    Hackers could connect remotely if the password was too weak. Even more so when the router is not doing it's firewall job.
+    <p>
+    We have a new article explaining how to create easilly your own ISO for distribution.
+
+    <h2>The installation script install-saravane is once again available</h2>
+    <p>
+    <b>install-saravane</b> is working again. Be aware there are no kernel installed. It checks the minimum requirements: uptodate bash, gawk and wget.
+    <h2>Halting  prt-get / pkgutils support</h2>
+    <p>
+    Support of <b>cards</b> and <b>prt-get/pkgutils</b> in parallel has been halted permanently.
+    The ports of crux are compatible with <b>cards</b> but not the other way around. Under NuTyX, we keep the doc, we keep man pages devel in separates sub packages.
+    If we use the ports of NuTyX with <b>pkgutils</b>, we quickly end up with big packages (kernel for ex ) and then the DB of <b>pkgutils</b> get saturated which make <b>pkgutils</b> very slow.
+    <p>
+    The other problem encountered was that the pre-install an post-install are not names similar under <b>cards</b> and <b>pkgutils</b>, under <b>pkgutils</b>,
+    they are named <b>pre-install</b> and <b>post-install</b>.
+    Under <b>cards</b>, they are named <b>&lt;name_of_the_package&gt;.pre-install</b> or <b>&lt;name_of_the_package&gt;.post-install</b>.
+    <h2>News sections</h2>
+    <p>
+    Section  system becomes base
+    <p>
+    Section  server becomes console
+    <p>
+    Section  desktop stays desktop

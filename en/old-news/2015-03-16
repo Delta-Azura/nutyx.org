@@ -1,0 +1,60 @@
+  <h1>On the 2015-03-16</h1>
+   <h2>New 32bits and 64 bits iso available</h2>
+    <p>
+    I'm pleased to make available new 32 bits and 64 bits ISO. Click on following down-loadable links:
+    <a href="http://download.nutyx.org/NuTyX_x86_64-saravane-20150315.iso">In 64 bits</a> and <a href="http://download.nutyx.org/NuTyX_i686-saravane-20150315.iso">in 32 bits</a>
+    <p>
+     The installer is made even more simple.
+     From now on if you pre-configure and format the destination partition before launching the installer, the CD <a href="http://nutyx.org/en/install#4">ask no questions
+     and the installation will start immediatly</a>within 15 seconds max.
+    <p>
+     Openssh service is available from the moment you have installed the base.
+     It means you can connect from a terminal from the host machine if you did an installation in virtualbox (with the network configured as bridge).
+     Also very usefull if you have two PC's on the network.
+    <p>
+     <b>Wifi</b> should works again after xcfe4 / kde installation.
+    <p>
+     About the package:
+
+<li>kernel 3.19.1-NuTyX</li>
+<li>initrd 3.19.1-NuTyX</li>
+<li>glibc 2.21</li>
+<li>gcc 4.9.2</li>
+<li>binutils 2.25</li>
+<li>cards 0.10.82.96a</li>
+<li>curl 7.41.0</li>
+<li>openssh 6.7p1</li>
+<li>openssl  1.0.2</li>
+    <p>
+     New commands:
+
+<pre class="command"><kbd>cards files <package></kbd></pre>
+list the file(s) of the package.
+
+<pre class="command"><kbd>cards query <file></kbd></pre>
+list owner(s) of file(s) matching the query
+
+<pre class="command"><kbd>cards install <file></kbd></pre>
+Can install a file if available on the pc. The file must be a valid downloaded package. The name is irrelevant, cards will check it before install it.
+
+<pre class="command"><kbd>cards install -f &lt;paquet&gt; | &lt;file&gt;</kbd></pre>
+Force installation in case of duplicate files
+
+<p>
+<b>Final reminder:</b>.
+<p>
+ The Commands:
+
+<pre class="command"><kbd>cards sync -i
+cards list -i
+cards info -i <paquet>
+cards diff -b</kbd></pre>
+
+are now more streamlined and become:
+
+<pre class="command"><kbd>cards sync
+cards list
+cards info <paquet>
+cards diff</kbd></pre>
+<p>
+ The help Menu has been completely re written

@@ -1,0 +1,15 @@
+  <h1>On 2016-09-15</h1>
+   <h2>NuTyX 8.2-rc1 available with cards 2.1.92</h2>
+     <p>The NuTyX team is please to annonce the first release candidate of the next major version of NuTyX 8.2.</p>
+     <p>A <a href="http://downloads.nutyx.org/?C=M;O=D">new 64bits MINI ISO</a> is available for this new version. The size is 217M.</p>
+     <p>Remember to check the MD5 checksum before transferring to USB, CD-RW or DVD-RW.</p>
+      <h3>News for the user</h3>
+       <p>The new ISO propose to delete your NuTyX to be able to make a safety update. The installer will remove the following folders only: <b>bin etc lib run sbin usr var</b>. You can then directly go on with installation of the new version without having to format the partition and without the risk of loosing your personnal files.</p>
+       <p>When the installation is done, the configuration go on and will now propose to configure you wireless network cards if available. You can then define your favorit access point.</p>
+      <h3>Technicals news</h3>
+       <p><b>Cards</b> integrate now all the scripts for building up all the ports in big quantity.</p>
+       <p>The <b>install-nutyx</b> script is included in your installation and become a normal binary.</p>
+       <p>The same script have been quite a lot simplyfied. No need to specify variables or arguments if no needed. The script will install automatically a NuTyX in the <b>/mnt/hd</b>. They is no need to install extra commands anymore, a base system is able to use the script as it is.</p>
+      <p>The <a href="http://downloads.nutyx.org/install-nutyx-8.2-rc1">install-nutyx-8.2-rc1</a>  <b>bash</b> script allows you to install NuTyX 8.2-beta-4 from your 8.1 stable NuTyX or from any other distribution.</p>
+    <h3>What's next</h3>
+      <p>If no issues are found, the next version will be the stable 8.2 version available at last beginning of october.</p>

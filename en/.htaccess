@@ -1,0 +1,7 @@
+DirectoryIndex index
+Options +ExecCGI +FollowSymlinks
+# AddType application/x-httpd-self .cgi
+AddHandler application/x-httpd-self .cgi
+# Require all granted
+# Options +FollowSymlinks
+# DefaultType .cgi

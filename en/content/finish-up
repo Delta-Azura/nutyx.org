@@ -1,0 +1,90 @@
+<h1>Finish up your installation</h1>
+ <h2>And now ?</h2>
+   You're now with a brand new base NuTyX installed.
+   If you now already how to go on to get a graphical interface you can directly check the wesite documentation.
+   If  you're wonder how to install a complete graphical interface, go on with reading.
+ <h2>Updating the meta data about available packages</h2>
+  We need to inform your NuTyX about all the available packages that can be installed.
+  An <a href="dictionary#ID300">alias</a> is available for that:
+  <pre class="command_user"><kbd>check</kbd></pre>
+  <pre class="output">[sudo] password for charly:</pre>
+  You enter now the password you specify at the installation and synchronisation starts:
+  <pre class="output">/var/lib/pkg/depot/gnome-extra/.PKGREPO
+/var/lib/pkg/depot/gnome/.PKGREPO
+/var/lib/pkg/depot/mate-extra/.PKGREPO
+/var/lib/pkg/depot/mate/.PKGREPO
+/var/lib/pkg/depot/kde5-extra/.PKGREPO
+/var/lib/pkg/depot/kde5/.PKGREPO
+/var/lib/pkg/depot/xfce4-extra/.PKGREPO
+/var/lib/pkg/depot/xfce4/.PKGREPO
+/var/lib/pkg/depot/gui-extra/.PKGREPO
+/var/lib/pkg/depot/gui/.PKGREPO
+/var/lib/pkg/depot/cli-extra/.PKGREPO
+/var/lib/pkg/depot/cli/.PKGREPO
+/var/lib/pkg/depot/base/.PKGREPO</pre>
+ <h2>Installation of a graphical interface and one of the available desktop</h2>
+ Synchronisation is done.
+ You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
+ Let's start then with the graphical server:
+ <pre class="command_user"><kbd>get xorg</kbd></pre>
+  <pre class="output">[sudo] password for charly:</pre>
+    You enter now the password you specify at the installation and installation starts:
+  <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
+  ...</pre>
+  You can now choose your favorit desktop.
+  Under NuTyX: kde5, xfce4, mate, gnome, lxde, openbox, flwm, ratpoison, etc are available.
+  <p>
+      <table>
+       <caption><EM>Available desktops:</EM></caption>
+       <tr class="sidebar">
+        <th>Desktop name:
+        <th>Command:
+       <tr class="even">
+        <td>
+         kde5 kde5-extra
+        <td>
+         <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         gnome gnome-extra
+        <td>
+         <pre class="command_user"><kbd>get gnome gnome-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         xfce4 xfce4-extra
+        <td>
+         <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         mate mate-extra
+        <td>
+         <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         lxde
+        <td>
+         <pre class="command_user"><kbd>get lxde</kbd></pre>
+       <tr class="odd">
+        <td>
+         openbox
+        <td>
+         <pre class="command_user"><kbd>get openbox</kbd></pre>
+     </table>
+  <p>
+   What ever your choice, you will need to install a Login manager.
+   You can choose between lxdm and slim.
+   For lxdm:
+   <pre class="command_user"><kbd>get lxdm</kbd></pre>
+   <p>
+    You should now install a few tools that might be very usefull, for example:
+    <pre class="command_user"><kbd>get zip unzip xdg-user-dirs gvfs ntfs-3g alsa-utils firefox libreoffice pidgin thunderbird</kbd></pre>
+   <p>
+    If you are using a wireless connection as default, install network-manager-applet:
+    <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
+ <h2>And to finish up</h2>
+   The most easy way is to reboot your machine. After reboot, you will be prompt to choose your login name via lxdm or slim.
+   If you did install slim, you should press F1 to select the right desktop to login to.
+   <pre class="command_user"><kbd>sudo reboot</kbd></pre>
+ <h2>Conclusion</h2>
+  <p>
+   I suggest that you read the section on <a href="base-commands">the base commands</a> so that you can go further with your installation.

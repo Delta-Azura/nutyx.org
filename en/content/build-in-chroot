@@ -1,0 +1,155 @@
+<h1>Build in a chroot</h1>
+ 
+ <h2>Introduction</h2>
+  <p>
+   This article explain every step to compile packages in a chroot.
+
+ <h2>Adjust /etc/cards.conf</h2>
+  <p>
+   To be able to install the compiled packages from your chroot, you need to adjust your <b>/etc/cards.conf</b> file.
+   You will add on the top of this file:
+   <pre class="output">dir /mnt/hd/usr/ports/perso</pre>
+  <p>
+   You are now ready to proceed with your chroot.
+
+ <h2>Installation of your chroot</h2>
+  <p>
+   Depending the branch you want to use, you can specify it when calling the script:
+  <h3>The stable branch</h3>
+   <pre class="command"><kbd>VERSION="stable" install-nutyx</kbd></pre>
+  <h3>The development branch</h3>
+    <pre class="command"><kbd>VERSION="development" install-nutyx</kbd></pre>
+
+ <h2>Enter the chroot</h2>
+  <p>
+  <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
+
+ <h2>Development tools installation</h2>
+  <p>
+   The default installation is already adapted so just do a little:
+   <pre class="command"><kbd>get cards.devel</kbd></pre>
+
+ <h2>The Configurations files</h2>
+  <h3>/etc/cards.conf</h3>
+   <pre class="command"><kbd>cat &gt;/etc/cards.conf &lt;&lt; EOF
+dir /usr/ports/perso
+dir /usr/ports/gui
+dir /usr/ports/cli
+dir /usr/ports/base
+logdir /var/log/pkgbuild
+base /usr/ports/base
+EOF</kbd></pre>
+   <p>
+    A folder containing my personnal receipes is added.
+    We do not specify any URL because we don't plan to use <b>cards sync</b>.
+   <p>
+    Folder/var/log/pkgbuild will contains compilations logs.
+   <p>
+    I don't need any specific locale, they can be all installed.
+   <p>
+    The folder /usr/ports/base define the base system when the command <b>cards base -r</b>.
+    will be used.
+  <h3>/etc/pkgmk.conf</h3>
+    <pre class="command"><kbd>cat &gt; /etc/pkgmk.conf &lt;&lt; EOF
+export CFLAGS="-O2 -pipe"
+export CXXFLAGS="\${CFLAGS}"
+case \${PKGMK_ARCH} in
+    "x86_64"|"")
+       export MAKEFLAGS="-j$(getconf _NPROCESSORS_ONLN)"
+       ;;
+    "i686")
+       export MAKEFLAGS="-j$(getconf _NPROCESSORS_ONLN)"
+       export CFLAGS="${CFLAGS} -m32"
+       export CXXFLAGS="${CXXFLAGS} -m32"
+       export LDFLAGS="${LDFLAGS} -m32"
+       ;;
+    *)
+       echo "Unknown architecture selected! Exiting."
+       exit 1
+       ;;
+esac
+PKGMK_SOURCE_DIR="/tmp"
+PKGMK_KEEP_SOURCES="yes"
+PKGMK_WORK_DIR="/tmp/work"
+PKGMK_IGNORE_REPO="no"
+PKGMK_IGNORE_COLLECTION="no"
+PKGMK_GROUPS=()
+PKGMK_LOCALES=()
+PKGMK_COMPRESS_PACKAGE="yes"
+PKGMK_COMPRESSION_MODE="xz"
+PKGMK_CLEAN="no"
+PKGMK_IGNORE_RUNTIMEDEPS="no"
+EOF</kbd></pre>
+    <p>
+     Source code are stored in a common folder. I want to keep them.
+    <p>
+     The produced binaries are compressed in xz format.
+    <p>
+     I want to keep my binaries onces installed.
+    <p>
+     I wish to have the runtime dependencies automaticaly added into the binary.
+
+ <h2>Binaries synchronisation via rsync</h2>
+    <p>
+     This operation consist of download all the binaries of the <b>base, cli-extra, gui et gui-extra</b> colletions. 
+     It can take from a few minutes to a few hours depending of the speed of your internet connection.
+    <p>
+     Lucky, this operation has to be done only once.
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+    <p>
+     We need to create the root folder first.
+    <pre class="command"><kbd>mkdir -p /usr/ports/perso</kbd></pre>
+    <p>
+     We can now synchronise all the binaries:
+    <h3>The stable branch</h3>
+    <pre class="command"><kbd>for i in base cli gui
+do
+  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/stable/$i/ \
+  /usr/ports/$i/
+done</kbd></pre>
+    <h3>The development branch</h3>
+     <pre class="command"><kbd>for i in base cli gui
+do
+  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/development/$i/ \
+  /usr/ports/$i/
+done</kbd></pre>
+    <p>
+     This can takes some times so go get a coffee or a pizza.
+     <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />,
+     It can be long...
+
+ <h2>Compilation and installation of your package</h2>
+  <p>
+   You start to create the folder where will be locate your new package. Let's call it <b>mypackage</b> (you need to adjust to your real one)
+   <pre class="command"><kbd>mkdir /usr/ports/perso/mypackage</kbd></pre>
+  <p>
+   We just need to create the recept of our package (you need to adjust to your real one):
+   <pre class="output"># Depends on: python gtk3 librsvg
+description="My first package with plenty of  dependancies"
+packager="francis perrin"
+url="http://www.my-first-package.org/"
+name=mypackage
+version=1.0.0
+release=1
+source=(${url}downloads/$name/$name-$version.tar.xz)
+build() {
+   cd $name-$version
+   ./configure --prefix=/usr
+   make
+   make DESTDIR=$PKG install
+}</pre>
+  <p>
+   We can now launch the process of compilation and installation.
+   <pre class="command"><kbd>cards create -r mypackage</kbd></pre>
+  <p>
+   I suggest you to read the man page of cards to understand the way <b>cards create -r</b> is working.
+   <pre class="command"><kbd>man cards</kbd></pre>
+
+ <h2>Conclusion</h2>
+   <p>
+    Following commands should be used:
+      <pre class="command"><kbd>cards level
+cards base -r
+cards create -r</kbd></pre>

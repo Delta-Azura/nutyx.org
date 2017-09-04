@@ -1,0 +1,62 @@
+   <h1>Preparation of the construction</h1>
+    <h2>If you are on NuTyX</h2>
+     <p>
+      Make sure the tools are installed:
+     <pre class="command_user"><kbd>get cards.devel git</kbd></pre>
+    <h2>If you are not on NuTyX</h2>
+      <p>
+       You need to download the NuTyX installation script <b>install-nutyx</b>.
+      <p>
+       To make this topic transparent for all readers (NuTyX or not NuTyX user), you will put the script in a standard directory.
+       You can delete it at the end of the creation.
+      <p>
+       Switch to root mode:
+      <pre class="command_user"><kbd>su -</kbd></pre>
+      <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}
+md5sum -c install-nutyx.md5sum</kbd></pre>
+      <pre class="output">install-nutyx: OK</pre>
+      <pre class="command"><kbd>chmod -v 755 install-nutyx</kbd></pre>
+      <pre class="output">mode of 'install-nutyx' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)</pre>
+      <pre class="command"><kbd>mv -v install-nutyx /usr/bin/install-nutyx</kbd></pre>
+      <pre class="output">'install-nutyx' -> '/usr/bin/install-nutyx'</pre>
+      <p>
+       Make shure you have the <b>bstar</b> command installed on your distribution.
+      <p>
+       You need to use the BASH interpreter.
+      <p>
+       Check that all the conditions are fullfill
+       by checking this <a  class="url" href="http://www.linuxfromscratch.org/lfs/view/development/chapter02/hostreqs.html" target="_blank">page</a>
+    <h2>If you did already once the all process</h2>
+     <p>
+      It's necessary to remove the user (and its group it belong) and the home directory of the user lfs.
+     <p>
+      So if you need to do it, remove all existing stuff:
+    <pre class="command"><kbd>userdel lfs
+rm -r /home/lfs</kbd></pre>
+    <p>
+     Normally, by remove the user, the group is removed as well.
+     If not shure give a try, it will not hurt.
+    <pre class="command"><kbd>groupdel lfs</kbd></pre>
+   <h2>Partition preparation</h2>
+    <p>
+     To be able to start the first pass without major trouble, let's see what's has to be done.
+     It's quite straigtforward.
+    <p>
+     Normaly if we build a linux distribution, it's necessary to plan a partition where to put it's construction.
+     It's actually not a must, as it's possible to build the distribution in a folder and then make a backup of it on a USB key or directly use the command rsync to transfer it on the destination disk or partition.
+    <p>
+     So if you decide to use a dedicate partition,
+     it's time to format it in the file system of your choice and then you mount it on the folder defined by the LFS variable.
+    <p>
+     In all the articles we will used the same folder, so let's define the LFS variable:
+    <pre class="command"><kbd>export LFS=/mnt/lfs</kbd></pre>
+    Ones your partition formated, it's time to create the folder and mount your partition on it.
+    In my example, I choose the second partition of the first disk, you should adjust thoses settings to your choice.
+    <pre class="command"><kbd>mkdir -pv $LFS
+mount /dev/sda2 $LFS</kbd></pre>
+    <p>
+     Remember to always mount this partition prior to start the pass 1 or 2.
+     Ones the partition is monted, we can start the first pass.
+  <div class="pied_page">
+   <a class="url" href="build-pass-1">It's time to begin with the pass 1...</a>
+  </div>

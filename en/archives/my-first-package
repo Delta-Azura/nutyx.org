@@ -1,0 +1,42 @@
+<h1>Build my first package</h1>
+ <h2>Introduction</h2>
+  <p>
+   We will see how to build and install a first package in a very straigtforward way.
+   This tutorial explain you in a very simple way the construction of your first binary package.
+   They are no prerequest, this exercice can be done regardless the state of your NuTyX.
+   
+ <h2>Make the recept</h2>
+  <pre class="command_user"><kbd>sudo mkdir -p /usr/ports/perso/nano</kbd></pre>
+  <pre class="command"><kbd>echo '
+description="Text Editor"
+maintainer="Nano team"
+packager="François Perrin francois dot perrin at myworld dot com"
+url="http://www.nano-editor.org/"
+
+name=nano
+version=2.7.2
+release=1
+
+source=(${url}/dist/v${version:0:3}/$name-$version.tar.xz)
+
+build() {
+cd $name-$version
+./configure --prefix=/usr \
+--sysconfdir=/etc \
+--enable-utf8 \
+--enable-color \
+--enable-multibuffer \
+--enable-nanorc \
+--docdir=/usr/share/doc/$name-$version
+make
+make DESTDIR=$PKG install
+rm $PKG/usr/share/info/dir
+}' &gt; /usr/ports/perso/nano/Pkgfile</kbd></pre>
+ <h2>Install the development packages</h2>
+  <pre class="command_user"><kbd>get cards.devel</kbd></pre> 
+ <h2>Compile the package</h2>
+   <pre class="command_user"><kbd>cd /usr/ports/perso/nano
+sudo pkgmk -d</kbd></pre>
+ <h2>Install the package</h2>
+   <pre class="command_user"><kbd>sudo pkgadd nano1*</kbd></pre>
+ 

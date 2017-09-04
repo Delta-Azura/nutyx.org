@@ -1,0 +1,108 @@
+<h1>Setup NFS server</h1>
+ <h2>Introduction</h2>
+  <p>
+   NFS means <a href="https://en.wikipedia.org/wiki/Network_File_System">Network File System</a>.
+   It permit you to share files between machines.
+   The only condition is, all machines NEED TO support the NFS service.
+   Fortunatly all the distributions supports it.
+ <h2>Packages to install</h2>
+  <p>
+   To setup a NFS server it's quite simple.
+   You need to install, configure and start it.
+   Let's install all those packages:
+  <h3>On the server</h3>
+   <pre class="command_user"><kbd>get nfs-utils nfs-utils.service</kbd></pre>
+  <h3>On the client(s)</h3>
+   <pre class="command_user"><kbd>get nfs-utils</kbd></pre>
+ <h2>Configuration</h2>
+  <p>
+   They are only 2 files to configure: One on the server, one on each client:
+  client:
+  <p>
+   In our example, it's the <b>/home/tnut/documents</b> folder we want to share:
+   <h3>Server configuration</h3>
+    <p>
+     We need to do it in root:
+     <pre class="command_user"><kbd>su -</kbd></pre>
+    <p>
+     We create the <b>/etc/exports</b> file like this:
+     <pre class="command"><kbd>cat  &gt; /etc/exports &lt;&lt; EOF
+/home/tnut/documents 192.168.1.0/24(rw,no_root_squash,subtree_check,anonuid=99,anongid=99)
+EOF</kbd></pre>
+    <p>
+     We want to share the <b>/home/tnut/documents</b> and make it accessible from all other machines having
+     an IP adress between 192.168.1.1 et 192.168.1.254.
+    <p>
+     Configuration on the server is already done, lets move on to the client(s)
+    <h3>Client(s) configuration</h3>
+     <pre class="command"><kbd>cat &gt;&gt; /etc/fstab &lt;&lt; EOF
+192.168.1.20:/home/tnut/documents /home/tnut/documents nfs auto,rw,vers=3,_netdev,rsize=8192,wsize=8192 0 0
+EOF</kbd></pre>
+    <p>
+     In this example, the NFS server is at the adress <b>192.168.1.20</b>
+ <h2>Starting all the services</h2>
+  <p>
+   We need to start the service on the server by reboot it or by typing:
+   <h3>On the server</h3>
+    <pre class="command"><kbd>/etc/rc.d/init.d/rpcbind start
+/etc/rc.d/init.d/netfs start
+/etc/rc.d/init.d/nfs-server start</kbd></pre>
+   <h3>On the client(s)</h3>
+    <pre class="command"><kbd>/etc/rc.d/init.d/rpcbind start
+/etc/rc.d/init.d/netfs start</kbd></pre>
+    <p>
+     If you prefer, you can reboot the server and client(s)
+ <h2>Test the service</h2>
+  <p>
+   All the services are now configured, they should be no error message when starting them.
+  <h3>On the server</h3>
+   <p>
+    The NFS server is a client as well so it's absolute possible to test the service on the server.
+   <p>
+    On the server, we create a "temporary" folder:
+   <p>
+    In root:
+    <pre class="command"><kbd>mkdir /root/bidon</kbd></pre>
+   <p>
+    And now the mounting test (still on the server):
+    <pre class="command"><kbd>mount -o vers=3 192.168.1.20:/home/tnut/documents /root/bidon</kbd></pre>
+   <p>
+    No message
+    Aucun message d'erreur ne doit apparaître. Le montage est effectué.
+   <p>
+    Pour vérifier, on regarde son contenu:
+   <pre class="command"><kbd>ls -l /root/bidon</kbd></pre>
+   <pre class="output">....
+Mes lettres
+Images
+MP3
+...
+...</pre>
+   <p>
+    Le test sur le serveur est terminé. On démonte le dosier
+    <pre class="command"><kbd>umount /root/bidon</kbd></pre>
+   <p>
+    Once umounted, you can remove the folder, if its umounted and empty the command:
+    <pre class="command"><kbd>rm -d /root/bidon</kbd></pre>
+    should works without errors.
+   <p>
+    We can now proceed to the client tests
+  <h3>On a client</h3>
+   <p>
+    The test is exactly the same, this time we test the folder which will be automatically mounted
+    when the client is started:
+    <pre class="command"><kbd>mount -o vers=3 192.168.1.20:/home/tnut/documents /home/tnut/documents</kbd></pre>
+   <p>
+    No errors should show up. The mount is done.
+   <p>
+    We can check it by looking it's content:
+    <pre class="command"><kbd>ls -l /home/tnut/documents</kbd></pre>
+    <pre class="output">....
+My letters
+Pictures
+MP3
+...
+...</pre>
+ <h2>Conclusion</h2>
+   <p>
+    Congratulations, your NFS server is now working fine.

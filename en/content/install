@@ -1,0 +1,77 @@
+  <h1>Typical installation of NuTyX on a single partition</h1>
+   <p>
+    Thoses screenshots shows you a typical installation on a single partition in bios mode.
+    We have a disk of 8 Gbytes.
+    The first partition is the swap partition of a 2 Gbytes size.
+    The rest of the disk space will be available for the NuTyX install partition.
+   <p>
+    A minimum of 1 Gigabyte RAM is best suited. We assume that you have already burnt the ISO onto a CD.
+   <p>
+    If you prefer, you can prepare a NuTyX bootable USB flash-drive.  Either option will work.
+   <p>
+    You also have a blank hard drive.
+   <p>
+    Now we will begin, using screen-shots that will show you a typical installation on a single partition:
+
+   <h2>Boot-up the USB Flash Drive/CD on which you copied/burned the ISO.</h2>
+     <table align="center">
+      <tr><td><img src="../../graphics/install/BootBios.png"></td></tr>
+      <tr><td><img src="graphics/install/SelectLanguage.png"></td></tr>
+      <tr><td><img src="graphics/install/HowToProceed.png"></td></tr>
+     </table>
+   <h2>Partition creation (optional)</h2>
+     <p>
+      Creating a partition is optional.
+      If you already have an empty partition available, you can <a href="#3">go directly to the format of the partition.</a>
+     <table align="center">
+      <tr><td><img src="graphics/install/CreateYoursPartitions.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionTypeSelection.png"></td></tr>
+      <tr><td><img src="graphics/install/EmptyDisk1.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionCreate1.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionCreate2.png"></td></tr>
+     </table>
+
+    <h2>Format the partition (optional)</h2>
+     <p>
+      The formatting of the partition is optional.
+      If you have an unformated partition or you want get rid of everything on the partition, then just format it.
+      If you still want to keep your personal data, you need to manually remove the following directories: <b>opt, bin, etc, root, run, sbin, usr and var</b>.
+      If you already have an <u>empty</u> formated partition, you can <a href="#4">go directly to the installation of NuTyX</a>
+     <table align="center">
+      <tr><td><img src="graphics/install/FormatPartition.png"></td></tr>
+      <tr><td><img src="graphics/install/AvailableFileSystems.png"></td></tr>
+      <tr><td><img src="graphics/install/LaunchFormatSda2Btrfs.png"></td></tr>
+     </table>
+
+    <h2>Install NuTyX</h2>
+     <p>
+      The installation of NuTyX doesn't need an internet. It takes just a few minutes.
+     <table align="center">
+      <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
+      <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
+      <tr><td><img src="graphics/install/GoodToKnowMBR.png"></td></tr>
+     </table>
+
+   <h2>Configure NuTyX</h2>
+    <p>
+     Once installed, NuTyX automatically start its configuration dialog without  having to reboot.
+    <p>
+     The configuration is very straightforward: network card configuration, setting date and time, and modification of the default password of the 
+administrator account <b>root</b>.
+     <table align="center">
+      <tr><td><img src="graphics/install/Init1.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureEth0.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureUTC.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureDate.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureTime.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureUser.png"></td></tr>
+      <tr><td><img src="graphics/install/AutomaticUpdate.png"></td></tr>
+      <tr><td><img src="graphics/install/FirstLogin.png"></td></tr>
+     </table>
+    <p>
+     Next, when prompted, use your username you just create to login.
+   <h2>Giving the base commands a trial run-through.</h2>
+    <p>
+     I suggest that you read the section on <a href="finish-up">finalise your installation</a> so that you can install a graphical interface.
+

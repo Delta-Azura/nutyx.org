@@ -1,0 +1,145 @@
+  <h1>Frequently asked questions</h1>
+
+   <h2>How to register to the Mailing Lists</h2>
+    <p>
+     It's done in a few steps:
+     <ul>
+      <li>
+       You send a email to one of &lt;mailing_list_name&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> for example) by specifying:
+       <b><i>subscribe</i></b> as subjet.
+      <li>
+       You will receive a confirmation mail. Check your spam mails.
+      <li>
+       Simply answer this last email by choosing "Reply" on your favorite email software.
+      <li>
+       After a few minutes you will receive a last email that confirm you are register on the mailing-list
+      </ul>
+      <table>
+       <caption><EM>Available Mailing Lists:</EM></caption>
+       <tr class="sidebar">
+        <th>
+         Mailing List name:
+        <th>
+         email adress:
+        <th>
+         Short description:
+       <tr class="even">
+        <td>
+         nutyx-support<td>nutyx-support@nutyx.org<td>To get some support about NuTyX
+       <tr class="odd">
+        <td>
+         nutyx-annonce<td>nutyx-annonce@nutyx.org<td>To get news about NuTyX
+       <tr class="even">
+        <td>
+         nutyx-dev<td>nutyx-dev@nutyx.org<td>To discuss about development and future of NuTyX
+     </table>
+    <p>
+     The archives are available at: <a href="https://listengine.tuxfamily.org/nutyx.org/">https://listengine.tuxfamily.org/nutyx.org/</a>
+
+   <h2>NuTyX is not a multi-lib</h2>
+    <p>
+     It's take much more time to build up a multilib distribution.
+     Normaly all the libraries needs to be compiled in 64 and 32 bits.
+    <p>
+     Today, it's not possible to produce a multilib because there are links created at construction / installatio of NuTyX (lib64->lib) under /lib and /usr.
+
+   <h2>The installer doesn't allow me to specify a separate /home partition</h2>
+    <p>
+     This question has been asked many times.
+     I will try to answer it as far as possible.
+    <p>
+     Modern users often have a lot of data on their computers.
+     The size of the home folder can quickly become very large.
+     MP3 files, photos and videos are big files.
+    <p>
+     Imagine that you have a 250 GB hard disk.
+     You say &quot;OK, I'll take 100 G for the system and 150 for my personal data.&quot;
+     Great! You just cut your disk into two pieces, and the home partition will fill up more quickly in proportion to its size than if you had retained a single partition.
+     It would be nice if we could reinstall NuTyX when we wanted without having to cut the hard disk into separate partitions to preserve personal data.
+     <u>That's exactly how the NuTyX installer works</u>.
+    <ul>
+     <li>
+      The installer will never format a partition that is already formated, without manual intervention.
+    <li>
+      If you have a distribution (NuTyX or any other) with personal data and the system on the same partition,
+      the installer will tell you during the installation process that there is already a distribution there but will not offer to format the partition.
+      You will need to delete the <b>  /var, /proc, /sys, /usr, /sbin,</b> and <b>/etc </b> folders, but other folders such as <b>/home</b> and <b>/MP3</b> will not be touched.
+      So your data are safe. 
+    <li>
+     Today it is very easy to configure a file server based on NFS, so that users could have their home folders on a remote server.
+    <li>
+     To summarise: creating a separate home partition today is unecessary, at least with NuTyX.
+     It's worth asking why Apple's MacOS operating system never recommended this.
+    </ul>
+
+   <h2>Building packages in a chroot. When and Why ?</h2>
+    <p>
+     The NuTyX ISO install a base system which give the user's choice between two scenarios in using the distribution:
+      <h3>NuTyX can be considered as a "binaires" distribution.</h3>
+
+       The user install the needed binaries packages by downloads them from the remote server.
+      <p>
+       Once the base system is installed, the user install it's favorits applications as explain in the online documentation.
+      <p>
+       A typical installation look like:
+       <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
+      <p>
+       All the binaries packages are split into base packages and sub-packages (devel, doc, man, etc), in most of the case, only the base package will be installed.
+       It means:
+       <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+        if the user want to compile a package not available in binaries,
+        <a href="build-in-chroot">he (she) will have to compile thoses packages in a chroot</a>,
+        otherwise the compilation will always fails because of missing dependancies.
+       </div>
+     <h3>NuTyX can be considered as a "sources" distribution</h3>
+       The user compile all the packges he needs on the local machine.
+      <p>
+       Once the base system installed, the user install the development tools:
+       <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+      <p>
+       He (she) download the availables recipes:
+       <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
+      <p>
+       He (She) adjust the <b>/etc/cards.conf</b> configuration file as:
+       <pre class="output">dir /usr/ports/kde5-extra
+dir /usr/ports/kde5
+dir /usr/ports/gnome-extra
+dir /usr/ports/gnome
+dir /usr/ports/mate-extra
+dir /usr/ports/mate
+dir /usr/ports/xfce4-extra
+dir /usr/ports/xfce4
+dir /usr/ports/gui-extra
+dir /usr/ports/gui
+dir /usr/ports/cli-extra
+dir /usr/ports/base
+base /usr/ports/base
+logdir /var/log/pkgbuild</pre>
+      And can now compile the needed packages <u><b>without being in a chroot</b></u>.
+      So for example, to compile the graphical server xorg:
+      <pre class="command_user"><kbd>sudo cards depcreate xorg</kbd></pre>
+
+   <h2>Is it possible to upgrade NuTyX (prior to 9.0) to NuTyX 9.X without reinstalling everything?</h2>
+    <p>
+     No. The number of changes is too great.
+     The package manager has changed, the initrd has changed,
+     the installer has changed, and the ports location has changed.
+
+   <h2>How to activate the root account ?</h2>
+    <p>
+     As default, NuTyX does not activate the root account, but if you wish to compile yours own packages, it's maybe a good activate the root account.
+     It's very simple, type:
+     <pre class="command_user"><kbd>nu</kbd></pre>
+     and choose <b>root</b> as user
+     <p>
+       <img src="graphics/faq/ActivateRoot1.png" alt="Figure 1: Specify the root account" title="Figure 1: Specify the root account"/>
+     <p>
+      choose a new password
+     <p>
+      <img src="graphics/faq/ActivateRoot2.png" alt="Figure 2: Specify the password" title="Figure 2: Specify the password"/>
+     <p>
+      and confirm the new password
+    <p>
+      <img src="graphics/faq/ActivateRoot3.png" alt="Figure 3: Confirm the password" title="Figure 3: Confirm the password"/>
+     <p>
+      and you're done.

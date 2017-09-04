@@ -1,0 +1,40 @@
+<h1>Setup of an HTTP server</h1>
+ <h2>Introduction</h2>
+  <p>
+   An http server can be usefull if we want to test some html pages on a real browser.  
+   If we want to creare our own website localy accessible from home or why not make it public on the net.
+ <h2>Packages to install</h2>
+  <p>
+   To install and activate the http service, you will see, it's very simple.
+   We open a terminal:
+   <pre class="command_user"><kbd>get apache apache.service</kbd></pre>
+  <p>
+   That's it, the installation is already done.
+ <h2>Configuration</h2>
+  <p>
+   The default configuration of the apache http server is basic,  
+   it is recommended to make a customise configuration
+  <p>
+   We start to create a customised html file
+  <p>
+   In root then:
+   <pre class="command"><kbd>cat &gt; /srv/www/index.html &lt;&lt; EOF
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;HTML&gt;
+   &lt;HEAD&gt;
+      &lt;TITLE&gt;Welcome on your HTML server&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;BODY&gt;
+    &lt;H1&gt;Your NuTyX http server is working&lt;/H1&gt;
+      &lt;P&gt;Hello everybody !
+   &lt;/BODY&gt;
+&lt;/HTML&gt;
+EOF</kbd></pre>
+ <h2>Service starting</h2>
+  <p>
+   We activate the service, still in root:
+   <pre class="command"><kbd>/etc/rc.d/init.d/httpd start</kbd></pre>
+   <pre class="output">  *   Starting Apache HTTP daemon... [  OK  ]</pre>
+  <p>
+   You can check the result of your work by going at the URL adress: <a href=http://localhost/>http://localhost/</a> with your favorit browser

@@ -1,0 +1,205 @@
+<h1>Latest news 2017-04-05</h1>
+
+<h2>NuTyX 9.0 available with cards 2.2</h2>
+<p>
+ The NuTyX team is please to annonce the 9.0 release of NuTyX.
+<p>
+ NuTyX 9.0 comes with kernel 4.10.8, kernel lts 4.9.20, glibc 2.25, gcc 6.3.0, binutils 2.28, python 3.6.0,
+ xorg-server 1.19.2, qt 5.8.0, plasma 5.9.4, kf5 5.31.0, gnome 3.22.2, mate 1.16.1, xfce4 4.12.3, firefox 52.0.2, etc....
+
+<p>
+ More then 2500 commits since the 8.2 version.
+
+<p>
+ A new Iso is available in 64 bits.
+ The size is 246 MB on <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>
+<p>
+ Available graphical interfaces are:
+ kde5, gnome, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
+
+<h2>Major update of NuTyX</h2>
+ <p>
+  This new version is the result of more then 6 month of work.
+  Updating from 8.2.1 version is maybe possible, but risky. NuTyX recomnmand you to make a new installation.
+<h2>ISOs news</h2>
+<p>
+ The new ISOs can be launch on UEFI machines
+ If you have a uefi compatible computer, you can now install NuTyX in uefi mode.
+ It it's your case, the installer will guide the user to make the right chooices during installation and the uefi will take care of booting the machine,
+ no other boot manager are needed by default.
+ Up to the enduser to decide or not for choosing one if needed.
+<p>
+ You can find a tutorial, how to install on UEFI machine on the webpage documentation and on YouTube channel.
+ <p>
+ ISO can be loaded 100 % in ram memory if the target computer have more then 1 Gbyte of RAM.
+ The USB key can then be disconnected and then make the single USB port available free.
+ Usefull when you want to install NuTyX on tablets having one single USB port.
+
+<h2>New LTS kernel</h2>
+<p>
+ The kernel long term support is now shift from the 4.4 to the 4.9 version.
+<h2>No more default initrd</h2>
+<p>
+ The initrd has become obsolet, it's no need to specify it into the grub boot configuration file.
+ NuTyX reconized Files Systems are now compiled into the kernel.
+
+<h2>Main components of the toolchain are now up to date.</h2>
+<p>
+ Main components of the toolchain that are kernel-header, compiler, linker, assembler and C library are now up to date.
+ Respective version of each element are availables in the list below.
+
+<h2>Base-extra collection removed</h2>
+<p>
+ The base-extra collection is now into the base collection integrated.
+<p>
+ Number of officials collections is now 13:
+ <ul>
+  <li>
+    base
+  <li>
+    cli, cli-extra
+  <li>
+    gui, gui-extra
+  <li>
+    xfce4, xfce4-extra
+  <li>
+    mate, mate-extra
+  <li>
+    gnome, gnome-extra
+  <li>
+    kde5, kde5-extra
+ </ul>
+ 
+<h2>Renaming and Splitting</h2> 
+<p>
+ Renaming of python3 in python, the split of qt5 and the latest updates had big impacts on all the packages.
+ As a result, the NuTyX team decides to recompile ALL the packages for this new version.
+
+<ul>
+ <li>
+   python -> python2
+ <li>
+  python3 -> python
+ <li>
+  qt5 -> qt
+ <li>
+  fltk1 -> fltk
+ <li>
+  xorg-mesa -> mesa
+</ul>
+
+<h2>Cards 2.2</h2>
+<p>
+ It's a major updated version of cards. This 2.2 version have a completed french version.
+ NuTyX team welcomes news translators.
+<p>
+ Cards shows more results when searching for packages.
+ If the found package is already install, it will be printed in green in the result.
+ From now on, it also search into alias and groups properties.
+  
+<h2>Simplify directories structure</h2>
+<p>
+ The /usr/lib64 -&gt; /usr/lib and /lib64 -&gt; /lib links are removed.
+<p>
+ The /usr/lib64 directory should not exist anymore.
+<p>
+ The /lib64 folder should only contains  2 links pointing to the same /lib/ld-linux-x86-64.so.2 file.
+<h2>Wireless</h2>
+  <p>
+   For your wifi, networkmanager is now the best choice as it is easily configurable in many ways.
+   It's great flexibility abke you to configure the wifi as you wish.
+   The python2 based wicd tools is still available as an alternative to connect to networks in wifi or wired.
+  <p>
+   The wireless post-configuration have been improved. The ESSID bug is corrected. A name containing spaces as ESSID is now possible.
+
+ <h2>The YouTube channel</h2>
+ <p>
+  <a href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g">https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g</a>
+ <p>
+  The new Youtube channel will contains various tutorials reflecting the ones on the website.
+ <p>
+  Peoples have been asking several times, you can now watch UEFI or BIOS installation on the Youtube channel
+
+<h2>NuTyX 8.2 binaries moved</h2>
+ <p>If you are today on the latest version 8 of NuTyX and if you not ready yet to migrate to Version 9 of NuTyX,
+  it's not a problem, it's possible to continue to use your version 8 of NuTyX.
+ <p>
+  You need to modify NOW the <b>/etc/cards.conf</b> configuration file.
+  You will then be able to continue to install packages from version 8 of NuTyX.
+   <pre class="command_user"><kbd>sudo sed -i s@downloads.nutyx.org@downloads.tuxfamily.org/nutyx@ /etc/cards.conf</kbd></pre>
+ <p>
+  And to check:
+  <pre class="command_user"><kbd>cards config</kbd></pre>
+  <pre class="output">1 Directory: /var/lib/pkg/depot/gnome-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gnome-extra
+2 Directory: /var/lib/pkg/depot/gnome from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gnome
+3 Directory: /var/lib/pkg/depot/mate-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/mate-extra
+4 Directory: /var/lib/pkg/depot/mate from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/mate
+5 Directory: /var/lib/pkg/depot/kde5-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/kde5-extra
+6 Directory: /var/lib/pkg/depot/kde5 from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/kde5
+7 Directory: /var/lib/pkg/depot/xfce4-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/xfce4-extra
+8 Directory: /var/lib/pkg/depot/xfce4 from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/xfce4
+9 Directory: /var/lib/pkg/depot/gui-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gui-extra
+10 Directory: /var/lib/pkg/depot/gui from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gui
+11 Directory: /var/lib/pkg/depot/cli-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/cli-extra
+12 Directory: /var/lib/pkg/depot/cli from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/cli
+13 Directory: /var/lib/pkg/depot/base-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/base-extra
+14 Directory: /var/lib/pkg/depot/base from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/base
+...</pre>
+
+<h2>Main Updated Packages List of NuTyX 9.0</h2>
+ <ul>
+  <li>
+   cards 2.1.94 -> 2.2
+  <li>
+   kernel 4.7.4 -> 4.10.8
+  <li>
+   kernel lts 4.4.21 -> 4.9.20
+  <li>
+   gcc 6.2.0 -> 6.3.0
+  <li>
+   glibc 2.24 -> glibc 2.25
+  <li>
+   binutils 2.27 -> 2.28
+  <li>
+   python 3.5.1 -> python 3.6.0
+  <li>
+   alsa 1.1.2 -> 1.1.3
+  <li>
+   cups 2.1.4 -> 2.2.2
+  <li>
+   samba 4.4.5 -> 4.5.5
+  <li>
+   mesa 12.0.6 -> 17.0.1
+  <li>
+   libdrm 2.4.70 -> 2.4.75
+  <li>
+   xorg-server 1.18.4 -> 1.19.2
+  <li>
+   qt5 5.7.0 -> qt 5.8.0 
+  <li>
+   gtk3 3.20.9 -> 3.22.9
+  <li>
+   firefox 49.0.2 -> 52.0.2
+  <li>
+   thunderbird 45.3.0 -> 45.8.0
+  <li>
+   chromium 53.0.2785.116 -> 56.0.2924.10
+  <li>
+   libreoffice 5.2.1.1 -> 5.3.1.3
+  <li>
+   kf5 5.26.0 -> 5.31.0
+  <li>
+   plasma 5.7.95 -> 5.9.4
+  </ul>
+<h2>Thanks</h2>
+ <p>
+  Thanks to Pierre for it's great work as usual on kde5 graphical interface.
+ <p>
+  Thanks to Guy for his precious help on guiding the construction of the UEFI compatible ISOs
+ <p>
+  Thanks to Sipomatador for finding the bug about processor families.
+ <p>
+  Thanks to Timcowchip for it's work on the rework collection, the pull request he did will able to some packages to return to they original collection.
+ <p>
+  And of course a big thanks to the "Linux From Scratch" team for making available the release 8.0 of the documention of LFS/BLFS.
+  

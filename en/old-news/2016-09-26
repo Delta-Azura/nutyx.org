@@ -1,0 +1,16 @@
+ <h1>On 2016-09-26</h1>
+   <h2>NuTyX 8.2-rc2 available with cards 2.1.93</h2>
+     <p>
+      The NuTyx team is please to annonce the second release candidate of the next major version of NuTyX 8.2.
+     <p>
+      A <a href="http://downloads.nutyx.org/?C=M;O=D">new 64bits MINI ISO</a> is available for this new version. The size is 217M.
+     <p>Remember to check the MD5 checksum before transferring to USB, CD-RW or DVD-RW.</p>
+      <h3>News for the user</h3>
+       <p>The installer will ask you if you want to activate automatic update.</p>
+       <p>If wireless access point are available, the configuration tool will find them automatically and ask you to which ESSID you want to connect to. You can then define your favorit access point.</p>
+       <p>Few bugs where found in the RC1, they should be corrected in the RC2.</p>
+       <p>The documentation have been updated as well</p>
+       <p>The new website will be online at the same time as the release of the 8.2 stable version. It will be powered by cards as well.</p>
+      <p>The <a href="http://downloads.nutyx.org/install-nutyx-8.2-rc2">install-nutyx-8.2-rc2</a>  <b>bash</b> script allows you to install NuTyX 8.2-rc2 from your 8.1 stable NuTyX or from any other distribution.</p>
+    <h3>What's next</h3>
+      <p>If no issues are found, the next version will be the stable 8.2 version available beginning of october.</p>

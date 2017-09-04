@@ -1,0 +1,54 @@
+ <h1>The Pkgfile file syntax</h1>
+  <h3>Introduction</h3>
+  <h3>The Description</h3>
+   <h4>Description</h4>
+    <p>A short description of the package. It has a maximum length of 110 characters.</p>
+    <p>Will be visible when we use:</p>
+    <pre class="command"><kbd>cards info mypackage
+cards info -b mypackage
+cards info -p mypackage</kbd></pre>
+    <pre class="output">....
+Description    : Here is my first package
+...</pre>
+   <h4>prefered syntax</h4>
+   <h4>possible syntax</h4>
+   <pre class="output"># Description: Here is my first package
+# Desc: Here is my first package
+# desc: Here is my first package
+pkgdesc="Here is my first package"
+description="Here is my first package"</pre>
+  <h3>The Url</h3>
+   <h4>Description</h4>
+    <p>Provide a valid url about information of the package or about the sources (if no info). If the variable is choose, it can be used in the source definition below</p>
+   <h4>prefered syntax</h4>
+    <pre class="output">url="http:downloads.nutyx.org"</pre>
+   <h4>possible syntax</h4>
+    <pre class="output"># URL: http:downloads.nutyx.org
+# url: http:downloads.nutyx.org
+url="http:downloads.nutyx.org"</pre>
+   <h3>The name</h3>
+    <h4>Description</h4>
+     <p>The name of the package cannot contains following charaters: [space]_?!</p>
+     <p>Only small characters are allows</p>
+     <p>In case you don't specify this variable, the 'name' variable will be create and set automatically by the name of the parent folder.</p>
+    <h4>prefered syntax</h4>
+     <pre class="output">name=mypackage</pre>
+   <h3>The version</h3>
+     <h4>Description</h4>
+      <p>Like the name, cannot contains following charaters: [space]_?!</p>
+     <h4>syntax</h4>
+      <pre class="output">version=11a</pre>
+   <h3>The release</h3>
+     <h4>Description</h4>
+       <p>Here comes a figure from 1 up to 99999999 max. In case we want to refer a date should be like below.</p>
+     <h4>prefered syntax</h4>
+       <pre class="output">release=20160421</pre>
+   <h3>The group</h3>
+    <h4>Description</h4>
+     <p>A group name is defined by the first serie of characters before the first minus sign. Example:</p>
+     <p>The packages:</p>
+     <pre class="output">gstreamer1</pre>
+     <p>and</p>
+     <pre class="output">gstreamer1-plugins-base</pre>
+     <p>are in the so call same group named 'gstreamer1'</p>
+    <h4>possible syntax</h4>
