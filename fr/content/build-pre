@@ -9,7 +9,7 @@
       <p>
        Vous devez télécharger le script d'installation <b>install-nutyx</b>.
       <p>
-       Afin de rendre l'article transparent pour tous lecteurs ( NuTyXiens ou non NuTyXiens), vous devez placer le script téléchargé dans un dossier standard après l'avoir rendu exécutable.
+       Afin de rendre l'article transparent pour tous les  lecteurs ( NuTyXiens ou non NuTyXiens), vous devez placer le script téléchargé dans un dossier standard après l'avoir rendu exécutable.
        Vous pourrez l'effacer  à la fin de la création de NuTyX:
       <p>
        Passez en root:
@@ -48,7 +48,7 @@ rm -r /home/lfs</kbd></pre>
       Ce n'est cependant pas indispensable. 
       On peut très bien construire la distribution dans un dossier et ensuite faire une sauvegarde de son contenu sur une clé USB ou directement utiliser la commande rsync pour transférer sur la partition ou le disque de destination.
      <p>
-      Donc si vous décidez d'utiliser une partition, il faut la formater dans le système de fichier de votre choix ensuite la monter l sur le dossier qui est défini par la variable LFS.
+      Donc si vous décidez d'utiliser une partition, il faut la formater dans le système de fichier de votre choix ensuite la monter sur le dossier qui est défini par la variable LFS.
      <p>
       Dans tous les articles, on utilisera le même dossier, on se servira de la variable LFS à cet effet:
      <pre class="command"><kbd>export LFS=/mnt/lfs</kbd></pre>
@@ -57,5 +57,5 @@ rm -r /home/lfs</kbd></pre>
     <pre class="command"><kbd>mkdir -pv $LFS
 mount /dev/sda2 $LFS</kbd></pre>
       Pensez juste à toujours monter la partition avant de commencer la passe 1 ou 2. Une fois la partition montée.
-      On peut se lancer dans la première pass
+      On peut se lancer dans la première passe
       <div class="pied_page"><a class="url" href="build-pass-1">Il est temps de commencer la pass 1...</a></div>

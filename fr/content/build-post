@@ -1,7 +1,7 @@
    <h1>Post-construction et (en option) génération de l'iso installable</h1>
     <h2>Introduction</h2>
      <p>Si vous avez terminé la passe 2 avec succès, vous avez tous les paquets d'un système de base.</p>
-     <p>On peut maintenant finaliser notre NuTyX et l'adapter à nos besoins. Et enfin, produire une ISO installable.</p>
+     <p>On peut maintenant finaliser notre NuTyX et l'adapter à nos besoins et enfin, produire une ISO installable.</p>
      <p>Il s'agit maintenant de décider ce qu'il vous faut, en effet actuellement votre NuTyX:</p>
       <ol>
        <li>Ne contient pas de kernel</li>
@@ -11,11 +11,11 @@
        <li>Ne permet pas de se connecter à un serveur dhcp et donc d'obtenir une adresse IP de façon dynamique</li>
        <li>Ne contient aucun editeur de texte</li>
       </ol>
-     <p>D'autre part votre NuTyX contient certains services dont vous n'avez peut-être pas l'utilitée</p>
+     <p>D'autre part votre NuTyX contient certains services dont vous n'avez peut-être pas l'utilité</p>
     <h2>Marche à suivre</h2>
-     <p>Vous l'avez peut-être déjà compris, cette post-construction n'est plus un simple copié-collé.</p>
+     <p>Vous l'avez peut-être déjà compris, cette post-construction n'est pas plus qu'un simple copié-collé.</p>
      <p>C'est maintenant à vous de savoir ce que vous souhaitez utiliser comme moyen d'amorçage, kernel, système de fichiers, volumes logiques et adresse IP statique ou dynamique</p>
-     <p>Pour mener à bien notre petite expédition, il faudra configurer un minimum le gestionnaire de paquets 'cards' et rapatrier tous les ports contenant les recette de fabrication des paquets NuTyX disponibles.</p>
+     <p>Pour mener à bien notre petite expédition, il faudra configurer un minimum le gestionnaire de paquets 'cards' et rapatrier tous les ports contenant les recettes de fabrication des paquets NuTyX disponibles.</p>
   <ol>
    <li>On commence par sortir de la NuTyX</li>
 <pre class="command"><kbd>exit</kbd></pre>
@@ -28,7 +28,7 @@
 /bin/bash --login</kbd></pre>
 Aucune erreur ne doit apparaître:
 <pre class="output">root [ / ]# </pre>
-   <li>On commence par adapter le fichier cards.conf. Adaptez si necessaire la langue.</li>
+   <li>On commence par adapter le fichier cards.conf, Adaptez si nécessaire la langue.</li>
    <pre class="command"><kbd>cat &gt; /etc/cards.conf &lt;&lt; "EOF"
 dir /usr/ports/gui-extra
 dir /usr/ports/gui
@@ -48,10 +48,10 @@ EOF</kbd></pre>
    <li>
     <h3>Mise en place d'un kernel de votre choix</h3>
    </li>
-    <p>Le seul paquet devant être impérativement installé pour avoir une NuTyX fonctionnelle est donc le kernel. Vous avez le choix entre plusieurs possibilitées:</p>
+    <p>Le seul paquet devant être impérativement installé pour avoir une NuTyX fonctionnelle est donc le kernel. Vous avez le choix entre plusieurs possibilités:</p>
      <ol>
       <li>
-       <h4>Compilation d'un des kernels disponible en ports</h4>
+       <h4>Compilation d'un des kernels disponibles en ports</h4>
       </li>
          <p>Ce choix sera indispensable si vous décidez de produire une ISO installable, c'est également le choix le plus simple:</p>
          <pre class="command"><kbd>cd /usr/ports/base/kernel-lts
@@ -65,13 +65,13 @@ pkgmk -d -i</kbd></pre>
     <li>
      <h3>Suppression des services indésirables (recommandé)</h3>
     </li>
-     <p>Lors de la construction de votre NuTyX, les services ssh et rsync ont automatiquement été installés. Si vous n'envisagez pas de mettre en place un service rsync ni un accès à distance de votre machine. Il est vivement recommandé d'arrêter les services rsyncd et sshd. Même si vous ne savez pas ce que c'est, faites:</p>
+     <p>Lors de la construction de votre NuTyX, les services ssh et rsync ont été automatiquement installés. Si vous n'envisagez pas de mettre en place un service rsync ni un accès à distance de votre machine. Il est vivement recommandé d'arrêter les services rsyncd et sshd. Même si vous ne savez pas ce que c'est, faites:</p>
      <pre class="command"><kbd>cards remove openssh.service
 cards remove rsync.service</kbd></pre>
     <li>
      <h3>Mise en place de grub, l'outil d'amorçage (en option)</h3>
     </li>
-     <p>Le paquet grub est uniquement necessaire si vous dédicez de produire une ISO installable ou que vous n'avez pas encore de technique d'amorçage sur votre machine actuelle (peu probable):</p>
+     <p>Le paquet grub est uniquement nécessaire si vous dédicez de produire une ISO installable ou que vous n'avez pas encore de technique d'amorçage sur votre machine actuelle (peu probable):</p>
      <pre class="command"><kbd>cards depcreate grub</kbd></pre> 
      <p>Une fois terminée, vous allez pouvoir utiliser grub en ligne de commande ou via l'ISO générée</p>
     <li>
@@ -86,12 +86,12 @@ cards remove rsync.service</kbd></pre>
     <li>
      <h3>Ajout des outils de gestion de partitions logiques (en option)</h3>
     </li>
-     <p>Si vous souhaitez des partition logiques et disques en raid:</p>
+     <p>Si vous souhaitez des partitions logiques et disques en raid:</p>
      <pre class="command"><kbd>cards depcreate mdadm</kbd></pre>
     <li>
      <h3>Ajout du client dhcp pour pouvoir obtenir une adresse IP dynamiquement (en option)</h3>
     </li>
-      <p>Si vous ne souhaitez pas utiliser une adresse IP fixe, vous devez donc un client dhcp pour obtenir une adresse IP de façon dynamique</p>
+      <p>Si vous ne souhaitez pas utiliser une adresse IP fixe, vous devez donc installer un client dhcp pour obtenir une adresse IP de façon dynamique</p>
       <pre class="command"><kbd>cards depcreate dhcpcd</kbd></pre>
     <li>
      <h3>Ajout d'un éditeur de texte (en option)</h3>
@@ -109,7 +109,7 @@ cards remove rsync.service</kbd></pre>
   </ol>
  <h2>Option1: Produire une ISO installable.</h2>
   <ol> 
-   <li>On ajoute les fichiers necessaires au fonctionnement de l'iso</li>
+   <li>On ajoute les fichiers nécessaires au fonctionnement de l'iso</li>
    <pre class="command"><kbd>cp -av /root/development/iso /ISO</kbd></pre>
    <pre class="output">'/root/development/iso' -&gt; '/ISO'
 '/root/development/iso/isolinux' -&gt; '/ISO/isolinux'
@@ -121,7 +121,7 @@ cards remove rsync.service</kbd></pre>
    <pre class="output">'/boot/kernel-3.19.0' -&gt; '/ISO/isolinux/kernel'</pre>
    <pre class="command"><kbd>cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
    <pre class="output">'/boot/initrd-3.19.0' -&gt; '/ISO/isolinux/initrd'</pre>
-   <div class="note"><img alt="[Note]" src="../graphics/note.gif" />Consultez les options en bas de la page avant d'aller plus loin si vous souhaiter ajouter des paquets et donc personnaliser votre ISO ou si vous souhaitez réduire la taille de celle-ci en supprimant les archives des binaires ainsi que les logs de construction.</div>
+   <div class="note"><img alt="[Note]" src="../graphics/note.gif" />Consultez les options en bas de la page avant d'aller plus loin si vous souhaitez ajouter des paquets et donc personnaliser votre ISO ou encore réduire la taille de celle-ci en supprimant les archives des binaires ainsi que les logs de construction.</div>
    <li>On produit maintenant les fichiers squashfs qui seront utilisés par l'iso et effacer les fichiers squash existant si necessaire puisque la commande mksquashfs ne peut pas les écraser.</li>
 <pre class="command"><kbd>mkdir -p /ISO/isolinux/boot/
 cd /
