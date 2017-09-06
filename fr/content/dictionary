@@ -58,7 +58,7 @@
  
     <a name='ID006'></a>
     <h2>Une dépendance</h2>
-     <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est necessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
+     <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est nécessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
      <p>Le <a href="#ID005">paquet</a> <i>gtk3</i> est une dépendance utilisée par de nombreux <a href="#ID005">paquets</a> de la <a href="./?branch=stable&arch=x86_64&searchpkg=gnome">collection gnome</a>
 
     <a name='ID020'></a>
@@ -87,7 +87,7 @@
     <h2>Un groupe</h2>
      <p>
       Un groupe de paquets constitue un ensemble de paquets fournissant un usage précis,
-      par exemple le <a href="./?branch=stable&arch=x86_64&searchpkg=devel">groupe devel</a> fournira les outils necessaires pour la compilation.
+      par exemple le <a href="./?branch=stable&arch=x86_64&searchpkg=devel">groupe devel</a> fournira les outils nécessaires pour la compilation.
      <p>
       Le nom du groupe d'un paquet est déterminé par la partie du nom qui suit le point.
      <p>
@@ -105,7 +105,7 @@
 
     <a name='ID030'></a>
     <h2>Une catégorie</h2>
-     <p>Une catégorie définie un ensemble d'applications ayant des fonctionnalités similaires: 
+     <p>Une catégorie définit un ensemble d'applications ayant des fonctionnalités similaires: 
      Un exemple typique de catégorie est "Internet" qui regroupera les navigateurs, 
      les client d'email, clients discussions instantanées, etc</p>
 
@@ -131,7 +131,7 @@
 
     <a name='ID060'></a>
     <h2>Une recette</h2>
-     <p>Une recette définie la construction d'un <a href="#ID005">paquet</a>. 
+     <p>Une recette définit la construction d'un <a href="#ID005">paquet</a>. 
      Sous NuTyX, la recette d'un <a href="#ID005">paquet</a> se trouve dans 
      le fichier <a href="#ID080">Pkgfile</a>.
 
@@ -139,18 +139,18 @@
     <h2>Un port</h2>
      <p>
       Sur NuTyX, un port est constitué d'un dossier contenant tous les fichiers 
-      necessaires pour la construction d'un <a href="#ID005">paquet</a>. 
+      nécessaires pour la construction d'un <a href="#ID005">paquet</a>. 
       Il contiendra toujours au minimum un fichier appelé <a href="#ID080">Pkgfile</a>.
      <p>
       Le port peut également, dans certains cas, contenir  un <a href="#ID050">script</a> de 
      pré-installation ou de post-installation. Il peut également contenir 
-     un fichier README décrivant diverses options, actions, configutations possibles du port.
+     un fichier README décrivant diverses options, actions, configurations possibles du port.
      <p>
-      Le terme <i>port</i> fait référence à un dépot distant contenant des <i>ports</i> et
+      Le terme <i>port</i> fait référence à un dépôt distant contenant des <i>ports</i> et
      utilise un programme client capable de télécharger ces <i>ports</i> depuis ce dépot distant
      <p>
       NuTyX utilise l'utilitaire <i>ports</i> pour le téléchargement des <i>ports</i> depuis 
-     le dépot distant et les place dans le dossier <i>/usr/ports/&lt;nom_de_<a href="#ID010">collection</a>&gt;</i>
+     le dépot distant et les placent dans le dossier <i>/usr/ports/&lt;nom_de_<a href="#ID010">collection</a>&gt;</i>
 
     <a name='ID080'></a> 
     <h2>Le fichier 'Pkgfile'</h2>
@@ -160,10 +160,10 @@
      Le résultat de la construction sera un <a href="#ID005">paquet</a> 
      qui pourra être installé par le gestionnaire de 
      <a href="#ID005">paquets</a> <a href="#ID000">cards</a>
-     Le contenu de ce fichier texte suit un schéma standard et est composé de trois parties:
+     Le contenu de ce fichier texte composé de trois parties suit un schéma standard:
      <ol>
       <li>
-        Les informations générales (optionnelles mais vivement recommandées) sur le <a href="#ID005">paquet</a>: Description, URL, Developeur(s), Empaqueteu(r), <a href="#ID006">dépendances</a>
+        Les informations générales (optionnelles mais vivement recommandées) sur le <a href="#ID005">paquet</a>: Description, URL, Developpeur(s), Empaqueteur(s), <a href="#ID006">dépendances</a>
       <li>
         Les informations indispensables pour la construction du <a href="#ID005">paquet</a>:
       Nom, version, release
@@ -201,18 +201,18 @@ make DESTDIR=$PKG install
     <h2>Une chroot</h2>
      <p>
       Une chroot est un environnement de travail dans lequel on construit toutes les <a href="#ID060">recettes</a> provenant de différents <a href="#ID070">ports</a>.
-      Votre NuTyX principale n'utilise pas et donc n'a pas de paquets de développement installés. 
+      Votre NuTyX principale n'utilise pas et n'a pas de paquets de développement installés. 
      <p>
       Sous NuTyX, une chroot est indispensable les raisons suivantes:
       <ul>
        <li>
-        L'environnement de travail étant isolé de la distribution principale
+        L'environnement de travail est isolé de la distribution principale
        <li>
-        Etant isolé, votre chroot ne pourra jamais endommager le système d'exploitation hôte.
+        Isolée, votre chroot ne pourra jamais endommager le système d'exploitation hôte.
        <li>
-        La chroot étant une NuTyX fraîchement installée, vous controlez entierement les dépendances nécessaires.
+        La chroot étant une NuTyX fraîchement installée, vous contrôlez entierement les dépendances nécessaires.
        <li>
-        La chroot vous assure qu'aucune <a href="#ID006">dépendance</a> ne sera installée depuis ou sur le système d'exploitation hôte à votre insus.
+        La chroot vous assure qu'aucune <a href="#ID006">dépendance</a> ne sera installée depuis ou sur le système d'exploitation hôte à votre insu.
      </ul>
     <a name='ID200'></a>
     <h2>Les niveaux</h2>
@@ -220,14 +220,14 @@ make DESTDIR=$PKG install
       Lorsque <a href="#ID000">cards</a> compile un <a href="#ID005">paquet</a>,
       il doit connaître le niveau de compilation de celui-ci.
      <p>
-      Chaque <a href="#ID005">paquet</a> peut ou pas contenir des <a href="#ID006">dépendances</a>.
+      Chaque <a href="#ID005">paquet</a> peut ou  ne pas contenir des <a href="#ID006">dépendances</a>.
      <p>
       Si un <a href="#ID005">paquet</a> appelé <i>AAAA</i> ne contient aucune <a href="#ID006">dépendance</a>s, il sera au premier Niveau cad 0 (zero).
      <p>
       Si un paquet appelé <i>BBBB</i> contient une <a href="#ID006">dépendance</a> appelé <i>AAAA</i>, ce paquet sera au deuxième Niveau, cad 1.
      <p>
       La liste des <a href="#ID006">dépendances</a> de compilation d'un <a href="#ID005">paquet</a> 
-      se définie à la ligne:
+      se définit à la ligne:
 <pre class="output"># Depends on: glib atk pango gtk xorg-libx11</pre> du <a href="#ID080">Pkgfile</a>.
 
      <a name='ID300'></a>

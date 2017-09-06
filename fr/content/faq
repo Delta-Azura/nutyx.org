@@ -15,7 +15,7 @@
        Après quelques minutes vous recevrez un dernier courriel confirmant votre adhésion à la liste de diffusion.
       </ul>
       <table>
-       <caption><EM>Liste de diffusion disponibles:</EM></caption>
+       <caption><EM>Listes de diffusion disponibles:</EM></caption>
        <tr class="sidebar">
         <th>Nom de la Liste de diffusion:
         <th>Adresse courriel:
@@ -35,10 +35,10 @@
 
    <h2>L'installateur installe NuTyX sur une seule partition</h2>
     <p>
-     Cette question nous a tellement été posée, je vais essayer d'apporter le plus d'arguments possible afin d'expliquer la raison.
+     Cette question nous a tellement été posée,que je vais essayer d'apporter le plus d'arguments possible afin d'en donner la raison.
     <p>
      Aujourd'hui, un utilisateur utilise très souvent de grosses quantités de données,
-     la taille du dossier personnel peut très très vite grossir: Les  MP3, les photos, les vidéos sont souvent des fichiers très gourmants
+     la taille du dossier personnel peut très vite grossir: Les  MP3, les photos, les vidéos sont souvent des fichiers très gourmands
      en espace disque. Imaginons que vous avez un disque dur de 250 Gbytes.
      Vous vous dîtes: OK je prends 100  G pour le système et 150 pour mes données.
      Super, vous venez de "découper" votre disque dur en 2 et la partition de données sera plus vite remplie que si vous aviez gardé une seule partition.
@@ -51,9 +51,9 @@
     <li>
      Si vous avez une distribution (NuTyX ou autre) avec vos données personnelles et le système sur la même partition.
       Lors de  l'installation, l'installateur vous signalera qu'il existe déjà une distribution mais ne formatera pas la partition.
-      Il vous proposera de l'effacer, c'est à dire effacer les dossiers système /var, /proc, /sys, /usr, /sbin et /etc
+      Il vous proposera de l'effacer, c'est à dire éffacer les dossiers système /var, /proc, /sys, /usr, /sbin et /etc
      mais ne touchera pas <span style="text-decoration: underline;">aux autres dossiers</span>
-     comme le /home, /MP3, /srv, etc. Donc vos données personnels sont conservées.
+     comme le /home, /MP3, /srv, etc. Donc vos données personnelles sont conservées.
     <li>
      Aujourd'hui il est très facile de configurer un serveur de données,
      les utilisateurs utilisent de plus en plus un serveur de fichiers en s'y connectant via NFS par exemple
@@ -69,14 +69,14 @@
     <h3>NuTyX peut être considérée comme une distribution dite "binaires"</h3>
        L'utilisateur installe ses applications préférées depuis le serveur distant.
       <p>
-       Une fois le système de base installé, l'utilisateur installe ses applications préférés comme expliqué dans la docummentation.
+       Une fois le système de base installé, l'utilisateur installe ses applications préférées comme expliqué dans la docummentation.
       <p>
        Une installation typique ressemble à:
        <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
       <p>
-       Les paquets binaires étant divisés en paquet de base et sous paquets (devel, doc, man, etc), seul le paquet de base sera installé.
+       Les paquets binaires étant divisés en paquets de base et sous paquets (devel, doc, man, etc), seul le paquet de base sera installé.
        Cela signifie que si l'utilisateur souhaite compiler des paquets non présents en binaire,
-       <a href="build-in-chroot">il devra impérativement compiler ces paquets dans une chroot</a> sinon la compilation échouera par manque de dépendances de development.
+       <a href="build-in-chroot">il devra impérativement compiler ces paquets dans une chroot</a> sinon la compilation échouera par manque de dépendances de developpement.
 
     <h3>NuTyX peut être considérée comme une distribution dite "sources"</h3>
        L'utilisateur compile ses applications préférées sur sa machine locale.
@@ -109,7 +109,7 @@ logdir /var/log/pkgbuild</pre>
     <p>
      Il n'est pas possible de mettre à jour une ancienne version de NuTyX (plus ancienne que la version 9.0) vers NuTyX 9.X,
      le nombre de changements est trop important.
-     Il faut savoir aussi que tous les <a href="dictionary#ID005">paquets</a> sont à chaque mise à jour majeur recompiler
+     Il faut savoir aussi que tous les <a href="dictionary#ID005">paquets</a> sont à chaque mise à jour majeure recompiler
      sur une nouvelle chaîne de compilation glibc+gcc+binutis,
      cela permet d'avoir un système cohérent et très robuste.
      Comme expliqué plus haut, il suffit d'effacer la NuTyX actuelle,

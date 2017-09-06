@@ -30,8 +30,8 @@
     <td>
      L'installation proposée ici consiste à utiliser un disque complet,
      une seule partition sans outil d'amorçage (GRUB).
-     Cette methode peut-être utilisée si votre machine supporte l'UEFI, vous pouvez alors tirer profit de cette fonctionnalitée.
-     Pour ceux qui souhaitent une approche de l'installation en mod UEFI isans se prendre la tête.
+     Cette methode peut-être utilisée si votre machine supporte l'UEFI, vous pouvez alors tirer profit de cette fonctionnalité.
+     Pour ceux qui souhaitent une approche de l'installation en mod UEFI sans se prendre la tête.
     </td>
     <td>
        <a href="https://youtu.be/zMPt-Qx3nAU"><img src="../../graphics/documentation/install-uefi.jpg" width="160" height="100"></a>
@@ -92,7 +92,7 @@
       <a class="url" href="nutyx-man">Manuel de NuTyX de la version 9.0</a>
     </td>
     <td>
-     Manuel de NuTyX version 9.0. Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utiliisation de votre NuTyX
+     Manuel de NuTyX version 9.0. Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
     </td>
     <td>
     </td>
@@ -172,7 +172,7 @@
     </td>
     <td>
      NuTyX dispose actuellement de quelques <a href="packages" title="Lire dans une autre fenêtre" class="external" onclick="window.open(this.href); return false;">1400 applications</a> 
-     disponibles en binaires. C'est à la fois beaucoup et pas beaucoup. 
+     disponibles en binaires. C'est à la fois peu et beaucoup. 
      En effet tous les jours ou presque, sortent de nouvelles applications sous licence libre (ou pas)
     </td>
     </td>
@@ -199,7 +199,7 @@
     </td>
     <td>
      Pour constuire votre premier <a href="dictionary#ID005">paquet</a>, vous avez besoin de créer une recette. 
-     Cette recette se trouve dans un port qui est un dossier contenant un certain nombre de fichiers nécessaire pour 
+     Cette recette se trouve dans un port qui est un dossier contenant un certain nombre de fichiers nécessaires pour 
      la construction d'un paquet. La commande <b>pkgmk</b> permet de "construire" le paquet qui sera ensuite installable.
     </td>
     <td>
@@ -223,7 +223,7 @@
       <a class="url" href="build-in-chroot">Comment construire dans une chroot ?</a>
     </td>
     <td>
-     Cet article explique comment construire vos paquets dans un environement isolé.
+     Cet article explique comment construire vos paquets dans un environnement isolé.
      Vous DEVEZ utiliser cette méthode si vous n'êtes pas sur un système de base ou
      si vous avez choisi d'utiliser NuTyX comme une distribution binaire comme expliqué dans la <a href="faq#4">FAQ</a>.
     </td>
