@@ -11,11 +11,11 @@
     J'ai donc décidé de retirer cette option du script d'installation.
     C'est pour cette raison que désormais, l'installation de grub est <b>OPTIONNELLE</b> en effet
     si vous installez NuTyX comme seconde distribution par exemple, 
-    il n'est pas necessaire d'installer une seconde fois la procedure d'amorçage <b>GRUB</b>
+    il n'est pas nécessaire d'installer une seconde fois la procedure d'amorçage <b>GRUB</b>
   <h2>Pour pouvoir installer GRUB</h2>
    <p>
-    Il n'est pas necessaire d'avoir une NuTyX installée,
-    il est en effet  possible d'installer le GRUB pour n'importe quelle distribution.
+    Il n'est pas nécessaire d'avoir une NuTyX installée,
+    il est en effet possible d'installer le GRUB pour n'importe quelle distribution.
    <p>
     Relancez la machine et démarrez la mini-iso
    <p>
@@ -39,7 +39,7 @@
     Il est maintenant possible d'éditer le fichier <span style="color: #00ff00;"><strong>grub.cfg</strong></span>.
    <p>
     <img src="graphics/grub-install/ModifyGrubCfg.png" alt="Figure 4: Modifier le fichier de configuration" title="Figure 4: Modifier le fichier de configuration"/>
-    <div class="important"><img src="../graphics/caution.gif" alt="caution" /> Attention à la syntaxe de la dénomination des disques et des partitions, c'est un peu spéciale.</div>
+    <div class="important"><img src="../graphics/caution.gif" alt="caution" /> Attention à la syntaxe de la dénomination des disques et des partitions, c'est un peu spécial.</div>
    <p>
     <img src="../graphics/grub-install/DefaultGrubCfg.png" alt="Figure 5: Configuration par défaut" title="Figure 5: Configuration par défaut"/>
    <p>
