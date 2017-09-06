@@ -13,7 +13,7 @@
     <p>
      Commençons donc par ouvrir un terminal... ça y est ? alors on peut commencer <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />
     <p>
-     Une commande peut être composée d'un seul mot au cas où aucune option n'est nécessaire.
+     Une commande peut être composée d'un seul mot au cas où aucune option n'est pas nécessaire.
      Mais la majorité des commandes peut être entrée à l'aide d'options diverses.
      Sachez par exemple que l'option la plus utile sera (en fonction de la commande)
      <pre class="command_user"><kbd>nomdelacommande help</kbd></pre> ou
