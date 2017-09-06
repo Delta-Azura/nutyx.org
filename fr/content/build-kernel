@@ -9,7 +9,7 @@
     Il existe beaucoup de raisons de vouloir compiler son propre noyau.
     Avoir un noyau optimisé en taille et pour son propre matériel est sans doute la raison la plus fréquente.
    <p>
-    Si vous êtes sur NuTyX, assurez-vous d'avoir installé le jeu de paquets de dévelopement:
+    Si vous êtes sur NuTyX, assurez-vous d'avoir installé le jeu de paquets de développement:
     <pre class="command_user"><kbd>get cards.devel</kbd></pre>
   <h2>Vérifier la machine qui utilisera le futur kernel</h2>
    <p>
@@ -74,21 +74,21 @@ Sauvegarde en : &laquo;linux-4.9.tar.bz2&raquo;
      
   <h2>Extraire les sources du noyau</h2>
    <p>
-    On extrait les sources du noyau téléchargées:
+    On extrait les sources du noyau téléchargé:
    <pre class="command_user"><kbd>tar xf linux-4.9.tar.xz</kbd></pre>
    <p>
     Après quelques minutes, le prompt sera à nouveau disponible et les sources du noyau seront en place.
     Se rendre dans le dossier du noyau et taper les commandes magiques pour configurer les options qui nous semblent utiles.
-    Pour pouvoir compiler le noyau, il faut être dans le dossier sources de celui-ci, tapez dans votre console:
+    Pour pouvoir compiler le noyau, il faut être dans le dossier source de celui-ci, tapez dans votre console:
   <h2>Se rendre dans le dossier des sources</h2>
    <pre class="command_user"><kbd>cd linux-4.9</kbd></pre>
    <p>
-    Nous sommes maintenant pr&ecirc;t &agrave; lancer quelques commandes magiques.
+    Nous sommes maintenant prêts à lancer quelques commandes magiques.
    <p>
-    Je vous conseille pour commencer histoire de se faire une id&eacute;e des possibilit&eacute;es du makefile d'utiliser la commande:
+    Je vous conseille pour commencer, histoire de se faire une idée des possibilités du makefile d'utiliser la commande:
     <pre class="command_user"><kbd>make help|more</kbd></pre>
    <p>
-    Elle vous donnera TOUTES les options qui vous sont disponibles pour la compilation du noyau et de ses modules.
+    Elle vous donnera TOUTES les options qui sont disponibles pour la compilation du noyau et de ses modules.
     <pre class="output">Cleaning targets:
   clean           - Remove most generated files but keep the config and
                     enough build support to build external modules
@@ -119,31 +119,31 @@ Configuration targets:
 ....</pre>
     <p>
      Je vous ai mis que le début <img src="../graphics/smiley-wink.gif" alt="Wink" title="Wink">.
-     On va donc commencer par s'assurer que les sources sont propres et dépourvus de toute partie de code déjà compilée.
+     On va donc commencer par s'assurer que les sources sont propres et dépourvues de toute partie de code déjà compilée.
      <div class="note"><img src="../graphics/note.gif" width="10" height="10" alt="*" />
-      Cette commande n'est à faire qu'à la première tentative de compilation du noyau.
-      Il n'est plus necessaire de taper cette commande ci-dessous si vous souhaitez recompiler le noyau pour diverses raisons
+      Cette commande est à lancer qu'à la première tentative de compilation du noyau.
+      Il n'est plus nécessaire de taper cette commande ci-dessous si vous souhaitez recompiler le noyau pour diverses raisons
      </div>
      <pre class="command_user"><kbd>make mrproper</kbd></pre>
     <p>
-     Aucun message ne doit appara&icirc;tre.
-     Nous allons maintenant lancer l'outil de configuration afin de choisir le minimum d'options necessaire pour avoir un noyau fonctionnel.
+     Aucun message ne doit apparaître.
+     Nous allons maintenant lancer l'outil de configuration afin de choisir le minimum d'options nécessaires pour avoir un noyau fonctionnel.
      J'ai volontairement choisi l'interface non graphique en effet, vous pouvez la lancer dans une chroot, une console graphique ou non.
 
  <h2>Configurer les options de compilation</h2>
    <p>
-    L'&eacute;quipe de Linuxfromscratch recommande de d&eacute;activer la variable LC_ALL:
+    L'équipe de Linuxfromscratch recommande de désactiver la variable LC_ALL:
     <pre class="command_user"><kbd>LC_ALL= make menuconfig</kbd></pre>
     <p>
      Vous voici devant le menu principal de configuration du noyau:
     <p>
      <img src="../graphics/build-kernel/menuprincipal.png" alt="Configuration menu principal" title="Menu principal" width="578" height="517" /> 
    <p>
-    Dans cet article, je ne vais que choisir les options indispensables au bon amor&ccedil;age du noyau et donc optenir un nombre de modules plus petit.
+    Dans cet article, je ne vais que choisir les options indispensables au bon amorçage du noyau et donc obtenir un nombre de modules plus petit.
     Il faut savoir que le noyau disponible en binaire en contient plus de 5000.
    <p>
-    Naviguez à travers tous les menus et activez UNIQUEMENT les options mentionés ci-dessous.
-    Comme vous pouvez le voir nous déactivons tous les modules, puisque ils ne sont pas necessaires dans une configuration minimaliste:
+    Naviguez à travers tous les menus et activez UNIQUEMENT les options mentionnées ci-dessous.
+    Comme vous pouvez le voir nous déactivons tous les modules, puisqu'ils ne sont pas nécessaires dans une configuration minimaliste:
 
     <div style="font-size:120%"><b>General Setup</b></div>
     <table>
@@ -613,7 +613,7 @@ Configuration targets:
    <p>
     <img src="../graphics/build-kernel/Compile.png" border="0" alt="Compilation en cours" width="578" height="517" />
    <p>
-    Quelques minutes (ou quelques heures plus tard, ... Vous voilà avec un noyau prêt à être utilisé.
+    Quelques minutes (ou quelques heures plus tard, ... Vous voilà avec un noyau prêt à être utilisé).
    <pre class="output">Kernel: arch/x86/boot/bzImage is ready  (#1)</pre>
   <h2>Créer une nouvelle entrée dans le fichier /boot/grub/grub.cfg</h2>
    <p>
