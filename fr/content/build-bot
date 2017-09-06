@@ -33,12 +33,12 @@
      </ol>
      <h2>Les outils (paquets à installer)</h2>
       <p>
-       On part du principe que votre NuTyX est vierge de tout paquet de dévelopement.
+       On part du principe que votre NuTyX est vierge de tout paquet de développement.
        On commence donc par installer les utilitaires:
        <pre class="command_user"><kbd>get rsync git</kbd></pre>
      <h2>Configuration de l'architecture</h2>
       <p>
-       La première variables pour notre travail définie sur l'architecture (32 ou 64 Bits):
+       La première variable pour notre travail définit l'architecture (32 ou 64 Bits):
        <pre class="command_user"><kbd>ARCH=`uname -m`</kbd></pre>
      <h2>Choix de la version</h2>
       <p>
@@ -82,14 +82,14 @@ BRANCH=current</kbd></pre>
 BRANCH=master</kbd></pre>
        </table>
       
-     <h2>Structure des projects disponibles</h2>
+     <h2>Structure des projets disponibles</h2>
       <p>
        Choisissez la collection et la version que vous souhaitez travailler.
        Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
       <table>
        <caption>
         <EM>
-         Liste des collections disponibles par project, copiez-collez les variables en fonction de votre choix:
+         Liste des collections disponibles par projet, copiez-collez les variables en fonction de votre choix:
         </EM>
        </caption>
        <tr class="sidebar">
@@ -208,14 +208,14 @@ RSYNC=(base cli gui)</kbd></pre>
       <p>
        Il faut prévoir un bon 10 Gb pour être tranquille.
       <p>
-       Tous les dossiers necessaires pour la compilation se trouvent sous:
+       Tous les dossiers nécessaires pour la compilation se trouvent sous:
       <pre class="output">/srv/www/</pre>
       et
       <pre class="output">/home/$USER/git/$VERSION</pre>
       <p>
        Les recettes se trouvent dans son dossier personnel.
       <p>
-       On peut maintenant créer le dossiers necessaire, sous son propre compte:
+       On peut maintenant créer le dossier necessaire, sous son propre compte:
       <pre class="command_user"><kbd> mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
       <pre class="output">mkdir: created directory '/home/moi/git'
 mkdir: created directory '/home/moi/git/current'</pre>
@@ -225,7 +225,7 @@ mkdir: created directory '/home/moi/git/current'</pre>
        On récupère les ports de la collection <b>$COLLECTION</b> pour la compilation:
       <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
       <p>
-       On crée maintenant les dossiers necessaires pour le script:
+       On crée maintenant les dossiers nécessaires pour le script:
       <pre class="command_user"><kbd>sudo mkdir -pv \
 /srv/www/{logs/$ARCH/$VERSION/$COLLECTION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
      <h2>Récupération des collections définies dans la variable $RSYNC</h2>
