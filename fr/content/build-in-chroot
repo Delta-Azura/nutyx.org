@@ -6,8 +6,8 @@
 
  <h2>Ajuster /etc/cards.conf</h2>
   <p>
-   Pour pouvoir installer les paquets compilés dans votre chroot, vous devez ajustez votre fichier <b>/etc/cards.conf</b>.
-   Vous y ajouté en haut de celui-ci:
+   Pour pouvoir installer les paquets compilés dans votre chroot, vous devez ajuster votre fichier <b>/etc/cards.conf</b>.
+   Vous y ajouez en haut de celui-ci:
    <pre class="output">dir /mnt/hd/usr/ports/perso</pre>
   <p>
    Vous êtes maintenant prêt pour installer et configurer votre chroot.
@@ -81,7 +81,7 @@ PKGMK_CLEAN="no"
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 EOF</kbd></pre>
     <p>
-     Il est indispensable de vérifier toutes les variables necessaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>.
+     Il est indispensable de vérifier toutes les variables nécessaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>.
     <p>
      Les sources sont stockées dans un dossier commun, je ne souhaite pas qu'elles soient effacées. 
     <p>
@@ -126,7 +126,7 @@ done</kbd></pre>
    Vous commencez par créer le dossier dans lequel sera placé votre nouveau paquet. Appellons-le <b>monpaquet</b> (à adapter avec le nom réel)
    <pre class="command"><kbd>mkdir /usr/ports/perso/monpaquet</kbd></pre>
   <p>
-   On créer maintenant la recette (à adapter avec votre paquet réel):
+   On crée maintenant la recette (à adapter avec votre paquet réel):
    <pre class="output"># Depends on: python gtk3 librsvg
 description="Mon premier paquet de la mort avec des dépendances"
 packager="francis perrin"
