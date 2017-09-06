@@ -22,7 +22,7 @@
 /var/lib/pkg/depot/cli-extra/.PKGREPO
 /var/lib/pkg/depot/cli/.PKGREPO
 /var/lib/pkg/depot/base/.PKGREPO</pre>
- <h2>Installation d'une interface graphique et d'un des bureaux disponible</h2>
+ <h2>Installation d'une interface graphique et d'un des bureaux disponibles</h2>
  La synchronisation est terminée.
  Vous êtes à présent prêt à installer le reste des paquets pour obtenir une NuTyX utilisable.
  Commençons donc par installer le serveur graphique:
@@ -79,7 +79,7 @@
     Vous installez maintenant les outils qui vous semblent utiles, par exemple:
     <pre class="command_user"><kbd>get zip unzip xdg-user-dirs gvfs alsa-utils ntfs-3g firefox libreoffice pidgin thunderbird</kbd></pre>
    <p>
-    Si vous utilisez un réseau sans fils ou êtes en mode itinérant, installez le gestionnaire de connections réseaux et son applet:
+    Si vous utilisez un réseau sans fil ou êtes en mode itinérant, installez le gestionnaire de connections réseaux et son applet:
     <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>Et pour finir</h2>
    Le plus simple maintenant redémarrez votre machine. Après le redémarrage, vous serez accueilli par le gestionnaire de connection lxdm ou slim.
