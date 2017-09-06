@@ -2,7 +2,7 @@
    <h2>Première prise en main</h2>
     <p>
      Afin de profiter pleinement de votre NuTyX fraîchement installée, voici les commandes indispensables que vous allez utiliser quotidiennement.
-     Cet article reprend les commandes essentielles et spécifiques à NuTyX. Il est conseillé de bien les connaître.
+     Cet article reprend les commandes éssentielles et spécifiques à NuTyX. Il est conseillé de bien les connaître.
     <p>
      NuTyX ne dispose pas (encore) d'outils graphiques pour son administration.
      Vous allez donc utiliser le terminal comme interface.
@@ -13,7 +13,7 @@
     <p>
      Commençons donc par ouvrir un terminal... ça y est ? alors on peut commencer <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />
     <p>
-     Une commande peut être composée d'un seul mot dans le cas où aucune option n'est nécessaire.
+     Une commande peut être composée d'un seul mot au cas où aucune option n'est nécessaire.
      Mais la majorité des commandes peut être entrée à l'aide d'options diverses.
      Sachez par exemple que l'option la plus utile sera (en fonction de la commande)
      <pre class="command_user"><kbd>nomdelacommande help</kbd></pre> ou
@@ -34,7 +34,7 @@ sudo cards diff</kbd></pre>
 glibc</pre>
    <h2>Mettre à jour un paquet</h2>
     <p>
-     Pour mettre à jour un paquet, la commande <b>cards install -u</b> suivi du logiciel sera utilisée.
+     Pour mettre à jour un paquet, la commande <b>cards install -u</b> suivi du nom du logiciel sera utilisée.
      Il faut évidemment que la mise à jour soit possible:
      <pre class="command_user"><kbd>sudo cards install -u gcc</kbd></pre>
    <p>
@@ -75,18 +75,18 @@ an attempt at creating a safer, faster, and more stable browser
 <pre class="output">Utilisateur: francois
 Description: François Perrin</pre>
     <p>
-     Vous devez bien noter que le nom d'utilisateur ne peut pas contenir certains caractères et ne peut pas contenir d'espace ni de majuscule.
+     Vous devez bien noter que le nom d'utilisateur ne peut pas contenir certains caractères ni d'espace ni de majuscule.
    <h2>Conclusion</h2>
     <p>
-     Vous l'avez compris, les seules commandes à connaître pour commencer à utiliser NuTyX sont donc les 2 commandes suivantes:
+     Vous l'avez compris, les seules commandes à connaître pour commencer à utiliser NuTyX sont les 2 suivantes:
     <pre class="command"><kbd>nu
 cards</kbd></pre>
     <p>
      Cette dernière est d'ailleurs expliquée plus en détail via son aide:
     <pre class="command_user"><kbd>cards help</kbd></pre>
     <p>
-     Je vous souhaite beaucoup de plaisir avec votre nouvelle NuTyX installée.
+     Je vous souhaite beaucoup de plaisir avec votre NuTyX fraichement installée.
     <p>
-     Vous souhaitez installer d'autre paquets et pourquoi pas construire et compilez vos propres paquets.
+     Vous souhaitez installer d'autres paquets et pourquoi pas construire et compilez vos propres paquets.
     <p>
-      Vous trouverez toute <a href="build-package">la documentation necessaire.</a>
+      Vous trouverez toute <a href="build-package">la documentation nécessaire.</a>
