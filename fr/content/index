@@ -13,7 +13,7 @@
     Il est bon de posséder quelques connaissances sur le système GNU/Linux.
    <p>
     C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine
-    et développer leur connaîssances sur les fonctionnements d'une distribution GNU/Linux.
+    et développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
    <p>
     NuTyX propose les interfaces graphiques 
    <a href="http://www.gnome.org">GNOME</a>, 
@@ -39,12 +39,12 @@
       Sa capacité d'être installée depuis quasi n'importe quelle autre distribution 
       grâce à l'utilisation d'un <a href="http://downloads.nutyx.org/install-nutyx">script bash</a> 
       qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
-      Le script fait un check des outils necessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
+      Le script fait un check des outils nécessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
       Tous les détails et explications se trouvent <a href="install-offline">ici</a>
      <br>
      <br>
      <li>
-      La hiérarchie des <a href="dictionary#ID010">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilitée maximale dans la gestion de ceux-ci.
+      La hiérarchie des <a href="dictionary#ID010">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilité maximale dans la gestion de ceux-ci.
       Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
       Les quelques commandes ci-dessous donnent une petite idée de la flexibilitée des <a href="dictionary#ID010">collections</a>. 
       Imaginez que vous ayez installé un bureau kde5 avec les applications classiques: libreoffice, firefox, etc etc.
@@ -55,12 +55,12 @@
       <pre class="command"><kbd>del kde5 kde5-extra
 get gnome gnome-extra
 init 5</kbd></pre>
-      et vous êtes sur gnome, toutes vos autres applications sont là et fonctionnelles et vous n'avez même pas rebooté.
+      et vous êtes sur gnome, toutes vos autres applications sont là , fonctionnelles et vous n'avez même pas rebooté.
      <br>
      <br>
      <li>
       La syntaxe d'une <a href="dictionary#ID060">recette</a> d'un <a href="dictionary#ID005">paquet</a> est probablement la plus simple que l'on puisse trouver.
-      Elle peux s'écrire dans la plupart des cas en moins de 10 lignes. 
+      Elle peut s'écrire dans la plupart des cas en moins de 10 lignes. 
       Les <a href="dictionary#ID006">dépendances</a> (si on le souhaite) peuvent également être gérées.
       Les <a href="dictionary#ID005">paquets</a> personnels créés localement peuvent également être gérés par
       le gestionnaire de <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
@@ -87,7 +87,7 @@ init 5</kbd></pre>
      <li>
       L'installateur ne FORMATTERA JAMAIS de son propre gré une partition cible pour l'installation de NuTyX.
       Cela signifie que NuTyX peut être installée sur une partition contenant (par exemple) ses données personnelles, 
-      des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes
+      des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes)
      <br>
      <br>
      <li>
@@ -97,7 +97,7 @@ init 5</kbd></pre>
      <br>
      <li>
       Le gestionnaire de <a href="dictionary#ID005">paquets</a> tout à fait unique écrit spécialement pour les besoins de NuTyX.
-      Il est constitué de modules cohérents et extensibles. <b>Un de ses points fort est certainement la possibilité 
+      Il est constitué de modules cohérents et extensibles. <b>Un de ses points forts est certainement la possibilité 
       de trouver automatiquement les <a href="dictionary#ID006">dépendances</a> pour le fonctionnement d'un <a href="dictionary#ID005">paquet</a></b>.
      <br>
      <br>
@@ -116,7 +116,7 @@ init 5</kbd></pre>
       <a class="url" href="https://discord.gg/jgeSWVr">le salon discord de NuTyX</a>.
     </ul>
    <p>
-    Retrouvez NuTyX sur les platformes:
+    Retrouvez NuTyX sur les plateformes:
     <ul>
      <li>
       <a class="url" href="https://fr.wikipedia.org/wiki/NuTyX">Wikipédia</a>
