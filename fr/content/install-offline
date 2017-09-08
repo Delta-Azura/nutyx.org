@@ -15,7 +15,7 @@
     </div>
     <div class="note">
      <img alt="[Note]" src="../graphics/note.gif" />
-      Dans cet article, toutes les commandes doivent s'éffectuer via le compte root.
+      Dans cet article, toutes les commandes doivent s'effectuer via le compte root.
     </div>
     <div class="important">
      <img alt="[Important]" src="../graphics/caution.gif" />
@@ -72,7 +72,7 @@ mount /dev/sda4 $LFS</kbd></pre>
    <h2>Récupération des paquets binaires NuTyX base</h2>
 
     <p>
-     Pour cet opération, nous utilisons la commande <b>rsync</b>.
+     Pour cette opération, nous utilisons la commande <b>rsync</b>.
      Assurez-vous que la commande est installée sur votre distribution.
     <p>
      Une NuTyX de base amorçable nécéssite uniquement la collection <b>base</b>,
@@ -89,7 +89,7 @@ $LFS/var/lib/pkg/depot/base/</kbd></pre>
    <h2>Récupération du script d'installation depuis le serveur de téléchargement</h2>
 
     <p>
-     Pour cet opération, nous utilisons la commande <b>wget</b>.
+     Pour cette opération, nous utilisons la commande <b>wget</b>.
      Assurez-vous que la commande est installée sur votre distribution.
     <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
     <p>

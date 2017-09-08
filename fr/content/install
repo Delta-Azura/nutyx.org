@@ -7,7 +7,7 @@
    <p>
     La taille mémoire minimum recommandée est de 1 Goctet.
    <p>
-    L'iso est transférée sur CD. Vous pouvez évidement utiliser une clé USB si votre PC le permet.
+    L'iso est transférée sur CD. Vous pouvez évidemment utiliser une clé USB si votre PC le permet.
    <p>
     Le disque est totalement vierge et n'a jamais été formaté.
     <h2>Démarrer la clé / le CD sur la(le)quel se trouve l'ISO</h2>
@@ -31,7 +31,7 @@
 
     <h2>Formatage de la partition (optionnel)</h2>
      <p>
-      Le formatage de la partition n'est à faire que si vous venez de la créer ou vous souhaitez effacer l'intégralité de son contenu.
+      Le formatage de la partition est à faire que si vous venez de la créer ou vous souhaitez effacer l'intégralité de son contenu.
       Si au contraire vous souhaitez conserver certains dossiers, vous pouvez alors supprimer uniquement
       les dossiers <b>opt, bin, etc, root, run, sbin, usr et var</b> qui se trouvent sur la partition de destination.
       Cette méthode permet de conserver vos données personnelles par exemple.
