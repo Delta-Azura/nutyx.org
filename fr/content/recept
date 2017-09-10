@@ -8,7 +8,7 @@
    Pour être fonctionnel, ce dossier doit contenir au minimum un fichier
    appelé <b><span style="color: #007a00;">Pkgfile</span></b>.
    C'est grâce à ce fichier que la construction du paquet peut se faire.
-   Le contenu de Pkgfile contient toutes les informations nécessaires
+   Le contenu de Pkgfile contient toutes les informations nécéssaires
    pour la construction ou plus exactement la compilation du paquet depuis les sources.
   <p>
    Le nom <i>port</i> est emprunté du monde BSD où un port se réfère à un logiciel
@@ -23,11 +23,11 @@
      <li>
       <i><b>version</b></i> spécifie la version des sources du paquet.
      <li>
-      <i><b>release</b></i> spécifie la n'ième tentative de construction du paquet. Sa valeur commence donc toujours à <b><i><u>1</u></i></b>
+      <i><b>release</b></i> spécifie la N'ième tentative de construction du paquet. Sa valeur commence donc toujours à <b><i><u>1</u></i></b>
      <li>
       <i><b>source</b></i> contient l'adresse des sources du paquet que l'on souhaite empaqueter.
      <li>
-      <i><b>build()</b></i> la fonction qui contient la recette proprement dite.
+      <i><b>build()</b></i> la fonction qui contient la recette proprement dîte.
     </ul>
   <p>
    Un petit exemple avec commentaires:
@@ -54,10 +54,10 @@ make DESTDIR=$PKG install
     Si vous comparez cet exemple avec un port officiel de NuTyX,
     vous constaterez que ce dernier contient plus d'informations.
     C'est ce que nous verrons dans le prochain paragraphe.
-    Une ligne vous a peut-être attiré l'attention:
+    Une ligne vous a peut-être attiré votre attention:
     <pre class="output">http://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/</pre>
    <p>
-    La syntaxe ${version%.*} permet de subsituer une valeur à N chiffres en une valeur à N-1 chiffres.
+    La syntaxe ${version%.*} permet de substituer une valeur à N chiffres en une valeur à N-1 chiffres.
     C'est très souvent le cas pour les sources des paquets gnome. Dans notre exemple donc, la ligne:
     <pre class="output">http://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/</pre>
    <p>
@@ -91,12 +91,12 @@ make DESTDIR=$PKG install
 }</pre>
    <p>
     Si vous souhaitez que le serveur de construction puisse construire le paquet sans soucis,
-    il est important de mentioner toutes les dépendances necessaires à la compilation de votre paquet,
+    il est important de mentionner toutes les dépendances nécéssaires à la compilation de votre paquet,
     et ce en partant toujours d'une NuTyX de base.
     En effet le serveur construira toujours le paquet en partant de la même base.
    <p>
     La ligne <b># Depends on:</b> est utilisée à cet effet,
-    elle définie donc les dépendances necessaire à la <u>compilation</u> du paquet.
+    elle définie donc les dépendances nécéssaires à la <u>compilation</u> du paquet.
     On y indique une dépendance séparée par un espace, une virgule
     ou les deux.<img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
     

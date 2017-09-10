@@ -68,7 +68,7 @@ PREFIX=255.255.255.0
 BROADCAST=192.168.1.255
 EOF</kbd></pre>
        <div>
-        Dans le cas d'utilisation d'une adresse statique, il est nécessaire de spécifier la (les) adtresse(s) IP du (des) serveurs de noms de domaine (DNS).
+        Dans le cas d'utilisation d'une adresse statique, il est nécessaire de spécifier la (les) adtresse(s) IP du (des) serveur(s) de noms de domaine (DNS).
         Par exemple, si vous souhaitez utiliser les serveurs de google.
         Mettez ceci dans le fichier <b>/etc/resolv.conf</b>:
        </div>
@@ -78,7 +78,7 @@ nameserver 8.8.4.4
 EOF
 </kbd></pre>
        <div>
-        Dans la plupart du temps, votre routeur fait également office de serveur de noms de domaine.
+        La plupart du temps, votre routeur fait également office de serveur de noms de domaine.
         Vous pouvez donc dans ce cas y mettre l'adresse IP de votre routeur.
        </div>
        <div>
@@ -89,7 +89,7 @@ ONBOOT="yes"
 SERVICE="dhcpcd"
 DHCP_START=""
 DHCP_STOP="-k "
-# Mettez PRINTIP="yes" pour que le script affiche l'addresse IP
+# Mettez PRINTIP="yes" pour que le script affiche l'adresse IP
 PRINTIP="no"
 # Mettez PRINTALL="yes" pour que le script affiche tous les détails
 # de la connection réseau
@@ -102,7 +102,7 @@ EOF</kbd></pre>
     Si votre machine supporte le réseau sans fil, il est nécessaire de le configurer.
     Pour connaître le nom de la carte reseau, utilisez la commande en root:
     <pre class="command"><kbd>iwconfig</kbd></pre>
-    Si le résultat de la commande affiche ce genre d'information:
+    Si le résultat de la commande affiche ce genre d'informations:
    </div>
 <pre class="command"><kbd>iwconfig</kbd></pre>
 peut retourner:
@@ -118,7 +118,7 @@ eth1       IEEE 802.11abg
     Dans l'exemple ci-dessus, la carte eth1 supporte le wifi, il suffit donc de produire le fichier de configuration qui sera utilisé pour la connection réseau.
     <b>ATTENTION</b> il est important de respecter le nom du fichier de configuration afin que le script puisse le retrouver:
     Dans cet exemple, le nom de la carte sera <b>eth1</b>, le nom du réseau wifi s'appellera <b>casabianca</b> et la clé d'accès <b>Gg6!-@1234</b>.
-    Sur base de ces infos, produisez le fichier de configuration
+    Sur la base de ces infos, produisez le fichier de configuration
    </div>
    <div>
     wpa_passphrase "<b>casabianca</b>" "<b>Gg6!-@1234</b>" &gt; /etc/wpa_supplicant.conf.eth1
@@ -136,7 +136,7 @@ eth1       IEEE 802.11abg
      </ul>
     <li><h3>Ajout d'une partition, d'un disque ou d'un dossier NFS</h3></li>
      <div class="note"><img alt="[NOTE IMPORTANTE]" src="../graphics/note.gif"/>
-       Si vous avez déjà créer le(s) utilisateur(s) et que vous souhaitez monter le dossier <b>/home</b> (qui contient donc les données personnelles des utilisateurs) sur une partition/disque/dossier NFS séparé, il est important de sauvegarder son contenu avant de procéder, il existe plusieurs méthodes, quelque soit la méthode choisie, assurez-vous d'être en root et le serveur X arrêté
+       Si vous avez déjà créé le(s) utilisateur(s) et que vous souhaitez monter le dossier <b>/home</b> (qui contient donc les données personnelles des utilisateurs) sur une partition/disque/dossier NFS séparé, il est important de sauvegarder son contenu avant de procéder, il existe plusieurs méthodes, quelque soit la méthode choisie, assurez-vous d'être en root et le serveur X arrêté
      </div>
      <p>
       En root tapez les commandes suivantes:
@@ -178,14 +178,14 @@ rm -r *</kbd></pre>
      </div>
      <div>
       Le dossier <b>/serveur</b> doit être créé au préalable sur votre machine locale.
-      Les valeurs de rsize et wsize sont celle utilisées par défaut, libre à vous d'expérimenter d'autres valeurs pour rsize et wsize.
+      Les valeurs de rsize et wsize sont celles utilisées par défaut, libre à vous d'expérimenter d'autres valeurs pour rsize et wsize.
       Assurez-vous d'avoir installé le paquet <b>nfs-utils</b> et que les services associés soient lancés.
       Notez que la version 3 de NFS a été choisie.
      </div>
      <pre class="command"><kbd>mount -a</kbd></pre>
      <div>
       Aucun message d'erreur ne doit apparaître.
-      Vous pouvez vérifier que le résultat en utilisant la commande:
+      Vous pouvez vérifier le résultat en utilisant la commande:
      </div>
      <pre class="command"><kbd>mount</kbd></pre>
 qui retournera quelque chose comme ceci:
@@ -202,7 +202,7 @@ qui retournera quelque chose comme ceci:
      <pre class="command"><kbd>cd /home
 tar xf /root/users.tar</kbd></pre>
      <div>
-      Vous pouvez repasser en mode graphique et vous connectez en non root.
+      Vous pouvez repasser en mode graphique et vous connectez en non-root.
      </div>
     <li><h3>Ajout d'une partition ou fichier d'échange</h3></li>
      <div>
@@ -241,8 +241,8 @@ swapon /SWAP</kbd></pre>
       </li>
     </ul>
     <div>
-     L'installation depuis le live configure l'horloge suivant la methode 1.
-     L'installation depuis la MINI configure l'horloge suivant la methode 2.
+     L'installation depuis le live configure l'horloge suivant la méthode 1.
+     L'installation depuis la MINI configure l'horloge suivant la méthode 2.
     </div>
     <div>
      Le fichier <b>/etc/sysconfig/clock</b> définit la méthode d'affichage de l'horloge sur la machine.
@@ -254,7 +254,7 @@ swapon /SWAP</kbd></pre>
      Ceci affichera l'horloge matérielle.
      Si l'heure correspond à ce qui vous dit votre montre, alors l'horloge matérielle est configurée sur l'heure locale.
      Vous pouvez alors confirmer ceci en mettant <b>UTC=0</b> dans le fichier <b>/etc/sysconfig/clock</b>.
-     Si la sortie n'est pas identique à l'heure de votre poignet, il y a des chances qu'elle est été configurée en UTC.
+     Si la sortie n'est pas identique à l'heure de votre poignet, il y a des chances qu'elle soit configurée en UTC.
      Si la commande <b>hwclock -ru</b> affiche l'heure de votre poignet, l'heure du bios de votre machine est alors correcte.
     </div>
    <li><h3>Nom de la machine</h3></li>
@@ -353,7 +353,7 @@ lequel la partition de NuTyX  se trouve, dans notre exemple ci-dessus, on utilis
      </div>
     <li><h3>Les commandes à savoir</h3></li>
      <div>
-      La commande <b>cards</b> comprends de nombreuses options dont voici quelques unes.
+      La commande <b>cards</b> comprend de nombreuses options dont en voici quelques unes.
       Pour une aide complète. Les commandes modifiant votre installation s'utilisent avec le compte administrateur (via su -) ou via la commande <b>sudo</b>:
      </div>
      <pre class="command"><kbd>cards</kbd></pre>
@@ -392,15 +392,15 @@ Affiche la liste des paquets pouvant être mis à jour. On trouve aussi dans cet
     <ol>
      <li><h3>Configuration de pkgadd</h3></li>
       <div>
-       Le fichier <b> /etc/pkgadd.conf </b> définit les règles de d'installation et de mise à jour des paquets binaires.
+       Le fichier <b> /etc/pkgadd.conf </b> définit les règles d'installation et de mise à jour des paquets binaires.
        On y trouve trois colonnes, EVENEMENT,  ECHANTILLON (PATTERN) et ACTION.
        L'évennement décrit la situation dans laquelle la règle s'applique.
        Actuellement les 2 situations sont UPGRADE (pour mise à jour) et INSTALL (pour installation).
-       Les règles UPGRADE s'appliquent donc quand un paquet est mis à jour et INSTALL s'appliquent dans TOUS LES CAS.
+       La règle UPGRADE s'applique donc quand un paquet est mis à jour et INSTALL s'applique dans TOUS LES CAS.
        L'ECHANTILLON (PATTERN) est une expression régulière.
-       L'ACTION s'applique aux EVENEMENT INSTALL ET UPGRADE.
+       L'ACTION s'applique aux événements : INSTALL ET UPGRADE.
        Un EVENEMENT peut être YES (oui) ou NO (non).
-       Il peut y avoir plus d'une règle utilisant le même évenement dans tel cas la première règle aura la prioritée la plus basse et la dernière règle aura la prioritée la plus haute.
+       Il peut y avoir plus d'une règle utilisant le même évenement dans un tel cas la première règle aura la priorité la plus basse et la dernière règle aura la priorité la plus haute.
        Exemple:
       </div>
       <pre class="output">UPGRADE         ^etc/.*$                NO
@@ -408,10 +408,10 @@ UPGRADE         ^var/log/.*$            NO
 UPGRADE         ^etc/X11/.*$            YES
 UPGRADE         ^etc/X11/XF86Config$    NO</pre>
       <div>
-       L'exemple ci-dessus signale pkgadd de ne jamais mettre à jour les fichiers se trouvant dans /etc/ ou /var/log (sous-dossiers compris), à l'exeption des fichiers /etc/X11 (sous-dossiers compris), à l'exeption du fichier /etc/X11/XF86Config.
+       L'exemple ci-dessus signale à pkgadd de ne jamais mettre à jour les fichiers se trouvant dans /etc/ ou /var/log (sous-dossiers compris), à l'exception des fichiers /etc/X11 (sous-dossiers compris), à l'exception du fichier /etc/X11/XF86Config.
        La règle de défaut est mettre à jour / installer tous les paquets, autrement dit, les règles dans ce fichier sont les exceptions à cette règle.
        IMPORTANT: Un ECHANTILLON ne doit jamais contenir un "/" initial car on fait référence aux fichiers contenus dans le paquet et non ceux installés sur le disque.
-       Si pkgadd trouve un fichier spécifique qui ne doit pas être mis à jour, celui-ci sera installer dans <b>/var/lib/pkg/rejected/</b>.
+       Si pkgadd trouve un fichier spécifique qui ne doit pas être mis à jour, celui-ci sera installé dans <b>/var/lib/pkg/rejected/</b>.
        C'est à l'utilisateur de l'examiner et d'en prendre la décision.
       </div>
       <li><h3>Les commandes à savoir</h3></li>
@@ -462,13 +462,13 @@ Connaître l'appartenance d'un fichier
        </div>
        <p>
        <div>
-        <b>PKGMK_CLEAN="yes"</b> si "no", le(s) paquet(s) binaire(s) du port seront conservés après une compilation ET une installation réussie.
+        <b>PKGMK_CLEAN="yes"</b> si "no", le(s) paquet(s) binaire(s) du port seront conservés après une compilation et une installation réussie.
         Par défaut, le(s) paquet(s) binaire(s) du port sont supprimés après une compilation ET une installation réussie.
        </div>
        <p>
        <div>
-        <b>PKGMK_GROUPS=(devel man doc service)</b> définit quel sous paquet(s) sera produit (si cela est possible).
-        Les sous paquets peuvent donc être changé en fonction de cette variable.
+        <b>PKGMK_GROUPS=(devel man doc service)</b> définit quel sous-paquet(s) sera produit (si cela est possible).
+        Les sous-paquets peuvent donc être changé en fonction de cette variable.
         Exemple: <b>PKGMK_GROUPS=(devel man)</b> produira un paquet de base (qui comprendra donc la <b>doc</b> et le <b>service</b>, un paquet.man et un paquet.devel.
        </div>  
       </ol>
@@ -493,7 +493,7 @@ Rechercher avec la description d'un paquet
 Empaqueter et installer un port (necessite les droits du compte root)
        <pre class="command"><kbd>cd /var/lib/pkg/depot/&lt;collection&gt;/paquetX && pkgmk -d -i</kbd></pre>
         Télécharge, empaquete et installe le paquetX en une seule commande.
-        Les dépendances DOIVENT être disponibles en binaire.
+        Les dépendances doivent être disponibles en binaire.
         Celles-ci ne seront pas compilées.
        <pre class="command"><kbd>sudo cards create -n paquetX</kbd></pre>
       </ol>
@@ -508,7 +508,7 @@ Mise en route du serviceX
       <pre class="command"><kbd>/etc/rc.d/init.d/serviceX start</kbd></pre>
 Arrêt du serviceX
       <pre class="command"><kbd>/etc/rc.d/init.d/serviceX stop</kbd></pre>
-Redémarrage du serviceC cette option n'est pas toujours disponible.
+Redémarrage du serviceX cette option n'est pas toujours disponible.
       <pre class="command"><kbd>/etc/rc.d/init.d/serviceX restart</kbd></pre>
 
      <li><h2>AIDE EN LIGNE</h2></li>

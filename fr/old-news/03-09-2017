@@ -16,11 +16,11 @@
 
 <h2>Mise à jour majeure</h2>
  <p>
-  Cette nouvelle version est le résultat de plus de 5 mois de dévelopement.
+  Cette nouvelle version est le résultat de plus de 5 mois de dévelopemment.
   Une mise à jour la 9.0 n'est pas possible car risquée, l'équipe de NuTyX recommande de faire une nouvelle installation.
-<h2>Nouveautées dans les ISOs</h2>
+<h2>Nouveautés dans les ISOs</h2>
 <p>
- Cette iso peut fonctionner en mode live, cad que si vous avez assez de mémoire, il n'est pas necessaire de l'installer, vous pouvez tester cette nouvelle NuTyX entièrement en RAM
+ Cette iso peut fonctionner en mode live, cad que si vous avez assez de mémoire, il n'est pas nécessaire de l'installer, vous pouvez tester cette nouvelle NuTyX entièrement en RAM
 <p>
  La clé USB peut donc être déconnectée et ainsi libérer le port USB.
  Utile dans le cas de l'installation sur tablette ne disposant que d'un seul port USB
@@ -29,7 +29,7 @@
 
 <h2>Les composants principaux de la chaîne de compilation sont mis à jour.</h2>
 <p>
- Les composants principaux de la chaîne d'outils cad en-têtes du noyau, compilateur, editeur de liens, assembleur et librairie C sont désormais à jour,
+ Les composants principaux de la chaîne d'outils cad en-têtes du noyau, compilateur, éditeur de liens, assembleur et librairie C sont désormais à jour,
  les versions respectives de chaque composant se trouvent dans la liste ci-dessous.
 
 <p>

@@ -5,7 +5,7 @@
   <p>
    La version stable actuelle de NuTyX s'appelle <b>9.0</b>.
    Elle est disponible en 32 bits et en 64 bits.
-   La version 64 bits n'est pas une multi lib mais une 64 bits pure.
+   La version 64 bits n'est pas une multi-lib mais une 64 bits pure.
    Les isos disponibles permettent une installation sans avoir besoin de connection internet.
    Les isos étant le système de base.
    Elles permettent également de faire un minimum de maintenance sur la machine avant l'installation de NuTyX.
@@ -35,10 +35,10 @@
    Utilisez votre outil de gravure favori pour graver l'iso sur un CD-RW (si possible) ...
  <h2>Installation classique de NuTyX sur une seule partition en images</h2>
   <p>
-   <a class="url" href="install">Cet article vous explique comment installer depuis zero la distribution NuTyX sur votre machine</a>
+   <a class="url" href="install">Cet article vous explique comment installer depuis zéro la distribution NuTyX sur votre machine</a>
  <h2>Installation de l'amorçage de la machine</h2>
   <p>
-   <a class="url" href="grub-install">Cet article vous explique comment installer depuis zero l'amorçage de la machine</a>
+   <a class="url" href="grub-install">Cet article vous explique comment installer depuis zéro l'amorçage de la machine</a>
   <p>
    Pour les plus pressés et les plus callés, voici un résumé:
   <p>
