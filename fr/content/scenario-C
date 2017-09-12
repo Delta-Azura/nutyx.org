@@ -7,13 +7,13 @@
    vous êtes convaincu que c'est le meilleur scénario pour gérer une NuTyX.
    Vous n'avez aucune envie d'utiliser les binaires proposés.
   <p>
-   La plus part des paquets que vous utilisez ne sont pas présents et ceux qui le sont, seront compilés par vous-même.
+   La plupart des paquets que vous utilisez ne sont pas présents et ceux qui le sont, seront compilés par vous-même.
   <p>
    Vous souhaitez obtenir les maj des ports disponibles.
   <p>
-   Et bien évidement, vous souhaitez que les dépendances soient compilées automatiquement.
+   Et bien évidemment, vous souhaitez que les dépendances soient compilées automatiquement.
   <p>
-   Vous l'avez compris, ce scenario est sans doute le plus "attirant" et le plus proche des distributions "dite" sources telle que CRUX ou gentoo.
+   Vous l'avez compris, ce scenario est sans doute le plus "attirant" et le plus proche des distributions "dites" sources telle que CRUX ou gentoo.
    <div class="important"><img alt="[Important]" src="../graphics/caution.gif"/>
      Pour construire ses propres paquets, il est important de "démarrer" avec une installation minimale dite de base.
    </div> 
@@ -49,7 +49,7 @@ base /usr/ports/aconserver</pre>
   <p>
    On peut maintenant commencer par installer les paquets de développement,
    cad un compilateur, les librairies C et C++ les outils autoconf, automake, etc etc.. .
-   On commence par créer les dossiers necessaires:
+   On commence par créer les dossiers nécéssaires:
    <pre class="command_user"><kbd>sudo mkdir -p /usr/ports/{personnel,aconserver}
 sudo mkdir -p /srv/www/sources</kbd></pre>
   <p>
@@ -69,12 +69,12 @@ sudo mkdir -p /srv/www/sources</kbd></pre>
  <h2>Le fichier /etc/pkgmk.conf</h2>
   <p>
    Pour ce scénario, il est indispensable de vérifier toutes les variables
-   necessaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>
+   nécéssaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>
    <pre class="output">export MAKEFLAGS="-j4"</pre>
   <p>
    Les sources sont stockées dans un dossier commun, je ne souhaite pas qu'elles soient effacées.
    Je souhaite que le dossier de travail reste dans le dossier du port,
-   cela me permettra eventuellement de compiler plusieurs ports sans perdre le travail.
+   cela me permettra éventuellement de compiler plusieurs ports sans perdre le travail.
    C'est très utile pour vérifier.
    <pre class="output">PKGMK_SOURCE_DIR="/srv/www/sources"
 PKGMK_KEEP_SOURCES="yes"
@@ -86,13 +86,13 @@ PKGMK_WORK_DIR="$PWD/work"</pre>
    pour pouvoir réinstaller mes binaires disponibles.
    La commande <b>pkgmk</b> doit donc générer le <b>.PKGREPO</b>
    de la collection concernée (dossier parent).
-   Je utilise le duo <b>cards/pkgmk</b>:
+   J' utilise le duo <b>cards/pkgmk</b>:
    <pre class="output">PKGMK_IGNORE_REPO="no"
 PKGMK_IGNORE_COLLECTION="no"</pre>
   <p>
-   Je ne souhaite pas que <b>pkgmk</b> split le binaire en paquet et sous paquets (devel, doc, man, etc).
+   Je ne souhaite pas que <b>pkgmk</b> splite le binaire en paquet et sous paquets (devel, doc, man, etc).
    Je me contente du paquet de base puisque je le compile moi-même.
-   Pour les locales, si elles existent, je me contenterai des locale françaises et italiennes <b>fr</b> et <b>it</b>:
+   Pour les locales, si elles existent, je me contenterai des locales françaises et italiennes <b>fr</b> et <b>it</b>:
    <pre class="output">PKGMK_GROUPS=()
 PKGMK_LOCALES=(fr it)</pre>
   <p>
@@ -156,12 +156,12 @@ Updating collection base
    Il est en effet jamais facile de connaître exactement quelles sont les dépendances indispensables
    pour que le paquet en chantier se compile sans problème.
   <p>
-   En plus des dépendances indispensables, il y a aussi les dépendance optionnelles
-   qui permettent d'avoir plus de fonctionnalitées.
-   Par principe, sous NuTyX nous essayons de proposer le maximum de fonctionalitées.
+   En plus des dépendances indispensables, il y a aussi les dépendances optionnelles
+   qui permettent d'avoir plus de fonctionnalités.
+   Par principe, sous NuTyX nous essayons de proposer le maximum de fonctionalités.
   <p>
    Le paquet que nous allons construire n'apportera certainement pas grand chose à votre NuTyX.
-   C'est surtout la methode utilisée qui nous intéresse ici:
+   C'est surtout la méthode utilisée qui nous intéresse ici:
    Nous allons donc prendre le paquet <b>clipit</b> qui d'après le README est (en anglais dans le texte)
   <p>
    <i>ClipIt is a lightweight GTK+ clipboard manager.</i>
@@ -220,5 +220,5 @@ cards depends
 cards depcreate
 cards level</kbd></pre>
    <p>
-    Pour connaître en détail la fonctionnalitée de ces commandes, je vous invite à lire le man de cards:
+    Pour connaître en détail la fonctionnalité de ces commandes, je vous invite à lire le man de cards:
    <pre class="command"><kbd>man cards</kbd></pre>

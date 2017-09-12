@@ -5,7 +5,7 @@
   <p>
    Vous ne souhaitez pas compiler dans votre NuTyX.
    Ce qui est tout à fait possible si vous n'avez pas besoin de programmes particuliers et que les binaires proposés vous suffisent.
-   Ce scénario est aussi valable dans le cas où vous gérez plusieurs installations sur lesquelles aucune compilation n'est necessaire.
+   Ce scénario est aussi valable dans le cas où vous gérez plusieurs installations sur lesquelles aucune compilation n'est nécéssaire.
 
  <a name='2'></a>
  <h2>Le fichier /etc/cards.conf</h2>

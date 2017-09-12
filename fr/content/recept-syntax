@@ -5,7 +5,7 @@
    le fichier de post-installation et
    la recette contenue dans le fichier <b>Pkgfile</b>.
   <h2>Collection</h2>
-  <h2><name>.pre-install</h2>
+  <h2><name>.pré-install</h2>
   <h2><name>.post-install</h2>
   <h2>Le Pkgfile</h2>
    <p>

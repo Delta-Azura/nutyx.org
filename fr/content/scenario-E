@@ -13,12 +13,12 @@
      Le deuxième scénario qui est celui de votre environnement isolé celui que vous préféréz entre les 3 autres (B, C et D).
      A partir de maintenant on ne parle plus d'environnement isolé mais de la <b>chroot</b>.
     <p>
-     Quelques avantages par rapports aux précédents:
+     Quelques avantages par rapport aux précédents:
     <ol>
      <li>
-      Comme vous n'installerez jamais de paquets de developpement sur votre NuTyX principale, celle-ci gardera une taille raisonnable.
+      Comme vous n'installerez jamais de paquets de développement sur votre NuTyX principale, celle-ci gardera une taille raisonnable.
      <li>
-      Bien que vous devez prévoir quelques Giga pour votre <b>chroot</b>, sachez que si vous devez la supprimer, un simple:
+      Bien que vous devez prévoir quelques Gigas pour votre <b>chroot</b>, sachez que si vous devez la supprimer, un simple:
       <pre class="command"><kbd>rm -r /&lt;chemin-de-votre-chroot&gt;</kbd></pre> et vous retrouverez votre NuTyX principale.
      <li>
       Tous vos paquets seront donc compilés dans la  <b>chroot</b>, ce qui épargne toute fausse manoeuvre sur votre NuTyX principale.
@@ -44,7 +44,7 @@ base /var/lib/pkg/depot/base</pre>
         <p>
          En effet, on veut pouvoir installer les paquets de la <b>chroot</b> dans la principale.
         <p>
-         Je choisis le scenario <b>C</b> pour ma <b>chroot</b>.
+         Je choisis le scénario <b>C</b> pour ma <b>chroot</b>.
         <u>   *** NuTyX chroot     *** Scénario C ***  </u>
         <pre class="output">
 dir /usr/ports/personnel
@@ -59,7 +59,7 @@ base /usr/ports/aconserver</pre>
 
    <h2><span id='3'>Le fichier /etc/pkgmk.conf</span></h2>
     <p>
-     Comme dit plus haut, le scenario <b>A</b> n'a pas besoin de fichier de configuration <b>/etc/pkgmk.conf</b>.
+     Comme dit plus haut, le scénario <b>A</b> n'a pas besoin de fichier de configuration <b>/etc/pkgmk.conf</b>.
      On peut directement configurer le <b>/etc/pkgmk.conf</b> de notre <b>chroot</b>.
     <u>   *** NuTyX chroot     *** Scénario C ***  </u>
     <pre class="output">export CFLAGS="-O2 -pipe"
@@ -127,7 +127,7 @@ ADD: ca-certificates-20141001, 323 files: 100 %                          [  OK  
 "*                                                 *"
 "***************************************************"</pre>
    <p>
-    Pour pouvoir travailler dans la chroot il est necessaire de pouvoir rentrer (et sortir) facilement de l'environnement, pour ce faire, nous allons utiliser le même script.
+    Pour pouvoir travailler dans la chroot il est nécessaire de pouvoir rentrer (et sortir) facilement de l'environnement, pour ce faire, nous allons utiliser le même script.
     Vous êtes toujours en root tapez donc ceci dans votre terminal:
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
    <p>

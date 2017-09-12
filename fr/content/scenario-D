@@ -3,7 +3,7 @@
    <a name='1'></a>
    <h2>Introduction</h2>
     <p>
-     Vous souhaitez utiliser les binaires disponibles des collection <b>base, cli, cli-extra, gui</b> et <b>gui-extra</b>. 
+     Vous souhaitez utiliser les binaires disponibles des collections <b>base, cli, cli-extra, gui</b> et <b>gui-extra</b>. 
     <p>
      Vos nouvelles recettes doivent utiliser les dépendances provenant des binaires existants.
     <p>
@@ -77,12 +77,12 @@ base /srv/www/nutyx/aconserver</pre>
    <a name='5'></a>
    <h2>Le fichier /etc/pkgmk.conf</h2>
     <p>
-     Pour ce scénario, il est indispensable de vérifier toutes les variables necessaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>.
+     Pour ce scénario, il est indispensable de vérifier toutes les variables nécéssaires pour le bon fonctionnement du duo <b>pkgmk/cards</b>.
     <p>
      Mon processeur est un double coeur et je suis en 64bits.
     <p>
      Les sources sont stockées dans un dossier commun, je ne souhaite pas qu'elles soient effacées.
-     Pour ne pas polué ni perdre le travail effectué lors d'un:
+     Pour ne pas polluer ni perdre le travail effectué lors d'un:
      <b>for i in base cli gui; do sudo  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/8.0/x86_64/$i /srv/www/nutyx/x86_64/$i;done</b>,
      je préfère utiliser un dossier de travail temporaire:
      <pre class="output">PKGMK_SOURCE_DIR="/srv/www/sources"
@@ -96,13 +96,13 @@ PKGMK_WORK_DIR="/tmp/work"</pre>
     <pre class="output">PKGMK_IGNORE_REPO="no"
 PKGMK_IGNORE_COLLECTION="no"</pre>
     <p>
-     Puisque les dépendances proviennent des binaires existantes et que ces binaires sont splités.
-     Il est préférable de conserver cette fonctionnalitée pour les paquets personnels.
+     Puisque les dépendances proviennent des binaires existants et que ces binaires sont splités.
+     Il est préférable de conserver cette fonctionnalité pour les paquets personnels.
      Les locales produites seront les 11 locales produites par défaut.
     <pre class="output">PKGMK_GROUPS=(devel man doc service)
 PKGMK_LOCALES=(fr de it es nl pt da nn sv fi)</pre>
     <p>
-     Les binaires produits seront dans le même format de compression que les binaires officielles, même si ce n'est pas une obligation, on veut garder une certaine cohérence entre les binaires.
+     Les binaires produits seront dans le même format de compression que les binaires officiels, même si ce n'est pas une obligation, on veut garder une certaine cohérence entre les binaires.
      Je ne souhaite pas supprimer mes binaires produits une fois installés.
     <pre class="output">PKGMK_COMPRESS_PACKAGE="yes"
 PKGMK_COMPRESSION_MODE="xz"
