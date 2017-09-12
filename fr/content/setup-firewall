@@ -89,12 +89,12 @@ case "$1" in
     ;;
 esac</kbd></pre>
    <p>
-    Puis rendez le exécutable et avec les bonnes permissions:
+    Puis rendez-le exécutable et avec les bonnes permissions:
     <pre class="command_user"><kbd>sudo chmod 700 /etc/rc.d/init.d/parefeu</kbd></pre>
  <h2>Quelques explications</h2>
   <h3>Les règles</h3>
    <p>
-    Iptables -P permet de définir la politique par défaut d'un chaine.
+    Iptables -P permet de définir la politique par défaut d'une chaine.
    <p>
     On peut voir que dans cette configuration on DROP (Refuser silencieusement) tout ce qui arrive (INPUT) et tout ce qui transite (FORWARD).
    <p>
@@ -126,7 +126,7 @@ esac</kbd></pre>
    <p>
     On remarque plusieurs dossiers nommés rc0.d/ rc1.d/ etc...
    <p>
-    Ils correspondent au différents niveaux de init : voir /etc/inittab
+    Ils correspondent aux différents niveaux de init : voir /etc/inittab
    <p>
     Commençons par rc0.d/ :
     <pre class="command_user"><kbd>cd /etc/rc.d/rc0.d/ && l</kbd></pre>
@@ -148,7 +148,7 @@ lrwxrwxrwx  1 root root   14 mai    9 11:20 S99halt -> ../init.d/halt</kbd></pre
    <p>
     Ce lien symbolique permet d’éteindre (Kill) le réseau. Le nombre détermine l'ordre d’exécution.
    <p>
-    On veut donc éteindre notre parefeu juste après le reseau, donc:
+    On veut donc éteindre notre parefeu juste après le réseau, donc:
     <pre class="command_user"><kbd>sudo ln -s ../init.d/parefeu K81parefeu</kbd></pre>
    <p>
     Il faut ensuite répéter cette opération dans les répertoires rc0.d/ jusqu'au rc6.d/
@@ -187,7 +187,7 @@ lrwxrwxrwx  1 root root   14 mai    9 11:20 S99halt -> ../init.d/halt</kbd></pre
   <p>
    - <a href>https://www.grc.com/x/ne.dll?bh0bkyd2</a>
   <p>
-   (si vous êtes derrière un box, vous allez tester la box...)
+   (si vous êtes derrière une box, vous allez tester la box...)
     <pre class="command_user"><kbd>nmap -Pn votre_IP depuis une autre machine</kbd></pre>
   <p>
    --&gt; voir <a href>http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/</a>
