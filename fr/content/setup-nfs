@@ -51,7 +51,7 @@ EOF</kbd></pre>
     <pre class="command"><kbd>/etc/rc.d/init.d/rpcbind start
 /etc/rc.d/init.d/netfs start</kbd></pre>
     <p>
-     Si vous le préférer, vous pouvez relancer les machines
+     Si vous lpréférez, vous pouvez relancer les machines
  <h2>Tester le service</h2>
   <p>
    Tous les services sont configurés, aucun message d'erreur ne s'affiche lors de leur lancement.
@@ -78,17 +78,17 @@ MP3
 ...
 ...</pre>
    <p>
-    Le test sur le serveur est terminé. On démonte le dosier
+    Le test sur le serveur est terminé. On démonte le dossier
     <pre class="command"><kbd>umount /root/bidon</kbd></pre>
    <p>
     Une fois démonté vous pouvez supprimer le dossier, si celui-ci est bien démonté et vide</p> la commande:
     <pre class="command"><kbd>rm -d /root/bidon</kbd></pre>
-    devrait fonctionner sans provoquer d'erreur.
+    devrait fonctionner sans provoquer d'erreurs.
    <p>
-    On peut peut procéder au tests sur le client
+    On peut peut procéder au test sur le client
   <h3>Sur un client</h3>
    <p>
-    Le test est exactement identique, cette fois on test le dossier qui sera monté automatiquement
+    Le test est exactement identique, cette fois on teste le dossier qui sera monté automatiquement
     au lancement du client:
     <pre class="command"><kbd>mount -o vers=3 192.168.1.20:/home/tnut/documents /home/tnut/documents</kbd></pre>
    <p>
