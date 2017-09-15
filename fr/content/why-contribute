@@ -4,18 +4,18 @@
   C'est à la fois beaucoup et pas beaucoup en effet tous les jours ou presque sortent de nouvelles applications sous licence libre (ou pas)
  <p>
   Vous l'avez compris, vous ne trouverez jamais TOUTES les applications disponibles sur le net pr&ecirc;tes &agrave; &ecirc;tre install&eacute;es sur NuTyX.
-  Rien que sur le site de <a href="http://sourceforge.net/">sourceforge.net</a>,  on peut y trouver plus de 5000 applications toutes platformes confondues.
-  Si vous avez trouvez l'application de vos r&ecirc;ves, il faudra  par un moyen ou un autre la compiler, l'installer et la faire fonctionner dans NuTyX.
-  Pour cela nous allons vous demander de contribuer un petit peu. C'est vous qui aller construire le <a href="dictionary#ID005">paquet</a>... Si vous le voulez bien.
+  Rien que sur le site de <a href="http://sourceforge.net/">sourceforge.net</a>,  on peut y trouver plus de 5000 applications toutes plateformes confondues.
+  Si vous avez trouvez l'application de vos rêves, il faudra  par un moyen ou un autre la compiler, l'installer et la faire fonctionner dans NuTyX.
+  Pour cela nous allons vous demander de contribuer un petit peu. C'est vous qui allez construire le <a href="dictionary#ID005">paquet</a>... Si vous le voulez bien.
  <p>
-  Compiler une application se r&eacute;sume souvent a faire les manipulations suivantes:
+  Compiler une application se r&eacute;sume souvent à faire les manipulations suivantes:
   <ol>
    <li>
     Trouver l'application qui n'existe pas sur NuTyX
    <li>
     Télécharger les sources de l'application
    <li>
-    Vérifier la somme MD5 (vivement recommendée mais hélas pas toujours possible)
+    Vérifier la somme MD5 (vivement recommendé mais hélas pas toujours possible)
    <li>
     Extraires les sources dans un dossier de travail
    <li>
@@ -31,7 +31,7 @@ make install</pre>
    <p>
     Et voil&agrave; votre nouvelle application est compil&eacute;e et disponible dans NuTyX.
    <p>
-    C'est une façon de faire, mais comme vous pouvez le constatez, elle n'est pas sans inconvégnients:
+    C'est une façon de faire, mais comme vous pouvez le constater, elle n'est pas sans inconvénients:
    <ol>
     <li>
      Aucun moyen de retrouver les fichiers installés.
@@ -40,7 +40,7 @@ make install</pre>
     <li>
      Aucun moyen de retrouver le <a href="dictionary#ID005">paquet</a> si vous souhaitez l'installer sur une autre machine.
     <li>
-     Cette methode est relativement fastidieuse, chaque op&eacute;ration doit imp&eacute;rativement &ecirc;tre refaite en cas de mise &agrave; jour par exemple.
+     Cette méthode est relativement fastidieuse, chaque op&eacute;ration doit imp&eacute;rativement &ecirc;tre refaite en cas de mise &agrave; jour par exemple.
     <li>
      Aucun <a href="dictionary#ID005">paquet</a> n'a &eacute;t&eacute; cr&eacute;&eacute;, ce qui est tr&egrave;s dommage si vous souhaitez le partager avec d'autres utilisateurs de NuTyX.
     <li>
@@ -48,7 +48,7 @@ make install</pre>
      Cette application ne peut pas &ecirc;tre g&eacute;r&eacute;e par <a href="dictionary#ID000">le gestionnaire de paquets</a>.
    </ol>
    <p>
-    NuTyX dispose d'outils tr&egrave;s facile d'emploi qui vous faciliterons grandement la tache et surtout qui vous permettent
+    NuTyX dispose d'outils tr&egrave;s faciles d'emploi qui vous faciliteront grandement la tâche et surtout qui vous permetteront
     de maintenir et int&eacute;grer la nouvelle application fra&icirc;chement compil&eacute;e.
    <p>
     Je vous invite aussi à aller lire <a href="faq#4">la FAQ</a> pour prendre connaissance des modes de compilation sous NuTyX.
