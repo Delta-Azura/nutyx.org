@@ -68,7 +68,7 @@ rm $PKG/usr/share/info/dir
   <pre class="command_user"><kbd>get cards.devel</kbd></pre>
  <h2>Compilation du paquet</h2>
    <pre class="command_user"><kbd>cd /usr/ports/perso/nano
-pkgmk -d</kbd></pre>
+sudo pkgmk -d</kbd></pre>
  <h2>Installation du paquet</h2>
    <pre class="command_user"><kbd>sudo pkgadd nano1*</kbd></pre>
 
