@@ -20,7 +20,7 @@ md5sum -c install-nutyx.md5sum</kbd></pre>
       <pre class="command"><kbd>mv -v install-nutyx /usr/bin/install-nutyx</kbd></pre>
       <pre class="output">'install-nutyx' -> '/usr/bin/install-nutyx'</pre>
       <p>
-       Make shure you have the <b>bstar</b> command installed on your distribution.
+       Make shure you have the <b>bsdtar</b> command installed on your distribution.
       <p>
        You need to use the BASH interpreter.
       <p>
