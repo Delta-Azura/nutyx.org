@@ -2,7 +2,7 @@
    <h2>Give it a try</h2>
     <p>
      To take full advantage of your newly installed NuTyX, here are the ESSENTIAL commmands that you will have to use every day.
-     This article explain some essential commands that are specific to NuTyX. We strongly recommand that you learn them.
+     This article explains some essential commands that are specific to NuTyX. We strongly recommend that you learn them.
     <p>
     NuTyX does not (yet) have a graphical interface tool for administrative purposes.
     You will need to use the terminal as your normal interface.
@@ -11,17 +11,17 @@
      Since NuTyX is a Linux operating system, it's important to respect the <a href="http://en.wikipedia.org/wiki/Case_sensitivity">case</a> when entering commands.
      ALL the characters in a command are in <b>lowercase</b>.
     <p>
-     Let's start by opening a terminal. Ready ? OK, let's go <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />
+     Let's start by opening a terminal. Ready? OK, let's go <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />
     <p>
      In some cases, a command consists of a single word without any options or arguments, but most commands have many options.
-     We suggest that you to use the command's --help option to get an idea of what other options are available.
-     Here, we will only check the commonest ones:
+     We suggest that you to use the commands --help option to get an idea of what other options are available.
+     Here, we will only check the most common ones:
     <pre class="command_user"><kbd>commandname help</kbd></pre> or
     <pre class="command_user"><kbd>commandname --help</kbd></pre> or
     <pre class="command_user"><kbd>commandname -h</kbd></pre>
     <p>
      the <i>help</i> makes it possible to print out all the available options. <i>--help</i> or <i>-h</i> are alternative options for printing out the help text for a command.
-   <h2>Check if they are any updates available</h2>
+   <h2>Check if there are any updates available</h2>
     <p>
      The command <b>cards sync</b> will check the latest status of the available updates for your system.
     <p>
@@ -35,7 +35,7 @@ gcc                          4.9.1                       4.9.2
 glibc                        2.20                        2.21</pre>
    <h2>Updating a package</h2>
     <p>
-     To update a package, the command <b>cards install -u</b> follow by the package will be used. Of course it is necessary that an update is available:
+     To update a package, the command <b>cards install -u</b> followed by the package will be used. Of course it is necessary that an update is available:
     <pre class="command_user"><kbd>sudo cards install -u gcc</kbd></pre>
    <h2>Search a package</h2>
     <p>
@@ -65,7 +65,7 @@ an attempt at creating a safer, faster, and more stable browser
       In this example, when the command is complete, you will have a working <a href="http://www.xfce.org">xfce4</a> desktop installed on your NuTyX.
    <h2>Add a user</h2>
     <p>
-     Add a user under NuTyX is very simple. The command:
+     Adding a user under NuTyX is very simple. The command:
     <pre class="command_user"><kbd>sudo nu</kbd></pre>
     <p>
      will add a new user, you will be asked two questions:
@@ -79,11 +79,11 @@ Name or Description of the user: James Bond 007</pre>
      <pre class="command"><kbd>nu
 cards</kbd></pre>
      <p>
-      This last command has a more detail explanation <i>via</i> its help option
+      This last command has a more detailed explanation <i>via</i> in its help option
      <pre class="command_user"><kbd>cards help</kbd></pre>
      <p>
       I wish you a lot of fun with you newly installed NuTyX.
      <p>
-      You would like to install more packages or why not, build your own packages.
+      Would you like to install more packages or, why not build your own packages?
      <p>
-      You will find all <a href="build-package">the necessary documentation.</a>
+      You will find here <a href="build-package"> all the necessary documentation.</a>
