@@ -1,0 +1,107 @@
+<h1>Last news 2017-09-16</h1>
+
+<h2>NuTyX 9.0.95 available with cards 2.3.95</h2>
+<p>
+ The NuTyX team is please to annonce the 9.0.95 release of NuTyX.
+<p>
+ NuTyX 9.0.95 comes with kernel 4.12.7, kernel lts 4.9.50, glibc 2.26, gcc 7.2.0, binutils 2.29, python 3.6.2,
+ xorg-server 1.19.3, qt 5.9.1, mate 1.18.0, xfce4 4.12.3, firefox 55.0.3, gnome-shell 3.24.3, plasma 5.10.5, KDE Framework 5.38.0, etc.
+
+<p>
+ More then 4500 commits since the 9.0 version. 
+<p>
+ A new 64 bits iso is available.
+ It's size is 263 MB and available at <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ Many bugs like, the https issue on midory and epiphany, mounting usb keys, etc are now fixed
+
+<h2>Major update of NuTyX</h2>
+ <p>
+  This new version is the result of more then 6 month of work. Updating from 9.0 version is maybe possible, but risky.
+  NuTyX recomnmand you to make a new installation.
+
+<h2>ISOs news</h2>
+<p>
+ This iso can works in live mode, means that if you have enough RAM,
+ it won't be necessary to install NuTyX, you can try it out entirely in RAM.
+ <p>
+The USB key can then be disconnected and then make the single USB port available free.
+Usefull when you want to install NuTyX on tablets having one single USB port. 
+
+<h2>Main components of the toolchain are now up to date.</h2>
+<p>
+ Main components of the toolchain that are kernel-header, compiler, linker, assembler and C library are now up to date.
+ Respective version of each element are availables in the list below. 
+
+<p>
+ Officials collections:
+ <ul>
+  <li>
+    base
+  <li>
+    cli, cli-extra
+  <li>
+    gui, gui-extra
+  <li>
+    xfce4, xfce4-extra
+  <li>
+    mate, mate-extra
+  <li>
+    gnome, gnome-extra
+  <li>
+    kde5, kde5-extra
+ </ul>
+ 
+<h2>Main Updated Packages List of NuTyX 9.0.95</h2>
+ <ul>
+  <li>
+   cards 2.2 -> 2.3.95
+  <li>
+   kernel 4.10.8 -> 4.12.7
+  <li>
+   kernel lts 4.9.20 -> 4.9.50
+  <li>
+   gcc 6.3.0 -> 7.2.0
+  <li>
+   glibc 2.25 -> 2.26
+  <li>
+   binutils 2.28 -> 2.29
+  <li>
+   python 3.6.0 -> 3.6.2
+  <li>
+   alsa 1.1.3 -> 1.1.4-1
+  <li>
+   cups 2.2.2 -> 2.2.4
+  <li>
+   samba 4.5.5 -> 4.6.6
+  <li>
+   mesa 17.0.1 -> 17.1.6
+  <li>
+   libdrm 2.4.75 -> 2.4.82
+  <li>
+   xorg-server 1.19.2 -> 1.19.3
+  <li>
+   qt5 qt 5.8.0 -> qt 5.9.1
+  <li>
+   gtk3 3.22.9 -> 3.22.19
+  <li>
+   firefox 52.0.2 -> 55.0.3
+  <li>
+   gnome 3.22 -> 3.24.3
+  <li>
+   kde5 5.32.0 -> 5.38.0
+  <li>
+   plasma 5.9.4 -> 5.10.5
+  <li>
+   mate 1.16.1 -> 1.18.0
+  <li>
+   libreoffice 5.3.3 -> 5.4.0
+  </ul>
+ <p>
+ <h2>Thanks</h2>
+
+ <p>
+  Thanks to Greg and Jayce for all the commits on collections.
+ <p>
+  Thanks to "Linux From Scratch" team for the 8.1 release of LFS and BLFS.
+  

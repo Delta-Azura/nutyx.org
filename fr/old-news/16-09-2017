@@ -1,0 +1,107 @@
+<h1>Dernière nouvelle 16-09-2017</h1>
+
+<h2>NuTyX 9.0.95 disponible avec cards 2.3.95</h2>
+<p>
+ L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.0.95
+<p>
+ NuTyX 9.0.95 propose le kernel 4.12.7, kernel lts 4.9.50, glibc 2.26, gcc 7.2.0, binutils 2.29, python 3.6.2,
+ xorg-server 1.19.3, qt 5.9.1, mate 1.18.0, xfce4 4.12.3, firefox 55.0.3, gnome-shell 3.24.3, plasma 5.10.5, KDE Framework 5.38.0 et beaucoup d'autres mise à jour.
+
+<p>
+ Plus de 4500 commits depuis la version 9.0
+
+<p>
+ Nombreux bugs comme l'accès aux sites https depuis epiphany ou midori, le montage de clés USB, etc sont maintenant résolus
+ 
+<h2>Mise à jour majeure</h2>
+ <p>
+  Cette nouvelle version est le résultat de plus de 6 mois de dévelopemment.
+  Une mise à jour la 9.0 est pas possible mais risquée, l'équipe de NuTyX recommande de faire une nouvelle installation.
+<h2>Nouveautés dans les ISOs</h2>
+<p>
+ Cette iso peut fonctionner en mode live, cad que si vous avez assez de mémoire, il n'est pas nécessaire de l'installer, vous pouvez tester cette nouvelle NuTyX entièrement en RAM
+<p>
+ La clé USB peut donc être déconnectée et ainsi libérer le port USB.
+ Utile dans le cas de l'installation sur tablette ne disposant que d'un seul port USB
+<p>
+ Une nouvelle iso 64 bits est disponible.
+ La taille est de 263 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+
+<h2>Les composants principaux de la chaîne de compilation sont mis à jour.</h2>
+<p>
+ Les composants principaux de la chaîne d'outils cad en-têtes du noyau, compilateur, éditeur de liens, assembleur et librairie C sont désormais à jour,
+ les versions respectives de chaque composant se trouvent dans la liste ci-dessous.
+
+<p>
+ Les collections officielles:
+ <ul>
+  <li>
+    base
+  <li>
+    cli, cli-extra
+  <li>
+    gui, gui-extra
+  <li>
+    xfce4, xfce4-extra
+  <li>
+    mate, mate-extra
+  <li>
+    gnome, gnome-extra
+  <li>
+    kde5, kde5-extra
+ </ul>
+ 
+<h2>Liste des mises à jour principales de la NuTyX 9.0.95</h2>
+ <ul>
+  <li>
+   cards 2.2 -> 2.3.95
+  <li>
+   kernel 4.10.8 -> 4.12.7
+  <li>
+   kernel lts 4.9.20 -> 4.9.50
+  <li>
+   gcc 6.3.0 -> 7.2.0
+  <li>
+   glibc 2.25 -> 2.26
+  <li>
+   binutils 2.28 -> 2.29
+  <li>
+   python 3.6.0 -> 3.6.2
+  <li>
+   alsa 1.1.3 -> 1.1.4-1
+  <li>
+   cups 2.2.2 -> 2.2.4
+  <li>
+   samba 4.5.5 -> 4.6.6
+  <li>
+   mesa 17.0.1 -> 17.1.6
+  <li>
+   libdrm 2.4.75 -> 2.4.82
+  <li>
+   xorg-server 1.19.2 -> 1.19.3
+  <li>
+   qt5 qt 5.8.0 -> qt 5.9.1
+  <li>
+   gtk3 3.22.9 -> 3.22.19
+  <li>
+   firefox 52.0.2 -> 55.0.3
+  <li>
+   gnome 3.22 -> 3.24.3
+  <li>
+   kde5 5.32.0 -> 5.38.0
+  <li>
+   plasma 5.9.4 -> 5.10.5
+  <li>
+   mate 1.16.1 -> 1.18.0
+  <li>
+   libreoffice 5.3.3 -> 5.4.0
+  </ul>
+ <p>
+ <h2>Remerciements</h2>
+
+ <p>
+  Merci à Greg pour son travail sur les collections.
+ <p>
+  Merci à Jayce pour son travail sur gnome et sur mate.
+ <p>
+  Merci à l'équipe de Linux from scratch pour leur travail sur les documents LFS et BLFS.  
