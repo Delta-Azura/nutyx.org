@@ -3,7 +3,7 @@
   Assurez vous tout d'abord d'avoir un espace libre sur votre disque dur d'au moins 8Go ou mieux 15Go pour plus de confort.</p>
  <h2>Téléchargez la dernière version de NuTyX</h2>
   <p>
-   La version stable actuelle de NuTyX s'appelle <b>9.0</b>.
+   La version stable actuelle de NuTyX s'appelle <b>9.1</b>.
    Elle est disponible en 32 bits et en 64 bits.
    La version 64 bits n'est pas une multi-lib mais une 64 bits pure.
    Les isos disponibles permettent une installation sans avoir besoin de connection internet.
