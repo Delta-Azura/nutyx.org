@@ -2,7 +2,7 @@
  
  <h2>Introduction</h2>
   <p>
-   This article explain every step to compile packages in a chroot.
+   This article explains every step to compile packages in a chroot.
 
  <h2>Adjust /etc/cards.conf</h2>
   <p>
@@ -14,7 +14,7 @@
 
  <h2>Installation of your chroot</h2>
   <p>
-   Depending the branch you want to use, you can specify it when calling the script:
+   Depending on the branch you want to use, you can specify it when naming the script:
   <h3>The stable branch</h3>
    <pre class="command"><kbd>VERSION="stable" install-nutyx</kbd></pre>
   <h3>The development branch</h3>
@@ -40,15 +40,15 @@ logdir /var/log/pkgbuild
 base /usr/ports/base
 EOF</kbd></pre>
    <p>
-    A folder containing my personnal receipes is added.
+    A folder containing my personal recipes is added.
     We do not specify any URL because we don't plan to use <b>cards sync</b>.
    <p>
-    Folder/var/log/pkgbuild will contains compilations logs.
+    Folder/var/log/pkgbuild will contain compilation logs.
    <p>
-    I don't need any specific locale, they can be all installed.
+    I don't need any specific location, they can be all installed.
    <p>
-    The folder /usr/ports/base define the base system when the command <b>cards base -r</b>.
-    will be used.
+    The folder /usr/ports/base defines the base system when the command <b>cards base -r</b>.
+    is used.
   <h3>/etc/pkgmk.conf</h3>
     <pre class="command"><kbd>cat &gt; /etc/pkgmk.conf &lt;&lt; EOF
 export CFLAGS="-O2 -pipe"
@@ -81,20 +81,20 @@ PKGMK_CLEAN="no"
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 EOF</kbd></pre>
     <p>
-     Source code are stored in a common folder. I want to keep them.
+     Source codes are stored in a common folder. I want to keep them.
     <p>
      The produced binaries are compressed in xz format.
     <p>
-     I want to keep my binaries onces installed.
+     I want to keep my binaries once installed.
     <p>
-     I wish to have the runtime dependencies automaticaly added into the binary.
+     I wish to have the runtime dependencies automatically added into the binary.
 
  <h2>Binaries synchronisation via rsync</h2>
     <p>
-     This operation consist of download all the binaries of the <b>base, cli-extra, gui et gui-extra</b> colletions. 
-     It can take from a few minutes to a few hours depending of the speed of your internet connection.
+     This operation consist of download of all the binaries in the <b>base, cli-extra, gui et gui-extra</b> collection. 
+     It can take a few minutes to a few hours depending on the speed of your internet connection.
     <p>
-     Lucky, this operation has to be done only once.
+     Luckily, this operation has to be done only once.
      <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />
      <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />
      <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
@@ -116,13 +116,13 @@ do
   /usr/ports/$i/
 done</kbd></pre>
     <p>
-     This can takes some times so go get a coffee or a pizza.
+     This can take some time so go get a coffee or a pizza.
      <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />,
      It can be long...
 
  <h2>Compilation and installation of your package</h2>
   <p>
-   You start to create the folder where will be locate your new package. Let's call it <b>mypackage</b> (you need to adjust to your real one)
+   You start to create the folder where you want to locate your new package. Let's call it <b>mypackage</b> (you need to adjust to your real one)
    <pre class="command"><kbd>mkdir /usr/ports/perso/mypackage</kbd></pre>
   <p>
    We just need to create the recept of our package (you need to adjust to your real one):
@@ -144,7 +144,7 @@ build() {
    We can now launch the process of compilation and installation.
    <pre class="command"><kbd>cards create -r mypackage</kbd></pre>
   <p>
-   I suggest you to read the man page of cards to understand the way <b>cards create -r</b> is working.
+   I suggest that you read the main page of cards to understand the way <b>cards create -r</b> this works.
    <pre class="command"><kbd>man cards</kbd></pre>
 
  <h2>Conclusion</h2>

@@ -5,21 +5,21 @@
        <img alt="[Important]" src="../graphics/caution.gif" />
        <img alt="[Important]" src="../graphics/caution.gif" />
        <img alt="[Important]" src="../graphics/caution.gif" />
-       It's higly recommended to knows NuTyX very well to succeed with this tuto.
+       It's highly recommended to know NuTyX very well to succeed with this tutorial.
      </div>
      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-      In this tuto, the <b>/home/tnut</b> folder is used, you <u>have to</u> it with <u>yours</u>.
+      In this tutorial, the <b>/home/tnut</b> folder is used, you <u>have to</u> it with <u>yours</u>.
      </div>
      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-       In this tuto, we use a <b>64 bits</b> machine, if you're using a <b>32 bits</b> machine, you need to replace the term in every concerned commands <b>x86_64</b> with <b>i686</b>.
+       In this tutorial, we use a <b>64 bits</b> machine, if you're using a <b>32 bits</b> machine, you need to replace this term in every command <b>x86_64</b> with <b>i686</b>.
      </div>
      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-      In this tuto, we choose the <b>kde5</b> collection,
-      if you want to compile <b>mate</b>, <b>gnome</b> or <b>xfce4</b>, you need to remplace the word <b>kde5</b> in every concerned command with one of the collection you want to compile.
+      In this tutorial, we choose the <b>kde5</b> collection,
+      if you want to compile <b>mate</b>, <b>gnome</b> or <b>xfce4</b>, you need to replace the word <b>kde5</b> in every command with one of the collections you want to compile.
      </div>
      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-      In this tuto, we choose to compile the current branch, if you want to use the stable branche replace the <b>current</b> branch with the <b>stable</b>.
-      For the git command, you specify the <b>stable</b> branch instead of the <b>current</b> branch when cloning.
+      In this tutorial, we choose to compile the current branch, if you want to use the stable branch replace the <b>current</b> branch with the <b>stable</b>.
+      For the git command, you will need to specify the <b>stable</b> branch instead of the <b>current</b> branch when cloning.
      </div>
     <h2>Each step</h2>
      <p>
@@ -28,22 +28,22 @@
       <li>
        get the tools
       <li>
-       put the user's folder in place
+       put the user folders in place
       <li>
        get all the recepts
       <li>
-       put the script's folders in place
+       put the script folders in place
       <li>
        get the binaries from the remote server
       <li>
-       setting up the configuration files
+       set up the configuration files
       <li>
        Launch the script
      </ol>
    <h2>Setting up</h2>
     <h3>The tools (packages to install)</h3>
       <p>
-       We suppose that your NuTyX is clean from any devel package.
+       We assume that your NuTyX is clean from any devel package.
        We start to install all the utilities:
       <pre class="command_user"><kbd>get rsync git</kbd></pre>
     <h3>Configuration of the variables</h3>
@@ -60,12 +60,12 @@ ARCH=`uname -m`</kbd></pre>
       <p>
        At least 10 Gb of space is perfect.
       <p>
-       All the needed folders are in:
+       All the folders needed are in:
       <pre class="output">/srv/www/</pre>
        and
       <pre class="output">/home/tnut/git/</pre>
       <p>
-       We create user's git folder:
+       We create the users git folder:
       <pre class="command_user"><kbd>mkdir /home/tnut/git</kbd></pre>
 
     <h3>Get all the ports of "kde5" from git location</h3>
@@ -82,7 +82,7 @@ ARCH=`uname -m`</kbd></pre>
        From now on, all the rest will be done in the root account:
       <pre class="command_user"><kbd>sudo su -</kbd></pre>
       <p>
-       We create now the folders needed for the script, in root:
+       We now create the folders needed for the script, in root:
        <pre class="command"><kbd>mkdir -pv \
 /srv/www/{x86_64,logs,sources}
 mkdir -pv \
@@ -92,7 +92,7 @@ mkdir -pv \
 
     <h3>Get the binaries from the remote server</h3>
       <p>
-       It's the longuest manipulation so let's open another terminal so that we can continue the settings while this process is going on:
+       It's the longest manipulation so let's open another terminal so that we can continue with the settings while this process is going on:
       <p>
        This command might take some time if your connection is not very fast.
       <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
@@ -116,14 +116,14 @@ done</kbd></pre>
 EOF</kbd></pre>
    <h2>Finalisation and step to reproduce</h2>
      <p>
-      You're now ready to work with the compilation script. The command below need to be reproduce in three cases:
+      You're now ready to work with the compilation script. The command below needs to be reproduce in three cases:
       <ul>
        <li>
         The first time.
        <li>
         When you did something wrong with your chroot and then with your own binaries.
        <li>
-        When you want to come back on the officiel binaries from the server.
+        When you want to come back on the official binaries from the server.
       </ul>
      <pre class="command"><kbd>for i in base cli gui
 do
@@ -132,5 +132,5 @@ do
 done</kbd></pre>
    <h2>Let's go</h2>
     <p>
-     If you did all the steps correctly, you should be able to start the compilation of your <b>kde5</b> and <b>kde5-extra</b> collections.
+     If you have done all the steps correctly, you should be able to start the compilation of your <b>kde5</b> and <b>kde5-extra</b> collections.
     <pre class="command"><kbd>ROOTMOUNT=/srv/www build-collection /current/kde5</kbd></pre>

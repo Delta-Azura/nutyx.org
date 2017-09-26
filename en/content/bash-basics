@@ -6,7 +6,7 @@
    for creating a recipe without going crazy.
    <p>
     The bash langage is used to edit a recipe and to generate a package from it.
-    The fact that bash is a  programming language might seem frightening to some potential users, who might think:
+    The fact that bash is a programming language might seem frightening to some potential users, who might think:
     "I don't know how to program". There are three reasons why you should not feel scared:
    <ul>
     <li>
@@ -22,7 +22,7 @@
    <p>
     So let's start <img src="../graphics/smiley-wink.gif" alt="Wink" title="Wink" /> our little course on the bash programming 
    <p>
-    This article will explain some basic features of the language that are good to knows to comprehend the syntax of a recipe:
+    This article will explain some basic features of the language that are good to know to comprehend the syntax of a recipe:
   <h2>Declaring a variable</h2>
    <p>
     All you need to do to declare a variable is this:
@@ -34,11 +34,11 @@
    <p>
     So you know how to declare a variable; that's very nice, but how do you get at its content in order to use it?
    <p>
-    To extract the content of a variable you use the dollar sign ($) with braces if required. Both forms are valid:
+    To extract the content of a variable you use the dollar sign ($) with brackets if required. Both forms are valid:
     <pre>${name}<br />$name</pre>
    <p>
-    It is better to use the first form since otherwise, if the variable name contains an underscore,
-    it will not be interpretated correctly by bash:
+    It is better to use the first form, otherwise if the variable name contains an underscore,
+    it will not be interpreted correctly by bash:
     <pre>name=xorg-libx11<br />_name=libX11<br />$name        # this works
 ${_name}     # so does this
 $_name       # wrongly interpreted and won't work</pre>
@@ -60,7 +60,7 @@ echo "The variable name contains the value: ${name}"</pre>
     </div>
     <div>
      <strong>SRC</strong>: This variable defines the folder where all the source files are extracted.
-      It is therefore very useful when you need to loop through subfolders and then return at the end of the loop to where you started.
+      It is therefore very useful when you need to loop through subfolders and then return to the end of the loop to where you started.
      This is also the variable which defines the current working directory for the main function of the recipe.
     </div>
     <div>
@@ -94,12 +94,12 @@ echo "The variable name contains the value: ${name}"</pre>
   <h2>Declaring a function</h2>
    <p>
     To declare a function is almost as simple.
-    You use parentheses when giving the name of the function; the function code is always enclosed in braces { etc }.
+    You use parentheses when giving the name of the function; the function code is always enclosed in brackets { etc }.
     A little example:
     <pre class="output">build() {<br />cd $name-$version<br />./configure --prefix=/usr<br />make<br />make DESTDIR=$PKG install<br />}</pre>
    <p>
     As you can see, it's very pretty and also contains a minimal recipe (without the variable declarations).
-    Here you can see  the essential use of the <b>PKG</b> variable.
+    Here you can see the essential use of the <b>PKG</b> variable.
    <h2>Conclusion</h2>
     <p>
      We are now ready to learn what's <a href="recept">a recept or a port</a>.

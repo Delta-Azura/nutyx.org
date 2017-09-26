@@ -3,11 +3,11 @@
     <p>
      This topic can be applied to any distribution and not only to NuTyX.
     <p>
-     It explains how to compile and install a customized kernel, should you  wish to do so.  
+     It explains how to compile and install a customized kernel, should you wish to do so.  
     <p>
      They are many reasons to compile your own kernel.
-     One good reason could be to reduce the size of the kernel as much as possible and optimize it for your own hardware.
-     This will greatly speed up the boot process.
+     One good reason would be to reduce the size of the kernel as much as possible and optimize it for your own hardware.
+     This will greatly speed up the boot up process.
     <p>
      If you are using NuTyX, make sure you get devel packages set:
      <pre class="command_user"><kbd>get cards.devel</kbd></pre>
@@ -42,16 +42,16 @@
       <li>Network card: Realtek RTL8101E/RTL8102E</li>
       <li>Graphics card: Intel Atom Processor D2xxx/N2xxx</li>
      </ul>
-  <h2>Download the sources of the kernel</h2>
+  <h2>Download the source of the kernel</h2>
    <p>
-    To be able to compile a kernel, we need the sources of a kernel version.
+    To be able to compile a kernel, we need the source of a kernel version.
     At the time of writing, version 3.17.4 is available.
     We will therefore compile this version...
    <p>
     Open a terminal and type the command:
    <pre class="command_user"><kbd>wget http://www.kernel.org/pub/linux/kernel/v3.x/linux-3.17.4.tar.xz</kbd></pre>
    <p>
-    The sources are downloaded into your personnal folder.
+    The sources are downloaded into your personal folder.
    <pre class="output">--2012-09-01 17:49:53--  http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.17.4.tar.xz
 Resolving www.kernel.org... 149.20.4.69, 149.20.20.133
 Connecting to www.kernel.org|149.20.4.69|:80...connected.
@@ -65,22 +65,22 @@ Saved in : &laquo;linux-3.17.4.tar.bz2&raquo;
      
   <h2>Extract the sources from the downloaded kernel</h2>
    <p>
-    We extract the sources from our new downloaded kernel:
+    We extracted the sources from our new downloaded kernel:
    <pre class="command_user"><kbd>tar xf linux-3.17.4.tar.xz</kbd></pre>
    <p>
     After a few moments, a new prompt will come up and the sources are in place.
     To be able to compile the kernel, we need to be in the kernel directory.
 
   <h2>Go to the sources directory</h2><p>
- Type in your terminal:
+ Type into your terminal:
    <pre class="command_user"><kbd>cd linux-3.17.4</kbd></pre>
    <p>
     We are now ready to launch the magic commands.
    <p>
-    As a start, I recommend you to consult all the possible options in the compilation:
+    To start, I recommend you to consult all the possible options in the compilation:
    <pre class="command_user"><kbd>make help|more</kbd></pre>
    <p>
-    It will give you ALL the possible options for compile the kernel and its modules.
+    It will give you ALL the possible options for compiling the kernel and its modules.
    <pre class="output">Cleaning targets:
   clean           - Remove most generated files but keep the config and
                     enough build support to build external modules
@@ -119,20 +119,20 @@ Configuration targets:
    <pre class="command_user"><kbd>make mrproper</kbd></pre>
    <p>
     There should be no messages printed.
-    We will now lanch the configuration tool and activate as few options as possible for our working kernel.
-    I choose the non-graphical interface on purpose, so that you can do it in a chroot, a graphical terminal or a normal terminal.
+    We will now launch the configuration tool and activate as few options as possible for our working kernel.
+    I have chosen the non-graphical interface on purpose, so that you can do it in a chroot, a graphical terminal or a normal terminal.
    <h2>Configure the compilation options</h2>
     <p>
-     The LFS team recommand unsetting the variable LC_ALL :
+     The LFS team recommend unsetting the variable LC_ALL :
     <pre class="command_user"><kbd>LC_ALL= make menuconfig</kbd></pre>
     <p>
      You are now in the main menu of the configuration tool of the kernel:
     <p>
      <img src="../graphics/build-kernel/menuprincipal.png" alt="Configuration menu principal" title="Main menu" width="578" height="517" /> 
     <p>
-     In this article, I choose only the options which are needed for a successful boot.
+     In this article, I have chosen only the options which are needed for a successful boot.
      It means that the number of modules will be very small.
-     You have to know that a generic kernel contains more then 5000 modules.
+     You have to know that a generic kernel contains more than 5000 modules.
     <p>
      Go through all the menus and activate only the options which are recommended below:
     <div style="font-size:120%"><b>General Setup</b></div>
@@ -565,7 +565,7 @@ Configuration targets:
     <p>
      A new message will ask you if you want to save your configuration; choose the default option <span style="color: #ff0000;">Yes</span>.
     <p>
-     A nice message in your terminal will appear and tell you <img src="../graphics/smiley-cool.gif" border="0" alt="Cool" title="Cool" />:
+     A nice message will appear in your terminal and tell you <img src="../graphics/smiley-cool.gif" border="0" alt="Cool" title="Cool" />:
    <pre class="output">#
 # configuration written to .config
 #
@@ -580,12 +580,12 @@ Configuration targets:
     Type in your terminal:
    <pre class="command_user"><kbd>make -j4</kbd></pre>
    <p>
-    The compilation starts.
+    The compilation will start.
     If you have more processors or fewer, adjust the value <b>-j4</b> to the number of cores you have.
    <p>
     <img src="../graphics/build-kernel/Compile.png" border="0" alt="Compilation en cours" width="578" height="517" />
    <p>
-    A few minutes (or hours) later, ... You have a kernel ready to be used.    
+    A few minutes (or hours) later, ... you have a kernel ready to be used.    
    <pre class="output">Kernel: arch/x86/boot/bzImage is ready  (#1)</pre>
 
   <h2>Create a new entry in the grub.cfg or menu.lst file</h2>
@@ -613,7 +613,7 @@ kernel /home/thierry/linux-3.17.4/arch/x86/boot/bzImage root=/dev/sda2 ro quiet
    </pre>
 
    <p>
-    And that's it! This way, you will still be able to choose at boot time which kernel your NuTyX should be running.
+    And that's it! This way, you will still be able to choose when booting up which kernel your NuTyX should be running.
    <p>
     Last but not least, to experiment with other options of your working (or not yet working) new kernel is very simple.
     You just type again the 4 magic commands:

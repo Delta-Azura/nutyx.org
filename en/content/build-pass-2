@@ -1,28 +1,28 @@
    <h1>Construction of the NuTyX (pass 2)</h1>
     <p>
      It's time to build your NuTyX.
-     One single condition: Have been able to finish with success the construction of the CHROOT (pass 1).
+     On one single condition: Have you been able to finish successfully the construction of the CHROOT (pass 1).
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
-     The author is not responsable for the lost of your datas or others dammage which could occur during a wrong manipulation.
-     This article is target for aware Linux peoples.
+     The author is not responsible for the loss of your data or other damage which could occur during a wrong manipulation.
+     This article is targeted for people aware of Linux.
     </div>
     <p>
-     All the operations will be done in the root account.
-     It's then ABSOLUTLY necessary to be very carefull otherwise you could broker your actual distribution.
+     All operations will be done in the root account.
+     It's then ABSOLUTELY necessary to be very careful otherwise you could break your actual distribution.
     <p>
-     The LFS variable in our exemple is pointing to /mnt/lfs. Up to you to adjust to your need if necessary.
+     The LFS variable in our example is pointing to /mnt/lfs. It is up to you to adjust for your needs if necessary.
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
-     Please note that the pass2 can be much more an "aventure" as it can always have problems when compiling a package the first time.
-     Up to you to give us a feedback with all the details of the error.
-     You can use <a href="http://forums.nutyx.org/index.php?board=8.0" title="Lire dans une autre fenêtre" class="external" onclick="window.open(this.href); return false;">the forums</a> or the irc channel for that.
+     Please note that the pass2 can be much more an "adventure" as it can have problems when compiling a package the first time.
+     It is up to you to give us a feedback with all the details of the error.
+     You can use <a href="http://forums.nutyx.org/index.php?board=8.0" title="Lire dans une autre fenÃªtre" class="external" onclick="window.open(this.href); return false;">the forums</a> or the irc channel for that.
     </div>
     <p>
-     To avoid any confusion and avoid dispersion in the actions to take, the article is split in two parts.
-     The first shows every step to do and the second gives an explaignation about each step. 
+     To avoid any confusion and avoid dispersion in the actions taken, the article is split into two parts.
+     The first shows every step to take and the second gives an explanation of each step. 
     <p>
      They are 22 actions. SO again:
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
-     All the manipulations should be done in the root account.
+     All the actions should be done in the root account.
     </div>
     <h2>The actions</h2>
     <ol>
@@ -31,16 +31,16 @@
 <pre class="command_user"><kbd>exit</kbd></pre>
       <li>
        We check the LFS variable
-<pre class="command"><kbd>echo $LFS</kbd></pre>MUST return <pre class="output">/mnt/lfs</pre> or the value define in the begining of pass 1
-<div class="important"><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" />BEFORE YOU GO FURTER MAKE SHURE THE LFS VARIABLE IS PROPERLY SET OTHERWISE YOU WILL BREAK YOUR DISTRIBUTION</div>
+<pre class="command"><kbd>echo $LFS</kbd></pre>MUST return <pre class="output">/mnt/lfs</pre> or the value defined in the beginning of pass 1
+<div class="important"><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" />BEFORE YOU GO FURTHER MAKE SURE THE LFS VARIABLE IS PROPERLY SET OTHERWISE YOU WILL BREAK YOUR DISTRIBUTION</div>
 	If the result is correct:
 <pre class="command"><kbd>chown -R root:root $LFS</kbd></pre>
       <li>
-       We create folders and links to put the recepts in place.
+       We have created folders and links to put the receipts in place.
 <pre class="command"><kbd>install -dv -m0750  $LFS/root
 ln -sv development/scripts $LFS/root/bin</kbd></pre>
       <li>
-       We move the receipts to the right folder and go in this folder.
+       We move the receipts to the right folder and enter this folder.
 <pre class="command"><kbd>mv /home/lfs/development $LFS/root/
 cd $LFS/root/development/base/nutyx</kbd></pre>
       <li>
@@ -85,7 +85,7 @@ tmpfs on /mnt/lfs/run type tmpfs (rw,relatime)</pre>
        We enter now in the NuTyX.
 <pre class="command"><kbd>chroot "$LFS" /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
 /bin/bash --login +h</kbd></pre>
-        The result will be a bit uggly but we can ignored it:
+        The result will be a bit ugly but we can ignore it:
 <pre class="output">bash: id: command not found
 bash: id: command not found
 bash: date: command not found
@@ -109,8 +109,8 @@ pass</kbd></pre>
      Wait for the following message to appear.
     <pre class="output">need to install bash manually</pre>
     <li>
-     As it's says, the <b>bash</b> packages needs to be installed manually.
-     So let's do it from outside the NuTyX. We got out first:
+     As it says, the <b>bash</b> packages need to be installed manually.
+     So let's do it from outside the NuTyX. We exit first:
     <pre class="command"><kbd>exit</kbd></pre>
     <li>
      Now we go to the right place and install the <b>bash</b> packages:
@@ -127,10 +127,10 @@ return
 (base) bash.doc 4.4-1
 ...</pre>
     <li>
-     We enter again into NuTyX and we finish the job:
+     We go back into NuTyX and we finish the job:
     <pre class="command"><kbd>chroot "$LFS" /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
 /bin/bash --login +h</kbd></pre>
-      Few errors stills show up:
+      Few errors still show up:
 <pre class="output">bash: id: command not found
 bash: id: command not found
 bash: date: command not found
@@ -160,78 +160,78 @@ pass</kbd></pre>
     <ol>
       <li>
        <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
-        Its very important that everything is done via the root account.
+        It’s very important that everything is done via the root account.
        </div>
       <li>
-       The LFS variable is used all along the article, its important that it's correctly set and that it point always to the same folder.
-       One way to solve this problem is to define ones for all in the .bash_profile file and to source it:
+       The LFS variable is used all along the article, it’s important that it's correctly set and that it points always to the same folder.
+       One way to solve this problem is to define one for all in the .bash_profile file and to source it:
 <pre class="command"><kbd>echo "export LFS=/mnt/lfs" &gt;&gt; /root/.bash_profile
 source  ~/.bash_profile</kbd></pre>
       <li>
        Checking the LFS variable.
        If OK we change the owner and group of the contents of $LFS.
       <li>
-       We create the folder to put the receiptes in place and the log folder as well.
-       We create also a link so that the script <b>pass</b> is found.
+       We create the folder to put the receipts in place and the log folder as well.
+       We also create a link so that the script <b>pass</b> is found.
       <li>
        We will now compile the first package which is <b>nutyx</b>.
-       For this we go in the folder of the recept.
+       For this we go to the folder of the receipt.
       <li>
-       This package doent contains any code so it's just create all the folders for the NuTyX.
+       This package doesn’t contain any code as it just created all the folders for the NuTyX.
       <li>
        We install the first package <b>nutyx</b> into the NuTyX and...
       <li>
-       We check if it's corretly installed.
+       We check if it's correctly installed.
       <li>
-       We add all the defaults configuration files, those are included in the instal-nutyx script.
+       We add all the default configuration files, those are included in the instal-nutyx script.
       <li>
-       It's time to mount all the necessary folders to be able to enter and to compile without problems the rest of the NuTyX.
+       It's time to mount all the necessary folders to be able to enter and compile the rest of the NuTyX without problems.
       <li>
-       In case of a package need to download something (for exemple the kernel) we copy the resolv.conf file from the host to be able to resolve the adress.
+       In case a package needs to download something (for example the kernel) we copy the resolv.conf file from the host to be able to resolve the address.
       <li>
        One last check before we enter the CHROOT.
       <li>
        We can now enter the CHROOT means the future NuTyX.
-       As it has still no programms at the right place, we get all kind of uggly messages.
-       The PATH must be define again so that all the binaries are found in the right order.
+       As it still has no programs in the right places, we get all kinds of ugly messages.
+       The PATH must be defined again so that all the binaries are found in the right order.
       <li>
        The PATH variable is not set properly, so we need to redefine it.
       <li>
-       We go in the right folder. We launch the compilation of the packages in the right order.
+       We go to the right folder. We launch the compilation of the packages in the right order.
       <li>
        The bash interpreter must be installed outside the chroot, so we wait until the message comes.
       <li>
-       We go out of the chroot.
+       We exit the chroot.
       <li>
-       We go in the right folder and start a loop to install all the <b>bash</b> packages.
+       We go to the right folder and start a loop to install all the <b>bash</b> packages.
       <li>
-       Again we check if it's corretly installed by.
+       Again we check if it's correctly installed.
       <li>
-       We can now return into the CHROOT means the future NuTyX. This time, they should be NO weard messages printout.
+       We can now return to the CHROOT means the future NuTyX. This time, there should be NO weird message printouts.
       <li>
-       The PATH variable is redefine</li>
+       The PATH variable is redefined</li>
       <li>
-       We go in  the right folder and relaunch the compilation of the remains packages in the right order.
+       We go to the right folder and relaunch the compilation of the remains packages in the right order.
       <li>
-       One the <b>ca-certificates</b> package is compiled and installed, the construction of your base NuTyX is done.
+       Once the <b>ca-certificates</b> package is compiled and installed, the construction of your base NuTyX is done.
     </ol>
     <h2>You need to know:</h2>
     <ol>
       <li>
        <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-        If you have an error when compiling a package, it's not a big deal, when you restart the command <b>pass</b> the script will restart where it's stops.
-        Up to you to inform us what kind of error it is.
+        If you have an error when compiling a package, it's not a big deal, when you restart the command <b>pass</b> the script will restart where it stopped.
+        It is up to you to inform us what kind of error it is.
         You can use <a class="url" href="http://webchat.freenode.net/?channels=nutyx">the irc channel</a>
         or <a class="url" href="http://forums.nutyx.org">the forum</a>.
        </div>
       <li>
        <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-        You can build the pass 2 in serverall times.
-        If you went out of the chroot, you MUST make shure to type the <u>12 et 13 commands</u> again.
-        If you did stop the PC, make shure to type <u>the command 9</u> plus commands 12 and 13.
+        You can build the pass 2 in several ways.
+        If you went out of the chroot, you MUST make sure to type the <u>12 and 13 commands</u> again.
+        If you stopped the PC, make sure to type <u>the command 9</u> plus commands 12 and 13.
        </div>
     </ol>
 <p>
   <div class="pied_page">
-   <a class="url" href="build-post">One pass 2 is done, you can start the post-construction and generation of the iso</a>
+   <a class="url" href="build-post">Once pass 2 is done, you can start the post-construction and generation of the iso</a>
   </div>

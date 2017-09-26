@@ -11,16 +11,16 @@
 
  <h2>Build my first package</h2>
   <p>
-   We will see how to build and install a first package in a very straigtforward way.
+   We will show you how to build and install a first package in a very straightforward way.
   <p>
-   This tutorial explain you in a very simple way the construction of your first binary package.
+   This tutorial explains to you in a very simple way the construction of your first binary package.
   <p>
-   They are no prerequest, this exercice can be done regardless the state of your NuTyX.
+   They are no prerequisites, this exercise can be done regardless of the state of your NuTyX.
   <p>
-   The choosen receipt is a little text editor which don't need any dependencies.
+   The chosen receipt is a little text editor which doesn't need any dependencies.
    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
-    For this package, we won't use an isolate environment named <a href="dictionary#ID100">chroot</a>.
-    We will see in the next article, how to build in such isolate environment.
+    For this package, we won't use an isolated environment named <a href="dictionary#ID100">chroot</a>.
+    We will see in the next article, how to build in isolated environments.
     Because that's the only working method if we need to build a package having dependencies.
    </div>
  <h2>Make the recept</h2>
@@ -68,7 +68,7 @@ sudo pkgmk -d</kbd></pre>
    <p>
     The <b>/etc/cards.conf</b> file will reflect the way you use NuTyX. 
    <p>
-    All the <a href="dictionary#ID010">collections</a> that you want to use in your NuTyX can be specified in two way:
+    All the <a href="dictionary#ID010">collections</a> that you want to use in your NuTyX can be specified in two ways:
      <ol>
       <li>
        configuration example of <b>cli</b> collection in  binaries from a remote server
@@ -80,16 +80,16 @@ sudo pkgmk -d</kbd></pre>
     <p>
      This file is also responsible for the list of packages you want to keep when you execute the command:
      <pre class="command"><kbd>cards base -r</kbd></pre>
-     And finaly, it's specify which locale should be installed.
+     And finally, it specifies which location should be installed.
     <p>
      You can find more information by reading the cards.conf manual
      <pre class="command"><kbd>man cards.conf</kbd></pre>     
    <h3>The /etc/pkgmk.conf file</h3>
     <p>
      This file is used when compiling news ports.
-     It specify all the variables used by the <b>pkgmk</b> command.
+     It specifies all the variables used by the <b>pkgmk</b> command.
     <p>
-     Please take the time to read the man page of pkgmk.conf
+     Please take the time to read the main page of pkgmk.conf
      <pre class="command"><kbd>man pkgmk.conf</kbd></pre>
     <h3>Example of /etc/pkgmk.conf file</h3>
 <pre class="output">export CFLAGS="-O2 -pipe"
@@ -110,7 +110,7 @@ case ${PKGMK_ARCH} in
                 ;;
 esac
 # Those settings are typically set for packaging
-# without sub packages and only french locale
+# without sub packages and only French locations
 # They are also the default ones
 #
 # PKGMK_GROUPS=()
