@@ -1,8 +1,9 @@
 <h1>Setup of an HTTP server</h1>
  <h2>Introduction</h2>
   <p>
-   An http server can be usefull if we want to test some html pages on a real browser.  
-   If we want to creare our own website localy accessible from home or why not make it public on the net.
+   An http server can be useful if we want to test some html pages on a real
+   browser or create our own website locally accessible from home or even make
+   it public on the internet.
  <h2>Packages to install</h2>
   <p>
    To install and activate the http service, you will see, it's very simple.
@@ -12,10 +13,10 @@
    That's it, the installation is already done.
  <h2>Configuration</h2>
   <p>
-   The default configuration of the apache http server is basic,  
-   it is recommended to make a customise configuration
+   The default configuration of the apache http server is basic,
+   it is recommended to customise the configuration
   <p>
-   We start to create a customised html file
+   Now we create a html file to test the server
   <p>
    In root then:
    <pre class="command"><kbd>cat &gt; /srv/www/index.html &lt;&lt; EOF
@@ -37,4 +38,4 @@ EOF</kbd></pre>
    <pre class="command"><kbd>/etc/rc.d/init.d/httpd start</kbd></pre>
    <pre class="output">  *   Starting Apache HTTP daemon... [  OK  ]</pre>
   <p>
-   You can check the result of your work by going at the URL adress: <a href=http://localhost/>http://localhost/</a> with your favorit browser
+   You can check the result of your work by going at the URL address: <a href=http://localhost/>http://localhost/</a> with your favorite browser

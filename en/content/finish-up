@@ -1,8 +1,8 @@
 <h1>Finish up your installation</h1>
  <h2>And now ?</h2>
-   You're now with a brand new base NuTyX installed.
-   If you now already how to go on to get a graphical interface you can directly check the wesite documentation.
-   If  you're wonder how to install a complete graphical interface, go on with reading.
+   Now you have a brand new base NuTyX installed.
+   If you already know how to go on to get a graphical interface, you can directly check the website documentation.
+   If  you wonder how to install a complete graphical interface, continue reading.
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
   An <a href="dictionary#ID300">alias</a> is available for that:
@@ -28,10 +28,10 @@
  Let's start then with the graphical server:
  <pre class="command_user"><kbd>get xorg</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
-    You enter now the password you specify at the installation and installation starts:
+    Now enter the password you specified during installation and installation starts:
   <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
   ...</pre>
-  You can now choose your favorit desktop.
+  You can now choose your favorite desktop.
   Under NuTyX: kde5, xfce4, mate, gnome, lxde, openbox, flwm, ratpoison, etc are available.
   <p>
       <table>
@@ -71,18 +71,18 @@
          <pre class="command_user"><kbd>get openbox</kbd></pre>
      </table>
   <p>
-   What ever your choice, you will need to install a Login manager.
+   Whatever be your choice, you need to install a Login manager.
    You can choose between lxdm and slim.
    For lxdm:
    <pre class="command_user"><kbd>get lxdm</kbd></pre>
    <p>
-    You should now install a few tools that might be very usefull, for example:
+    You should now install a few tools that might be very useful, for example:
     <pre class="command_user"><kbd>get zip unzip xdg-user-dirs gvfs ntfs-3g alsa-utils firefox libreoffice pidgin thunderbird</kbd></pre>
    <p>
     If you are using a wireless connection as default, install network-manager-applet:
     <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>And to finish up</h2>
-   The most easy way is to reboot your machine. After reboot, you will be prompt to choose your login name via lxdm or slim.
+   The easiest way is to reboot your machine. After reboot, you will be prompted to choose your login name via lxdm or slim.
    If you did install slim, you should press F1 to select the right desktop to login to.
    <pre class="command_user"><kbd>sudo reboot</kbd></pre>
  <h2>Conclusion</h2>

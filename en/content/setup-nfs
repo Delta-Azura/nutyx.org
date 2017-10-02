@@ -4,7 +4,7 @@
    NFS means <a href="https://en.wikipedia.org/wiki/Network_File_System">Network File System</a>.
    It permit you to share files between machines.
    The only condition is, all machines NEED TO support the NFS service.
-   Fortunatly all the distributions supports it.
+   Fortunately all the distributions support it.
  <h2>Packages to install</h2>
   <p>
    To setup a NFS server it's quite simple.
@@ -17,7 +17,6 @@
  <h2>Configuration</h2>
   <p>
    They are only 2 files to configure: One on the server, one on each client:
-  client:
   <p>
    In our example, it's the <b>/home/tnut/documents</b> folder we want to share:
    <h3>Server configuration</h3>
@@ -67,24 +66,23 @@ EOF</kbd></pre>
     And now the mounting test (still on the server):
     <pre class="command"><kbd>mount -o vers=3 192.168.1.20:/home/tnut/documents /root/bidon</kbd></pre>
    <p>
-    No message
-    Aucun message d'erreur ne doit apparaître. Le montage est effectué.
+    No errors should show up. The mount is done.
    <p>
-    Pour vérifier, on regarde son contenu:
+    We can check it by looking it's content:
    <pre class="command"><kbd>ls -l /root/bidon</kbd></pre>
    <pre class="output">....
-Mes lettres
-Images
+My letters
+Pictures
 MP3
 ...
 ...</pre>
    <p>
-    Le test sur le serveur est terminé. On démonte le dosier
+    The NFS server setup has been successfully tested.
+    We can unmount the folder now.
     <pre class="command"><kbd>umount /root/bidon</kbd></pre>
    <p>
-    Once umounted, you can remove the folder, if its umounted and empty the command:
+    Once umounted, the folder can be removed without any error:
     <pre class="command"><kbd>rm -d /root/bidon</kbd></pre>
-    should works without errors.
    <p>
     We can now proceed to the client tests
   <h3>On a client</h3>
