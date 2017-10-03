@@ -166,7 +166,7 @@
       The NuTyX 'base system' defines the minimum set of <a href="#ID005">packages</a> that will never be removed.
      <p>
       The list of <a href="#ID005">packages</a> to keep when we want to return to a base system is defined in the <i>/etc/cards.conf</i> file.
-      The keyword at the begining of the line is: <i>base</i>.
+      The keyword at the beginning of the line is: <i>base</i>.
     <a name='ID050'></a>
     <h2>A script</h2>
      <p>

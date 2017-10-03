@@ -2,7 +2,7 @@
  <h2>And now ?</h2>
    Now you have a brand new base NuTyX installed.
    If you already know how to go on to get a graphical interface, you can directly check the website documentation.
-   If  you wonder how to install a complete graphical interface, continue reading.
+   If  you wondering how to install a complete graphical interface, continute reading.
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
   An <a href="dictionary#ID300">alias</a> is available for that:
@@ -28,7 +28,7 @@
  Let's start then with the graphical server:
  <pre class="command_user"><kbd>get xorg</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
-    Now enter the password you specified during installation and installation starts:
+    You Now enter the password you specified at the  installation and installation starts:
   <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
   ...</pre>
   You can now choose your favorite desktop.
@@ -71,7 +71,7 @@
          <pre class="command_user"><kbd>get openbox</kbd></pre>
      </table>
   <p>
-   Whatever be your choice, you need to install a Login manager.
+   Whatever your choice, you need to install a Login manager.
    You can choose between lxdm and slim.
    For lxdm:
    <pre class="command_user"><kbd>get lxdm</kbd></pre>
@@ -83,8 +83,8 @@
     <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>And to finish up</h2>
    The easiest way is to reboot your machine. After reboot, you will be prompted to choose your login name via lxdm or slim.
-   If you did install slim, you should press F1 to select the right desktop to login to.
+   If you have installed slim, you should press F1 to select the right desktop to login to.
    <pre class="command_user"><kbd>sudo reboot</kbd></pre>
  <h2>Conclusion</h2>
   <p>
-   I suggest that you read the section on <a href="base-commands">the base commands</a> so that you can go further with your installation.
+   I suggest that you read the section on <a href="base-commands">the base commands</a> to enable you to go further with your installation.
