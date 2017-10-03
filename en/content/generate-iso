@@ -1,5 +1,5 @@
     <h1> Produce a customised ISO</h1>
-     <div class="note"><img alt="[NOTE IMPORTANTE]" src="../graphics/note.gif"/>All the commands should be entered as root</div>
+     <div class="note"><img alt="[NOTE IMPORTANT]" src="../graphics/note.gif"/>All the commands should be entered as root</div>
        <h2>Installation of a NuTyX system</h2>
          <h3>The "LFS" variable MUST be defined</h3>
           <p>In this demonstration the chroot will be in the &quot;/ISO-NuTyX&quot; directory, but you may choose a different name<p>

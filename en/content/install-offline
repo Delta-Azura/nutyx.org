@@ -8,8 +8,8 @@
     </div>
     <div class="note">
      <img alt="[Note]" src="../graphics/note.gif" />
-      The boot procedure is not explain in this topic.
-      Means that the machine have already a boot process and  
+      The boot procedure is not explained in this topic.
+      This means that the machine already has a boot process and  
       you only need to adjust the <b>/boot/grub/grub.cfg</b> file
       and add a new entry <u>NuTyX on /dev/sda4</u>.
     </div>
@@ -20,9 +20,8 @@
     <div class="important">
      <img alt="[Important]" src="../graphics/caution.gif" />
      <img alt="[Important]" src="../graphics/caution.gif" />
-      The writer is not responsible for lost of datas that could happens
-      because a fault manipulation.
-      This topic is for advice target audiance.
+      The writer is not responsible for lost of any data that could happen due to a fault manipulation.
+      This topic is for advice target audience.
     </div>
     <p>
     How to proceed:
@@ -30,7 +29,7 @@
       <li>
        Mount the destination partition
       <li>
-       Retrieve all the binaries packages from base collection
+       Retrieve all the binary packages from base collection
       <li>
        Download and check the installation script from the download server
       <li>
@@ -38,21 +37,20 @@
       <li>
        Installation of NuTyX
       <li>
-       Update grub for accept the new NuTyX
+       Update grub to accept the new NuTyX
      </ol>
 
    <h2>Mount the destination partition</h2>
 
     <p>
      In this article the destination partition will be <b>/dev/sda4</b>.
-     A minimum of 15 Gbytes size will allows you to install all the available graphical interfaces today 
-     <b>xfce4, lxde, gnome, mate and kde5</b> and will give you the possibility to add a set of 
-     applications frequently used.
+     A minimum size of 15 Gbytes will allow you to install all the available graphical interfaces
+     <b>xfce4, lxde, gnome, mate and kde5</b> and will give you the possibility of adding a set of frequently used applications.
     <p>
-     When the script is running it use some variables. The most important one is:
+     When the script is running it uses some variables. The most important one is:
     <pre class="output">LFS</pre>
     <p>
-     We will then redefine this variable so that the script can use it:
+     We will redefine this variable so that the script can use it:
     <pre class="command"><kbd>export LFS=/mnt/NuTyX</kbd></pre>
     <p>
      We format the destination partition.
@@ -60,49 +58,49 @@
      Ext4 gives us the possibility to avoid the use of an initrd
     <pre class="command"><kbd>mkfs.ext4 /dev/sda4</kbd></pre>
     <p>
-     We mount the formated partition on the folder define by the LFS variable.
+     We mount the formatted partition on the folder define by the LFS variable.
     <pre class="command"><kbd>mkdir -p $LFS
 mount /dev/sda4 $LFS</kbd></pre>
     <p>
      Everything is now ready to retrieve all the binaries needed for the installation of NuTyX.
 
-  <h2>Retrieve all the binaries packages from base collection</h2>
+  <h2>Retrieve all the binary packages from base collection</h2>
 
     <p>
      This command needs <b>rsync</b>.
      Make sure it's installed on your distribution.
     <p>
-     An bootable base NuTyX need only the <b>base</b> collection,
-     we will then first downloads only those two collections.
+     A bootable base NuTyX needs only the <b>base</b> collection,
+     we will first download only these two collections.
     <p>
      We put them directly in the right place:
     <pre class="command"><kbd>mkdir -p $LFS/var/lib/pkg/depot
 rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/9.0/base/ \
 $LFS/var/lib/pkg/depot/base/</kbd></pre>
      <p>
-      Once this command finish, we will now download th installation script from the server.
+      Once this command is completed, we will download the installation script from the server.
 
    <h2>Download and check the installation script from the download server</h2>
 
     <p>
-     We need the command <b>wget</b> for the download.
-     Make sure you have it install on your distribution
+     We will use the command <b>wget</b> for the download.
+     Make sure you have it installed on your distribution
     <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
     <p>
-     We check integrity of the script before we use it.
+     We will check the integrity of the script before we use it.
     <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
     <pre class="output">install-nutyx: OK</pre>
     <p>
-     Before we launch the script with the corrects variables, we need to put the <b>/etc/install-nutyx.conf.d/cards.conf</b> file in the right place.
+     Before we launch the script with the correct variables, we need to put the <b>/etc/install-nutyx.conf.d/cards.conf</b> file in the right place.
 
    <h2>Put the /etc/install-nutyx.conf.d/cards.conf file in place</h2>
 
     <p>
      The <b>install-nutyx</b> script can use preconfiguration of some files.
-     It means if it find one of thoses files in the <b>/etc/install-nutyx.conf.d/</b>,
-     the script will used the found one instead of the internal one of the script.
+     This means if it finds one of those files in the <b>/etc/install-nutyx.conf.d/</b>,
+     the script will used the one found instead of the internal one of the script.
      We will then adapt the <b>cards.conf</b> file of our NuTyX for an "offline" installation
-     by mentionning the only collection available for the installation
+     by mentioning the only collection available for the installation
     <b>base</b> <u>without specifying the download URL</u>.
     <pre class="command"><kbd>mkdir -p /etc/install-nutyx.conf.d
 cat &gt; /etc/install-nutyx.conf.d/cards.conf  &lt;&lt; EOF
@@ -116,13 +114,13 @@ EOF</kbd></pre>
    <h2>Installation of NuTyX</h2>
 
     <p>
-     If you proceed as mentionned above, the installation can be launch via the downloaded script:
+     If you proceed as mentioned above, the installation can be launched via the downloaded script:
     <pre class="command"><kbd>bash install-nutyx</kbd></pre>
     <p>
      The installation is using the <b>/dev/sda4</b> partition mounted on
      <b>/mnt/NuTyX</b> folder.
     <p>
-     They should be no downloading.
+     There should be no downloading.
     <pre class="output">....
 ...
 ..
@@ -137,18 +135,17 @@ EOF</kbd></pre>
 * Check http://www.nutyx.org/en/documentation.html *
 * or http://www.nutyx.org/fr/documentation.html    *
 *                                                  *
-* Make sure to review /etc/cards.conf              *
-* to meet your requirements in packages selection  *
+* Make sure you review /etc/cards.conf             *
+* to confirm your requirements in the packages     *
+* selection  						     *
 *                                                  *
 ****************************************************</pre>
 
-   <h2>Update grub for accept the new NuTyX</h2>
+   <h2>Update grub to accept the new NuTyX</h2>
     <p>
-     Adjust the <b>/boot/grub/grub.cfg</b> configuration file by adding following entry:
+     Adjust the <b>/boot/grub/grub.cfg</b> configuration file by adding the following entry:
     <pre class="output">menuentry "NuTyX x86_64 ext4 on /dev/sda4" {
  set root=(hd0,4)
  linux /boot/kernel root=/dev/sda4 ro quiet 
 }</pre>
-
-
 

@@ -6,7 +6,7 @@
       is a set of utilities to manage the installed software on your NuTyX Linux system.
      <p>
       Cards can manage <a href="#ID006">dependencies</a> for compilation and handles runtime <a href="#ID006">dependencies</a> on its own.
-      This means that in 95% of all cases, runtime <a href="#ID006">dependencies</a> for a working app do not need to to be specified in the build.
+      This means that in 95% of all cases, runtime <a href="#ID006">dependencies</a> for a working app do not need to to be specified in the build recipe.
      <a href="#ID060">recipe</a>.
     <a name='ID005'></a>
     <h2>A package</h2>

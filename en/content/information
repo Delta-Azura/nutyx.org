@@ -2,14 +2,14 @@
     <h2>NuTyX licenses</h2>
     <p>NuTyX is built using various licenses</p>
     <h3>The packages used in NuTyX</h3>
-    <p>As NuTyX is a GNU/linux distribution, it contains software written by a large number of developers around the world. Therefore many packages will have different licenses chosen by their authors. To know the type of the license used, please consult the source code of the package concerned.</p>
+    <p>As NuTyX is a GNU/linux distribution, it contains software written by a large number of developers around the world. Therefore many packages will have different licenses chosen by their authors. To know the type of license used, please consult the source code of the package concerned.</p>
     <h3>The Scripts</h3>
      <p>
-      Scripts that come from the project Linux From Scratch are licensed under <a class="url" href="http://lfs.traduc.org/view/lfs-svn/appendices/creat-comm.html" target="_blank" title="Lire dans une autre fenêtre">Creative Commons License 2.0.</a>
+      Scripts that come from the project Linux From Scratch are licensed under <a class="url" href="http://lfs.traduc.org/view/lfs-svn/appendices/creat-comm.html" target="_blank" title="Lire dans une autre fenÃªtre">Creative Commons License 2.0.</a>
       Some of these scripts have been adjusted for the needs of NuTyX by the Founder Thierry Nuttens.
     <h3>The Installer (MINI iso)</h3>
     <p>
-     The installer is built from scratch by The Founder Thierry Nuttens and is licensed under the GPL <a class="url" href="http://www.gnu.org/copyleft/gpl.html" target="_blank" title="Lire dans une autre fenêtre">http://www.gnu.org/copyleft/gpl.html</a></p>
+     The installer is built from scratch by The Founder Thierry Nuttens and is licensed under the GPL <a class="url" href="http://www.gnu.org/copyleft/gpl.html" target="_blank" title="Lire dans une autre fenÃªtre">http://www.gnu.org/copyleft/gpl.html</a></p>
     <h2>The Team</h2>
     <p>
      We have a team of commendable and dedicated people who spend much of their free time keeping this project alive.
@@ -29,7 +29,7 @@
     <h3>Guth</h3>
     <p>
      <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
-     We in the team are indebted to his awesome work. Tanks again Guth for your excellent and continued support.
+     We in the team are indebted to his awesome work. Thanks again Guth for your excellent and continued support.
    <h3>Guy</h3>
      <p>
       <b>Guy</b> He gives us very important and valuable advice.
@@ -41,7 +41,7 @@
     <p>
      <b><a class="url" href="https://github.com/sh4d0w31410?tab=activity">Sh4dOw</a></b> packager of the enlightenment and enlightenment-extra collections.
     <p>
-     <b>Peter Peter(1000)</b> has collaborates on <a class="url" href="dictionary#ID000">cards</a> , the package manager of NuTyX.
+     <b>Peter Peter(1000)</b> has collaborated on <a class="url" href="dictionary#ID000">cards</a> , the package manager of NuTyX.
     <p>
      <b>Alienus (fredg)</b> packager for various packages, works on the forum and on the web site.
     <p>
@@ -49,13 +49,13 @@
     <p>
      <b>Timcowchip</b> packager for various packages.
     <p>
-     <b>John</b> english editor of NuTyX.
+     <b>John</b> English editor of NuTyX.
     <p>
      <b>Jmilot</b> packager for various packages.
     <p>
      <b>Fanch</b> packager for various packages.
     <p>
-     <b>Piernov</b> packager for various packages, and works on the startup scripts, the forum and on the web site.
+     <b>Piernov</b> packager for various packages, also works on the startup scripts, the forum and on the web site.
     <p>
      <b>Geantbrun</b> openbox packager.
     <p>

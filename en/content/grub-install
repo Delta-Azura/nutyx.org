@@ -5,7 +5,7 @@
    <p>
     It is not necessary to have NuTyX installed; you can install GRUB to any other distribution.
    <p>
-     Restart the PC and boot the Iso
+     Restart the PC and boot the ISO
    <p>
      <img src="graphics/grub-install/SelectLanguage.png" alt="Figure 1: Iso bootup" title="Figure 1: Iso bootup"/>
    <p>

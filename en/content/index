@@ -10,13 +10,13 @@
     <p>
      We recommend that potential users first acquire some knowledge about the GNU/Linux system.
     <p>
-     It's an excellent operating system for persons who want to commit themselves in developing their skills further and learn how a Linux system is put together.
+     It's an excellent operating system for people who want to commit themselves in developing their skills further and learn how a Linux system is put together.
     <p>
      NuTyX offers the <a href="http://www.gnome.org">GNOME</a>, <a href="http://www.mate-desktop.com">MATE</a>, <a href="http://www.lxde.org">LXDE</a>, <a href="http://www.kde.org">KDE5</a> and <a href="http://www.xfce.org">XFCE</a> in binary form.
     <p>
      Details <a href="documentation">instructions</a> are available online
     <p>
-     NuTyX use it's own <a href="dictionary#ID005">package manager</a> named <a href="dictionary#ID001">CARDS</a>.
+     NuTyX uses its own <a href="dictionary#ID005">package manager</a> named <a href="dictionary#ID001">CARDS</a>.
     <p>
      It is up to <a href="faq#4">you to decide</a> whether to use the <a href="dictionary#ID070">ports</a> system to compile and install your own source <a href="dictionary#ID005">packages</a> or to be content with the binary packages that are natively integrated into the system.
     <div style="font-size:150%"><b>
@@ -38,7 +38,7 @@
       <li>
        A very simple method called <b>porting</b> allows you to download a <a href="dictionary#ID060">recipe</a> from our repositories.
        This recipe is very similar to the scripts used in CRUX, and is usually less than 10 lines long.
-       It can also determine and apply all needed <a href="dictionary#ID006">Dependencies</a>.
+       It can also determine and apply all required <a href="dictionary#ID006">Dependencies</a>.
       <br>
       <br>
       <li>
@@ -57,14 +57,14 @@
       <br>
       <br>
       <li>
-       It has unique installation coding, that prevents the NuTyX installer from FORMATTING the target partition.
+       It has unique installation coding, which prevents the NuTyX installer from FORMATTING the target partition.
        This means that NuTyX can be installed on a partition containing data: (for example) personal files and various non-system folders.
       <br>
       <br>
       <li>
        It has a very powerful, yet simple command which allows you to revert to <a href="dictionary#ID040">the base system</a> and completely change the graphical user interface (for example from KDE to XFCE).
        This makes it unnecessary to reinstall or download every <a href="dictionary#ID005">package</a> again. 
-       The already downloaded <a href="dictionary#ID005">packages</a>  will be simply be reinstalled automatically if still uptodate.
+       The already downloaded <a href="dictionary#ID005">packages</a>  will simply be reinstalled automatically if still up to date.
       <br>
       <br>
       <li>
