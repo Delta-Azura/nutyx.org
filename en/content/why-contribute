@@ -1,4 +1,4 @@
- <h1><span>Why should you contribute ?</span></h1>
+ <h1><span>Why should you contribute?</span></h1>
 <div class="introduction">
   Today NuTyX has about <a href="packages" title="Read in another windows" class="external" onclick="window.open(this.href); return false;">1,400 applications</a> available in binary form.
   In one sense, that's a lot.
@@ -6,13 +6,13 @@
  </div>
  <p>
   It's clear that you will never see all these programs ready for installation on NuTyX.
-  Just using the <a href="https://github.com/">github</a> web site, we can find more then 52,000,000 repositories for all platforms. 
+  Just using the <a href="https://github.com/">github</a> web site, we can find more than 52,000,000 repositories for all platforms. 
  <p>
   If you find the application of your dreams,
   you will have to find all the dependencies,
   compile it yourself,
   install it and make it work on NuTyX.
-  That why we are asking you to contribute a little bit.
+  That is why we are asking you to contribute a little bit.
   It is you who will build the package... if you want to of course.
 <p>Building an application is often something like:</p>
 <ul>

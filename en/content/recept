@@ -7,7 +7,7 @@
     This means that this directory must contain as a minimum a file named <b><span style="color: #007a00;">Pkgfile</span></b>.
     The building of the package will be controlled by the contents of this file. It contains all the information necessary to compile and install the package from source.
    <p>
-    The name <b>port</b> comes from the BSD world where a port refer to software &quot;ported&quot; to another operating system or platform.
+    The name <b>port</b> comes from the BSD world where a port refers to software &quot;ported&quot; to another operating system or platform.
     In our case, the port is simply the definitions for building a package.
   <h2>Minimal syntax of a port</h2>
    <p>
@@ -89,7 +89,7 @@ build() {
     <p>
      If you want to make sure that the build bot is able to compile the package without any problems, it's important to specify all the dependencies needed for the compilation of the package.
      Dependencies starting from the NuTyX base are always included.
-     Indeed the bot will always build the package by starting from  the NuTyX base.
+     Indeed the bot will always build the package by starting from the NuTyX base.
     <p>
      The line <b># Depends on: </b> is used for this purpose.
      It defines all the needed dependencies for the <b>compilation</b> of the package.

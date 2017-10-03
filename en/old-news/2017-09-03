@@ -12,27 +12,27 @@
 
 <p>
  Une nouvelle iso 64 bits est disponible.
- A new 64 bits iso is available. It's size is 253 MB on <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+ A new 64 bits ISO is available. Its size is 253 MB on <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
 
 <h2>Major update of NuTyX</h2>
  <p>
-  This new version is the result of more then 4 month of work. Updating from 9.0 version is maybe possible, but risky.
-  NuTyX recomnmand you to make a new installation. 
+  This new version is the result of more than 4 months of work. Updating from version 9.0 is maybe possible, but risky.
+  NuTyX recommend you make a new installation. 
 <h2>ISOs news</h2>
 <p>
- This iso can works in live mode, means that if you have enough RAM,
+ This ISO can also work in live mode, meaning that if you have enough RAM,
  it won't be necessary to install NuTyX, you can try it out entirely in RAM.
  <p>
-The USB key can then be disconnected and then make the single USB port available free.
-Usefull when you want to install NuTyX on tablets having one single USB port. 
+The USB key can then be disconnected thus making the single USB port available free.
+Useful when you want to install NuTyX on tablets that have one single USB port. 
 
 <h2>Main components of the toolchain are now up to date.</h2>
 <p>
  Main components of the toolchain that are kernel-header, compiler, linker, assembler and C library are now up to date.
- Respective version of each element are availables in the list below. 
+ Respective versions of each element are available in the list below. 
 
 <p>
- Number of officials collections is now back to 13 collections: :
+ Number of official collections is now back to 13 collections: 
  <ul>
   <li>
     base
@@ -99,7 +99,7 @@ Usefull when you want to install NuTyX on tablets having one single USB port.
  <h2>Thanks</h2>
 
  <p>
-  Thanks to Greg for his works on collections..
+  Thanks to Greg for his works on collections.
  <p>
   Thanks to Jayce for his work on gnome and mate.
  <p>

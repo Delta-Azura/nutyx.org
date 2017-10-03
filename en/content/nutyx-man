@@ -28,7 +28,7 @@
        <li>
         the manual loading of the kernel modules,
        <li>
-        adjusting the file taking care of the boot process.
+        adjusting the file taking care of the booting up process.
       </ul>
     </div>
    <p>
@@ -118,11 +118,11 @@ eth1       IEEE 802.11abg
      In the example above, the eth1 card supports WiFi.
      We just have to provide the configuration file which will be used by the network connection.<p> <b>ATTENTION:</b> it is important to name the configuration file correctly so that the script can find it.
      In this example, the name of the card is <b>eth1</b>, the name of the WiFi network is <b>casabianca</b> and the access key will be <b>Gg6!-@1234</b>.
-     From this information, we create the configuration file:
+     From this information, we created this configuration file:
     </div>
      <pre class="command"><kbd>wpa_passphrase "<b>casabianca</b>" "<b>Gg6!-@1234</b>" &gt; /etc/wpa_supplicant.conf.eth1</kbd></pre>
     <div>
-     Then we add the configuration file as explained in the manual configuration section.
+     Then we add the configuration file as explained in the manual under the configuration section.
      In this example, we have to create the file <b>/etc/sysconfig/ifconfig.eth1</b>.
      Once this is done, you can restart the network by restarting the service:
 <pre class="command"><kbd>/etc/rc.d/init.d/network restart</kbd></pre> Make sure you adjust the definition of the variable <b>MANAGER</b> as defined in the file <b>/etc/sysconfig/network</b>. The management of the network service can be done through the command line. The value of the variable is then <b>cli</b>. If you want to use wicd, put <b>wicd</b> as a value; if networkmanager (which comes with the gnome graphical interface), then put <b>networkmanager</b>.</div><p>
@@ -146,10 +146,10 @@ rm -r *</kbd></pre>
       The <b>home</b> folder is now empty and ready to become a mount point for the real home partition.
      </div>
      <div>
-      The file <b>/etc/fstab</b> defines the mount points of partition devices when the machine boots.
+      The file <b>/etc/fstab</b> defines the mount points of partition devices when the machine boots up.
       You will probably want to use a partition or a disk or even a NFS folder to store the personal data of the registered users on this machine.
-      In our example, GRUB is on the first partition, NuTyX roots is on the second partition, the swap partition is the third.
-      The file <b>/etc/fstab</b> of our example initially contains following information:
+      In our example, GRUB is on the first partition, NuTyX rootfs is on the second partition, the swap partition is the third.
+      The file <b>/etc/fstab</b> of our example initially contains the following information:
      </div>
      <pre class="output"># file/device   mountpoint  type      options    dump fsck order
 ...
@@ -172,7 +172,7 @@ rm -r *</kbd></pre>
       The values of rsize and wsize have the default values.
       Feel free to experiment with your own values for these.
       Make sure the package <b>nfs-utils</b> and the associated services are launched.
-      Note that version 3 of NFS has been chosen.
+      Note that the version 3 of NFS has been chosen.
      </div>
      <div>
       You should not see any error messages during the mount operation. You can check the result by using the command:
@@ -210,7 +210,7 @@ tar xf /root/users.tar</kbd></pre>
 <pre class="command"><kbd>mkswap /SWAP
 swapon /SWAP</kbd></pre>
       <div>
-       Finally we add an entry for this in the <b>/etc/fstab</b>:
+       Finally we add an entry for it in the <b>/etc/fstab</b>:
       </div>
 <pre class="command"><kbd>echo "/SWAP     swap       swap     pri=1       0        0" &gt;&gt; /etc/fstab</kbd></pre>
      <li><h3>Creating a new user account</h3></li>
@@ -278,7 +278,7 @@ swapon /SWAP</kbd></pre>
         The link <b>/etc/localtime</b> defines your time zone.
         To find out the various possibilities for Europe, for example, use the command:
 <pre class="command"><kbd>ls /usr/share/zoneinfo/Europe</kbd></pre> Then adjust the link to match the city closest to your location. For example, the command:
-<pre class="command"><kbd>sudo ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime</kbd></pre> will define Rome as the city of your region.</div><p>
+<pre class="command"><kbd>sudo ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime</kbd></pre> will define Rome as city of your region.</div><p>
       <li><h3>Configuring the boot process</h3></li>
        <div>
         If you used an ISO image to install NuTyX and you installed GRUB as your bootloader, its configuration file is located in <b>/boot/grub/grub.cfg</b>.
@@ -304,10 +304,10 @@ swapon /SWAP</kbd></pre>
         This would allow you to carry out maintenance tasks on this partition.
        </div>
        <div>
-        If the bootloader is not yet installed, (for example because you installed NuTyX from a script rather than from an ISO image), you can install grub separately by specifying <b>the disk</b> on which the NuTyX partition is located. In our example below, we will use the following command:</div>
+        If the bootloader is not yet installed, (for example because you installed NuTyX from a script rather than from an ISO image), you can install grub separately by specifying <b>the disk</b> on which which the NuTyX partition is located. In our example below, we will use the following command:</div>
        <pre class="command"><kbd>sudo grub-install /dev/sdb</kbd></pre>
        <div>
-        Adjust according to your settings
+        Ajust according your settings
        </div>
        <p>
       <li><h3>Manual loading of the kernel modules</h3></li>
@@ -330,19 +330,19 @@ Sometimes it is necessary to blacklist a module that is causing problems, to pre
       If you run into a problem, Linux automatically produces a variety of log files which can provide useful information.
       There is a record of the boot process in <b>/var/log/boot.log</b> and more complete system messages in <b>/var/log/sys.log</b>.
       A record of the last start-up of the X server is in the file <b>/var/log/Xorg.0.log</b>.
-      Most of the services have their own logs. If you have a ssh connection problem, some info will be found in the file <b>/var/log/auth.log</b> of the ssh server.
+      Most of the services have there own logs.If you have a ssh connection problem, some info will be found in the file <b>/var/log/auth.log</b> of the ssh server.
       To find out about installed binary packages, check the file <b>/var/log/cards.log</b>. 
      </div>
      <p>
   <li><h2>BINARY PACKAGE MANAGEMENT (REMOTE)</h2></li>
      <ol><li><h3>Configuration of cards</h3></li>
        <div>
-        The file <b>/etc/cards.conf</b> defines the behaviour of the <b>cards</b> package manager.
+        The file <b>/etc/cards.conf</b> defines the behavior of the <b>cards</b> package manager.
         Each line in this file is a &lt;variable&gt; &lt;value&gt; pair
        </div>
          <li><h3>Commands to know</h3></li></ol>
 The <b>cards</b> command has a lot of possible options. Only a few are listed here.
-To get complete help the information, use the command:
+To get complete help information, use the command:
 <pre class="command"><kbd>cards help</kbd></pre>
 <div>Any options that modify your installation must be used from the administrator (root) account or via the <b>sudo</b> command.</div><p>
 Synchronisation, to check the available updates.
@@ -373,13 +373,13 @@ Print out a list of out-of-date packages. This will also show packages which hav
     These commands modify your installation, so they need root access.(su -)
    </div>
    <div>
-    To get access to these commands, you need to install the <b>cards.devel</b> package:
+    To get access to thoses commands, you need to install the <b>cards.devel</b> package:
 <pre class="command"><kbd>get cards.devel</kbd></pre>
     <ol><li><h3>Configuration of pkgadd</h3></li>
      <div>
       The file <b> /etc/pkgadd.conf </b> defines the installation and upgrade rules for binary packages.
       It contains three columns: EVENT, PATTERN and ACTION. The EVENT column describes the type of situation to which this rule applies.
-      Currently there are two types of events: UPGRADE and INSTALL. UPGRADE rules are applied when a package is installed over an existing version, and INSTALL rules are applied in all cases.
+      Currently there are two types of events: UPGRADE and INSTALL. UPGRADE rules are applied when a package is installed over an existing version, and INSTALL rules  are applied in all cases.
       The pattern is a regular expression representing a class of files.
       The action applicable to both the UPGRADE and INSTALL event is YES and NO.
       More than one rule of the same event type is allowed, in which case the first rule will have the lowest priority and the last rule will have the highest priority.
@@ -392,7 +392,7 @@ UPGRADE         ^etc/X11/XF86Config$    NO</pre>
      <div>
       The above example will prevent pkgadd from upgrading anything in /etc/ or /var/log/ (subdirectories included), except files in /etc/X11/ (subdirectories included).
       However the file /etc/X11/XF86Config is not to be updated.
-      The default rule is to upgrade/install everything, rules in this file are exceptions to that rule.
+      The default rule is to  upgrade/install everything, rules in this file are exceptions to that rule.
       (NOTE! A pattern should never contain an initial "/" since you are referring to the files in the package, not the files on the disk.)
       If pkgadd finds that a specific file should not be upgraded it will install it under <b>/var/lib/pkg/rejected/</b>.
       The user is then free to examine/use/remove that file manually.
@@ -422,7 +422,6 @@ Find out the owner of a filename
       The order defines the order in which directories will be searched for recipes.
       If a recipe is available in two directories, the first one listed will always be used.
      </div>
-
        <li><h3>Commands you need to know</h3></li></ol>
 List dependencies of a package and see if they are installed.
 <pre class="command"><kbd>cards deptree package</kbd></pre>
@@ -459,7 +458,7 @@ Restarting the service (this option is not available for all services).
      <b>WEB site:</b> http://www.nutyx.org
     </div>
     <div>
-       <b>Users Forums</b> http://forums.nutyx.org
+       <b>User's Forums</b> http://forums.nutyx.org
     </div>
 
    <li><h2>FILES</h2></li>
@@ -482,7 +481,7 @@ Here are listed the configuration files mentioned in this manual. You may like t
      Thierry Nuttens &lt;tnut ~AT~ nutyx dot org&gt;
     </div>
    <li><h2>SEE ALSO</h2></li>
-main pages of
+man pages of
     <pre class="output">nutyx(8), cards(8), pkgmk(8) pkgadd(8),
 cards.conf(5), pkgmk.conf(5), pkgrm(8), pkginfo(8), modprobe(8), modprobe.conf(5),
 useradd(8), userdel(8)</pre>
