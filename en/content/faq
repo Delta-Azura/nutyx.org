@@ -5,14 +5,14 @@
      It's done in a few steps:
      <ul>
       <li>
-       You send a email to one of &lt;mailing_list_name&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> for example) by specifying:
-       <b><i>subscribe</i></b> as subjet.
+        send a email to one of &lt;mailing_list_name&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> for example) by specifying:
+       <b><i>subscribe</i></b> as the subject.
       <li>
-       You will receive a confirmation mail. Check your spam mails.
+       You will receive a confirmation mail. Check your spam mail.
       <li>
        Simply answer this last email by choosing "Reply" on your favorite email software.
       <li>
-       After a few minutes you will receive a last email that confirm you are register on the mailing-list
+       After a few minutes you will receive an  email that confirms you are registered on the mailing-list
       </ul>
       <table>
        <caption><EM>Available Mailing Lists:</EM></caption>
@@ -46,7 +46,7 @@
    <h2>The installer doesn't allow me to specify a separate /home partition</h2>
     <p>
      This question has been asked many times.
-     I will try to answer it as far as possible.
+     I will try to answer it as clearly  as possible.
     <p>
      Modern users often have a lot of data on their computers.
      The size of the home folder can quickly become very large.
@@ -74,12 +74,12 @@
 
    <h2>Building packages in a chroot. When and Why ?</h2>
     <p>
-     The NuTyX ISO install a base system which give the user's choice between two scenarios in using the distribution:
+     The NuTyX ISO install a base system which give the user a choice between two scenarios in using the distribution:
       <h3>NuTyX can be considered as a "binaires" distribution.</h3>
 
-       The user install the needed binaries packages by downloads them from the remote server.
+       The user install the needed binaries packages by downloading them from the remote server.
       <p>
-       Once the base system is installed, the user install it's favorits applications as explain in the online documentation.
+       Once the base system is installed, the user installs their favourite applications as explain in the online documentation.
       <p>
        A typical installation look like:
        <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
@@ -89,10 +89,10 @@
        <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
         if the user want to compile a package not available in binaries,
         <a href="build-in-chroot">he (she) will have to compile thoses packages in a chroot</a>,
-        otherwise the compilation will always fails because of missing dependancies.
+        otherwise the compilation will always fails because of missing dependencies.
        </div>
      <h3>NuTyX can be considered as a "sources" distribution</h3>
-       The user compile all the packges he needs on the local machine.
+       The user compile all the packages they  need on the local machine.
       <p>
        Once the base system installed, the user install the development tools:
        <pre class="command_user"><kbd>get cards.devel</kbd></pre>
@@ -115,7 +115,7 @@ dir /usr/ports/cli-extra
 dir /usr/ports/base
 base /usr/ports/base
 logdir /var/log/pkgbuild</pre>
-      And can now compile the needed packages <u><b>without being in a chroot</b></u>.
+      And can now compile the required packages <u><b>without being in a chroot</b></u>.
       So for example, to compile the graphical server xorg:
       <pre class="command_user"><kbd>sudo cards depcreate xorg</kbd></pre>
 
@@ -127,7 +127,7 @@ logdir /var/log/pkgbuild</pre>
 
    <h2>How to activate the root account ?</h2>
     <p>
-     As default, NuTyX does not activate the root account, but if you wish to compile yours own packages, it's maybe a good activate the root account.
+     As default, NuTyX does not activate the root account, but if you wish to compile yours own packages, it's may be a good activate the root account.
      It's very simple, type:
      <pre class="command_user"><kbd>nu</kbd></pre>
      and choose <b>root</b> as user
