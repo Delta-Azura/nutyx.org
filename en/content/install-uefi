@@ -1,18 +1,18 @@
   <h1>Typical installation of NuTyX on a single partition in UEFI mode</h1>
    <p>
-    Thoses screenshots shows you a typical installation on a single partition in UEFI mode.
+    These screenshots shows you a typical installation on a single partition in UEFI mode.
     We have a disk of 8 Gbytes.
     The first partition is the UEFI reserved partition.
-    It has to be a EFI type and will be formated (automaticaly after asking) in vfat.
+    It has to be an EFI type and will be formated (automaticaly after asking) in vfat.
     The size of this partition is 500Mb.
-    The second partition is the swap partition of a 2 Gbytes size.
+    The second partition is the swap partition of 2 Gbytes .
     The rest of the disk space will be available for the NuTyX install partition.
    <p>
-    A minimum of 1 Gigabyte RAM is best suited. We assume that you have already burnt the ISO onto a CD.
+    A minimum RAM of 1 Gigabyte is best suited. We assume that you have already burnt the ISO onto a CD.
    <p>
     If you prefer, you can prepare a NuTyX bootable USB flash-drive.  Either option will work.
    <p>
-    You also have a blank hard drive.
+    You should also have a blank hard drive.
    <p>
     Now we will begin, using screen-shots that will show you a typical installation on a single partition:
 
@@ -62,10 +62,10 @@
 
    <h2>Configure NuTyX</h2>
     <p>
-     Once installed, NuTyX automatically start its configuration dialog without  having to reboot.
+     Once installed, NuTyX automatically start its configuration dialog without having to reboot.
     <p>
      The configuration is very straightforward: network card configuration, setting date and time, and modification of the default password of the 
-administrator account <b>root</b>.
+administrator  <b>root</b> account.
      <table align="center">
       <tr><td><img src="graphics/install/Init1.png"></td></tr>
       <tr><td><img src="graphics/install/ConfigureEth0.png"></td></tr>
