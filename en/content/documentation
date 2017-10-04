@@ -43,7 +43,7 @@
       <a class="url" href="finish-up">Finish up your installation</a>
     </td>
     <td width="70%">
-     Installation of a graphical interface and a few usefull tools to make your NuTyX really usable.
+     Installation of a graphical interface and a few useful tools to make your NuTyX really usable.
     </td>
    </tr>
    <tr class="even">
@@ -60,7 +60,7 @@
     </td>
     <td width="70%">
      This installation use a script available for download.
-     Ones this script and all the necessaries packages downloaded,
+     Once this script and all the necessary packages are downloaded,
      this tutorial explains how to install NuTyX from another distribution
      or even from an already installed NuTyX without the need of a network connection.
     </td>
@@ -95,7 +95,7 @@
     <td>
      This litte guide explains how to setup an HTTP server with NuTyX.
      An http server can be usefull if we want to test some html pages on a real browser.
-     If we want to creare our own website localy accessible from home or why not make it public on the net.
+     If we want to create our own website localy accessible from home or why not make it public on the net.
     </td>
     <td  width="30%">
     <a href="https://youtu.be/WktCx1RCh9o?list=PLYbkwaRjlNz9nAh0EvoSzoGv07ALq3VXt"><img src="../../graphics/documentation/setup-http.jpg" width="160" height="100"></a>
@@ -107,9 +107,9 @@
     </td>
     </td>
     <td>
-     This little guide explains hot to setup an NFS server on NuTyX.
-     NFS gives you the possibilities to share folders between linux computers.
-     The only condition is that all the concerned computers should run NFS.
+     This little guide explains how to setup an NFS server on NuTyX.
+     NFS gives you the possibility to share folders between linux computers.
+     The only condition is that all the computers concerned should run NFS.
      We can say we are lucky all the distributions support it.
    </td>
     <td width="30%">
@@ -155,7 +155,7 @@ really, because every day new programs are released on the Internet, mostly unde
     </td>
     <td width="70%">
      You do not need to be a programmer to contribute.
-     A basic knowledge of the bash scripting language suffices.
+     A basic knowledge of the bash scripting language will suffice.
      If you know nothing about bash, this article will explain the basis for writing a <a class="url" href="dictionary#ID050">script,</a> without going 
 insane. 
    </tr>
