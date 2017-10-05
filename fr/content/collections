@@ -1,0 +1,152 @@
+<h1>Les différentes collections</h1>
+ <h2>Introduction</h2>
+   Il existe de nombreux synonymes pour définir un jeu de paquets dans le jargon informatique.
+  <p>
+   Sous NuTyX, un jeu de paquets est regroupé dans une collection.
+  <p>
+   Une collection possède 3 propriétés fondamentales:
+   <ul>
+     <li>
+      Indépendante
+     <li>
+      Hiérachisée
+     <li>
+      Interdépendance entre elles
+   </ul>
+   Même si ces trois propriétés peuvent paraître contradictoires, on verra dans cet article pourquoi elles sont justifiées.
+     
+ <h2>Définition</h2>
+   Sous NuTyX, une collection regroupe un ensemble de recettes et de paquets binaires.
+   Cet ensemble fournit certaines fonctionnalitées.
+   Ces fonctionnalités sont classées de la façon suivante:
+   <ul>
+    <li>
+     Librairies et utilitaires pour un système de base
+    <li>
+     Librairies et utilitaires pour une interface en ligne de commande (CLI)
+    <li>
+     Librairies et utilitaires pour une interface graphique (GUI)
+    <li>
+     Librairies et utilitaires supplémentaires pour une interface en ligne de commande (CLI)
+    <li>
+     Librairies et utilitaires supplémentaires pour une interface graphique (GUI)
+    <li>
+     Interface graphique XXX
+    <li>
+    Interface graphique XXX-extra
+    <li>Ports des utilisateurs
+    <li>Ports extras des utilisateurs
+   </ul>
+    Actuellement, sont à disposition sous forme de collections, les interfaces graphique:
+    <ul>
+     <li>XFCE4
+     <li>KDE5
+     <li>GNOME
+     <li>MATE
+    </ul>
+  <h2>La gestion des collections par cards</h2>
+   De par leur conception, chaque collection possède son propre fichier contenant les meta-données.
+   Lors d'ajout / retrait d'un paquet d'une collection, seul les meta-données de la dite collection seront modifiées.
+   Cette proprièté offre donc une flexibilitée maximale aux utilisateurs et gestionnaires des paquets.
+  <h2>La hiérachie des collections</h2>
+    La hiérarchie des différentes collections est un concept très important.
+    <p>
+     Ici le symbole "->" s'interprète "dépend de"
+    <p>
+     Elle se fait de la façon suivante:
+    <p>
+     XXX-extra -> XXX -> gui -> cli -> base
+    <p>
+     cli-extra -> cli
+    <p>
+     gui-extra -> gui
+  <h2>Leur interdépendances</h2>
+    Les collections de NuTyX sont interdépendantes de la façon suivante:
+    <ul>
+     <li>
+      <b>base</b>:
+    La collection <i>base</i> étant la collection contenant le système de base minimum, elle sera toujours necessaire.
+    Toutes les autres collections dépendent donc de la collection <i>base</i>. 
+    <li>
+     <b>cli</b>:
+    La collection <i>cli</i> contient toutes les librairies et applications pouvant être utilisées par une interface en ligne de commande.
+    <p>
+    Seule la collection <i>base</i> est une dépendance de la collection <i>cli</i>.
+    <li>
+     <b>gui</b>:
+    La collection <i>gui</i> contient toutes les librairies et applications pouvant être utilisées par une interface graphique.
+    Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>gui</i> pouvant être utilisées par une interface graphique.
+    <p>
+    Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>gui</i>.    
+    <li>
+     <b>cli-extra</b>:
+    La collection <i>cli-extra</i> contient des applications, utilitaires, librairies pouvant être utilisés par une interface en ligne de commande.
+    <p>
+     Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>cli-extra</i>
+    <li>
+     <b>gui-extra</b>:
+    La collection <i>gui-extra</i> contient des applications, utilitaires, librairies pouvant être utilisés par une interface graphique.
+    <p>
+     Les collections <i>base</i>, <i>cli</i>,<i>gui> et <i>cli-extra</i>sont les dépendances de la collection <i>gui-extra</i>
+    <li>
+     <b>gnome et gnome-extra</b>:
+    Les collections <i>gnome</i> et <i>gnome-extra</i> contiennent respectivement une version minimaliste l'interface de gnome et ses applications et autres extensions.
+    <p>
+    Les collections <i>base</i>, <i>cli</i> et <i>gui</i> sont les dépendances de la collection <i>gnome</i>.
+    <p>
+    Les collections <i>base</i>, <i>cli</i>, <i>gui</i> et <i>gnome</i> sont les dépendances de la collection <i>gnome-extra</i>.    
+    <li>
+     <b>xxx et xxx-extra</b>:
+    Même principe que pour les collections <i>gnome</i> et <i>gnome-extra</i>.
+   </ul>
+ <h2>Les differents groupes de collection</h2>
+  <h3>Les collections du coeur du système</h3>
+   Les collections constituant le coeur du système sont:
+ <ul>
+   <li>
+    base
+   <li>
+    cli
+   <li>
+    gui
+ </ul>
+  <h3>Les collections extra</h3>
+   Les collections extra sont:
+ <ul>
+   <li>
+    cli-extra
+   <li>
+    gui-extra
+ </ul>
+   
+  <h3>Les collections des interfaces graphiques</h3>
+   Les collections des interfaces graphiques sont:
+ <ul>
+   <li>
+    gnome 
+   <li>
+    gnome-extra
+   <li>
+    mate 
+   <li>
+    mate-extra
+   <li>
+    kde5 
+   <li>
+    kde5-extra
+   <li>
+    xfce4 
+   <li>
+    xfce4-extra
+ </ul>
+  
+  <h3>Les collections proposées par les contributeurs</h3>
+   Les collections proposées par les contributeurs sont:
+   <ul>
+    <li>
+     nup
+    <li>
+     nup-extra
+   </ul>
+  <h2>Et maintenant ?</h2>
+   Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-bot">dans la compilation dans les règles de l'art</a>
