@@ -82,12 +82,12 @@
      <b>cli-extra</b>:
     La collection <i>cli-extra</i> contient des applications, utilitaires, librairies pouvant être utilisés par une interface en ligne de commande.
     <p>
-     Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>cli-extra</i>
+     Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>cli-extra</i>.
     <li>
      <b>gui-extra</b>:
     La collection <i>gui-extra</i> contient des applications, utilitaires, librairies pouvant être utilisés par une interface graphique.
     <p>
-     Les collections <i>base</i>, <i>cli</i>,<i>gui> et <i>cli-extra</i>sont les dépendances de la collection <i>gui-extra</i>
+     Les collections <i>base</i>, <i>cli</i>,<i>gui</i> et <i>cli-extra</i>sont les dépendances de la collection <i>gui-extra</i>
     <li>
      <b>gnome et gnome-extra</b>:
     Les collections <i>gnome</i> et <i>gnome-extra</i> contiennent respectivement une version minimaliste l'interface de gnome et ses applications et autres extensions.
