@@ -157,7 +157,7 @@ RSYNC=(base cli gui cli-extra gui-extra)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=mate
 COLLECTION=mate
-RSYNC=(base cli gui)</kbd></pre>
+RSYNC=(base cli gui mate mate-extra)</kbd></pre>
 
        <tr class="even">
         <td>
@@ -167,7 +167,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=gnome
 COLLECTION=gnome
-RSYNC=(base cli gui)</kbd></pre>
+RSYNC=(base cli gui gnome gnome-extra)</kbd></pre>
 
        <tr class="odd">
         <td>
@@ -177,7 +177,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=xfce4
 COLLECTION=xfce4
-RSYNC=(base cli gui)</kbd></pre>
+RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
 
        <tr class="even">
         <td>
@@ -187,7 +187,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=kde5
 COLLECTION=kde5
-RSYNC=(base cli gui)</kbd></pre>
+RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
        <tr class="odd">
         <td>
@@ -197,7 +197,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=nup
 COLLECTION=nup
-RSYNC=(base cli gui)</kbd></pre>
+RSYNC=(base cli gui nup nup-extra)</kbd></pre>
 
      </table>
 
