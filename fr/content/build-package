@@ -141,4 +141,5 @@ esac
 # PKGMK_IGNORE_RUNTIMEDEPS="yes"</pre>
 <h2>Conclusion</h2>
 <p>
- Nous voilà prêts pour construire nos paquets <a href="build-in-chroot">dans une chroot.</a>
+ Nous voilà prêts pour la compilation de paquets.
+ Nous allons maintenant voir ce qu'est <a href="collections">une collection.</a>

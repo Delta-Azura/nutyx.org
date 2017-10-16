@@ -220,6 +220,19 @@
    </tr>
    <tr class="even">
     <td class="lien_article" >
+      <a class="url" href="collections">Les différentes collections</a>
+    </td>
+    <td>
+     Cet article explique ce qui se cache derrière le concept des collections sous NuTyX.
+     Il est primordiale d'assimiler le concept des collections sous NuTyX.
+     Les collections sont classés en 4 groupes distincts.Chaque groupe a une fonctionnalitée bien précise.
+    </td>
+    <td>
+
+    </td>
+   </tr>
+   <tr class="odd">
+    <td class="lien_article" >
       <a class="url" href="build-in-chroot">Comment construire dans une chroot ?</a>
     </td>
     <td>
@@ -231,7 +244,7 @@
        <a href="https://youtu.be/CL5U602s1JM"><img src="../../graphics/documentation/build-in-chroot.jpg" width="160"height="100"></a>
     </td>
    </tr>
-   <tr class="odd">
+   <tr class="even">
     <td class="lien_article" >
       <a class="url" href="build-bot">Mise en place d'un serveur de compilation</a>
     </td>
@@ -245,7 +258,7 @@
     <td>
     </td>
    </tr>
-   <tr class="even">
+   <tr class="odd">
     <td class="lien_article" >
       <a class="url" href="build-pre">Construire sa NuTyX</a>
     </td>

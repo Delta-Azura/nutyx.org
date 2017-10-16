@@ -57,9 +57,34 @@
     <p>
      XXX-extra -> XXX -> gui -> cli -> base
     <p>
-     cli-extra -> cli
+     cli-extra -> cli -> base
     <p>
-     gui-extra -> gui
+     gui-extra -> cli-extra -> cli -> base
+    <p>
+     gui-extra -> gui -> cli -> base
+    <p>
+     Grâce à cette hiérachie bien établie, le concept suivant est défini:
+     <ul>
+      <li>
+       Un paquet de la collection <i>base</i> utilise des dépendances en provenance uniquement de la collection <i><u>base</u></i>.
+      <li>
+       Un paquet de la collection <i>cli</i> utilise des dépendances en provenance uniquement des collections <i><u>base</u></i> ou <i><u>cli</u></i>.
+      <li>
+       Un paquet de la collection <i>cli-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>cli-extra</u></i>.
+      <li>
+       Un paquet de la collection <i>gui</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
+      <li>
+       Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli, cli-extra, gui</u></i> ou <i><u>gui-extra</u></i>.
+     </ul>
+      Et pour les interfaces graphiques <i>gnome, mate, kde5 et xfce4</i>, le concept suivant est défini:
+     <ul>
+      <li>
+       Un paquet de la collection <i>gnome</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
+      <li>
+       Un paquet de la collection <i>gnome-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli, gui</u></i> ou <i><u>gnome-extra</u></i>.
+     </ul>
+     Même principe pour les autres interfaces graphiques <i>mate, kde5 et xfce4</i>.
+
   <h2>Leur interdépendances</h2>
     Les collections de NuTyX sont interdépendantes de la façon suivante:
     <ul>
@@ -98,10 +123,14 @@
     <li>
      <b>xxx et xxx-extra</b>:
     Même principe que pour les collections <i>gnome</i> et <i>gnome-extra</i>.
+
    </ul>
  <h2>Les differents groupes de collection</h2>
-  <h3>Les collections du coeur du système</h3>
-   Les collections constituant le coeur du système sont:
+  <h3>A. Les collections du coeur du système</h3>
+    Le coeur du système est regroupé dans un projet sur le site github.com à l'adresse:
+   <a href="https://github.com/NuTyX/core">https://github.com/NuTyX/core</a>
+   <p>
+    Les collections constituant le coeur du système sont:
  <ul>
    <li>
     base
@@ -110,8 +139,11 @@
    <li>
     gui
  </ul>
-  <h3>Les collections extra</h3>
-   Les collections extra sont:
+  <h3>B. Les collections extra</h3>
+   Les collections extra sont regroupées dans un projet sur le site github.com à l'adresse:
+   <a href="https://github.com/NuTyX/extra">https://github.com/NuTyX/extra</a>
+   <p>
+    Les collections extra sont:
  <ul>
    <li>
     cli-extra
@@ -119,28 +151,56 @@
     gui-extra
  </ul>
    
-  <h3>Les collections des interfaces graphiques</h3>
-   Les collections des interfaces graphiques sont:
- <ul>
-   <li>
-    gnome 
-   <li>
-    gnome-extra
-   <li>
-    mate 
-   <li>
-    mate-extra
-   <li>
-    kde5 
-   <li>
-    kde5-extra
-   <li>
-    xfce4 
-   <li>
-    xfce4-extra
- </ul>
+  <h3>C. Les collections des interfaces graphiques</h3>
+    Les collections des interfaces graphiques sont regroupées par projet sur le site github.com aux adresses:
+   <p>
+    <a href="https://github.com/NuTyX/gnome">https://github.com/NuTyX/gnome</a> pour gnome.
+   <p>
+    <a href="https://github.com/NuTyX/mate">https://github.com/NuTyX/mate</a> pour mate.
+   <p>
+    <a href="https://github.com/NuTyX/kde5">https://github.com/NuTyX/kde5</a> pour kde5.
+   <p>
+    <a href="https://github.com/NuTyX/xfce4">https://github.com/NuTyX/xfce4</a> pour xfce4.
+   <p>
+    Les collections des interfaces graphiques sont pour:
+   <p>
+    gnome:
+    <ul>
+     <li>
+      gnome
+     <li>
+      gnome-extra
+     </ul>
+   <p>
+    mate:
+    <ul>
+     <li>
+      mate
+     <li>
+      mate-extra
+     </ul>
+    <p>
+    kde5:
+    <ul>
+     <li>
+      kde5
+     <li>
+      kde5-extra
+    </ul>
+    <p>
+    xfce4:
+    <ul>
+     <li>
+      xfce4
+     <li>
+      xfce4-extra
+     </ul>
+
   
-  <h3>Les collections proposées par les contributeurs</h3>
+  <h3>D. Les collections proposées par les contributeurs</h3>
+   Les collections proposées par les contributeurs sont regroupées dans un projet sur le site github.com à l'adresse:
+   <a href="https://github.com/NuTyX/nup">https://github.com/NuTyX/nup</a>
+   <p>
    Les collections proposées par les contributeurs sont:
    <ul>
     <li>
@@ -149,4 +209,4 @@
      nup-extra
    </ul>
   <h2>Et maintenant ?</h2>
-   Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-bot">dans la compilation dans les règles de l'art</a>
+   Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-in-chroot">dans la compilation dans un environnement isolé</a>.
