@@ -23,6 +23,9 @@
  <h2>Enter the chroot</h2>
   <p>
   <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
+  <div class="important">
+   From now on, everything you do, you do it in your isolated chroot.
+  </div>
 
  <h2>Development tools installation</h2>
   <p>
@@ -45,7 +48,7 @@ EOF</kbd></pre>
    <p>
     Folder/var/log/pkgbuild will contain compilation logs.
    <p>
-    I don't need any specific location, they can be all installed.
+    I don't need any specific NLS files, they can be all installed.
    <p>
     The folder /usr/ports/base defines the base system when the command <b>cards base -r</b>.
     is used.
@@ -81,18 +84,20 @@ PKGMK_CLEAN="no"
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 EOF</kbd></pre>
     <p>
-     Source codes are stored in a common folder. I want to keep them.
+     It's very important to check all the variables so that the duo <b>pkgmk/cards</b> works fine and as expected.
     <p>
-     The produced binaries are compressed in xz format.
+     Source codes are stored in a common folder. I want to keep them even after a successfull compilation.
     <p>
-     I want to keep my binaries once installed.
+     The produced binaries are compressed in <b>xz</b> format.
+    <p>
+     I want to keep my binaries onces installed.
     <p>
      I wish to have the runtime dependencies automatically added into the binary.
 
  <h2>Binaries synchronisation via rsync</h2>
     <p>
-     This operation consist of download of all the binaries in the <b>base, cli-extra, gui et gui-extra</b> collection. 
-     It can take a few minutes to a few hours depending on the speed of your internet connection.
+     This operation consist of download of all the binaries of the <b>base, cli and gui</b> collection. 
+     It can take a while depending on the speed of your internet connection.
     <p>
      Luckily, this operation has to be done only once.
      <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />

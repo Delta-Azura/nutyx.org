@@ -23,7 +23,10 @@
  <h2>Entrer dans la chroot</h2>
   <p>
   <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
-    
+  <div class="important">
+    A partir de maintenant, tout ce que vous allez faire, vous le faite dans votre environnement chroot isolé.
+  </div>
+ 
  <h2>Installation des outils de développement</h2>
   <p>
    L'installation par défaut est tout à fait adaptée donc un petit:
@@ -93,7 +96,7 @@ EOF</kbd></pre>
 
    <h2>Synchronisation des binaires via rsync</h2>
     <p>
-     Cette opération consiste à rapatrier les paquets contenus dans les collections <b>base, cli-extra, gui et gui-extra</b> disponibles en binaires.
+     Cette opération consiste à rapatrier les paquets contenus dans les collections <b>base, cli, et gui</b> disponibles en binaires.
      Elle peut durer entre quelques minutes et quelques heures en fonction de votre connection.
     <p>
      Heureusement, cette opération n'est à  faire qu'une fois
