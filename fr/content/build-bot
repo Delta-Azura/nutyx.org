@@ -84,7 +84,7 @@ BRANCH=master</kbd></pre>
       
      <h2>Structure des projets disponibles</h2>
       <p>
-       Choisissez la collection et la version que vous souhaitez travailler.
+       Choisissez la collection et le projet que vous souhaitez travailler.
        Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
       <table>
        <caption>
@@ -232,7 +232,7 @@ mkdir: created directory '/home/moi/git/current'</pre>
       <p>
        Cette commande peut prendre un certain temps si votre connection internet n'est pas très rapide:
       <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-       Tapez cette commande à chaque fois que vous souhaitez mettre à jour votre copie des collections binaires base, cli et gui originales
+       Tapez cette commande à chaque fois que vous souhaitez mettre à jour votre copie des collections définies par la variable $RSYNC dans leur état originale.
       </div>
       <pre class="command_user"><kbd>for i in ${RSYNC[@]}
 do
@@ -260,7 +260,7 @@ done</kbd></pre>
       <li>
        Quand vous cassez votre chroot et donc par conséquent vos binaires.
       <li>
-       Quand vous souhaitez revenir sur les collections base, cli et gui originales.
+       Quand vous souhaitez revenir sur les collections originales.
      </ul>
      <pre class="command_user"><kbd>for i in ${RSYNC[@]}
 do
@@ -269,7 +269,7 @@ do
 done</kbd></pre>
    <h2>Lancement du script</h2>
     <p>
-     Si vous avez bien suivi ce tutoriel, vous pouvez maintenant lancer la compilation de l'ensemble des ports <b>$COLLECTION</b> et <b>$COLLECTION-extra</b>:
+     Si vous avez bien suivi ce tutoriel, vous pouvez maintenant lancer la compilation de l'ensemble des ports du projet <b>$PROJECT</b>:
     <pre class="command_user"><kbd>sudo ROOTMOUNT=/srv/www build-collection /$VERSION/$COLLECTION</kbd></pre>
     <pre><class="output">CHROOT: &lt;your collection&gt;
 COLLECTION: &lt;your collection&gt;

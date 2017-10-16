@@ -7,19 +7,8 @@
        <img alt="[Important]" src="../graphics/caution.gif" />
        It's highly recommended to know NuTyX very well to succeed with this tutorial.
      </div>
-     <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-      In this tutorial, the <b>/home/tnut</b> folder is used, you <u>have to</u> it with <u>yours</u>.
-     </div>
-     <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-       In this tutorial, we use a <b>64 bits</b> machine, if you're using a <b>32 bits</b> machine, you need to replace this term in every command <b>x86_64</b> with <b>i686</b>.
-     </div>
-     <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-      In this tutorial, we choose the <b>kde5</b> collection,
-      if you want to compile <b>mate</b>, <b>gnome</b> or <b>xfce4</b>, you need to replace the word <b>kde5</b> in every command with one of the collections you want to compile.
-     </div>
-     <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-      In this tutorial, we choose to compile the current branch, if you want to use the stable branch replace the <b>current</b> branch with the <b>stable</b>.
-      For the git command, you will need to specify the <b>stable</b> branch instead of the <b>current</b> branch when cloning.
+      <div class="important">
+       All the manipulations MUST BE done in the same SINGLE terminal. Do no use more then one terminal.
      </div>
     <h2>Each step</h2>
      <p>
@@ -40,21 +29,178 @@
       <li>
        Launch the script
      </ol>
-   <h2>Setting up</h2>
-    <h3>The tools (packages to install)</h3>
+   <h2>Setting up the tools (packages to install)</h2>
       <p>
        We assume that your NuTyX is clean from any devel package.
        We start to install all the utilities:
       <pre class="command_user"><kbd>get rsync git</kbd></pre>
-    <h3>Configuration of the variables</h3>
+   <h2>Configuration of the architecture</h2>
       <p>
-       Let's create the needed variables:
-      <pre class="command_user"><kbd>PROJECT=mate
-VERSION=current
-COLLECTION=mate
-ARCH=`uname -m`</kbd></pre>
+       The first variable we need is the architecture definition (32 or 64 bits):
+      <pre class="command_user"><kbd>ARCH=`uname -m`</kbd></pre>
 
-    <h3>The git user folder in place</h3>
+     <h2>Version to use</h2>
+      <p>
+       NuTyX packages are in 3 versions available.
+       Once you decide on which version you want to work, make a copy/paste of the last colomn variables.
+       <table>
+        <caption>
+         <EM>
+          List of available versions, copy/paste the correct variables depending on your choice:
+         </EM>
+         <tr class="sidebar">
+          <th>
+           Version
+          <th>
+           Branch
+         <th>
+          Variables to use
+        <tr class="even">
+         <td>
+          stable
+         <td>
+          stable
+         <td>
+         <pre class="command_user"><kbd>VERSION=stable
+BRANCH=stable</kbd></pre>
+         <tr class="odd">
+          <td>
+           current
+          <td>
+           current
+          <td>
+           <pre class="command_user"><kbd>VERSION=current
+BRANCH=current</kbd></pre>
+         <tr class="even">
+          <td>
+           development
+         <td>
+           master
+         <td>
+          <pre class="command_user"><kbd>VERSION=development
+BRANCH=master</kbd></pre>
+       </table>
+
+     <h2>Structure des projets disponibles</h2>
+      <p>
+       Choose the collection and the project you're going to work with.
+       Once you made your choice, copy/paste defined variables in the last colomn.
+      <table>
+       <caption>
+        <EM>
+         Available collections list per project, copy/paste the variables depending your choice:
+        </EM>
+       </caption>
+       <tr class="sidebar">
+        <th>
+         Collection
+        <th>
+         Project
+        <th>
+         Variables to use
+       <tr class="even">
+        <td>
+         base
+        <td>
+         core
+        <td>
+         <pre class="command_user"><kbd>PROJECT=core
+COLLECTION=base
+RSYNC=(base)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         cli
+        <td>
+         core
+        <td>
+         <pre class="command_user"><kbd>PROJECT=core
+COLLECTION=cli
+RSYNC=(base cli)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         gui
+        <td>
+         core
+        <td>
+         <pre class="command_user"><kbd>PROJECT=core
+COLLECTION=gui
+RSYNC=(base cli gui)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         cli-extra
+        <td>
+         extra
+        <td>
+         <pre class="command_user"><kbd>PROJECT=extra
+COLLECTION=cli-extra
+RSYNC=(base cli cli-extra)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         gui-extra
+        <td>
+         extra
+        <td>
+         <pre class="command_user"><kbd>PROJECT=extra
+COLLECTION=gui-extra
+RSYNC=(base cli gui cli-extra gui-extra)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         mate and mate-extra
+        <td>
+         mate
+        <td>
+         <pre class="command_user"><kbd>PROJECT=mate
+COLLECTION=mate
+RSYNC=(base cli gui mate mate-extra)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         gnome and gnome-extra
+        <td>
+         gnome
+        <td>
+         <pre class="command_user"><kbd>PROJECT=gnome
+COLLECTION=gnome
+RSYNC=(base cli gui gnome gnome-extra)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         xfce4 and xfce4-extra
+        <td>
+         xfce4
+        <td>
+         <pre class="command_user"><kbd>PROJECT=xfce4
+COLLECTION=xfce4
+RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
+
+       <tr class="even">
+        <td>
+         kde5 and kde5-extra
+        <td>
+         kde5
+        <td>
+         <pre class="command_user"><kbd>PROJECT=kde5
+COLLECTION=kde5
+RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
+
+       <tr class="odd">
+        <td>
+         nup and nup-extra
+        <td>
+         nup
+        <td>
+         <pre class="command_user"><kbd>PROJECT=nup
+COLLECTION=nup
+RSYNC=(base cli gui nup nup-extra)</kbd></pre>
+
+     </table>
+
+   <h2>The git user folder in place</h3>
       <p>
        A build bot requires a lot of space.
       <p>
@@ -63,57 +209,48 @@ ARCH=`uname -m`</kbd></pre>
        All the folders needed are in:
       <pre class="output">/srv/www/</pre>
        and
-      <pre class="output">/home/tnut/git/</pre>
+      <pre class="output">/home/$USER/git/$VERSION</pre>
       <p>
-       We create the users git folder:
-      <pre class="command_user"><kbd>mkdir /home/tnut/git</kbd></pre>
+       All the receipts will be in our personnal folder.
+      <p>
+       We can now create the user git folder with our own account:
+      <pre class="command_user"><kbd>mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
+     <pre class="output">mkdir: created directory '/home/me/git'
+mkdir: created directory '/home/me/git/current'</pre>
+      
 
-    <h3>Get all the ports of "kde5" from git location</h3>
-      <p>
-       Back to the first terminal to get all the recepts for the compilation:
-      <pre class="command_user"><kbd>git clone -b current https://github.com/NuTyX/kde5.git ~/git/kde5</kbd></pre>
-      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-       If you choose the <b>stable</b> branch, you need to add the option -b stable at the following command:
-      </div>
+    <h2>Get all the ports of the "$COLLECTION" from git location</h2>
+     <p>
+      We will synchronise the status of all the ports of the <b>$COLLECTION</b> for the compilation:
+      <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+     <p>
+       We now create all the folders needed for the script:
+       <pre class="command_user"><kbd>sudo mkdir -pv \
+/srv/www/{logs/$ARCH/$VERSION/$COLLECTION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
 
-      <pre class="command_user"><kbd>git clone -b stable https://github.com/NuTyX/kde5.git  ~/NuTyX/git/stable/kde5</kbd></pre>
-
-      <p>
-       From now on, all the rest will be done in the root account:
-      <pre class="command_user"><kbd>sudo su -</kbd></pre>
-      <p>
-       We now create the folders needed for the script, in root:
-       <pre class="command"><kbd>mkdir -pv \
-/srv/www/{x86_64,logs,sources}
-mkdir -pv \
-/srv/www/x86_64/current/kde5{,-extra}
-mkdir -pv \
-/srv/www/logs/x86_64/current/kde5</kbd></pre>
-
-    <h3>Get the binaries from the remote server</h3>
-      <p>
-       It's the longest manipulation so let's open another terminal so that we can continue with the settings while this process is going on:
+    <h2>Get all the binaries define in the $RSYNC variable from the remote server </h2>
       <p>
        This command might take some time if your connection is not very fast.
       <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
        You need to type this command every time you want to resync your local copy with the remote server.
       </div>
-      <pre class="command"><kbd>for i in base cli gui
+      <pre class="command_user"><kbd>for i in ${RSYNC[@]}
 do
-  rsync -av --delete rsync://downloads.nutyx.org/nutyx/x86_64/current/$i/ \
-  /srv/www/x86_64/current/$i/
+  sudo rsync -av --delete rsync://downloads.nutyx.org/nutyx/$ARCH/$VERSION/$i/ \
+  /srv/www/$ARCH/$VERSION/$i/
 done</kbd></pre>
-
-     <h3>Setting up the configuration file</h3>
+    <h2>The /etc/fstab configuration file</h2>
       <p>
        We need to adjust 1 existing file
-      <h4>Adjust /etc/fstab</h4>
-       <pre class="command"><kbd>cat &gt;&gt; /etc/fstab &lt;&lt; EOF
-##  KDE5 COLLECTION
-### CURRENT
+
+      <pre class="command_user"><kbd>sudo echo "
+#    PROJECT $PROJECT
+##   COLLECTION $COLLECTION
+###  VERSION $VERSION
 #### GIT
-/home/tnut/git/kde5 /current/kde5/root/kde5 none noauto,bind
-EOF</kbd></pre>
+/home/$USER/git/$VERSION/$PROJECT \
+/$VERSION/$COLLECTION/root/$PROJECT none noauto,bind" \
+| sudo tee --append /etc/fstab</kbd></pre>
    <h2>Finalisation and step to reproduce</h2>
      <p>
       You're now ready to work with the compilation script. The command below needs to be reproduce in three cases:
@@ -125,12 +262,21 @@ EOF</kbd></pre>
        <li>
         When you want to come back on the official binaries from the server.
       </ul>
-     <pre class="command"><kbd>for i in base cli gui
+     <pre class="command_user"><kbd>for i in ${RSYNC[@]}
 do
-  rsync -av --delete rsync://downloads.nutyx.org/nutyx/x86_64/current/$i/ \
-  /srv/www/x86_64/current/$i/
+  sudo rsync -av --delete rsync://downloads.nutyx.org/nutyx/$ARCH/$VERSION/$i/ \
+  /srv/www/$ARCH/$VERSION/$i/
 done</kbd></pre>
    <h2>Let's go</h2>
     <p>
-     If you have done all the steps correctly, you should be able to start the compilation of your <b>kde5</b> and <b>kde5-extra</b> collections.
-    <pre class="command"><kbd>ROOTMOUNT=/srv/www build-collection /current/kde5</kbd></pre>
+     If you have done all the steps correctly, you should be able to start the compilation of all the ports of the project <b>$PROJECT</b>.
+    <pre class="command_user"><kbd>sudo ROOTMOUNT=/srv/www build-collection /$VERSION/$COLLECTION</kbd></pre>
+    <pre><class="output">CHROOT: &lt;your collection&gt;
+COLLECTION: &lt;your collection&gt;
+VERSION: &lt;your version&gt;
+The command: KERNEL=NONE LFS=/&lt;your version&gt;/&lt;your collection&gt; DEPOT=/DEPOT install-nutyx
+DEVEL: cards.devel &&
+cd /root/&lt;your collection&gt; &&
+bash scripts/&lt;your collection&gt; -a &&
+bash scripts/&lt;your collection&gt;-extra -a  OK ? (y)</pre>
+<pre class="command_user"><kbd>y</kbd></pre>
