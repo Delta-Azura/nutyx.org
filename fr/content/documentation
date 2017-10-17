@@ -1,5 +1,6 @@
-  <h1>Documentation</h1>      
-  <table>
+<h1>Documentation</h1>
+ <h2>Guides du nouvel utilisateur sur NuTyX</h2>
+  <table width="100%" cellspacing="0">
    <tr class="odd">
     <td class="lien_article">
       <a class="url" href="dictionary">Petit lexique du NuTyXien</a>
@@ -60,6 +61,9 @@
     <a href="https://youtu.be/AchQ8OBbYq4"><img src="graphics/documentation/base-commands.jpg" width="160" height="100"></a>
     </td>
    </tr>
+   </table>
+ <h2>Guides de l'utilisateur</h2>
+  <table width="100%" cellspacing="0">
    <tr class="even">
     <td class="lien_article" >
       <a class="url" href="install-offline">Installation de NuTyX depuis le script sans connection internet</a>
@@ -166,6 +170,9 @@
      <a href="https://www.youtube.com/watch?v=lOKM9AgZwvU"><img src="../../graphics/documentation/generate-iso.jpg" width="160"height="100"></a>
     </td>
    </tr>
+   </table>
+ <h2>Guides du contributeur</h2>
+  <table width="100%" cellspacing="0">
    <tr class="even">
     <td class="lien_article" >
       <a class="url" href="why-contribute">Pourquoi contribuer ?</a>
@@ -224,8 +231,9 @@
     </td>
     <td>
      Cet article explique ce qui se cache derrière le concept des collections sous NuTyX.
-     Il est primordiale d'assimiler le concept des collections sous NuTyX.
-     Les collections sont classés en 4 groupes distincts.Chaque groupe a une fonctionnalitée bien précise.
+     L'utilisateur NuTyX ne doit pas trop se soucier des collections pour une utilisation normale.
+     Par contre, il est primordiale pour un contributeur NuTyX d'assimiler ce concept original sous NuTyX.
+     Les collections sont classés en 4 ensembles distincts. Chaque ensemble a une responsabilité bien précise.
     </td>
     <td>
 
@@ -258,6 +266,9 @@
     <td>
     </td>
    </tr>
+  </table>
+ <h2>Autres guides</h2>
+  <table width="100%" cellspacing="0">
    <tr class="odd">
     <td class="lien_article" >
       <a class="url" href="build-pre">Construire sa NuTyX</a>
