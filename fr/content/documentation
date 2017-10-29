@@ -93,10 +93,10 @@
    </tr>
    <tr class="even">
     <td class="lien_article" >
-      <a class="url" href="nutyx-man">Manuel de NuTyX de la version 9.0</a>
+      <a class="url" href="nutyx-man">Manuel de NuTyX de la version 9.1</a>
     </td>
     <td>
-     Manuel de NuTyX version 9.0. Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
+     Manuel de NuTyX version 9.1. Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
     </td>
     <td>
     </td>
@@ -233,7 +233,7 @@
      Cet article explique ce qui se cache derrière le concept des collections sous NuTyX.
      L'utilisateur NuTyX ne doit pas trop se soucier des collections pour une utilisation normale.
      Par contre, il est primordiale pour un contributeur NuTyX d'assimiler ce concept original sous NuTyX.
-     Les collections sont classés en 4 ensembles distincts. Chaque ensemble a une responsabilité bien précise.
+     Les collections sont classés en 5 ensembles distincts. Chaque ensemble a une responsabilité bien précise.
     </td>
     <td>
 

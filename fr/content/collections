@@ -34,15 +34,23 @@
      Interface graphique XXX
     <li>
     Interface graphique XXX-extra
-    <li>Ports des utilisateurs
-    <li>Ports extras des utilisateurs
+    <li>
+    Ports non libre
    </ul>
     Actuellement, sont à disposition sous forme de collections, les interfaces graphique:
     <ul>
-     <li>XFCE4
-     <li>KDE5
-     <li>GNOME
-     <li>MATE
+     <li>
+      XFCE4
+     <li>
+      KDE5
+     <li>
+      GNOME
+     <li>
+      MATE
+     <li>
+      LXDE
+     <li>
+      LXQT
     </ul>
   <h2>La gestion des collections par cards</h2>
    De par leur conception, chaque collection possède son propre fichier contenant les meta-données.
@@ -59,8 +67,6 @@
     <p>
      cli-extra -> cli -> base
     <p>
-     gui-extra -> cli-extra -> cli -> base
-    <p>
      gui-extra -> gui -> cli -> base
     <p>
      Grâce à cette hiérachie bien établie, le concept suivant est défini:
@@ -74,9 +80,9 @@
       <li>
        Un paquet de la collection <i>gui</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
       <li>
-       Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli, cli-extra, gui</u></i> ou <i><u>gui-extra</u></i>.
+       Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
      </ul>
-      Et pour les interfaces graphiques <i>gnome, mate, kde5 et xfce4</i>, le concept suivant est défini:
+      Et pour les interfaces graphiques <i>gnome, mate, kde5, lxde, lxqt et xfce4</i>, le concept suivant est défini:
      <ul>
       <li>
        Un paquet de la collection <i>gnome</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
@@ -105,14 +111,14 @@
     Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>gui</i>.    
     <li>
      <b>cli-extra</b>:
-    La collection <i>cli-extra</i> contient des applications, utilitaires, librairies pouvant être utilisés par une interface en ligne de commande.
+    La collection <i>cli-extra</i> contient des applications pouvant être utilisées par une interface en ligne de commande.
     <p>
      Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>cli-extra</i>.
     <li>
      <b>gui-extra</b>:
-    La collection <i>gui-extra</i> contient des applications, utilitaires, librairies pouvant être utilisés par une interface graphique.
+    La collection <i>gui-extra</i> contient des applications pouvant être utilisés par une interface graphique.
     <p>
-     Les collections <i>base</i>, <i>cli</i>,<i>gui</i> et <i>cli-extra</i>sont les dépendances de la collection <i>gui-extra</i>
+     Les collections <i>base</i>, <i>cli</i> et <i>gui</i>sont les dépendances de la collection <i>gui-extra</i>
     <li>
      <b>gnome et gnome-extra</b>:
     Les collections <i>gnome</i> et <i>gnome-extra</i> contiennent respectivement une version minimaliste l'interface de gnome et ses applications et autres extensions.
@@ -126,20 +132,27 @@
 
    </ul>
  <h2>Les differents groupes de collection</h2>
-  <h3>A. Les collections du coeur du système</h3>
+  <h3>A. La collection du système de base</h3>
+    Le système de base se trouve dans un projet sur le site github.com à l'adresse:
+   <a href="https://github.com/NuTyX/x86_64-sysV">https://github.com/NuTyX/x86_64-sysV</a>
+   <p>
+    La collection constituant la base du système est:
+   <ul>
+    <li>
+      base
+   </ul>
+  <h3>B. Les collections du coeur du système</h3>
     Le coeur du système est regroupé dans un projet sur le site github.com à l'adresse:
    <a href="https://github.com/NuTyX/core">https://github.com/NuTyX/core</a>
    <p>
     Les collections constituant le coeur du système sont:
  <ul>
    <li>
-    base
-   <li>
     cli
    <li>
     gui
  </ul>
-  <h3>B. Les collections extra</h3>
+  <h3>C. Les collections extra</h3>
    Les collections extra sont regroupées dans un projet sur le site github.com à l'adresse:
    <a href="https://github.com/NuTyX/extra">https://github.com/NuTyX/extra</a>
    <p>
@@ -151,7 +164,7 @@
     gui-extra
  </ul>
    
-  <h3>C. Les collections des interfaces graphiques</h3>
+  <h3>D. Les collections des interfaces graphiques</h3>
     Les collections des interfaces graphiques sont regroupées par projet sur le site github.com aux adresses:
    <p>
     <a href="https://github.com/NuTyX/gnome">https://github.com/NuTyX/gnome</a> pour gnome.
@@ -161,6 +174,10 @@
     <a href="https://github.com/NuTyX/kde5">https://github.com/NuTyX/kde5</a> pour kde5.
    <p>
     <a href="https://github.com/NuTyX/xfce4">https://github.com/NuTyX/xfce4</a> pour xfce4.
+   <p>
+    <a href="https://github.com/NuTyX/lxqt">https://github.com/NuTyX/lxqt</a> pour lxqt.
+   <p>
+    <a href="https://github.com/NuTyX/lxde">https://github.com/NuTyX/lxde</a> pour lxde.
    <p>
     Les collections des interfaces graphiques sont pour:
    <p>
@@ -195,18 +212,31 @@
      <li>
       xfce4-extra
      </ul>
+    <p>
+    lxqt:
+    <ul>
+     <li>
+      lxqt
+     <li>
+      lxqt-extra
+     </ul>
+    <p>
+    lxde:
+    <ul>
+     <li>
+      lxde
+     <li>
+      lxde-extra
+     </ul>
 
-  
-  <h3>D. Les collections proposées par les contributeurs</h3>
-   Les collections proposées par les contributeurs sont regroupées dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/nup">https://github.com/NuTyX/nup</a>
+  <h3>E. La collection non libre</h3>
+   La collection non libre est dans un projet sur le site github.com à l'adresse:
+   <a href="https://github.com/NuTyX/nonfree">https://github.com/NuTyX/nonfree</a>
    <p>
-   Les collections proposées par les contributeurs sont:
+   La collection proposée est:
    <ul>
     <li>
-     nup
-    <li>
-     nup-extra
+     nonfree
    </ul>
   <h2>Et maintenant ?</h2>
    Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-in-chroot">dans la compilation dans un environnement isolé</a>.
