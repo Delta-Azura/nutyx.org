@@ -33,6 +33,9 @@ md5sum -c install-nutyx.md5sum</kbd></pre>
       So if you need to do it, remove all existing stuff:
     <pre class="command"><kbd>userdel lfs
 rm -r /home/lfs</kbd></pre>
+     <p>
+      If you didn't change the default value of the LFS variable, you should also remove the future NuTyX folder:
+    <pre class="command"><kbd>rm -r /mnt/lfs</kbd></pre>
     <p>
      Normally, by removing the user, the group is removed as well.
      If you are not sure give it a try, it will not hurt.

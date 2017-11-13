@@ -6,7 +6,7 @@
   <h3>Assurez vous d'avoir installé les logiciels nécessaires</h3>
    <pre class="command"><kbd>cards install git cdrkit syslinux libisoburn grub-efi dosfstools</kbd></pre>
   <h3>Récupérer les outils</h3>
-   <pre class="command"><kbd>git clone git://github.com/NuTyX/x86_64-sysV.git</kbd></pre>
+   <pre class="command"><kbd>git clone git://github.com/NuTyX/base-sysV.git</kbd></pre>
   <h3>La variable indispensable pour la construction sera utilisée tout au long du processus</h3>
    <p>
     La variable LFS DOIT être définie.
@@ -16,7 +16,7 @@
   <h3>Installer le système de base 'houaphan'</h3>
    <pre class="command"><kbd>install-nutyx</kbd></pre>
   <h3>Copier les fichiers pour l'iso</h3>
-   <pre class="command"><kbd>cp -av x86_64-sysV/iso $LFS/ISO</kbd></pre>
+   <pre class="command"><kbd>cp -av base-sysV/iso $LFS/ISO</kbd></pre>
  <h2>Génération de l'iso</h2>
   <h3>Entrer dans la chroot</h3>
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
@@ -49,7 +49,7 @@ done</kbd></pre>
   <h3>Quitter NuTyX chroot</h3>
    <pre class="command"><kbd>exit</kbd></pre>
   <h3>Générer l'ISO</h3>
-   <pre class="command"><kbd>bash x86_64-sysV/scripts/mkiso</kbd></pre>
+   <pre class="command"><kbd>bash base-sysV/scripts/mkiso</kbd></pre>
  <h2>Conclusion</h2>
   <p>
    La taille de l'iso ne devrait pas dépasser 300 MB si vous n'avez rien ajouté de plus que les paquets ci-dessus.

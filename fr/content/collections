@@ -76,7 +76,7 @@
       <li>
        Un paquet de la collection <i>cli</i> utilise des dépendances en provenance uniquement des collections <i><u>base</u></i> ou <i><u>cli</u></i>.
       <li>
-       Un paquet de la collection <i>cli-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>cli-extra</u></i>.
+       Un paquet de la collection <i>cli-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base ou cli</u></i>.
       <li>
        Un paquet de la collection <i>gui</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
       <li>
@@ -134,7 +134,7 @@
  <h2>Les differents groupes de collection</h2>
   <h3>A. La collection du système de base</h3>
     Le système de base se trouve dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/x86_64-sysV">https://github.com/NuTyX/x86_64-sysV</a>
+   <a href="https://github.com/NuTyX/base-sysV">https://github.com/NuTyX/base-sysV</a>
    <p>
     La collection constituant la base du système est:
    <ul>

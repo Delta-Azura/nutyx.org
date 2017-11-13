@@ -52,7 +52,7 @@ export LFS LC_ALL LFS_TARGET PATH" &gt; /home/lfs/.bashrc</kbd></pre>
      <h2>Partie LFS:</h2>
       <p>A partir de maintenant vous tapez toutes les commandes en compte lfs</p>
       <p>On récupère la dernière version des sources sous git:</p>
-     <pre class="command_user"><kbd>git clone git://github.com/NuTyX/x86_64-sysV.git development</kbd></pre>
+     <pre class="command_user"><kbd>git clone git://github.com/NuTyX/base-sysV.git development</kbd></pre>
     <p>Une fois terminé, un nouveau dossier a été créé: <b>development</b> On y entre 
     et on lance le premier script:</p>
     <pre class="command_user"><kbd>cd development

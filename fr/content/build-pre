@@ -34,6 +34,9 @@ md5sum -c install-nutyx.md5sum</kbd></pre>
       Donc si tel est le cas, supprimez toutes les infos existantes:
      <pre class="command"><kbd>userdel lfs
 rm -r /home/lfs</kbd></pre>
+      <p>
+       Si vous n'avez pas modifié la valeur de la variable LFS, pensez également à supprimer le dossier contenant la future NuTyX
+     <pre class="command"><kbd>rm -r /mnt/lfs</kbd></pre>
      <p>
       Normalement, en supprimant l'utilisateur, son groupe est également supprimé. 
       Si vous n'êtes pas certain, vous pouvez lancer la commande ci-dessous sans crainte:</p>

@@ -191,13 +191,13 @@ RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
        <tr class="odd">
         <td>
-         nup et nup-extra
+         nonfree
         <td>
-         nup
+         nonfree
         <td>
-         <pre class="command_user"><kbd>PROJECT=nup
-COLLECTION=nup
-RSYNC=(base cli gui nup nup-extra)</kbd></pre>
+         <pre class="command_user"><kbd>PROJECT=nonfree
+COLLECTION=nonfree
+RSYNC=(base cli gui nonfree)</kbd></pre>
 
      </table>
 
