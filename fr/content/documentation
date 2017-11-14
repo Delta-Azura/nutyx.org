@@ -157,19 +157,6 @@
     <td>
     </td>
    </tr>
-    <tr class="odd">
-    <td class="lien_article" >
-      <a class="url" href="generate-iso">Produire une ISO installable</a>
-    </td>
-    <td>
-     Il est possible de générer très facilement une ISO depuis une NuTyX installée dans un dossier. 
-     Cette ISO peut ensuite être réinstallée et servir de base de déploiement. Libre à vous d'ajouter 
-     tous les logiciels que vous souhaitez, y compris une interface graphique. Le minimum à ajouter est un kernel.
-    </td>
-    <td>
-     <a href="https://www.youtube.com/watch?v=lOKM9AgZwvU"><img src="../../graphics/documentation/generate-iso.jpg" width="160"height="100"></a>
-    </td>
-   </tr>
    </table>
  <h2>Guides du contributeur</h2>
   <table width="100%" cellspacing="0">
@@ -267,9 +254,22 @@
     </td>
    </tr>
   </table>
- <h2>Autres guides</h2>
+ <h2>Guides du créateur</h2>
   <table width="100%" cellspacing="0">
-   <tr class="odd">
+    <tr class="odd">
+    <td class="lien_article" >
+      <a class="url" href="generate-iso">Produire une ISO installable</a>
+    </td>
+    <td>
+     Il est possible de générer très facilement une ISO depuis une NuTyX installée dans un dossier. 
+     Cette ISO peut ensuite être réinstallée et servir de base de déploiement. Libre à vous d'ajouter 
+     tous les logiciels que vous souhaitez, y compris une interface graphique. Le minimum à ajouter est un kernel.
+    </td>
+    <td>
+     <a href="https://www.youtube.com/watch?v=lOKM9AgZwvU"><img src="../../graphics/documentation/generate-iso.jpg" width="160"height="100"></a>
+    </td>
+   </tr>
+   <tr class="even">
     <td class="lien_article" >
       <a class="url" href="build-pre">Construire sa NuTyX</a>
     </td>

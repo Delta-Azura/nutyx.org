@@ -131,20 +131,6 @@
      You will need to have some knowledge of your hardware, such as the make and model of the network card, graphics card, processor type, etc
     </td>
    </tr>
-   <tr class="odd">
-    <td width="30%" class="lien_article" >
-      <a class="url" href="generate-iso">Produce a customised ISO</a>
-    </td>
-    <td  width="40%">
-     It's very easy to create a customised ISO image from a folder in an installed NuTyX system.
-     This image can then be put on a disc or usb drive, and used to reinstall NuTyX if necessary.
-     If you want, you can add a graphical interface too.
-     It's up to you to add all the packages you want when you install the kernel, which is the minimum required.
-    </td>
-    <td width="30%">
-     <a href="https://www.youtube.com/watch?v=lOKM9AgZwvU"><img src="../../graphics/documentation/generate-iso.jpg" width="160"height="100"></a>
-    </td>
-   </tr>
   </table>   
  <h2>Contributor's Guides</h2>
 
@@ -212,10 +198,24 @@ insane.
     </td>
    </tr>
   </table>   
- <h2>Others Guides</h2>
+ <h2>Creator's Guides</h2>
 
   <table width="100%" cellspacing="0">
    <tr class="odd">
+    <td width="30%" class="lien_article" >
+      <a class="url" href="generate-iso">Produce a customised ISO</a>
+    </td>
+    <td  width="40%">
+     It's very easy to create a customised ISO image from a folder in an installed NuTyX system.
+     This image can then be put on a disc or usb drive, and used to reinstall NuTyX if necessary.
+     If you want, you can add a graphical interface too.
+     It's up to you to add all the packages you want when you install the kernel, which is the minimum required.
+    </td>
+    <td width="30%">
+     <a href="https://www.youtube.com/watch?v=lOKM9AgZwvU"><img src="../../graphics/documentation/generate-iso.jpg" width="160"height="100"></a>
+    </td>
+   </tr>
+   <tr class="even">
     <td width="30%" class="lien_article" >
       <a class="url" href="build-pre">Build your own NuTyX</a>
     </td>
