@@ -4,26 +4,29 @@
 <p>
  L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.91.
 <p>
- NuTyX 9.91 propose le kernel 4.13.12, kernel lts 4.9.61, glibc 2.25, gcc 6.3.0, binutils 2.28, python 3.6.0,
+ NuTyX 9.91 propose le kernel LTS 4.14.0, kernel LTS 4.9.61, glibc 2.25, gcc 6.3.0, binutils 2.28, python 3.6.0,
  xorg-server 1.19.5, qt 5.9.2, KDE plasma 5.11.3, KDE Framework 5.39.0, gnome 3.24.2, mate 1.18.0, xfce4 4.12.4, firefox 56.0.2 et beaucoup d'autres mise à jour.
 
 <p>
  Si l'on tiens compte de tous les projets GIT en cours, ce sont plus de <u><b>5000</b></u> commits effectués sur la branche de dévelopement depuis la version NuTyX 9.1
 
 <h2>Pour les utilisateurs:</h2>
-<h3>- Deux nouvelles ISO:</h3>
+<h3>- Quatres nouvelles ISO:</h3>
 <p>
- Des nouvelles isos sont disponible 64 bits.
+ Des nouvelles isos sont disponible en 64 bits.
 <p>
- Si vous avez assez de mémoire RAM, un essai en mode LIVE est possible pour les 2 images.
+ Si votre machine possède assez de mémoire RAM, un essai en mode LIVE est possible pour les 2 images.
 <p>
  La traditionnelle ISO MINI contenant le système de base.
 <p>
  Une ISO plus importante en taille contenant le système de base et xorg.
 <p>
  Leur tailles sont respectivement 246 MB et 540 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
-
-<h3>- flcards le nouveau gestionnaire de paquets en mode graphique</h3>
+<p>
+ Les deux variantes sont disponible avec le kernel LTS 4.14.0 et le kernel LTS 4.9.61
+<p>
+ La version stable de la NuTyX proposera le nouveau kernel LTS 4.14.0 ou le kernel LTS 4.9.61 en fonction des retours des utilisateurs.
+<h3>- flcards: Le nouveau gestionnaire de paquets en mode graphique</h3>
 <p>
  Plus besoin de la ligne de commande pour rechercher, installer, supprimer des paquets.
 <p>
@@ -35,6 +38,9 @@
 <p>
  Si vous êtes contre cette approche, supprimez le paquet <i>flcards</i> et utilisez uniquement la ligne de commande <i>cards</i>
  ou éditez le fichier <i>/etc/sudoers</i>  
+<h3>- Les paquets xorg-app, xorg-font, xorg-proto et xorg sontsplités</h3>
+<p>
+ Tous les paquets de xorg sont dans un paquet séparé.
  
 <h3>- 17 collections à disposition</h3>
 <ul>
@@ -61,11 +67,45 @@
  L'interface LXQt qui est la continuitée de l'interface graphique LXDE est désormais disponible et peut être installé depuis les binaires disponibles.
 <h3>- Nouvelles fonctionnalitées de cards</h3>
 <p>
- Le gestionnaire gère désormais la plus part des post-installation des paquets de façon automne. 
- Il est désormais encore plus rapide.
+ Le gestionnaire de paquets gère désormais la plus part des post-installation des paquets de façon automne. 
+ Cette nouvelle fonctionnalité à pour résultat une installation des paquets encore plus rapide.
 <h3>- Nouveaux tutoriels sur le site</h3>
 <p>
  La plus part des tutoriels du site ont été complètés et dans certains sont illustrés par une vidéo.
+<h3>- Nouveau concept de branches</h3>
+<p>
+ La prochaine version stable de NuTyX utilisera 3 versions différentes qui s'adaptent parfaitement au diffèrents types d'utilisateurs de NuTyX
+ <ul>
+ <li>
+  La branche "stable"
+  <p>
+   C'est la version stable de NuTyX. Tous les paquets sont gelés au moment de sa sortie, seuls les mises à jour de sécuritées sont appliquées.
+  <p>
+   Des nouveaux paquets peuvent être ajoutés.
+ <li>
+  La branche "current"
+  <p>
+   La collection "base" est gelée, seules les mises à jour de sécuritées sont appliquées.
+  <p>
+   Les collections "cli" et "gui" reçoivent des mise à jour uniquement si ce sont des dépendances de paquets finaux qui le réclament.
+   Les mises à jour de sécuritées sont appliquées.
+  <p>
+   Les autres collections reçoivent les mises à jour de façon continue.
+  <p>
+   La branche "current" reste compatible avec la branche "stable", elles sera utilisé pour chaque nouvelle version mineur de NuTyX (10.1, 10.2, etc) 
+ <li>
+  La branche "development" (ou "master")
+  <p>
+   C'est la ligne principale (master) du projet GIT des collections.
+  <p>
+   Le processus de mise à jour est en "rolling release" pendant toute la vie de la version stable et ses version mineures (approximativement un an).
+  <p>
+   Puisque les mises à jour sont toujours très importantes et sans arrêt, la branche "development" est la plus part du temps incompatible avec la version stable de NuTyX.
+   Elle ne peut donc pas être jointe (merge) dans la branche stable de NuTyX
+  </ul>
+<p>
+ Les branches "stable" et "current" ont une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX.
+
 <h2>Pour les contributeurs:</h2>
 <h3>- Nouvelles fonctionnalitées dans le script install-nutyx</h3>
 <p>
@@ -93,19 +133,21 @@
   <li>
    autotools
   <li>
-   perl
-  <li>
    python2
   <li>
-   python
+   python3
   <li>
    xorg
+  <li>
+   kde5
  </ul>
 <p>
  Si la fonction build et la variable build sont vides, ce sera la fonction build() par défaut qui sera appelé
 <h4>La fonction uptodate</h4>
 <p>
  La fonction uptodate peut être utilisée par le script <i>pkgmk</i>
+<p>
+ Elle est utilisée via l'option -itd de <i>pkgmk</i>.
 <p>
  Elle permet d'afficher la version des sources depuis le serveur des sources du projet si celle-ci est différente de celle de la recette.
 <h4>L'installation des services</h4>
@@ -127,8 +169,17 @@ cd $SRC/nutyx-${nutyx_version}
 make DESTDIR=$PKG install-sshd
 }</pre>
 <h4>La variable run_&lt;nom_de_groupe&gt;</h4>
+ <p>
+  Il est désormais possible de spécifier des dépendances différentes pour un sous-paquet.
+ <p>
+  exemple de dépendance pour le sous-paquet devel:
+ <p>
+  run_devel=(glib.devel gtk3.devel)
 <h4>post-intallation obsolètes</h4>
-<h4>xorg-app, xorg-font, xorg-proto et xorg splités</h4>
+ <p>
+  Les post-installation 'génériques' sont désormais gérées par le gestionnaire de paquets directement.
+ <p>
+  Il ne faut donc plus les ajouter dans les ports.
 <h3>- Nouveaux noms pour les projets GIT</h3>
 <p>
  L'organisation des collections passent de 13 à 17.
@@ -155,7 +206,7 @@ make DESTDIR=$PKG install-sshd
 
 <h3>- Création d'une ISO personnalisée</h3>
 <p>
- Toutes les commandes pour la création d'une ISO personalisée sont désormais ajoutées.
+ Toutes les commandes pour la création d'une ISO <u>personalisée</u> sont désormais ajoutées.
 <h3>- Création d'une NuTyX personnalisée</h3>
 <p>
  Le tutoriel s'est étoffé.
