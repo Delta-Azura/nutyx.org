@@ -1,0 +1,221 @@
+<h1>Latest news 2017-11-14</h1>
+
+<h2>NuTyX 9.91 available with cards 2.3.101</h2>
+<p>
+ The NuTyX team is please to annonce the 9.91 release of NuTyX.
+<p>
+ NuTyX 9.91 comes with kernel LTS 4.14.0, kernel LTS 4.9.61, glibc 2.26, gcc 7.2.0, binutils 2.29.1, python 3.6.0,
+ xorg-server 1.19.5, qt 5.9.2, KDE plasma 5.11.3, KDE Framework 5.39.0, gnome 3.24.2, mate 1.18.0, xfce4 4.12.4, firefox 56.0.2, etc...
+
+<p>
+ If we take in consideration all the GIT projects, we did more then <u><b>5000</b></u> commits on the development branch since the 9.1 version.
+
+<h2>For users:</h2>
+<h3>- Four ISO:</h3>
+<p>
+ News Isos are available in 64 bits.
+<p>
+ If your computer have enought RAM, you can give a try in LIVE mode for all four images.
+<p>
+ The traditionnal MINI ISO MINI containing a base system.
+<p>
+ A bigger ISO in size containing the base system and Xorg is also available.
+<p>
+ The size are respectivly are approx. 260 MB and 540 MB available at: <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ Both images are available with the 4.14.0 LTS kernel and 4.9.61 LTS kernel.
+<p>
+ The stable version of NuTyX will propose the new 4.14.0 LTS kernel or the 4.9.61 LTS depending of the users feedbacks.
+<h3>- flcards: The new graphical packages manager</h3>
+<p>
+ No need to use the command line for searching, installing or removing packages.
+<p>
+ A GUI is now available for all thoses tasks.
+<p>
+ The ISO containing the Xorg graphical server is coming with the <b><i>flcards</i></b> package manager so
+ it'spossible to make the post-installation in graphical mode
+<p>
+ <i>Flcards</i> is using administrator rights without password.
+<p>
+ If you're agains this rule, get rid of the <i>flcards</i> package and uses the CLI or edit the <i>/etc/sudoers</i> to your fit.
+<h3>- xorg-app, xorg-font, xorg-proto and xorg packages are now splitted</h3>
+<p>
+ All the Xorg packages are now in separated package.
+<p>
+ To launch the graphical server, after loggin with your username type:
+<pre class="command_user"><kbd>startx</kbd></pre>
+
+<h3>- 17 available collections </h3>
+<ul>
+ <li>
+  base, cli and gui
+ <li>
+  cli-extra and gui-extra
+ <li>
+  gnome and gnome-extra
+ <li>
+  lxde and lxde-extra
+ <li>
+  lxqt and lxqt-extra
+ <li>
+  mate and mate-extra
+ <li>
+  kde5 and kde5-extra
+ <li>
+  xfce4 and xfce4-extra
+ </li>
+ </ul>
+<h3>- New LXQt Graphical user interface</h3>
+<p>
+ The LXQt graphical interface is now available as well in binaries and then can be installed via the command:
+ <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
+
+<h3>- Cards new functionalities</h3>
+<p>
+ The package manager is now taking care of most of the post-installation automatically.
+ As a result, installation of a big set is now even more fast.
+<h3>- New Branchs concept</h3>
+<p>
+ The next stable version of NuTyX will use 3 differents versions to match every users needs.
+<ul>
+ <li>
+  The "stable" branch
+  <p>
+   This is the stable version of NuTyX. Every packages are frozen at the time of it's release, only security updates will be apply.
+  <p>
+   New packages can still be added
+ <li>
+  The "current" branch
+  <p>
+   The "base" is frozen, only security updates will be apply.
+  <p>
+   The "cli" and "gui" collections will receives updates in cases they are dependencies that need to be update for any final package. 
+	Security updates will be apply
+  <p>
+   The others collections will get updates as normal.
+  <p>
+   The "current" branch stay compatible with the "stable" one, they will be both used for minor updates of NuTyX  (10.1, 10.2, etc).
+ <li>
+  The "development" (or "master") branch
+  <p>
+   It's the main line (master) of the GIT project for every available collections
+  <p>
+   The update process is a "rolling release" mode during the all life of the stable version and it's minor versions (about one year)
+  <p>
+   Since all updates are very big and very often, the  "development" branch is most of the time not compatible with the stable version of NuTyX.
+   In this case merging into the "stable" branch is never possible.
+  </ul>
+<p>
+ The "stable" and "current" brannchs have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
+
+<h2>For contributors:</h2>
+<h3>- install-nutyx Script new functionnalities</h3>
+<p>
+ The script is able to install a 32 bits NuTyX into a 64 bits host machine. 
+<p>
+ It's possible to pass the branch to installed via argument.
+<h3>- build-collection script new functionnalities</h3>
+<p>
+ The script is now autonomus, it's just need to specify the path of the GIT project in the <i>/etc/fstab</i> file.
+<p>
+ The other 3 mounting points use defaults directories if not specified via available variables or via <i>/etc/fstab</i> file.
+<h3>- Recept news fonctionnalities:</h3>
+<h4>The 'release' variable is optionnal</h4>
+<p>
+ If the recept of a package is new, it's not needed to specify the <i>release</i> variable.
+ It will be set automatiquement to '1'.
+<p>
+ Only if you need to rebuild the package set it to whaterver you want, probably '2'
+<pre class="output">release=2</pre>
+<h4>The 'build' variable and 'build()' function</h4>
+<p>
+ If the 'build' variable is properly set, it will automatically set the content of the build() function
+<p>
+ Possible values are:
+ <ul>
+  <li>
+   autotools
+  <li>
+   python2
+  <li>
+   python3
+  <li>
+   xorg
+  <li>
+   kde5
+ </ul>
+<p>
+ If the 'build()' function and the build variable are empty, it will be the default build() function apply to the package.
+<h4>The 'uptodate' function</h4>
+<p>
+ The 'uptodate' function can be used by the <i>pkgmk</i> script
+<p>
+ It is call up via the '-itd' option of <i>pkgmk</i> script.
+<p>
+ This function (if existing and properly set) is checking the upstream source.
+ If the version of the recept is obsolet, it will be printed out.
+ h4>Services installation</h4>
+<p>
+ The service installation is now done via the following code:
+<p>Example of the 'sshd' service</p>
+   <pre class="output">..
+nutyx_version=9.91
+source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+        https://....)
+build() {
+cd ${name}-$version
+./configure --prefix=/usr \
+--disable-static
+..
+..
+# Service
+cd $SRC/nutyx-${nutyx_version}
+make DESTDIR=$PKG install-sshd
+}</pre>
+<h4>The run_&lt;nom_de_groupe&gt; variable</h4>
+ <p>
+  It is now possible to specify specific dependencies for a sub package. 
+ <p>
+  Example of depencies for the 'devel' sub-package:
+ <p>
+  run_devel=(glib.devel gtk3.devel)
+<h4>Obsolets post-intallations</h4>
+ <p>
+ 
+  The 'generic' post-installation are now done automaticaly by the package manager directy at the end of the installation transaction.
+  <p>
+  It's no need to specify them in the ports.
+<h3>- News names for the GIT projects</h3>
+<p>
+ The organisation of the collections are now form 13 to 17.
+<p>
+ The hierarchie have been change as well:
+<p>
+ 4 SETS:
+ <ul>
+  <li>
+   The base is in the GIT base-sysV 
+  <li>
+   cli and gui are in the GIT core
+  <li>
+   cli-extra and gui-extra are in the GIT extra
+  <li>
+    lxde, lxqt, mate, gnome, kde5, xfce4 graphical interfaces have they own GIT with the same name.
+ </ul>
+
+<h3>- New collection for the nonfree packages</h3>
+<p>
+ The 'nonfree' collection is now in the GIT nonfree
+
+<h2>For creators:</h2>
+
+<h3>- Creating an customised ISO </h3>
+<p>
+ All the commands are now includes.
+<h3>- Creating a customised NuTyX</h3>
+<p>
+ The tutorial is more completed.
+<h2>Thanks</h2>
+I wish to tanks my team. It's a great fun to works with you guys.
+<p>
+ Thanks a lot for your contribution.

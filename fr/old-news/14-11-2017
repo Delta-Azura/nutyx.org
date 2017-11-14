@@ -1,10 +1,10 @@
-<h1>Dernière nouvelle 20-11-2017</h1>
+<h1>Dernière nouvelle 14-11-2017</h1>
 
 <h2>NuTyX 9.91 disponible avec cards 2.3.101</h2>
 <p>
  L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.91.
 <p>
- NuTyX 9.91 propose le kernel LTS 4.14.0, kernel LTS 4.9.61, glibc 2.25, gcc 6.3.0, binutils 2.28, python 3.6.0,
+ NuTyX 9.91 propose le kernel LTS 4.14.0, kernel LTS 4.9.61, glibc 2.26, gcc 7.2.0, binutils 2.29.1, python 3.6.0,
  xorg-server 1.19.5, qt 5.9.2, KDE plasma 5.11.3, KDE Framework 5.39.0, gnome 3.24.2, mate 1.18.0, xfce4 4.12.4, firefox 56.0.2 et beaucoup d'autres mise à jour.
 
 <p>
@@ -15,13 +15,13 @@
 <p>
  Des nouvelles isos sont disponible en 64 bits.
 <p>
- Si votre machine possède assez de mémoire RAM, un essai en mode LIVE est possible pour les 2 images.
+ Si votre machine possède assez de mémoire RAM, un essai en mode LIVE est possible pour les 4 images.
 <p>
  La traditionnelle ISO MINI contenant le système de base.
 <p>
  Une ISO plus importante en taille contenant le système de base et xorg.
 <p>
- Leur tailles sont respectivement 246 MB et 540 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+ Leur tailles sont respectivement 260 MB et 540 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
 <p>
  Les deux variantes sont disponible avec le kernel LTS 4.14.0 et le kernel LTS 4.9.61
 <p>
@@ -42,6 +42,10 @@
 <p>
  Tous les paquets de xorg sont dans un paquet séparé.
  
+<p>
+ Pour lancer le serveur graphique, après vous avoir logger, tapez la commande:
+<pre class="command_user"><kbd>startx</kbd></pre>
+
 <h3>- 17 collections à disposition</h3>
 <ul>
  <li>
@@ -64,14 +68,13 @@
  </ul>
 <h3>- Nouvelle interface graphique LXQt</h3>
 <p>
- L'interface LXQt qui est la continuitée de l'interface graphique LXDE est désormais disponible et peut être installé depuis les binaires disponibles.
+ L'interface LXQt qui est la continuitée de l'interface graphique LXDE est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
+ <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
 <h3>- Nouvelles fonctionnalitées de cards</h3>
 <p>
  Le gestionnaire de paquets gère désormais la plus part des post-installation des paquets de façon automne. 
- Cette nouvelle fonctionnalité à pour résultat une installation des paquets encore plus rapide.
-<h3>- Nouveaux tutoriels sur le site</h3>
-<p>
- La plus part des tutoriels du site ont été complètés et dans certains sont illustrés par une vidéo.
+ Cette nouvelle fonctionnalité à pour résultat qu'une installation de nombreux paquets est encore plus rapide.
+
 <h3>- Nouveau concept de branches</h3>
 <p>
  La prochaine version stable de NuTyX utilisera 3 versions différentes qui s'adaptent parfaitement au diffèrents types d'utilisateurs de NuTyX
@@ -96,7 +99,7 @@
  <li>
   La branche "development" (ou "master")
   <p>
-   C'est la ligne principale (master) du projet GIT des collections.
+   C'est la ligne principale (master) du projet GIT des collections disponibles.
   <p>
    Le processus de mise à jour est en "rolling release" pendant toute la vie de la version stable et ses version mineures (approximativement un an).
   <p>
@@ -104,7 +107,7 @@
    Elle ne peut donc pas être jointe (merge) dans la branche stable de NuTyX
   </ul>
 <p>
- Les branches "stable" et "current" ont une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX.
+ Les branches "stable" et "current" ont une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX à ce moment là.
 
 <h2>Pour les contributeurs:</h2>
 <h3>- Nouvelles fonctionnalitées dans le script install-nutyx</h3>
@@ -118,9 +121,10 @@
 <p>
  Les autres 3 points de montages utiliseront des dossiers par défaut si ils ne sont pas configurés via les variable ou dans /etc/fstab
 <h3>- Nouvelles fonctionnalitées dans une recette:</h3>
-<h4>La variable release en option</h4>
+<h4>La variable 'release' en option</h4>
 <p>
  Si la recette est neuve, il n'est plus nécessaire de spécier la variable <i>release</i>
+ Elle sera automatiquement mise à '1'.
 <p>
  Uniquement si la recette est à refaire, alors spécifier:
 <pre class="output">release=2</pre>
@@ -210,4 +214,7 @@ make DESTDIR=$PKG install-sshd
 <h3>- Création d'une NuTyX personnalisée</h3>
 <p>
  Le tutoriel s'est étoffé.
-
+<h2>Remerciement</h2>
+Je tiens à remercier toute mon équipe avec qui j'ai beaucoup de plaisir. 
+<p>
+ Merci pour votre bonne humeur, pour votre contribution.
