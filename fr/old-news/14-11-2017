@@ -38,7 +38,7 @@
 <p>
  Si vous êtes contre cette approche, supprimez le paquet <i>flcards</i> et utilisez uniquement la ligne de commande <i>cards</i>
  ou éditez le fichier <i>/etc/sudoers</i>  
-<h3>- Les paquets xorg-app, xorg-font, xorg-proto et xorg sontsplités</h3>
+<h3>- Les paquets xorg-app, xorg-font, xorg-proto et xorg sont splités</h3>
 <p>
  Tous les paquets de xorg sont dans un paquet séparé.
  
