@@ -280,7 +280,7 @@
      <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
       Cet article s'adresse à un public maîtrisant sa distribution GNU/linux.
       Il est d'ailleurs vivement conseillé d'avoir construit une première fois une LFS à la main.
-      <a class="url" href="https://github.com/NuTyX/core/commits/master">Ce projet étant en perpétuel évolution</a>,
+      <a class="url" href="https://github.com/NuTyX/base-sysV/commits/master">Ce projet étant en perpétuel évolution</a>,
       il est  posssible que vous rencontreriez des erreurs lors de sa construction.
      </div>
       L'article sera divisé en quatres sections:

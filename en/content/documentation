@@ -225,7 +225,7 @@ insane.
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
      This article is targeted at people who know what a GNU/linux distribution is.
      Ideally you should have built LFS entirely by hand at least once before trying this method.
-     <a class="url" href="https://github.com/NuTyX/core/commits/master">This project is continuously in development</a>,
+     <a class="url" href="https://github.com/NuTyX/base-sysV/commits/master">This project is continuously in development</a>,
      so it is possible that you will encounter some errors during the build.
     </div>
     The article is divided into four sections:
