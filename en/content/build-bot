@@ -102,9 +102,9 @@ BRANCH=master</kbd></pre>
         <td>
          base
         <td>
-         core
+         base-sysV
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=base-sysV
 COLLECTION=base
 RSYNC=(base)</kbd></pre>
 
