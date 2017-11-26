@@ -1,34 +1,52 @@
-<h1>Dernière nouvelle 14-11-2017</h1>
+<h1>Dernière nouvelle 26-11-2017</h1>
 
-<h2>NuTyX 9.91 disponible avec cards 2.3.101</h2>
+<h2>NuTyX 9.92 disponible avec cards 2.3.103</h2>
 <p>
- L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.91.
+ L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.92.
 <p>
- NuTyX 9.91 propose le kernel LTS 4.14.0, kernel LTS 4.9.61, glibc 2.26, gcc 7.2.0, binutils 2.29.1, python 3.6.0,
- xorg-server 1.19.5, qt 5.9.2, KDE plasma 5.11.3, KDE Framework 5.39.0, gnome 3.24.2, mate 1.18.0, xfce4 4.12.4, firefox 56.0.2 et beaucoup d'autres mise à jour.
+ NuTyX 9.92 propose le kernel LTS 4.14.2, kernel LTS 4.9.65, glibc 2.26, gcc 7.2.0, binutils 2.29.1, python 3.6.0,
+ xorg-server 1.19.5, qt 5.9.3, KDE plasma 5.11.3, KDE Framework 5.40.0, KDE Applications 17.08.3, gnome 3.24.2, mate 1.18.2, xfce4 4.12.4, firefox 57.0 Quantum et beaucoup d'autres mise à jour.
 
 <p>
  Si l'on tiens compte de tous les projets GIT en cours, ce sont plus de <u><b>5000</b></u> commits effectués sur la branche de dévelopement depuis la version NuTyX 9.1
+<h2>Bugs corrigés et paquets ajoutés</h2>
+<p>
+ Le pilote xorg-xf86-video-intel manquant est désormais ajouté.
+<p>
+ Le mode live fonctionne désormais, il faut cependant une machine ayant suffisament de mémoire.
+<p>
+ L'interface graphique pour les imprimante HP est de nouveau opérationnelle, les dépendances manquantes ont été compilées
 
 <h2>Pour les utilisateurs:</h2>
+
 <h3>- Quatres nouvelles ISO:</h3>
 <p>
  Des nouvelles isos sont disponible en 64 bits.
 <p>
- Si votre machine possède assez de mémoire RAM, un essai en mode LIVE est possible pour les 4 images.
+ L'installateur est désormais traduit en italien et arabe.
 <p>
  La traditionnelle ISO MINI contenant le système de base.
 <p>
- Une ISO plus importante en taille contenant le système de base et xorg.
+ Une ISO plus importante en taille contenant le système de base et Xorg.
 <p>
- Leur tailles sont respectivement 260 MB et 540 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+ Pour lancer le serveur graphique, après vous avoir logger, tapez la commande:
+<pre class="command_user"><kbd>startx</kbd></pre>
+
 <p>
- Les deux variantes sont disponible avec le kernel LTS 4.14.0 et le kernel LTS 4.9.61
+ Leur tailles sont respectivement 261 MB et 542 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
 <p>
- La version stable de la NuTyX proposera le nouveau kernel LTS 4.14.0 ou le kernel LTS 4.9.61 en fonction des retours des utilisateurs.
+ Les deux variantes sont disponible avec le kernel LTS 4.14.2 et le kernel LTS 4.9.65
+<p>
+ La version stable de la NuTyX proposera le nouveau kernel LTS 4.14.X ou le kernel LTS 4.9.XX en fonction des retours des utilisateurs.
+
 <h3>- flcards: Le nouveau gestionnaire de paquets en mode graphique</h3>
 <p>
  Plus besoin de la ligne de commande pour rechercher, installer, supprimer des paquets.
+  <div">
+    <img src=http://downloads.nutyx.org/ScreenShots/cards-2.3.103.png    width="1000" height="750" >
+  </div>
+<p>
+ flcards permet d'installer directement une interface graphique. Vous avez le choix entre <b>lxde, lxqt, mate, gnome, kde5 et xfce4</b>. 
 <p>
  Une interface graphique est désormais à votre disposition pour toutes ces tâches courantes.
 <p>
@@ -41,10 +59,6 @@
 <h3>- Les paquets xorg-app, xorg-font, xorg-proto et xorg sont splités</h3>
 <p>
  Tous les paquets de xorg sont dans un paquet séparé.
- 
-<p>
- Pour lancer le serveur graphique, après vous avoir logger, tapez la commande:
-<pre class="command_user"><kbd>startx</kbd></pre>
 
 <h3>- 17 collections à disposition</h3>
 <ul>
@@ -66,10 +80,17 @@
   xfce4 et xfce4-extra
  </li>
  </ul>
-<h3>- Nouvelle interface graphique LXQt</h3>
+<h3>- Nouvelles interfaces graphique</h3>
 <p>
  L'interface LXQt qui est la continuitée de l'interface graphique LXDE est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
  <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
+<p>
+ L'interface 'i3wm' est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
+ <pre class="command_user"><kbd>get i3wm/kbd></pre>
+<p>
+ L'interface 'enlightenment' est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
+ <pre class="command_user"><kbd>get enlightenment</kbd></pre>
+ 
 <h3>- Nouvelles fonctionnalitées de cards</h3>
 <p>
  Le gestionnaire de paquets gère désormais la plus part des post-installation des paquets de façon automne. 
@@ -77,7 +98,11 @@
 
 <h3>- Nouveau concept de branches</h3>
 <p>
- La prochaine version stable de NuTyX utilisera 3 versions différentes qui s'adaptent parfaitement au diffèrents types d'utilisateurs de NuTyX
+ Suite à une réflection avec Pierre B., l'ancien mainteneur de KDE 5, il s'est avéré utile de proposer la prochaine version de NuTyX en plusieurs "versions".
+<p>
+ Certains utilisateurs souhaitent leur NuTyX constament à jour, d'autres utilisateurs ne souhaitent surtout pas voir des mise à jour arriver lors qu'ils installent un paquet.
+<p>
+ NuTyX utilisera 3 versions différentes qui s'adaptent parfaitement au diffèrents types d'utilisateurs de NuTyX
  <ul>
  <li>
   La branche "stable"
@@ -186,7 +211,7 @@ make DESTDIR=$PKG install-sshd
   Il ne faut donc plus les ajouter dans les ports.
 <h3>- Nouveaux noms pour les projets GIT</h3>
 <p>
- L'organisation des collections passent de 13 à 17.
+ L'organisation des collections maintenues par les empaqueteurs passent de 13 à 17.
 <p>
  Le nombre des collections est encore changé, mais surtout leur hierarchie est changée:
 <p>
@@ -202,9 +227,9 @@ make DESTDIR=$PKG install-sshd
    Les interfaces lxde, lxqt, mate, gnome, kde5, xfce4 ont chacun leur projet GIT du même nom
  </ul>
 
-<h3>- Nouvelle collection pour les paquets non libre</h3>
+<h3>- Nouvelle collection pour les paquets dont le code source n'est pas disponible</h3>
 <p>
- La collection nonfree se trouvent dans le projet GIT nonfree
+ La collection <b>'nos'</b> se trouvent dans le projet GIT 'nos'
 
 <h2>Pour les créateurs:</h2>
 
@@ -214,6 +239,19 @@ make DESTDIR=$PKG install-sshd
 <h3>- Création d'une NuTyX personnalisée</h3>
 <p>
  Le tutoriel s'est étoffé.
+
+<h2>Bugs connus</h2>
+<p>
+ L'interface gnome ne se lance pas, il y a un écran noir qui apparaît et avec seulement le curseur.
+<p>
+ Le mode 'live' ne fonctionne pas dans virtualbox, mais fonctionne bien en dur.
+<p>
+ Le rendu de la langue arabe ne fonctionne pas encore dans l'installateur.
+<p>
+ Virtualbox 5.2 ne se compile pas encore sur les kernel lts 4.9.xx  et 4.14.xx
+<p>
+ Virtualbox 5.1.30 ne se compile pas encore sur le kernel lts 4.14.xx.
+ 
 <h2>Remerciements</h2>
 Je tiens à remercier toute mon équipe avec qui j'ai beaucoup de plaisir. 
 <p>
