@@ -8,20 +8,20 @@
  xorg-server 1.19.5, qt 5.9.3, KDE plasma 5.11.3, KDE Framework 5.40.0, KDE Applications 17.08.3, gnome 3.24.2, mate 1.18.2, xfce4 4.12.4, firefox 57.0 Quantum et beaucoup d'autres mise à jour.
 
 <p>
- Si l'on tiens compte de tous les projets GIT en cours, ce sont plus de <u><b>5000</b></u> commits effectués sur la branche de dévelopement depuis la version NuTyX 9.1
+ Si l'on tient compte de tous les projets GIT en cours, ce sont plus de <u><b>5000</b></u> commits effectués sur la branche de développement depuis la version NuTyX 9.1
 <h2>Bugs corrigés et paquets ajoutés</h2>
 <p>
  Le pilote xorg-xf86-video-intel manquant est désormais ajouté.
 <p>
- Le mode live fonctionne désormais, il faut cependant une machine ayant suffisament de mémoire.
+ Le mode live fonctionne désormais, il faut cependant une machine ayant suffisamment de mémoire.
 <p>
  L'interface graphique pour les imprimante HP est de nouveau opérationnelle, les dépendances manquantes ont été compilées
 
 <h2>Pour les utilisateurs:</h2>
 
-<h3>- Quatres nouvelles ISO:</h3>
+<h3>- Quatre nouvelles ISO:</h3>
 <p>
- Des nouvelles isos sont disponible en 64 bits.
+ Des nouvelles isos sont disponibles en 64 bits.
 <p>
  L'installateur est désormais traduit en italien et arabe.
 <p>
@@ -33,9 +33,9 @@
 <pre class="command_user"><kbd>startx</kbd></pre>
 
 <p>
- Leur tailles sont respectivement 261 MB et 542 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+ Leurs tailles sont respectivement 261 MB et 542 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
 <p>
- Les deux variantes sont disponible avec le kernel LTS 4.14.2 et le kernel LTS 4.9.65
+ Les deux variantes sont disponibles avec le kernel LTS 4.14.2 et le kernel LTS 4.9.65
 <p>
  La version stable de la NuTyX proposera le nouveau kernel LTS 4.14.X ou le kernel LTS 4.9.XX en fonction des retours des utilisateurs.
 
@@ -80,29 +80,29 @@
   xfce4 et xfce4-extra
  </li>
  </ul>
-<h3>- Nouvelles interfaces graphique</h3>
+<h3>- Nouvelles interfaces graphiques</h3>
 <p>
- L'interface LXQt qui est la continuitée de l'interface graphique LXDE est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
+ L'interface LXQt qui est la continuité de l'interface graphique LXDE est désormais disponible et peut être installé depuis les binaires disponibles et via la commande:
  <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
 <p>
- L'interface 'i3wm' est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
+ L'interface 'i3wm' est désormais disponible et peut être installé depuis les binaires disponibles et  via la commande:
  <pre class="command_user"><kbd>get i3wm/kbd></pre>
 <p>
- L'interface 'enlightenment' est désormais disponible et peut être installé depuis les binaires disponibles et peut être installé via la commande:
+ L'interface 'enlightenment' est désormais disponible et peut être installé depuis les binaires disponibles et installé via la commande:
  <pre class="command_user"><kbd>get enlightenment</kbd></pre>
  
-<h3>- Nouvelles fonctionnalitées de cards</h3>
+<h3>- Nouvelles fonctionnalités de cards</h3>
 <p>
- Le gestionnaire de paquets gère désormais la plus part des post-installation des paquets de façon automne. 
- Cette nouvelle fonctionnalité à pour résultat qu'une installation de nombreux paquets est encore plus rapide.
+ Le gestionnaire de paquets gère désormais la plupart des post-installation des paquets de façon autonome. 
+ Cette nouvelle fonctionnalité a pour résultat une installation de nombreux paquets est encore plus rapide.
 
 <h3>- Nouveau concept de branches</h3>
 <p>
  Suite à une réflection avec Pierre B., l'ancien mainteneur de KDE 5, il s'est avéré utile de proposer la prochaine version de NuTyX en plusieurs "versions".
 <p>
- Certains utilisateurs souhaitent leur NuTyX constament à jour, d'autres utilisateurs ne souhaitent surtout pas voir des mise à jour arriver lors qu'ils installent un paquet.
+ Certains utilisateurs souhaitent leur NuTyX constamment à jour, d'autres utilisateurs ne souhaitent surtout pas voir des mise à jour arriver lors qu'ils installent un paquet.
 <p>
- NuTyX utilisera 3 versions différentes qui s'adaptent parfaitement au diffèrents types d'utilisateurs de NuTyX
+ NuTyX utilisera 3 versions différentes qui s'adaptent parfaitement aux diffèrents types d'utilisateurs de NuTyX
  <ul>
  <li>
   La branche "stable"
@@ -128,34 +128,34 @@
   <p>
    Le processus de mise à jour est en "rolling release" pendant toute la vie de la version stable et ses version mineures (approximativement un an).
   <p>
-   Puisque les mises à jour sont toujours très importantes et sans arrêt, la branche "development" est la plus part du temps incompatible avec la version stable de NuTyX.
+   Puisque les mises à jour sont toujours très importantes et constantes, la branche "development" est la plus part du temps incompatible avec la version stable de NuTyX.
    Elle ne peut donc pas être jointe (merge) dans la branche stable de NuTyX
   </ul>
 <p>
  Les branches "stable" et "current" ont une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX à ce moment là.
 
 <h2>Pour les contributeurs:</h2>
-<h3>- Nouvelles fonctionnalitées dans le script install-nutyx</h3>
+<h3>- Nouvelles fonctionnalités dans le script install-nutyx</h3>
 <p>
  Le script permet d'installer une NuTyX 32 bits même si la machine hôte est en 64 bits.
 <p>
  Il est possible de passer en argument, la branche à installer
-<h3>- Nouvelles fonctionnalitées dans le script build-collection</h3>
+<h3>- Nouvelles fonctionnalités dans le script build-collection</h3>
 <p>
  Le script est désormais quasi autonome, il suffit de spécifier le chemin du projet GIT dans le fichier /etc/fstab.
 <p>
  Les autres 3 points de montages utiliseront des dossiers par défaut si ils ne sont pas configurés via les variable ou dans /etc/fstab
-<h3>- Nouvelles fonctionnalitées dans une recette:</h3>
+<h3>- Nouvelles fonctionnalités dans une recette:</h3>
 <h4>La variable 'release' en option</h4>
 <p>
- Si la recette est neuve, il n'est plus nécessaire de spécier la variable <i>release</i>
+ Si la recette est neuve, il n'est plus nécessaire de spécifier la variable <i>release</i>
  Elle sera automatiquement mise à '1'.
 <p>
  Uniquement si la recette est à refaire, alors spécifier:
 <pre class="output">release=2</pre>
 <h4>La fonction et la variable build</h4>
 <p>
- Si la variable build est définie correctement, celle-ci spécifie automatiquement le contenue de la fonction build()
+ Si la variable build est définie correctement, celle-ci spécifie automatiquement le contenu de la fonction build()
 <p>
  Valeurs possible:
  <ul>
@@ -171,7 +171,7 @@
    kde5
  </ul>
 <p>
- Si la fonction build et la variable build sont vides, ce sera la fonction build() par défaut qui sera appelé
+ Si la fonction build et la variable build sont vides, ce sera la fonction build() par défaut qui sera appelée
 <h4>La fonction uptodate</h4>
 <p>
  La fonction uptodate peut être utilisée par le script <i>pkgmk</i>
@@ -211,7 +211,7 @@ make DESTDIR=$PKG install-sshd
   Il ne faut donc plus les ajouter dans les ports.
 <h3>- Nouveaux noms pour les projets GIT</h3>
 <p>
- L'organisation des collections maintenues par les empaqueteurs passent de 13 à 17.
+ L'organisation des collections maintenues par les empaqueteurs passe de 13 à 17.
 <p>
  Le nombre des collections est encore changé, mais surtout leur hierarchie est changée:
 <p>
@@ -229,7 +229,7 @@ make DESTDIR=$PKG install-sshd
 
 <h3>- Nouvelle collection pour les paquets dont le code source n'est pas disponible</h3>
 <p>
- La collection <b>'nos'</b> se trouvent dans le projet GIT 'nos'
+ La collection <b>'nos'</b> se trouve dans le projet GIT 'nos'
 
 <h2>Pour les créateurs:</h2>
 
