@@ -125,7 +125,7 @@ eth1       IEEE 802.11abg
      Then we add the configuration file as explained in the manual under the configuration section.
      In this example, we have to create the file <b>/etc/sysconfig/ifconfig.eth1</b>.
      Once this is done, you can restart the network by restarting the service:
-<pre class="command"><kbd>/etc/rc.d/init.d/network restart</kbd></pre> Make sure you adjust the definition of the variable <b>MANAGER</b> as defined in the file <b>/etc/sysconfig/network</b>. The management of the network service can be done through the command line. The value of the variable is then <b>cli</b>. If you want to use wicd, put <b>wicd</b> as a value; if networkmanager (which comes with the gnome graphical interface), then put <b>networkmanager</b>.</div><p>
+<pre class="command"><kbd>/etc/rc.d/init.d/network restart</kbd></pre> Make sure you adjust the definition of the variable <b>MANAGER</b> as defined in the file <b>/etc/sysconfig/network</b>. The management of the network service can be done through the command line. The value of the variable is then <b>cli</b>. If you want to use wicd, put <b>wicd</b> as a value; if networkmanager (which comes with the 'mate' graphical interface), then put <b>networkmanager</b>.</div><p>
    <li><h3>Adding a partition, a disk or a NFS shared folder</h3></li>
     <div class="note"><img alt="[NOTE IMPORTANT]" src="../graphics/note.gif"/>
      If you have already defined the user(s) on this machine and wish to mount their <b>/home</b> folder (which contains the users personal files) on a separate partition/disk/NFS folder, it is important to back up the existing contents of this folder first.

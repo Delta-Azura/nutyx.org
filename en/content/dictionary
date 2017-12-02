@@ -105,7 +105,7 @@
      <p>
       A dependency is a <a href="#ID005">package</a> <b>AAA</b> needed either for running or for compiling another <a href="#ID005">package</a> <b>BBB</b>.
      <p>
-      A good example of a dependency is the <i>gtk3</i> <a href="#ID005">package</a> which is used by many <a href="#ID005">packages</a> of the <i>gnome</i> <a href="#ID010">collection</a>.
+      A good example of a dependency is the <i>qtbase</i> <a href="#ID005">package</a> which is used by many <a href="#ID005">packages</a> of the <i>kde5</i> <a href="#ID010">collection</a>.
     <a name='ID010'></a>
     <h2>A collection</h2>
      <p>
@@ -117,7 +117,7 @@
       The <i>gui</i> <a href="#ID010">collection</a> for example allows you to install a graphical user interface.
       For such a graphical user interface, you can choose your favorite windows manager.
      <p>
-      Under NuTyX, it's possible to install <i>kde5</i>, <i>gnome</i>, <i>mate</i> or <i>xfce4</i> desktop <a href="#ID010">collections</a>.
+      Under NuTyX, it's possible to install <i>kde5</i>, <i>lxqt</i>, <i>mate</i> or <i>xfce4</i> desktop <a href="#ID010">collections</a>.
     <a name='ID020'></a>
     <h2>A family</h2>
      <p>

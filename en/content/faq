@@ -103,8 +103,8 @@
        He (She) adjust the <b>/etc/cards.conf</b> configuration file as:
        <pre class="output">dir /usr/ports/kde5-extra
 dir /usr/ports/kde5
-dir /usr/ports/gnome-extra
-dir /usr/ports/gnome
+dir /usr/ports/lxqt-extra
+dir /usr/ports/lxqt
 dir /usr/ports/mate-extra
 dir /usr/ports/mate
 dir /usr/ports/xfce4-extra

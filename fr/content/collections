@@ -44,8 +44,6 @@
      <li>
       KDE5
      <li>
-      GNOME
-     <li>
       MATE
      <li>
       LXDE
@@ -82,12 +80,12 @@
       <li>
        Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
      </ul>
-      Et pour les interfaces graphiques <i>gnome, mate, kde5, lxde, lxqt et xfce4</i>, le concept suivant est défini:
+      Et pour les interfaces graphiques <i>mate, kde5, lxde, lxqt et xfce4</i>, le concept suivant est défini:
      <ul>
       <li>
-       Un paquet de la collection <i>gnome</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
+       Un paquet de la collection <i>mate</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
       <li>
-       Un paquet de la collection <i>gnome-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli, gui</u></i> ou <i><u>gnome-extra</u></i>.
+       Un paquet de la collection <i>mate-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli, gui</u></i> ou <i><u>mate-extra</u></i>.
      </ul>
      Même principe pour les autres interfaces graphiques <i>mate, kde5 et xfce4</i>.
 
@@ -120,15 +118,15 @@
     <p>
      Les collections <i>base</i>, <i>cli</i> et <i>gui</i>sont les dépendances de la collection <i>gui-extra</i>
     <li>
-     <b>gnome et gnome-extra</b>:
-    Les collections <i>gnome</i> et <i>gnome-extra</i> contiennent respectivement une version minimaliste l'interface de gnome et ses applications et autres extensions.
+     <b>mate et mate-extra</b>:
+    Les collections <i>mate</i> et <i>mate-extra</i> contiennent respectivement une version minimaliste l'interface de mate et ses applications et autres extensions.
     <p>
-    Les collections <i>base</i>, <i>cli</i> et <i>gui</i> sont les dépendances de la collection <i>gnome</i>.
+    Les collections <i>base</i>, <i>cli</i> et <i>gui</i> sont les dépendances de la collection <i>mate</i>.
     <p>
-    Les collections <i>base</i>, <i>cli</i>, <i>gui</i> et <i>gnome</i> sont les dépendances de la collection <i>gnome-extra</i>.    
+    Les collections <i>base</i>, <i>cli</i>, <i>gui</i> et <i>mate</i> sont les dépendances de la collection <i>mate-extra</i>.    
     <li>
      <b>xxx et xxx-extra</b>:
-    Même principe que pour les collections <i>gnome</i> et <i>gnome-extra</i>.
+    Même principe que pour les collections <i>mate</i> et <i>mate-extra</i>.
 
    </ul>
  <h2>Les differents groupes de collection</h2>
@@ -167,8 +165,6 @@
   <h3>D. Les collections des interfaces graphiques</h3>
     Les collections des interfaces graphiques sont regroupées par projet sur le site github.com aux adresses:
    <p>
-    <a href="https://github.com/NuTyX/gnome">https://github.com/NuTyX/gnome</a> pour gnome.
-   <p>
     <a href="https://github.com/NuTyX/mate">https://github.com/NuTyX/mate</a> pour mate.
    <p>
     <a href="https://github.com/NuTyX/kde5">https://github.com/NuTyX/kde5</a> pour kde5.
@@ -180,14 +176,6 @@
     <a href="https://github.com/NuTyX/lxde">https://github.com/NuTyX/lxde</a> pour lxde.
    <p>
     Les collections des interfaces graphiques sont pour:
-   <p>
-    gnome:
-    <ul>
-     <li>
-      gnome
-     <li>
-      gnome-extra
-     </ul>
    <p>
     mate:
     <ul>
@@ -229,14 +217,14 @@
       lxde-extra
      </ul>
 
-  <h3>E. La collection non libre</h3>
-   La collection non libre est dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/nonfree">https://github.com/NuTyX/nonfree</a>
+  <h3>E. La collection Code Non Ouvert</h3>
+   La collection 'Code Non Ouvert' est dans un projet sur le site github.com à l'adresse:
+   <a href="https://github.com/NuTyX/nos">https://github.com/NuTyX/nos</a>
    <p>
    La collection proposée est:
    <ul>
     <li>
-     nonfree
+     nos
    </ul>
   <h2>Et maintenant ?</h2>
    Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-in-chroot">dans la compilation dans un environnement isolé</a>.

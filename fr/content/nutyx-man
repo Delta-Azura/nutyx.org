@@ -131,7 +131,7 @@ eth1       IEEE 802.11abg
     Veuillez également vérifier la définition de la variable <b>MANAGER</b> qui est définie dans le fichier <b>/etc/sysconfig/network</b>.
     La gestion du service réseau peut se faire:
     Soit depuis la ligne de commande (expliqué ci-avant) la valeur de la variable est alors <b>cli</b>.
-    Soit via wicd, mettez <b>wicd</b> comme valeur, soit networkmanager si vous avez installé l'interface graphique gnome, mettez alors <b>networkmanager</b>.
+    Soit via wicd, mettez <b>wicd</b> comme valeur, soit networkmanager si vous avez installé l'interface graphique 'mate' ou 'kde5', mettez alors <b>networkmanager</b>.
    </div>
      </ul>
     <li><h3>Ajout d'une partition, d'un disque ou d'un dossier NFS</h3></li>

@@ -9,8 +9,8 @@
   <pre class="command_user"><kbd>check</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
   You enter now the password you specify at the installation and synchronisation starts:
-  <pre class="output">/var/lib/pkg/depot/gnome-extra/.PKGREPO
-/var/lib/pkg/depot/gnome/.PKGREPO
+  <pre class="output">/var/lib/pkg/depot/lxqt-extra/.PKGREPO
+/var/lib/pkg/depot/lxqt/.PKGREPO
 /var/lib/pkg/depot/mate-extra/.PKGREPO
 /var/lib/pkg/depot/mate/.PKGREPO
 /var/lib/pkg/depot/kde5-extra/.PKGREPO
@@ -32,7 +32,7 @@
   <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
   ...</pre>
   You can now choose your favorite desktop.
-  Under NuTyX: kde5, xfce4, mate, gnome, lxde, openbox, flwm, ratpoison, etc are available.
+  Under NuTyX: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.
   <p>
       <table>
        <caption><EM>Available desktops:</EM></caption>
@@ -46,9 +46,9 @@
          <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
        <tr class="odd">
         <td>
-         gnome gnome-extra
+         lxqt lxqt-extra
         <td>
-         <pre class="command_user"><kbd>get gnome gnome-extra</kbd></pre>
+         <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
        <tr class="even">
         <td>
          xfce4 xfce4-extra
@@ -69,6 +69,11 @@
          openbox
         <td>
          <pre class="command_user"><kbd>get openbox</kbd></pre>
+        <tr class="even">
+        <td>
+         enlightenment
+        <td>
+         <pre class="command_user"><kbd>get enlightenment</kbd></pre>
      </table>
   <p>
    Whatever your choice, you need to install a Login manager.

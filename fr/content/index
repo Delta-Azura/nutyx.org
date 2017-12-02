@@ -7,16 +7,17 @@
     NuTyX est une distribution GNU/Linux complète très flexible grâce au concept des <a href="dictionary#ID010">collections</a>. 
     Vous trouverez un jeu identique de <a href="packages">paquets</a> en 32 bits et en 64 bits.
    <p>
-    Elle se base sur la documentation du site <a href="http://www.linuxfromscratch.org">LFS</a>
-    et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
-   <p>
-    Il est bon de posséder quelques connaissances sur le système GNU/Linux.
+    Il est bon de posséder de bonnes connaissances sur le système GNU/Linux.
+    Ses concepts originaux tel que l'installateur sur une ISO de base, le script d'installation 'install-nutyx', l'installation de la procédure d'amorçage de manière indépendante, les collections, le gestionnaire de paquets 'cards' dérouteront très facilement les personnes non averties.
    <p>
     C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine
     et développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
+    <p>
+    Elle se base sur la documentation du site <a href="http://www.linuxfromscratch.org">LFS</a>
+    et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
    <p>
     NuTyX propose les interfaces graphiques 
-   <a href="http://www.gnome.org">GNOME</a>, 
+   <a href="https://lxqt.org">LXQt</a>, 
    <a href="http://www.mate-desktop.com">MATE</a>, 
    <a href="http://www.lxde.org">LXDE</a>, 
    <a href="http://www.kde.org">KDE5</a> 
@@ -47,15 +48,6 @@
       La hiérarchie des <a href="dictionary#ID010">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilité maximale dans la gestion de ceux-ci.
       Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
       Les quelques commandes ci-dessous donnent une petite idée de la flexibilitée des <a href="dictionary#ID010">collections</a>. 
-      Imaginez que vous ayez installé un bureau kde5 avec les applications classiques: libreoffice, firefox, etc etc.
-      Vous souhaitez remplacer l'environnement graphique <a href="http://www.kde.org">kde5</a> 
-      par l'environnement graphique <a href="http://www.gnome.org">gnome</a> sans devoir tout réinstaller et sans perdre vos applications classiques:
-      <pre class="command"><kbd>init 3</kbd></pre>
-      Vous vous loguez en console non graphique avec votre compte ou celui de root et tapez:
-      <pre class="command"><kbd>del kde5 kde5-extra
-get gnome gnome-extra
-init 5</kbd></pre>
-      et vous êtes sur gnome, toutes vos autres applications sont là , fonctionnelles et vous n'avez même pas rebooté.
      <br>
      <br>
      <li>
