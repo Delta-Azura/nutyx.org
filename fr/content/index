@@ -8,13 +8,10 @@
     Vous trouverez un jeu identique de <a href="packages">paquets</a> en 32 bits et en 64 bits.
    <p>
     Il est bon de posséder de bonnes connaissances sur le système GNU/Linux.
-    Ses concepts originaux tel que l'installateur sur une ISO de base, le script d'installation 'install-nutyx', l'installation de la procédure d'amorçage de manière indépendante, les collections, le gestionnaire de paquets 'cards' dérouteront très facilement les personnes non averties.
+    Ses concepts originaux tel que <a href="install">l'installateur sur une ISO de base</a>, <a href="install-offline">le script d'installation 'install-nutyx'</a>, <a href="grub-install">l'installation de la procédure d'amorçage de manière indépendante</a>, <a href="collections">les collections</a>, <a href="http://cards.nutyx.org">le gestionnaire de paquets 'cards'</a> dérouteront très facilement les personnes non averties.
    <p>
     C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine
     et développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
-    <p>
-    Elle se base sur la documentation du site <a href="http://www.linuxfromscratch.org">LFS</a>
-    et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
    <p>
     NuTyX propose les interfaces graphiques 
    <a href="https://lxqt.org">LXQt</a>, 
@@ -32,6 +29,9 @@
     Vous pouvez <a href="faq#4">choisir</a> d'utiliser le système de <a href="dictionary#ID070">ports</a>,
     compiler et installer vos <a href="dictionary#ID005">paquets</a> depuis leurs sources,
     ils seront intégrés nativement au système, leur gestion sera transparente.
+   <p>
+    NuTyX  est inspiré de la documentation du site <a href="http://www.linuxfromscratch.org">LFS</a>
+    et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
  
     <div style="font-size:150%"><b>Les 10 atouts de NuTyX</b></div>     
  
