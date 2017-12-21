@@ -1,0 +1,63 @@
+<h1>Dernière nouvelle 17-12-2017</h1>
+
+<h2>NuTyX 9.93 disponible avec cards 2.3.105</h2>
+<p>
+ L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.93.
+<p>
+ NuTyX 9.93 propose le kernel LTS 4.14.6, glibc 2.26, gcc 7.2.0, binutils 2.29.1, python 3.6.0,
+ xorg-server 1.19.5, qt 5.10.0, KDE plasma 5.11.3, KDE Framework 5.41.0, KDE Applications 17.12.0, mate 1.18.2, xfce4 4.12.4, firefox 57.0.2 Quantum et beaucoup d'autres mise à jour.
+
+<h2>Bugs corrigés et paquets ajoutés</h2>
+<p>
+ Virtualbox est disponible sur le kernel 4.14.6.
+
+<h2>Pour les utilisateurs:</h2>
+
+<h3>- Une nouvelle ISO:</h3>
+<p>
+ Une isos sont disponibles en 64 bits.
+<p>
+ Une ISO plus importante en taille contenant le système de base et Xorg.
+<p>
+ Pour lancer le serveur graphique, après vous avoir logger, tapez la commande:
+<pre class="command_user"><kbd>startx</kbd></pre>
+
+<p>
+ La taille est de 585 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ L'iso est disponible avec le kernel LTS 4.14.6
+<h3>- Les paquets xorg-app, xorg-font, xorg-proto et xorg sont splités</h3>
+<p>
+ Tous les paquets de xorg sont dans des paquets séparés.
+
+<h3>- 15 collections à disposition</h3>
+<ul>
+ <li>
+  base, cli et gui
+ <li>
+  cli-extra et gui-extra
+ <li>
+  lxde et lxde-extra
+ <li>
+  lxqt et lxqt-extra
+ <li>
+  mate et mate-extra
+ <li>
+  kde5 et kde5-extra
+ <li>
+  xfce4 et xfce4-extra
+ </li>
+ </ul>
+
+<h2>Bugs connus</h2>
+<p>
+ Le mode 'live' ne fonctionne pas dans virtualbox, mais fonctionne bien en dur.
+<p>
+ Le rendu de la langue arabe ne fonctionne pas encore dans l'installateur.
+<p>
+ L'utilitaire graphique hplip ne fonctionne pas.
+ 
+<h2>Remerciements</h2>
+Je tiens à remercier toute mon équipe avec qui j'ai beaucoup de plaisir. 
+<p>
+ Merci pour votre bonne humeur, pour votre contribution.

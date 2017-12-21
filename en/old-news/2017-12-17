@@ -1,0 +1,59 @@
+<h1>Latest news 2017-12-17</h1>
+
+<h2>NuTyX 9.93 available with cards 2.3.105</h2>
+<p>
+ The NuTyX team is please to annonce the 9.93 release of NuTyX.
+<p>
+ NuTyX 9.92 comes with kernel LTS 4.14.6, glibc 2.26, gcc 7.2.0, binutils 2.29.1, python 3.6.0,
+ xorg-server 1.19.5, qt 5.10.0, KDE plasma 5.11.3, KDE Framework 5.41.0, KDE Applications 17.12.0, mate 1.18.2, xfce4 4.12.4, firefox 57.0.2 Quantum, etc...
+
+<h2>Fixed bugs and added packages</h2>
+<p>
+ Virtualbox 5.2 is now available on kernel lts 4.14.6
+
+<h2>For users:</h2>
+<h3>- One ISO:</h3>
+<p>
+ An Iso is available in 64 bits.
+<p>
+ A bigger ISO in size containing the base system and Xorg is also available.
+<p>
+ To launch the graphical server, after loggin with your username type:
+<pre class="command_user"><kbd>startx</kbd></pre>
+<p>
+ The size is approx. 585 MB available at: <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ The image is available with the 4.14.6 LTS kernel.
+<p>
+<h3>- xorg-app, xorg-font, xorg-proto and xorg packages are now splitted</h3>
+<p>
+ All the Xorg packages are now in separated packages.
+
+<h3>- 15 available collections </h3>
+<ul>
+ <li>
+  base, cli and gui
+ <li>
+  cli-extra and gui-extra
+ <li>
+  lxde and lxde-extra
+ <li>
+  lxqt and lxqt-extra
+ <li>
+  mate and mate-extra
+ <li>
+  kde5 and kde5-extra
+ <li>
+  xfce4 and xfce4-extra
+ </li>
+ </ul>
+<h2>Knows bugs</h2>
+<p>
+ The 'live' modus does not work anymore in virtual machine, but works on physical ones.
+<p>
+ The HP utility hplip don't work properly yet
+
+<h2>Thanks</h2>
+I wish to tanks my team. It's a great fun to works with you guys.
+<p>
+ Thanks a lot for your contribution.
