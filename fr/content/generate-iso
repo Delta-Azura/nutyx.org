@@ -28,11 +28,13 @@ cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
   <h3>En Option, installer le support wifi et la souris</h3>
    <pre class="command"><kbd>get wireless-tools wpa-supplicant gpm gpm.service</kb></pre>
-  <h3>En Option, installer les locales de dialog et util-linux afin d'avoir l'installeur dans sa langue préférée</h3>
+  <h3>En Option, installer les locales afin d'avoir l'installeur dans sa langue préférée</h3>
    <pre class="command"><kbd>for i in da de es fi fr it nl ru sv tr pt
 do
-   cards install dialog.$i
-   cards install util-linux.$i
+  for j in dialog util-linux sudo
+  do
+    cards install $j.$i
+  done
 done</kbd></pre>
   <h3>En Option, installer tous les paquets que vous souhaitez</h3>
    <pre class="command"><kbd>get ...</kb></pre>

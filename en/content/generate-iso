@@ -1,32 +1,60 @@
-    <h1> Produce a customised ISO</h1>
-     <div class="note"><img alt="[NOTE IMPORTANT]" src="../graphics/note.gif"/>All the commands should be entered as root</div>
-       <h2>Installation of a NuTyX system</h2>
-         <h3>The "LFS" variable MUST be defined</h3>
-          <p>In this demonstration the chroot will be in the &quot;/ISO-NuTyX&quot; directory, but you may choose a different name<p>
-          <pre class="command"><kbd>export LFS=/ISO-NuTyX</kbd></pre>
-         <h3>The "NUTYX_TMP" variable SHOULD be defined</h3>
-          <p>It is a directory where you want to clone a temporary NuTyX repository. Here it is &quot;/mnt/nutyx_tmp&quot; but you may choose a different directory.</p>
-          <pre class="command"><kbd>export NUTYX_TMP=/mnt/nutyx_tmp</kbd></pre>
-         <h3>Make sure you have all the tools installed</h3>
-          <p>If you are running a NuTyX system you can use:</p>
-          <pre class="command"><kbd>cards install git cdrkit syslinux libisoburn grub-efi dosfstools</kbd></pre>
-         <h3>Clone the "NuTyX" git repository</h3>
-          <p>Change to the directory where you want to download a temporary NuTyX repository: e.g. `cd /mnt`</p>
-          <pre class="command"><kbd>git clone git://github.com/NuTyX/base-sysV.git $NUTYX_TMP</kbd></pre>
-         <h3>Install the NuTyX base system</h3>
-          <pre class="command"><kbd>install-nutyx</kbd></pre>
-         <h3>Copy necessary files for the iso</h3>
-          <pre class="command"><kbd>cp -av $NUTYX_TMP/iso $LFS/ISO</kbd></pre>
-        <h2>Generate the ISO</h2>
-           <h3>Enter the chroot</h3>
-            <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
-           <h3>Put the kernel and the initrd in the right place</h3>
-            <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf
+<h1> Produce a customised ISO</h1>
+ <div class="note"><img alt="[NOTE IMPORTANT]" src="../graphics/note.gif"/>
+  All the commands should be entered as root
+ </div>
+ <h2>Installation of a NuTyX system</h2>
+  <h3>The "LFS" variable MUST be defined</h3>
+   <p>
+    In this demonstration the chroot will be in the &quot;/ISO-NuTyX&quot; directory, but you may choose a different name.
+   <pre class="command"><kbd>export LFS=/ISO-NuTyX</kbd></pre>
+  <h3>The "NUTYX_TMP" variable SHOULD be defined</h3>
+   <p>
+    It is a directory where you want to clone a temporary NuTyX repository.
+    Here it is &quot;/mnt/nutyx_tmp&quot; but you may choose a different directory.
+   <pre class="command"><kbd>export NUTYX_TMP=/mnt/nutyx_tmp</kbd></pre>
+  <h3>Make sure you have all the tools installed</h3>
+   <p>
+    If you are running a NuTyX system you can use:
+   <pre class="command"><kbd>cards install git cdrkit syslinux libisoburn grub-efi dosfstools</kbd></pre>
+  <h3>Clone the "NuTyX" git repository</h3>
+   <p>
+    Change to the directory where you want to download a temporary NuTyX repository: e.g. `cd /mnt`
+   <pre class="command"><kbd>git clone git://github.com/NuTyX/base-sysV.git $NUTYX_TMP</kbd></pre>
+  <h3>Install the NuTyX base system</h3>
+   <pre class="command"><kbd>install-nutyx</kbd></pre>
+  <h3>Copy necessary files for the iso</h3>
+   <pre class="command"><kbd>cp -av $NUTYX_TMP/iso $LFS/ISO</kbd></pre>
+ <h2>Generate the ISO</h2>
+  <h3>Enter the chroot</h3>
+   <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
+
+  <h3>Put the kernel and the initrd in the right place</h3>
+      <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf
 cp -v /boot/kernel-* /ISO/isolinux/kernel
 cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
-           <h3>Flush the binary archives</h3>
+
+  <h3>In Option, install the EFI's installation packages</h3>
+   <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
+
+  <h3>In Option, install wifi and mouse support</h3>
+   <pre class="command"><kbd>get wireless-tools wpa-supplicant gpm gpm.service</kb></pre>
+
+  <h3>In Option, install locales to enjoy NuTyX in your own language</h3>
+   <pre class="command"><kbd>for i in da de es fi fr it nl ru sv tr pt
+do
+  for j in dialog util-linux sudo
+  do
+    cards install $j.$i
+  done
+done</kbd></pre>
+
+  <h3>In Option, install all the extras packages you want</h3>
+   <pre class="command"><kbd>get ...</kb></pre>
+
+  <h3>Flush the binary archives</h3>
             <pre class="command"><kbd>cards purge</kbd></pre>
-           <h3>Generate the squashfs files </h3>
+
+  <h3>Generate the squashfs files </h3>
             <pre class="command"><kbd>mkdir -p /ISO/isolinux/boot/
 cd /
 for dir in opt bin etc lib lib64 root run sbin usr var home
@@ -34,21 +62,29 @@ do
   [ -f ISO/isolinux/boot/$dir.squashfs ] && rm ISO/isolinux/boot/$dir.squashfs
   mksquashfs $dir ISO/isolinux/boot/$dir.squashfs
 done</kbd></pre>
-           <h3>Quit the NuTyX chroot</h3>
-            <pre class="command"><kbd>exit</kbd></pre>
-           <h3>Generate the ISO</h3>
-            <pre class="command"><kbd>bash $NUTYX_TMP/scripts/mkiso</kbd></pre>
-         <h2>Conclusion</h2>
-          <p>The size should not be greater than 300 MB if you didn't add any optional packages. You will find the iso image in the $LFS directory.</p>
-          <pre class="command"><kbd>ls $LFS</kbd></pre>
-          <pre class="output">bin etc lib NuTyX_x86_64-20160917.iso root srv usr boot 
+
+  <h3>Quit the NuTyX chroot</h3>
+   <pre class="command"><kbd>exit</kbd></pre>
+  <h3>Generate the ISO</h3>
+   <pre class="command"><kbd>bash $NUTYX_TMP/scripts/mkiso</kbd></pre>
+ <h2>Conclusion</h2>
+  <p>
+   The size should not be greater than 300 MB if you didn't add any optional packages.
+   You will find the iso image in the $LFS directory.
+   <pre class="command"><kbd>ls $LFS</kbd></pre>
+   <pre class="output">bin etc lib NuTyX_x86_64-20160917.iso root srv usr boot 
 home lib64 NuTyX_x86_64-20160917.md5sum
 run sys var dev ISO mnt proc sbin tmp</pre>
-         <h2>Create a bootable USB-Stick</h2>
-          <p>Insert your USB-Stick and check the disk. Run:</p>
-          <pre class="command"><kbd>fdisk -l</kbd></pre>
-          <pre class="output">........
+ <h2>Create a bootable USB-Stick</h2>
+  <p>
+   Insert your USB-Stick and check the disk. Run:
+  <pre class="command"><kbd>fdisk -l</kbd></pre>
+  <pre class="output">........
 Disk /dev/sdb: 960.8 MiB ......</pre>
-		  <p>Create a bootable USB-Stick specifying the correct filename and disk (replace sdX with your USB disk)</p>
-		  <div class="important"><img alt="[Important]" src="../graphics/caution.gif" >Following command will remove all existing data on the USB key.</div>
-		  <pre class="command"><kbd>dd if=$LFS/NuTyX_x86_64-20160917.iso of=/dev/sdX bs=4M; sync</kbd></pre>
+  <p>
+   Create a bootable USB-Stick specifying the correct filename and disk (replace sdX with your USB disk)
+  <div class="important"><img alt="[Important]" src="../graphics/caution.gif" >
+   Following command will remove all existing data on the USB key.
+  </div>
+  <pre class="command"><kbd>dd if=$LFS/NuTyX_x86_64-20160917.iso of=/dev/sdX bs=4M
+sync</kbd></pre>
