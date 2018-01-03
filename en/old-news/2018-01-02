@@ -1,0 +1,275 @@
+<h1>Latest news 2018-01-02</h1>
+
+<h2>NuTyX 10.0-rc1 available with cards 2.3.106</h2>
+<p>
+ The NuTyX team is please to annonce the first release canditate of the next NuTyX 10.0.
+<p>
+ NuTyX 10.0-rc1 comes with:<p>
+<ul>
+ <li>
+ kernel LTS 4.14.10
+ <li>
+ glibc 2.26
+ <li>
+ gcc 7.2.0
+ <li>
+ binutils 2.29.1
+ <li>
+ cards 2.3.106
+ <li>
+ python 3.6.3,
+ <li>
+ xorg-server 1.19.5
+ <li>
+ qt 5.10.0
+ <li>
+ KDE plasma 5.11.4, Framework 5.41.0, Applications 17.12.0
+ <li>
+ gnome shell 3.26.2
+ <li>
+ mate 1.18.2
+ <li>
+  lxqt 0.12.0
+ <li>
+ xfce4 4.12.4
+ <li>
+ firefox 57.0.3 Quantum
+ <li>
+ Libreoffice 5.4.4
+ </ul>
+
+<p>
+ If we take in consideration all the GIT projects, we did more then <u><b>6000</b></u> commits on the development branch since the 9.1 version.
+<h2>Fixed bugs and added functionalities</h2>
+<p>
+ The live mode of the installer works fines,
+ it has been improved since you don't need too much memory on your machine. (2GB RAM or more is best).
+<p>
+ The 'live' can be installed directly on your machine.
+<p>
+  <div>
+    <img src=http://downloads.nutyx.org/ScreenShots/Screenshot_2018-01-01_22-50-22.png    width="1000" height="750" >
+  </div>
+<p>
+ The gnome interface is available again, thanks to our contributor Remy for building it.
+<h2>For users:</h2>
+<h3>- One ISO:</h3>
+<p>
+ A new Iso is available in 64 bits.
+<p>
+ Italian translation of the installer is now complete.
+<p>
+ A  998 MB ISO in size containing the base system and MATE 1.18.2. is available.
+<h3>- flcards: The new graphical packages manager</h3>
+<p>
+ No need to use the command line for searching, installing or removing packages.
+ <div>
+    <img src=http://downloads.nutyx.org/ScreenShots/cards-2.3.103.png width="1000" height="750" >
+ </div>
+<p>
+ flcards is now able to install directly a graphical interface,  you can choose between <b>lxde, lxqt, mate, gnome, kde5 and xfce4</b>. 
+<p>
+ A GUI is now available for all thoses tasks.
+<p>
+ The ISO containing the Xorg graphical server is coming with the <b><i>flcards</i></b> package manager so
+ it's possible to make the post-installation in graphical mode
+<p>
+ <i>Flcards</i> is using administrator rights without password.
+<p>
+ If you're agains this rule, get rid of the <i>flcards</i> package and uses the CLI or edit the <i>/etc/sudoers</i> to your fit.
+<h3>- xorg-app, xorg-font, xorg-proto and xorg packages are now splitted</h3>
+<p>
+ The <i>xorg</i> meta package is removed.
+ All the Xorg packages are now in separated package.
+ The documentation will be update when final release 10.0 will be available.
+ 
+<h3>- 17 available collections </h3>
+<ul>
+ <li>
+  base, cli and gui
+ <li>
+  cli-extra and gui-extra
+ <li>
+  gnome and gnome-extra
+ <li>
+  lxde and lxde-extra
+ <li>
+  lxqt and lxqt-extra
+ <li>
+  mate and mate-extra
+ <li>
+  kde5 and kde5-extra
+ <li>
+  xfce4 and xfce4-extra
+ </li>
+ </ul>
+<h3>- New Graphical user interfaces</h3>
+<p>
+ The 'LXQt' graphical interface is now available as well in binaries and then can be installed via the command:
+ <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
+<p>
+ The 'i3wm' is now available as well in binaries and then can be installed via the command:
+ <pre class="command_user"><kbd>get i3wm</kbd></pre>
+<p>
+ The 'enlightenment'graphical interface is now available as well in binaries and then can be installed via the command:
+ <pre class="command_user"><kbd>get enlightenment</kbd></pre>
+
+<h3>- Cards new functionalities</h3>
+<p>
+ The package manager is now taking care of most of the post-installation automatically.
+ As a result, installation of a big set is now even more fast.
+<h3>- New Branchs concept</h3>
+<p>
+ After a long reflexion with Pierre B., we decide to propose several 'versions' for the next major release of NuTyX.
+<p>
+ Some users prefer to keep NuTyX uptodate, some others don't want to see any update comming when installing something
+<p>
+ The next stable version of NuTyX will use 3 differents versions to match every users needs.
+<ul>
+ <li>
+  The "stable" branch
+  <p>
+   This is the stable version of NuTyX. Every packages are frozen at the time of it's release, only security updates will be apply.
+  <p>
+   New packages can still be added
+ <li>
+  The "current" branch
+  <p>
+   The "base" is frozen, only security updates will be apply.
+  <p>
+   The "cli" and "gui" collections will receives updates in cases they are dependencies that need to be update for any final package. 
+	Security updates will be apply
+  <p>
+   The others collections will get updates as normal.
+  <p>
+   The "current" branch stay compatible with the "stable" one, they will be both used for minor updates of NuTyX  (10.1, 10.2, etc).
+ <li>
+  The "development" (or "master") branch
+  <p>
+   It's the main line (master) of the GIT project for every available collections
+  <p>
+   The update process is a "rolling release" mode during the all life of the stable version and it's minor versions (about one year)
+  <p>
+   Since all updates are very big and very often, the  "development" branch is most of the time not compatible with the stable version of NuTyX.
+   In this case merging into the "stable" branch is never possible.
+  </ul>
+<p>
+ The "stable" and "current" brannchs have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
+
+<h2>For contributors:</h2>
+<h3>- install-nutyx Script new functionnalities</h3>
+<p>
+ The script is able to install a 32 bits NuTyX into a 64 bits host machine. 
+<p>
+ It's possible to pass the branch to installed via argument.
+<h3>- build-collection script new functionnalities</h3>
+<p>
+ The script is now autonomus, it's just need to specify the path of the GIT project in the <i>/etc/fstab</i> file.
+<p>
+ The other 3 mounting points use defaults directories if not specified via available variables or via <i>/etc/fstab</i> file.
+<h3>- Recept news fonctionnalities:</h3>
+<h4>The 'release' variable is optionnal</h4>
+<p>
+ If the recept of a package is new, it's not needed to specify the <i>release</i> variable.
+ It will be set automatiquement to '1'.
+<p>
+ Only if you need to rebuild the package set it to whaterver you want, probably '2'
+<pre class="output">release=2</pre>
+<h4>The 'build' variable and 'build()' function</h4>
+<p>
+ If the 'build' variable is properly set, it will automatically set the content of the build() function
+<p>
+ Possible values are:
+ <ul>
+  <li>
+   autotools
+  <li>
+   python2
+  <li>
+   python3
+  <li>
+   xorg
+  <li>
+   kde5
+ </ul>
+<p>
+ If the 'build()' function and the build variable are empty, it will be the default build() function apply to the package.
+<h4>The 'uptodate' function</h4>
+<p>
+ The 'uptodate' function can be used by the <i>pkgmk</i> script
+<p>
+ It is call up via the '-itd' option of <i>pkgmk</i> script.
+<p>
+ This function (if existing and properly set) is checking the upstream source.
+ If the version of the recept is obsolet, it will be printed out.
+<h4>Services installation</h4>
+<p>
+ The service installation is now done via the following code:
+<p>Example of the 'sshd' service</p>
+   <pre class="output">..
+nutyx_version=10.0-rc1
+source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+        https://....)
+build() {
+cd ${name}-$version
+./configure --prefix=/usr \
+--disable-static
+..
+..
+# Service
+cd $SRC/nutyx-${nutyx_version}
+make DESTDIR=$PKG install-sshd
+}</pre>
+<h4>The run_&lt;nom_de_groupe&gt; variable</h4>
+ <p>
+  It is now possible to specify specific dependencies for a sub package. 
+ <p>
+  Example of depencies for the 'devel' sub-package:
+ <p>
+  run_devel=(glib.devel gtk3.devel)
+<h4>Obsolets post-intallations</h4>
+ <p>
+ 
+  The 'generic' post-installation are now done automaticaly by the package manager directy at the end of the installation transaction.
+  <p>
+  It's no need to specify them in the ports.
+<h3>- News names for the GIT projects</h3>
+<p>
+ The organisation of the NuTyX contributors collections are now form 13 to 17.
+<p>
+ The hierarchie have been change as well:
+<p>
+ 5 SETS:
+ <ul>
+  <li>
+   The base is in the GIT <i>base-sysV</i> 
+  <li>
+   cli and gui are in the GIT <i>core</i>
+  <li>
+   cli-extra and gui-extra are in the GIT <i>extra</i>
+  <li>
+    lxde, lxqt, mate, gnome, kde5, xfce4 graphical interfaces have they own GIT with <i>the same name</i>.
+  <li>
+    Packages without source code available is in it's own GIT project <i>nos</i>
+ </ul>
+
+<h2>For creators:</h2>
+
+<h3>- Creating an customised ISO </h3>
+<p>
+ All the commands are now includes.
+
+<h3>- Creating a customised NuTyX</h3>
+<p>
+ The tutorial is more completed.
+
+<h2>Knows bugs</h2>
+ They are none major bugs knows today.
+
+<h2>Thanks</h2>
+I wish to tanks my team. It's a great fun to works with you guys.
+<p>
+ Thanks a lot for your contribution.
+<h2>And now ?</h2>
+ <p>
+   If no problems are found, the next stable release 10.0 will be available beginning Februar 2018.
