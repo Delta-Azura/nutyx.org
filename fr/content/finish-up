@@ -25,12 +25,27 @@
  <h2>Installation d'une interface graphique et d'un des bureaux disponibles</h2>
  La synchronisation est terminée.
  Vous êtes à présent prêt à installer le reste des paquets pour obtenir une NuTyX utilisable.
- Commençons donc par installer le serveur graphique:
- <pre class="command_user"><kbd>get xorg</kbd></pre>
-  <pre class="output">[sudo] password for thierry:</pre>
-  Vous entrez le mot de passe que vous avez choisi lors de l'installation et l'installation démarre:
-  <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
+ <h3>Installation d'un gestionnaire de connection graphique</h3>
+  <p>
+   Pour lancer une session graphique sous NuTyX, vous avez le choix entre le lancement "manuel" et le lancement "automatique".
+  <h4>Lancement manuel</h4>
+   Vous installer le serveur graphique et son initialisateur:
+   <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
+   <pre class="output">[sudo] password for thierry:</pre>
+   Vous entrez le mot de passe que vous avez choisi lors de l'installation et l'installation démarre:
+   <pre class="output">/var/lib/pkg/depot/gui/xorg-xinit/.PKGREPO
   ...</pre>
+  Une fois installé, vous lancer votre session graphique en tapant la commande:
+   <pre class="command_user"><kbd>startx</kbd></pre>
+  
+  <h4>Lancement automatique</h4>
+   Vous avez le choix entre <i>lxdm</i>, <i>slim</i> et <i>xorg-xdm</i>.
+   Par exemple, pour <i>lxdm</i>:
+   <pre class="command_user"><kbd>get lxdm</kbd></pre>
+   Puisque le lancement est automatique, l'écran de connection s'affichera lors du prochain redémarrage de votre NuTyX.
+   <p>
+    Contrairement au lancement manuel, le lancement automatique necessite l'installation d'un bureau.
+ <h3>Installation d'un bureau:</h3>
   Vous pouvez maintenant choisir votre bureau préféré.
   Sous NuTyX, vous avez le choix entre: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc
   <p>
@@ -41,22 +56,22 @@
         <th>Commande:
        <tr class="even">
          <td>
-          kde5 kde5-extra
+          kde5
          <td>
           <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
        <tr class="odd">
          <td>
-          lxqt lxqt-extra
+          lxqt
          <td>
           <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
        <tr class="even">
          <td>
-          xfce4 xfce4-extra
+          xfce4
          <td>
           <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
        <tr class="odd">
         <td>
-         mate mate-extra
+         mate
         <td>
          <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
        <tr class="even">
@@ -75,12 +90,60 @@
         <td>
          <pre class="command_user"><kbd>get enlightenment</kbd></pre>
      </table>
-  <p>
-   Quelque soit le choix de votre bureau, vous allez devoir installer le gestionnaire de connection graphique.
-   Vous avez le choix entre lxdm et slim.
-   Pour lxdm, installez:
-   <pre class="command_user"><kbd>get lxdm</kbd></pre>
+  <h3>Installation du pilote de votre carte graphique</h3>
+   Si votre machine ne permet pas la gestion "KMS" ou Kernel ModeSetting qui est le mode par défaut du serveur graphique,
+   vous allez devoir installer le pilote graphique correspondant à votre carte graphique.
    <p>
+      <table>
+       <caption><EM>Pilotes graphiques disponibles:</EM></caption>
+       <tr class="sidebar">
+        <th>Modèle de votre carte graphique:
+        <th>Nom du pilote graphique à installer:
+       <tr class="even">
+         <td>
+          Ati
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-ati</kbd></pre>
+       <tr class="odd">
+         <td>
+          Intel
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-intel</kbd></pre>
+       <tr class="even">
+         <td>
+          Nvidia
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-nouveau</kbd></pre>
+       <tr class="odd">
+        <td>
+         Vesa
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vesa</kbd></pre>
+       <tr class="even">
+        <td>
+         VMware
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vmware</kbd></pre>
+       <tr class="odd">
+        <td>
+         Virtualbox
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vboxvideo</kbd></pre>
+        <tr class="even">
+        <td>
+         FrameBuffer
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-fbdev</kbd></pre>
+       <tr class="odd">
+         <td>
+          VIA
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-openchrome</kbd></pre>
+     </table>
+
+  <p>
+
+  <h3>Les applications graphiques</h3>
     Vous installez maintenant les outils qui vous semblent utiles, par exemple:
     <pre class="command_user"><kbd>get zip unzip xdg-user-dirs gvfs alsa-utils ntfs-3g firefox libreoffice pidgin thunderbird</kbd></pre>
    <p>

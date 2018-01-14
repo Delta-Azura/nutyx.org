@@ -26,11 +26,61 @@
  Synchronisation is done.
  You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
  Let's start then with the graphical server:
- <pre class="command_user"><kbd>get xorg</kbd></pre>
+ <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
     You Now enter the password you specified at the  installation and installation starts:
-  <pre class="output">/var/lib/pkg/depot/gui/xorg/.PKGREPO
+  <pre class="output">/var/lib/pkg/depot/gui/xorg-xinit/.PKGREPO
   ...</pre>
+ <h2>Xorg Driver of your graphical card</h2>
+      <table>
+       <caption><EM>Availables Xorg graphical cards drivers:</EM></caption>
+       <tr class="sidebar">
+        <th>Model of your Graphical Cards:
+        <th>Name of the driver to install:
+       <tr class="even">
+         <td>
+          Ati
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-ati</kbd></pre>
+       <tr class="odd">
+         <td>
+          Intel
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-intel</kbd></pre>
+       <tr class="even">
+         <td>
+          Nvidia
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-nouveau</kbd></pre>
+       <tr class="odd">
+        <td>
+         Vesa
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vesa</kbd></pre>
+       <tr class="even">
+        <td>
+         VMware
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vmware</kbd></pre>
+       <tr class="odd">
+        <td>
+         Virtualbox
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vboxvideo</kbd></pre>
+        <tr class="even">
+        <td>
+         FrameBuffer
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-fbdev</kbd></pre>
+       <tr class="odd">
+         <td>
+          VIA
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-openchrome</kbd></pre>
+     </table>
+
+  <p>
+ <h2>Desktop installation:</h2>
   You can now choose your favorite desktop.
   Under NuTyX: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.
   <p>
@@ -77,7 +127,7 @@
      </table>
   <p>
    Whatever your choice, you need to install a Login manager.
-   You can choose between lxdm and slim.
+   You can choose between lxdm, slim and xorg-xdm.
    For lxdm:
    <pre class="command_user"><kbd>get lxdm</kbd></pre>
    <p>
