@@ -22,10 +22,28 @@
      building the required base and Xorg packages,
      assembling the initrd and the installation script,
      managing the compiler servers and so on.
-    <h3>Pierre</h3>
+   <h3>Sipo</h3>
     <p>
-     <b>Pierre</b> is the packager of the kde5 and kde5-extra collections.
-      Pierre also helps with some other packages from various collections.
+      <b>Sipo</b> is the packager of various packages. He takes care of the LXQt git packages as well.
+
+   <h3>Artemia</h3>
+    <p>
+      <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
+
+   <h3>Remy</h3>
+    <p>
+       <b>Remy</b> ISO creator in many different kinds, all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+    <p>
+        Gnome collection Packager.
+
+   <h3>Hugo</h3>
+    <p>
+       <b>Hugo</b> Various packages packager.
+
+   <h3>Harold</h3>
+    <p>
+       <b>Harold</b> Translation of the ISO installeur in many languages
+ 
     <h3>Guth</h3>
     <p>
      <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
@@ -37,7 +55,12 @@
    <p>
      Thanks again to all of you who previously supported NuTyX in various genres.
      Your past skills will always remain greatly appreciated:
-
+    <p>
+     <b>Pierre</b> was the packager of the kde5 and kde5-extra collections.
+      Pierre also helps with some other packages from various collections.
+      He was a long time an active contributor, the CARDS package manager have been modify to never forget his name.
+      A new attribute call "Contributors" has been added.
+ 
     <p>
      <b><a class="url" href="https://github.com/sh4d0w31410?tab=activity">Sh4dOw</a></b> packager of the enlightenment and enlightenment-extra collections.
     <p>
