@@ -58,7 +58,6 @@
     </td>
      </td>
     <td width="30%">
-    <a href="https://youtu.be/AchQ8OBbYq4"><img src="graphics/documentation/base-commands.jpg" width="160" height="100"></a>
     </td>
    </tr>
    </table>
@@ -93,10 +92,10 @@
    </tr>
    <tr class="even">
     <td class="lien_article" >
-      <a class="url" href="nutyx-man">Manuel de NuTyX de la version 9.1</a>
+      <a class="url" href="nutyx-man">Manuel de NuTyX de la version 10.0</a>
     </td>
     <td>
-     Manuel de NuTyX version 9.1. Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
+     Manuel de NuTyX version 10.0 Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
     </td>
     <td>
     </td>
@@ -171,7 +170,6 @@
     </td>
     </td>
     <td>
-       <a href="https://youtu.be/0rYdVQKayEo"><img src="../../graphics/documentation/why-contribute.jpg" width="160"height="100"></a>
     </td>
 
    </tr>
@@ -197,7 +195,6 @@
      la construction d'un paquet. La commande <b>pkgmk</b> permet de "construire" le paquet qui sera ensuite installable.
     </td>
     <td>
-       <a href="https://youtu.be/OeOMq2ZTj74"><img src="../../graphics/documentation/recept.jpg" width="160"height="100"></a>
     </td>
    </tr>
    <tr class="odd">
@@ -247,7 +244,7 @@
      Cet article s'adresse principalement aux empaqueteurs de NuTyX.
      Il réunit toutes les techniques décrites plus haut et permet la construction
      de tous les ports d'une collection à l'aide d'une simple commande:
-     <pre class="command_user"><kbd>sudo ROOTMOUNT=/srv/www build-collection /current/kde5</kbd></pre> 
+     <pre class="command_user"><kbd>sudo build-collection /current/kde5</kbd></pre> 
      Il est indispensable de maîtriser sa NuTyX pour mener à bien ce tutoriel..
     </td>
     <td>
