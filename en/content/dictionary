@@ -269,6 +269,40 @@ cd ${name}-$version
 make
 make DESTDIR=$PKG install
 }</pre>
+    <a name='ID090'></a>
+    <h2>Branchs</h2>
+<ul>
+ <li>
+  The "stable" branch
+  <p>
+   This is the stable version of NuTyX. Every packages are frozen at the time of it's release, only security updates will be apply.
+  <p>
+   New packages can still be added
+ <li>
+  The "current" branch
+  <p>
+   The "base" is frozen, only security updates will be apply.
+  <p>
+   The "cli" and "gui" collections will receives updates in cases they are dependencies that need to be update for any final package. 
+	Security updates will be apply
+  <p>
+   The others collections will get updates as normal.
+  <p>
+   The "current" branch stay compatible with the "stable" one, they will be both used for minor updates of NuTyX  (10.1, 10.2, etc).
+ <li>
+  The "development" (or "master") branch
+  <p>
+   It's the main line (master) of the GIT project for every available collections
+  <p>
+   The update process is a "rolling release" mode during the all life of the stable version and it's minor versions (about one year)
+  <p>
+   Since all updates are very big and very often, the  "development" branch is most of the time not compatible with the stable version of NuTyX.
+   In this case merging into the "stable" branch is never possible.
+  </ul>
+<p>
+ The "stable" and "current" brannchs have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
+
+
     <a name='ID100'></a>
     <h2>A chroot</h2>
      <p>
