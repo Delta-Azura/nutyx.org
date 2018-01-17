@@ -1,0 +1,342 @@
+<h1>Dernière nouvelle 17-01-2018</h1>
+
+<h2>NuTyX 10.0 disponible avec cards 2.4.0</h2>
+<p>
+ Dix ans après la sortie de la première version 2007 de NuTyX, l'équipe de NuTyX est très fière de vous proposer la version 'finale' de la NuTyX 10.0.
+<p>
+ NuTyX 10.0 est disponible en 32 et 64 bits et propose:
+<p>
+ Toutes les ISO disposent désormais d'un mode LIVE. Le mode LIVE vous donne la possibilité de tester une NuTyX sans devoir l'installer.
+<p>
+ ISOs en diverses saveurs sont disponible sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>. Merci à <a href="information#9">Remy pour son travail</a>.
+<p>
+<ul>
+ <li>
+ kernel LTS 4.14.13 (4.9.76 en 32bits)
+ <li>
+ glibc 2.26
+ <li>
+ gcc 7.2.0
+ <li>
+ binutils 2.29.1
+ <li>
+ cards 2.3.106
+ <li>
+ python 3.6.3,
+ <li>
+ gtk+ 3.22.26
+ <li>
+ xorg-server 1.19.5
+ <li>
+ cups 2.2.6
+ <li>
+ qt 5.10.0
+ <li>
+ KDE plasma 5.11.4, Framework 5.41.0, Applications 17.12.0 (en 64 bits)
+ <li>
+ gnome shell 3.26.2 (en 64 bits)
+ <li>
+ mate 1.18.2
+ <li>
+ lxqt 0.12.0
+ <li>
+ xfce4 4.12.4
+ <li>
+ clementine 1.3.1
+ <li>
+ firefox 57.0.4 Quantum
+ <li>
+ thunderbird 52.5,2
+ <li>
+ libreoffice 5.4.4
+ <li>
+ gimp 2.8.22
+ <li>
+ inscape 0.92.2
+ <li>
+ samba 4.7.4
+ </ul>
+ et beaucoup d'autres mise à jour.
+
+<p>
+ Si l'on tient compte de tous les projets GIT en cours, il aura fallut  plus de <u><b>6000</b></u> commits  sur la branche de développement depuis la version NuTyX 9.1 pour arriver à ce résultat:
+<table>
+ <em>
+  Nombre de commits par projet GIT:
+ </em>
+  <tr>
+   <th    width="4%" >
+    Projet GIT:
+   <th width="8%">
+    Nombre de commits:
+   <th width="6%">
+    Nouveau projet
+   <th>
+ <tr>
+  <td>
+   base:
+  <td>
+   248
+  <td>
+    X
+ <tr>
+  <td>
+   core:
+  <td>
+   2446+62
+  <td>
+ <tr>
+  <td>
+  extra:
+  <td>
+  1101+58
+ <tr>
+  <td>
+   mate:
+  <td>
+   155+45
+ <tr>
+  <td>
+   lxde:
+  <td>
+   5
+  <td>
+   X
+ <tr>
+  <td>
+   xfce4:
+  <td>
+   90+5
+ <tr>
+  <td>
+   gnome:
+  <td>
+   146+1
+ <tr>
+  <td>
+   lxqt:
+  <td>
+    30
+  <td>
+    X
+ <tr>
+  <td>
+   kde5:
+  <td>
+   1635+7
+ <tr>
+  <td>
+   cards:
+  <td>
+   230
+ <tr>
+  <td>
+   nos:
+  <td>
+   23
+  <td>
+   X
+</table>
+<h2>Nouvelles fonctionnalités</h2>
+
+ <h3>-Quatres nouvelles ISO:</h3>
+  <p>
+   Une nouvelle iso de BASE et une iso XORG sont disponibles pour chaque architecture.
+  <p>
+    L'installateur est désormais traduit en français, néerlandais, italien, norvégien, suédois, finlandais, espagnole et allemand.
+  <p>
+    Leur tailles sont respectivement de 266 MB et 579 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+
+  <h3>- flcards: Le nouveau gestionnaire de paquets en mode graphique</h3>
+   <p>
+    Plus besoin de la ligne de commande pour rechercher, installer, supprimer des paquets.
+   <p>
+    <b><i>flcards</i></b> permet d'installer directement une interface graphique. Vous avez le choix entre <b>lxde, lxqt, mate, kde5 et xfce4</b>. 
+   <p>
+    Une interface graphique est désormais à votre disposition pour toutes ces tâches courantes.
+   <p>
+    L'ISO contenant le serveur graphique xorg permet de faire une post-installation entièrement en mode graphique avec l'aide de <b><i>flcards</i></b>.
+   <p>
+    <b><i>flcards</i></b> utilise les droits d'administrateur sans mot de passe.
+   <p>
+    Si vous êtes contre cette approche, supprimez le paquet <i>flcards</i> et utilisez uniquement la ligne de commande <i>cards</i>
+    ou éditez le fichier <i>/etc/sudoers</i>  p>
+
+  <h3>- Les paquets xorg-app, xorg-font, xorg-proto et xorg sont splités</h3>
+   <p>
+     Le meta paquet <i>xorg</i> est supprimé.
+     Tous les paquets constituant le serveur X sont dans des paquets indépendant.
+     La documentation est mise à jour pour la sortie de la 10.0
+   <h3>- 18 collections à disposition</h3>
+    <ul>
+     <li>
+       base, cli et gui
+     <li>
+       cli-extra et gui-extra
+     <li>
+       gnome et gnome-extra
+     <li>
+       lxde et lxde-extra
+     <li>
+       lxqt et lxqt-extra
+     <li>
+       mate et mate-extra
+     <li>
+       kde5 et kde5-extra
+     <li>
+       xfce4 et xfce4-extra
+     <li>
+       nos
+     </ul>
+   <p>
+    Le gestionnaire de paquets gère désormais la plupart des post-installation des paquets de façon autonome. 
+    Cette nouvelle fonctionnalité a pour résultat une installation de nombreux paquets est encore plus rapide.
+
+  <h3>- Nouveau concept de branches</h3>
+   <p>
+    Suite à une réflection avec Pierre B., l'ancien mainteneur de KDE 5, il s'est avéré utile de proposer la prochaine version de NuTyX en plusieurs "versions".
+   <p>
+    Certains utilisateurs souhaitent leur NuTyX constamment à jour, d'autres utilisateurs ne souhaitent surtout pas voir des mise à jour arriver lors qu'ils installent un paquet.
+   <p>
+    NuTyX propose <a href="dictionary#ID090">3 branches</a> pour s'adapter parfaitement aux diffèrents types d'utilisateurs de NuTyX
+
+
+
+<h2>Paquets NuTyX 9.1 déplacés</h2>
+ <p>
+  Si vous êtes actuellement sur la dernière version de NuTyX 9.1, et si vous n'êtes pas encore disposé à passer sur la NuTyX 10.0,
+  c'est tout à fait possible de continuer à utiliser votre version 9.1
+ <p>
+  Vous devez MAINTENANT effectuer une petite manipulation dans votre fichier <b>/etc/cards.conf</b>.
+  <pre class="command_user"><kbd>sudo sed -i s@downloads.nutyx.org@downloads.tuxfamily.org/nutyx@ /etc/cards.conf</kbd></pre>
+ <p>
+  La vérification est alors très simple:
+  <pre class="command_user"><kbd>cards config</kbd></pre>
+  <pre class="output">1 Directory: /var/lib/pkg/depot/gnome-extra from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/gnome-extra
+2 Directory: /var/lib/pkg/depot/gnome from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/gnome
+3 Directory: /var/lib/pkg/depot/mate-extra from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/mate-extra
+4 Directory: /var/lib/pkg/depot/mate from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/mate
+5 Directory: /var/lib/pkg/depot/kde5-extra from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/kde5-extra
+6 Directory: /var/lib/pkg/depot/kde5 from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/kde5
+7 Directory: /var/lib/pkg/depot/xfce4-extra from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/xfce4-extra
+8 Directory: /var/lib/pkg/depot/xfce4 from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/xfce4
+9 Directory: /var/lib/pkg/depot/gui-extra from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/gui-extra
+10 Directory: /var/lib/pkg/depot/gui from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/gui
+11 Directory: /var/lib/pkg/depot/cli-extra from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/cli-extra
+12 Directory: /var/lib/pkg/depot/cli from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/cli
+13 Directory: /var/lib/pkg/depot/base from http://downloads.tuxfamily.org/nutyx/x86_64/9.1/base
+Liste des dossiers pour le système de base: ...</pre>
+
+<h2>Pour les contributeurs:</h2>
+<h3>- Nouvelles fonctionnalités dans le script install-nutyx</h3>
+<p>
+ Le script permet d'installer une NuTyX 32 bits même si la machine hôte est en 64 bits:
+ <pre class="command_user"><kbd>sudo ARCH="i686" install-nutyx</kbd></pre>
+<p>
+ Il est possible de passer en argument, la branche à installer
+  <pre class="command_user"><kbd>sudo VERSION="development" install-nutyx</kbd></pre>
+
+<h3>- Nouvelles fonctionnalités dans le script build-collection</h3>
+<p>
+ Le script est désormais quasi autonome, il suffit de spécifier le chemin du projet GIT dans le fichier /etc/fstab.
+<p>
+ Les autres 3 points de montages utiliseront des dossiers par défaut si ils ne sont pas configurés via les variables ou dans /etc/fstab
+
+<h3>- Nouvelles fonctionnalités dans une recette:</h3>
+<h4>La variable 'release' en option</h4>
+<p>
+ Si la recette est neuve, il n'est plus nécessaire de spécifier la variable <i>release</i>
+ Elle sera automatiquement mise à '1'.
+<p>
+ Uniquement si la recette est à refaire, alors spécifier:
+<pre class="output">release=2</pre>
+<h4>La fonction et la variable build</h4>
+<p>
+ Si la variable build est définie correctement, celle-ci spécifie automatiquement le contenu de la fonction build()
+<p>
+ Valeurs possible:
+ <ul>
+  <li>
+   autotools
+  <li>
+   python2
+  <li>
+   python3
+  <li>
+   xorg
+  <li>
+   kde5
+ </ul>
+<p>
+ Si la fonction build et la variable build sont vides, ce sera la fonction build() par défaut qui sera appelée
+<h4>La fonction uptodate</h4>
+<p>
+ La fonction uptodate peut être utilisée par le script <i>pkgmk</i>
+<p>
+ Elle est utilisée via l'option -itd de <i>pkgmk</i>.
+<p>
+ Elle permet d'afficher la version des sources depuis le serveur des sources du projet si celle-ci est différente de celle de la recette.
+<h4>L'installation des services</h4>
+<p>
+ L'installation d'un service se fait désormais de la façon suivante:
+<p>Exemple de mise en place du service sshd</p>
+   <pre class="output">..
+nutyx_version=10.0
+source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+        https://....)
+build() {
+cd ${name}-$version
+./configure --prefix=/usr \
+--disable-static
+..
+..
+# Service
+cd $SRC/nutyx-${nutyx_version}
+make DESTDIR=$PKG install-sshd
+}</pre>
+<h4>La variable run_&lt;nom_de_groupe&gt;</h4>
+ <p>
+  Il est désormais possible de spécifier des dépendances différentes pour un sous-paquet.
+ <p>
+  exemple de dépendance pour le sous-paquet devel:
+ <p>
+  run_devel=(glib.devel gtk3.devel)
+<h4>post-intallation obsolètes</h4>
+ <p>
+  Les post-installation 'génériques' sont désormais gérées par le gestionnaire de paquets directement.
+ <p>
+  Il ne faut donc plus les ajouter dans les ports.
+<h3>- Nouveaux noms pour les projets GIT</h3>
+<p>
+ L'organisation des collections maintenues par les empaqueteurs est de 17.
+<p>
+ Le nombre des collections est encore changé, mais surtout leur hierarchie est changée:
+<p>
+ 5 Ensembles:
+ <ul>
+  <li>
+   La collection base se trouve dans le projet GIT <i>base-sysV</i> 
+  <li>
+   Les collections cli et gui se trouvent dans le projet GIT <i>core</i>
+  <li>
+   Les collections cli-extra et gui-extra se trouvent dans le projet GIT <i>extra</i>
+  <li>
+   Les interfaces lxde, lxqt, mate, gnome, kde5, xfce4 ont chacun leur projet GIT <i>du même nom</i>
+  <li>
+   Les paquets dont les sources ne sont pas disponibles sont regroupés dans un projet GIT <i>nos</i>
+ </ul>
+
+<h2>Pour les créateurs:</h2>
+
+<h3>- Création d'une ISO personnalisée</h3>
+<p>
+ Toutes les commandes pour la création d'une ISO <u>personalisée</u> sont désormais ajoutées.
+<h3>- Création d'une NuTyX personnalisée</h3>
+<p>
+ Le tutoriel s'est étoffé.
+
+<h2>Remerciements</h2>
+Je tiens à remercier <a href="http://nutyx.org/fr/information#5">toute mon équipe</a> avec qui j'ai beaucoup de plaisir. 
+<p>
+ Merci pour votre bonne humeur, pour votre contribution.
+
