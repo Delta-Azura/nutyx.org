@@ -3,17 +3,25 @@
   Assurez vous tout d'abord d'avoir un espace libre sur votre disque dur d'au moins 8Go ou mieux 15Go pour plus de confort.</p>
  <h2>Téléchargez la dernière version de NuTyX</h2>
   <p>
-   La version stable actuelle de NuTyX s'appelle <b>9.1</b>.
+   La version stable actuelle de NuTyX s'appelle <b>10.0</b>.
+  <p>
    Elle est disponible en 32 bits et en 64 bits.
+  <p>
    La version 64 bits n'est pas une multi-lib mais une 64 bits pure.
+  <p>
    Les isos disponibles permettent une installation sans avoir besoin de connection internet.
-   Les isos étant le système de base.
+  <p>
+   Elles se déclinent en deux saveurs:
+   <ul>
+    <li>
+     Le système de base dont la taille est approximativement de <b>+- 260 Mb</b>
+    <li>
+     Le système de base et le serveur Xorg dont la taille est approximativement de <b>+- 600 Mb</b>
+   </ul>
    Elles permettent également de faire un minimum de maintenance sur la machine avant l'installation de NuTyX.
   <p>
-   Si vous avez plus d'1 GB de mémoire RAM, vous pouvez retirer la clé au premier écran d'accueil. 
+   Si vous avez suffisament de mémoire RAM, un message vous informera que vous pouvez retirer la clé après le choix de votre langue. 
    Cela permet d'insérer un clavier USB par exemple.
-  <p>
-   La taille des iso est <b>+- 246 Mb</b> chacune.
   <p>
    Les isos sont disponibles à l'adresse: <a class="url" href="http://downloads.nutyx.org/?C=M;O=D"  target="_blank" title="Lire dans une autre fenêtre" >http://downloads.nutyx.org</a>
  <h2>Créez une clé bootable</h2>
@@ -25,7 +33,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-9.0.iso of=/dev/sdX</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>

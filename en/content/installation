@@ -3,15 +3,23 @@
   Make sure you have enough space on your hard disk. 8 GiB to 15 GiB should be enough.
  <h2>Download the latest version of NuTyX</h2>
   <p>
-   The current stable release of NuTyX is named <b>9.1</b>.
+   The current stable release of NuTyX is named <b>10.0</b>.
+  <p>
    They are available in 32 bits and in 64 bits.
+  <p>
    The available ISO image can be used to install a base system without the need of the internet.
+  <p>
+   They are available in 2 sizes
+  <ul>
+   <li>
+     The base system only with a size of <b>+ 260 Mb</b> approx.
+   <li>
+     The base system and the Xorg server with a size of <b>+ 600 Mb</b> approx.
+  </ul>
    It is also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
   <p>
-   If you have more than 1 Gbyte of RAM memory, you can remove the key once you see the first dialog screen.
+   If you have enough of RAM memory, a message will inform you that you can remove the key after choosing your mother language.
    This means you can insert a USB keyboard for example.
-  <p>
-   Both IOSs are <b>+ 246 Mb</b>.
   <p>
    All available ISO images can be downloaded at:
    <a class="url" href="http://downloads.nutyx.org/?C=M;O=D" target="_blank" >http://downloads.nutyx.org</a></p>
@@ -24,7 +32,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-9.1.iso of=/dev/sdX </kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
