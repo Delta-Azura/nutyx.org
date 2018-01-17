@@ -280,7 +280,7 @@ done</kbd></pre>
    <h2>Lancement du script</h2>
     <p>
      Si vous avez bien suivi ce tutoriel, vous pouvez maintenant lancer la compilation de l'ensemble des ports du projet <b>$PROJECT</b>:
-    <pre class="command_user"><kbd>sudo ROOTMOUNT=/srv/www build-collection /$VERSION/$COLLECTION</kbd></pre>
+    <pre class="command_user"><kbd>sudo build-collection /$VERSION/$COLLECTION</kbd></pre>
     <pre><class="output">CHROOT: &lt;your collection&gt;
 COLLECTION: &lt;your collection&gt;
 VERSION: &lt;your version&gt;
