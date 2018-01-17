@@ -72,7 +72,7 @@
        Une fois le système de base installé, l'utilisateur installe ses applications préférées comme expliqué dans la docummentation.
       <p>
        Une installation typique ressemble à:
-       <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
+       <pre class="command_user"><kbd>get lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
       <p>
        Les paquets binaires étant divisés en paquets de base et sous paquets (devel, doc, man, etc), seul le paquet de base sera installé.
        Cela signifie que si l'utilisateur souhaite compiler des paquets non présents en binaire,
@@ -103,11 +103,11 @@ dir /usr/ports/base
 base /usr/ports/base
 logdir /var/log/pkgbuild</pre>
       Et peut maintenant compiler ses paquets <u><b>sans devoir être dans une chroot</b></u>. Pour compiler le server graphique xorg par exemple:
-      <pre class="command_user"><kbd>sudo cards depcreate xorg</kbd></pre>
+      <pre class="command_user"><kbd>sudo cards depcreate xorg-server</kbd></pre>
 
-   <h2>Est-il possible de mettre à jour sa NuTyX (plus ancienne que la 9.0) vers NuTyX 9.X sans devoir tout réinstaller ?</h2>
+   <h2>Est-il possible de mettre à jour sa NuTyX (plus ancienne que la 10.0) vers NuTyX 10.X sans devoir tout réinstaller ?</h2>
     <p>
-     Il n'est pas possible de mettre à jour une ancienne version de NuTyX (plus ancienne que la version 9.0) vers NuTyX 9.X,
+     Il n'est pas possible de mettre à jour une ancienne version de NuTyX (plus ancienne que la version 10.0) vers NuTyX 10.X,
      le nombre de changements est trop important.
      Il faut savoir aussi que tous les <a href="dictionary#ID005">paquets</a> sont à chaque mise à jour majeure recompiler
      sur une nouvelle chaîne de compilation glibc+gcc+binutis,

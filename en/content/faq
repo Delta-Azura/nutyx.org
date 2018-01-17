@@ -82,7 +82,7 @@
        Once the base system is installed, the user installs their favourite applications as explain in the online documentation.
       <p>
        A typical installation look like:
-       <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
+       <pre class="command_user"><kbd>get lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
       <p>
        All the binaries packages are split into base packages and sub-packages (devel, doc, man, etc), in most of the case, only the base package will be installed.
        It means:
@@ -117,9 +117,9 @@ base /usr/ports/base
 logdir /var/log/pkgbuild</pre>
       And can now compile the required packages <u><b>without being in a chroot</b></u>.
       So for example, to compile the graphical server xorg:
-      <pre class="command_user"><kbd>sudo cards depcreate xorg</kbd></pre>
+      <pre class="command_user"><kbd>sudo cards depcreate xorg-server</kbd></pre>
 
-   <h2>Is it possible to upgrade NuTyX (prior to 9.0) to NuTyX 9.X without reinstalling everything?</h2>
+   <h2>Is it possible to upgrade NuTyX (prior to 10.0) to NuTyX 10.X without reinstalling everything?</h2>
     <p>
      No. The number of changes is too great.
      The package manager has changed, the initrd has changed,
