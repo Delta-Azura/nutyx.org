@@ -204,8 +204,9 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
    <h3>Réseau sans fils en mode itinérant</h3>
     <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>Et pour finir</h2>
-   Le plus simple maintenant redémarrez votre machine. Après le redémarrage, vous serez accueilli par le gestionnaire de connection lxdm ou slim.
-   Pour ce dernier, pressez la touche F1 pour choisir le bureau adéquat.
+   Le plus simple maintenant redémarrez votre machine.
+   Après le redémarrage, vous serez accueilli par le gestionnaire de connection lxdm, slim ou xdm.
+   Pour <i>slim</i>, pressez la touche F1 pour choisir le bureau adéquat.
    <pre class="command_user"><kbd>sudo reboot</kbd></pre>
  <h2>Conclusion</h2>
   Je vous invite à prendre connaîssance <a href="base-commands">des commandes de base pour que vous puissiez allez plus loin dans votre installation.</a>
