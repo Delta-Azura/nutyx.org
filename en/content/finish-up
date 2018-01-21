@@ -171,11 +171,11 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
   <h3>Compressed files tools</h3>
    <pre class="command_user"><kbd>get zip unzip</kbd></pre>
   <h3>Home directory and sound themes manager</h3>
-    xdg-user-dirs gvfs ntfs-3g alsa-utils firefox libreoffice pidgin thunderbird</kbd></pre>
+   <pre class="command_user"><kbd>get xdg-user-dir</kbd></pre>
   <h3>Garbage and automatic medias mounting manager</h3>
-   <pre class="command_user"><kbd>get zip unzip</kbd></pre>
+   <pre class="command_user"><kbd>get gvfs</kbd></pre>
   <h3>Sound manager</h3>
-   <pre class="command_user"><kbd>get zip unzip</kbd></pre>
+   <pre class="command_user"><kbd>get alsa-utils pavucontrol</kbd></pre>
   <h3>NTFS (winodows) formated partitions manager</h3>
    <pre class="command_user"><kbd>get ntfs-3g</kbd></pre>
   <h3>Internet Browser</h3>
