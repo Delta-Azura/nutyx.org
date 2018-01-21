@@ -171,7 +171,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
   <h3>Compressed files tools</h3>
    <pre class="command_user"><kbd>get zip unzip</kbd></pre>
   <h3>Home directory and sound themes manager</h3>
-   <pre class="command_user"><kbd>get xdg-user-dir</kbd></pre>
+   <pre class="command_user"><kbd>get xdg-user-dirs sound-theme-freedesktop</kbd></pre>
   <h3>Recycle bin and automatic medias mounting manager</h3>
    <pre class="command_user"><kbd>get gvfs</kbd></pre>
   <h3>Sound manager</h3>
