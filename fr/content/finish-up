@@ -185,7 +185,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
     <pre class="command_user"><kbd>get zip unzip</kbd></pre>
    <h3>Gestion des dossiers utilisateurs et des thèmes de sons </h3>    
     <pre class="command_user"><kbd>get xdg-user-dirs sound-theme-freedesktop</kbd></pre>
-   <h3>Gestion de la pouvelle et du montage automatique de clés USB</h3>
+   <h3>Gestion de la corbeille et du montage automatique de clés USB</h3>
     <pre class="command_user"><kbd>get gvfs</kbd></pre>
    <h3>Gestion du son</h3> 
     <pre class="command_user"><kbd>get alsa-utils pavucontrol</kbd></pre>

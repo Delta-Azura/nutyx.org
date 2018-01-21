@@ -172,7 +172,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
    <pre class="command_user"><kbd>get zip unzip</kbd></pre>
   <h3>Home directory and sound themes manager</h3>
    <pre class="command_user"><kbd>get xdg-user-dir</kbd></pre>
-  <h3>Garbage and automatic medias mounting manager</h3>
+  <h3>Recycle bin and automatic medias mounting manager</h3>
    <pre class="command_user"><kbd>get gvfs</kbd></pre>
   <h3>Sound manager</h3>
    <pre class="command_user"><kbd>get alsa-utils pavucontrol</kbd></pre>
