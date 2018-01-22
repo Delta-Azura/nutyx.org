@@ -80,6 +80,26 @@
          blackbox
         <td>
          <pre class="command_user"><kbd>get blackbox</kbd></pre>
+        <tr class="odd">
+        <td>
+         icewm
+        <td>
+         <pre class="command_user"><kbd>get icewm</kbd></pre>
+        <tr class="even">
+        <td>
+         ratpoison
+        <td>
+         <pre class="command_user"><kbd>get ratpoison</kbd></pre>
+        <tr class="odd">
+        <td>
+         flwm
+        <td>
+         <pre class="command_user"><kbd>get flwm</kbd></pre>
+        <tr class="even">
+        <td>
+         i3wm
+        <td>
+         <pre class="command_user"><kbd>get i3wm</kbd></pre>
      </table>
  
  <h2>Installation d'un gestionnaire de connection</h2>
