@@ -136,7 +136,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=extra
 COLLECTION=cli-extra
-RSYNC=(base cli cli-extra)</kbd></pre>
+RSYNC=(base cli)</kbd></pre>
 
        <tr class="even">
         <td>
@@ -146,7 +146,7 @@ RSYNC=(base cli cli-extra)</kbd></pre>
         <td>
          <pre class="command_user"><kbd>PROJECT=extra
 COLLECTION=gui-extra
-RSYNC=(base cli gui cli-extra gui-extra)</kbd></pre>
+RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>

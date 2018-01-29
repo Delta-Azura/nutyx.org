@@ -175,6 +175,18 @@ insane.
    </tr>
    <tr class="even">
     <td width="30%" class="lien_article" >
+      <a class="url" href="collections">Collections</a>
+    </td>
+    <td width="70%">
+     This article explains the availables collections and what's the concept behind them.
+     It's very important for a packager to understand this original concept under NuTyX.
+     Collections are organised in 5 differents set.
+     Each set have a dedicated responsability. 
+    </td>
+    <td>
+    </td>
+   <tr class="odd">
+    <td width="30%" class="lien_article" >
       <a class="url" href="build-in-chroot">How to build in a chroot ?</a>
     </td>
     <td width="70%">
@@ -186,7 +198,7 @@ insane.
        <a href="https://youtu.be/NarIuzEngt8"><img src="../../graphics/documentation/build-in-chroot.jpg" width="160"height="100"></a>
     </td>
    </tr>
-   <tr class="odd">
+   <tr class="even">
     <td width="30%" class="lien_article" >
       <a class="url" href="build-bot">Setup a build bot</a>
     </td>

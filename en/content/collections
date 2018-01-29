@@ -1,0 +1,229 @@
+<h1>The collections</h1>
+ <h2>Introduction</h2>
+   They are a lot of synonyms for defining a set of packages in the informatics jargon.
+  <p>
+   Under NuTyX, a set of packages is holded in a collection.
+  <p>
+   A collection include 3 fondamentals properties:
+   <ul>
+     <li>
+      Independant
+     <li>
+      Hierachy
+     <li>
+      Interdepencies between thems
+   </ul>
+   Even if thoses properties could look contradictory, we will see in this tutorial why they are justified.
+     
+ <h2>Definition</h2>
+   Under NuTyX, a collection is a set of recepts and binaries packages.
+   This set provide certains functionnalities.
+   Those functionnalities are organised as follow:
+   <ul>
+    <li>
+     Librairies and utilities for a base system
+    <li>
+     Librairies and utilities for a command line interface (CLI)
+    <li>
+     Librairies and utilities for a graphical user interface (GUI)
+    <li>
+     Extras librairies and utilities for a command line interface (CLI)
+    <li>
+     Extras librairies and utilities for a graphical user interface (GUI)
+    <li>
+     Graphical interface XXX
+    <li>
+    Extra graphical interface XXX-extra
+    <li>
+    Non open Sources Ports
+   </ul>
+    At the moment, are availables as collections, following graphical interfaces:
+    <ul>
+     <li>
+      XFCE4
+     <li>
+      KDE5
+     <li>
+      MATE
+     <li>
+      LXDE
+     <li>
+      LXQT
+    </ul>
+  <h2>Collections management via cards</h2>
+   Because of they concept, each collection contains it's own meta-data files.
+   When adding / removing a package from a collection, only the meta-datas file of this collection will be modify.
+   This property offer a maximal flexibility to the users and to the Package manager.
+  <h2>Collections hierachy</h2>
+   The hierachy of thoses collections is an important concept. 
+    <p>
+    Here the symbol "->" should be interpreted as "depends on"
+    <p>
+     Here is the fondamental rule:
+    <p>
+     XXX-extra -> XXX -> gui -> cli -> base
+    <p>
+     cli-extra -> cli -> base
+    <p>
+     gui-extra -> gui -> cli -> base
+    <p>
+     With this well established rule, the following concept is defined:
+     <ul>
+      <li>
+       A package from the <i>base</i> collection can only use dependencies from the same <i><u>base</u></i> collection.
+      <li>
+       A package from the <i>cli</i> collection can only use dependencies from <i><u>base</u></i> or <i><u>cli</u></i> collections.
+      <li>
+       A package from the <i>cli-extra</i> collection can only use dependencies from <i><u>base</u></i> or <i><u>cli</u></i> collections.
+      <li>
+       A package from the <i>gui</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
+      <li>
+       A package from the <i>gui-extra</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
+     </ul>
+      And for the graphical interfaces <i>mate, kde5, lxde, lxqt, and xfce4</i>, the concept is defined as follow:
+     <ul>
+      <li>
+       A package from the <i>mate</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
+      <li>
+       A package from the <i>mate</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i>, <i><u>gui</u></i> or <i><u>mate</u></i> collections. 
+     </ul>
+     Same principle for the others graphical interfaces <i>lxde, lxqt, kde5 and xfce4</i>
+
+  <h2>Interdependancies</h2>
+    The NuTyX collections are inter dependends in the following way: 
+    <ul>
+     <li>
+      <b>base</b>:
+       The <i>base</i> collection is the set of a minimum base system, it will be always needed.
+       All the others collections depends then on this <i>base</i> collection.
+    <li>
+     <b>cli</b>:
+       The <i>cli</i> collection contains all the libraries and applications used by a command line interface.
+     <p>
+      Only the <i>base</i> collection is a dependencie of the <i>cli</i> collection.
+    <li>
+     <b>gui</b>:
+      The <i>gui</i> collection contains all the libraries and applications used by a graphical interface.
+      The <i>base</i> and <i>cli</i> collections are the dependancies of the <i>gui</i> collection.
+    <li>
+     <b>cli-extra</b>:
+      The <i>cli-extra</i> collection contains applications used by a command line interface.
+    <p>
+      The <i>base</i> and <i>cli</i> collections are the dependancies of the <i>gui</i> collection.
+
+    <li>
+     <b>gui-extra</b>:
+     The <i>gui-extra</i> collection contains apllications used by a graphical interface.
+    <p>
+     The <i>base</i>, <i>cli</i> and <i>gui</i> are the dependencies of the <i>gui-extra</i> collection.
+    <li>
+     <b>mate et mate-extra</b>:
+      The <i>mate</i> and <i>mate-extra</i> contains respectively a minimalist version of the interfaces and it's applications and others extensions.
+     <p>
+      The <i>base</i>, <i>cli</i> and <i>gui</i> collections are the dependencies of the <i>mate</i> collection.
+     <p>
+      The <i>base</i>, <i>cli</i>, <i>gui</i> and <i>mate</i> are the dependancies of the <i>mate-extra</i> collection.    
+    <li>
+     <b>xxx et xxx-extra</b>:
+      Same principle as for the <i>mate</i> and <i>mate-extra</i> collections.
+
+   </ul>
+ <h2>The groups of collection</h2>
+  <h3>A. The base system collection</h3>
+    The base system is located in a dedicated GIT project on the github.com website:
+   <a href="https://github.com/NuTyX/base-sysV">https://github.com/NuTyX/base-sysV</a>
+   <p>
+    The collection consisting of the base system is:
+   <ul>
+    <li>
+      base
+   </ul>
+  <h3>B. The core system collections</h3>
+    The core of the system is group in a GIT project on github.com website:
+   <a href="https://github.com/NuTyX/core">https://github.com/NuTyX/core</a>
+   <p>
+    The collections consisting of the core system are:
+ <ul>
+   <li>
+    cli
+   <li>
+    gui
+ </ul>
+  <h3>C. The Extra collections</h3>
+   The 'extra' collection is group in a GIT project on github.com website:
+   <a href="https://github.com/NuTyX/extra">https://github.com/NuTyX/extra</a>
+   <p>
+    The 'extra' collections are:
+ <ul>
+   <li>
+    cli-extra
+   <li>
+    gui-extra
+ </ul>
+   
+  <h3>D. The graphical interfaces collections</h3>
+    The graphical intefaces collections are group per project on the github.com website at the following adresses:
+   <p>
+    <a href="https://github.com/NuTyX/mate">https://github.com/NuTyX/mate</a> for mate.
+   <p>
+    <a href="https://github.com/NuTyX/kde5">https://github.com/NuTyX/kde5</a> for kde5.
+   <p>
+    <a href="https://github.com/NuTyX/xfce4">https://github.com/NuTyX/xfce4</a> for xfce4.
+   <p>
+    <a href="https://github.com/NuTyX/lxqt">https://github.com/NuTyX/lxqt</a> for lxqt.
+   <p>
+    <a href="https://github.com/NuTyX/lxde">https://github.com/NuTyX/lxde</a> for lxde.
+   <p>
+    The collections of thoses graphical interfaces are:
+   <p>
+    mate:
+    <ul>
+     <li>
+      mate
+     <li>
+      mate-extra
+     </ul>
+    <p>
+    kde5:
+    <ul>
+     <li>
+      kde5
+     <li>
+      kde5-extra
+    </ul>
+    <p>
+    xfce4:
+    <ul>
+     <li>
+      xfce4
+     <li>
+      xfce4-extra
+     </ul>
+    <p>
+    lxqt:
+    <ul>
+     <li>
+      lxqt
+     <li>
+      lxqt-extra
+     </ul>
+    <p>
+    lxde:
+    <ul>
+     <li>
+      lxde
+     <li>
+      lxde-extra
+     </ul>
+
+  <h3>E. The Non Open Source collection</h3>
+   The 'Non Open Source" collection is located on the github.com website at the adress:
+   <a href="https://github.com/NuTyX/nos">https://github.com/NuTyX/nos</a>
+   <p>
+    The collection is made of:
+   <ul>
+    <li>
+     nos
+   </ul>
+  <h2>And now ?</h2>
+   Collections have no secrets for you anymore, time to try to <a href="build-in-chroot">compile in an isolated chroot</a>.
