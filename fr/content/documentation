@@ -190,7 +190,7 @@
       <a class="url" href="recept">Qu'est-ce qu'un port, une recette</a>) ?
     </td>
     <td>
-     Pour constuire votre premier <a href="dictionary#ID005">paquet</a>, vous avez besoin de créer une recette. 
+     Pour construire votre premier <a href="dictionary#ID005">paquet</a>, vous avez besoin de créer une recette. 
      Cette recette se trouve dans un port qui est un dossier contenant un certain nombre de fichiers nécessaires pour 
      la construction d'un paquet. La commande <b>pkgmk</b> permet de "construire" le paquet qui sera ensuite installable.
     </td>
