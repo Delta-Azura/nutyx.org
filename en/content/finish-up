@@ -22,15 +22,133 @@
 /var/lib/pkg/depot/cli-extra/.PKGREPO
 /var/lib/pkg/depot/cli/.PKGREPO
 /var/lib/pkg/depot/base/.PKGREPO</pre>
- <h2>Installation of a graphical interface and one of the available desktop</h2>
- Synchronisation is done.
- You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
- Let's start then with the graphical server:
- <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
-  <pre class="output">[sudo] password for charly:</pre>
+  Synchronisation is done.
+  You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
+
+ <h2>Desktop installation:</h2>
+  You can now choose your favorite desktop.
+  Under NuTyX: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.
+  <p>
+      <table>
+       <caption><EM>Available desktops:</EM></caption>
+       <tr class="sidebar">
+        <th>Desktop name:
+        <th>Command:
+       <tr class="even">
+        <td>
+         kde5 kde5-extra
+        <td>
+         <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         lxqt lxqt-extra
+        <td>
+         <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         xfce4 xfce4-extra
+        <td>
+         <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         mate mate-extra
+        <td>
+         <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         lxde
+        <td>
+         <pre class="command_user"><kbd>get lxde</kbd></pre>
+       <tr class="odd">
+        <td>
+         openbox
+        <td>
+         <pre class="command_user"><kbd>get openbox</kbd></pre>
+        <tr class="even">
+        <td>
+         enlightenment
+        <td>
+         <pre class="command_user"><kbd>get enlightenment</kbd></pre>
+       <tr class="odd">
+        <td>
+         jwm
+        <td>
+         <pre class="command_user"><kbd>get jwm</kbd></pre>
+        <tr class="even">
+        <td>
+         blackbox
+        <td>
+         <pre class="command_user"><kbd>get blackbox</kbd></pre>
+        <tr class="odd">
+        <td>
+         icewm
+        <td>
+         <pre class="command_user"><kbd>get icewm</kbd></pre>
+        <tr class="even">
+        <td>
+         ratpoison
+        <td>
+         <pre class="command_user"><kbd>get ratpoison</kbd></pre>
+        <tr class="odd">
+        <td>
+         flwm
+        <td>
+         <pre class="command_user"><kbd>get flwm</kbd></pre>
+         <tr class="even">
+        <td>
+         i3wm
+        <td>
+         <pre class="command_user"><kbd>get i3wm</kbd></pre>
+    </table>
+  <p>
+
+ <h2>Installation of a login manager </h2>
+  To be able to start a graphical session under NuTyX, you can choose between the "automatic", "semi-automatic" and "manual" modus.
+  <p>
+   You can start a graphical session from a non graphical console as well.
+  <h3>Automatic graphical login</h3>
+    Let's start to install the login session:
+    <pre class="command_user"><kbd>get lxdm</kbd></pre>
+    <pre class="output">[sudo] password for charly:</pre>
     You Now enter the password you specified at the  installation and installation starts:
-  <pre class="output">/var/lib/pkg/depot/gui/xorg-xinit/.PKGREPO
-  ...</pre>
+    <pre class="output">/var/lib/pkg/depot/gui/lxdm/.PKGREPO
+   ...</pre>
+    No need to configure anything.
+  <h3>Semi-Automatic graphical login</h3>
+    The <i>slim</i> login manager will be install:
+    <pre class="command_user"><kbd>get slim</kbd></pre>
+    To be able to take full profit of the <i>slim</i> functionalities, it's recommended to provide an <i>.xinitrc</i> configuration file at the root of the home directory.
+   <p>
+    If no configuration file is supply, some functionalities will not work properly.
+   
+  <h3>Manual graphical login</h3>
+    The <i>xdm</i> login manager will be install.
+    It's a very simple application and therefore needs an <i>.xinitrc</i> configuration file at the root of the home directory.
+    <pre class="command_user"><kbd>get xorg-xdm</kbd></pre>
+    Let's configure the <i>.xinitrc</i> configuration file.
+   <p>
+    We copy the available xinitrc file from the <i>xorg-xinit</i> packager already installed:
+    <pre class="command_user"><kbd>cp /etc/X11/app-defaults/xinitrc ~/.xinitrc</kbd></pre>
+    Replace the last 5 lines:
+    <pre class="output">twm &
+xclock -geometry 50x50-1+1 &
+xterm -geometry 80x50+494+51 &
+xterm -geometry 80x20+494-0 &
+exec xterm -geometry 80x66+0+0 -name login</pre>
+   with the name of your installed graphical interface above, example for mate:
+   <pre class="output">exec mate-session</pre>
+
+  <h3>Starting the graphical server from a non graphical console</h3>
+    We install the graphical server and the initialiseur:
+    <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
+    Like for the manual graphical login <i>xdm</i>,
+    it needs an <i>.xinitrc</i> configuration file at the root of the home directory.
+   <p>
+    Once the configuration in place and the server installed, you can start it from a non-graphical console via the command:
+    <pre class="command_user"><kbd>startx</kbd></pre>
+   <p>
+    If you still don't get any good result, you probably need to install the driver for your graphical cards.
+
  <h2>Xorg Driver of your graphical card</h2>
       <table>
        <caption><EM>Availables Xorg graphical cards drivers:</EM></caption>
@@ -78,67 +196,34 @@
          <td>
           <pre class="command_user"><kbd>get xorg-xf86-video-openchrome</kbd></pre>
      </table>
-
-  <p>
- <h2>Desktop installation:</h2>
-  You can now choose your favorite desktop.
-  Under NuTyX: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.
-  <p>
-      <table>
-       <caption><EM>Available desktops:</EM></caption>
-       <tr class="sidebar">
-        <th>Desktop name:
-        <th>Command:
-       <tr class="even">
-        <td>
-         kde5 kde5-extra
-        <td>
-         <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
-       <tr class="odd">
-        <td>
-         lxqt lxqt-extra
-        <td>
-         <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
-       <tr class="even">
-        <td>
-         xfce4 xfce4-extra
-        <td>
-         <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
-       <tr class="odd">
-        <td>
-         mate mate-extra
-        <td>
-         <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
-       <tr class="even">
-        <td>
-         lxde
-        <td>
-         <pre class="command_user"><kbd>get lxde</kbd></pre>
-       <tr class="odd">
-        <td>
-         openbox
-        <td>
-         <pre class="command_user"><kbd>get openbox</kbd></pre>
-        <tr class="even">
-        <td>
-         enlightenment
-        <td>
-         <pre class="command_user"><kbd>get enlightenment</kbd></pre>
-     </table>
-  <p>
-   Whatever your choice, you need to install a Login manager.
-   You can choose between lxdm, slim and xorg-xdm.
-   For lxdm:
-   <pre class="command_user"><kbd>get lxdm</kbd></pre>
-   <p>
-    You should now install a few tools that might be very useful, for example:
-    <pre class="command_user"><kbd>get zip unzip xdg-user-dirs gvfs ntfs-3g alsa-utils firefox libreoffice pidgin thunderbird</kbd></pre>
-   <p>
-    If you are using a wireless connection as default, install network-manager-applet:
-    <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
+ <h2>Usefull applications</h2>
+    You should now install a few tools that might be very useful:
+  <h3>Compressed files tools</h3>
+   <pre class="command_user"><kbd>get zip unzip</kbd></pre>
+  <h3>Home directory and sound themes manager</h3>
+   <pre class="command_user"><kbd>get xdg-user-dirs sound-theme-freedesktop</kbd></pre>
+  <h3>Recycle bin and automatic medias mounting manager</h3>
+   <pre class="command_user"><kbd>get gvfs</kbd></pre>
+  <h3>Sound manager</h3>
+   <pre class="command_user"><kbd>get alsa-utils pavucontrol</kbd></pre>
+  <h3>NTFS (windows) formated partitions manager</h3>
+   <pre class="command_user"><kbd>get ntfs-3g</kbd></pre>
+  <h3>Internet Browser</h3>
+   <pre class="command_user"><kbd>get firefox</kbd></pre>
+  <h3>Mail client</h3>
+   <pre class="command_user"><kbd>get thunderbird</kbd></pre>
+  <h3>Office suite</h3>
+   <pre class="command_user"><kbd>get libreoffice</kbd></pre>
+  <h3>Instant message</h3>
+   <pre class="command_user"><kbd>get pidgin</kbd></pre>
+  <h3>Laptop pad management</h3>
+   <pre class="command_user"><kbd>get xorg-xf86-input-synaptics</kbd></pre>
+  <h3>Wireless tools management</h3>
+   If you are using a wireless connection as default, install network-manager-applet:
+   <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>And to finish up</h2>
    The easiest way is to reboot your machine. After reboot, you will be prompted to choose your login name via lxdm or slim.
-   If you have installed slim, you should press F1 to select the right desktop to login to.
+   If you have installed <i>slim</i>, you should press F1 to select the right desktop to login to.
    <pre class="command_user"><kbd>sudo reboot</kbd></pre>
  <h2>Conclusion</h2>
   <p>

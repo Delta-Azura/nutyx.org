@@ -80,6 +80,26 @@
          blackbox
         <td>
          <pre class="command_user"><kbd>get blackbox</kbd></pre>
+        <tr class="odd">
+        <td>
+         icewm
+        <td>
+         <pre class="command_user"><kbd>get icewm</kbd></pre>
+        <tr class="even">
+        <td>
+         ratpoison
+        <td>
+         <pre class="command_user"><kbd>get ratpoison</kbd></pre>
+        <tr class="odd">
+        <td>
+         flwm
+        <td>
+         <pre class="command_user"><kbd>get flwm</kbd></pre>
+        <tr class="even">
+        <td>
+         i3wm
+        <td>
+         <pre class="command_user"><kbd>get i3wm</kbd></pre>
      </table>
  
  <h2>Installation d'un gestionnaire de connection</h2>
@@ -185,7 +205,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
     <pre class="command_user"><kbd>get zip unzip</kbd></pre>
    <h3>Gestion des dossiers utilisateurs et des thèmes de sons </h3>    
     <pre class="command_user"><kbd>get xdg-user-dirs sound-theme-freedesktop</kbd></pre>
-   <h3>Gestion de la pouvelle et du montage automatique de clés USB</h3>
+   <h3>Gestion de la corbeille et du montage automatique de clés USB</h3>
     <pre class="command_user"><kbd>get gvfs</kbd></pre>
    <h3>Gestion du son</h3> 
     <pre class="command_user"><kbd>get alsa-utils pavucontrol</kbd></pre>
@@ -204,8 +224,9 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
    <h3>Réseau sans fils en mode itinérant</h3>
     <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>Et pour finir</h2>
-   Le plus simple maintenant redémarrez votre machine. Après le redémarrage, vous serez accueilli par le gestionnaire de connection lxdm ou slim.
-   Pour ce dernier, pressez la touche F1 pour choisir le bureau adéquat.
+   Le plus simple maintenant redémarrez votre machine.
+   Après le redémarrage, vous serez accueilli par le gestionnaire de connection lxdm, slim ou xdm.
+   Pour <i>slim</i>, pressez la touche F1 pour choisir le bureau adéquat.
    <pre class="command_user"><kbd>sudo reboot</kbd></pre>
  <h2>Conclusion</h2>
   Je vous invite à prendre connaîssance <a href="base-commands">des commandes de base pour que vous puissiez allez plus loin dans votre installation.</a>
