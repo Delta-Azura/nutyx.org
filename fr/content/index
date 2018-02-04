@@ -1,6 +1,6 @@
   <div style="float:right;clear=right;">
-    <img src=http://downloads.nutyx.org/ScreenShots/1406572766.png   width="400" height="270" >
-  </div>
+    <img src=../../graphics/screenshot.png   width="400" height="270" >
+    </div>
 
   <h1>Bienvenue</h1>
    <p>
@@ -32,7 +32,7 @@
     NuTyX  est inspiré de la documentation du site <a href="http://www.linuxfromscratch.org">LFS</a>
     et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
  
-    <div style="font-size:150%"><b>Les 10 atouts de NuTyX</b></div>     
+    <div style="font-size:150%"><b>Les 10 atouts de NuTyX</b></div>
  
     <ol>
      <li>

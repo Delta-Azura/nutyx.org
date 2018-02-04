@@ -1,5 +1,6 @@
   <div style="float:right;clear=right;">
-    <img src=http://downloads.nutyx.org/ScreenShots/1406572766.png   width="400" height="270" >
+    <img src=../../graphics/screenshot.png 
+    <img src=../../graphics/screenshot.png   width="400" height="270">
   </div>
 
   <h1>Welcome</h1>
