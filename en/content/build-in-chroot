@@ -17,7 +17,9 @@
    Depending on the branch you want to use, you can specify it when naming the script:
   <h3>The stable branch</h3>
    <pre class="command"><kbd>VERSION="stable" install-nutyx</kbd></pre>
-  <h3>The development branch</h3>
+  <h3>The current branch</h3>
+    <pre class="command"><kbd>VERSION="current" install-nutyx</kbd></pre>
+ <h3>The development branch</h3>
     <pre class="command"><kbd>VERSION="development" install-nutyx</kbd></pre>
 
  <h2>Enter the chroot</h2>
@@ -114,7 +116,13 @@ do
   rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/stable/$i/ \
   /usr/ports/$i/
 done</kbd></pre>
-    <h3>The development branch</h3>
+    <h3>The current branch</h3>
+    <pre class="command"><kbd>for i in base cli gui
+do
+  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/current/$i/ \
+  /usr/ports/$i/
+done</kbd></pre>
+   <h3>The development branch</h3>
      <pre class="command"><kbd>for i in base cli gui
 do
   rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/development/$i/ \

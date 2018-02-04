@@ -17,6 +17,8 @@
    En fonction du choix de la branche choisie, vous spécifiez celle-ci lors de l'appel du script:
   <h3>La branche stable</h3>
    <pre class="command"><kbd>VERSION="stable" install-nutyx</kbd></pre>
+  <h3>La branche current</h3>
+   <pre class="command"><kbd>VERSION="current" install-nutyx</kbd></pre>
   <h3>La branche development</h3>
    <pre class="command"><kbd>VERSION="development" install-nutyx</kbd></pre>
 
@@ -111,6 +113,12 @@ EOF</kbd></pre>
     <pre class="command"><kbd>for i in base cli gui
 do
   rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/stable/$i/ \
+  /usr/ports/$i/
+done</kbd></pre>
+     <h3>La branche current</h3>
+    <pre class="command"><kbd>for i in base cli gui
+do
+  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/current/$i/ \
   /usr/ports/$i/
 done</kbd></pre>
     <h3>La branche development</h3>
