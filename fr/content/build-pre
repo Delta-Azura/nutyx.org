@@ -14,7 +14,7 @@
       <p>
        Passez en root:
       <pre class="command_user"><kbd>su -</kbd></pre>
-      <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}
+      <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}
 md5sum -c install-nutyx.md5sum</kbd></pre>
       <pre class="output">install-nutyx: OK</pre>
       <pre class="command"><kbd>chmod -v 755 install-nutyx</kbd></pre>

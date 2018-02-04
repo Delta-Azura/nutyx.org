@@ -85,7 +85,7 @@ $LFS/var/lib/pkg/depot/base/</kbd></pre>
     <p>
      We will use the command <b>wget</b> for the download.
      Make sure you have it installed on your distribution
-    <pre class="command"><kbd>wget http://downloads.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
+    <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
     <p>
      We will check the integrity of the script before we use it.
     <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
