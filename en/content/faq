@@ -5,7 +5,7 @@
      It's done in a few steps:
      <ul>
       <li>
-        send a email to one of &lt;mailing_list_name&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> for example) by specifying:
+        send an email to one of &lt;mailing_list_name&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> for example) by specifying:
        <b><i>subscribe</i></b> as the subject.
       <li>
        You will receive a confirmation mail. Check your spam mail.
@@ -38,8 +38,8 @@
 
    <h2>NuTyX is not a multi-lib</h2>
     <p>
-     It take's much more time to build up a multilib distribution.
-     Normally all the libraries needs to be compiled in 64 and 32 bits.
+     It takes much more time to build up a multilib distribution.
+     Normally all the libraries need to be compiled in 64 and 32 bits.
     <p>
      Today, it's not possible to produce a multilib because there are links created at construction / installation of NuTyX (lib64->lib) under /lib and /usr.
 
@@ -97,7 +97,7 @@
        Once the base system is installed, the user installs the development tools:
        <pre class="command_user"><kbd>get cards.devel</kbd></pre>
       <p>
-       He (she) downloads the availables recipes:
+       He (She) downloads the availables recipes:
        <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
       <p>
        He (She) adjusts the <b>/etc/cards.conf</b> configuration file as:
@@ -127,7 +127,7 @@ logdir /var/log/pkgbuild</pre>
 
    <h2>How to activate the root account ?</h2>
     <p>
-     As default, NuTyX does not activate the root account, but if you wish to compile your own packages, it may be a good activate the root account.
+     As default, NuTyX does not activate the root account but, if you wish to compile your own packages, it may be a good activate the root account.
      It's very simple, type:
      <pre class="command_user"><kbd>nu</kbd></pre>
      and choose <b>root</b> as user
