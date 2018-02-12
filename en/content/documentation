@@ -140,7 +140,7 @@
       <a class="url" href="why-contribute">Why should you contribute ?</a>
     </td>
     <td width="70%">
-     Today NuTyX has about 1400 <a href="packages" title="Read in another windows" class="external" onclick="window.open(this.href); return false;">binary applications</a> available. That seems like a lot, and yet it is not 
+     Today NuTyX has about 1700 <a href="packages" title="Read in another windows" class="external" onclick="window.open(this.href); return false;">binary applications</a> available. That seems like a lot, and yet it is not 
 really, because every day new programs are released on the Internet, mostly under open source licences.
     </td>
    </tr>
