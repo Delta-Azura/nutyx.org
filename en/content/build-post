@@ -151,10 +151,21 @@ cards remove rsync.service</kbd></pre>
 '/root/development/iso/isolinux/boot.msg' -&gt; '/ISO/isolinux/boot.msg'
 '/root/development/iso/isolinux/isolinux.bin' -&gt; '/ISO/isolinux/isolinux.bin'
 '/root/development/iso/isolinux/isolinux.cfg' -&gt; '/ISO/isolinux/isolinux.cfg'</pre>
+
+    <li>
+     We generate the initrd
+    </li>
+     <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf</kbd></pre>
+     <pre class="output">Creating initrd-4.14.18-NuTyX-lts...
+ No firmware copied, it's for an ISO.
+ done.</pre>
+    <li>
+     We add the kernel and it's initrd
+    </li>
     <pre class="command"><kbd>cp -v /boot/kernel-* /ISO/isolinux/kernel</kbd></pre>
-    <pre class="output">'/boot/kernel-3.19.3' -&gt; '/ISO/isolinux/kernel'</pre>
+    <pre class="output">'/boot/kernel-4.14.18-NuTyX-lts' -&gt; '/ISO/isolinux/kernel'</pre>
     <pre class="command"><kbd>cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
-    <pre class="output">'/boot/initrd-3.19.3' -&gt; '/ISO/isolinux/initrd'</pre>
+    <pre class="output">'/boot/initrd-4.14.18-NuTyX-lts' -&gt; '/ISO/isolinux/initrd'</pre>
     <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
      Consult the options at the bottom of the page before going further if you want to customize your ISO by adding some packages or if you want to get rid of the binaries archives and build logs to reduce the size of your ISO.
     </div>

@@ -117,10 +117,17 @@ cards remove rsync.service</kbd></pre>
 '/root/development/iso/isolinux/boot.msg' -&gt; '/ISO/isolinux/boot.msg'
 '/root/development/iso/isolinux/isolinux.bin' -&gt; '/ISO/isolinux/isolinux.bin'
 '/root/development/iso/isolinux/isolinux.cfg' -&gt; '/ISO/isolinux/isolinux.cfg'</pre>
+   <li>On génère l'initrd indispensable</li>
+   <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf</kbd></pre>
+    <pre class="output">Creating initrd-4.14.18-NuTyX-lts...
+No firmware copied, it's for an ISO.
+done.</pre>
+   <li>On ajoute le kernel et son initrd</li>
    <pre class="command"><kbd>cp -v /boot/kernel-* /ISO/isolinux/kernel</kbd></pre>
-   <pre class="output">'/boot/kernel-3.19.0' -&gt; '/ISO/isolinux/kernel'</pre>
+
+   <pre class="output">'/boot/kernel-4.14.18-NuTyX-lts' -&gt; '/ISO/isolinux/kernel'</pre>
    <pre class="command"><kbd>cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
-   <pre class="output">'/boot/initrd-3.19.0' -&gt; '/ISO/isolinux/initrd'</pre>
+   <pre class="output">'/boot/initrd-4.14.18-NuTyX-lts' -&gt; '/ISO/isolinux/initrd'</pre>
    <div class="note"><img alt="[Note]" src="../graphics/note.gif" />Consultez les options en bas de la page avant d'aller plus loin si vous souhaitez ajouter des paquets et donc personnaliser votre ISO ou encore réduire la taille de celle-ci en supprimant les archives des binaires ainsi que les logs de construction.</div>
    <li>On produit maintenant les fichiers squashfs qui seront utilisés par l'iso et effacer les fichiers squash existant si necessaire puisque la commande mksquashfs ne peut pas les écraser.</li>
 <pre class="command"><kbd>mkdir -p /ISO/isolinux/boot/
