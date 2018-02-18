@@ -18,13 +18,13 @@
   </ul>
    It is also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
   <p>
-   If you have enough of RAM memory, a message will inform you that you can remove the key after choosing your mother language.
-   This means you can insert a USB keyboard for example.
+   If you have enough RAM memory, a message will inform you that you can remove the USB key after choosing your mother language.
+   This means you can insert a USB keyboard, for example.
   <p>
    All available ISO images can be downloaded at:
    <a class="url" href="http://downloads.nutyx.org/?C=M;O=D" target="_blank" >http://downloads.nutyx.org</a></p>
   <p>
-   You will find all kind of ISO images at:
+   You will find all kinds of ISO images at:
    <a class="url" href="https://tronyx-world.tech/nutyx/?C=M;O=D" target="_blank" >http://isos.nutyx.org</a></p>
  <h2>Create a bootable USB key</h2>
   <p>
