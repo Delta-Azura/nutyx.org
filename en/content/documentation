@@ -31,7 +31,7 @@
     <td width="40%">
      This topic shows how to install NuTyX on a single partition which occupies the entire disk. 
      No GRUB bootloader will be used.
-     This method can be used if your hardware does have UEFI mode, you can take advantage of it.
+     This method can be used if your hardware does have UEFI mode, so you can take advantage of it.
      This article is designed so that you won't have to do too much thinking.
      The process is quite straightforward and will install NuTyX in UEFI mode.
     </td>
@@ -64,10 +64,10 @@
       <a class="url" href="install-offline">Installation of NuTyX with the script without network connection</a>
     </td>
     <td width="70%">
-     This installation use a script available for download.
+     This installation uses a script available for download.
      Once this script and all the necessary packages are downloaded,
-     this tutorial explains how to install NuTyX from another distribution
-     or even from an already installed NuTyX without the need of a network connection.
+     this tutorial explains how to install NuTyX from another distribution, 
+     or even from an already installed NuTyX, without the need of a network connection.
     </td>
     <td width="30%">
     <a href="https://youtu.be/dUD3uC-A0BM"><img src="../../graphics/documentation/install-offline.jpg" width="160" height="100"></a>
@@ -90,7 +90,7 @@
     </td>
     <td width="70%">
      NuTyX manual for Version 10.0.
-     Here you will find everything you need to know about configuring and using your NuTyX system
+     Here you will find everything you need to know about configuring and using your NuTyX system.
      </td>
    </tr>
    <tr class="even">
@@ -99,7 +99,7 @@
     </td>
     <td>
      This litte guide explains how to setup an HTTP server with NuTyX.
-     An http server can be usefull if we want to test some html pages on a real browser.
+     An HTTP server can be usefull if we want to test some html pages on a real browser.
      If we want to create our own website localy accessible from home or why not make it public on the net.
     </td>
     <td  width="30%">
@@ -115,7 +115,7 @@
      This little guide explains how to setup an NFS server on NuTyX.
      NFS gives you the possibility to share folders between linux computers.
      The only condition is that all the computers concerned should run NFS.
-     We can say we are lucky all the distributions support it.
+     We can say we are lucky - all the distributions support it.
    </td>
     <td width="30%">
      <a href="https://youtu.be/Qav5laz3_1A"><img src="../../graphics/documentation/setup-nfs.jpg" width="160"height="100"></a>
@@ -128,7 +128,7 @@
     </td>
     <td width="70%">
      This document explains how to compile and install your own kernel from source as an alternative to the stock kernel.
-     You will need to have some knowledge of your hardware, such as the make and model of the network card, graphics card, processor type, etc
+     You will need to have some knowledge of your hardware, such as the make and model of the network card, graphics card, processor type, etc.
     </td>
    </tr>
   </table>   
@@ -178,10 +178,10 @@ insane.
       <a class="url" href="collections">Collections</a>
     </td>
     <td width="70%">
-     This article explains the availables collections and what's the concept behind them.
+     This article explains about the available collections and what's the concept behind them.
      It's very important for a packager to understand this original concept under NuTyX.
-     Collections are organised in 5 differents set.
-     Each set have a dedicated responsability. 
+     Collections are organised in five different sets.
+     Each set has a dedicated responsibility. 
     </td>
     <td>
     </td>
@@ -190,9 +190,9 @@ insane.
       <a class="url" href="build-in-chroot">How to build in a chroot ?</a>
     </td>
     <td width="70%">
-     This article explains how to build your packages in an isolated environment..
+     This article explains how to build your packages in an isolated environment.
      You HAVE TO use this method in case you are not in a base system or
-     choose to go for a "binaries" distribution as explain in the <a href="faq#4">FAQ</a>.
+     choose to go for a "binaries" distribution, as explained in the <a href="faq#4">FAQ</a>.
     </td>
     <td>
        <a href="https://youtu.be/NarIuzEngt8"><img src="../../graphics/documentation/build-in-chroot.jpg" width="160"height="100"></a>
@@ -206,7 +206,7 @@ insane.
     This article is addressed particularly to package developers.
     It explains how you can build all the packages of a collection completely automatically with a command as simple as:
      <pre class="command_user"><kbd>sudo build-collection /current/kde5</kbd></pre>
-     It is important to have a good understanding of your NuTyX distribution so as to be able to use the script properly.
+     It is important to have a good understanding of your NuTyX distribution to be able to use the script properly.
     </td>
    </tr>
   </table>   
@@ -219,7 +219,7 @@ insane.
     </td>
     <td  width="40%">
      It's very easy to create a customised ISO image from a folder in an installed NuTyX system.
-     This image can then be put on a disc or usb drive, and used to reinstall NuTyX if necessary.
+     This image can then be put on a disk or USB drive, and used to reinstall NuTyX if necessary.
      If you want, you can add a graphical interface too.
      It's up to you to add all the packages you want when you install the kernel, which is the minimum required.
     </td>

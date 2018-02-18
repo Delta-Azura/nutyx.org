@@ -6,24 +6,23 @@
    the <a href="recept">minimum syntax of instructions</a> and
    a list of <a href="packages">available packages</a> for you to choose from.
   <p>
-   Come and join the many participants of all ages, male and female, from all over the world, and venture along this exciting road we call NuTyX.
+   Come and join the many participants of all ages and gender, from all over the world, and venture along this exciting road we call NuTyX.
    We can promise you a rewarding experience as you build your very first NuTyX system, following our (NuTyX) rules <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
 
- <h2>Build my first package</h2>
+ <h2>Build your first package</h2>
   <p>
    We will show you how to build and install a first package in a very straightforward way.
   <p>
    This tutorial explains to you in a very simple way the construction of your first binary package.
   <p>
-   They are no prerequisites, this exercise can be done regardless of the state of your NuTyX.
+   They are no prerequisites.  This exercise can be done regardless of the state of your NuTyX.
   <p>
-   The chosen receipt is a little text editor which doesn't need any dependencies.
+   The chosen package is a little text editor which doesn't need any dependencies.
    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
     For this package, we won't use an isolated environment named <a href="dictionary#ID100">chroot</a>.
-    We will see in the next article, how to build in isolated environments.
-    Because that's the only working method if we need to build a package having dependencies.
+    We will see in the next article how to build in isolated environments: that's the only working method if we need to build a package having dependencies.
    </div>
- <h2>Make the recept</h2>
+ <h2>Make the build recipe</h2>
   <pre class="command_user"><kbd>sudo mkdir -p /usr/ports/perso/nano</kbd></pre>
   <pre class="command"><kbd>echo '
 description="Text Editor"

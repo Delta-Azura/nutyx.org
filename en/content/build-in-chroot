@@ -31,7 +31,7 @@
 
  <h2>Development tools installation</h2>
   <p>
-   The default installation is already adapted so just do a little:
+   The default installation is already adapted so just install the development packages if not already installed:
    <pre class="command"><kbd>get cards.devel</kbd></pre>
 
  <h2>The Configurations files</h2>
@@ -48,7 +48,7 @@ EOF</kbd></pre>
     A folder containing my personal recipes is added.
     We do not specify any URL because we don't plan to use <b>cards sync</b>.
    <p>
-    Folder/var/log/pkgbuild will contain compilation logs.
+    Folder /var/log/pkgbuild will contain compilation logs.
    <p>
     I don't need any specific NLS files, they can be all installed.
    <p>
@@ -92,13 +92,13 @@ EOF</kbd></pre>
     <p>
      The produced binaries are compressed in <b>xz</b> format.
     <p>
-     I want to keep my binaries onces installed.
+     I want to keep my binaries once installed.
     <p>
      I wish to have the runtime dependencies automatically added into the binary.
 
  <h2>Binaries synchronisation via rsync</h2>
     <p>
-     This operation consist of download of all the binaries of the <b>base, cli and gui</b> collection. 
+     This operation consists of download of all the binaries of the <b>base, cli and gui</b> collection. 
      It can take a while depending on the speed of your internet connection.
     <p>
      Luckily, this operation has to be done only once.
@@ -138,7 +138,7 @@ done</kbd></pre>
    You start to create the folder where you want to locate your new package. Let's call it <b>mypackage</b> (you need to adjust to your real one)
    <pre class="command"><kbd>mkdir /usr/ports/perso/mypackage</kbd></pre>
   <p>
-   We just need to create the recept of our package (you need to adjust to your real one):
+   We just need to create the build recipe of our package (you need to adjust to your real one):
    <pre class="output"># Depends on: python gtk3 librsvg
 description="My first package with plenty of  dependancies"
 packager="francis perrin"
@@ -157,7 +157,7 @@ build() {
    We can now launch the process of compilation and installation.
    <pre class="command"><kbd>cards create -r mypackage</kbd></pre>
   <p>
-   I suggest that you read the main page of cards to understand the way <b>cards create -r</b> this works.
+   I suggest that you read the man page of cards to understand the way <b>cards create -r</b> this works.
    <pre class="command"><kbd>man cards</kbd></pre>
 
  <h2>Conclusion</h2>
