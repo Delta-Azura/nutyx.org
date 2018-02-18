@@ -2,13 +2,13 @@
  <h2>And now ?</h2>
    Now you have a brand new base NuTyX installed.
    If you already know how to go on to get a graphical interface, you can directly check the website documentation.
-   If  you wondering how to install a complete graphical interface, continute reading.
+   If  you wondering how to install a complete graphical interface, continue reading.
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
   An <a href="dictionary#ID300">alias</a> is available for that:
   <pre class="command_user"><kbd>check</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
-  You enter now the password you specify at the installation and synchronisation starts:
+  You enter now the password you specified during the installation, and synchronisation starts:
   <pre class="output">/var/lib/pkg/depot/lxqt-extra/.PKGREPO
 /var/lib/pkg/depot/lxqt/.PKGREPO
 /var/lib/pkg/depot/mate-extra/.PKGREPO
@@ -115,11 +115,11 @@
    ...</pre>
     No need to configure anything.
   <h3>Semi-Automatic graphical login</h3>
-    The <i>slim</i> login manager will be install:
+    The <i>slim</i> login manager will be installed:
     <pre class="command_user"><kbd>get slim</kbd></pre>
-    To be able to take full profit of the <i>slim</i> functionalities, it's recommended to provide an <i>.xinitrc</i> configuration file at the root of the home directory.
+    To take full advantage of the <i>slim</i> functionality, it's recommended to provide an <i>.xinitrc</i> configuration file at the root of the home directory.
    <p>
-    If no configuration file is supply, some functionalities will not work properly.
+    If no configuration file is supplied, some of the functionality will not work properly.
    
   <h3>Manual graphical login</h3>
     The <i>xdm</i> login manager will be install.
@@ -135,19 +135,19 @@ xclock -geometry 50x50-1+1 &
 xterm -geometry 80x50+494+51 &
 xterm -geometry 80x20+494-0 &
 exec xterm -geometry 80x66+0+0 -name login</pre>
-   with the name of your installed graphical interface above, example for mate:
+   with the name of your installed graphical interface above.  For example, for mate:
    <pre class="output">exec mate-session</pre>
 
   <h3>Starting the graphical server from a non graphical console</h3>
-    We install the graphical server and the initialiseur:
+    We install the graphical server and the initialiser:
     <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
-    Like for the manual graphical login <i>xdm</i>,
+    As for the manual graphical login <i>xdm</i>,
     it needs an <i>.xinitrc</i> configuration file at the root of the home directory.
    <p>
-    Once the configuration in place and the server installed, you can start it from a non-graphical console via the command:
+    Once the configuration is in place and the server installed, you can start it from a non-graphical console via the command:
     <pre class="command_user"><kbd>startx</kbd></pre>
    <p>
-    If you still don't get any good result, you probably need to install the driver for your graphical cards.
+    If you still don't get any good result, you probably need to install the driver for your graphical card(s).
 
  <h2>Xorg Driver of your graphical card</h2>
       <table>
@@ -222,7 +222,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
    If you are using a wireless connection as default, install network-manager-applet:
    <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
  <h2>And to finish up</h2>
-   The easiest way is to reboot your machine. After reboot, you will be prompted to choose your login name via lxdm or slim.
+   The easiest way is to reboot your machine.  After reboot, you will be prompted to choose your login name via lxdm or slim.
    If you have installed <i>slim</i>, you should press F1 to select the right desktop to login to.
    <pre class="command_user"><kbd>sudo reboot</kbd></pre>
  <h2>Conclusion</h2>
