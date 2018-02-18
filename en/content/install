@@ -1,8 +1,8 @@
   <h1>Typical installation of NuTyX on a single partition</h1>
    <p>
-    Thoses screenshots shows you a typical installation on a single partition in bios mode.
-    We have a disk of 8 Gbytes.
-    The first partition is the swap partition of a 2 Gbytes size.
+    These following screenshots show you a typical installation on a single partition in BIOS mode.
+    In this example we have a disk of 8 Gbytes.
+    The first partition is the swap partition of size 2 Gbytes.
     The rest of the disk space will be available for the NuTyX install partition.
    <p>
     A minimum of 1 Gigabyte RAM is best suited. We assume that you have already burnt the ISO onto a CD.
@@ -46,7 +46,7 @@
 
     <h2>Install NuTyX</h2>
      <p>
-      The installation of NuTyX doesn't need an internet. It takes just a few minutes.
+      The installation of NuTyX doesn't need an internet connection. It takes just a few minutes.
      <table align="center">
       <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
       <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
@@ -55,7 +55,7 @@
 
    <h2>Configure NuTyX</h2>
     <p>
-     Once installed, NuTyX automatically start its configuration dialog without  having to reboot.
+     Once installed, NuTyX automatically starts its configuration dialog without having to reboot.
     <p>
      The configuration is very straightforward: network card configuration, setting date and time, and modification of the default password of the 
 administrator account <b>root</b>.
@@ -70,7 +70,7 @@ administrator account <b>root</b>.
       <tr><td><img src="graphics/install/FirstLogin.png"></td></tr>
      </table>
     <p>
-     Next, when prompted, use your username you just create to login.
+     Next, when prompted, use your username that you just created to login.
    <h2>Giving the base commands a trial run-through.</h2>
     <p>
      I suggest that you read the section on <a href="finish-up">finalise your installation</a> so that you can install a graphical interface.
