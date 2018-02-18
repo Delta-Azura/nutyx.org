@@ -16,7 +16,7 @@
      It's now time to ...
   <h2>Select the partition</h2>
    <p>
-    We choose the partition where the GRUB application will be installed.
+    Choose the partition where the GRUB application will be installed.
     Please note that the destination partition does <i>not</i> have to be on the disk you booted from.
     A menu appears giving you the chance to choose another disk.
    <p>
@@ -36,7 +36,7 @@
    <p>
     defines the fifth partition on the first hard drive.
    <p>
-    In the following example, we can see 2 entries: one of them is for NuTyX.
+    In the following example, we can see two entries: one of them is for NuTyX.
     The first entry will start the NuTyX distribution located on the <b>/dev/sda2</b> partition.
     The second entry will start Windows 10 located on <b>/dev/sda3</b>
    <pre class="output"># Begin grub.cfg
