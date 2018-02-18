@@ -29,9 +29,6 @@
       La gestion du site, les paquets de base, les paquets de xorg.
       L'assemblage de l'initrd (et de l'installateur) ainsi que le script d'installation.
       La gestion des bots build... Un peu tout ce qu'il reste à faire.
-
-     <h3>Sipo</h3>
-      <b>Sipo</b> empaqueteur de divers paquets. Il gère les paquets du git lxqt.
      <h3>Artemia</h3>
       <b>Artemia</b> Dévelopeur de l'interface graphique <i>flcards</i>.
      <h3>Remy</h3>
@@ -65,6 +62,10 @@
       Le gestionnaire de paquets CARDS a été modifié en son hommage.
       Tous les paquets où il a participé gardent une trace de son passage. Un champs "contributeurs" a été ajouté dans les recettes.
    <p>
+     <div>
+      <b>Sipo</b> empaqueteur de divers paquets dans diverses collections.
+     </div>
+    <p>
      <div>
       <b><a class="url" href="https://github.com/sh4d0w31410?tab=activity">Sh4d0w</a></b> empaqueteur des collections enlightenment et enlightenment-extra et divers paquets dans les autres collections.
      </div>

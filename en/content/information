@@ -22,9 +22,6 @@
      building the required base and Xorg packages,
      assembling the initrd and the installation script,
      managing the compiler servers and so on.
-   <h3>Sipo</h3>
-    <p>
-      <b>Sipo</b> is the packager of various packages. He takes care of the LXQt git packages as well.
 
    <h3>Artemia</h3>
     <p>
@@ -64,7 +61,8 @@
       Pierre also helps with some other packages from various collections.
       He was a long time an active contributor, the CARDS package manager have been modify to never forget his name.
       A new attribute call "Contributors" has been added.
- 
+    <p>
+      <b>Sipo</b> packager for various packages, like the LXQt git packages. 
     <p>
      <b><a class="url" href="https://github.com/sh4d0w31410?tab=activity">Sh4dOw</a></b> packager of the enlightenment and enlightenment-extra collections.
     <p>
