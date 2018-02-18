@@ -56,7 +56,7 @@ an attempt at creating a safer, faster, and more stable browser
 ...</pre>
    <h2>Add a package</h2>
      <p>
-      To add a package, the command <b>cards install</b> is used followed by the name of the software package to install:
+      To add a package, the command <b>cards install</b> is used, followed by the name of the software package to install:
      <pre class="command_user"><kbd>sudo cards install xfce4</kbd></pre>
      <p>
       The download of the application <b>xfce4</b> starts immediately.
@@ -79,11 +79,11 @@ Name or Description of the user: James Bond 007</pre>
      <pre class="command"><kbd>nu
 cards</kbd></pre>
      <p>
-      This last command has a more detailed explanation <i>via</i> in its help option
+      This last command has a more detailed explanation <i>via</i> its help option
      <pre class="command_user"><kbd>cards help</kbd></pre>
      <p>
       I wish you a lot of fun with you newly installed NuTyX.
      <p>
-      Would you like to install more packages or, why not build your own packages?
+      Would you like to install more packages?  Or why not build your own packages?
      <p>
       You will find here <a href="build-package"> all the necessary documentation.</a>
