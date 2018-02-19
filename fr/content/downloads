@@ -1,0 +1,140 @@
+<h1>Téléchargements</h1>
+ <h2>Introduction</h2>
+  Quelque soit l'iso choisie, vous pouvez la tester en mode <i>LIVE</i>.
+  Vous pouvez donc tester toutes les ISOs sans devoir installer NuTyX sur votre disque dur.
+
+ <h2>Pour le nouvel utilisateur sur NuTyX</h2>
+   <table width="100%" cellspacing="0">
+   <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
+   <tr class="sidebar">
+    <th>
+      ISO
+    <th>
+      Description
+   <tr class="even">
+    <td class="lien_article">
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
+     <p>
+      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
+    </td>
+    <td>
+       Installation en mode BIOS ou EFI possible.
+     <p>
+      l'ISO contient une installation complète avec <a href="https://mate-desktop.org/fr/">MATE</a> comme interface graphique par défaut.
+     <p>
+      L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
+    </td>
+   </tr>
+  </table>
+ <h2>Pour l'utilisateur régulié</h2>
+   <table width="100%" cellspacing="0">
+    <caption><EM>Listes des images ISO disponibles pour l'utilisateur ayant une certaine maîtrise de NuTyX:</EM></caption>
+     <tr class="sidebar">
+      <th>
+       ISO
+      <th>
+       Description
+     <tr class="even">
+      <td class="lien_article">
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.0.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
+       <p>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.0.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
+      </td>
+      <td>
+        Installation en mode BIOS ou EFI possible.
+       <p>
+        L'ISO contient une installation graphique de base.
+       <p>
+        L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-installation.
+       <p>
+        Pour lancer l'interface graphique, utilisez la commande:
+        <pre class="command_user"><kbd>startx</kbd></pre>
+        Vous serez accueilli par l'interface graphique <a href="https://fr.wikipedia.org/wiki/Twm">twm</a> rudimentaire mais très légère.
+      </td>
+     </tr>
+     <tr class="odd">
+      <td class="lien_article">
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>64bits</a>
+       <p>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>32bits</a>
+      </td>
+      <td>
+        Installation en mode BIOS ou EFI possible.
+       <p>
+        L'ISO contient une installation de base sans interface graphique.
+       <p>
+        L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-installation.
+      </td>
+      <td>
+      </td>
+     </tr>
+   </table>
+ <h2>Pour l'utilisateur confirmé</h2>
+   <table width="100%" cellspacing="0">
+    <caption><EM>Ce script est utilisé dans de nombreux cas de figures sous NuTyX:</EM></caption>
+     <tr class="sidebar">
+      <th>
+       Script
+      <th>
+       Description
+     <tr class="even">
+      <td class="lien_article">
+        <a class="url" href="http://www.nutyx.org/install-nutyx"><img src="../graphics/downloads/script.png" alt="logo script"/>install-nutyx</a>
+      </td>
+      <td>
+        Ce script permet l'installation d'une NuTyX de base dans un dossier.
+       <p>
+        Sa signature peut être vérifiée en téléchargeant le fichier <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
+       <p>
+        Le script peut être démarré depuis une NuTyX déjà installée ou depuis une autre distribution.
+       <p>
+        Il doit être lancé depuis le compte root
+       <p>
+        L'installation de NuTyX via le script se déroulera ainsi:
+       <ul>
+        <li>
+         On ouvre une session en root de manière temporaire
+         <pre class="command_user"><kbd>sudo bash</kbd></pre>
+        <li>
+         Téléchargement du script et de sa signature
+         <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
+        <li>
+         Vérification de sa signature
+         <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
+        <li>
+         Montage de la partition de destination (ici /dev/sda2 par exemple)
+         <pre class="command"><kbd>mkdir -p /mnt/hd
+mount /dev/sda2 /mnt/hd</kbd></pre>
+        <li>
+         Installation de la NuTyX de base
+         <pre class="command"><kbd>sh install-nutyx</kbd></pre>
+        <li>
+         Une fois l'installation terminée, on peut à nouveau entrer dans la NutyX fraîchement installée via la commande:
+         <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
+       </ul>
+      
+       <p>
+        Le script peut être utilisé pour les deux architectures 32 ou 64 bits.
+        Par défaut, ce sera l'architecture de la machine hôte qui sera choisie.
+        Il est possible d'installer une NuTyX 32 bits à partir d'une machine hôte 64 bits mais pas l'inverse.
+        Pour installer une NuTyX 32 bits depuis une machine hôte 64 bits, on utilise la variable <i><b>ARCH</b></i>:
+        <pre class="command"><kbd>sh ARCH="i686" install-nutyx</kbd></pre>
+       <p>
+        Par défaut, ce sera la branche stable qui sera choisie à l'installation, il est possible de spécifier la branche que l'on souhaite installer.
+        Pour installer une NuTyX de la branche current, on spécifie le nom de la branche via la variable <i><b>VERSION</b></i>
+        <pre class="command"><kbd>sh VERSION="current" install-nutyx</kbd></pre>
+       <p>
+        Par défaut, ce sera l'URL par défaut qui sera utilisée lors du téléchargement et la configuration de la NuTyX.
+        Pour spécifier une URL personalisée, on utilise la variable <i><b>URL</b></i>
+        <pre class="command"><kbd>sh URL="http://192.168.0.254" install-nutyx</kbd></pre>
+       <p>
+        Par défaut, ce sera le dossier <i>/mnt/hd</i> qui sera utilisé pour l'installation, la variable <i><b>LFS</b></i> permet de spöcifier un nouveau dossier de destination:
+        <pre class="command"><kbd>sh LFS="/MA-NUTYX" install-nutyx</kbd></pre>
+        Le dossier sera automatiquement créé si il n'existe pas.
+       <p>
+        On peut spécifier plusieurs variables:
+        <pre class="command"><kbd>sh LFS="/MINI-ISO" VERSION="development" URL="http://192.168.0.254" ARCH="i686" install-nutyx</kbd></pre>
+     </td>
+    </tr>
+   </table>
+ 
