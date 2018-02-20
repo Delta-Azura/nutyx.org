@@ -1,8 +1,22 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-  Quelque soit l'iso choisie, vous pouvez la tester en mode <i>LIVE</i>.
-  Vous pouvez donc tester toutes les ISOs sans devoir installer NuTyX sur votre disque dur.
-
+   La version stable actuelle de NuTyX s'appelle <b>10.0</b>.
+  <p>
+   Elle est disponible en 32 bits et en 64 bits.
+  <p>
+   La version 64 bits n'est pas une multi-lib mais une 64 bits pure.
+  <p>
+   Toutes les  isos disponibles permettent une installation sans avoir besoin de connection internet.
+  <p>
+   Quelque soit l'iso choisie, vous pouvez la tester en mode <i>LIVE</i>.
+   Vous pouvez donc tester toutes les ISOs sans devoir installer NuTyX sur votre disque dur.
+  <p>
+   Elles permettent également de faire un minimum de maintenance sur la machine avant l'installation de NuTyX.
+  <p>
+   Si vous avez suffisament de mémoire RAM, un message vous informera que vous pouvez retirer la clé après le choix de votre langue. 
+   Cela permet d'insérer un clavier USB par exemple.
+  <p>
+   Vous trouvez également diverses saveurs à l'adresse: <a class="url" href="https://tronyx-world.tech/nutyx/?C=M;O=D"  target="_blank" title="Lire dans une autre fenêtre" >http://isos.nutyx.org</a>
  <h2>Pour le nouvel utilisateur sur NuTyX</h2>
    <table width="100%" cellspacing="0">
    <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
@@ -69,6 +83,9 @@
       </td>
      </tr>
    </table>
+ <h2>Installation classique de NuTyX sur une seule partition en images</h2>
+  <p>
+   <a class="url" href="install">Cet article vous explique comment installer depuis zéro la distribution NuTyX sur votre machine</a>
  <h2>Pour l'utilisateur confirmé</h2>
    <table width="100%" cellspacing="0">
     <caption><EM>Ce script est utilisé dans de nombreux cas de figures sous NuTyX:</EM></caption>
@@ -133,8 +150,38 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         Le dossier sera automatiquement créé si il n'existe pas.
        <p>
         On peut spécifier plusieurs variables:
-        <pre class="command"><kbd>sh LFS="/MINI-ISO" VERSION="development" URL="http://192.168.0.254" ARCH="i686" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>sh LFS="/MINI-ISO" \
+VERSION="development" \
+URL="http://192.168.0.254" \
+ARCH="i686" install-nutyx</kbd></pre>
      </td>
     </tr>
    </table>
+ <h2>Installation de l'amorçage de la machine</h2>
+  <p>
+   <a class="url" href="grub-install">Cet article vous explique comment installer depuis zéro l'amorçage de la machine</a>
+  <p>
+   Pour les plus pressés et les plus callés, voici un résumé:
+  <p>
+   Avec grub 2.XX installé, il suffit de modifier votre grub.cfg selon:
+   <pre class="command"><kbd>menuentry "NuTyX sur /dev/sda1" {
+    set root=(hd0,1)
+    linux /boot/kernel root=/dev/sda1 ro quiet
+}</kbd></pre> <h2>Créez une clé bootable</h2>
+  <p>
+   Si vous êtes déjà sous GNU/Linux:
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />En root</div>
+  <p>
+   A l'aide de fdisk, déterminez où se trouve votre clé USB:
+   <pre class="command"><kbd>fdisk -l</kbd></pre>
+  <p>
+   A l'aide de <b>dd</b>, créez votre clé bootable:
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.0.iso of=/dev/sdX status=progress</kbd></pre>
+  <p>
+   La valeur <b>sdX</b> est donnée par la commande:
+   <pre class="command"><kbd>fdisk -l</kbd></pre>
+  <p>
+   Si vous êtes sous Windows:
+  <p>
+   Utilisez votre outil de gravure favori pour graver l'iso sur un CD-RW (si possible) ...
  

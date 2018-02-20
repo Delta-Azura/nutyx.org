@@ -1,7 +1,21 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-  Any ISO you choose can be tested in <i>LIVE</i> modus.
-  You can then test all thoses ISOs without installing NuTyX on your harddisk.
+   The current stable release of NuTyX is named <b>10.0</b>.
+  <p>
+   They are available in 32 bits and in 64 bits.
+  <p>
+   The available ISO image can be used to install a base system without the need of the internet.
+  <p>
+   Any ISO you choose can be tested in <i>LIVE</i> modus.
+   You can then test all thoses ISOs without installing NuTyX on your harddisk.
+  <p>
+   It is also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
+  <p>
+   If you have enough RAM memory, a message will inform you that you can remove the USB key after choosing your mother language.
+   This means you can insert a USB keyboard, for example.
+  <p>
+   You will find all kinds of ISO images at:
+   <a class="url" href="https://tronyx-world.tech/nutyx/?C=M;O=D" target="_blank" >http://isos.nutyx.org</a></p>
 
  <h2>For the new coming user on NuTyX</h2>
    <table width="100%" cellspacing="0">
@@ -69,6 +83,9 @@
       </td>
      </tr>
    </table>
+ <h2>Typical installation of NuTyX on a single partition</h2>
+  <p>
+   <a class="url" href="install">How to install NuTyX from scratch on your PC</a>.
  <h2>For the experimented NuTyX user</h2>
    <table width="100%" cellspacing="0">
     <caption><EM>This script is widely used in many tutorials of NuTyX:</EM></caption>
@@ -129,12 +146,38 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         <pre class="command"><kbd>sh URL="http://192.168.0.254" install-nutyx</kbd></pre>
        <p>
         By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
-        <pre class="command"><kbd>sh LFS="/MA-NUTYX" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>sh LFS="/My-NuTyX" install-nutyx</kbd></pre>
         The folder will be automaticaly created if not exist.
        <p>
         We can combine several variables:
-        <pre class="command"><kbd>sh LFS="/MINI-ISO" VERSION="development" URL="http://192.168.0.254" ARCH="i686" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>sh LFS="/MINI-ISO" \
+VERSION="development" \
+URL="http://192.168.0.254" \
+ARCH="i686" install-nutyx</kbd></pre>
      </td>
     </tr>
    </table>
+ <h2>Create a bootable USB key</h2>
+  <p>
+   If you are currently running GNU/linux on your machine:
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />As root </div>
+  <p>
+   With the help of fdisk, find out where your USB key is located:
+   <pre class="command"><kbd>fdisk -l</kbd></pre>
+  <p>
+   Then by using the command <b>dd</b>, create a bootable key:
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.0.iso of=/dev/sdX status=progress</kbd></pre>
+  <p>
+   The <b>sdX</b> value is the one that you have previously found using fdisk.
+  <p>
+   If you are using Windows, it is easier to burn the ISO image onto a CD.
+ <h2>Installing a bootloader</h2>
+  <p>
+   <a class="url" href="grub-install">How to install and configure the bootloader for your PC</a></p>
+  <p>
+   With grub version 2.XX, the following entry can be added to your grub.cfg:
+   <pre class="command"><kbd>menuentry "NuTyX sur /dev/sda1" {
+   set root=(hd0,1)
+   linux /boot/kernel root=/dev/sda1 ro quiet
+}</kbd></pre>
  
