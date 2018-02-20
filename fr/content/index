@@ -37,7 +37,7 @@
     <ol>
      <li>
       Sa capacité d'être installée depuis quasi n'importe quelle autre distribution 
-      grâce à l'utilisation d'un <a href="http://downloads.nutyx.org/install-nutyx">script bash</a> 
+      grâce à l'utilisation d'un <a href="http://www.nutyx.org/install-nutyx">script bash</a> 
       qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
       Le script fait un check des outils nécessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
       Tous les détails et explications se trouvent <a href="install-offline">ici</a>

@@ -26,7 +26,7 @@
 	</b></div>
     <ol>
       <li>
-       You can install NuTyX from almost any other distribution, thanks to the BASH <a href="http://downloads.nutyx.org/install-nutyx">script named install-nutyx</a>.
+       You can install NuTyX from almost any other distribution, thanks to the BASH <a href="http://www.nutyx.org/install-nutyx">script named install-nutyx</a>.
        This can be downloaded, study it carefully to see what it will do, then launch it from the host distribution.
        Briefly, the script will check for all the necessary tools, then start the download of a minimal set of packages and finally install them in the location you specified.
        Details and explanations can be found <a href="install-offline">here</a>.
