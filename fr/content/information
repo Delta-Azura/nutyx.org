@@ -34,11 +34,9 @@
      <h3>Remy</h3>
        <b>Remy</b> Createur des ISO en divers saveurs disponible sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
       <p>
-       Empaqueteur des paquets du git gnome.
+       Empaqueteur des paquets du git gnome et des collection cli-extra et gui-extra.
      <h3>Jayce</h3>
        <b>Jayce</b> empaqueteur de gnome.
-     <h3>Hugo</h3>
-       <b>Hugo</b> empaqueteur de divers paquets
      <h3>Harold</h3>
        <b>Harold</b> Traductions de l'installateur en diverses langues.
      <h3>Guth</h3>
@@ -61,6 +59,10 @@
      <p>
       Le gestionnaire de paquets CARDS a été modifié en son hommage.
       Tous les paquets où il a participé gardent une trace de son passage. Un champs "contributeurs" a été ajouté dans les recettes.
+   <p>
+     <div>
+       <b>Hugo</b> empaqueteur de divers paquets.
+     </div>
    <p>
      <div>
       <b>Sipo</b> empaqueteur de divers paquets dans diverses collections.
