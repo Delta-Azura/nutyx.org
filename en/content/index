@@ -8,7 +8,7 @@
      NuTyX is a complete GNU/Linux distribution with high flexibility, thanks to the <a href="dictionary#ID010">collections</a> and the <a href="dictionary#ID025">groups</a> concepts.
     <p>
      We recommend that potential users first acquire some good knowledge about the GNU/Linux system.
-     Original concepts like <a href="install">Base ISO installater</a>, <a href="install-offline">'install-nutyx' script</a>, <a href="grub-install">the GRUB installation procedure on it's own</a>, the collections, <a href="http://cards.nutyx.org">tne 'cards' package manager</a> will trouble very easily non experimented persons.
+     Original concepts like <a href="install">Base ISO installater</a>, <a href="downloads#5">'install-nutyx' script</a>, <a href="grub-install">the GRUB installation procedure on it's own</a>, <a href="collections">the collections</a>, <a href="http://cards.nutyx.org">tne 'cards' package manager</a> will trouble very easily non experimented persons.
     <p>
      It's an excellent operating system for people who want to commit themselves in developing their skills further and learn how a Linux system is put together.
     <p>
