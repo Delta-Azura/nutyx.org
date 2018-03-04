@@ -25,6 +25,8 @@
       ISO
     <th>
       Description
+    <th>
+      Size
    <tr class="even">
     <td class="lien_article">
        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
@@ -38,6 +40,9 @@
      <p>
       Once the installation done, you will be able to connect directly to you newly account created at post-configuration.
     </td>
+    <td>
+      Approx. 1.6 GB
+    </td>
    </tr>
   </table>
  <h2>For the regular NuTyX user</h2>
@@ -48,6 +53,8 @@
        ISO
       <th>
        Description
+      <th>
+       Size
      <tr class="even">
       <td class="lien_article">
          <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.0.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
@@ -65,6 +72,9 @@
         <pre class="command_user"><kbd>startx</kbd></pre>
         You will be welcome by the <a href="https://en.wikipedia.org/wiki/Twm">twm</a> basic but very light graphical interface.
       </td>
+      <td>
+       Approx. 600 MB
+      </td>
      </tr>
      <tr class="odd">
       <td class="lien_article">
@@ -80,6 +90,7 @@
         Once the installation done, you can directly connect yourself with your new account created at post-configuration time.
       </td>
       <td>
+       Approx. 260 MB
       </td>
      </tr>
    </table>
@@ -108,6 +119,12 @@
         It has be executed from the root account.
        <p>
         The installation of NuTyX is done following steps:
+     <div class="important">
+        <img alt="[Important]" src="../graphics/caution.gif" />
+        Don't forget to remove/check the <i>/etc/install-nutyx.conf</i> file and
+        the contents of the <i>/etc/install-nutyx.d/</i> directory if necessary.
+        Found files will be read and used by the script and allows a more powerfull configuration. 
+     </div>
        <ul>
         <li>
          We open a temporary root session
@@ -135,25 +152,26 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         By default, it will be the host architecture of the host machine that will be choosen.
         It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
         To install  a 32 bits NuTyX from a 64 bits host machine, we use the  <i><b>ARCH</b></i> variable:
-        <pre class="command"><kbd>sh ARCH="i686" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
        <p>
         By default, it will be the stable branch of the NuTyX installed, it's possible to specify another branch.
         To install a NuTyX of the current branch, we specify the name of the branch via the <i><b>VERSION</b></i> variable.
-        <pre class="command"><kbd>sh VERSION="current" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>VERSION="current" sh install-nutyx</kbd></pre>
        <p>
         By default, it will be the default URL used for downloading and configuration of the NuTyX.
         To specify a personalise URL, we use the  <i><b>URL</b></i> variable.
-        <pre class="command"><kbd>sh URL="http://192.168.0.254" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>URL="http://192.168.0.254" sh install-nutyx</kbd></pre>
        <p>
         By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
-        <pre class="command"><kbd>sh LFS="/My-NuTyX" install-nutyx</kbd></pre>
+        <pre class="command"><kbd>LFS="/My-NuTyX" sh install-nutyx</kbd></pre>
         The folder will be automaticaly created if not exist.
        <p>
         We can combine several variables:
-        <pre class="command"><kbd>sh LFS="/MINI-ISO" \
+        <pre class="command"><kbd>LFS="/MINI-ISO" \
 VERSION="development" \
 URL="http://192.168.0.254" \
-ARCH="i686" install-nutyx</kbd></pre>
+ARCH="i686" \
+sh install-nutyx</kbd></pre>
      </td>
     </tr>
    </table>
