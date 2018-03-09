@@ -12,9 +12,14 @@
     <p>
      It's an excellent operating system for people who want to commit themselves in developing their skills further and learn how a Linux system is put together.
     <p>
-     NuTyX offers the <a href="https://lxqt.org">LXQt</a>, <a href="http://www.mate-desktop.com">MATE</a>, <a href="http://www.lxde.org">LXDE</a>, <a href="http://www.kde.org">KDE5</a> and <a href="http://www.xfce.org">XFCE</a> in binary form.
+     NuTyX offers the
+     <a href="https://lxqt.org">LXQt</a>,
+     <a href="http://www.mate-desktop.com">MATE</a>,
+     <a href="http://www.lxde.org">LXDE</a>,
+     <a href="http://www.kde.org">KDE5</a>
+     and <a href="http://www.xfce.org">XFCE</a> graphical interfaces in binary form.
     <p>
-     Details <a href="documentation">instructions</a> are available online
+     Details <a href="documentation">instructions</a> are available online.
     <p>
      NuTyX uses its own <a href="dictionary#ID005">package manager</a> named <a href="dictionary#ID001">CARDS</a>.
     <p>
@@ -26,14 +31,14 @@
 	</b></div>
     <ol>
       <li>
-       You can install NuTyX from almost any other distribution, thanks to the BASH <a href="http://www.nutyx.org/install-nutyx">script named install-nutyx</a>.
+       You can install NuTyX from almost any other distribution, thanks to the BASH <a href="downloads#5">script named install-nutyx</a>.
        This can be downloaded, study it carefully to see what it will do, then launch it from the host distribution.
        Briefly, the script will check for all the necessary tools, then start the download of a minimal set of packages and finally install them in the location you specified.
        Details and explanations can be found <a href="install-offline">here</a>.
       <br>
       <br>
       <li>
-       The hierarchical <a href="dictionary#ID070">ports</a> <a href="dictionary#ID010">collection</a> system provides maximum flexibility in managing software.
+       The hierarchical <a href="dictionary#ID070">ports</a> <a href="collections">collection</a> system provides maximum flexibility in managing software.
        Each <a href="dictionary#ID010">collection</a> is divided into a mandatory and an extra part.
       <br>
       <br>
@@ -44,7 +49,7 @@
       <br>
       <br>
       <li>
-       It has the ability, once installed in a folder, to produce a personalized installable ISO version of NuTyX. 
+       It has the ability, once installed in a folder, to produce a <a href="generate-iso">personalized installable ISO</a> version of NuTyX. 
        The new live version can also be re-installed on other machines,  should you so desire.
       <br>
       <br>
@@ -54,8 +59,8 @@
       <br>
       <br>
       <li>
-       It has no need of a separate HDD or partition.
-       The NuTyX installer creates a virtual environment and therefore is able to install/re-install without formatting the target disk or partition.
+       It has no need of a separate HDD or partition for your personal datas.
+       The NuTyX installer is able to install/re-install without formatting the target disk or partition.
       <br>
       <br>
       <li>

@@ -37,14 +37,14 @@
     <ol>
      <li>
       Sa capacité d'être installée depuis quasi n'importe quelle autre distribution 
-      grâce à l'utilisation d'un <a href="http://www.nutyx.org/install-nutyx">script bash</a> 
+      grâce à l'utilisation d'un <a href="downloads#5">script bash</a> 
       qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
       Le script fait un check des outils nécessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
       Tous les détails et explications se trouvent <a href="install-offline">ici</a>
      <br>
      <br>
      <li>
-      La hiérarchie des <a href="dictionary#ID010">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilité maximale dans la gestion de ceux-ci.
+      La hiérarchie des <a href="collections">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilité maximale dans la gestion de ceux-ci.
       Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
      <br>
      <br>
@@ -57,7 +57,7 @@
      <br>
      <br>
      <li>
-      Une fois installée dans un dossier, il est très facile de produire une ISO de sa NuTyX.
+      Une fois installée dans un dossier, il est très facile de <a href="generate-iso">produire une ISO personalisée</a> de sa NuTyX.
       L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
      <br>
      <br>
@@ -69,9 +69,8 @@
      <br>
      <br>
      <li>
-      La création d'une partition ou disque séparé pour la séparation des 
-      données personnelles et du système est superflue en effet, l'installateur 
-      est capable de (ré)installer NuTyX sans avoir à formater.
+      La création d'une partition ou disque séparé pour les données personnelles est superflue.
+      L'installateur est capable de (ré)installer NuTyX sans avoir à formater.
      <br>
      <br>
      <li>
