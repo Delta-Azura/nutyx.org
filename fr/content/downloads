@@ -1,6 +1,6 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-   La version stable actuelle de NuTyX est la <b>10.0</b>.
+   La version stable actuelle de NuTyX est la <b>10.1</b>.
   <p>
    Les ISOs sont disponibles en 32 bits et en 64 bits.
   <p>
@@ -29,9 +29,9 @@
       Taille
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.1.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
      <p>
-      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
+      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-mate-10.1.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
     </td>
     <td>
        Installation en mode BIOS ou EFI possible.
@@ -57,9 +57,9 @@
        Taille
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.0.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.1.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.0.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.1.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
       </td>
       <td>
         Installation en mode BIOS ou EFI possible.
@@ -77,9 +77,9 @@
      </tr>
      <tr class="odd">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>64bits</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>64bits</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>32bits</a>
       </td>
       <td>
         Installation en mode BIOS ou EFI possible.
@@ -195,7 +195,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.0.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.1.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>
