@@ -29,9 +29,9 @@
       Taille
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.1.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.1a.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
      <p>
-      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-mate-10.1.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
+      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-mate-10.1a.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
     </td>
     <td>
        Installation en mode BIOS ou EFI possible.
@@ -41,7 +41,7 @@
       L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
     </td>
     <td>
-      Environ 1.6 GO
+      Environ 1.7 GO
     </td>
    </tr>
   </table>
@@ -57,9 +57,9 @@
        Taille
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.1.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.1a.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.1.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.1a.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
       </td>
       <td>
         Installation en mode BIOS ou EFI possible.
@@ -73,7 +73,7 @@
         Vous serez accueilli par l'interface graphique <a href="https://fr.wikipedia.org/wiki/Twm">twm</a> rudimentaire mais très légère.
       </td>
       <td>
-        Environ 600 MO
+        Environ 620 MO
      </tr>
      <tr class="odd">
       <td class="lien_article">
