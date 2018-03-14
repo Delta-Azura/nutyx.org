@@ -1,6 +1,5 @@
   <div style="float:right;clear=right;">
-    <img src=../../graphics/screenshot.png 
-    <img src=../../graphics/screenshot.png   width="400" height="270">
+    <a href="../../graphics/screenshot.png"><img src=../../graphics/screenshot.png   width="400" height="270"></a>
   </div>
 
   <h1>Welcome</h1>
