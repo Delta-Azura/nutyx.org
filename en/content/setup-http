@@ -6,18 +6,18 @@
  <h2>Packages to install</h2>
   <p>
    To install and activate the http service, you will see, it's very simple.
-   We open a terminal:
+   Open a terminal and enter the command:
    <pre class="command_user"><kbd>get apache apache.service</kbd></pre>
   <p>
    That's it, the installation is already done.
  <h2>Configuration</h2>
   <p>
-   The default configuration of the apache http server is basic,  
-   it is recommended you make a customise configuration
+   The default configuration of the apache http server is basic.  
+   It is recommended you make a custom configuration.
   <p>
-   We start to create a customised html file
+   An example follows, starting to create a customised html file.
   <p>
-   In root then:
+   As root:
    <pre class="command"><kbd>cat &gt; /srv/www/index.html &lt;&lt; EOF
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
      "http://www.w3.org/TR/html4/strict.dtd"&gt;
@@ -33,7 +33,7 @@
 EOF</kbd></pre>
  <h2>Service starting</h2>
   <p>
-   We activate the service, still in root:
+   Activate the service, still as root:
    <pre class="command"><kbd>/etc/rc.d/init.d/httpd start</kbd></pre>
    <pre class="output">  *   Starting Apache HTTP daemon... [  OK  ]</pre>
   <p>
