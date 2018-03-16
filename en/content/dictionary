@@ -2,11 +2,11 @@
     <a name='ID000'></a>
     <h2>Cards</h2>
      <p>
-      Cards which stands for 'Create, Add, Remove and Download System'  <a href="#ID005">packages</a>,
+      Cards, which stands for 'Create, Add, Remove and Download System'  <a href="#ID005">packages</a>,
       is a set of utilities to manage the installed software on your NuTyX Linux system.
      <p>
       Cards can manage <a href="#ID006">dependencies</a> for compilation and handles runtime <a href="#ID006">dependencies</a> on its own.
-      This means that in 95% of all cases, runtime <a href="#ID006">dependencies</a> for a working app do not need to to be specified in the build recipe.
+      This means that in 95% of all cases, runtime <a href="#ID006">dependencies</a> for a working app do not need to to be specified in the build
      <a href="#ID060">recipe</a>.
     <a name='ID005'></a>
     <h2>A package</h2>
@@ -112,16 +112,16 @@
       A collection is a collection of all the <a href="#ID005">packages</a> that provide a particular set of functions.
      <p>
       When you install a base system from the MINI ISO or with the installation <a href="#ID050">scripts</a>,
-      you install the <i>base</i> <a href="#ID010">collection</a> <a href="#ID010">collection</a>.
+      you install the <i>base</i> <a href="#ID010">collection</a>.
      <p>
-      The <i>gui</i> <a href="#ID010">collection</a> for example allows you to install a graphical user interface.
+      The <i>gui</i> <a href="#ID010">collection</a>, for example, allows you to install a graphical user interface.
       For such a graphical user interface, you can choose your favorite windows manager.
      <p>
       Under NuTyX, it's possible to install <i>kde5</i>, <i>lxqt</i>, <i>mate</i> or <i>xfce4</i> desktop <a href="#ID010">collections</a>.
     <a name='ID020'></a>
     <h2>A family</h2>
      <p>
-      A <b>family</b> defines a set of <a href="#ID005">packages</a> which begin with a common name (the father package).
+      A <b>family</b> defines a set of <a href="#ID005">packages</a> which begin with a common name (the mother package).
       Additional parts are separated by a hyphen (-).
      <p>
       An example of a NuTyX package family:
@@ -140,21 +140,21 @@
       <p>
        Usually, a family of <a href="#ID005">packages</a> will be in the same <a href="#ID010">collection</a>.
       <p>
-       Such packages family share variables with the mother package (gstreamer1 in this example).
+       Such packages in a package family share variables with the mother package (gstreamer1 in this example).
     <a name='ID025'></a>
     <h2>A group</h2>
      <p>
-      A groupe of packages is made of a set of packages providing a specific usage, for example the <b>devel</b> group provide tools for compilation.
+      A group of packages is made of a set of packages providing a specific usage, for example the <b>devel</b> group provides tools for compilation.
      <p>
-      In a group it's the part of the name after the dot which specify the group.
-     <p>
-      Each locale is a group as well.
+      In a group, it's the part of the name after the dot which specifies the group.
      <p>
       For example, the <b>gcc.devel</b> package is part of the <b>devel</b> group.
+     <p>      
+      Each locale is a group as well.
      <p>
-      Most of availables packages are split into thoses groups.
+      Most of available packages are split into such groups.
      <p>
-      Today groups are: <a href="./?branch=stable&arch=x86_64&searchpkg=devel">devel</a>,
+      Current groups include: <a href="./?branch=stable&arch=x86_64&searchpkg=devel">devel</a>,
       <a href="./?branch=stable&arch=x86_64&searchpkg=man">man</a>,
       <a href="./?branch=stable&arch=x86_64&searchpkg=doc">doc</a>,
       lib and <a href="./?branch=stable&arch=x86_64&searchpkg=service">service</a>
@@ -162,8 +162,8 @@
     <a name='ID030'></a>
     <h2>A category</h2>
      <p>
-      A category defines a set of applications which have similar functions:
-      A typical example of a category is "Internet" which includes browsers, irc and mail clients, etc..
+      A category defines a set of applications which have similar functions.
+      A typical example of a category is "Internet", which includes browsers, irc and mail clients, etc.
     <a name='ID040'></a>
     <h2>The base system</h2>
      <p>
@@ -237,7 +237,7 @@
       A Pkgfile is a <a href="#ID050">script</a> file. It contains the <a href="#ID060">recipe</a> for the construction of a <a href="#ID005">package</a>
      which can be installed with the <i>package manager</i>  <a href="#ID000">cards</a>
      <p>
-      The content of this file follows a common schema and is compose of three parts:
+      The content of this file follows a common schema and is composed of three parts:
      <ol>
       <li>
        `Pkgfile-Header`: (optional but highly recommended) general information about the <a href="#ID005">package</a>: Description, URL, Developer(s), Packager(s), <a href="#ID006">dependencies</a>
@@ -250,7 +250,7 @@
       <b>NOTE:</b> the above outlines only the most general situation. See also package <a href="#ID020">family</a> for exceptions.
      <p>
       It is highly recommended to put the <a href="#ID080">Pkgfile</a> file in a folder with the same name as the <i>name</i> variable defined in the <a href="#ID080">Pkgfile</a>.
-      The folder name will be treated the default name of the base binary package if it is not (re)defined by the name variable.
+      The folder name will be treated as the default name of the base binary package if it is not (re)defined by the name variable.
      <p>
       Example of a Pkgfile located in the <i>mypackage</i> folder:
       <pre class="output"># Depends on: glib atk
@@ -275,49 +275,49 @@ make DESTDIR=$PKG install
  <li>
   The "stable" branch
   <p>
-   This is the stable version of NuTyX. Every packages are frozen at the time of it's release, only security updates will be apply.
+   This is the stable version of NuTyX. For this, every package is frozen at the time of it's release; only security updates will be applied.
   <p>
-   New packages can still be added
+   New packages can still be added.
  <li>
   The "current" branch
   <p>
-   The "base" is frozen, only security updates will be apply.
+   The "base" is frozen; only security updates will be applied.
   <p>
-   The "cli" and "gui" collections will receives updates in cases they are dependencies that need to be update for any final package. 
-	Security updates will be apply
+   The "cli" and "gui" collections will receive updates in cases where they are dependencies that need to be updated for any final package. 
+	Security updates will be applied.
   <p>
-   The others collections will get updates as normal.
+   The other collections will get updates as normal.
   <p>
-   The "current" branch stay compatible with the "stable" one, they will be both used for minor updates of NuTyX  (10.1, 10.2, etc).
+   The "current" branch stays compatible with the "stable" one; they will be both used for minor updates of NuTyX  (10.1, 10.2, etc).
  <li>
   The "development" (or "master") branch
   <p>
-   It's the main line (master) of the GIT project for every available collections
+   It's the main line (master) of the GIT project for every available collection.
   <p>
-   The update process is a "rolling release" mode during the all life of the stable version and it's minor versions (about one year)
+   The update process is a "rolling release" mode during the entire life of the stable version and its minor versions (about one year).
   <p>
-   Since all updates are very big and very often, the  "development" branch is most of the time not compatible with the stable version of NuTyX.
-   In this case merging into the "stable" branch is never possible.
+   Since all updates are large and frequent, the  "development" branch is most often not compatible with the stable version of NuTyX.
+   In this case, merging into the "stable" branch is never possible.
   </ul>
 <p>
- The "stable" and "current" brannchs have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
+ The "stable" and "current" branches have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
 
 
     <a name='ID100'></a>
     <h2>A chroot</h2>
      <p>
-      A chroot is a way of isolating our working environment while using the <a href="#ID060">recipes</a>
+      A chroot is a way of isolating the working environment while using the <a href="#ID060">recipes</a>
      coming from various <a href="#ID070">ports</a>.
      <p>
-      It is also needed to assure that no <a href="#ID006">dependency</a> will be installed from the host operating system.
+      It is also needed to ensure that no <a href="#ID006">dependency</a> will be installed from the host operating system.
     <a name='ID200'></a>
     <h2>Levels</h2>
      <p>
-      When <a href="#ID000">cards</a> compiles a <a href="#ID005">package</a>, it needs to know the level of compilation of this <a href="#ID005">package</a>.
+      When <a href="#ID000">cards</a> compiles a <a href="#ID005">package</a>, it needs to know the level of compilation of that <a href="#ID005">package</a>.
      <p>
       Each <a href="#ID005">package</a> may or may not contain <a href="#ID006">dependencies</a>.
      <p>
-      If a <a href="#ID005">package</a> named <i>AAAA</i> does not contains any <a href="#ID006">dependencies</a>, it will be at the first level: level 0 (zero).
+      If a <a href="#ID005">package</a> named <i>AAAA</i> does not contain any <a href="#ID006">dependencies</a>, it will be at the first level: level 0 (zero).
      <p>
       If a package named <i>BBBB</i> contains a <a href="#ID006">dependency</a> named <i>AAAA</i>, this package will be at second level: level 1 (one).
      <p>
@@ -328,13 +328,13 @@ make DESTDIR=$PKG install
    <a name='ID300'></a>
    <h2>Alias</h2>
     <p>
-     It is worth knowing that some commands are actually aliases used to simplify things.
+     Some commands are actually aliases used to simplify things.
      An alias is a kind of shortcut to the original command.
-     To know all the aliases available to you, just type <b>alias</b> in your terminal.
+     To know all the aliases available to you, just type <b>alias</b> in your terminal:
 <pre class="command_user"><kbd>alias</kbd></pre>
      <p>
-      If you want to modify defined alias in your NuTyX, you need to edit the <b><span style="color: #007a00;">.bashrc</span></b> file located in your home directory.
-     <div>Extract of <b>/root/.bashrc</b>:</div>
+      If you want to modify a defined alias in your NuTyX, you need to edit the <b><span style="color: #007a00;">.bashrc</span></b> file located in your home directory.
+     <div>Example extract of <b>/root/.bashrc</b>:</div>
      <pre class="output">if [ -f "/etc/bashrc" ] ; then
   source /etc/bashrc
 fi
