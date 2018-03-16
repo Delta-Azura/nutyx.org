@@ -20,8 +20,8 @@
     <div class="important">
      <img alt="[Important]" src="../graphics/caution.gif" />
      <img alt="[Important]" src="../graphics/caution.gif" />
-      The writer is not responsible for lost of any data that could happen due to a fault manipulation.
-      This topic is for advice target audience.
+      The writer is not responsible for the loss of any data that could happen due to incorrect application of the information herein.
+      This topic is for a suitably skilled and advanced target audience.
     </div>
     <p>
     How to proceed:
@@ -35,7 +35,7 @@
       <li>
        Put the <b>/etc/install-nutyx.conf.d/cards.conf</b> file in place
       <li>
-       Installation of NuTyX
+       Install NuTyX
       <li>
        Update grub to accept the new NuTyX
      </ol>
@@ -54,11 +54,11 @@
     <pre class="command"><kbd>export LFS=/mnt/NuTyX</kbd></pre>
     <p>
      We format the destination partition.
-     The file system of our choice is <b>ext4</b>
+     The file system of our choice is <b>ext4</b>. 
      Ext4 gives us the possibility to avoid the use of an initrd
     <pre class="command"><kbd>mkfs.ext4 /dev/sda4</kbd></pre>
     <p>
-     We mount the formatted partition on the folder define by the LFS variable.
+     We mount the formatted partition on the folder defined by the LFS variable.
     <pre class="command"><kbd>mkdir -p $LFS
 mount /dev/sda4 $LFS</kbd></pre>
     <p>
@@ -70,10 +70,7 @@ mount /dev/sda4 $LFS</kbd></pre>
      This command needs <b>rsync</b>.
      Make sure it's installed on your distribution.
     <p>
-     A bootable base NuTyX needs only the <b>base</b> collection,
-     we will first download only these two collections.
-    <p>
-     We put them directly in the right place:
+     A bootable base NuTyX needs only the <b>base</b> collection: download and place in the correct destination directory:
     <pre class="command"><kbd>mkdir -p $LFS/var/lib/pkg/depot
 rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/10.0/base/ \
 $LFS/var/lib/pkg/depot/base/</kbd></pre>
@@ -98,7 +95,7 @@ $LFS/var/lib/pkg/depot/base/</kbd></pre>
     <p>
      The <b>install-nutyx</b> script can use preconfiguration of some files.
      This means if it finds one of those files in the <b>/etc/install-nutyx.conf.d/</b>,
-     the script will used the one found instead of the internal one of the script.
+     the script will use the one found instead of the internal one of the script.
      We will then adapt the <b>cards.conf</b> file of our NuTyX for an "offline" installation
      by mentioning the only collection available for the installation
     <b>base</b> <u>without specifying the download URL</u>.
