@@ -2,14 +2,13 @@
  <h2>Introduction</h2>
    The current stable release of NuTyX is named <b>10.1</b>.
   <p>
-   They are available in 32 bits and in 64 bits.
+   ISO images are available in 32 bits and in 64 bits.
   <p>
-   The available ISO image can be used to install a base system without the need of the internet.
+   The available ISO images can be used to install a base system without the need of the internet.
   <p>
-   Any ISO you choose can be tested in <i>LIVE</i> modus.
-   You can then test all thoses ISOs without installing NuTyX on your harddisk.
+   Any ISO you choose can be tested in <i>LIVE</i> modus.  You can then test all thoses ISOs without installing NuTyX on your hard disk.
   <p>
-   It is also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
+   They are also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
   <p>
    If you have enough RAM memory, a message will inform you that you can remove the USB key after choosing your mother language.
    This means you can insert a USB keyboard, for example.
@@ -17,9 +16,9 @@
    You will find all kinds of ISO images at:
    <a class="url" href="https://tronyx-world.tech/nutyx/?C=M;O=D" target="_blank" >http://isos.nutyx.org</a></p>
 
- <h2>For the new coming user on NuTyX</h2>
+ <h2>For the new user coming to NuTyX</h2>
    <table width="100%" cellspacing="0">
-   <caption><EM>Available ISO list for a new coming user who want to discover NuTyX without big troubles:</EM></caption>
+   <caption><EM>Available ISO list for a new user who wants to discover NuTyX without minimum technical dificulty:</EM></caption>
    <tr class="sidebar">
     <th>
       ISO
@@ -34,11 +33,11 @@
       <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-mate-10.1a.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
     </td>
     <td>
-       Installation in BIOS or EFI modus possible.
+       Installation in BIOS or EFI modus is possible.
      <p>
       The ISO contains a complete installation with <a href="https://mate-desktop.org/">MATE</a> as graphical interface as default.
      <p>
-      Once the installation done, you will be able to connect directly to you newly account created at post-configuration.
+      Once the installation is done, you will be able to connect directly to you new account created at post-configuration.
     </td>
     <td>
       Approx. 1.7 GB
@@ -62,7 +61,7 @@
         <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.1a.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
       </td>
       <td>
-        Installation in BIOS or EFI modus possible.
+        Installation in BIOS or EFI modus is possible.
        <p>
         The ISO contains a basic graphical installation.
        <p>
@@ -70,7 +69,7 @@
        <p>
         You can start the graphical interface by using the command:
         <pre class="command_user"><kbd>startx</kbd></pre>
-        You will be welcome by the <a href="https://en.wikipedia.org/wiki/Twm">twm</a> basic but very light graphical interface.
+        You will be welcomed by the <a href="https://en.wikipedia.org/wiki/Twm">twm</a> - a basic and very lightweight graphical interface.
       </td>
       <td>
        Approx. 620 MB
@@ -83,11 +82,11 @@
         <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>32bits</a>
       </td>
       <td>
-        Installation in BIOS or EFI modus possible.
+        Installation in BIOS or EFI modus is possible.
        <p>
         The ISO contains a basic system WITHOUT graphical installation.
        <p>
-        Once the installation done, you can directly connect yourself with your new account created at post-configuration time.
+        Once the installation is done, you can directly connect with your new user account created at post-configuration time.
       </td>
       <td>
        Approx. 260 MB
@@ -97,7 +96,7 @@
  <h2>Typical installation of NuTyX on a single partition</h2>
   <p>
    <a class="url" href="install">How to install NuTyX from scratch on your PC</a>.
- <h2>For the experimented NuTyX user</h2>
+ <h2>For the experienced NuTyX user</h2>
    <table width="100%" cellspacing="0">
     <caption><EM>This script is widely used in many tutorials of NuTyX:</EM></caption>
      <tr class="sidebar">
@@ -112,61 +111,61 @@
       <td>
         This script allows the installation of a base NuTyX in a folder.
        <p>
-        It's signature can be verify by downloading the <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> file.
+        Its signature can be verified by downloading the <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> file.
        <p>
         The script can be started from an already installed NuTyX or from another distribution.
        <p>
-        It has be executed from the root account.
+        It must be executed from the root account.
        <p>
-        The installation of NuTyX is done following steps:
+        The installation of NuTyX is done following these steps:
      <div class="important">
         <img alt="[Important]" src="../graphics/caution.gif" />
         Don't forget to remove/check the <i>/etc/install-nutyx.conf</i> file and
         the contents of the <i>/etc/install-nutyx.d/</i> directory if necessary.
-        Found files will be read and used by the script and allows a more powerfull configuration. 
+        Found files will be read and used by the script and allow a more powerful configuration. 
      </div>
        <ul>
         <li>
-         We open a temporary root session
+         Open a temporary root session
          <pre class="command_user"><kbd>sudo bash</kbd></pre>
         <li>
-         Downloading of the script and the signature
+         Download the script and the signature
          <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
         <li>
-         Check of the signature
+         Check the signature
          <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
         <li>
-         Mounting the destination partition (here /dev/sda2 for example)
+         Mount the destination partition (here /dev/sda2 for example)
          <pre class="command"><kbd>mkdir -p /mnt/hd
 mount /dev/sda2 /mnt/hd</kbd></pre>
         <li>
-         Installation of the base NuTyX
+         Install the base NuTyX
          <pre class="command"><kbd>sh install-nutyx</kbd></pre>
         <li>
-         Once the installation done, we can re-enter into the freshly installed NuTyX via the command:
+         Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
          <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
        </ul>
       
        <p>
         The script can be used for both 32 bits and 64 bits architectures.
-        By default, it will be the host architecture of the host machine that will be choosen.
+        By default, it will be the host architecture of the host machine that will be chosen.
         It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
-        To install  a 32 bits NuTyX from a 64 bits host machine, we use the  <i><b>ARCH</b></i> variable:
+        To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
         <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
        <p>
-        By default, it will be the stable branch of the NuTyX installed, it's possible to specify another branch.
-        To install a NuTyX of the current branch, we specify the name of the branch via the <i><b>VERSION</b></i> variable.
+        By default, it will be the stable branch of the NuTyX installed; it's possible to specify another branch.
+        To install a NuTyX of the current branch, specify the name of the branch via the <i><b>VERSION</b></i> variable.
         <pre class="command"><kbd>VERSION="current" sh install-nutyx</kbd></pre>
        <p>
-        By default, it will be the default URL used for downloading and configuration of the NuTyX.
-        To specify a personalise URL, we use the  <i><b>URL</b></i> variable.
+        The default URL will be used for downloading and configuration of NuTyX.
+        To instead specify another URL, use the  <i><b>URL</b></i> variable.
         <pre class="command"><kbd>URL="http://192.168.0.254" sh install-nutyx</kbd></pre>
        <p>
         By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
         <pre class="command"><kbd>LFS="/My-NuTyX" sh install-nutyx</kbd></pre>
-        The folder will be automaticaly created if not exist.
+        The folder will be automatically created if it does not already exist.
        <p>
-        We can combine several variables:
+        You can combine several variables:
         <pre class="command"><kbd>LFS="/MINI-ISO" \
 VERSION="development" \
 URL="http://192.168.0.254" \
@@ -183,7 +182,7 @@ sh install-nutyx</kbd></pre>
    With the help of fdisk, find out where your USB key is located:
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
-   Then by using the command <b>dd</b>, create a bootable key:
+   Then, by using the command <b>dd</b>, create a bootable key:
    <pre class="command"><kbd>dd if=NuTyX_x86_64-10.1.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
