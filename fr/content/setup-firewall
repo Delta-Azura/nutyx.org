@@ -173,21 +173,19 @@ lrwxrwxrwx  1 root root   14 mai    9 11:20 S99halt -> ../init.d/halt</kbd></pre
     <pre class="command_user"><kbd>parefeu status</kbd></pre>
  <h2>Sources</h2>
    <p>
-    - <a href>https://wiki.archlinux.org/index.php/Simple_stateful_firewall</a>
+    - <a href="https://wiki.archlinux.org/index.php/Simple_stateful_firewall">https://wiki.archlinux.org/index.php/Simple_stateful_firewall</a>
    <p>
-    - <a href>http://www.octetmalin.net/linux/scripts/iptables-demarrer-arret-redemarrage-start-stop-restart-pare-feu-firewall.php</a>
-   <p>
-    - <a href>http://www.yvangodard.me/mon-script-iptables/</a>
+    - <a href="http://www.octetmalin.net/linux/scripts/iptables-demarrer-arret-redemarrage-start-stop-restart-pare-feu-firewall.php">http://www.octetmalin.net/linux/scripts/iptables-demarrer-arret-redemarrage-start-stop-restart-pare-feu-firewall.php</a>
 
  <h2>Pour aller plus loin</h2>
   <pre class="command_user"><kbd>iptables -h</kbd></pre>
   <p>
-   - <a href>http://www.delafond.org/traducmanfr/man/man8/iptables.8.html</a>
+   - <a href="http://www.delafond.org/traducmanfr/man/man8/iptables.8.html">http://www.delafond.org/traducmanfr/man/man8/iptables.8.html</a>
  <h2>Tester son pare-feu</h2>
   <p>
-   - <a href>https://www.grc.com/x/ne.dll?bh0bkyd2</a>
+   - <a href="https://www.grc.com/x/ne.dll?bh0bkyd2">https://www.grc.com/x/ne.dll?bh0bkyd2</a>
   <p>
    (si vous êtes derrière une box, vous allez tester la box...)
     <pre class="command_user"><kbd>nmap -Pn votre_IP depuis une autre machine</kbd></pre>
   <p>
-   --&gt; voir <a href>http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/</a>
+   --&gt; voir <a href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/">http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/</a>
