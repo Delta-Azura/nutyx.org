@@ -7,9 +7,9 @@
      NuTyX is a complete GNU/Linux distribution with high flexibility, thanks to the <a href="dictionary#ID010">collections</a> and the <a href="dictionary#ID025">groups</a> concepts.
     <p>
      We recommend that potential users first acquire some good knowledge about the GNU/Linux system.
-     Original concepts like <a href="install">Base ISO installater</a>, <a href="downloads#5">'install-nutyx' script</a>, <a href="grub-install">the GRUB installation procedure on it's own</a>, <a href="collections">the collections</a>, <a href="http://cards.nutyx.org">tne 'cards' package manager</a> will trouble very easily non experimented persons.
+     Original concepts like <a href="install">Base ISO installation</a>, <a href="downloads#5">'install-nutyx' script</a>, <a href="grub-install">the independent GRUB installation procedure</a>, <a href="collections">the collections</a>, <a href="http://cards.nutyx.org">the 'cards' package manager</a> will trouble those with little GNU/Linux system experience.
     <p>
-     It's an excellent operating system for people who want to commit themselves in developing their skills further and learn how a Linux system is put together.
+     It's an excellent operating system for people who want to commit themselves to developing their skills further and learning how a Linux system is put together.
     <p>
      NuTyX offers the
      <a href="https://lxqt.org">LXQt</a>,
@@ -18,20 +18,20 @@
      <a href="http://www.kde.org">KDE5</a>
      and <a href="http://www.xfce.org">XFCE</a> graphical interfaces in binary form.
     <p>
-     Details <a href="documentation">instructions</a> are available online.
+     Detailed <a href="documentation">instructions</a> are available online.
     <p>
      NuTyX uses its own <a href="dictionary#ID005">package manager</a> named <a href="dictionary#ID001">CARDS</a>.
     <p>
-     It is up to <a href="faq#4">you to decide</a> whether to use the <a href="dictionary#ID070">ports</a> system to compile and install your own source <a href="dictionary#ID005">packages</a> or to be content with the binary packages that are natively integrated into the system.
+     It is up to <a href="faq#4">you to decide</a> whether to use the <a href="dictionary#ID070">ports</a> system, to compile and install your own source <a href="dictionary#ID005">packages</a>, or to be content with the binary packages that are natively integrated into the system.
     <p>
-     It is inspired on the excellent <a href="http://www.linuxfromscratch.org/lfs/">Linux From Scratch documentation LFS</a> and <a href="http://www.linuxfromscratch.org/blfs/">Behind Linux From Scratch documentation BLFS</a>.
+     It is inspired by the excellent <a href="http://www.linuxfromscratch.org/lfs/">Linux From Scratch documentation LFS</a> and <a href="http://www.linuxfromscratch.org/blfs/">Behind Linux From Scratch documentation BLFS</a>.
     <div style="font-size:150%"><b>
 	 The 10 benefits of NuTyX
 	</b></div>
     <ol>
       <li>
        You can install NuTyX from almost any other distribution, thanks to the BASH <a href="downloads#5">script named install-nutyx</a>.
-       This can be downloaded, study it carefully to see what it will do, then launch it from the host distribution.
+       This can be downloaded: study it carefully to see what it will do, then launch it from the host distribution.
        Briefly, the script will check for all the necessary tools, then start the download of a minimal set of packages and finally install them in the location you specified.
        Details and explanations can be found <a href="install-offline">here</a>.
       <br>
@@ -58,8 +58,8 @@
       <br>
       <br>
       <li>
-       It has no need of a separate HDD or partition for your personal datas.
-       The NuTyX installer is able to install/re-install without formatting the target disk or partition.
+       It has no need of a separate HDD or partition for your personal data.
+       The NuTyX installer can install/re-install without formatting the target disk or partition.
       <br>
       <br>
       <li>
@@ -68,14 +68,13 @@
       <br>
       <br>
       <li>
-       It has a very powerful, yet simple command which allows you to revert to <a href="dictionary#ID040">the base system</a> and completely change the graphical user interface (for example from KDE to XFCE).
+       It has a very powerful yet simple command, which allows you to revert to <a href="dictionary#ID040">the base system</a> and completely change the graphical user interface (for example from KDE to XFCE).
        This makes it unnecessary to reinstall or download every <a href="dictionary#ID005">package</a> again. 
-       The already downloaded <a href="dictionary#ID005">packages</a>  will simply be reinstalled automatically if still up to date.
+       The already downloaded <a href="dictionary#ID005">packages</a>  will simply be reinstalled automatically, if still up to date.
       <br>
       <br>
       <li>
-       It has a totally unique <a href="dictionary#ID000">package manager</a> made of expandable modules. 
-       It has no <a href="dictionary#ID006">dependencies</a> except glibc.
+       It has a totally unique <a href="dictionary#ID000">package manager</a> made of expandable modules, with no <a href="dictionary#ID006">dependencies</a> except glibc.
        One of its strong points is the ability to discover binary (run-time) <a href="dictionary#ID006">dependencies</a> automatically.
       <br>
       <br>
