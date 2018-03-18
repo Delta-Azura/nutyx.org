@@ -97,6 +97,187 @@
   <p>
    <a class="url" href="install">Cet article vous explique comment installer depuis zéro la distribution NuTyX sur votre machine</a>
  <h2>Pour l'utilisateur confirmé</h2>
+   Ce script permet l'installation d'une NuTyX de base dans un dossier.
+  <p>
+    Sa signature peut être vérifiée en téléchargeant le fichier <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
+  <p>
+    Le script peut être démarré depuis une NuTyX déjà installée ou depuis une autre distribution.
+  <p>
+    Il doit être lancé depuis le compte root.
+  <p>
+    Le script va analyser le contenu du fichier <b>/etc/install-nutyx.conf</b> si il existe et utiliser les variables définies dans ce dernier.
+  <p>
+    Actuellement 4 variables sont configurables:
+    <ul>
+     <li>
+       le chemin d'installation défini par la variable <b>LFS</b>
+     <li> 
+       l'adresse url où se trouvent les binaires défini par la variable <b>URL</b>
+     <li>
+       la version à installer (stable, current ou development) définie par la variable <b>VERSION</b>
+     <li>
+       le chemin <b>local</b> des binaires téléchargés défini par la variable <b>DEPOT</b>
+    </ul>
+     Voici un exemple complet du fichier <b>/etc/install-nutyx.conf</b>:
+     <pre class="output">URL="http://localhost"
+DEPOT="/DEPOT"
+LFS="/mnt/lfs"
+VERSION="current"</pre>
+  <p>
+   Si vous souhaitez pousser la configuration, il est possible de placer des fichiers de configuration personnalisés dans le dossier <b>/etc/install-nutyx.conf.d/</b>.
+   Lors de l'installation de NuTyX, le script utilisera les fichiers trouvés dans ce dossier en place des fichiers par défaut
+  <p>
+       <table width="100%" cellspacing="0">
+        <caption><EM>Liste des fichiers de configuration reconnus:</EM></caption>
+       <tr class="sidebar">
+        <th>
+        Nom du fichier
+        <th>
+        Chemin de destination final du fichier
+       <tr>
+        <td>
+         cards.conf
+        </td>
+        <td>
+         /etc/cards.conf
+        </td>
+       <tr>
+        <td>
+         pkgmk.conf
+        </td>
+        <td>
+         /etc/pkgmk.conf
+        </td>
+       <tr>
+        <td>
+         fstab
+        </td>
+        <td>
+         /etc/fstab
+        </td>
+       <tr>
+        <td>
+         .bashrc
+        </td>
+        <td>
+         /root/.bashrc et /home/&lt;nomutilisateur&gt;/.bashrc
+        </td>
+       <tr>
+        <td>
+         bashrc
+        </td>
+        <td>
+         /etc/bashrc
+        </td>
+       <tr>
+        <td>
+         profile
+        </td>
+        <td>
+         /etc/profile
+        </td>
+       <tr>
+        <td>
+         hosts
+        </td>
+        <td>
+         /etc/hosts
+        </td>
+      <tr>
+        <td>
+         inputrc
+        </td>
+        <td>
+         /etc/inputrc
+        </td>
+      </tr>
+      <tr>
+        <td>
+         rc_site
+        </td>
+        <td>
+         /etc/sysconfig/rc_site
+        </td>
+      <tr>
+        <td>
+         .bash_profile
+        </td>
+        <td>
+         /root/.bash_profile et /home/&lt;nomutilisateur&gt;/.bash_profile
+        </td>
+      <tr>
+       <td>
+        .dmrc
+       </td>
+       <td>
+        /etc/skel/.dmrc
+       </td>
+      <tr>
+       <td>
+        shells
+       </td>
+       <td>
+        /etc/shells
+       </td>
+      <tr>
+       <td>
+        dircolors.sh
+       </td>
+       <td>
+        /etc/profile.d/dircolors.sh
+       </td>
+      <tr>
+       <td>
+        extrapaths.sh
+       </td>
+       <td>
+        /etc/profile.d/extrapaths.sh
+       </td>
+      <tr>
+       <td>
+        readline.sh
+       </td>
+       <td>
+        /etc/profile.d/readline.sh
+       </td>
+      <tr>
+       <td>
+        umask.sh
+       </td>
+       <td>
+        /etc/profile.d/umask.sh
+       </td>
+      <tr>
+       <td>
+        modules
+       </td>
+       <td>
+        /etc/sysconfig/modules
+       </td>
+      <tr>
+       <td>
+        createfiles
+       </td>
+       <td>
+        /etc/sysconfig/createfiles
+       </td>
+      <tr>
+       <td>
+        mouse
+       </td>
+       <td>
+        /etc/sysconfig/mouse
+       </td>
+     </table>
+  <p>
+   En conclusion:
+  <div class="important">
+    <img alt="[Important]" src="../graphics/caution.gif" />
+     Si vous ne souhaitez pas que le script utilise les fichiers présents
+     Veuillez penser à supprimer/revoir les fichiers <i>/etc/install-nutyx.conf</i>
+     et contenu du dossier <i>/etc/install-nutyx.d/</i> si necessaire.
+    </div>
+
    <table width="100%" cellspacing="0">
     <caption><EM>Ce script est utilisé dans de nombreux cas de figures sous NuTyX:</EM></caption>
      <tr class="sidebar">
@@ -109,22 +290,7 @@
         <a class="url" href="http://www.nutyx.org/install-nutyx"><img src="../graphics/downloads/script.png" alt="logo script"/>install-nutyx</a>
       </td>
       <td>
-        Ce script permet l'installation d'une NuTyX de base dans un dossier.
-       <p>
-        Sa signature peut être vérifiée en téléchargeant le fichier <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
-       <p>
-        Le script peut être démarré depuis une NuTyX déjà installée ou depuis une autre distribution.
-       <p>
-        Il doit être lancé depuis le compte root
-       <p>
         L'installation de NuTyX via le script se déroulera ainsi:
-     <div class="important">
-        <img alt="[Important]" src="../graphics/caution.gif" />
-        Veuillez penser à supprimer/revoir les fichiers <i>/etc/install-nutyx.conf</i>
-        et contenu du dossier <i>/etc/install-nutyx.d/</i> si necessaire. 
-        Les fichiers trouvés seront lus et utilisés par le script pour permettre une configuration plus poussée.
-     </div>
-
        <ul>
         <li>
          On ouvre une session en root de manière temporaire
