@@ -15,8 +15,6 @@
   <p>
    Si vous avez suffisament de mémoire RAM, un message vous informera que vous pouvez retirer la clé après le choix de votre langue. 
    Cela permet d'insérer un clavier USB par exemple.
-  <p>
-   Vous trouvez également diverses saveurs à l'adresse: <a class="url" href="https://tronyx-world.tech/nutyx/?C=M;O=D"  target="_blank" title="Lire dans une autre fenêtre" >http://isos.nutyx.org</a>
  <h2>Pour le nouvel utilisateur sur NuTyX</h2>
    <table width="100%" cellspacing="0">
    <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
@@ -42,6 +40,24 @@
     </td>
     <td>
       Environ 1.7 GO
+    </td>
+   </tr>
+   <tr class="odd">
+    <td>
+     Paquets installés 
+    </td>
+    <td>
+     lxdm <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate">mate</a>
+     <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
+     zip unzip pciutils usbutils cups openssh gvfs
+     <a href="./?type=pkg&branch=stable&arch=x86_64&searchpkg=gstreamer-p">gstreamer</a>
+     system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
+     transmission cheese cherrytree deadbeef aisleriot
+     gnome-mahjongg inxi gawk htop flcards rsync tar pigz
+     lbzip2 xdg-user-dirs sound-theme-freedesktop nano
+     network-manager-applet alsa-utils alsa-plugins
+     ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
+     gparted xorg-setxkbmap ntp ntp.service
     </td>
    </tr>
   </table>
@@ -107,7 +123,7 @@
   <p>
     Le script va analyser le contenu du fichier <b>/etc/install-nutyx.conf</b> si il existe et utiliser les variables définies dans ce dernier.
   <p>
-    Actuellement 4 variables sont configurables:
+    Actuellement 5 variables sont configurables:
     <ul>
      <li>
        le chemin d'installation défini par la variable <b>LFS</b>
@@ -117,6 +133,10 @@
        la version à installer (stable, current ou development) définie par la variable <b>VERSION</b>
      <li>
        le chemin <b>local</b> des binaires téléchargés défini par la variable <b>DEPOT</b>
+     <li>
+       l'architecture que l'on souhaite installer défini par la variable <b>ARCH</b>.
+      <p>
+       La variable ARCH sera utilisée si l'on souhaite installer une NuTyX 32 bits à partir d'une OS 64 bits. L'inverse n'est pas possible.
     </ul>
      Voici un exemple complet du fichier <b>/etc/install-nutyx.conf</b>:
      <pre class="output">URL="http://localhost"
