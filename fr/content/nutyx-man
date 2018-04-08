@@ -1,4 +1,4 @@
-  <h1>Manuel NuTyX version 10.0</h1>
+  <h1>Manuel NuTyX version 10.1</h1>
    <div>
     Cette page de manuel vous permet de prendre connaissance du minimum vital pour pouvoir utiliser votre système d'exploitation NuTyX GNU/Linux.
     Veuillez consulter les fichiers mentionnés pour obtenir plus d'informations.
@@ -427,6 +427,8 @@ Lister les fichiers contenus dans un paquet
       <pre class="command"><kbd>pkginfo -l paquetX</kbd></pre>
 Connaître l'appartenance d'un fichier
       <pre class="command"><kbd>pkginfo -o NomDuFichier</kbd></pre>
+Connaître les détails d'un paquet
+      <pre class="command"><kbd>pkginfo -d paquetX</kbd></pre>
      </ol>
 
     <li><h2>GESTION DES PORTS VIA LA COMMANDE PKGMK (mode utilisateur avancé)</h2></li>
@@ -523,9 +525,7 @@ Redémarrage du serviceX cette option n'est pas toujours disponible.
       </div>
 
      <li><h2>FICHIERS</h2></li>
-      <pre class="output"><b>/var/lib/pkg/nutyx-version,
-etc/cards.conf,
-/etc/pkgadd.conf,
+      <pre class="output"><b>/etc/cards.conf,
 /etc/pkgmk.conf,
 /etc/sysconfig/console,
 /etc/sysconfig/clock,
@@ -534,11 +534,13 @@ etc/cards.conf,
 /etc/sysconfig/ifconfig.*,
 /boot/grub/grub.cfg,
 /etc/fstab,
-/etc/profile.d/i18n.sh</b></pre>
+/etc/profile.d/i18n.sh,
+/var/lib/pkg/nutyx-version,
+/var/lib/pkg/pkgadd.conf</b></pre>
 
      <li><h2>AUTEURS</h2></li>
       <div>
-       Thierry Nuttens &lt;tnut ~AT~ nutyx.org&gt; et Pierre Bouchet &lt;pierre ~AT~ nutyx.org&gt;
+       Thierry Nuttens et Pierre Bouchet
       </div>
 
      <li><h2>VOIR AUSSI</h2></li>
@@ -549,7 +551,7 @@ useradd(8), userdel(8)</pre>
 
      <li><h2>COPYRIGHT</h2></li>
       <pre class="output">
-Copyright (C) 2011 - 2017 Thierry Nuttens - Pierre Bouchet
+Copyright (C) 2011 - 2018 Thierry Nuttens - Pierre Bouchet
 
 Ceci est un document libre publié sous licence libre WTFPL - Do What The Fuck You Want To Public License.
 ( http://www.wtfpl.net/ ) </pre>

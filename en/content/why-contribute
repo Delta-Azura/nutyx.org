@@ -25,12 +25,12 @@
  <li>
    Extract sources into a working directory.
  <li>
-   Enter this working directory
+   Enter this working directory.
  <li>
    Check that all the dependencies of the package are installed in NuTyX.
    (otherwise the build will not succeed)
  <li>
-   Type the three magic commands (in most cases; there are exceptions)
+   Type the three magic commands (in most cases; there are exceptions):
 </ul>
 <pre class="output">./configure --prefix=/usr
 make
@@ -60,4 +60,4 @@ make install</pre>
 <p>
   I suggest you to have a look <a href="faq#4">at the FAQ</a> to get an idea about the compilation modus under NuTyX.
 <p>
-  If you're ready, I invite you to follow the guide, <a href="bash-basics">here it is :)</a>.
+  If you're ready, <a href="bash-basics">I invite you to follow the guide</a>.
