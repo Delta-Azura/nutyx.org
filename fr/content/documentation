@@ -8,8 +8,6 @@
     <td>
      Tous les termes utilisés dans la documentation sont référencés et expliqués dans ce petit lexique
     </td>
-    <td>
-    </td>
    </tr>   
    <tr class="even">
     <td class="lien_article">
@@ -19,9 +17,6 @@
      L'installation proposée ici consiste à utiliser un disque complet,
      une seule partition et l'outil d'amorçage (GRUB) installé sur la même partition.
      Pour ceux qui souhaitent une première approche de l'installation sans se prendre la tête.
-    </td>
-    <td>
-       <a href="https://www.youtube.com/watch?v=y6zuOaxOMSE"><img src="../../graphics/documentation/install-bios.jpg" width="160" height="100"></a>
     </td>
    </tr>
    <tr class="odd">
@@ -33,9 +28,6 @@
      une seule partition sans outil d'amorçage (GRUB).
      Cette methode peut-être utilisée si votre machine supporte l'UEFI, vous pouvez alors tirer profit de cette fonctionnalité.
      Pour ceux qui souhaitent une approche de l'installation en mod UEFI sans se prendre la tête.
-    </td>
-    <td>
-       <a href="https://youtu.be/zMPt-Qx3nAU"><img src="../../graphics/documentation/install-uefi.jpg" width="160" height="100"></a>
     </td>
    </tr>
    <tr class="even">
@@ -55,9 +47,6 @@
     <td>
      Ces quelques commandes de base vont vous permettre de vous débrouiller très rapidement avec NuTyX.
     </td>
-     </td>
-    <td width="30%">
-    </td>
    </tr>
    </table>
  <h2>Guides de l'utilisateur</h2>
@@ -71,9 +60,6 @@
      Cette approche permet d'installer NuTyX depuis une autre NuTyX ou même une autre distribution.
      L'article explique comment installer NuTyX sans connection internet.
     </td>
-    <td width="30%">
-    <a href="https://youtu.be/dUD3uC-A0BM"><img src="../../graphics/documentation/install-offline.jpg" width="160" height="100"></a>
-    </td>
    </tr>
    <tr class="odd">
     <td class="lien_article">
@@ -84,9 +70,6 @@
      lors de l'installation de votre NuTyX (par erreur ou par volonté),
      il n'est pas encore trop tard. Avec l'ISO c'est très simple d'installer GRUB
      sur votre machine et de façon indépendante. Cet article vous montre la procédure en 3 ou 4 écrans.
-    </td>
-     <td>
-       <a href="https://youtu.be/-P8g7lClXvI"><img src="../../graphics/documentation/install-grub.jpg" width="160" height="100"></a>
     </td>
    </tr>
    <tr class="even">
@@ -108,15 +91,11 @@
      Un serveur http peut s'avérer utile si l'on souhaite par exemple tester des pages html sur un vrai serveur.
      Si l'on souhaite créer son propre site web familial uniquement accessible depuis la maison ou, pourquoi pas, le rendre accessible sur la toile.
     </td>
-    <td width="30%">
-     <a href="https://youtu.be/WktCx1RCh9o?list=PLYbkwaRjlNz9nAh0EvoSzoGv07ALq3VXt"><img src="../../graphics/documentation/setup-http.jpg" width="160" height="100"></a>
-    </td>
    </tr>
 
    <tr class="even">
     <td class="lien_article" >
       <a class="url" href="setup-nfs">Mise en place d'un serveur NFS</a>
-    </td>
     </td>
     <td>
      Ce petit guide explique la mise en place d'un serveur NFS sur NuTyX.
@@ -124,9 +103,6 @@
      entre elle au sein d'un réseau familial. La seule condition, toutes les 
      machines connectées doivent supporter le service NFS. Heureusement pour nous 
      toutes les distributions le supportent.
-    </td>
-    <td width="30%">
-     <a href="https://youtu.be/Qav5laz3_1A"><img src="../../graphics/documentation/setup-nfs.jpg" width="160"height="100"></a>
     </td>
    </tr>
    <tr class="odd">
@@ -137,8 +113,6 @@
      Ce petit guide explique la mise en place d'un pare-feu "de base" sur NuTyX. 
      Il devrait vous permettre d'avoir un pare-feu qui démarre et s'éteint automatiquement avec votre réseau, 
      tout en protégeant votre machine.
-    </td>
-    <td>
     </td>
    </tr>
     <tr class="even">
@@ -151,8 +125,6 @@
      Cela permet d'avoir un noyau optimalisé en taille, en vitesse de lancement, 
      en utilisation de la charge du processeur, etc. Si vous avez choisi de compiler 
      et installer votre propre noyau, suivez pas à pas cet article.
-    </td>
-    <td>
     </td>
    </tr>
    </table>
@@ -167,10 +139,8 @@
      disponibles en binaires. C'est à la fois peu et beaucoup. 
      En effet tous les jours ou presque, sortent de nouvelles applications sous licence libre (ou pas)
     </td>
-    </td>
     <td>
     </td>
-
    </tr>
    <tr class="odd">
     <td class="lien_article" >
@@ -180,8 +150,6 @@
      Pour pouvoir contribuer, il ne faut pas être un programmeur averti. 
      Quelques notions rudimentaires du langage BASH suffisent. Si vous n'avez aucune idée du langage BASH, 
      cet article vous expliquera les notions de base pour réaliser une <a href="dictionary#ID060">recette</a> sans se prendre la tête
-    </td>
-    <td>
     </td>
    </tr>
    <tr class="even">
@@ -193,8 +161,6 @@
      Cette recette se trouve dans un port qui est un dossier contenant un certain nombre de fichiers nécessaires pour 
      la construction d'un paquet. La commande <b>pkgmk</b> permet de "construire" le paquet qui sera ensuite installable.
     </td>
-    <td>
-    </td>
    </tr>
    <tr class="odd">
     <td class="lien_article" >
@@ -204,8 +170,6 @@
      Cette section vous explique comment construire depuis zéro un <a href="dictionary#ID005">paquet</a> pour NuTyX.
      On y aborde toutes les fonctionnalités (de base et avancées) du gestionnaire de 
      <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
-    </td>
-    <td>
     </td>
    </tr>
    <tr class="even">
@@ -218,9 +182,6 @@
      Par contre, il est primordiale pour un contributeur NuTyX d'assimiler ce concept original sous NuTyX.
      Les collections sont classés en 5 ensembles distincts. Chaque ensemble a une responsabilité bien précise.
     </td>
-    <td>
-
-    </td>
    </tr>
    <tr class="odd">
     <td class="lien_article" >
@@ -230,9 +191,6 @@
      Cet article explique comment construire vos paquets dans un environnement isolé.
      Vous DEVEZ utiliser cette méthode si vous n'êtes pas sur un système de base ou
      si vous avez choisi d'utiliser NuTyX comme une distribution binaire comme expliqué dans la <a href="faq#4">FAQ</a>.
-    </td>
-    <td>
-       <a href="https://youtu.be/CL5U602s1JM"><img src="../../graphics/documentation/build-in-chroot.jpg" width="160"height="100"></a>
     </td>
    </tr>
    <tr class="even">
@@ -246,8 +204,6 @@
      <pre class="command_user"><kbd>sudo build-collection /current/kde5</kbd></pre> 
      Il est indispensable de maîtriser sa NuTyX pour mener à bien ce tutoriel..
     </td>
-    <td>
-    </td>
    </tr>
   </table>
  <h2>Guides du créateur</h2>
@@ -260,9 +216,6 @@
      Il est possible de générer très facilement une ISO depuis une NuTyX installée dans un dossier. 
      Cette ISO peut ensuite être réinstallée et servir de base de déploiement. Libre à vous d'ajouter 
      tous les logiciels que vous souhaitez, y compris une interface graphique. Le minimum à ajouter est un kernel.
-    </td>
-    <td>
-     <a href="https://www.youtube.com/watch?v=lOKM9AgZwvU"><img src="../../graphics/documentation/generate-iso.jpg" width="160"height="100"></a>
     </td>
    </tr>
    <tr class="even">
@@ -290,9 +243,6 @@
       <li>
        <a class="url" href="build-post">La post-construction et ses options</a>
      </ol>
-    </td>
-    <td>
-       <a href="https://www.youtube.com/watch?v=IfqXK6lV7hI"><img src="../../graphics/documentation/build-pre.jpg" width="160" height="100"></a>
     </td>
    </tr>
   </table>
