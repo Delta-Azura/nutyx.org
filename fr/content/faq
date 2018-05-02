@@ -114,7 +114,7 @@ logdir /var/log/pkgbuild</pre>
      cela permet d'avoir un système cohérent et très robuste.
      Comme expliqué plus haut, il suffit d'effacer la NuTyX actuelle,
      le dossier /home et tous vos MP3 qui se trouvent dans /MP3 (par exemple) restent intacts,
-     ensuite vous installez directement la NuTyX 9.X sur la même partition.
+     ensuite vous installez directement la NuTyX 10.X sur la même partition.
    <h2>Comment activer le compte root ?</h2>
     <p>
      Par défaut, NuTyX n'active pas le compte root, si vous souhaitez compilez vos propres paquets, il est plus simple d'activer le compte root.
