@@ -13,17 +13,15 @@
    <pre class="command"><kbd>export LFS=/ISO-MINI</kbd></pre>
    <p>
     La chroot sera donc dans le dossier "/ISO-MINI". Libre à vous de choisir un autre dossier.
-  <h3>Installer le système de base 'houaphan'</h3>
-   <pre class="command"><kbd>install-nutyx</kbd></pre>
+  <h3>Installer le système de base</h3>
+   <pre class="command"><kbd>VERSION="development" install-nutyx</kbd></pre>
   <h3>Copier les fichiers pour l'iso</h3>
    <pre class="command"><kbd>cp -av base-sysV/iso $LFS/ISO</kbd></pre>
  <h2>Génération de l'iso</h2>
   <h3>Entrer dans la chroot</h3>
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
   <h3>Mettre le kernel et l'initrd au bon endroit</h3>
-   <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf
-cp -v /boot/kernel-* /ISO/isolinux/kernel
-cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
+   <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf</kbd></pre>
   <h3>En Option, installer les paquets pour l'installation en EFI</h3>
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
   <h3>En Option, installer le support wifi et la souris</h3>
@@ -41,12 +39,10 @@ done</kbd></pre>
   <h3>Supprimer les archives des binaires</h3>
    <pre class="command"><kbd>cards purge</kbd></pre>
   <h3>Générer les fichiers squashfs</h3>
-   <pre class="command"><kbd>mkdir -p /ISO/isolinux/boot/
-cd /
-for dir in opt bin etc lib lib64 root run sbin usr var home
+   <pre class="command"><kbd>for dir in opt bin etc lib lib64 root run sbin usr var home
 do
-  [ -f ISO/isolinux/boot/$dir.squashfs ] && rm ISO/isolinux/boot/$dir.squashfs
-  mksquashfs $dir ISO/isolinux/boot/$dir.squashfs
+  [ -f /ISO/boot/$dir.squashfs ] && rm /ISO/boot/$dir.squashfs
+  mksquashfs /$dir /ISO/boot/$dir.squashfs
 done</kbd></pre>
   <h3>Quitter NuTyX chroot</h3>
    <pre class="command"><kbd>exit</kbd></pre>
