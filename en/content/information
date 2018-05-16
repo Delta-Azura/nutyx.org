@@ -27,12 +27,6 @@
     <p>
       <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
 
-   <h3>Remy</h3>
-    <p>
-       <b>Remy</b> ISO creator in many different kinds, all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-    <p>
-        Gnome, cli-extra, gui-extra collections Packager.
-
    <h3>Jayce</h3>
     <p>
        <b>Jayce</b> Gnome collection packager.
@@ -58,6 +52,9 @@
       He was a long time an active contributor, the CARDS package manager have been modify to never forget his name.
       A new attribute call "Contributors" has been added.
     <p>
+       <b>Remy</b> ISO creator in many different kinds, all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+        Gnome, cli-extra, gui-extra collections Packager.
+   <p>
        <b>Hugo</b> Various packages packager.
     <p>
       <b>Sipo</b> packager for various packages, like the LXQt git packages. 

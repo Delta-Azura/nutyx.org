@@ -31,10 +31,6 @@
       La gestion des bots build... Un peu tout ce qu'il reste à faire.
      <h3>Artemia</h3>
       <b>Artemia</b> Dévelopeur de l'interface graphique <i>flcards</i>.
-     <h3>Remy</h3>
-       <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-      <p>
-       Empaqueteur des paquets du git gnome et des collections cli-extra et gui-extra.
      <h3>Jayce</h3>
        <b>Jayce</b> empaqueteur de gnome.
      <h3>Harold</h3>
@@ -59,6 +55,10 @@
      <p>
       Le gestionnaire de paquets CARDS a été modifié en son hommage.
       Tous les paquets où il a participé gardent une trace de son passage. Un champs "contributeurs" a été ajouté dans les recettes.
+    <div>
+   <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+       Empaqueteur des paquets du git gnome et des collections cli-extra et gui-extra.
+    </div>
    <p>
      <div>
        <b>Hugo</b> empaqueteur de divers paquets.
