@@ -14,7 +14,7 @@
    <p>
     La chroot sera donc dans le dossier "/ISO-MINI". Libre à vous de choisir un autre dossier.
   <h3>Installer le système de base</h3>
-   <pre class="command"><kbd>VERSION="development" install-nutyx</kbd></pre>
+   <pre class="command"><kbd>install-nutyx</kbd></pre>
   <h3>Copier les fichiers pour l'iso</h3>
    <pre class="command"><kbd>cp -av base-sysV/iso $LFS/ISO</kbd></pre>
  <h2>Génération de l'iso</h2>

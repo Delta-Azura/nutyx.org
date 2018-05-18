@@ -1,21 +1,27 @@
-<h1>Latest news 2018-03-13</h1>
+<h1>Latest news 2018-05-17</h1>
 
-<h2>NuTyX 10.1 available with cards 2.4.0</h2>
+<h2>NuTyX 10.2 available with cards 2.4.81</h2>
 <p>
- The NuTyX team is please to annonce the 10.1 release of NuTyX.
+ I'm very please to annonce the new NuTyX 10.2 release.
 <p>
- NuTyX 9.0 comes with kernel lts 4.14.26 (4.9.87 in 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.6.4,
- xorg-server 1.19.6, qt 5.10.1, plasma 5.12.3 (in 64bits) , kf5 5.43.0 (in 64bits), gnome 3.26.1 (in 64bits), mate 1.20.0, xfce4 4.12.3, firefox 58.0.2, etc....
-
+ NuTyX 10.2 comes with kernel lts 4.14.40 (4.9.99 in 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.6.5,
+ xorg-server 1.19.6, qt 5.10.1, plasma 5.12.5 (in 64bits) , kf5 5.45.0 (in 64bits), gnome 3.28.1 (in 64bits), mate 1.20.1, xfce4 4.12.3, firefox 59.0.3, etc....
+<p>
+ A second kernel is proposed for people who want to use the very last version of the kernel 4.16.8
 <p>
  Six news ISOs are available in 32 bits and 64 bits.
  Sizes are respectively 296 MB, 613 MB and 1.6G available on <a href="downloads">the new download page.</a>
 <p>
- They have been a lot of upstream updates related to security.
+ A new bootplash is now included in each ISO and at boot time after install.
 <p>
- NutyX 10.0 user's are strongly invited to upgrade.
+ The kernel blocking and Verbose problem on EFI machines is now solved.
+ User's should be able to use more recent EFI machines with this new version.
 <p>
- It is possible to make an upgrade  of your system without problems.
+ Extra languages like Arabic, Hindi, Chineses and Japaneses are now available.
+<p>
+ NuTyX 10.1 user's are invited to upgrade.
+<p>
+ It is possible to make an upgrade of your system without problems.
  It's no need to reinstall your NuTyX. 
  If the automatic upgrade process is activate, it will be done at next shutdown.
 <p>
@@ -28,24 +34,20 @@
  <pre class="command_user"><kbd>check</kbd></pre>
  If you did choose automatic upgrade, you just need to reboot your machine othewise do:
  <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
-<h2>Main Updated Packages List of NuTyX 10.1</h2>
+<h2>Main Updated Packages List of NuTyX 10.2 compared to the 10.1</h2>
  <ul>
   <li>
-   glibc 2.26 -> glibc 2.27
+   kernel lts 4.14.26 -> 4.14.40
   <li>
-   gcc 7.2.0  -> gcc 7.3.0
+   python 3.6.4  -> 3.6.5
   <li>
-   binutils 2.29.1 -> 2.30
+   firefox 57.0.4 -> 59.0.3
   <li>
-   kernel lts 4.14.13 -> 4.14.26
+   libreoffice 6.0.2.1 -> 6.0.3.2
   <li>
-   firefox 57.0.4 -> 58.0.2
+   kf5 5.43.0 -> 5.45.0
   <li>
-   libreoffice 5.4.4 -> 6.0.2.1 
-  <li>
-   kf5 5.41.0 -> 5.43.0
-  <li>
-   mate 1.18.2 -> mate 1.20.0
+   mate 1.20.0 -> mate 1.20.1
   </ul>
  <p>
  Number of officials collections remains 17:
@@ -69,9 +71,9 @@
   <li>
     kde5, kde5-extra
  </ul>
-<h2>Thanks</h2>
- <p>
-  Thanks to the all team for they support.
+<h2>The Team organisation</h2>
+ The team is for the moment small.
+  Updates will probably comes slowers.
 <h2>Old news</h2>
  Old news are now available <a href="old-news/?C=N;O=D">here</a>.
 

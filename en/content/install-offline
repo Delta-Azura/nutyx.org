@@ -72,7 +72,7 @@ mount /dev/sda4 $LFS</kbd></pre>
     <p>
      A bootable base NuTyX needs only the <b>base</b> collection: download and place in the correct destination directory:
     <pre class="command"><kbd>mkdir -p $LFS/var/lib/pkg/depot
-rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/10.1/base/ \
+rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/10.2/base/ \
 $LFS/var/lib/pkg/depot/base/</kbd></pre>
      <p>
       Once this command is completed, we will download the installation script from the server.
@@ -122,7 +122,7 @@ EOF</kbd></pre>
 ...
 ..
 ****************************************************
-      Installation of NuTyX 10.1 installed
+      Installation of NuTyX 10.2 installed
       in /mnt/NuTyX sucessfully
 ****************************************************
 

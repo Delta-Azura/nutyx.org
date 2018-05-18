@@ -1,15 +1,15 @@
-<h1>Dernière nouvelle 13-03-2018</h1>
+<h1>Dernière nouvelle 17-05-2018</h1>
 
-<h2>NuTyX 10.1 disponible avec cards 2.4.0</h2>
+<h2>NuTyX 10.2 disponible avec cards 2.4.81</h2>
 <p>
- L'équipe de NuTyX est très fière de vous proposer la version NuTyX 10.1.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 10.2.
 <p>
- NuTyX 10.1 propose le kernel lts 4.14.26 (4.9.87 en 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.6.4,
- xorg-server 1.19.6, qt 5.10.1, plasma 5.12.3 (en 64bits) , kf5 5.43.0 (en 64bits), gnome 3.26.1 (en 64bits), mate 1.20.0, xfce4 4.12.3, firefox 58.0.2 et beaucoup d'autres mise à jour.
+ NuTyX 10.2 propose le kernel lts 4.14.40 (4.9.99 en 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.6.5,
+ xorg-server 1.19.6, qt 5.10.1, plasma 5.12.3 (en 64bits) , kf5 5.43.0 (en 64bits), gnome 3.26.1 (en 64bits), mate 1.20.0, xfce4 4.12.3, firefox 59.0.3 et beaucoup d'autres mise à jour.
 <p>
- Il y a eu beaucoup de mise à jour de sécurité dans de trés nombreux paquets.
+ Un deuxième kernel est proposé pour les utilisateurs souhaitant utiliser la toute dernière version 4.16.8
 <p>
- Les utilisateur de la NuTyX 10.0. sont invités à mettre à jour.
+ Les utilisateur de la NuTyX 10.1. sont invités à mettre à jour.
 <p>
  Une mise à jour peut se faire sans problèmes.
  Il n'est donc pas necessaire de réinstaller votre NuTyX.
@@ -18,6 +18,14 @@
 <p>
  Six nouvelles isos sont disponible en 32 et 64 bits.
  Leur tailles sont respectivement 296 MB, 613 MB et 1.6G disponibles sur <a href="downloads">la nouvelle page de téléchargement.</a>
+<p>
+ Un nouveau fond d'écran vous acceuille sur chaque ISO et sur votre NuTyX 10.2 installée depuis l'une des ISOs proposées.
+<p>
+ Les problèmes de blocages et d'absence d'information lors du lancement d'une ISO sur les machines EFI sont maintenant résolus.
+ Les utilisateurs qui le souhaitent devraient pouvoir utiliser des machines EFI plus récentes avec cette nouvelle version.
+ 
+<p>
+ Des langues supplémentaires comme l'arabe, l'hindi, le chinois et le japonais sont maintenant disponibles.
 <p>
  Les interfaces graphiques disponibles sont:
  kde5, gnome, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
@@ -29,24 +37,22 @@
  Si la mise à jour automatique est activée il suffit de relancer votre machine, sinon, faîtes:
  <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
  
-<h2>Liste des mises à jour principales de la NuTyX 10.1</h2>
+<h2>Liste des mises à jour principales de la NuTyX 10.2 par rapport à la version 10.1</h2>
  <ul>
   <li>
-   glibc 2.26 -> glibc 2.27
+    kernel lts 4.14.26 -> 4.14.40
   <li>
-   gcc 7.2.0  -> gcc 7.3.0
+    kernel 4.16.8
   <li>
-   binutils 2.29.1 -> 2.30
+   python 3.6.4  -> 3.6.5
   <li>
-   kernel lts 4.14.13 -> 4.14.26
+   firefox 57.0.4 -> 59.0.3
   <li>
-   firefox 57.0.4 -> 58.0.2
+   libreoffice 6.0.2.1 -> 6.0.3.2
   <li>
-   libreoffice 5.4.4 -> 6.0.2.1 
+   kf5 5.43.0 -> 5.45.0
   <li>
-   kf5 5.41.0 -> 5.43.0
-  <li>
-   mate 1.18.2 -> mate 1.20.0
+   mate 1.20.0 -> mate 1.20.1
   </ul>
 <p>
  Le nombre de collections officielles est toujours 17 collections:
@@ -70,9 +76,8 @@
   <li>
     kde5, kde5-extra
  </ul>
- <h2>Remerciements</h2>
- <p>
-  Merci à toute l'équipe pour leur support.
-  
+ <h2>L'organisation de l'équipe</h2>
+  L'équipe actuelle de NuTyX est très restreinte.
+  Les mises à jour se feront probablement à un rythme plus lent.
  <h2>Anciennes nouvelles</h2>
  Les anciennes nouvelles sont maintenant consultables <a href="old-news/?C=N;O=D">ici.</a>

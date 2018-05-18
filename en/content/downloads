@@ -1,6 +1,6 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>10.1</b>.
+   The current stable release of NuTyX is named <b>10.2</b>.
   <p>
    ISO images are available in 32 bits and in 64 bits.
   <p>
@@ -25,9 +25,9 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.1a.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.2.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>64bits</a>
      <p>
-      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-mate-10.1a.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
+      <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-mate-10.2.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>32bits</a>
     </td>
     <td>
        Installation in BIOS or EFI modus is possible.
@@ -47,7 +47,7 @@
     <td>
      lxdm <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate">mate</a>
      <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
-     zip unzip pciutils usbutils cups openssh gvfs
+     zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
      <a href="./?type=pkg&branch=stable&arch=x86_64&searchpkg=gstreamer-p">gstreamer</a>
      system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
      transmission cheese cherrytree deadbeef aisleriot
@@ -71,9 +71,9 @@
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.1a.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-xorg-10.2.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>64bits</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.1a.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-xorg-10.2.iso"><img src="../graphics/downloads/xorg.png" alt="logo Xorg"/>32bits</a>
       </td>
       <td>
         Installation in BIOS or EFI modus is possible.
@@ -92,9 +92,9 @@
      </tr>
      <tr class="odd">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>64bits</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.2.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>64bits</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-10.2.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>32bits</a>
       </td>
       <td>
         Installation in BIOS or EFI modus is possible.
@@ -125,7 +125,7 @@
   <p>
    The script will analyse the <b>/etc/install-nutyx.conf</b> file if it exist and used defined variables in it.
   <p>
-   At the moment, they are 5 configurables variables:
+   At the moment, they are 6 configurables variables:
   <ul>
    <li>
     the installation path define by the <b>LFS</b> variable
@@ -133,6 +133,8 @@
     the url adress of the mirror where are the binaries located via the <b>URL</b> variable
    <li>
     the version to installed (stable, current or development) define by the <b>VERSION</b> variable
+   <l>
+    the kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
    <li>
     the <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
    <li>
@@ -371,7 +373,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.1.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.2.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>

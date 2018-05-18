@@ -80,7 +80,7 @@ mount /dev/sda4 $LFS</kbd></pre>
     <p>
      Nous les plaçons directement au bon endroit:
     <pre class="command"><kbd>mkdir -p $LFS/var/lib/pkg/depot
-rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/10.1/base/ \
+rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/10.2/base/ \
 $LFS/var/lib/pkg/depot/base/</kbd></pre>
      <p>
       Une fois la commande terminée, on peut maintenant récupérer le script d'installation depuis le serveur.
@@ -135,7 +135,7 @@ EOF</kbd></pre>
 ...
 ..
 ****************************************************
-      Installation of NuTyX 10.1 installed
+      Installation of NuTyX 10.2 installed
       in /mnt/NuTyX sucessfully
 ****************************************************
 
