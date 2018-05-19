@@ -193,23 +193,23 @@ gerçekten de, çünkü her gün internette, çoğunlukla açık kaynak lisansla
     </td>
     <td width="70%">
       Bu belge, bir GNU/Linux dağıtımının, bu durumda NuTyX'in nasıl sıfırdan oluşturulacağını açıklamaktadır.
-      As a basis we will use the excellent online manual found in:<a class="url" href="http://www.linuxfromscratch.org/lfs/view/development">http://www.linuxfromscratch.or...ew/development/</a>
+      Temel olarak, bulunabilecek en mükemmel çevrimiçi kılavuzu kullanacağız:<a class="url" href="http://www.linuxfromscratch.org/lfs/view/development">http://www.linuxfromscratch.or...ew/development/</a>
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
-     This article is targeted at people who know what a GNU/linux distribution is.
-     Ideally you should have built LFS entirely by hand at least once before trying this method.
-     <a class="url" href="https://github.com/NuTyX/core/commits/master">This project is continuously in development</a>,
-     so it is possible that you will encounter some errors during the build.
+     Bu makale, bir GNU/linux dağıtımının ne olduğunu bilen insanlara yöneliktir.
+     İdeal olarak, bu yöntemi denemeden önce en az bir kez tamamen LFS yapmalısınız.
+     <a class="url" href="https://github.com/NuTyX/core/commits/master">Bu proje sürekli olarak geliştirilmektedir</a>,
+     bu nedenle yapı sırasında bazı hatalarla karşılaşmanız mümkündür.
     </div>
-    The article is divided into four sections:
+    Makale dört bölüme ayrılmıştır:
      <ol>
       <li>
-       <a class="url" href="build-pre">Preparing for the build</a>
+       <a class="url" href="build-pre">Yapım(build) için hazırlama</a>
       <li>
-       <a class="url" href="build-pass-1">Building the CHROOT environment (pass 1)</a>
+       <a class="url" href="build-pass-1">CHROOT ortamının oluşturulması (pass 1)</a>
       <li>
-       <a class="url" href="build-pass-2">Building the NuTyX system (pass 2)</a>
+       <a class="url" href="build-pass-2">NuTyX sisteminin oluşturulması (pass 2)</a>
       <li>
-       <a class="url" href="build-post">The post-build phase and generation of the iso</a>
+       <a class="url" href="build-post">Son inşa aşaması ve iso üretimi</a>
      </ol>
     </td>
    </tr>
@@ -220,10 +220,10 @@ gerçekten de, çünkü her gün internette, çoğunlukla açık kaynak lisansla
      </h3>
     </td>
     <td width="70%">
-    This article is addressed particularly to package developers.
-    It explains how you can build all the packages of a collection completely automatically with a command as simple as:
+    Bu makale özellikle paket geliştiricilere yöneliktir.
+    Bu, bir koleksiyonun tüm paketlerini tamamen otomatik olarak nasıl oluşturabileceğinizi açıklar:
      <pre class="command"><kbd>build-collection /development/kde5</kbd></pre>
-     It is important to have a good understanding of your NuTyX distribution so as to be able to use the script properly.
+     Betiği doğru kullanabilmek için NuTyX dağıtımınızın iyi bir şekilde anlaşılması önemlidir.
     </td>
    </tr>
   </table>
