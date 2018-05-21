@@ -1,1 +1,228 @@
-../../en/content/finish-up
+<h1>Kurulumu tamamlama</h1>
+ <h2>Ve şimdi?</h2>
+   Şimdi temel seviyede kurulu bir NuTyX'iniz var.
+   Grafiksel arayüz(Masaüstü) elde etmek için nasıl devam edeceğinizi biliyorsanız, (Masaüstlerinin)web sitesi belgelerini doğrudan kontrol edebilirsiniz.
+   Tam bir grafik arayüzün nasıl kurulacağını merak ediyorsanız, okumaya devam edin.
+ <h2>Kullanılabilir paketler hakkındaki meta verilerin güncellenmesi</h2>
+  Yüklenebilecek tüm mevcut paketler hakkında NuTyX'inizi bilgilendirmemiz gerekiyor. Bunun için bir <a href="dictionary#ID300">alias</a> mevcut:
+  <pre class="command_user"><kbd>check</kbd></pre>
+  <pre class="output">[sudo] password for charly:</pre>
+  Yükleme sırasında belirttiğiniz şifreyi şimdi girin ve senkronizasyon başlasın:
+  <pre class="output">/var/lib/pkg/depot/lxqt-extra/.PKGREPO
+/var/lib/pkg/depot/lxqt/.PKGREPO
+/var/lib/pkg/depot/mate-extra/.PKGREPO
+/var/lib/pkg/depot/mate/.PKGREPO
+/var/lib/pkg/depot/kde5-extra/.PKGREPO
+/var/lib/pkg/depot/kde5/.PKGREPO
+/var/lib/pkg/depot/xfce4-extra/.PKGREPO
+/var/lib/pkg/depot/xfce4/.PKGREPO
+/var/lib/pkg/depot/gui-extra/.PKGREPO
+/var/lib/pkg/depot/gui/.PKGREPO
+/var/lib/pkg/depot/cli-extra/.PKGREPO
+/var/lib/pkg/depot/cli/.PKGREPO
+/var/lib/pkg/depot/base/.PKGREPO</pre>
+  Senkronizasyon tamamlandı. Grafiksel bir NuTyX arabirimi elde etmek için artık paketlerin geri kalanını yüklemeye hazırsınız.
+ <h2>Masaüstü kurulumu:</h2>
+  Artık en sevdiğiniz masaüstünü seçebilirsiniz.
+  NuTyX için: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, vb mevcuttur.
+  <p>
+      <table>
+       <caption><EM>Mevcut masaüstleri:</EM></caption>
+       <tr class="sidebar">
+        <th>Masaüstü adı:
+        <th>Komut:
+       <tr class="even">
+        <td>
+         kde5 kde5-extra
+        <td>
+         <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         lxqt lxqt-extra
+        <td>
+         <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         xfce4 xfce4-extra
+        <td>
+         <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
+       <tr class="odd">
+        <td>
+         mate mate-extra
+        <td>
+         <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
+       <tr class="even">
+        <td>
+         lxde
+        <td>
+         <pre class="command_user"><kbd>get lxde</kbd></pre>
+       <tr class="odd">
+        <td>
+         openbox
+        <td>
+         <pre class="command_user"><kbd>get openbox</kbd></pre>
+        <tr class="even">
+        <td>
+         enlightenment
+        <td>
+         <pre class="command_user"><kbd>get enlightenment</kbd></pre>
+       <tr class="odd">
+        <td>
+         jwm
+        <td>
+         <pre class="command_user"><kbd>get jwm</kbd></pre>
+        <tr class="even">
+        <td>
+         blackbox
+        <td>
+         <pre class="command_user"><kbd>get blackbox</kbd></pre>
+        <tr class="odd">
+        <td>
+         icewm
+        <td>
+         <pre class="command_user"><kbd>get icewm</kbd></pre>
+        <tr class="even">
+        <td>
+         ratpoison
+        <td>
+         <pre class="command_user"><kbd>get ratpoison</kbd></pre>
+        <tr class="odd">
+        <td>
+         flwm
+        <td>
+         <pre class="command_user"><kbd>get flwm</kbd></pre>
+         <tr class="even">
+        <td>
+         i3wm
+        <td>
+         <pre class="command_user"><kbd>get i3wm</kbd></pre>
+    </table>
+  <p>
+
+ <h2>Giriş yöneticisi kurulumu</h2>
+  NuTyX altında bir grafik oturumu başlatmak için "otomatik", "yarı otomatik" ve "manuel" modları arasından seçim yapabilirsiniz.
+  <p>
+   Grafiksel olmayan bir konsoldan grafiksel bir oturum başlatabilirsiniz.
+  <h3>Otomatik grafiksel giriş</h3>
+    Giriş yöneticisini kurmaya başlayalım:
+    <pre class="command_user"><kbd>get lxdm</kbd></pre>
+    <pre class="output">[sudo] password for charly:</pre>
+    Şimdi kurulumda belirttiğiniz şifreyi girin ve kurulum başlasın:
+    <pre class="output">/var/lib/pkg/depot/gui/lxdm/.PKGREPO
+   ...</pre>
+    Hiçbir şeyi yapılandırmaya gerek yok.
+  <h3>Yarı Otomatik grafiksel giriş</h3>
+    <i>slim</i> giriş yöneticisi yüklenecek:
+    <pre class="command_user"><kbd>get slim</kbd></pre>
+    To take full advantage of the <i>slim</i> functionality, it's recommended to provide an <i>.xinitrc</i> configuration file at the root of the home directory.
+   <p>
+    Hiçbir yapılandırma dosyası ayarlanmadıysa, bazı işlevler düzgün çalışmayacaktır.
+
+  <h3>Manuel grafiksel giriş</h3>
+    <i>xdm</i> giriş yöneticisi yüklenecek.
+    Bu çok basit bir uygulamadır ve bu nedenle ev dizininde bir <i>.xinitrc</i> yapılandırma dosyasına ihtiyaç duyar.
+    <pre class="command_user"><kbd>get xorg-xdm</kbd></pre>
+    <i>.xinitrc</i> yapılandırma dosyasını yapılandıralım.
+   <p>
+    Mevcut xinitrc dosyasını, halihazırda kurulmuş olan <i>xorg-xinit</i> paketleyiciden kopyalarız:
+    <pre class="command_user"><kbd>cp /etc/X11/app-defaults/xinitrc ~/.xinitrc</kbd></pre>
+    Son 5. satırı değiştirin::
+    <pre class="output">twm &
+xclock -geometry 50x50-1+1 &
+xterm -geometry 80x50+494+51 &
+xterm -geometry 80x20+494-0 &
+exec xterm -geometry 80x66+0+0 -name login</pre>
+   yukarıda yüklediğiniz grafiksel arayüzün(Masaüstü) adı ile. Örneğin, mate için:
+   <pre class="output">exec mate-session</pre>
+
+  <h3>Grafik sunucusunu grafiksel olmayan bir konsoldan başlatma</h3>
+    Grafik sunucuyu ve başlatıcıyı yüklüyoruz:
+    <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
+    Manuel grafiksel giriş <i>xdm</i>'ye gelince,
+    ev dizininde bir <i>.xinitrc</i> yapılandırma dosyasına ihtiyaç duyar.
+   <p>
+    Yapılandırma tamamlandığında ve sunucu yüklendikten sonra, grafiksel olmayan bir konsoldan şu komutla başlatabilirsiniz:
+    <pre class="command_user"><kbd>startx</kbd></pre>
+   <p>
+    Hala iyi bir sonuç alamıyorsanız, muhtemelen grafik kart(lar)ınız için bir sürücü yüklemeniz gerekir.
+
+ <h2>Grafik kartınızın Xorg sürücüsü</h2>
+      <table>
+       <caption><EM>Kullanılabilir Xorg grafik kartı sürücüleri:</EM></caption>
+       <tr class="sidebar">
+        <th>Grafik Kart(lar)ınızın Modeli:
+        <th>Yüklenecek sürücünün adı:
+       <tr class="even">
+         <td>
+          Ati
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-ati</kbd></pre>
+       <tr class="odd">
+         <td>
+          Intel
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-intel</kbd></pre>
+       <tr class="even">
+         <td>
+          Nvidia
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-nouveau</kbd></pre>
+       <tr class="odd">
+        <td>
+         Vesa
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vesa</kbd></pre>
+       <tr class="even">
+        <td>
+         VMware
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vmware</kbd></pre>
+       <tr class="odd">
+        <td>
+         Virtualbox
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-vboxvideo</kbd></pre>
+        <tr class="even">
+        <td>
+         FrameBuffer
+        <td>
+         <pre class="command_user"><kbd>get xorg-xf86-video-fbdev</kbd></pre>
+       <tr class="odd">
+         <td>
+          VIA
+         <td>
+          <pre class="command_user"><kbd>get xorg-xf86-video-openchrome</kbd></pre>
+     </table>
+ <h2>Faydalı uygulamalar</h2>
+    Şimdi çok yararlı olabilecek birkaç araç yüklemelisiniz:
+  <h3>Sıkıştırılmış dosya aracı</h3>
+   <pre class="command_user"><kbd>get zip unzip</kbd></pre>
+  <h3>Ev dizini ve ses temaları yöneticisi</h3>
+   <pre class="command_user"><kbd>get xdg-user-dirs sound-theme-freedesktop</kbd></pre>
+  <h3>Geri dönüşüm kutusu ve otomatik medya montaj yöneticisi</h3>
+   <pre class="command_user"><kbd>get gvfs</kbd></pre>
+  <h3>Ses yöneticisi</h3>
+   <pre class="command_user"><kbd>get alsa-utils pavucontrol</kbd></pre>
+  <h3>NTFS (windows) bölümleri bölüm yöneticisi</h3>
+   <pre class="command_user"><kbd>get ntfs-3g</kbd></pre>
+  <h3>İnternet Tarayıcı</h3>
+   <pre class="command_user"><kbd>get firefox</kbd></pre>
+  <h3>E-Posta istemci</h3>
+   <pre class="command_user"><kbd>get thunderbird</kbd></pre>
+  <h3>Ofis paketi</h3>
+   <pre class="command_user"><kbd>get libreoffice</kbd></pre>
+  <h3>Anlık mesajlaşma yazılımı</h3>
+   <pre class="command_user"><kbd>get pidgin</kbd></pre>
+  <h3>Dizüstü bilgisayar dokunmatik panel yöneticisi</h3>
+   <pre class="command_user"><kbd>get xorg-xf86-input-synaptics</kbd></pre>
+  <h3>Kablosuz araç yöneticisi</h3>
+   Kablosuz bağlantıyı varsayılan olarak kullanıyorsanız, network-manager-applet'i yükleyin:
+   <pre class="command_user"><kbd>get network-manager-applet</kbd></pre>
+ <h2>Ve bitirmek için</h2>
+   The easiest way is to reboot your machine.  After reboot, you will be prompted to choose your login name via lxdm or slim.
+   En kolay yol makinenizi yeniden başlatmaktır. Yeniden başlatmanın ardından, giriş adınızı lxdm veya slim yoluyla seçmeniz istenecektir.
+   <i>slim</i> yüklediyseniz, oturum açmak için doğru masaüstünü seçmek için F1 tuşuna basmalısınız.
+   <pre class="command_user"><kbd>sudo reboot</kbd></pre>
+ <h2>Sonuç</h2>
+  <p>
+   Kurulumunuzla birlikte ilerlemenizi sağlamak için <a href="base-commands">temel komutlar</a> bölümünü okumanızı öneriyorum.
