@@ -1,1 +1,91 @@
-../../en/content/base-commands
+<h1>Temel komutlar...</h1>
+ <h2>Bir şans ver</h2>
+  <p>
+   To take full advantage of your newly installed NuTyX, here are the ESSENTIAL commmands that you will have to use every day.
+   Yeni kurulan NuTyX'inizin tüm avantajlarından yararlanmak için, her gün kullanmanız gereken ZORUNLU komutlar var.
+   Bu makalede, NuTyX'e özgü bazı önemli komutlar açıklanmaktadır. Onları öğrenmenizi kesinlikle öneririz.
+  <p>
+  NuTyX, idari amaçlar için (henüz) bir grafik arayüz aracına sahip değildir.
+  Terminali normal arayüzünüz olarak kullanmanız gerekecektir.
+  Henüz alışmamışsanız, bu büyük bir sorun değil; Yazmanız gereken komutları açıklayacağız
+  <p>
+   Since NuTyX is a Linux operating system, it's important to respect the <a href="http://en.wikipedia.org/wiki/Case_sensitivity">case</a> when entering commands.
+   NuTyX bir GNU/Linux işletim sistemi olduğundan, komutları girerken bu duruma saygı duymak önemlidir.
+   Bir komuttaki tüm karakterler <a href="http://en.wikipedia.org/wiki/Case_sensitivity">küçük</a> harflerle yazılmıştır.
+  <p>
+   Bir terminal açarak başlayalım. Hazır mısın? Tamam gidelim <img src="../graphics/smiley-cool.gif" alt="Cool" title="Cool" />
+  <p>
+   Bazı durumlarda, bir komut herhangi bir seçenek veya argüman içermeyen tek bir kelimeden oluşur, ancak çoğu komutun birçok seçeneği vardır.
+   Başka hangi seçeneklerin mevcut olduğu hakkında fikir edinmek için komutlar --help seçeneğini kullanmanızı öneririz.
+   Burada sadece en yaygın olanları kontrol edeceğiz:
+  <pre class="command_user"><kbd>commandname help</kbd></pre> veya
+  <pre class="command_user"><kbd>commandname --help</kbd></pre> veya
+  <pre class="command_user"><kbd>commandname -h</kbd></pre>
+  <p>
+   <i>help</i>, mevcut tüm seçenekleri yazdırmayı mümkün kılar. <i>--help</i> veya <i>-h</i>, bir komut için yardım metninin yazdırılması için alternatif seçeneklerdir.
+ <h2>Güncelleme olup olmadığını kontrol edin</h2>
+  <p>
+   <b>cards sync</b>, sisteminiz için mevcut güncellemelerin en son durumunu kontrol edecektir.
+  <p>
+   <b>cards diff</b>, eski paketlerin bir listesini gösterir.
+   <pre class="command_user"><kbd>sudo cards sync
+sudo cards diff</kbd></pre>
+   <pre class="output">synchronizing /var/lib/pkg/saravane/desktop from http://..<br />/var/lib/pkg/saravane/desktop//MD5SUM<br />..
+Difference between installed packages and the depot of binaries:
+Package                      Installed                   Available in the depot of binaries
+gcc                          4.9.1                       4.9.2
+glibc                        2.20                        2.21</pre>
+ <h2>Bir paket güncelleniyor</h2>
+  <p>
+   Bir paketi güncellemek için, <b>cards install -u</b> komutu kullanılacaktır. Elbette bir güncellemenin mevcut olması gerekir:
+  <pre class="command_user"><kbd>sudo cards install -u gcc</kbd></pre>
+ <h2>Paket arama</h2>
+  <p>
+   Bir paket aramak için komut:
+  <pre class="command_user"><kbd>cards search <b>search_string</b></kbd></pre>
+  <p>
+   adında veya açıklamasında <b>arama_metni</b>'ne sahip olan tüm paketleri döndürür. Örneğin, hangi tarayıcıların mevcut olduğunu bilmek isterseniz:
+  <pre class="command_user"><kbd>cards search browser</kbd></pre>
+  <p>
+   benzer bir şey dönmelidir:
+  <pre class="output">(gui-extra) chromium 53.0.2785.116 The open-source project behind Google Chrome,
+an attempt at creating a safer, faster, and more stable browser
+(gui-extra) conkeror git A highly programmable web browser based on Mozilla XULRunner
+(gui-extra) dillo 3.0.5 A small, fast graphical web browser built on FLTK
+(gui-extra) firefox 48.0.2 Standalone web browser from mozilla.org
+(gui-extra) midori 0.5.11 Midori is a lightweight web browser that uses WebKitGTK+.
+(gui-extra) xombrero 1.6.4 Simple browser based on gtk and using the webkit engine
+...</pre>
+ <h2>Paket kurma</h2>
+   <p>
+    Bir paket kurmak için, <b>cards install</b> komutu ve yazılım paketinin adı kullanılır:
+   <pre class="command_user"><kbd>sudo cards install xfce4</kbd></pre>
+   <p>
+    <b>xfce4</b> uygulamasının indirilmesi hemen başlar.
+    Paket indirildikten sonra, bağımlılıkları da indirilecektir.
+    İndirme bittiğinde, tüm bu paketler doğru sırada yüklenecektir.
+    Bu örnekte, komut tamamlandığında, NuTyX'inizde çalışan bir <a href="http://www.xfce.org">xfce4</a> masaüstünüz olacaktır.
+ <h2>Kullanıcı ekleme</h2>
+  <p>
+   NuTyX altında bir kullanıcı eklemek çok basittir. Komut:
+  <pre class="command_user"><kbd>sudo nu</kbd></pre>
+  <p>
+   yeni bir kullanıcı ekleyecek, iki soru sorulacak:
+  <pre class="output">Name of the user: james
+Name or Description of the user: James Bond 007</pre>
+  <p>
+   Kullanıcı adının özel karakter, boşluk veya büyük harf içermediğinden emin olmalısınız.
+ <h2>Sonuç</h2>
+   <p>
+   Gerçekten bilmeniz gereken iki komut görebileceğiniz gibi:
+   <pre class="command"><kbd>nu
+cards</kbd></pre>
+   <p>
+    Bu son komut, yardım seçeneği <i>ile</i> daha detaylı bir açıklamaya sahiptir.
+   <pre class="command_user"><kbd>cards help</kbd></pre>
+   <p>
+    Size yeni kurulan NuTyX ile çok eğlenceli zamanlar dilerim.
+   <p>
+    Daha fazla paket yüklemek ister misiniz? Veya neden kendi paketlerinizi kurmuyorsunuz?
+   <p>
+    Burada tüm <a href="build-package">gerekli belgeleri</a> bulacaksınız.

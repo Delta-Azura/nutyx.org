@@ -1,1 +1,75 @@
-../../en/content/install
+  <h1>NuTyX'in tek bir bölümdeki tipik kurulumu</h1>
+   <p>
+    Aşağıdaki ekran görüntüleri BIOS modunda tek bir bölüme tipik bir kurulum gösterir.
+    Bu örnekte 8 Gigabyte disk var.
+    İlk bölüm, 2 Gigabyte boyutunda takas bölümüdür.
+    Disk alanının geri kalanı NuTyX kurulum bölümü için kullanılacak.
+   <p>
+    En az 1 Gigabyte RAM en uygunudur. ISO'yu bir CD'ye daha önce yazmış olduğunuzu varsayıyoruz.
+   <p>
+    Tercih ederseniz, bir NuTyX önyüklenebilir USB flash sürücü hazırlayabilirsiniz. Her iki seçenek de işe yarayacak.
+   <p>
+    Ayrıca boş bir sabit sürücünüz var.
+   <p>
+    Şimdi tek bir bölüm üzerinde tipik bir kurulum gösterecek ekran görüntüleri kullanarak başlayacağız:
+
+   <h2>ISO'yu kopyaladığınız/yaktığınız USB Flash Sürücü/CD'yi açın.</h2>
+     <table align="center">
+      <tr><td><img src="../../graphics/install/BootBios.png"></td></tr>
+      <tr><td><img src="graphics/install/SelectLanguage.png"></td></tr>
+      <tr><td><img src="graphics/install/HowToProceed.png"></td></tr>
+     </table>
+   <h2>Bölüm oluşturma (isteğe bağlı)</h2>
+     <p>
+      Bir bölüm oluşturmak isteğe bağlıdır.
+      Zaten boş bir bölümünüz varsa, doğrudan bölümün <a href="#3">biçimlendirilmesine</a> gidebilirsiniz.
+     <table align="center">
+      <tr><td><img src="graphics/install/CreateYoursPartitions.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionTypeSelection.png"></td></tr>
+      <tr><td><img src="graphics/install/EmptyDisk1.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionCreate1.png"></td></tr>
+      <tr><td><img src="graphics/install/PartitionCreate2.png"></td></tr>
+     </table>
+
+    <h2>Bölümü biçimlendirme (isteğe bağlı)</h2>
+     <p>
+      Bölümün biçimlendirilmesi isteğe bağlıdır.
+      Biçimlendirilmemiş bir bölümünüz varsa veya bölümdeki her şeyden kurtulmak istiyorsanız, şimdi biçimlendirin.
+      Kişisel bilgilerinizi hala korumak istiyorsanız, aşağıdaki dizinleri manuel olarak kaldırmanız gerekir: <b>opt, bin, etc, root, run, sbin, usr and var</b>.
+      <u>Boş</u> bir biçimlendirilmiş bölümünüz varsa, doğrudan NuTyX <a href="#4">kurulumuna</a> gidebilirsiniz.
+     <table align="center">
+      <tr><td><img src="graphics/install/FormatPartition.png"></td></tr>
+      <tr><td><img src="graphics/install/AvailableFileSystems.png"></td></tr>
+      <tr><td><img src="graphics/install/LaunchFormatSda2Btrfs.png"></td></tr>
+     </table>
+
+    <h2>NuTyX'i kurma</h2>
+     <p>
+      NuTyX'in kurulumunun internet bağlantısına ihtiyacı yoktur. Sadece birkaç dakika sürer.
+     <table align="center">
+      <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
+      <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
+      <tr><td><img src="graphics/install/GoodToKnowMBR.png"></td></tr>
+     </table>
+
+   <h2>NuTyX'i yapılandırma</h2>
+    <p>
+     Kurulduktan sonra, NuTyX yeniden başlatılmadan otomatik olarak yapılandırma diyaloğunu başlatır.
+    <p>
+     Yapılandırma çok basittir: ağ kartı yapılandırması, tarih ve saat ayarı, <b>root</b> yönetici hesabının varsayılan şifresinin değiştirilmesi.
+     <table align="center">
+      <tr><td><img src="graphics/install/Init1.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureEth0.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureUTC.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureDate.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureTime.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureUser.png"></td></tr>
+      <tr><td><img src="graphics/install/AutomaticUpdate.png"></td></tr>
+      <tr><td><img src="graphics/install/FirstLogin.png"></td></tr>
+     </table>
+    <p>
+     Ardından, istendiğinde, giriş yapmak için oluşturduğunuz kullanıcı adınızı kullanın.
+   <h2>Giving the base commands a trial run-through.</h2>
+    <p>
+     Grafiksel arabirim(Masaüstü) kurabilmeniz için yüklemenizi <a href="finish-up">sonlandırmanız</a> gereken bölümü okumanızı öneririm.

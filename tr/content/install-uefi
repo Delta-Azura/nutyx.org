@@ -1,0 +1,98 @@
+  <h1>UEFI modunda tek bir bölüme NuTyX'in kurulumu</h1>
+   <p>
+    Bu ekran görüntüleri, UEFI modunda tek bir bölümdeki tipik bir kurulumu gösterir.
+    8Gb'lik bir diskimiz var.
+    İlk bölüm UEFI için ayrılmış bölüm.
+    EFI tipinde olmalı ve vfat'ta (sorulduktan sonra otomatik olarak) formatlanacaktır.
+    Bu bölümün boyutu 500MB'dir.
+    İkinci bölüm 2Gb takas alanı bölümüdür.
+    Disk alanının geri kalanı NuTyX kurulumu için kullanılacak.
+   <p>
+    En az 1GB RAM en uygunudur. ISO'yu bir CD'ye daha önce yazmış olduğunuzu varsayıyoruz.
+   <p>
+    Tercih ederseniz, bir NuTyX önyüklenebilir USB flash sürücü hazırlayabilirsiniz. Her iki seçenek de işe yarar.
+   <p>
+    Ayrıca boş bir sabit sürücünüz olmalı.
+   <p>
+    Şimdi tek bir bölüme tipik bir kurulum gösterecek ekran görüntülerini kullanarak başlayacağız:
+
+   <h2>ISO'yu kopyaladığınız/yaktığınız USB Flash Sürücü/CD'yi açın.</h2>
+     <table align="center">
+      <tr><td><img src="../../graphics/install-uefi/BootUefi.png"></td></tr>
+      <tr><td><img src="graphics/install-uefi/SelectLanguage.png"></td></tr>
+      <tr><td><img src="graphics/install-uefi/HowToProceed.png"></td></tr>
+     </table>
+   <h2>Bölüm oluşturma (isteğe bağlı)</h2>
+     <p>
+       Bir bölüm oluşturmak isteğe bağlıdır.
+       Zaten boş bir bölümünüz varsa, doğrudan bölümün <a href="#3">biçimlendirilmesine</a> geçebilirsiniz.
+     <p>
+       Etiket türü olarak <b>gpt</b>'yi seçtiğinizden emin olun, <b>dos</b>'yu seçerseniz, UEFI modunda NuTyX'in önyüklemesi başarısız olur.
+      <table align="center">
+       <tr><td><img src="graphics/install-uefi/CreateYoursPartitions.png"></td></tr>
+       <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionTypeSelection.png"></td></tr>
+       <tr><td><img src="graphics/install-uef/EmptyDisk1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate2.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate3.png"></td></tr>
+     </table>
+
+    <h2>Bölüm biçimlendirme (isteğe bağlı)</h2>
+     <p>
+      Bölümlerin biçimlendirmesi isteğe bağlıdır.
+      Biçimlendirilmemiş bir bölümünüz varsa veya bölümdeki her şeyden kurtulmak istiyorsanız, bunun için yalnızca biçimlendirin.
+      Kişisel bilgilerinizi hala korumak istiyorsanız, aşağıdaki dizinleri manuel olarak kaldırmanız gerekir: <b>opt, bin, etc, root, run, sbin, usr and var</b>.
+    <u>Boş</u> bir biçimlendirilmiş bölümünüz varsa, doğrudan NuTyX <a href="#4">yüklemesine</a> gidebilirsiniz.
+     <table align="center">
+       <tr><td><img src="graphics/install-uefi/FormatPartition.png"></td></tr>
+       <tr><td><img src="graphics/install/AvailableFileSystems.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/LaunchFormatSda3Btrfs.png"></td></tr>
+     </table>
+
+    <h2>NuTyX'i kurma</h2>
+     <p>
+      NuTyX'in kurulumu internet'e ihtiyaç duymaz. Sadece birkaç dakika sürer.
+     <table align="center">
+       <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/LaunchFormatSda1vfat.png"></td></tr>
+       <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
+       <tr><td><img src="graphics/install/Init1.png"></td></tr>
+     </table>
+
+   <h2>NuTyX'i yapılandırma</h2>
+    <p>
+     Kurulduktan sonra, NuTyX yeniden başlatılmadan otomatik olarak yapılandırma diyaloğunu başlatır.
+    <p>
+     Yapılandırma çok basittir: ağ kartı yapılandırması, tarih ve saat ayarı, <b>root</b> yönetici hesabının varsayılan şifresinin değiştirilmesi.
+     <table align="center">
+      <tr><td><img src="graphics/install/Init1.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureEth0.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureUTC.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureDate.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureTime.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureUser.png"></td></tr>
+      <tr><td><img src="graphics/install/AutomaticUpdate.png"></td></tr>
+      <tr><td><img src="graphics/install/FirstLogin.png"></td></tr>
+     </table>
+    <p>
+     Ardından, istendiğinde, sadece giriş yapmak için oluşturduğunuz kullanıcı adınızı kullanın.
+   <h2>GRUB kullanımı durumunda çekirdek konum dosyasını ayarlama</h2>
+    <p>
+     UEFI modda kurulan NuTyX herhangi bir önyükleme yöneticisi olmadan kullanılabilir.
+     UEFI çekirdeği doğrudan boot edecektir.
+    <p>
+     In case you decide to use GRUB to boot your NuTyX, it's absolutly necessary to make a manipulation in a console and in <a href="faq#8">root</a>.
+     NuTyX'inizi başlatmak için GRUB'u kullanmaya karar verdiğinizde, konsolda <a href="faq#8">root</a> bir manipülasyon yapmak gerekir.
+    <p>
+     Aşağıdaki örnekte, NuTyX 3'üncü bölümüne yüklenmiştir ve çekirdek dosyasının adı kernel-4.9.16-NuTyX-lts:
+      <pre class="command"><kbd>cd /boot
+rm kernel-4.9.16-NuTyX-lts
+mv efi/EFI/BOOT/3/kernel.efi kernel-4.9.16-NuTyX-lts
+ln -svf kernel-4.9.16-NuTyX-lts kernel</kbd></pre>
+     <p>
+      Artık grub.cfg dosyanızı, GRUB'un NuTyX'inizin önyükleme işlemine dikkat etmesi için ayarlayabilirsiniz.
+   <h2>Giving the base commands a trial run-through.</h2>
+    <p>
+     I suggest that you read the section on <a href="finish-up">finalise your installation</a> so that you can install a graphical interface.
+     Grafiksel arabirim(Masaüstü) kurabilmeniz için yüklemenizi <a href="finish-up">sonlandırmanız</a> gereken bölümü okumanızı öneririm.
