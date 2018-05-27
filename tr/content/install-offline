@@ -1,0 +1,146 @@
+  <h1>NuTyX'in internet bağlantısı olmayan komut dosyası aracılığıyla kurulması</h1>
+
+   <h2>Giriş</h2>
+
+    <div class="note">
+     <img alt="[Note]" src="../graphics/note.gif" />
+      Bu makalede, hedef bölüm <b>/dev/sda4</b> olacaktır.
+    </div>
+    <div class="note">
+     <img alt="[Note]" src="../graphics/note.gif" />
+      Önyükleme prosedürü bu konuda açıklanmamıştır.
+      Bu, makinenin zaten bir önyükleme işlemine sahip olduğu anlamına gelir ve
+      sadece <b>/boot/grub/grub.cfg</b> dosyasını ayarlamanız yeterlidir
+      ve <u>NuTyX on /dev/sda4</u> adlı yeni bir giriş ekleyin.
+    </div>
+    <div class="note">
+     <img alt="[Note]" src="../graphics/note.gif" />
+      Bu yazıda, tüm komutlar yönetici(root) hesap üzerinden yapılır.
+    </div>
+    <div class="important">
+     <img alt="[Important]" src="../graphics/caution.gif" />
+     <img alt="[Important]" src="../graphics/caution.gif" />
+      Buradaki bilgilerin yanlış uygulanması nedeniyle olabilecek herhangi bir verinin kaybolmasından yazar sorumlu değildir.
+      Bu konu, uygun vasıflı ve gelişmiş bir hedef kitleye yöneliktir.
+    </div>
+    <p>
+    Nasıl devam edilir:
+     <ol>
+      <li>
+       Hedef bölümü bağla
+      <li>
+       Tüm ikili paketleri temel koleksiyondan al
+      <li>
+       Yükleme komut dosyasını yükleme sunucusundan indirin ve kontrol edin
+      <li>
+       <b>/etc/install-nutyx.conf.d/cards.conf</b> dosyasını yerine yerleştirin.
+      <li>
+       NuTyX'i kur
+      <li>
+       Grub'u yeni NuTyX'i kabul etmek için güncelleyin
+     </ol>
+
+   <h2>Hedef bölümü bağla</h2>
+
+    <p>
+     Bu makalede, hedef bölüm <b>/dev/sda4</b> olacaktır.
+     En az 15GB boyutunda, mevcut tüm grafik arayüzleri <b>xfce4, lxde, gnome, mate and kde5</b>'i kurmanıza izin verir ve
+     size sık kullanılan uygulamaların eklenmesine olanak tanır.
+    <p>
+     Komut dosyası çalışırken, bazı değişkenler kullanır. En önemlisi:
+    <pre class="output">LFS</pre>
+    <p>
+     Bu değişkeni, bu betiğin kullanabilmesi için yeniden tanımlayacağız:
+    <pre class="command"><kbd>export LFS=/mnt/NuTyX</kbd></pre>
+    <p>
+     Hedef bölümü biçimlendiriyoruz.
+     Seçeceğimiz dosya sistemi <b>ext4</b>.
+     Ext4 bize bir initrd kullanımını engelleme imkanı veriyor
+    <pre class="command"><kbd>mkfs.ext4 /dev/sda4</kbd></pre>
+    <p>
+     Biçimlendirilmiş bölümü, LFS değişkeninin tanımladığı klasöre yerleştiririz.
+    <pre class="command"><kbd>mkdir -p $LFS
+mount /dev/sda4 $LFS</kbd></pre>
+    <p>
+     Artık her şey NuTyX'in kurulumu için gerekli tüm ikili dosyaları almaya hazır.
+
+  <h2>Tüm ikili paketleri temel koleksiyondan al</h2>
+
+    <p>
+     Bu komutun <b>rsync</b>'ye ihtiyacı var.
+     Dağıtımınıza yüklendiğinden emin olun.
+    <p>
+     Bir önyüklenebilir temel NuTyX'in yalnızca <b>base</b> koleksiyonuna ihtiyacı vardır: doğru hedef dizine indirip yerleştirin:
+    <pre class="command"><kbd>mkdir -p $LFS/var/lib/pkg/depot
+rsync -av --delete rsync://downloads.nutyx.org/nutyx/`uname -m`/10.2/base/ \
+$LFS/var/lib/pkg/depot/base/</kbd></pre>
+     <p>
+      Bu komut tamamlandığında, kurulum komut dosyasını sunucudan indireceğiz.
+
+   <h2>Yükleme komut dosyasını yükleme sunucusundan indirin ve kontrol edin</h2>
+
+    <p>
+     We will use the command <b>wget</b> for the download.
+     İndirme için <b>wget</b>'i kullanacağız. Dağıtımınıza yüklediğinizden emin olun.
+    <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
+    <p>
+     Kullanmadan önce komut dosyasının bütünlüğünü kontrol edeceğiz.
+    <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
+    <pre class="output">install-nutyx: OK</pre>
+    <p>
+     Betiği doğru değişkenlerle başlatmadan önce, <b>/etc/install-nutyx.conf.d/cards.conf</b> dosyasını doğru yere koymamız gerekiyor.
+
+   <h2>/etc/install-nutyx.conf.d/cards.conf dosyasını yerine yerleştirin</h2>
+
+    <p>
+     <b>install-nutyx</b> betiği bazı dosyaların önyapılandırmasını kullanabilir.
+     Bu, <b>/etc/install-nutyx.conf.d/</b> dosyasında bu dosyalardan birini bulursa,
+     betik, kendi içindekiler yerine bulunanı kullanacağı anlamına gelir.
+     Daha sonra, <u>indirme URL'sini belirtmeden</u>,
+     kurulum <b>tabanı</b> için mevcut olan tek koleksiyondan bahsederek,
+     NuTyX'in <b>card.conf</b> dosyasını bir "offline" kurulum için uyarlayacağız.
+    <pre class="command"><kbd>mkdir -p /etc/install-nutyx.conf.d
+cat &gt; /etc/install-nutyx.conf.d/cards.conf  &lt;&lt; EOF
+dir /var/lib/pkg/depot/base
+base /var/lib/pkg/depot/base
+locale de
+EOF</kbd></pre>
+    <p>
+     Şimdi NuTyX kurulumuna başlamaya hazırız.
+
+   <h2>NuTyX kurulumu</h2>
+
+    <p>
+     Yukarıda bahsedildiği gibi devam ederseniz, yükleme indirilen komut dosyasıyla başlatılabilir:
+    <pre class="command"><kbd>bash install-nutyx</kbd></pre>
+    <p>
+     Kurulum <b>/mnt/NuTyX</b> klasörüne monte edilmiş <b>/dev/sda4</b> bölümünü kullanıyor.
+    <p>
+     Hiçbir indirme olmamalı
+    <pre class="output">....
+...
+..
+****************************************************
+      Installation of NuTyX 10.2 installed
+      in /mnt/NuTyX sucessfully
+****************************************************
+
+****************************************************
+* Thanks for installing NuTyX                      *
+*                                                  *
+* Check http://www.nutyx.org/en/documentation.html *
+* or http://www.nutyx.org/fr/documentation.html    *
+*                                                  *
+* Make sure you review /etc/cards.conf             *
+* to confirm your requirements in the packages     *
+* selection  						     *
+*                                                  *
+****************************************************</pre>
+
+   <h2>Grub'u yeni NuTyX'i kabul etmek için güncelleyin</h2>
+    <p>
+     Aşağıdaki girişi ekleyerek <b>/boot/grub/grub.cfg</b> yapılandırma dosyasını ayarlayın:
+    <pre class="output">menuentry "NuTyX x86_64 ext4 on /dev/sda4" {
+ set root=(hd0,4)
+ linux /boot/kernel root=/dev/sda4 ro quiet
+}</pre>
