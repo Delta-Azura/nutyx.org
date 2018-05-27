@@ -1,1 +1,63 @@
-../../en/content/why-contribute
+ <h1><span>Neden katkıda bulunmalısınız?</span></h1>
+<div class="introduction">
+  Bugün NuTyX'te ikili formda yaklaşık <a href="packages" title="Başka pencerede oku" class="external" onclick="window.open(this.href); return false;">1,700 uygulama</a> bulunmaktadır.
+  Bir anlamda, bu çok.
+  Ancak, her gün internette yeni programların pek çoğunun açık kaynak lisansları kapsamında yayınlandığını düşünürseniz, bu çok değil.
+ </div>
+ <p>
+  Tüm bu programları NuTyX'te kurulum için hazır göremeyeceksiniz.
+  Sadece  <a href="https://github.com/" onclick="window.open(this.href); return false;">github</a> web sitesini kullanarak, tüm platformlar için 52.000.000'den fazla depo bulabiliriz.
+ <p>
+  Rüyalarınızın uygulamasını bulursanız,
+  tüm bağımlılıkları bulmanız,
+  kendiniz derlemeniz,
+  kurmanız ve NuTyX üzerinde çalışmanız gerekir.
+  Bu yüzden sizden biraz katkıda bulunmanızı istiyoruz.
+  Tabii ki paketini yapacak olan sizsiniz.
+<p>Bir uygulama oluşturmak genellikle şöyle bir şeydir:</p>
+<ul>
+ <li>
+   NuTyX'te bulunmayan bir uygulama bulun.
+ <li>
+   Uygulamanın kaynak kodunu indirin.
+ <li>
+   MD5SUM'u kontrol edin (kesinlikle önerilir, ancak her zaman mümkün değildir).
+ <li>
+   Kaynakları çalışma dizinine çıkarın.
+ <li>
+   Bu çalışma dizinini girin.
+ <li>
+   Paketin tüm bağımlılıklarının NuTyX'te yüklü olduğunu kontrol edin.
+   (aksi takdirde inşaa başarılı olmaz)
+ <li>
+   Üç sihirli komutu yazın (çoğu durumda; istisnalar vardır):
+</ul>
+<pre class="output">./configure --prefix=/usr
+make
+make install</pre>
+<p>
+ &quot;make install&quot; adımı yönetici(root) olarak yapılmalıdır.
+<p>
+  Bu kadar! Yeni programınız NuTyX sisteminizede inşaa edilir ve kurulur.
+<p>
+  İzlenebilecek bir yol... ama görebildiğiniz gibi, birkaç dezavantaj var:
+<ul>
+ <li>
+   Hangi dosyaların kurulduğunu bilmiyorsunuz.
+ <li>
+   Yüklenen paketin adı, sürümü, açıklaması, vb. Gibi bilgileri kolayca elde edemezsiniz ...
+ <li>
+   Uygulamayı başka bir NuTyX yüklemesi ile paylaşamazsınız.
+ <li>
+   Bu yöntem sıkıcı çünkü bir güncelleme mevcut olduğunda tekrarlanması gerekiyor.
+ <li>
+   NuTyX sisteminiz artık gerçekten temiz değil, çünkü paket yöneticisi tarafından izlenmeyen dosyalar eklediniz.
+</ul>
+<p>
+  NuTyX, yeni programların entegrasyonu konusunda size yardımcı olacak güzel araçlara sahiptir.
+  Daha sonra onları takip edebilecek ve koruyabileceksiniz.
+  Paket yöneticisi bunları diğer NuTyX paketleri gibi ele alacaktır.
+<p>
+  I suggest you to have a look <a href="faq#4">at the FAQ</a> to get an idea about the compilation modus under NuTyX.
+<p>
+  Hazırsanız, sizi <a href="bash-basics">rehberi takip etmeye davet ediyorum.</a>
