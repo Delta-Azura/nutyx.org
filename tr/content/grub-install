@@ -1,1 +1,57 @@
-../../en/content/grub-install
+ <h1>GRUB'u ayarlama</h1>
+  <p>
+   Henüz GRUB yüklemediyseniz (yanlışlıkla veya kasıtlı olarak), çok geç değil. Göreceğiniz gibi GRUB'u ayrıyeten kurmak çok kolay.
+  <h2>GRUB'u kurabilmek için</h2>
+   <p>
+    NuTyX'in kurulu olması gerekli değildir; GRUB'u diğer dağıtımlara yükleyebilirsiniz.
+   <p>
+     PC'yi yeniden başlatın ve ISO'dan önyükleyin
+   <p>
+     <img src="graphics/grub-install/SelectLanguage.png" alt="Figure 1: Iso bootup" title="Figure 1: Iso bootup"/>
+   <p>
+     Ana menüye geldiğinizde, "Boot Configure the boot of the PC (optional)" gibi birşey olacak onu seçin:
+   <p>
+    <img src="graphics/grub-install/ConfigureBoot.png" alt="Figure 2: Boot Configure the boot of the PC" title="Figure 2: Boot Configure the boot of the PC"/>
+   <p>
+     Şimdi zamanı ...
+  <h2>Bölümü seçin</h2>
+   <p>
+    GRUB uygulamasının yükleneceği bölümü seçin.
+    Hedef bölümün, önyükleme yaptığınız diskte olması <i>gerekmediğini</i> lütfen unutmayın.
+    Başka bir disk seçme şansı veren bir menü görüntülenir.
+   <p>
+    <img src="graphics/grub-install/SelectPartitionForBoot.png" alt="Figure 3: Choose of the partition" title="Figure 3: Choose of the partition"/>
+  <h2>Grub is installed</h2>
+   <p>
+    Şimdi <span style="color: #00ff00;"><strong>grub.cfg</strong></span> dosyasını düzenlemenin zamanı geldi.
+   <p>
+    <img src="graphics/grub-install/ModifyGrubCfg.png" alt="Figure 4: Modify the configuration file" title="Figure 4: Modify the configuration file"/>
+   <div class="important"><img src="../graphics/caution.gif" alt="caution" />
+    Be aware of the syntax for addressing disks and partitions. It's a bit special.
+   </div>
+   <img src="../graphics/grub-install/DefaultGrubCfg.png" alt="Figure 5: Default configuration" title="Figure 5: Default configuration"/>
+   <p>
+    Grub 2.00 ile, ilk sabit disk <b>0</b> olarak adlandırılır ve ilk bölüm <b>1</b>'dir. Bu, aşağıdaki örnek anlamına gelir:
+   <pre class="output">set root=(hd0,5)</pre>
+   <p>
+    İlk sabit sürücüdeki(diskteki) beşinci bölümü(alanı) tanımlar.
+   <p>
+    Aşağıdaki örnekte, iki girişi görebiliriz: bunlardan biri NuTyX içindir.
+    İlk giriş <b>/dev/sda2</b> bölümünde bulunan NuTyX dağıtımını başlatır.
+    İkinci giriş <b>/dev/sda3</b> üzerinde bulunan Windows 10'u başlatır
+   <pre class="output"># Begin grub.cfg
+# By default boot the first menu entry.
+set default 0
+# Allow 5 seconds before booting the default.
+set timeout 5<br />set color_highlight=blue/white
+set color_normal=cyan/black<br />set gfxpayload=1024x768x16
+menuentry "NuTyX  xfs on /dev/sda2" {
+ set root=(hd0,2)
+ linux /boot/kernel root=/dev/sda2 ro quiet
+# initrd /boot/initrd
+}
+menuentry "Windows 10" {
+ set root=(hd0,3)
+ chainloader (hd0,3)+1
+}
+</pre>
