@@ -94,5 +94,4 @@ ln -svf kernel-4.9.16-NuTyX-lts kernel</kbd></pre>
       Artık grub.cfg dosyanızı, GRUB'un NuTyX'inizin önyükleme işlemine dikkat etmesi için ayarlayabilirsiniz.
    <h2>Giving the base commands a trial run-through.</h2>
     <p>
-     I suggest that you read the section on <a href="finish-up">finalise your installation</a> so that you can install a graphical interface.
      Grafiksel arabirim(Masaüstü) kurabilmeniz için yüklemenizi <a href="finish-up">sonlandırmanız</a> gereken bölümü okumanızı öneririm.

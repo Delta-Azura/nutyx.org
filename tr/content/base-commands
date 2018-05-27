@@ -1,7 +1,6 @@
 <h1>Temel komutlar...</h1>
  <h2>Bir şans ver</h2>
   <p>
-   To take full advantage of your newly installed NuTyX, here are the ESSENTIAL commmands that you will have to use every day.
    Yeni kurulan NuTyX'inizin tüm avantajlarından yararlanmak için, her gün kullanmanız gereken ZORUNLU komutlar var.
    Bu makalede, NuTyX'e özgü bazı önemli komutlar açıklanmaktadır. Onları öğrenmenizi kesinlikle öneririz.
   <p>
@@ -9,7 +8,6 @@
   Terminali normal arayüzünüz olarak kullanmanız gerekecektir.
   Henüz alışmamışsanız, bu büyük bir sorun değil; Yazmanız gereken komutları açıklayacağız
   <p>
-   Since NuTyX is a Linux operating system, it's important to respect the <a href="http://en.wikipedia.org/wiki/Case_sensitivity">case</a> when entering commands.
    NuTyX bir GNU/Linux işletim sistemi olduğundan, komutları girerken bu duruma saygı duymak önemlidir.
    Bir komuttaki tüm karakterler <a href="http://en.wikipedia.org/wiki/Case_sensitivity">küçük</a> harflerle yazılmıştır.
   <p>
@@ -88,4 +86,4 @@ cards</kbd></pre>
    <p>
     Daha fazla paket yüklemek ister misiniz? Veya neden kendi paketlerinizi kurmuyorsunuz?
    <p>
-    Burada tüm <a href="build-package">gerekli belgeleri</a> bulacaksınız.
+    Burada tüm <a href="build-package">gerekli belgeleri</a> bulabilirsiniz.

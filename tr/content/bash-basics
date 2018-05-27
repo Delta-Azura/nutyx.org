@@ -1,1 +1,107 @@
-../../en/content/bash-basics
+  <h1>Katkıda bulunmak için bilmeniz gerekenler nelerdir?</h1>
+   <p>
+   Bu projeye katkıda bulunmak için deneyimli bir programcı olmanıza gerek yok.
+   Bash betik dili hakkında temel bilgiler yeterlidir.
+   Eğer bash hakkında bir bilginiz yoksa,
+   bu makale çıldırmadan bir tarif oluşturmak için temel ilkeleri açıklayacaktır.
+   <p>
+    Bash dili bir tarifi düzenlemek ve ondan bir paket oluşturmak için kullanılır.
+    Bash'ın bir programlama dili olması, "nasıl programlanacağını bilmiyorum" diye düşünen bazı potansiyel kullanıcılara korkutucu gelebilir.
+    Korkmaman için üç neden var:
+   <ul>
+    <li>
+     Bash, derlenen değil, yorumlanan bir dildir,
+     yani klavyede yazdığınız (veya bir dosyadan okuduğunuz) komutların,
+     tam bir program oluşturmaya gerek kalmadan doğrudan yürütüldüğü anlamına gelir.
+    <li>
+     Bash'ın sözdizimi çok basit ve sezgiseldir.
+    <li>
+     Sonunda tarif ve ikili paketin yaratılması
+     nadiren bash dilinin daha karmaşık seçeneklerini kullanır.
+   </ul>
+   <p>
+    So let's start <img src="../graphics/smiley-wink.gif" alt="Göz kırpma" title="Göz kırpma" /> our little course on the bash programming
+    Bu yüzden küçük <img src="../graphics/smiley-wink.gif" alt="Göz kırpma" title="Göz kırpma" /> programımızı bash dilinde programlayarak başlayalım.
+   <p>
+    Bu makalede, bir tarifin sözdizimini kavramak için iyi bilinen dilin bazı temel özellikleri açıklanacaktır:
+  <h2>Değişken bildirmek</h2>
+   <p>
+    Bir değişken bildirmek için yapmanız gereken tek şey şudur:
+    <pre>name=mypackage</pre>
+   <p>
+    Değişken <strong><em>adını</em></strong>, eşittir işaretini kullanarak,
+    işaretin solundaki değişkenin adıyla ve sağ taraftaki <strong><em>mypackage</em></strong> değerini kullanarak bildirirsiniz.
+  <h2>Bir değişken kullanarak</h2>
+   <p>
+    Yani bir değişkeni nasıl beyan edeceğinizi biliyorsunuz; Bu çok güzel, ama kullanmak için içeriğine nasıl giriyorsunuz?
+   <p>
+    Bir değişkenin içeriğini ayıklamak için gerekirse dolar işaretini ($) parantez ile kullanırsınız. Her iki form geçerlidir:
+    <pre>${name}<br />$name</pre>
+   <p>
+    İlk formu kullanmak daha iyidir, aksi takdirde değişken adı bir alt çizgi içeriyorsa,
+    bash tarafından doğru şekilde yorumlanmayacaktır:
+    <pre>name=xorg-libx11<br />_name=libX11<br />$name        # this works
+${_name}     # so does this
+$_name       # wrongly interpreted and won't work</pre>
+   <p>
+    Bu komutun sonucunu görmek için, bu kodu içeren küçük bir dosya oluşturmanızı öneriyorum.
+    DeclareVar dosyasını çağırabilirsiniz.
+    <pre>name=kernel
+echo "The variable name contains the value: ${name}"</pre>
+   <p>
+    Şimdi şu komutu ver:
+    <pre class="command" ><kbd>sh DeclareVar</kbd></pre>
+    <pre class="output" >The variable name contains the value: kernel</pre>
+  <h2>Bir tarifte önceden tanımlanmış değişkenleri kullanma</h2>
+   <p>
+    Bir tarif oluşturduğunuzda, önceden tanımlanmış bir dizi değişkene erişebileceksiniz.
+    <div>
+     <strong>PKG</strong>: Kesinlikle en sık kullanılan, bu derlenmiş dosyaların hedef klasörü tanımlar.
+     Bu klasör daha sonra paketlenmeden önce dosya yapısını içerir.
+    </div>
+    <div>
+     <strong>SRC</strong>: Bu değişken, tüm kaynak dosyaların ayıklandığı klasörü tanımlar. Bu nedenle, alt klasörler arasında geçiş yapmanız ve başladığınız yere döngünün sonuna dönmeniz gerektiğinde çok kullanışlıdır.
+     Bu aynı zamanda tarifin ana işlevi için geçerli çalışma dizinini tanımlayan değişkendir.
+    </div>
+    <div>
+     <strong>MAKEFLAGS</strong>: Bu değişken çok sık kullanılmaz.
+     Pkgmk yapılandırma dosyasında başlatıldı. Kullanımı başka bir makalede detaylandırılmıştır.
+     Şu an için bilmeniz gereken tek şey, paralel derlemenin boyutunu belirlemenize izin vermesidir.
+    </div>
+    <div>
+     There are others, but personally I see no need for them when constructing recipes.
+     Diğerleri de var ama şahsen tarifleri yaparken onlara gerek görmüyorum.
+    </div>
+  <h2>Dizinin bildirilmesi</h2>
+   <p>
+    Bir dizi(string) dizeyi(array) (veya başka bir şey) bildirmek için, parantez eklersiniz:
+    <pre class="output">source=(firefox.png firefox.desktop)</pre>
+   <p>
+    Bu dizi <strong>kaynağı</strong> 2 değişken içerir: firefox.png ve firefox.desktop.
+    Çekirdek için tarifin kaynak dizisi, özellikle iyi bir örnek sağlar:
+    <pre>source=(http://www.kernel.org/pub/linux/kernel/v3.0/linux-${_BaseVersion}.tar.bz2 \
+	config_64 config \
+	http://www.kernel.org/pub/linux/kernel/v3.0/patch-$version.bz2 \
+	http://downloads.nutyx.org/files/patchs/$name/broadcom-wl-kernel3-01.patch \
+	http://downloads.nutyx.org/files/patchs/$name/3.2.8.patch \
+	http://downloads.nutyx.org/files/patchs/$name/3.4.patch \
+	http://downloads.nutyx.org/files/patchs/$name/makefile_compat.patch \
+	http://downloads.nutyx.org/files/patchs/$name/bc_wl_abiupdate.patch)</pre>
+   <p>
+    Her bir satır kendi başına bir değişkendir ve sözdizimi kullanılarak erişilebilir:
+    <pre>echo "$(source[1])"</pre>
+   <p>
+    Her değişkenin daha önce tanımlanmış olması koşuluyla diğer değişkenleri içerebileceğini fark edeceksiniz.
+  <h2>Bir işlevi bildirme</h2>
+   <p>
+    Bir işlevi ilan etmek neredeyse basittir.
+    İşlevin adını verirken parantez kullanırsınız; işlev kodu her zaman parantez içine alınır { v.b }.
+    Küçük bir örnek:
+    <pre class="output">build() {<br />cd $name-$version<br />./configure --prefix=/usr<br />make<br />make DESTDIR=$PKG install<br />}</pre>
+   <p>
+    As you can see, it's very pretty and also contains a minimal recipe (without the variable declarations).
+    Gördüğünüz gibi, çok güzel ve minimal bir tarif de içeriyor (değişken bildirimleri olmadan).
+    Burada <b>PKG</b> değişkeninin temel kullanımını görebilirsiniz.
+   <h2>Sonuç</h2>
+    <p>
+     Şimdi bir <a href="recept">tarif veya portun</a> ne olduğunu öğrenmeye hazırız.
