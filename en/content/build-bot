@@ -232,7 +232,7 @@ mkdir: created directory '/home/me/git/current'</pre>
     <h2>Get all the ports of the "$COLLECTION" from git location</h2>
      <p>
       We will synchronise the status of all the ports of the <b>$COLLECTION</b> for the compilation:
-      <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+      <pre class="command_user"><kbd>git clone -b $BRANCH http://git.nutyx.org/$PROJECT ~/git/$VERSION/$PROJECT</kbd></pre>
      <p>
        We now create all the folders needed for the script:
        <pre class="command_user"><kbd>sudo mkdir -pv \
