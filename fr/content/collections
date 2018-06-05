@@ -131,8 +131,8 @@
    </ul>
  <h2>Les differents groupes de collection</h2>
   <h3>A. La collection du système de base</h3>
-    Le système de base se trouve dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/base-sysV">https://github.com/NuTyX/base-sysV</a>
+    Le système de base se trouve dans un projet sur le site git.nutyx.org à l'adresse:
+   <a href="http://git.nutyx.org/base-sysv">http://git.nutyx.org/base-sysv</a>
    <p>
     La collection constituant la base du système est:
    <ul>
@@ -140,8 +140,8 @@
       base
    </ul>
   <h3>B. Les collections du coeur du système</h3>
-    Le coeur du système est regroupé dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/core">https://github.com/NuTyX/core</a>
+    Le coeur du système est regroupé dans un projet sur le site git.nutyx.org à l'adresse:
+   <a href="http://git.nutyx.org/core">http://git.nutyx.org/core</a>
    <p>
     Les collections constituant le coeur du système sont:
  <ul>
@@ -151,8 +151,8 @@
     gui
  </ul>
   <h3>C. Les collections extra</h3>
-   Les collections extra sont regroupées dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/extra">https://github.com/NuTyX/extra</a>
+   Les collections extra sont regroupées dans un projet sur le site git.nutyx.org à l'adresse:
+   <a href="http://git.nutyx.org/extra">http://git.nutyx.org/extra</a>
    <p>
     Les collections extra sont:
  <ul>
@@ -163,17 +163,17 @@
  </ul>
    
   <h3>D. Les collections des interfaces graphiques</h3>
-    Les collections des interfaces graphiques sont regroupées par projet sur le site github.com aux adresses:
+    Les collections des interfaces graphiques sont regroupées par projet sur le site git.nutyx.org aux adresses:
    <p>
-    <a href="https://github.com/NuTyX/mate">https://github.com/NuTyX/mate</a> pour mate.
+    <a href="http://git.nutyx.org/mate">http://git.nutyx.org/mate</a> pour mate.
    <p>
-    <a href="https://github.com/NuTyX/kde5">https://github.com/NuTyX/kde5</a> pour kde5.
+    <a href="http://git.nutyx.org/kde5">http://git.nutyx.org/kde5</a> pour kde5.
    <p>
-    <a href="https://github.com/NuTyX/xfce4">https://github.com/NuTyX/xfce4</a> pour xfce4.
+    <a href="http://git.nutyx.org/xfce4">http://git.nutyx.org/xfce4</a> pour xfce4.
    <p>
-    <a href="https://github.com/NuTyX/lxqt">https://github.com/NuTyX/lxqt</a> pour lxqt.
+    <a href="http://git.nutyx.org/lxqt">http://git.nutyx.org/lxqt</a> pour lxqt.
    <p>
-    <a href="https://github.com/NuTyX/lxde">https://github.com/NuTyX/lxde</a> pour lxde.
+    <a href="http://git.nutyx.org/lxde">http://git.nutyx.org/lxde</a> pour lxde.
    <p>
     Les collections des interfaces graphiques sont pour:
    <p>
@@ -218,8 +218,8 @@
      </ul>
 
   <h3>E. La collection Code Non Ouvert</h3>
-   La collection 'Code Non Ouvert' est dans un projet sur le site github.com à l'adresse:
-   <a href="https://github.com/NuTyX/nos">https://github.com/NuTyX/nos</a>
+   La collection 'Code Non Ouvert' est dans un projet sur le site git.nutyx.org à l'adresse:
+   <a href="http://git.nutyx.org/nos">http://git.nutyx.org/nos</a>
    <p>
    La collection proposée est:
    <ul>

@@ -233,7 +233,7 @@ mkdir: created directory '/home/moi/git/current'</pre>
      <h2>Récupération des ports de "$COLLECTION" depuis le projet git</h2>
       <p>
        On récupère les ports de la collection <b>$COLLECTION</b> pour la compilation:
-      <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+      <pre class="command_user"><kbd>git clone -b $BRANCH http://git.nutyx.org/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
       <p>
        On crée maintenant les dossiers nécessaires pour le script:
       <pre class="command_user"><kbd>sudo mkdir -pv \

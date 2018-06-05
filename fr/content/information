@@ -25,7 +25,7 @@
     L'équipe de NuTyX est composée de personnes bénévoles qui rendent ce projet viable.
     N'hésitez pas à leur poser des questions et leur faire part de vos remarques.
      <h3>Tnut</h3>
-      <b><a class="url" href="https://github.com/tnut?tab=activity">Tnut</a></b> créateur et fondateur de NuTyX supervise la totalité du projet avec l'aide des contributeurs.
+      <b>Tnut</b> créateur et fondateur de NuTyX supervise la totalité du projet avec l'aide des contributeurs.
       La gestion du site, les paquets de base, les paquets de xorg.
       L'assemblage de l'initrd (et de l'installateur) ainsi que le script d'installation.
       La gestion des bots build... Un peu tout ce qu'il reste à faire.
@@ -69,7 +69,7 @@
      </div>
     <p>
      <div>
-      <b><a class="url" href="https://github.com/sh4d0w31410?tab=activity">Sh4d0w</a></b> empaqueteur des collections enlightenment et enlightenment-extra et divers paquets dans les autres collections.
+      <b>Sh4d0w</b> empaqueteur des collections enlightenment et enlightenment-extra et divers paquets dans les autres collections.
      </div>
     <p>
      <div>
