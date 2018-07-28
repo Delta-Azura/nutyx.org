@@ -279,17 +279,6 @@ make DESTDIR=$PKG install
   <p>
    New packages can still be added.
  <li>
-  The "current" branch
-  <p>
-   The "base" is frozen; only security updates will be applied.
-  <p>
-   The "cli" and "gui" collections will receive updates in cases where they are dependencies that need to be updated for any final package. 
-	Security updates will be applied.
-  <p>
-   The other collections will get updates as normal.
-  <p>
-   The "current" branch stays compatible with the "stable" one; they will be both used for minor updates of NuTyX  (10.1, 10.2, etc).
- <li>
   The "development" (or "master") branch
   <p>
    It's the main line (master) of the GIT project for every available collection.
@@ -300,7 +289,7 @@ make DESTDIR=$PKG install
    In this case, merging into the "stable" branch is never possible.
   </ul>
 <p>
- The "stable" and "current" branches have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
+ The "stable" branch have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
 
 
     <a name='ID100'></a>

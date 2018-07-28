@@ -206,17 +206,6 @@ make DESTDIR=$PKG install
   <p>
    Des nouveaux paquets peuvent être ajoutés.
  <li>
-  La branche "current"
-  <p>
-   La collection "base" est gelée, seules les mises à jour de sécurité sont appliquées.
-  <p>
-   Les collections "cli" et "gui" reçoivent des mise à jour uniquement si ce sont des dépendances de paquets finaux qui le réclament.
-   Les mises à jour de sécurité sont appliquées.
-  <p>
-   Les autres collections reçoivent les mises à jour de façon continue.
-  <p>
-   La branche "current" reste compatible avec la branche "stable", elles sera utilisé pour chaque nouvelle version mineur de NuTyX (10.1, 10.2, etc) 
- <li>
   La branche "development" (ou "master")
   <p>
    C'est la ligne principale (master) du projet GIT des collections disponibles.
@@ -227,7 +216,7 @@ make DESTDIR=$PKG install
    Elle ne peut donc pas être jointe (merge) dans la branche stable de NuTyX
   </ul>
 <p>
- Les branches "stable" et "current" ont une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX à ce moment là.
+ La branche "stable" a une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX à ce moment là.
 
 
     <a name='ID100'></a>
