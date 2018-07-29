@@ -1,61 +1,85 @@
-<h1>Dernière nouvelle 17-05-2018</h1>
+<h1>Dernière nouvelle 28-07-2018</h1>
 
-<h2>NuTyX 10.2 disponible avec cards 2.4.81</h2>
+<h2>NuTyX 10.3 disponible avec cards 2.4.81</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 10.2.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 10.3.
 <p>
- NuTyX 10.2 propose le kernel lts 4.14.40 (4.9.99 en 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.6.5,
- xorg-server 1.19.6, qt 5.10.1, plasma 5.12.3 (en 64bits) , kf5 5.43.0 (en 64bits), gnome 3.26.1 (en 64bits), mate 1.20.0, xfce4 4.12.3, firefox 59.0.3 et beaucoup d'autres mise à jour.
+ NuTyX 10.3 propose le kernel lts 4.14.59 (4.9.114 en 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.7.0,
+ xorg-server 1.20.0, qt 5.11.1, plasma 5.12.6 LTS (en 64bits) , kf5 5.48.0 (en 64bits), gnome 3.28.1 (en 64bits), mate 1.20.1, xfce4 4.12.3, firefox 61.0.1 et beaucoup d'autres mise à jour.
 <p>
- Un deuxième kernel est proposé pour les utilisateurs souhaitant utiliser la toute dernière version 4.16.8
+ Un deuxième kernel est proposé pour les utilisateurs souhaitant utiliser la toute dernière version 4.17.11
 <p>
- Les utilisateur de la NuTyX 10.1. sont invités à mettre à jour.
+ Les utilisateurs de la NuTyX 10.2. sont invités à mettre à jour.
 <p>
- Une mise à jour peut se faire sans problèmes.
+ Avec le nouveau modèle de sortie de NuTyX (fixed et rolling release, voir ci-dessous), 
+ 5 nouvelles isos sont disponible en 64 et 32 bits.
+ Leur tailles varient entre 296 MB et 1.7G.
+ Elles sont disponibles sur <a href="downloads">la page de téléchargement </a>également réorganisée.
+<p>
+ La version 64 bits se décline en "Fixed" et "Rolling" releases sous forme d'ISO de base et ISO MATE.
+<p>
+ La version 32 bits se décline désormais en "Rolling" release sous forme d'une ISO de base.  
+<p>
+ Le gestionnaire de session lxdm sélectionne automatiquement la session
+ dans le cas où une seule session est installée.
+<p>
+ L'installation en mode EFI est améliorée, mais vu la complexité de celui-ci,
+ elle reste encore très expérimentale et limitée.
+<p>
+ Les interfaces graphiques disponibles sont (cad visibles depuis l'interface de connection lxdm):
+ bspwm, gnome, mate, kde5, enlightenment, fluxbox, flwm, i3, jwm, lumina, lxde, lxqt, ratpoison, openbox, wmfs, xfce4, etc.
+<p>
+ Cette mise à jour necessite une petite manipulation (voir ci-dessous).
+<p> 
  Il n'est donc pas necessaire de réinstaller votre NuTyX.
- Si la mise à jour automatique est active, elle se fera au prochain arrêt de la machine.
 
-<p>
- Six nouvelles isos sont disponible en 32 et 64 bits.
- Leur tailles sont respectivement 296 MB, 613 MB et 1.6G disponibles sur <a href="downloads">la nouvelle page de téléchargement.</a>
-<p>
- Un nouveau fond d'écran vous acceuille sur chaque ISO et sur votre NuTyX 10.2 installée depuis l'une des ISOs proposées.
-<p>
- Les problèmes de blocages et d'absence d'information lors du lancement d'une ISO sur les machines EFI sont maintenant résolus.
- Les utilisateurs qui le souhaitent devraient pouvoir utiliser des machines EFI plus récentes avec cette nouvelle version.
- 
-<p>
- Des langues supplémentaires comme l'arabe, l'hindi, le chinois et le japonais sont maintenant disponibles.
-<p>
- Les interfaces graphiques disponibles sont:
- kde5, gnome, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
+<h2>Mise à jour automatique déactivée</h2>
+La possibilitée de mettre à jour automatiquement votre NutyX est désormais déactivée.
 
-<h2>Mise à jour</h2>
+<h2>Les projets GIT</h2>
 <p>
- La mise à jour de votre NuTyX se fait en tapant:
- <pre class="command_user"><kbd>check</kbd></pre>
- Si la mise à jour automatique est activée il suffit de relancer votre machine, sinon, faîtes:
- <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
+ Les différent projets NuTyX (collections, cards et site web) ne sont plus disponibles sur la platforme github.
+<p>
+ <a href="http://git.nutyx.org">Une nouvelle adresse est désormais disponible</a>
  
-<h2>Liste des mises à jour principales de la NuTyX 10.2 par rapport à la version 10.1</h2>
+<h2>Renommage des modèles de sortie de NuTyX</h2>
+<p>
+ Pour mieux refleter le modèle de chaque branche, le nom de celle-ci a été modifié:
+<p>
+ NuTyX se décline désormais en deux modèles de sortie:
+<p>
+ "Fixed" Release et "Rolling" Release
  <ul>
   <li>
-    kernel lts 4.14.26 -> 4.14.40
+   La branche "stable" devient "fixed"
   <li>
-    kernel 4.16.8
+   La branche "development" devient "rolling"
   <li>
-   python 3.6.4  -> 3.6.5
+   La branche "current" est supprimée
+ </ul>  
+<h2>Liste des mises à jour principales de la NuTyX 10.3 par rapport à la version 10.2</h2>
+ <ul>
   <li>
-   firefox 57.0.4 -> 59.0.3
+    kernel lts 4.14.40 -> 4.14.59
   <li>
-   libreoffice 6.0.2.1 -> 6.0.3.2
+    kernel 4.16.8 -> 4.17.11
   <li>
-   kf5 5.43.0 -> 5.45.0
+   python 3.6.5  -> 3.7.0
   <li>
-   mate 1.20.0 -> mate 1.20.1
+   firefox 59.0.3 -> 61.0.1
+  <li>
+   chromium 64.0.3282.186 -> 68.0.3440.75 (compilé par l'équipe ArchLinux)
+  <li> 
+   libreoffice 6.0.3.2 -> 6.1.0.2
+  <li>
+   kde Applications 18.4.1 -> 18.4.3
+  <li>
+   kde framework 5.45.0 -> 5.48.0
+  <li>
+   kde plasma 5.12.5 -> 5.12.6 LTS
   </ul>
 <p>
- Le nombre de collections officielles est toujours 17 collections:
+ Le nombre de collections officielles est de 18 collections:
  <ul>
   <li>
     base
@@ -75,9 +99,23 @@
     lxqt, lxqt-extra
   <li>
     kde5, kde5-extra
+  <li>
+    nos
  </ul>
- <h2>L'organisation de l'équipe</h2>
-  L'équipe actuelle de NuTyX est très restreinte.
-  Les mises à jour se feront probablement à un rythme plus lent.
+
+ <h2>Mise à jour</h2>
+<p>
+ La mise à jour de votre NuTyX se fait en tapant:
+ <pre class="command_user"><kbd>check</kbd></pre>
+ <p>
+ Vous arrêtez le serveur graphique:
+ <pre class="command_user"><kbd>init 3</kbd></pre>
+ <p>
+ Vous pouvez désormais lancer la mise à jour:
+ <pre class="command_user"><kbd>del mesa
+sudo cards upgrade</kbd></pre> 
+ <p>
+  Vous pouvez relancer la machine une fois le processus terminé.
+
  <h2>Anciennes nouvelles</h2>
  Les anciennes nouvelles sont maintenant consultables <a href="old-news/?C=N;O=D">ici.</a>
