@@ -117,7 +117,7 @@
    <li>
     the url adress of the mirror where are the binaries located via the <b>URL</b> variable
    <li>
-    the version to installed (stable, current or development) define by the <b>VERSION</b> variable
+    the version to installed (fixed or rolling) define by the <b>VERSION</b> variable
    <l>
     the kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
    <li>
@@ -131,7 +131,7 @@
      <pre class="output">URL="http://localhost"
 DEPOT="/DEPOT"
 LFS="/mnt/lfs"
-VERSION="current"</pre>
+VERSION="rolling"</pre>
   <p>
    If you want to have your own configuration, it's possible to place your configuration files in the <b>/etc/install-nutyx.conf.d/</b> folder.
    When you run the script, if files are found there, they will be used instead of the default ones.
@@ -329,8 +329,8 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
        <p>
         By default, it will be the stable branch of the NuTyX installed; it's possible to specify another branch.
-        To install a NuTyX of the current branch, specify the name of the branch via the <i><b>VERSION</b></i> variable.
-        <pre class="command"><kbd>VERSION="current" sh install-nutyx</kbd></pre>
+        To install a NuTyX of the rolling branch, specify the name of the branch via the <i><b>VERSION</b></i> variable.
+        <pre class="command"><kbd>VERSION="rolling" sh install-nutyx</kbd></pre>
        <p>
         The default URL will be used for downloading and configuration of NuTyX.
         To instead specify another URL, use the  <i><b>URL</b></i> variable.
@@ -342,7 +342,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
        <p>
         You can combine several variables:
         <pre class="command"><kbd>LFS="/MINI-ISO" \
-VERSION="development" \
+VERSION="rolling" \
 URL="http://192.168.0.254" \
 ARCH="i686" \
 sh install-nutyx</kbd></pre>

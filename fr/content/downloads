@@ -120,7 +120,7 @@
      <li> 
        l'adresse url où se trouvent les binaires défini par la variable <b>URL</b>
      <li>
-       la version à installer (stable, current ou development) définie par la variable <b>VERSION</b>
+       la version à installer (fixed ou rolling) définie par la variable <b>VERSION</b>
      <li>
        le kernel que l'on souhaite installer (autre que celui par défaut) défini par la variable <b>KERNEL</b>
      <li>
@@ -134,7 +134,7 @@
      <pre class="output">URL="http://localhost"
 DEPOT="/DEPOT"
 LFS="/mnt/lfs"
-VERSION="current"</pre>
+VERSION="rolling"</pre>
   <p>
    Si vous souhaitez pousser la configuration, il est possible de placer des fichiers de configuration personnalisés dans le dossier <b>/etc/install-nutyx.conf.d/</b>.
    Lors de l'installation de NuTyX, le script utilisera les fichiers trouvés dans ce dossier en place des fichiers par défaut
@@ -333,8 +333,8 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
        <p>
         Par défaut, ce sera la branche stable qui sera choisie à l'installation, il est possible de spécifier la branche que l'on souhaite installer.
-        Pour installer une NuTyX de la branche current, on spécifie le nom de la branche via la variable <i><b>VERSION</b></i>
-        <pre class="command"><kbd>VERSION="current" sh install-nutyx</kbd></pre>
+        Pour installer une NuTyX de la branche rolling, on spécifie le nom de la branche via la variable <i><b>VERSION</b></i>
+        <pre class="command"><kbd>VERSION="rolling" sh install-nutyx</kbd></pre>
        <p>
         Par défaut, ce sera l'URL par défaut qui sera utilisée lors du téléchargement et la configuration de la NuTyX.
         Pour spécifier une URL personalisée, on utilise la variable <i><b>URL</b></i>
@@ -346,7 +346,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
        <p>
         On peut spécifier plusieurs variables:
         <pre class="command"><kbd>LFS="/MINI-ISO" \
-VERSION="development" \
+VERSION="rolling" \
 URL="http://192.168.0.254" \
 ARCH="i686" \
 sh install-nutyx</kbd></pre>
