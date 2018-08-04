@@ -46,20 +46,20 @@
       Une collection regroupe un jeu de <a href="#ID005">paquets</a> qui constitue un ensemble de fonctionnalités.
      <p>
       Losque vous installez le système de base depuis l'ISO MINI ou depuis le <a href="#ID050">script</a>,
-      vous installez la <a href="http://nutyx.org/fr/?branch=stable&arch=x86_64&searchpkg=base">collection base</a>.
+      vous installez la <a href="http://nutyx.org/fr/?branch=fixed&arch=x86_64&searchpkg=base">collection base</a>.
      <p>
-      Par exemple, la <a href="http://nutyx.org/fr/?branch=stable&arch=x86_64&searchpkg=gui">collection gui</a> permet d'avoir une inteface utilisateur graphique. 
+      Par exemple, la <a href="http://nutyx.org/fr/?branch=fixed&arch=x86_64&searchpkg=gui">collection gui</a> permet d'avoir une inteface utilisateur graphique. 
       Sur cette interface graphique, on choisira son gestionnaire de fenêtres favori.
      <p>
-      Sous NuTyX, il est possible d'installer les <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=kde5">collections kde5</a>,
-      <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=lxqt">lxqt</a>,
-      <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate">mate</a>
-      ou <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=xfce4">xfce4</a>.
+      Sous NuTyX, il est possible d'installer les <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=kde5">collections kde5</a>,
+      <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=lxqt">lxqt</a>,
+      <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate">mate</a>
+      ou <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=xfce4">xfce4</a>.
  
     <a name='ID006'></a>
     <h2>Une dépendance</h2>
      <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est nécessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
-     <p>Le <a href="#ID005">paquet</a> <i>qtbase</i> est une dépendance utilisée par de nombreux <a href="#ID005">paquets</a> de la <a href="./?branch=stable&arch=x86_64&searchpkg=kde5">collection kde5</a>
+     <p>Le <a href="#ID005">paquet</a> <i>qtbase</i> est une dépendance utilisée par de nombreux <a href="#ID005">paquets</a> de la <a href="./?branch=fixed&arch=x86_64&searchpkg=kde5">collection kde5</a>
 
     <a name='ID020'></a>
     <h2>Une famille</h2>
@@ -87,7 +87,7 @@
     <h2>Un groupe</h2>
      <p>
       Un groupe de paquets constitue un ensemble de paquets fournissant un usage précis,
-      par exemple le <a href="./?branch=stable&arch=x86_64&searchpkg=devel">groupe devel</a> fournira les outils nécessaires pour la compilation.
+      par exemple le <a href="./?branch=fixed&arch=x86_64&searchpkg=devel">groupe devel</a> fournira les outils nécessaires pour la compilation.
      <p>
       Le nom du groupe d'un paquet est déterminé par la partie du nom qui suit le point.
      <p>
@@ -97,9 +97,9 @@
      <p>
       La plupart des paquets sont répartis dans ces groupes.
      <p>
-      Les groupes actuels sont: <a href="./?branch=stable&arch=x86_64&searchpkg=devel">devel</a>, <a href="./?branch=stable&arch=x86_64&searchpkg=man">man</a>,
-      <a href="./?branch=stable&arch=x86_64&searchpkg=doc">doc</a>, lib et
-      <a href="./?branch=stable&arch=x86_64&searchpkg=service">service</a> ainsi que chaque locale disponible
+      Les groupes actuels sont: <a href="./?branch=fixed&arch=x86_64&searchpkg=devel">devel</a>, <a href="./?branch=fixed&arch=x86_64&searchpkg=man">man</a>,
+      <a href="./?branch=fixed&arch=x86_64&searchpkg=doc">doc</a>, lib et
+      <a href="./?branch=fixed&arch=x86_64&searchpkg=service">service</a> ainsi que chaque locale disponible
      <b>
       fr, de, da, it, pt, tr, ru, sv, nn, es, nl et fi</b>
 
@@ -200,23 +200,23 @@ make DESTDIR=$PKG install
     <h2>Les branches</h2>
  <ul>
  <li>
-  La branche "stable"
+  La branche "fixed"
   <p>
    C'est la version stable de NuTyX. Tous les paquets sont gelés au moment de sa sortie, seuls les mises à jour de sécurité sont appliquées.
   <p>
    Des nouveaux paquets peuvent être ajoutés.
  <li>
-  La branche "development" (ou "master")
+  La branche "rolling" (ou "master")
   <p>
    C'est la ligne principale (master) du projet GIT des collections disponibles.
   <p>
-   Le processus de mise à jour est en "rolling release" pendant toute la vie de la version stable et ses version mineures (approximativement un an).
+   Le processus de mise à jour se fait pendant toute la vie de la version "fixed" et ses version mineures (approximativement un an).
   <p>
-   Puisque les mises à jour sont toujours très importantes et constantes, la branche "development" est la plus part du temps incompatible avec la version stable de NuTyX.
-   Elle ne peut donc pas être jointe (merge) dans la branche stable de NuTyX
+   Puisque les mises à jour sont toujours très importantes et constantes, la branche "rolling" peut être incompatible avec la version "fixed" de NuTyX.
+   Elle ne peut donc pas être jointe (merge) dans la branche "fixed" de NuTyX
   </ul>
 <p>
- La branche "stable" a une "durée de vie limitée" équivalente à la durée de vie de la version stable de NuTyX à ce moment là.
+ La branche "fixed" a une "durée de vie limitée" qui correspond à la durée de vie de la version "fixed" de NuTyX à ce moment-là.
 
 
     <a name='ID100'></a>

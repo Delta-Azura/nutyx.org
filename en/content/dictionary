@@ -154,10 +154,10 @@
      <p>
       Most of available packages are split into such groups.
      <p>
-      Current groups include: <a href="./?branch=stable&arch=x86_64&searchpkg=devel">devel</a>,
-      <a href="./?branch=stable&arch=x86_64&searchpkg=man">man</a>,
-      <a href="./?branch=stable&arch=x86_64&searchpkg=doc">doc</a>,
-      lib and <a href="./?branch=stable&arch=x86_64&searchpkg=service">service</a>
+      Current groups include: <a href="./?branch=fixed&arch=x86_64&searchpkg=devel">devel</a>,
+      <a href="./?branch=fixed&arch=x86_64&searchpkg=man">man</a>,
+      <a href="./?branch=fixed&arch=x86_64&searchpkg=doc">doc</a>,
+      lib and <a href="./?branch=fixed&arch=x86_64&searchpkg=service">service</a>
       and each available locale <b>fr, de, da, it, pt, tr, ru, sv, nn, es, nl and fi</b>.
     <a name='ID030'></a>
     <h2>A category</h2>
@@ -273,7 +273,7 @@ make DESTDIR=$PKG install
     <h2>Branchs</h2>
 <ul>
  <li>
-  The "stable" branch
+  The "fixed" branch
   <p>
    This is the stable version of NuTyX. For this, every package is frozen at the time of it's release; only security updates will be applied.
   <p>
@@ -283,13 +283,13 @@ make DESTDIR=$PKG install
   <p>
    It's the main line (master) of the GIT project for every available collection.
   <p>
-   The update process is a "rolling release" mode during the entire life of the stable version and its minor versions (about one year).
+   The update process is a "rolling release" mode during the entire life of the fixed version and its minor versions (about one year).
   <p>
-   Since all updates are large and frequent, the  "development" branch is most often not compatible with the stable version of NuTyX.
-   In this case, merging into the "stable" branch is never possible.
+   Since all updates are large and frequent, the  "development" branch is most often not compatible with the fixed version of NuTyX.
+   In this case, merging into the "fixed" branch is never possible.
   </ul>
 <p>
- The "stable" branch have a "limited lifetime" corresponding to the lifetime of the stable version of NuTyX at that time. 
+ The "fixed" branch have a "limited lifetime" corresponding to the lifetime of the fixed version of NuTyX at that time. 
 
 
     <a name='ID100'></a>
