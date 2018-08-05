@@ -49,7 +49,7 @@
     </td>
     <td>
      lxdm <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate">mate</a>
-     <a href="./?type=col&branch=stable&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
+     <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
      zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
      <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=gstreamer-">gstreamer</a>
      system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
