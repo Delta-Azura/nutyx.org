@@ -3,7 +3,7 @@
   Make sure you have enough space on your hard disk. 8 GiB to 15 GiB should be enough.
  <h2>Download the latest version of NuTyX</h2>
   <p>
-   The current stable release of NuTyX is named <b>10.2</b>.
+   The current stable release of NuTyX is named <b>10.3</b>.
   <p>
    They are available in 32 bits and in 64 bits.
   <p>
@@ -35,7 +35,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.2.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.3.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
