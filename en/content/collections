@@ -131,7 +131,7 @@
  <h2>The groups of collection</h2>
   <h3>A. The base system collection</h3>
     The base system is located in a dedicated GIT project on the git.nutyx.org website:
-   <a href="http://git.nutyx.org/base-sysv">http://git.nutyx.org/base-sysv</a>
+   <a href="http://git.nutyx.org/cgit.cgi/base-sysv">http://git.nutyx.org/cgit.cgi/base-sysv</a>
    <p>
     The collection consisting of the base system is:
    <ul>
@@ -140,7 +140,7 @@
    </ul>
   <h3>B. The core system collections</h3>
     The core of the system is group in a GIT project on git.nutyx.org website:
-   <a href="http://git.nutyx.org/core">http://git.nutyx.org/core</a>
+   <a href="http://git.nutyx.org/cgit.cgi/core">http://git.nutyx.org/cgit.cgi/core</a>
    <p>
     The collections consisting of the core system are:
  <ul>
@@ -151,7 +151,7 @@
  </ul>
   <h3>C. The Extra collections</h3>
    The 'extra' collection is group in a GIT project on git.nutyx.org website:
-   <a href="http://git.nutyx.org/extra">http://git.nutyx.org/extra</a>
+   <a href="http://git.nutyx.org/cgit.cgi/extra">http://git.nutyx.org/cgit.cgi/extra</a>
    <p>
     The 'extra' collections are:
  <ul>
@@ -164,15 +164,15 @@
   <h3>D. The graphical interfaces collections</h3>
     The graphical intefaces collections are group per project on the git.nutyx.org website at the following adresses:
    <p>
-    <a href="http://git.nutyx.org/mate">http://git.nutyx.org/mate</a> for mate.
+    <a href="http://git.nutyx.org/cgit.cgi/mate">http://git.nutyx.org/cgit.cgi/mate</a> for mate.
    <p>
-    <a href="http://git.nutyx.org/kde5">http://git.nutyx.org/kde5</a> for kde5.
+    <a href="http://git.nutyx.org/cgit.cgi/kde5">http://git.nutyx.org/cgit.cgi/kde5</a> for kde5.
    <p>
-    <a href="http://git.nutyx.org/xfce4">http://git.nutyx.org/xfce4</a> for xfce4.
+    <a href="http://git.nutyx.org/cgit.cgi/xfce4">http://git.nutyx.org/cgit.cgi/xfce4</a> for xfce4.
    <p>
-    <a href="http://git.nutyx.org/lxqt">http://git.nutyx.org/lxqt</a> for lxqt.
+    <a href="http://git.nutyx.org/cgit.cgi/lxqt">http://git.nutyx.org/cgit.cgi/lxqt</a> for lxqt.
    <p>
-    <a href="http://git.nutyx.org/lxde">http://git.nutyx.org/lxde</a> for lxde.
+    <a href="http://git.nutyx.org/cgit.cgi/lxde">http://git.nutyx.org/cgit.cgi/lxde</a> for lxde.
    <p>
     The collections of thoses graphical interfaces are:
    <p>
@@ -218,7 +218,7 @@
 
   <h3>E. The Non Open Source collection</h3>
    The 'Non Open Source" collection is located on the git.nutyx.org website at the adress:
-   <a href="http://git.nutyx.org/nos">http://git.nutyx.org/nos</a>
+   <a href="http://git.nutyx.org/cgit.cgi/nos">http://git.nutyx.org/cgit.cgi/nos</a>
    <p>
     The collection is made of:
    <ul>
