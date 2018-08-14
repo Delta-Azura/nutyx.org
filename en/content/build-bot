@@ -41,7 +41,7 @@
 
      <h2>Version to use</h2>
       <p>
-       NuTyX packages are in 3 versions available.
+       NuTyX packages are in 2 versions available.
        Once you decide on which version you want to work, make a copy/paste of the last colomn variables.
        <table>
         <caption>
@@ -57,27 +57,19 @@
           Variables to use
         <tr class="even">
          <td>
-          stable
+          fixed
          <td>
-          stable
+          fixed
          <td>
-         <pre class="command_user"><kbd>VERSION=stable
-BRANCH=stable</kbd></pre>
+         <pre class="command_user"><kbd>VERSION=fixed
+BRANCH=fixed</kbd></pre>
          <tr class="odd">
           <td>
-           current
-          <td>
-           current
-          <td>
-           <pre class="command_user"><kbd>VERSION=current
-BRANCH=current</kbd></pre>
-         <tr class="even">
-          <td>
-           development
+           rolling
          <td>
            master
          <td>
-          <pre class="command_user"><kbd>VERSION=development
+          <pre class="command_user"><kbd>VERSION=rolling
 BRANCH=master</kbd></pre>
        </table>
 

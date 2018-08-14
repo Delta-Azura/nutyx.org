@@ -42,7 +42,7 @@
        <pre class="command_user"><kbd>ARCH=`uname -m`</kbd></pre>
      <h2>Choix de la version</h2>
       <p>
-       Les paquets de NuTyX sont disponibles dans 3 versions.
+       Les paquets de NuTyX sont disponibles dans 2 versions.
        Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
        <table>
         <caption>
@@ -58,27 +58,19 @@
           Variables à utiliser
         <tr class="even">
          <td>
-          stable
+          fixed
          <td>
-          stable
+          fixed
          <td>
-         <pre class="command_user"><kbd>VERSION=stable
-BRANCH=stable</kbd></pre>
+         <pre class="command_user"><kbd>VERSION=fixed
+BRANCH=fixed</kbd></pre>
          <tr class="odd">
           <td>
-           current
-          <td>
-           current
-          <td>
-           <pre class="command_user"><kbd>VERSION=current
-BRANCH=current</kbd></pre>
-         <tr class="even">
-          <td>
-           development
+           rolling
          <td>
            master
          <td>
-          <pre class="command_user"><kbd>VERSION=development
+          <pre class="command_user"><kbd>VERSION=rolling
 BRANCH=master</kbd></pre>
        </table>
       
