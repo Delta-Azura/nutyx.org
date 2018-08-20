@@ -6,7 +6,7 @@
   <h3>Assurez vous d'avoir installé les logiciels nécessaires</h3>
    <pre class="command"><kbd>cards install git cdrkit syslinux libisoburn grub-efi dosfstools</kbd></pre>
   <h3>Récupérer les outils</h3>
-   <pre class="command"><kbd>git clone http://git.nutyx.org/base-sysv</kbd></pre>
+   <pre class="command"><kbd>git clone git://git.tuxfamily.org/gitroot/nutyx/base-sysv</kbd></pre>
   <h3>La variable indispensable pour la construction sera utilisée tout au long du processus</h3>
    <p>
     La variable LFS DOIT être définie.
