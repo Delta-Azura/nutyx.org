@@ -218,7 +218,7 @@ RSYNC=(base cli gui nos)</kbd></pre>
        We can now create the user git folder with our own account:
       <pre class="command_user"><kbd>mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
      <pre class="output">mkdir: created directory '/home/me/git'
-mkdir: created directory '/home/me/git/current'</pre>
+mkdir: created directory '/home/me/git/rolling'</pre>
       
 
     <h2>Get all the ports of the "$COLLECTION" from git location</h2>

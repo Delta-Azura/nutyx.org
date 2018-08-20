@@ -220,7 +220,7 @@ RSYNC=(base cli gui nos)</kbd></pre>
        On peut maintenant créer le dossier necessaire, sous son propre compte:
       <pre class="command_user"><kbd> mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
       <pre class="output">mkdir: created directory '/home/moi/git'
-mkdir: created directory '/home/moi/git/current'</pre>
+mkdir: created directory '/home/moi/git/rolling'</pre>
 
      <h2>Récupération des ports de "$COLLECTION" depuis le projet git</h2>
       <p>
