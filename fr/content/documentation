@@ -127,7 +127,17 @@
      et installer votre propre noyau, suivez pas à pas cet article.
     </td>
    </tr>
-   </table>
+   <tr class="odd">
+    <td class="lien_article" >
+      <a class="url" href="generate-iso">Produire une ISO installable</a>
+    </td>
+    <td>
+     Il est possible de générer très facilement une ISO depuis une NuTyX installée dans un dossier. 
+     Cette ISO peut ensuite être réinstallée et servir de base de déploiement. Libre à vous d'ajouter 
+     tous les logiciels que vous souhaitez, y compris une interface graphique. Le minimum à ajouter est un kernel.
+    </td>
+   </tr>
+  </table>
  <h2>Guides du contributeur</h2>
   <table width="100%" cellspacing="0">
    <tr class="even">
