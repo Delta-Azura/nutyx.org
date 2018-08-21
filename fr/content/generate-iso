@@ -16,7 +16,7 @@
   <h3>Installer le système de base</h3>
    <pre class="command"><kbd>install-nutyx</kbd></pre>
   <h3>Copier les fichiers pour l'iso</h3>
-   <pre class="command"><kbd>cp -av base-sysV/iso $LFS/ISO</kbd></pre>
+   <pre class="command"><kbd>cp -av base-sysv/iso $LFS/ISO</kbd></pre>
  <h2>Génération de l'iso</h2>
   <h3>Entrer dans la chroot</h3>
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
@@ -47,7 +47,7 @@ done</kbd></pre>
   <h3>Quitter NuTyX chroot</h3>
    <pre class="command"><kbd>exit</kbd></pre>
   <h3>Générer l'ISO</h3>
-   <pre class="command"><kbd>bash base-sysV/scripts/mkiso</kbd></pre>
+   <pre class="command"><kbd>bash base-sysv/scripts/mkiso</kbd></pre>
  <h2>Conclusion</h2>
   <p>
    La taille de l'iso ne devrait pas dépasser 300 MB si vous n'avez rien ajouté de plus que les paquets ci-dessus.
