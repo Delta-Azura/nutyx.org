@@ -41,7 +41,7 @@ EOF</kbd></pre>
 umask 022
 LFS=$LFS
 LC_ALL=POSIX
-LFS_TARGET=$(uname -m)-lfs-linux-gnu
+LFS_TARGET=$(uname -m)-nutyx-linux-gnu
 PATH=/home/lfs/bin:/tools/bin:/bin:/usr/bin
 export LFS LC_ALL LFS_TARGET PATH" &gt; /home/lfs/.bashrc</kbd></pre>
     </ol>
@@ -52,7 +52,7 @@ export LFS LC_ALL LFS_TARGET PATH" &gt; /home/lfs/.bashrc</kbd></pre>
      <h2>Partie LFS:</h2>
       <p>A partir de maintenant vous tapez toutes les commandes en compte lfs</p>
       <p>On récupère la dernière version des sources sous git:</p>
-     <pre class="command_user"><kbd>git clone http://git.nutyx.org/base-sysv development</kbd></pre>
+     <pre class="command_user"><kbd>git clone git://git.tuxfamily.org/gitroot/nutyx/base-sysv development</kbd></pre>
     <p>Une fois terminé, un nouveau dossier a été créé: <b>development</b> On y entre 
     et on lance le premier script:</p>
     <pre class="command_user"><kbd>cd development
