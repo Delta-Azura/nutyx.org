@@ -1,0 +1,31 @@
+### What to do when new release of NuTyX is done:
+
+1. Rsync the depots of x86_64:
+
+rsync -av --delete .rolling/ .fixed/
+
+2. Makes the appropriates links:
+
+ln -svf .fixed <new_version> in x86_64
+ln -svf .rolling <new_version> in i686
+
+3. Make the ISOS
+
+4. Change the registration validation string on both forums 
+
+5. Replace  the <old_version> string to <new_version> string on nutyx.org website
+
+6. Make the news on both forums
+
+7. Make the news with following template:
+
+   7.1  NuTyX <new_version> disponible avec cards <version>
+   7.2  Liste des mises à jour principales
+   7.3  Procédure de mise à jour
+   7.4  Points spécifiques à cette version
+   7.4.1 ....
+   7.4.2 ...
+   7.4.n ..
+   7.5  Anciennes nouvelles
+
+8. adjust wikipedia version
