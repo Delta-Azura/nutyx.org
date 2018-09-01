@@ -1,31 +1,73 @@
 ### What to do when new release of NuTyX is done:
+1. The nutyx package
 
-1. Rsync the depots of x86_64:
+   1.1 commit the <new_version> archive for the nutyx package.
+   1.2 Build the <new_version> version of the nutyx package.
 
-rsync -av --delete .rolling/ .fixed/
+2. NuTyX Background
 
-2. Makes the appropriates links:
+   2.1 if major release updade, adjust background picture in glib, slim, lxdm and plasma-framework
+   2.2 Adjust the slim and lxdm background with the <new_version> string
 
-ln -svf .fixed <new_version> in x86_64
-ln -svf .rolling <new_version> in i686
+3. install-nutyx script
 
-3. Make the ISOS
+   3.1 Replace install-nutyx with the latest one for nutyx package on nutyx.org/install-nutyx
+   3.2 adjust the md5sum signature of the install-nutyx script in place
 
-4. Change the registration validation string on both forums 
 
-5. Replace  the <old_version> string to <new_version> string on nutyx.org website
+4. Rsync 
 
-6. Make the news on both forums
+  4.1 the depots of x86_64: rsync -av --delete .rolling/ .fixed/
 
-7. Make the news with following template:
+5. Links:
 
-   7.1  NuTyX <new_version> disponible avec cards <version>
-   7.2  Liste des mises à jour principales
-   7.3  Procédure de mise à jour
-   7.4  Points spécifiques à cette version
-   7.4.1 ....
-   7.4.2 ...
-   7.4.n ..
-   7.5  Anciennes nouvelles
+   5.1 ln -svf .fixed <new_version> in x86_64
+   5.2 ln -svf .rolling <new_version> in i686
 
-8. adjust wikipedia version
+6. NuTyX_<arch>_..._<new_version>.iso
+
+   6.1 the fixed BASE ISO in 64 bits
+   6.2 the rolling BASE ISO in 64 bits
+   6.2 the fixed MATE ISO in 64 bits
+   6.3 the rolling MATE ISO in 64 bits
+   6.4 the rolling BASE ISO in 32 bits
+
+7. forum.nutyx.org and forums.nutyx.org
+
+   7.1 Change the registration validation string on both forums
+   7.2 Adjust the news with the <new_version> iso link
+
+8. nutyx.org
+
+   8.1 Make the news in english and in french with following points
+
+        NuTyX <new_version> available with cards <version>
+
+        Main update packages list
+        Liste des mises à jour principales
+
+        Upgrade procedure
+        Procédure de mise à jour
+        Specifics to this version
+        Points spécifiques à cette version
+
+        Olds news
+        Anciennes nouvelles
+
+  8.2 Replace  the <old_version> string to <new_version> string on nutyx.org website on every concerned pages
+   8.3 Adjust the download page
+
+9. GIT:
+
+   9.1 Create new tags with <new_version> for base-sysv, core, extra, gnome, mate, lxde, kde5, xfce4
+   9.2 Delete existing branch fixed and create new ones at latest tags <new_version> for base-sysv, core, extra, gnome, mate, lxde, kde5, xfce4
+
+10. download.nutyx.org
+
+    10.1 adjust Package List on nutyx.org
+    10.2 Send everything on the download.nutyx.org mirror
+
+11  fr.wikipedia.org/wiki/NuTyX
+
+    11.1 adjust the <new_version> and date of the NuTyX
+    11.2 add news features if applicable
