@@ -29,12 +29,11 @@
       La gestion du site, les paquets de base, les paquets de xorg.
       L'assemblage de l'initrd (et de l'installateur) ainsi que le script d'installation.
       La gestion des bots build... Un peu tout ce qu'il reste à faire.
+    <h3>Remy</h3>
+      <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+       Empaqueteur des paquets du git gnome et des collections cli-extra et gui-extra.
      <h3>Artemia</h3>
       <b>Artemia</b> Dévelopeur de l'interface graphique <i>flcards</i>.
-     <h3>Jayce</h3>
-       <b>Jayce</b> empaqueteur de gnome.
-     <h3>Harold</h3>
-       <b>Harold</b> Traductions de l'installateur en diverses langues.
      <h3>Guth</h3>
       <b>Guth</b> est une personne très très discrête mais sans lui, le serveur downloads.nutyx.org n'existerait pas. Merci encore pour ton excellent support.
      <h3>Guy</h3>
@@ -56,8 +55,11 @@
       Le gestionnaire de paquets CARDS a été modifié en son hommage.
       Tous les paquets où il a participé gardent une trace de son passage. Un champs "contributeurs" a été ajouté dans les recettes.
     <div>
-   <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-       Empaqueteur des paquets du git gnome et des collections cli-extra et gui-extra.
+       <b>Jayce</b> empaqueteur de gnome.
+    </div>
+   <p>
+    <div>
+     <b>Harold</b> Traductions de l'installateur en diverses langues.
     </div>
    <p>
      <div>

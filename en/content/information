@@ -27,14 +27,12 @@
     <p>
       <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
 
-   <h3>Jayce</h3>
+   <h3>Remy</h3>
     <p>
-       <b>Jayce</b> Gnome collection packager.
+       <b>Remy</b> ISO creator in many different kinds,
+       all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+       Gnome, cli-extra, gui-extra collections Packager.
 
-   <h3>Harold</h3>
-    <p>
-       <b>Harold</b> Translation of the ISO installeur in many languages
- 
     <h3>Guth</h3>
     <p>
      <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
@@ -52,9 +50,10 @@
       He was a long time an active contributor, the CARDS package manager have been modify to never forget his name.
       A new attribute call "Contributors" has been added.
     <p>
-       <b>Remy</b> ISO creator in many different kinds, all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-        Gnome, cli-extra, gui-extra collections Packager.
-   <p>
+       <b>Jayce</b> Gnome collection packager.
+    <p>
+       <b>Harold</b> Translation of the ISO installeur in many languages
+    <p>
        <b>Hugo</b> Various packages packager.
     <p>
       <b>Sipo</b> packager for various packages, like the LXQt git packages. 
