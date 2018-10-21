@@ -28,9 +28,9 @@
 
    6.1 the fixed BASE ISO in 64 bits
    6.2 the rolling BASE ISO in 64 bits
-   6.2 the fixed MATE ISO in 64 bits
-   6.3 the rolling MATE ISO in 64 bits
-   6.4 the rolling BASE ISO in 32 bits
+   6.3 the fixed MATE ISO in 64 bits
+   6.4 the rolling MATE ISO in 64 bits
+   6.5 the rolling BASE ISO in 32 bits
 
 7. forum.nutyx.org and forums.nutyx.org
 
@@ -55,7 +55,7 @@
         Anciennes nouvelles
 
   8.2 Replace  the <old_version> string to <new_version> string on nutyx.org website on every concerned pages
-   8.3 Adjust the download page
+  8.3 Adjust the download page
 
 9. GIT:
 
@@ -71,3 +71,7 @@
 
     11.1 adjust the <new_version> and date of the NuTyX
     11.2 add news features if applicable
+
+12  Mailling List
+
+    12.1 Send the news to the nutyx.annonce@nutyx.org

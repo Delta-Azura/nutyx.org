@@ -1,109 +1,73 @@
-<h1>Dernière nouvelle 28-07-2018</h1>
+<h1>Dernière nouvelle 21-10-2018</h1>
 
-<h2>NuTyX 10.3 disponible avec cards 2.4.81</h2>
+<h2>NuTyX 10.4 disponible avec cards 2.4.81</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 10.3.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 10.4.
 <p>
- NuTyX 10.3 propose le kernel lts 4.14.59 (4.9.114 en 32bits), glibc 2.27, gcc 7.3.0, binutils 2.30, python 3.7.0,
- xorg-server 1.20.0, qt 5.11.1, plasma 5.12.6 LTS (en 64bits) , kf5 5.48.0 (en 64bits), gnome 3.28.1 (en 64bits), mate 1.20.1, xfce4 4.12.3, firefox 61.0.1 et beaucoup d'autres mise à jour.
+ NuTyX 10.4 propose le kernel lts 4.14.78 (4.9.114 en 32bits), glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.0,
+ xorg-server 1.20.1, qt 5.11.2, gtk 3.24.1, gimp 2.10.6,
+ plasma 5.12.6 LTS (en 64bits) , kf5 5.50.0 (en 64bits), mate 1.20.1, xfce4 4.12.3, firefox 62.0.3 et beaucoup d'autres mise à jour.
 <p>
- Un deuxième kernel est proposé pour les utilisateurs souhaitant utiliser la toute dernière version 4.17.11
+ Un deuxième kernel est proposé pour les utilisateurs souhaitant utiliser la toute dernière version 4.18.16
 <p>
- Les utilisateurs de la NuTyX 10.2. sont invités à mettre à jour.
+ Les utilisateurs de la NuTyX 10.3. sont invités à mettre à jour.
 <p>
  Avec le nouveau modèle de sortie de NuTyX (fixed et rolling release, voir ci-dessous), 
  5 nouvelles isos sont disponible en 64 et 32 bits.
- Leur tailles varient entre 296 MB et 1.7G.
- Elles sont disponibles sur <a href="downloads">la page de téléchargement </a>également réorganisée.
+ Leur tailles varient entre 296 MB et 1.24G.
+ Elles sont disponibles sur <a href="downloads">la page de téléchargement </a>.
 <p>
  La version 64 bits se décline en "Fixed" et "Rolling" releases sous forme d'ISO de base et ISO MATE.
 <p>
- La version 32 bits se décline désormais en "Rolling" release sous forme d'une ISO de base.  
+ La version 32 bits se décline uniquement en "Rolling" release sous forme d'une ISO de base.
+ Cette version est en fin de vie, seules les mise à jour critiques sont appliquées.
 <p>
- Le gestionnaire de session lxdm sélectionne automatiquement la session
- dans le cas où une seule session est installée.
-<p>
- L'installation en mode EFI est améliorée, mais vu la complexité de celui-ci,
+ L'installation en mode EFI est améliorée, le bug introduit dans la version 10.3 a été corrigé,
  elle reste encore très expérimentale et limitée.
 <p>
- Les interfaces graphiques disponibles sont (cad visibles depuis l'interface de connection lxdm):
- bspwm, gnome, mate, kde5, enlightenment, fluxbox, flwm, i3, jwm, lumina, lxde, lxqt, ratpoison, openbox, wmfs, xfce4, etc.
+ L'installateur propose désormais 2 modes d'installation: Le mode d'installation simple et le mode avancé.
 <p>
- Cette mise à jour necessite une petite manipulation (voir ci-dessous).
-<p> 
- Il n'est donc pas necessaire de réinstaller votre NuTyX.
-
-<h2>Mise à jour automatique déactivée</h2>
-La possibilitée de mettre à jour automatiquement votre NutyX est désormais déactivée.
-
+ Les interfaces graphiques disponibles sont (cad visibles depuis l'interface de connection lxdm):
+ bspwm, mate, kde5, enlightenment, fluxbox, flwm, i3, jwm, lumina, lxde, lxqt, ratpoison, openbox, wmfs, xfce4, etc.
+<p>
+ L'interface graphique GNOME ne fait plus partie des interfaces graphiques disponible sous NuTyX.
+ Systemd et la dernière version de GNOME (3.30) étant encore plus que jamais liés,
+ cela devient quasi impossible de proposer une interface graphique gnome fonctionnelle.
+<p>
+ A l'avenir, les applications gnome (qui ne dépendent pas de systemd) seront déplacées dans la collection gui-extra.
 <h2>Les projets GIT</h2>
 <p>
- Les différent projets NuTyX (collections, cards et site web) ne sont plus disponibles sur la platforme github.
-<p>
- <a href="http://git.nutyx.org">Une nouvelle adresse est désormais disponible</a>
+ <a href="https://git.tuxfamily.org/nutyx">Une nouvelle adresse est désormais disponible</a>
  
-<h2>Renommage des modèles de sortie de NuTyX</h2>
-<p>
- Pour mieux refleter le modèle de chaque branche, le nom de celle-ci a été modifié:
-<p>
- NuTyX se décline désormais en deux modèles de sortie:
-<p>
- "Fixed" Release et "Rolling" Release
+<h2> Le suivi des bogues </h2>
+ <p>
+  Le suivi des bogues est maintenant disponible à l'adresse <a href="https://bugs.nutyx.org/">https://bugs.nutyx.org/</a>
+ <p>
+  Vous pouvez signaler tout bogue sur la distribution, demander un nouveau paquet ou de nouvelles fonctionnalités sur le gestionnaire de paquets de CARDS.
+ <h2>Liste des mises à jour principales de la NuTyX 10.4 par rapport à la version 10.3</h2>
  <ul>
   <li>
-   La branche "stable" devient "fixed"
+    kernel lts 4.14.59 -> 4.14.78
   <li>
-   La branche "development" devient "rolling"
+    kernel 4.17.11 -> 4.18.16
   <li>
-   La branche "current" est supprimée
- </ul>  
-<h2>Liste des mises à jour principales de la NuTyX 10.3 par rapport à la version 10.2</h2>
- <ul>
+   firefox 61.0.1 -> 62.0.3
   <li>
-    kernel lts 4.14.40 -> 4.14.59
-  <li>
-    kernel 4.16.8 -> 4.17.11
-  <li>
-   python 3.6.5  -> 3.7.0
-  <li>
-   firefox 59.0.3 -> 61.0.1
-  <li>
-   chromium 64.0.3282.186 -> 68.0.3440.75 (compilé par l'équipe ArchLinux)
+   chromium 68.0.3440.75 -> 70.0.3538.67 (compiled by the ArchLinux Team)
   <li> 
-   libreoffice 6.0.3.2 -> 6.1.0.2
+   libreoffice 6.1.0.2 -> 6.1.2.1
   <li>
-   kde Applications 18.4.1 -> 18.4.3
+   kde Applications 18.4.3 -> 18.08.2
   <li>
-   kde framework 5.45.0 -> 5.48.0
+   kde framework 5.48.0 -> 5.50.0
   <li>
-   kde plasma 5.12.5 -> 5.12.6 LTS
+   kde plasma 5.12.6 LTS
   </ul>
-<p>
- Le nombre de collections officielles est de 18 collections:
- <ul>
-  <li>
-    base
-  <li>
-    cli, cli-extra
-  <li>
-    gui, gui-extra
-  <li>
-    xfce4, xfce4-extra
-  <li>
-    mate, mate-extra
-  <li>
-    gnome, gnome-extra
-  <li>
-    lxde, lxde-extra
-  <li>
-    lxqt, lxqt-extra
-  <li>
-    kde5, kde5-extra
-  <li>
-    nos
- </ul>
-
  <h2>Mise à jour</h2>
+<p> 
+ Il n'est donc pas necessaire de réinstaller votre NuTyX.
+<p>
+ Cette mise à jour necessite une petite manipulation (voir ci-dessous).
 <p>
  La mise à jour de votre NuTyX se fait en tapant:
  <pre class="command_user"><kbd>check</kbd></pre>
