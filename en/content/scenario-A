@@ -1,0 +1,68 @@
+<h1>Scenario A</h1>
+ <h2>Introduction</h2>
+  <p>
+   You do not want to compile anything on your NuTyX system.
+   However, if you want specific packages that are not included in the “<b>binary collection</b>”, you may need to reconsider your options.
+   This scenario works perfectly if you want to do multiple <b>NuTyX</b> installations, and prefer the system to automatically carry out the entire installation on your behalf.
+ <h2>The /etc/cards.conf file</h2>
+  Check that:
+   <ul>
+      <li>
+       All the binary collections are activated.
+      <li>
+       The architecture chosen for your machine is correct.
+      <li>
+       The correct language(s) for the machine have been selected.
+      <li>
+       The folder defining the base system was created.
+   </ul>
+    The contents of a typical <b>/etc/cards.conf</b> file:
+    <pre class="output">dir /var/lib/pkg/depot/nos|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/lxde-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/lxde|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/mate-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/mate|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/kde5-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/kde5|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/xfce4-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/xfce4|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/gui-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/gui|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/cli-extra|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+locale de
+base /var/lib/pkg/depot/base</pre>
+   <p>
+    Here the 14 standard binary collections
+    <b>base</b>,
+    <b>cli</b> and <b>cli-extra</b>,
+    <b>gui</b> and <b>gui-extra</b>, are activated,
+    together with <b>xfce4</b> and <b>xfce4-extra</b>,
+    <b>kde5</b> and <b>kde5-extra</b>,
+    <b>mate</b> and <b>mate-extra</b>,
+    <b>lxde</b> and <b>lxde-extra</b> and
+    <b>nos</b>.
+   <p>
+    The language chosen for the installation is German (<b>locale de</b>); for English, you can ignore this line, as English is the default.
+   <p>
+    The command <b>cards base -r</b> can be used at any time used to <b>return</b> to your base system.
+    Here the folders defined as containing the base packages are those corresponding to the standard <b>base</b> collection.
+    <pre class="output">base /var/lib/pkg/depot/base</pre>
+ <h2>The /etc/pkgmk.conf file</h2>
+  <p>
+   In <b>scenario A</b>, the <b>/etc/pkgmk.conf</b> file is present but since you are not going to compile anything, it will not be used.
+   Thus the development tools are not needed.
+ <h2>Conclusion</h2>
+  <p>
+   That's all you need to set up your NuTyX. To update your database and check for any available updates, use command:
+   <pre class="command"><kbd>check</kbd></pre>
+  <p>
+   Want to install a Internet browser package, use command:
+   <pre class="command"><kbd>get firefox</kbd></pre>
+  <p>
+   To delete a package:
+   <pre class="command"><kbd>del firefox</kbd></pre>
+  <p>
+   That's all there is to know <img src="../graphics/smiley-tongue-out.gif" alt="Tongue out" title="Tongue out" />.
+   I hope you'll get plenty of enjoyment using <b>NuTyX</b>.
