@@ -31,8 +31,12 @@
     <p>
        <b>Remy</b> ISO creator in many different kinds,
        all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-       Gnome, cli-extra, gui-extra collections Packager.
-
+       cli, gui, gnome, cli-extra, gui-extra collections Packager.
+    <p>
+   <h3>Hugo</h3>
+    <p>
+       <b>Hugo</b> Responsible for the bot server used for the development version of NuTyX.
+        Various packages packager.
     <h3>Guth</h3>
     <p>
      <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
@@ -53,8 +57,6 @@
        <b>Jayce</b> Gnome collection packager.
     <p>
        <b>Harold</b> Translation of the ISO installeur in many languages
-    <p>
-       <b>Hugo</b> Various packages packager.
     <p>
       <b>Sipo</b> packager for various packages, like the LXQt git packages. 
     <p>

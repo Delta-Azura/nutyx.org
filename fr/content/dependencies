@@ -1,0 +1,39 @@
+<h1>Les dépendances</h1>
+ <h2>Un paquet</h2>
+  <h3>C'est quoi</h3>
+  <h3>Quel sont les types de paquets</h3>
+   <h4>Le kernel et ses modules</h4>
+   <h4>Les applications</h4>
+    <h5>Application compilée</h5>
+    <h5>Application interpretée</h5>
+   <h4>Les bibliothèques</h4>
+   <h4>La documentation et pages de manuels</h4>
+   <h4>Les locales</h4>
+   <h4>Les entêtes de bibliothèques</h4>
+   <h4>Les services</h4>
+ <h2>Une bibliothèque</h2>
+  <h3>C'est quoi ?</h3>
+  <h3>Statique ou partagée</h3>
+   <h4>Statique</h4>
+   <h4>Partagée</h4>
+    <h5>Entre paquets</h5>
+    <h5>Appartenant à un paquet</h5>
+    <h5>La résolution des noms</h5>
+  <h3>Emplacement dans le système d'exploitation</h3>
+  <h3>Les multilib</h3>
+ <h2>Et Une dépendance alors ...</h2>
+  <h3>C'est quoi ?</h3>
+  <h3>Dépendance de fonctionnement</h3>
+  <h3>Dépendance de compilation</h3>
+  <h3>Les dépendances circulaires</h3>
+ <h2>Le nerd de la guerre d'une distribution</h2>
+ <h2>Avantages et Inconvégnients d'une dèpendance</h2>
+ <h2>Organisation des paquets sous NuTyX</h2>
+  <h3>Les collections</h3>
+   <h4>Organisation des collections</h4>
+   <h4>Responsabilité d'une collection</h4>
+   <h4>Visibilité d'une collection</h4>
+ <h2>CARDS et les dépendances</h2>
+  <h3>Dépendance de compilation</h3>
+  <h3>Dépendance de fonctionnement</h3>
+ <h2>En conclusion</h2>
