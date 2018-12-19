@@ -50,10 +50,13 @@ done</kbd></pre>
    <pre class="command"><kbd>get ...</kb></pre>
 
   <h3>Flush the binary archives</h3>
-            <pre class="command"><kbd>cards purge</kbd></pre>
+   <pre class="command"><kbd>cards purge</kbd></pre>
+
+  <h3>Remove the /etc/resolv.conf file</h3>
+   <pre class="command"><kbd>rm /etc/resolv.conf</kbd></pre>
 
   <h3>Generate the squashfs files </h3>
-            <pre class="command"><kbd>for dir in opt bin etc lib lib64 root run sbin usr var home
+   <pre class="command"><kbd>for dir in opt bin etc lib lib64 root run sbin usr var home
 do
   [ -f /ISO/boot/$dir.squashfs ] && rm /ISO/boot/$dir.squashfs
   mksquashfs /$dir /ISO/boot/$dir.squashfs

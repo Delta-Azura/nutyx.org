@@ -38,6 +38,8 @@ done</kbd></pre>
    <pre class="command"><kbd>get ...</kb></pre>
   <h3>Supprimer les archives des binaires</h3>
    <pre class="command"><kbd>cards purge</kbd></pre>
+  <h3>Supprimer le fichier /etc/resolv.conf</h3>
+   <pre class="command"><kbd>rm /etc/resolv.conf</kbd></pre>
   <h3>Générer les fichiers squashfs</h3>
    <pre class="command"><kbd>for dir in opt bin etc lib lib64 root run sbin usr var home
 do
