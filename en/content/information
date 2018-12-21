@@ -10,11 +10,31 @@
     <h3>The Installer (MINI iso)</h3>
     <p>
      The installer is built from scratch by The Founder Thierry Nuttens and is licensed under the GPL <a class="url" href="http://www.gnu.org/copyleft/gpl.html" target="_blank" title="Lire dans une autre fenÃªtre">http://www.gnu.org/copyleft/gpl.html</a></p>
-    <h2>The Team</h2>
-    <p>
+  <h2>The Team</h2>
+   <p>
      We have a team of commendable and dedicated people who spend much of their free time keeping this project alive.
      You are welcome to contact them with any questions. They will be pleased to give you answers.</p>
-    <h3>Tnut</h3>
+   <h3>Remy</h3>
+    <p>
+       <b>Remy</b> ISO creator in many different kinds,
+       all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+       cli, gui, gnome, cli-extra, gui-extra collections Packager.
+    <p>
+   <h3>Artemia</h3>
+    <p>
+      <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
+   <h3>Hugo</h3>
+    <p>
+       <b>Hugo</b> Responsible for the bot server used for the development version of NuTyX.
+        Various packages packager.
+   <h3>Guth</h3>
+    <p>
+     <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
+     We in the team are indebted to his awesome work. Thanks again Guth for your excellent and continued support.
+   <h3>Guy</h3>
+     <p>
+      <b>Guy</b> He gives us very important and valuable advice.
+   <h3>Tnut</h3>
     <p>
      <b>Tnut</b> is the Founder of NuTyX.
      He oversees the entire project with the help of many respected contributors. 
@@ -22,28 +42,6 @@
      building the required base and Xorg packages,
      assembling the initrd and the installation script,
      managing the compiler servers and so on.
-
-   <h3>Artemia</h3>
-    <p>
-      <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
-
-   <h3>Remy</h3>
-    <p>
-       <b>Remy</b> ISO creator in many different kinds,
-       all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-       cli, gui, gnome, cli-extra, gui-extra collections Packager.
-    <p>
-   <h3>Hugo</h3>
-    <p>
-       <b>Hugo</b> Responsible for the bot server used for the development version of NuTyX.
-        Various packages packager.
-    <h3>Guth</h3>
-    <p>
-     <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
-     We in the team are indebted to his awesome work. Thanks again Guth for your excellent and continued support.
-   <h3>Guy</h3>
-     <p>
-      <b>Guy</b> He gives us very important and valuable advice.
   <h2>NuTyX Honorary List of Former Contributors</h2>
    <p>
      Thanks again to all of you who previously supported NuTyX in various genres.

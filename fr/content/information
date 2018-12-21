@@ -24,27 +24,26 @@
    <p>
     L'équipe de NuTyX est composée de personnes bénévoles qui rendent ce projet viable.
     N'hésitez pas à leur poser des questions et leur faire part de vos remarques.
-     <h3>Tnut</h3>
-      <b>Tnut</b> créateur et fondateur de NuTyX supervise la totalité du projet avec l'aide des contributeurs.
-      La gestion du site, les paquets de base, les paquets de xorg.
-      L'assemblage de l'initrd (et de l'installateur) ainsi que le script d'installation.
-      La gestion des bots build... Un peu tout ce qu'il reste à faire.
     <h3>Remy</h3>
       <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
        Empaqueteur de nombreux paquets des git core, extra, gnome et extra.
-     <h3>Artemia</h3>
+    <h3>Artemia</h3>
       <b>Artemia</b> Dévelopeur de l'interface graphique <i>flcards</i>.
     <h3>Hugo</h3>
        <b>Hugo</b> Empaqueteur de divers paquets.
 	Gère le serveur de compilation de tests pour la NuTyX de dévelopement.
      </div>
-     <h3>Guth</h3>
+    <h3>Guth</h3>
       <b>Guth</b> est une personne très très discrête mais sans lui, le serveur downloads.nutyx.org n'existerait pas. Merci encore pour ton excellent support.
-     <h3>Guy</h3>
+    <h3>Guy</h3>
       <p>
        Il suit de très près la distribution et donne des avis motivés et de qualité.
        Guy a également participé au projet depuis très longtemps en nous signalant régulièrement des petits bugs.
-
+    <h3>Tnut</h3>
+      <b>Tnut</b> créateur et fondateur de NuTyX supervise la totalité du projet avec l'aide des contributeurs.
+      La gestion du site, les paquets de base, les paquets de xorg.
+      L'assemblage de l'initrd (et de l'installateur) ainsi que le script d'installation.
+      La gestion des bots build... Un peu tout ce qu'il reste à faire.
   <h2>Anciens contributeurs</h2>
    <div>
     Merci pour toutes les personnes qui ont contribué de près ou de loin.
