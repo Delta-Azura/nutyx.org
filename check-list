@@ -39,7 +39,9 @@
 
 8. nutyx.org
 
-   8.1 Make the news in english and in french with following points
+   8.1 Copy existing <lang>/contents/news to <lang>/old-news/<Year-Mounth-Day>.html
+
+   8.2 Make the news in english and in french with following points
 
         NuTyX <new_version> available with cards <version>
 
@@ -54,8 +56,8 @@
         Olds news
         Anciennes nouvelles
 
-  8.2 Replace  the <old_version> string to <new_version> string on nutyx.org website on every concerned pages
-  8.3 Adjust the download page
+  8.3 Replace  the <old_version> string to <new_version> string on nutyx.org website on every concerned pages
+  8.4 Adjust the download page
 
 9. GIT:
 
