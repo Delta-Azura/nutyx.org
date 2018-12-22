@@ -1,39 +1,31 @@
-<h1>Latest news 2018-10-21</h1>
+<h1>Latest news 2018-12-21</h1>
 
-<h2>NuTyX 10.4 available with cards 2.4.81</h2>
+<h2>NuTyX 10.5 available with cards 2.4.84</h2>
 <p>
- I'm very please to annonce the new NuTyX 10.4 release.
+ I'm very please to annonce the new NuTyX 10.5 release.
 <p>
- NuTyX 10.4 comes with kernel lts 4.14.78 (4.9.114 in 32bits), glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.0,
- xorg-server 1.20.1, qt 5.11.2, gtk 3.24.1, gimp 2.10.6,
- plasma 5.12.6 LTS (in 64bits) , kf5 5.50.0 (in 64bits), mate 1.20.1, xfce4 4.12.3, firefox 62.0.3, etc....
+ NuTyX 10.5 comes with kernel lts 4.14.89, glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.1,
+ xorg-server 1.20.3, qt 5.11.3, gtk 3.24.1, gimp 2.10.8,
+ plasma 5.12.6 LTS, kf5 5.53.0, mate 1.20.3, xfce4 4.12.3, firefox 64.0, etc....
 <p>
- A second kernel is proposed for people who want to use the very last version of the kernel 4.17.11
+ A second kernel is proposed for people who want to use the very last version of the kernel 4.19.11
 <p>
- NuTyX 10.3 user's are invited to upgrade.
+ NuTyX 10.4 user's are invited to upgrade.
 <p>
- With the model release of NuTyX (fixed and rolling release, see below),
- five news ISOs are available in 64 bits and 32 bits.
- Sizes are from  296 MB up to 1.24G.
+ 4 news ISOs are available in 64 bits and 32 bits.
+ Sizes are from  315 MB up to 1.29G.
  They are available on the <a href="downloads">download page.</a>
 <p>
  The 64 bits is available in "Fixed" and "Rolling" releases as a base and a MATE ISO.
 <p>
- The 32 bits is now only available in "Rolling" release and as a base ISO.
- This version is EOL means only critical issues are applied.
-<p>
- The EFI installation have been improved, but it's still experimental and limited.
-<p>
  The installer has been spit in two installation modes: Simple and Advanced installation mode.
 <p>
  Available graphical interfaces are:
- kde5, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
+ kde5, mate, xfce4, lxde, flwm, gnome, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
 <p>
-  The GNOME GUI is no longer part of the graphical interfaces available under NuTyX.
-  Systemd and the latest version of GNOME (3.30) are more than ever linked,
-  it becomes almost impossible to propose a functional gnome graphical interface.
- <p>
-  In the future, gnome applications (which do not depend on systemd) will be moved to the gui-extra collection. 
+ Gnome applications (which do not depend on systemd) are moved to the gui-extra collection. 
+<p>
+ A new virtualbox-guest package is now available to give the possibility to easily test NuTyX in a virtual environment under virtualbox. 
 <h2>The GIT projects</h2>
  <p>
   <a href="https://git.tuxfamily.org/nutyx">A new adress is now available</a>
@@ -42,23 +34,24 @@
   The bug tracker is now available at <a href="https://bugs.nutyx.org/">https://bugs.nutyx.org/</a>
  <p>
   You can report any bug on the distribution, request for new package or new features on the CARDS package manager.
-  
-<h2>Main Updated Packages List of NuTyX 10.4 compared to the 10.3</h2>
+ <p>
+  You can now follow the roadmap of the coming NuTyX 11. 
+<h2>Main Updated Packages List of NuTyX 10.5 compared to the 10.4</h2>
  <ul>
   <li>
-    kernel lts 4.14.59 -> 4.14.78
+    kernel lts 4.14.78 -> 4.14.89
   <li>
-    kernel 4.17.11 -> 4.18.16
+    kernel 4.18.16 -> 4.19.11
   <li>
-   firefox 61.0.1 -> 62.0.3
+   firefox 62.0.3 -> 64.0
   <li>
-   chromium 68.0.3440.75 -> 70.0.3538.67 (compiled by the ArchLinux Team)
+   chromium 70.0.3538.67  (compiled by the ArchLinux Team)
   <li> 
-   libreoffice 6.1.0.2 -> 6.1.2.1
+   libreoffice 6.1.2.1
   <li>
-   kde Applications 18.4.3 -> 18.08.2
+   kde Applications 18.08.2 -> 18.12.0
   <li>
-   kde framework 5.48.0 -> 5.50.0
+   kde framework 5.50.0 -> 5.53.0
   <li>
    kde plasma 5.12.6 LTS
   </ul>

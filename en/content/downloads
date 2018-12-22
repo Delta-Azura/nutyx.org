@@ -1,6 +1,6 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>10.4</b>.
+   The current stable release of NuTyX is named <b>10.5</b>.
   <p>
    ISO images are available in "Fixed" and "Rolling" releases.
   <p>
@@ -28,7 +28,7 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.4.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.5.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
      <p>
       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20181021.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
@@ -75,7 +75,7 @@
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.4.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.5.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20181021.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
@@ -358,7 +358,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.4.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.5.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
