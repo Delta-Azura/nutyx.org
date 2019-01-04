@@ -63,6 +63,23 @@
      gparted xorg-setxkbmap ntp ntp.service
      <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=xorg-xf86-">pilotes xorg</a>
     </td>
+   <tr class="even">
+    <td class="lien_article">
+       <a class="url" href="http://downloads.nutyx.org/Miyo-Rolling_x86_64-20181230.iso"><img src="../graphics/downloads/miyolinux.png" alt="logo mate"/>Rolling</a>
+    </td>
+    <td>
+       Installation en mode BIOS ou EFI possible.
+     <p>
+      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/Openbox">Openbox</a> personalisée comme interface graphique par défaut.
+     <p>
+      L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
+     <p>
+      Prenez le temps de lire la 'Releases Notes' qui se trouve sur le bureau dans l'ISO ou
+      sur <a class="url" href="http://downloads.nutyx.org/Miyo-20181230-Release-Notes"/>http://downloads.nutyx.org/Miyo-20181230-Release-Notes</a>.
+    </td>
+    <td>
+      Environ 718 MO
+    </td>
    </tr>
   </table>
  <h2>Pour l'utilisateur régulier</h2>
