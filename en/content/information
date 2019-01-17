@@ -14,12 +14,14 @@
    <p>
      We have a team of commendable and dedicated people who spend much of their free time keeping this project alive.
      You are welcome to contact them with any questions. They will be pleased to give you answers.</p>
+   <h3>Sipo</h3>
+    <p>
+      <b>Sipo</b> packager for various packages, like the LXQt git packages. 
    <h3>Remy</h3>
     <p>
        <b>Remy</b> ISO creator in many different kinds,
        all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
        cli, gui, gnome, cli-extra, gui-extra collections Packager.
-    <p>
    <h3>Artemia</h3>
     <p>
       <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
@@ -55,8 +57,6 @@
        <b>Jayce</b> Gnome collection packager.
     <p>
        <b>Harold</b> Translation of the ISO installeur in many languages
-    <p>
-      <b>Sipo</b> packager for various packages, like the LXQt git packages. 
     <p>
      <b>Sh4dOw</b> packager of the enlightenment and enlightenment-extra collections.
     <p>

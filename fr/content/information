@@ -24,6 +24,8 @@
    <p>
     L'équipe de NuTyX est composée de personnes bénévoles qui rendent ce projet viable.
     N'hésitez pas à leur poser des questions et leur faire part de vos remarques.
+    <h3>Sipo</h3>
+      <b>Sipo</b> empaqueteur de divers paquets dans diverses collections.
     <h3>Remy</h3>
       <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
        Empaqueteur de nombreux paquets des git core, extra, gnome et extra.
@@ -65,10 +67,6 @@
      <b>Harold</b> Traductions de l'installateur en diverses langues.
     </div>
    <p>
-     <div>
-      <b>Sipo</b> empaqueteur de divers paquets dans diverses collections.
-     </div>
-    <p>
      <div>
       <b>Sh4d0w</b> empaqueteur des collections enlightenment et enlightenment-extra et divers paquets dans les autres collections.
      </div>
