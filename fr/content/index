@@ -74,7 +74,7 @@
      <br>
      <br>
      <li>
-      L'installateur ne FORMATTERA JAMAIS de son propre gré une partition cible pour l'installation de NuTyX.
+      L'installateur ne FORMATERA JAMAIS de son propre gré une partition cible pour l'installation de NuTyX.
       Cela signifie que NuTyX peut être installée sur une partition contenant (par exemple) ses données personnelles, 
       des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes)
      <br>
