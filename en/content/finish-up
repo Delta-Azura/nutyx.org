@@ -58,7 +58,7 @@
         <td>
          lxde
         <td>
-         <pre class="command_user"><kbd>get lxde</kbd></pre>
+         <pre class="command_user"><kbd>get lxde lxde-extra</kbd></pre>
        <tr class="odd">
         <td>
          openbox
