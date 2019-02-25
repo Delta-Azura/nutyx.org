@@ -1,6 +1,6 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>10.5</b>.
+   The current stable release of NuTyX is named <b>10.6</b>.
   <p>
    ISO images are available in "Fixed" and "Rolling" releases.
   <p>
@@ -28,9 +28,9 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.5.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.6.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
      <p>
-      <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20181221.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+      <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20190225.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
        Installation in BIOS or EFI modus is possible.
@@ -60,6 +60,7 @@
      ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
      gparted xorg-setxkbmap ntp ntp.service
      <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=xorg-xf86-">xorg drivers</a>
+     virtualbox-guest
     </td>
    </tr>
    <tr class="even">
@@ -93,9 +94,9 @@
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.5.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20181221.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20190225.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
         <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20180728.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
@@ -376,7 +377,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.5.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.6.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>

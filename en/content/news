@@ -1,16 +1,19 @@
-<h1>Latest news 2018-12-21</h1>
+<h1>Latest news 2019-02-25</h1>
 
-<h2>NuTyX 10.5 available with cards 2.4.84</h2>
+<h2>NuTyX 10.6 available with cards 2.4.94</h2>
 <p>
- I'm very please to annonce the new NuTyX 10.5 release.
+ I'm very please to annonce the new NuTyX 10.6 release.
 <p>
- NuTyX 10.5 comes with kernel lts 4.14.89, glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.1,
- xorg-server 1.20.3, qt 5.11.3, gtk 3.24.1, gimp 2.10.8,
- plasma 5.12.6 LTS, kf5 5.53.0, mate 1.20.3, xfce4 4.12.3, firefox 64.0, etc....
+ This is a maintenance release until the version 11 of NuTyX is available.
 <p>
- A second kernel is proposed for people who want to use the very last version of the kernel 4.19.11
+ NuTyX 10.6 comes with kernel lts 4.14.103, glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.1,
+ xorg-server 1.20.3, qt 5.11.3, gtk 3.24.5, gimp 2.10.8,
+ plasma 5.12.6 LTS, kf5 5.53.0, mate 1.20.3, xfce4 4.12.3, firefox 65.0.1, etc....
+
 <p>
- NuTyX 10.4 user's are invited to upgrade.
+ A second kernel is proposed for people who want to use the very last version of the kernel 4.19.25
+<p>
+ NuTyX 10.5 user's are invited to upgrade.
 <p>
  4 news ISOs are available in 64 bits and 32 bits.
  Sizes are from  315 MB up to 1.29G.
@@ -23,35 +26,26 @@
  Available graphical interfaces are:
  kde5, mate, xfce4, lxde, flwm, gnome, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
 <p>
- Gnome applications (which do not depend on systemd) are moved to the gui-extra collection. 
-<p>
- A new virtualbox-guest package is now available to give the possibility to easily test NuTyX in a virtual environment under virtualbox. 
-<h2>The GIT projects</h2>
+ The virtualbox-guest package is now include in the MATE ISOS to give the possibility to easily test NuTyX in a virtual environment under virtualbox. 
+<h2>CARDS</h2>
  <p>
-  <a href="https://git.tuxfamily.org/nutyx">A new adress is now available</a>
-<h2>The Bug tracker</h2>
- <p>
-  The bug tracker is now available at <a href="https://bugs.nutyx.org/">https://bugs.nutyx.org/</a>
- <p>
-  You can report any bug on the distribution, request for new package or new features on the CARDS package manager.
- <p>
-  You can now follow the roadmap of the coming NuTyX 11. 
-<h2>Main Updated Packages List of NuTyX 10.5 compared to the 10.4</h2>
+  CARDS is now able to track orphelin packages and take care of them... by removing them automaticaly :)
+<h2>Main Updated Packages List of NuTyX 10.6</h2>
  <ul>
   <li>
-    kernel lts 4.14.78 -> 4.14.89
+    kernel lts 4.14.103
   <li>
-    kernel 4.18.16 -> 4.19.11
+    kernel 4.19.25
   <li>
-   firefox 62.0.3 -> 64.0
+   firefox 65.0.1
   <li>
-   chromium 70.0.3538.67  (compiled by the ArchLinux Team)
+   thunderbird 60.5.1
   <li> 
    libreoffice 6.1.2.1
   <li>
-   kde Applications 18.08.2 -> 18.12.0
+   kde Applications 18.12.0
   <li>
-   kde framework 5.50.0 -> 5.53.0
+   kde framework 5.53.0
   <li>
    kde plasma 5.12.6 LTS
   </ul>
@@ -63,13 +57,8 @@
 <p>
  To initiate the upgrade process, just type:
  <pre class="command_user"><kbd>check</kbd></pre>
-<p>
-  You stop the graphical server:
- <pre class="command_user"><kbd>init 3</kbd></pre>
-<p>  
- You just need to do:
- <pre class="command_user"><kbd>del mesa
-sudo cards upgrade</kbd></pre> 
+ and
+ <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre> 
  <p>
   You can reboot when upgrade is done
 

@@ -68,9 +68,17 @@ BRANCH=fixed</kbd></pre>
           <td>
            rolling
          <td>
-           master
+           rolling
          <td>
           <pre class="command_user"><kbd>VERSION=rolling
+BRANCH=rolling</kbd></pre>
+         <tr class="even">
+          <td>
+           development
+         <td>
+           master
+         <td>
+          <pre class="command_user"><kbd>VERSION=development
 BRANCH=master</kbd></pre>
        </table>
       
@@ -95,9 +103,9 @@ BRANCH=master</kbd></pre>
         <td>
          base
         <td>
-         base-sysv
+         core
         <td>
-         <pre class="command_user"><kbd>PROJECT=base-sysv
+         <pre class="command_user"><kbd>PROJECT=core
 COLLECTION=base
 RSYNC=(base)</kbd></pre>
 
@@ -125,9 +133,9 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          cli-extra
         <td>
-         extra
+         core
         <td>
-         <pre class="command_user"><kbd>PROJECT=extra
+         <pre class="command_user"><kbd>PROJECT=core
 COLLECTION=cli-extra
 RSYNC=(base cli)</kbd></pre>
 
@@ -135,9 +143,9 @@ RSYNC=(base cli)</kbd></pre>
         <td>
          gui-extra
         <td>
-         extra
+         core
         <td>
-         <pre class="command_user"><kbd>PROJECT=extra
+         <pre class="command_user"><kbd>PROJECT=core
 COLLECTION=gui-extra
 RSYNC=(base cli gui)</kbd></pre>
 
@@ -145,9 +153,9 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          mate et mate-extra
         <td>
-         mate
+         core
         <td>
-         <pre class="command_user"><kbd>PROJECT=mate
+         <pre class="command_user"><kbd>PROJECT=core
 COLLECTION=mate
 RSYNC=(base cli gui mate mate-extra)</kbd></pre>
 
@@ -155,9 +163,9 @@ RSYNC=(base cli gui mate mate-extra)</kbd></pre>
         <td>
          lxde et lxde-extra
         <td>
-         lxde
+         core
         <td>
-         <pre class="command_user"><kbd>PROJECT=lxde
+         <pre class="command_user"><kbd>PROJECT=core
 COLLECTION=lxde
 RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
 
@@ -165,9 +173,9 @@ RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
         <td>
          xfce4 et xfce4-extra
         <td>
-         xfce4
+         core
         <td>
-         <pre class="command_user"><kbd>PROJECT=xfce4
+         <pre class="command_user"><kbd>PROJECT=core
 COLLECTION=xfce4
 RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
 
@@ -175,9 +183,9 @@ RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
         <td>
          lxqt et lxqt-extra
         <td>
-         lxqt
+         extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=lxqt
+         <pre class="command_user"><kbd>PROJECT=extra
 COLLECTION=lxqt
 RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
 
@@ -185,9 +193,9 @@ RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
         <td>
          kde5 et kde5-extra
         <td>
-         kde5
+         extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=kde5
+         <pre class="command_user"><kbd>PROJECT=extra
 COLLECTION=kde5
 RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
