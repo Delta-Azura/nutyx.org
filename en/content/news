@@ -1,67 +1,51 @@
-<h1>Latest news 2019-02-25</h1>
+<h1>Latest news 2019-03-05</h1>
 
-<h2>NuTyX 10.6 available with cards 2.4.94</h2>
+<h2>NuTyX 11 RC1 available with cards 2.4.94</h2>
 <p>
- I'm very please to annonce the new NuTyX 10.6 release.
+ I'm very please to announce the new NuTyX 11 RC1 release means the 10.97 version.
 <p>
- This is a maintenance release until the version 11 of NuTyX is available.
+ The NuTyX 11 RC1 is a complete recompilation of all the available binaries on NuTyX.
 <p>
- NuTyX 10.6 comes with kernel lts 4.14.103, glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.1,
- xorg-server 1.20.3, qt 5.11.3, gtk 3.24.5, gimp 2.10.8,
- plasma 5.12.6 LTS, kf5 5.53.0, mate 1.20.3, xfce4 4.12.3, firefox 65.0.1, etc....
-
+ Since everything has been recompiled, most of the packages have been update as well.
 <p>
- A second kernel is proposed for people who want to use the very last version of the kernel 4.19.25
+ The base of NuTyX comes with the new kernel LTS 4.19.26 and the very new kernel 5.0.
 <p>
- NuTyX 10.5 user's are invited to upgrade.
+ The toolchain is completely rebuild around glibc 2.29, gcc 8.3.0 and binutils 2.32.
 <p>
- 4 news ISOs are available in 64 bits and 32 bits.
- Sizes are from  315 MB up to 1.29G.
- They are available on the <a href="downloads">download page.</a>
+ The graphical server is now in xorg-server 1.20.3, the mesa lib in 18.3.4, gtk3 3.24.3, qt 5.12.1.
 <p>
- The 64 bits is available in "Fixed" and "Rolling" releases as a base and a MATE ISO.
+ The python 3.7.2 and 2.7.16 are updated as well
+<p>
+ The MATE Desktop Environment comes in 1.22 the very last version as well.
+<p>
+ The KDE Desktop plasma in 5.15.2, Framework in 5.55.0 and applications in 18.12.0
+<p>
+ Browsers firefox in 65.0.2 and chromium in  72.0.3626.121 (build by the archlinux team)
+<p>
+ Many desktop applications have been updated as well like thunderbird 60.5.1, Scribus 1.5.5, libreoffice 6.2.0.3, gimp 2.10.8, etc.
+<p>
+ 1 new MATE Desktop 1.22 ISO is available with various applications.
+ It's size is 1.9 Gbyte.
+ Available on: <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso</a>
+<p>
+ check agains following signature:
+<p>
+ <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum</a>
 <p>
  The installer has been spit in two installation modes: Simple and Advanced installation mode.
 <p>
  Available graphical interfaces are:
- kde5, mate, xfce4, lxde, flwm, gnome, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
+ kde5, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
 <p>
  The virtualbox-guest package is now include in the MATE ISOS to give the possibility to easily test NuTyX in a virtual environment under virtualbox. 
 <h2>CARDS</h2>
  <p>
   CARDS is now able to track orphelin packages and take care of them... by removing them automaticaly :)
-<h2>Main Updated Packages List of NuTyX 10.6</h2>
- <ul>
-  <li>
-    kernel lts 4.14.103
-  <li>
-    kernel 4.19.25
-  <li>
-   firefox 65.0.1
-  <li>
-   thunderbird 60.5.1
-  <li> 
-   libreoffice 6.1.2.1
-  <li>
-   kde Applications 18.12.0
-  <li>
-   kde framework 5.53.0
-  <li>
-   kde plasma 5.12.6 LTS
-  </ul>
 <h2>Upgrade process</h2>
 <p>
- It's no need to reinstall your NuTyX. 
+ Since this is a major release, an update is not recommanded.
 <p>
- This upgrade can be done after doing a small manipulation (see below).
-<p>
- To initiate the upgrade process, just type:
- <pre class="command_user"><kbd>check</kbd></pre>
- and
- <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre> 
- <p>
-  You can reboot when upgrade is done
-
+ The best way to test this new version it's by remove your existing one and install the new one, possible from this ISO. Your personnal data files won't be touched
 <h2>Old news</h2>
  Old news are now available <a href="old-news/?C=N;O=D">here</a>.
 

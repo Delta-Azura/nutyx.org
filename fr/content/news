@@ -1,65 +1,48 @@
-<h1>Dernière nouvelle 25-02-2019</h1>
+<h1>Dernière nouvelle 05-03-2019</h1>
 
-<h2>NuTyX 10.6 disponible avec cards 2.4.94</h2>
+<h2>NuTyX 11 RC1 disponible avec cards 2.4.94</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 10.6.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11 RC1 cad la version 10.97.
 <p>
- C'est une version de maintenance en attendant que la version 11.0 de NuTyX soit disponible.
+ La NuTyX 11 RC1 est une recompilation complète de tous les binaires disponible sur NuTyX
 <p>
- La NuTyX 10.6 propose le kernel lts 4.14.103, glibc 2.28, gcc 8.2.0, binutils 2.30, python 3.7.1,
- xorg-server 1.20.3, qt 5.11.3, gtk 3.24.5, gimp 2.10.8,
- plasma 5.12.6 LTS , kf5 5.53.0, mate 1.20.3, xfce4 4.12.3, firefox 65.0.1 et beaucoup d'autres mise à jour.
+ La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.26 et le tout nouveau kernel 5.0.
 <p>
- Un deuxième kernel est proposé pour les utilisateurs souhaitant utiliser la toute dernière version 4.19.25
+ La chaîne de compilation est complètement reconstruite auout de la glibc 2.29, gcc 8.3.0 et binutils 2.32.
 <p>
- Les utilisateurs de la NuTyX 10.5. sont invités à mettre à jour.
+ Le serveur graphique xorg-server version 1.20.3, la librairie Mesa 3D en 18.3.4, gtk3 3.24.3 et qt 5.12.1 sont également dans leurs dernières versions
 <p>
- 4 nouvelles isos sont disponible en 64 bits.
- Leurs tailles varient entre 315 MB et 1.29G.
- Elles sont disponibles sur <a href="downloads">la page de téléchargement </a>.
+ Les interpreteurs python sont ent 3.7.2 et 2.7.16.
 <p>
- La version 64 bits se décline en "Fixed" et "Rolling" releases sous forme d'ISO de base et ISO MATE.
+ L'environnement de bureau MATE est également mis à jour en version 1.22, dernière version disponible.
+<p>
+ L'environnement de bureau KDE est disponible en Plasma 5.15.2, Framework 5.55.0 et les applications en 18.12.00
+<p>
+ Les navigateurs disponibles sont entre autre:  firefox 65.0.2 et chromium 72.0.3626.121 (compilé par l'équipe de ArchLinux)
+<p>
+ De nombreuses applications on été mise à jour également comme thunderbird 60.5.1, Scribus 1.5.5, libreoffice 6.2.0.3, gimp 2.10.8, etc.
+<p>
+ 1 nouvelle ISO MATE 1.22 est disponible avec diverses applications.
+ Sa taille est de 1.9 Goctets.
+ Elle est disponible sur <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso</a>
+<p>
+ la signature:
+<p>
+ <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum</a>
 <p>
  L'installateur propose désormais 2 modes d'installation: Le mode d'installation simple et le mode avancé.
 <p>
  Les interfaces graphiques disponibles sont (cad visibles depuis l'interface de connection lxdm):
- bspwm, mate, kde5, enlightenment, fluxbox, gnome, flwm, i3, jwm, lumina, lxde, lxqt, ratpoison, openbox, wmfs, xfce4, etc.
+ bspwm, mate, kde5, enlightenment, fluxbox, flwm, i3, jwm, lumina, lxde, lxqt, ratpoison, openbox, wmfs, xfce4, etc.
 <p>
  Le paquet virtualbox-guest est désormais intégré dans les ISOS MATE pour faciliter les tests de NuTyX dans un environement virtuel sous virtualbox.
 <h2>CARDS</h2>
 <p>
  CARDS gère désormais les paquets orphelins, ce qui signifie qu'ils sont supprimés de façon automatique :) .
- <h2>Liste des mises à jour principales de la NuTyX 10.6</h2>
- <ul>
-  <li>
-    kernel lts 4.14.103
-  <li>
-    kernel 4.19.25
-  <li>
-   firefox 65.0.1
-  <li>
-   thunderbird 60.5.1
-  <li> 
-   libreoffice 6.1.2.1
-  <li>
-   kde Applications 18.12.0
-  <li>
-   kde framework 5.53.0
-  <li>
-   kde plasma 5.12.6 LTS
-  </ul>
  <h2>Mise à jour</h2>
 <p> 
- Il n'est donc pas necessaire de réinstaller votre NuTyX.
+ La NuTyX 11 RC1 est en effet une mise à jour majeur de la NuTyX, une mise à jour n'est pas recommandée.
 <p>
- Cette mise à jour necessite une petite manipulation (voir ci-dessous).
-<p>
- La mise à jour de votre NuTyX se fait en tapant:
- <pre class="command_user"><kbd>check</kbd></pre>
- et
- <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre> 
- <p>
-  Vous pouvez relancer la machine une fois le processus terminé.
-
- <h2>Anciennes nouvelles</h2>
+ La manière la plus simple de tester cette nouvelle version c'est de soit effacer votre NuTyX et installé la nouvelle, possible depuis l'ISO. Vos données personnelles ne seront pas touchées.
+<h2>Anciennes nouvelles</h2>
  Les anciennes nouvelles sont maintenant consultables <a href="old-news/?C=N;O=D">ici.</a>
