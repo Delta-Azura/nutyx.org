@@ -1,47 +1,45 @@
-<h1>Dernière nouvelle 05-03-2019</h1>
+<h1>Dernière nouvelle 12-03-2019</h1>
 
-<h2>NuTyX 11 RC1 disponible avec cards 2.4.94</h2>
+<h2>NuTyX 11 RC2 disponible avec cards 2.4.95</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11 RC1 cad la version 10.97.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11 RC2 cad la version 10.98.
 <p>
- La NuTyX 11 RC1 est une recompilation complète de tous les binaires disponible sur NuTyX
+ La NuTyX 11 RC2 est une recompilation complète de tous les binaires disponible sur NuTyX
 <p>
- La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.26 et le tout nouveau kernel 5.0.
+ La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.28 et le tout nouveau kernel 5.0.1.
 <p>
  La chaîne de compilation est complètement reconstruite auout de la glibc 2.29, gcc 8.3.0 et binutils 2.32.
 <p>
- Le serveur graphique xorg-server version 1.20.3, la librairie Mesa 3D en 18.3.4, gtk3 3.24.3 et qt 5.12.1 sont également dans leurs dernières versions
+ Le serveur graphique xorg-server version 1.20.4, la librairie Mesa 3D en 18.3.4, gtk3 3.24.3 et qt 5.12.1 sont également dans leurs dernières versions
 <p>
- Les interpreteurs python sont ent 3.7.2 et 2.7.16.
+ Les interpreteurs python sont ent 3.7.2 et 2.7.17.
 <p>
  L'environnement de bureau MATE est également mis à jour en version 1.22, dernière version disponible.
 <p>
- L'environnement de bureau KDE est disponible en Plasma 5.15.2, Framework 5.55.0 et les applications en 18.12.00
+ L'environnement de bureau KDE est disponible en Plasma 5.15.2, Framework 5.56.0 et les applications en 18.12.3
 <p>
  Les navigateurs disponibles sont entre autre:  firefox 65.0.2 et chromium 72.0.3626.121 (compilé par l'équipe de ArchLinux)
 <p>
  De nombreuses applications on été mise à jour également comme thunderbird 60.5.1, Scribus 1.5.5, libreoffice 6.2.0.3, gimp 2.10.8, etc.
 <p>
- 1 nouvelle ISO MATE 1.22 est disponible avec diverses applications.
- Sa taille est de 1.9 Goctets.
- Elle est disponible sur <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso</a>
+ 1 nouvelle ISO BASE est disponible avec diverses applications.
+ Sa taille est de 314 Moctets.
+ Elle est disponible sur <a href="http://downloads.nutyx.org/NuTyX_x86_64-10.98.iso">http://downloads.nutyx.org/NuTyX_x86_64-10.98.iso</a>
 <p>
  la signature:
 <p>
- <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum</a>
+ <a href="http://downloads.nutyx.org/NuTyX_x86_64-10.98.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-10.98.sha256sum</a>
 <p>
  L'installateur propose désormais 2 modes d'installation: Le mode d'installation simple et le mode avancé.
 <p>
  Les interfaces graphiques disponibles sont (cad visibles depuis l'interface de connection lxdm):
- bspwm, mate, kde5, enlightenment, fluxbox, flwm, i3, jwm, lumina, lxde, lxqt, ratpoison, openbox, wmfs, xfce4, etc.
-<p>
- Le paquet virtualbox-guest est désormais intégré dans les ISOS MATE pour faciliter les tests de NuTyX dans un environement virtuel sous virtualbox.
+ bspwm, mate, kde5, enlightenment, fluxbox, flwm, i3, jwm, lumina, lxde, lxqt, gnome, ratpoison, openbox, wmfs, xfce4, etc.
 <h2>CARDS</h2>
 <p>
  CARDS gère désormais les paquets orphelins, ce qui signifie qu'ils sont supprimés de façon automatique :) .
  <h2>Mise à jour</h2>
 <p> 
- La NuTyX 11 RC1 est en effet une mise à jour majeur de la NuTyX, une mise à jour n'est pas recommandée.
+ La NuTyX 11 RC2 est en effet une mise à jour majeur de la NuTyX, une mise à jour n'est pas recommandée.
 <p>
  La manière la plus simple de tester cette nouvelle version c'est de soit effacer votre NuTyX et installé la nouvelle, possible depuis l'ISO. Vos données personnelles ne seront pas touchées.
 <h2>Anciennes nouvelles</h2>

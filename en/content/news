@@ -1,43 +1,41 @@
-<h1>Latest news 2019-03-05</h1>
+<h1>Latest news 2019-03-12</h1>
 
-<h2>NuTyX 11 RC1 available with cards 2.4.94</h2>
+<h2>NuTyX 11 RC2 available with cards 2.4.95</h2>
 <p>
- I'm very please to announce the new NuTyX 11 RC1 release means the 10.97 version.
+ I'm very please to announce the new NuTyX 11 RC2 release means the 10.98 version.
 <p>
- The NuTyX 11 RC1 is a complete recompilation of all the available binaries on NuTyX.
+ The NuTyX 11 RC2 is a complete recompilation of all the available binaries on NuTyX.
 <p>
  Since everything has been recompiled, most of the packages have been update as well.
 <p>
- The base of NuTyX comes with the new kernel LTS 4.19.26 and the very new kernel 5.0.
+ The base of NuTyX comes with the new kernel LTS 4.19.28 and the very new kernel 5.0.1.
 <p>
  The toolchain is completely rebuild around glibc 2.29, gcc 8.3.0 and binutils 2.32.
 <p>
- The graphical server is now in xorg-server 1.20.3, the mesa lib in 18.3.4, gtk3 3.24.3, qt 5.12.1.
+ The graphical server is now in xorg-server 1.20.4, the mesa lib in 18.3.4, gtk3 3.24.3, qt 5.12.1.
 <p>
  The python 3.7.2 and 2.7.16 are updated as well
 <p>
  The MATE Desktop Environment comes in 1.22 the very last version as well.
 <p>
- The KDE Desktop plasma in 5.15.2, Framework in 5.55.0 and applications in 18.12.0
+ The KDE Desktop plasma in 5.15.2, Framework in 5.56.0 and applications in 18.12.3
 <p>
  Browsers firefox in 65.0.2 and chromium in  72.0.3626.121 (build by the archlinux team)
 <p>
  Many desktop applications have been updated as well like thunderbird 60.5.1, Scribus 1.5.5, libreoffice 6.2.0.3, gimp 2.10.8, etc.
 <p>
- 1 new MATE Desktop 1.22 ISO is available with various applications.
- It's size is 1.9 Gbyte.
- Available on: <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.iso</a>
+ 1 new BASE ISO is available.
+ It's size is 314 Mbyte.
+ Available on: <a href="http://downloads.nutyx.org/NuTyX_x86_64-10.98.iso">http://downloads.nutyx.org/NuTyX_x86_64-10.98.iso</a>
 <p>
  check agains following signature:
 <p>
- <a href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-mate-10.97.sha256sum</a>
+ <a href="http://downloads.nutyx.org/NuTyX_x86_64-10.98.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-10.98.sha256sum</a>
 <p>
  The installer has been spit in two installation modes: Simple and Advanced installation mode.
 <p>
  Available graphical interfaces are:
- kde5, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
-<p>
- The virtualbox-guest package is now include in the MATE ISOS to give the possibility to easily test NuTyX in a virtual environment under virtualbox. 
+ kde5, mate, xfce4, lxde, lxqt, gnome, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
 <h2>CARDS</h2>
  <p>
   CARDS is now able to track orphelin packages and take care of them... by removing them automaticaly :)
