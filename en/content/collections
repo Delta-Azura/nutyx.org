@@ -131,7 +131,7 @@
  <h2>The groups of collection</h2>
   <h3>A. The base system collection</h3>
     The base system is located in a dedicated GIT project on the git.nutyx.org website:
-   <a href="https://git.tuxfamily.org/nutyx/base-sysv">https://git.tuxfamily.org/nutyx/base-sysv</a>
+   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     The collection consisting of the base system is:
    <ul>
@@ -151,7 +151,7 @@
  </ul>
   <h3>C. The Extra collections</h3>
    The 'extra' collection is group in a GIT project on git.nutyx.org website:
-   <a href="https://git.tuxfamily.org/nutyx/extra">https://git.tuxfamily.org/nutyx/extra</a>
+   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     The 'extra' collections are:
  <ul>
@@ -164,15 +164,15 @@
   <h3>D. The graphical interfaces collections</h3>
     The graphical intefaces collections are group per project on the git.nutyx.org website at the following adresses:
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/mate">https://git.tuxfamily.org/nutyx/mate</a> for mate.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for mate.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/kde5">https://git.tuxfamily.org/nutyx/kde5</a> for kde5.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for kde5.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/xfce4">https://git.tuxfamily.org/nutyx/xfce4</a> for xfce4.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for xfce4.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/lxqt">https://git.tuxfamily.org/nutyx/lxqt</a> for lxqt.
+    <a href="https://git.tuxfamily.org/nutyx/extra">https://git.tuxfamily.org/nutyx/extra</a> for lxqt.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/lxde">https://git.tuxfamily.org/nutyx/lxde</a> for lxde.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for lxde.
    <p>
     The collections of thoses graphical interfaces are:
    <p>

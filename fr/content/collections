@@ -53,7 +53,7 @@
   <h2>La gestion des collections par cards</h2>
    De par leur conception, chaque collection possède son propre fichier contenant les meta-données.
    Lors d'ajout / retrait d'un paquet d'une collection, seul les meta-données de la dite collection seront modifiées.
-   Cette proprièté offre donc une flexibilitée maximale aux utilisateurs et gestionnaires des paquets.
+   Cette propriété offre donc une flexibilitée maximale aux utilisateurs et gestionnaires des paquets.
   <h2>La hiérachie des collections</h2>
     La hiérarchie des différentes collections est un concept très important.
     <p>
@@ -70,15 +70,15 @@
      Grâce à cette hiérachie bien établie, le concept suivant est défini:
      <ul>
       <li>
-       Un paquet de la collection <i>base</i> utilise des dépendances en provenance uniquement de la collection <i><u>base</u></i>.
+       Un paquet de la collection <i>base</i> utilise uniquement des dépendances en provenance de la collection <i><u>base</u></i>.
       <li>
-       Un paquet de la collection <i>cli</i> utilise des dépendances en provenance uniquement des collections <i><u>base</u></i> ou <i><u>cli</u></i>.
+       Un paquet de la collection <i>cli</i> utilise des dépendances en provenance des collections <i><u>base</u></i> ou <i><u>cli</u></i>.
       <li>
-       Un paquet de la collection <i>cli-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base ou cli</u></i>.
+       Un paquet de la collection <i>cli-extra</i> utilise des dépendances en provenance des collections <i><u>base ou cli</u></i>.
       <li>
-       Un paquet de la collection <i>gui</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
+       Un paquet de la collection <i>gui</i> utilise des dépendances en provenance des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
       <li>
-       Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
+       Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
      </ul>
       Et pour les interfaces graphiques <i>mate, kde5, lxde, lxqt et xfce4</i>, le concept suivant est défini:
      <ul>
@@ -132,7 +132,7 @@
  <h2>Les differents groupes de collection</h2>
   <h3>A. La collection du système de base</h3>
     Le système de base se trouve dans un projet sur le site git.nutyx.org à l'adresse:
-   <a href="https://git.tuxfamily.org/nutyx/base-sysv">http://git.nutyx.org/cgi.cgi/base-sysv</a>
+   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     La collection constituant la base du système est:
    <ul>
@@ -152,7 +152,7 @@
  </ul>
   <h3>C. Les collections extra</h3>
    Les collections extra sont regroupées dans un projet sur le site git.nutyx.org à l'adresse:
-   <a href="https://git.tuxfamily.org/nutyx/extra">https://git.tuxfamily.org/nutyx/extra</a>
+   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     Les collections extra sont:
  <ul>
@@ -165,15 +165,15 @@
   <h3>D. Les collections des interfaces graphiques</h3>
     Les collections des interfaces graphiques sont regroupées par projet sur le site git.nutyx.org aux adresses:
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/mate">https://git.tuxfamily.org/nutyx/mate</a> pour mate.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour mate.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/kde5">https://git.tuxfamily.org/nutyx/kde5</a> pour kde5.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour kde5.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/xfce4">https://git.tuxfamily.org/nutyxt/xfce4</a> pour xfce4.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour xfce4.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/lxqt">https://git.tuxfamily.org/nutyx/lxqt</a> pour lxqt.
+    <a href="https://git.tuxfamily.org/nutyx/extra">https://git.tuxfamily.org/nutyx/extra</a> pour lxqt.
    <p>
-    <a href="https://git.tuxfamily.org/nutyx/lxde">https://git.tuxfamily.org/nutyx/lxde</a> pour lxde.
+    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour lxde.
    <p>
     Les collections des interfaces graphiques sont pour:
    <p>
