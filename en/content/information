@@ -14,28 +14,10 @@
    <p>
      We have a team of commendable and dedicated people who spend much of their free time keeping this project alive.
      You are welcome to contact them with any questions. They will be pleased to give you answers.</p>
-   <h3>Sipo</h3>
-    <p>
-      <b>Sipo</b> packager for various packages, like the LXQt git packages. 
-   <h3>Remy</h3>
-    <p>
-       <b>Remy</b> ISO creator in many different kinds,
-       all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-       cli, gui, gnome, cli-extra, gui-extra collections Packager.
-   <h3>Artemia</h3>
-    <p>
-      <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
-   <h3>Hugo</h3>
-    <p>
-       <b>Hugo</b> Responsible for the bot server used for the development version of NuTyX.
-        Various packages packager.
    <h3>Guth</h3>
     <p>
      <b>Guth (guth at nutyx dot org)</b> is a very qualified and private man, but without him the server downloads.nutyx.org would not exist.
      We in the team are indebted to his awesome work. Thanks again Guth for your excellent and continued support.
-   <h3>Guy</h3>
-     <p>
-      <b>Guy</b> He gives us very important and valuable advice.
    <h3>Tnut</h3>
     <p>
      <b>Tnut</b> is the Founder of NuTyX.
@@ -53,6 +35,18 @@
       Pierre also helps with some other packages from various collections.
       He was a long time an active contributor, the CARDS package manager have been modify to never forget his name.
       A new attribute call "Contributors" has been added.
+    <p>
+       <b>Artemia</b> <i>Flcards</i> graphical interface of CARDS developer's.
+    <p>
+       <b>Sipo</b> packager for various packages, like the LXQt git packages.
+    <p>
+       <b>Remy</b> ISO creator in many different kinds,
+       all available on <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+       cli, gui, gnome, cli-extra, gui-extra collections Packager.
+    <p>
+      <b>Hugo</b> Responsible for the bot server used for the development version of NuTyX.
+    <p>
+      <b>Guy</b> Very important and valuable advice and participate on the ISO development.
     <p>
        <b>Jayce</b> Gnome collection packager.
     <p>
