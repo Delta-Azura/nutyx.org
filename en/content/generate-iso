@@ -19,7 +19,7 @@
   <h3>Clone the "NuTyX" git repository</h3>
    <p>
     Change to the directory where you want to download a temporary NuTyX repository: e.g. `cd /mnt`
-   <pre class="command"><kbd>git clone git://git.tuxfamily.org/gitroot/nutyx/core $NUTYX_TMP</kbd></pre>
+   <pre class="command"><kbd>git clone git://git.tuxfamily.org/gitroot/nutyx/nutyx-packages $NUTYX_TMP</kbd></pre>
   <h3>Install the NuTyX base system</h3>
    <pre class="command"><kbd>install-nutyx</kbd></pre>
   <h3>Copy necessary files for the iso</h3>
@@ -51,9 +51,6 @@ done</kbd></pre>
 
   <h3>Flush the binary archives</h3>
    <pre class="command"><kbd>cards purge</kbd></pre>
-
-  <h3>Remove the /etc/resolv.conf file</h3>
-   <pre class="command"><kbd>rm /etc/resolv.conf</kbd></pre>
 
   <h3>Generate the squashfs files </h3>
    <pre class="command"><kbd>for dir in opt bin etc lib lib64 root run sbin usr var home
