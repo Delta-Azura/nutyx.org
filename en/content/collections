@@ -130,8 +130,6 @@
    </ul>
  <h2>The groups of collection</h2>
   <h3>A. The base system collection</h3>
-    The base system is located in a dedicated GIT project on the git.nutyx.org website:
-   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     The collection consisting of the base system is:
    <ul>
@@ -139,8 +137,6 @@
       base
    </ul>
   <h3>B. The core system collections</h3>
-    The core of the system is group in a GIT project on git.nutyx.org website:
-   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     The collections consisting of the core system are:
  <ul>
@@ -150,8 +146,6 @@
     gui
  </ul>
   <h3>C. The Extra collections</h3>
-   The 'extra' collection is group in a GIT project on git.nutyx.org website:
-   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     The 'extra' collections are:
  <ul>
@@ -162,17 +156,6 @@
  </ul>
    
   <h3>D. The graphical interfaces collections</h3>
-    The graphical intefaces collections are group per project on the git.nutyx.org website at the following adresses:
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for mate.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for kde5.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for xfce4.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/extra">https://git.tuxfamily.org/nutyx/extra</a> for lxqt.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> for lxde.
    <p>
     The collections of thoses graphical interfaces are:
    <p>
@@ -217,8 +200,6 @@
      </ul>
 
   <h3>E. The Non Open Source collection</h3>
-   The 'Non Open Source" collection is located on the git.nutyx.org website at the adress:
-   <a href="https://git.tuxfamily.org/nutyx/nos">https://git.tuxfamily.org/nutyx/nos</a>
    <p>
     The collection is made of:
    <ul>

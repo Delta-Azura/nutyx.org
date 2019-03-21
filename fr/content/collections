@@ -131,8 +131,6 @@
    </ul>
  <h2>Les differents groupes de collection</h2>
   <h3>A. La collection du système de base</h3>
-    Le système de base se trouve dans un projet sur le site git.nutyx.org à l'adresse:
-   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     La collection constituant la base du système est:
    <ul>
@@ -140,8 +138,6 @@
       base
    </ul>
   <h3>B. Les collections du coeur du système</h3>
-    Le coeur du système est regroupé dans un projet sur le site git.nutyx.org à l'adresse:
-   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     Les collections constituant le coeur du système sont:
  <ul>
@@ -151,8 +147,6 @@
     gui
  </ul>
   <h3>C. Les collections extra</h3>
-   Les collections extra sont regroupées dans un projet sur le site git.nutyx.org à l'adresse:
-   <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a>
    <p>
     Les collections extra sont:
  <ul>
@@ -163,17 +157,6 @@
  </ul>
    
   <h3>D. Les collections des interfaces graphiques</h3>
-    Les collections des interfaces graphiques sont regroupées par projet sur le site git.nutyx.org aux adresses:
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour mate.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour kde5.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour xfce4.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/extra">https://git.tuxfamily.org/nutyx/extra</a> pour lxqt.
-   <p>
-    <a href="https://git.tuxfamily.org/nutyx/core">https://git.tuxfamily.org/nutyx/core</a> pour lxde.
    <p>
     Les collections des interfaces graphiques sont pour:
    <p>
@@ -218,8 +201,6 @@
      </ul>
 
   <h3>E. La collection Code Non Ouvert</h3>
-   La collection 'Code Non Ouvert' est dans un projet sur le site git.nutyx.org à l'adresse:
-   <a href="https://git.tuxfamily.org/nutyx/nos">https://git.tuxfamily.org/nutyx/nos</a>
    <p>
    La collection proposée est:
    <ul>
