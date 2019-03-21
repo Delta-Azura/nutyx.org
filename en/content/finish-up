@@ -114,12 +114,6 @@
     <pre class="output">/var/lib/pkg/depot/gui/lxdm/.PKGREPO
    ...</pre>
     No need to configure anything.
-  <h3>Semi-Automatic graphical login</h3>
-    The <i>slim</i> login manager will be installed:
-    <pre class="command_user"><kbd>get slim</kbd></pre>
-    To take full advantage of the <i>slim</i> functionality, it's recommended to provide an <i>.xinitrc</i> configuration file at the root of the home directory.
-   <p>
-    If no configuration file is supplied, some of the functionality will not work properly.
    
   <h3>Manual graphical login</h3>
     The <i>xdm</i> login manager will be install.

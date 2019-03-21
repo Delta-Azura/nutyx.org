@@ -115,13 +115,6 @@
    <pre class="output">/var/lib/pkg/depot/gui/lxdm/.PKGREPO
   ...</pre>
    Aucune configuration supplémentaire n'est nécessaire  
-  <h3>Lancement graphique semi-automatique</h3>
-   Le gestionnaire <i>slim</i> vous permet le lancement semi-automatique:
-   <pre class="command_user"><kbd>get slim</kbd></pre>
-   Pour profiter pleinement du fonctionnement de <i>slim</i>, il est recommandé de fournir un fichier de configuration <i>.xinitrc</i> à placer à la racine du dossier utilisateur.
-   <p>
-   Si aucun fichier <i>.xinitrc</i> n'est trouvé, certaines fonctionnalités ne fonctionneront pas correctement.
-
   <h3>Lancement graphique manuel</h3>
    Le gestionnaire <i>xdm</i> est très rudimentaire, il est indispensable de configurer un fichier de configuration <i>.xinitrc</i> à placer à la racine du dossier utilisateur.
    <pre class="command_user"><kbd>get xorg-xdm</kbd></pre>
