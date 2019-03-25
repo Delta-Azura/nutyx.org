@@ -51,16 +51,6 @@
    </table>
  <h2>Guides de l'utilisateur</h2>
   <table width="100%" cellspacing="0">
-   <tr class="even">
-    <td class="lien_article" >
-      <a class="url" href="install-offline">Installation de NuTyX depuis le script sans connection internet</a>
-    </td>
-    <td>
-     L'installation proposée ici consiste à utiliser le script d'installation disponible en téléchargement
-     Cette approche permet d'installer NuTyX depuis une autre NuTyX ou même une autre distribution.
-     L'article explique comment installer NuTyX sans connection internet.
-    </td>
-   </tr>
    <tr class="odd">
     <td class="lien_article">
       <a class="url" href="grub-install">Mise en place de GRUB</a>
@@ -74,10 +64,10 @@
    </tr>
    <tr class="even">
     <td class="lien_article" >
-      <a class="url" href="nutyx-man">Manuel de NuTyX de la version 10.6</a>
+      <a class="url" href="nutyx-man">Manuel de NuTyX de la version 11.0</a>
     </td>
     <td>
-     Manuel de NuTyX version 10.6 Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
+     Manuel de NuTyX version 11.0 Vous y trouverez tout ce qu'il faut savoir pour la configuration et l'utilisation de votre NuTyX
     </td>
     <td>
     </td>

@@ -1,11 +1,8 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>10.6</b>.
+   The current stable release of NuTyX is named <b>11.0</b>.
   <p>
    ISO images are available in "Fixed" and "Rolling" releases.
-  <p>
-   A 32 bits base ISO is available in "Rolling" release only.
-
   <p>
    The available ISO images can be used to install a base system without the need of the internet.
   <p>
@@ -28,9 +25,7 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-10.6.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
-     <p>
-      <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20190225.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-11.0.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
     </td>
     <td>
        Installation in BIOS or EFI modus is possible.
@@ -94,11 +89,9 @@
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-10.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-11.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20190225.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
-       <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20180728.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20190325.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
       </td>
       <td>
         Installation in BIOS or EFI modus is possible.
@@ -108,7 +101,9 @@
         Once the installation is done, you can directly connect with your new user account created at post-configuration time.
       </td>
       <td>
-       Approx. 260 MB
+       Approx. 5.3 GB
+      <p>
+       Approx. 383 MB
       </td>
      </tr>
    </table>
@@ -377,7 +372,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.6.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>

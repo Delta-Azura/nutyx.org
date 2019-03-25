@@ -3,18 +3,18 @@
   Make sure you have enough space on your hard disk. 8 GiB to 15 GiB should be enough.
  <h2>Download the latest version of NuTyX</h2>
   <p>
-   The current stable release of NuTyX is named <b>10.6</b>.
+   The current stable release of NuTyX is named <b>11.0</b>.
   <p>
-   They are available in 32 bits and in 64 bits.
+   They are available in 64 bits only.
   <p>
    The available ISO image can be used to install a base system without the need of the internet.
   <p>
    They are available in 2 sizes
   <ul>
    <li>
-     The base system only with a size of <b>+ 260 Mb</b> approx.
+     The base system only with a size of <b>+ 385 Mb</b> approx.
    <li>
-     The base system and the Xorg server with a size of <b>+ 600 Mb</b> approx.
+     The base system and all the binaries available for local install with a size of <b>+ 5.30 Gb</b> approx.
   </ul>
    It is also used to carry out a minimum of configuration of your machine before the actual installation of NuTyX.
   <p>
@@ -35,7 +35,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-10.6.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
