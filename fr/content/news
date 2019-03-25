@@ -1,12 +1,12 @@
-<h1>Dernière nouvelle 12-03-2019</h1>
+<h1>Dernière nouvelle 25-03-2019</h1>
 
-<h2>NuTyX 11 RC2 disponible avec cards 2.4.95</h2>
+<h2>NuTyX 11 disponible avec cards 2.4.96</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11 RC2 cad la version 10.98.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.
 <p>
- La NuTyX 11 RC2 est une recompilation complète de tous les binaires disponible sur NuTyX
+ La NuTyX 11 est une recompilation complète de tous les binaires disponible sur NuTyX
 <p>
- La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.28 et le tout nouveau kernel 5.0.1.
+ La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.30 et le tout nouveau kernel 5.0.3.
 <p>
  La chaîne de compilation est complètement reconstruite auout de la glibc 2.29, gcc 8.3.0 et binutils 2.32.
 <p>
@@ -16,19 +16,25 @@
 <p>
  L'environnement de bureau MATE est également mis à jour en version 1.22, dernière version disponible.
 <p>
- L'environnement de bureau KDE est disponible en Plasma 5.15.2, Framework 5.56.0 et les applications en 18.12.3
+ L'environnement de bureau KDE est disponible en Plasma 5.15.3, Framework 5.56.0 et les applications en 18.12.3
 <p>
  Les navigateurs disponibles sont entre autre:  firefox 65.0.2 et chromium 72.0.3626.121 (compilé par l'équipe de ArchLinux)
 <p>
  De nombreuses applications on été mise à jour également comme thunderbird 60.5.1, Scribus 1.5.5, libreoffice 6.2.0.3, gimp 2.10.8, etc.
 <p>
- 1 nouvelle ISO BASE est disponible avec diverses applications.
- Sa taille est de 314 Moctets.
- Elle est disponible sur <a href="http://downloads.nutyx.org/NuTyX_x86_64-10.98.iso">http://downloads.nutyx.org/NuTyX_x86_64-10.98.iso</a>
+ 2 nouvelles ISO BASE sont disponible.
 <p>
- la signature:
+ L'iso de 385 Moctets est une NuTyX de base version "rolling" et l'ISO de 5.3 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.0.
 <p>
- <a href="http://downloads.nutyx.org/NuTyX_x86_64-10.98.sha256sum">http://downloads.nutyx.org/NuTyX_x86_64-10.98.sha256sum</a>
+ Avec cette dernière, vous pouvez donc vous installer une NuTyX 11.0 complète sans avoir recours à une connection internet.
+<p>
+ Pour installer des paquets depuis cette ISO, une fois votre système de base installé sur votre disque dur, il suffit de monter la clé USB sur le dossier <b>/mnt</b>.
+<p>
+ Supposons que votre clé est trouvé sous /dev/sdc1, utilisez la commande:
+ <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
+ Adaptez en conséquence.
+<p>
+ Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 <p>
  L'installateur propose désormais 2 modes d'installation: Le mode d'installation simple et le mode avancé.
 <p>
@@ -37,9 +43,11 @@
 <h2>CARDS</h2>
 <p>
  CARDS gère désormais les paquets orphelins, ce qui signifie qu'ils sont supprimés de façon automatique :) .
+<p>
+ Les locales sont désormais géré de manière plus autonome, par exemple si l'on installe libreoffice, le paquet libreoffice.fr sera également automatiquement installé.
  <h2>Mise à jour</h2>
 <p> 
- La NuTyX 11 RC2 est en effet une mise à jour majeur de la NuTyX, une mise à jour n'est pas recommandée.
+ La NuTyX 11 est en effet une mise à jour majeur de la NuTyX, une mise à jour n'est pas recommandée.
 <p>
  La manière la plus simple de tester cette nouvelle version c'est de soit effacer votre NuTyX et installé la nouvelle, possible depuis l'ISO. Vos données personnelles ne seront pas touchées.
 <h2>Anciennes nouvelles</h2>

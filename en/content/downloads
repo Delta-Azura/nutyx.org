@@ -25,41 +25,6 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-11.0.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
-    </td>
-    <td>
-       Installation in BIOS or EFI modus is possible.
-     <p>
-      The ISO contains a complete installation with <a href="https://mate-desktop.org/">MATE</a> as graphical interface as default.
-     <p>
-      Once the installation is done, you will be able to connect directly to you new account created at post-configuration.
-    </td>
-    <td>
-      Approx. 1.24 GB
-    </td>
-   </tr>
-   <tr class="odd">
-    <td>
-     Installed packages:
-    </td>
-    <td>
-     lxdm <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate">mate</a>
-     <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
-     zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
-     <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=gstreamer-">gstreamer</a>
-     system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
-     transmission cheese cherrytree deadbeef aisleriot
-     gnome-mahjongg inxi gawk htop flcards rsync tar pigz
-     lbzip2 xdg-user-dirs sound-theme-freedesktop nano
-     network-manager-applet alsa-utils alsa-plugins
-     ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
-     gparted xorg-setxkbmap ntp ntp.service
-     <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=xorg-xf86-">xorg drivers</a>
-     virtualbox-guest
-    </td>
-   </tr>
-   <tr class="even">
-    <td class="lien_article">
        <a class="url" href="http://downloads.nutyx.org/Miyo-Rolling_x86_64-20181230.iso"><img src="../graphics/downloads/miyolinux.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>

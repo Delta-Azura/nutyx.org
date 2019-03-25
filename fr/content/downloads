@@ -4,7 +4,7 @@
   <p>
    Les ISOs sont disponibles en 64 bits "Fixed" et "Rolling" releases.
   <p>
-   La version 64 bits n'est pas une multi-lib mais une 64 bits pure.
+   Ce n'est pas une multi-lib mais une 64 bits pure.
   <p>
    Toutes les ISOs disponibles permettent une installation sans avoir besoin de connection internet.
   <p>
@@ -26,40 +26,6 @@
       Description
     <th>
       Taille
-   <tr class="even">
-    <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-11.0.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Fixed</a>
-    </td>
-    <td>
-       Installation en mode BIOS ou EFI possible.
-     <p>
-      l'ISO contient une installation complète avec <a href="https://mate-desktop.org/fr/">MATE</a> comme interface graphique par défaut.
-     <p>
-      L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
-    </td>
-    <td>
-      Environ 1.24 GO
-    </td>
-   </tr>
-   <tr class="odd">
-    <td>
-     Paquets installés 
-    </td>
-    <td>
-     lxdm <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate">mate</a>
-     <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
-     zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
-     <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=gstreamer-">gstreamer</a>
-     system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
-     transmission cheese cherrytree deadbeef aisleriot
-     gnome-mahjongg inxi gawk htop flcards rsync tar pigz
-     lbzip2 xdg-user-dirs sound-theme-freedesktop nano
-     network-manager-applet alsa-utils alsa-plugins
-     ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
-     gparted xorg-setxkbmap ntp ntp.service
-     <a href="./?type=pkg&branch=fixed&arch=x86_64&searchpkg=xorg-xf86-">pilotes xorg</a>
-     virtualbox-guest
-    </td>
    <tr class="even">
     <td class="lien_article">
        <a class="url" href="http://downloads.nutyx.org/Miyo-Rolling_x86_64-20181230.iso"><img src="../graphics/downloads/miyolinux.png" alt="logo mate"/>Rolling</a>
