@@ -299,7 +299,7 @@ VERSION="rolling"</pre>
 mount /dev/sda2 /mnt/hd</kbd></pre>
         <li>
          Installation de la NuTyX de base
-         <pre class="command"><kbd>sh install-nutyx</kbd></pre>
+         <pre class="command"><kbd>VERSION="rolling" sh install-nutyx</kbd></pre>
         <li>
          Une fois l'installation terminée, on peut à nouveau entrer dans la NutyX fraîchement installée via la commande:
          <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>

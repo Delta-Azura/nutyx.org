@@ -14,10 +14,6 @@
 
  <h2>Installation of your chroot</h2>
   <p>
-   Depending on the branch you want to use, you can specify it when naming the script:
-  <h3>The fixed branch</h3>
-   <pre class="command"><kbd>VERSION="fixed" install-nutyx</kbd></pre>
-  <h3>The rolling branch</h3>
     <pre class="command"><kbd>VERSION="rolling" install-nutyx</kbd></pre>
 
  <h2>Enter the chroot</h2>
@@ -108,12 +104,6 @@ EOF</kbd></pre>
     <pre class="command"><kbd>mkdir -p /usr/ports/perso</kbd></pre>
     <p>
      We can now synchronise all the binaries:
-    <h3>The fixed branch</h3>
-    <pre class="command"><kbd>for i in base cli gui
-do
-  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/fixed/$i/ \
-  /usr/ports/$i/
-done</kbd></pre>
     <h3>The rolling branch</h3>
     <pre class="command"><kbd>for i in base cli gui
 do

@@ -14,10 +14,6 @@
 
  <h2>Installation de la chroot</h2>
   <p>
-   En fonction du choix de la branche choisie, vous spécifiez celle-ci lors de l'appel du script:
-  <h3>La branche fixed</h3>
-   <pre class="command"><kbd>VERSION="fixed" install-nutyx</kbd></pre>
-  <h3>La branche rolling</h3>
    <pre class="command"><kbd>VERSION="rolling" install-nutyx</kbd></pre>
 
  <h2>Entrer dans la chroot</h2>
@@ -107,13 +103,6 @@ EOF</kbd></pre>
     <pre class="command"><kbd>mkdir -p /usr/ports/perso</kbd></pre>
     <p>
      On peut maintenant synchroniser l'ensemble des binaires:
-    <h3>La branche fixed</h3>
-    <pre class="command"><kbd>for i in base cli gui
-do
-  rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/fixed/$i/ \
-  /usr/ports/$i/
-done</kbd></pre>
-    <h3>La branche rolling</h3>
      <pre class="command"><kbd>for i in base cli gui
 do
   rsync -avz --delete-after rsync://downloads.nutyx.org/nutyx/`uname -m`/rolling/$i/ \
