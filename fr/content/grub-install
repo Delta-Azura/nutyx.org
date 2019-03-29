@@ -60,7 +60,7 @@ set timeout 5<br />set color_highlight=blue/white
 set color_normal=cyan/black<br />set gfxpayload=1024x768x16
 menuentry "NuTyX  xfs sur /dev/sda2" {
  set root=(hd0,2)
- linux /boot/kernel root=/dev/sda2 ro quiet
+ linux /boot/kernel-lts root=/dev/sda2 ro quiet
 # initrd /boot/initrd
 }
 menuentry "Windows 10" {

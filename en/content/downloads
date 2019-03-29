@@ -349,6 +349,6 @@ sh install-nutyx</kbd></pre>
    With grub version 2.XX, the following entry can be added to your grub.cfg:
    <pre class="command"><kbd>menuentry "NuTyX sur /dev/sda1" {
    set root=(hd0,1)
-   linux /boot/kernel root=/dev/sda1 ro quiet
+   linux /boot/kernel-lts root=/dev/sda1 ro quiet
 }</kbd></pre>
  
