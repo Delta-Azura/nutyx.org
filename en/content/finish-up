@@ -3,6 +3,18 @@
    Now you have a brand new base NuTyX installed.
    If you already know how to go on to get a graphical interface, you can directly check the website documentation.
    If  you wondering how to install a complete graphical interface, continue reading.
+ <h2>Mounting the ISO</h2>
+ <p>
+  If you choose to install the rolling version of NuTyX, you can directly proceed to <a href="#3">updating the meta data about available packages</a>
+ <p>
+  If you choose to install the 11.0 version of NuTyX, you need to mount the ISO.
+  All the available packages are on it.
+  Insert now the USB key containing the ISO.
+  Depending where your USB key is found, adapt the command below to your need:
+  <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
+ <div class="important">
+   If you test the NuTyX 11.0 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
+ </div>
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
   An <a href="dictionary#ID300">alias</a> is available for that:
@@ -24,20 +36,6 @@
 /var/lib/pkg/depot/base/.PKGREPO</pre>
   Synchronisation is done.
   You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
-
- <h2>Mounting the ISO</h2>
- <p>
-  If you choose to install the rolling version of NuTyX, you can directly proceed to <a href="#4">the Desktop installation</a>
- <p>
-  If you choose to install the 11.0 version of NuTyX, you need to mount the ISO.
-  All the available packages are on it.
-  Insert now the USB key containing the ISO.
-  Depending where your USB key is found, adapt the command below to your need:
-  <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
- <div class="important">
-   If you test the NuTyX 11.0 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
- </div>
- 
  <h2>Desktop installation:</h2>
   You can now choose your favorite desktop.
   Under NuTyX: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.

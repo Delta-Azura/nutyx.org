@@ -3,6 +3,19 @@
    Vous voici avec une NuTyX de base fraîchement installée.
    Si vous connaîssez déjà NuTyX, vous pouvez directement vous diriger sur la documentation du site.
    Par contre si vous vous demandez comment installer une interface graphique complète, continuez la lecture.
+  <h2>Montage du media contenant les paquets binaires installables</h2>
+  <p>
+    Si vous avez choisi d'installer la version rolling de NuTyX, vous pouvez directement procéder à <a href=#3>la mise à jour des informations concernant les paquets disponibles</a>
+  <p>
+    Si vous avez choisi d'installer la version 11.0 de NuTyX, les binaires sont fourni avec l'ISO.
+  Il faut donc maintenant monter l'ISO au bon endroit.
+  Insérez le média sur lequel se trouve l'ISO (très probablement une clé USB).
+  En fonction de l'emplacement reconnu, utilsez la commande:
+  <pre class=command_user><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
+  Adaptez le chemin <b>/dev/sdb1</b> à votre cas.
+ <div class="important">
+   Si vous testez la NuTyX 11.0 dans un environnement virtuel tel que Virtualbox, l'ISO est reconnue sous <b>/dev/sr0</b>
+ </div>
  <h2>Mise à jour des informations concernant les paquets disponibles</h2>
   Il faut commencer par renseigner les paquets disponibles à votre nouvelle installation. 
   Un <a href="dictionary#ID300">alias</a> est disponible à cet effet:
@@ -24,20 +37,6 @@
 /var/lib/pkg/depot/base/.PKGREPO</pre>
  La synchronisation est terminée.
  Vous êtes à présent prêt pour installer le reste des paquets pour obtenir une NuTyX utilisable.
-
- <h2>Montage du media contenant les paquets binaires installables</h2>
-  <p>
-    Si vous avez choisi d'installer la version rolling de NuTyX, vous pouvez directement procéder à l'<a href=#4>installation d'un bureau</a>
-  <p>
-    Si vous avez choisi d'installer la version 11.0 de NuTyX, les binaires sont fourni avec l'ISO.
-  Il faut donc maintenant monter l'ISO au bon endroit.
-  Insérez le média sur lequel se trouve l'ISO (très probablement une clé USB).
-  En fonction de l'emplacement reconnu, utilsez la commande:
-  <pre class=command_user><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
-  Adaptez le chemin <b>/dev/sdb1</b> à votre cas.
- <div class="important">
-   Si vous testez la NuTyX 11.0 dans un environnement virtuel tel que Virtualbox, l'ISO est reconnue sous <b>/dev/sr0</b>
- </div>
  <h2>Installation d'un bureau:</h2>
   On commence par choisir un bureau.
  <p>
