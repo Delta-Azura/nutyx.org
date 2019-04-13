@@ -15,7 +15,9 @@
   <p>
    Si vous avez suffisament de mémoire RAM, un message vous informera que vous pouvez retirer la clé après le choix de votre langue. 
    Cela permet d'insérer un clavier USB par exemple.
-
+  <p>
+   Les locales s'installent à la première mise à jour.
+   Une fois l'ISO installée, faites une mise à jour pour installer les paquets de locales correspondants.
  <h2>Pour le nouvel utilisateur sur NuTyX</h2>
    <table width="100%" cellspacing="0">
    <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
@@ -28,22 +30,36 @@
       Taille
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/Miyo-Rolling_x86_64-20181230.iso"><img src="../graphics/downloads/miyolinux.png" alt="logo mate"/>Rolling</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20190413.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
        Installation en mode BIOS ou EFI possible.
      <p>
-      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/Openbox">Openbox</a> personalisée comme interface graphique par défaut.
+      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/MATE">MATE</a> comme interface graphique.
      <p>
       L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
-     <p>
-      Prenez le temps de lire la 'Releases Notes' qui se trouve sur le bureau dans l'ISO ou
-      sur <a class="url" href="http://downloads.nutyx.org/Miyo-20181230-Release-Notes"/>http://downloads.nutyx.org/Miyo-20181230-Release-Notes</a>.
     </td>
     <td>
-      Environ 718 MO
+      Environ 1.59 GO
     </td>
-   </tr>
+   <tr class="odd">
+    <td>
+     Paquets installés
+    </td>
+    <td>
+     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a> et lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
+     zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
+     system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
+     gimp transmission cheese cherrytree deadbeef aisleriot
+     gnome-mahjongg inxi gawk htop flcards rsync tar pigz
+     lbzip2 xdg-user-dirs sound-theme-freedesktop nano
+     network-manager-applet alsa-utils alsa-plugins
+     ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
+     gparted xorg-setxkbmap ntp ntp.service
+     virtualbox-guest
+    </td>
+    <td>
+    </td>
   </table>
  <h2>Pour l'utilisateur régulier</h2>
    <table width="100%" cellspacing="0">
