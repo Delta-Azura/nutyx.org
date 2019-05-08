@@ -103,9 +103,9 @@ BRANCH=master</kbd></pre>
         <td>
          base
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=base
 RSYNC=(base)</kbd></pre>
 
@@ -113,9 +113,9 @@ RSYNC=(base)</kbd></pre>
         <td>
          cli
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=cli
 RSYNC=(base cli)</kbd></pre>
 
@@ -123,9 +123,9 @@ RSYNC=(base cli)</kbd></pre>
         <td>
          gui
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=gui
 RSYNC=(base cli gui)</kbd></pre>
 
@@ -133,9 +133,9 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          cli-extra
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=cli-extra
 RSYNC=(base cli)</kbd></pre>
 
@@ -143,9 +143,9 @@ RSYNC=(base cli)</kbd></pre>
         <td>
          gui-extra
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=gui-extra
 RSYNC=(base cli gui)</kbd></pre>
 
@@ -153,9 +153,9 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          mate et mate-extra
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=mate
 RSYNC=(base cli gui mate mate-extra)</kbd></pre>
 
@@ -163,9 +163,9 @@ RSYNC=(base cli gui mate mate-extra)</kbd></pre>
         <td>
          lxde et lxde-extra
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=lxde
 RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
 
@@ -173,9 +173,9 @@ RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
         <td>
          xfce4 et xfce4-extra
         <td>
-         core
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=core
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=xfce4
 RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
 
@@ -183,9 +183,9 @@ RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
         <td>
          lxqt et lxqt-extra
         <td>
-         extra
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=extra
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=lxqt
 RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
 
@@ -193,9 +193,9 @@ RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
         <td>
          kde5 et kde5-extra
         <td>
-         extra
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=extra
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=kde5
 RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
@@ -203,9 +203,9 @@ RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
         <td>
          nos
         <td>
-         nos
+         nutyx-packages
         <td>
-         <pre class="command_user"><kbd>PROJECT=nos
+         <pre class="command_user"><kbd>PROJECT=nutyx-packages
 COLLECTION=nos
 RSYNC=(base cli gui nos)</kbd></pre>
 
