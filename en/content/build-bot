@@ -34,15 +34,16 @@
        We assume that your NuTyX is clean from any devel package.
        We start to install all the utilities:
       <pre class="command_user"><kbd>get rsync git</kbd></pre>
-   <h2>Configuration of the architecture</h2>
+   <h2>Configuration of the project (32 or 64 bits architecture)</h2>
       <p>
-       The first variable we need is the architecture definition (32 or 64 bits):
-      <pre class="command_user"><kbd>ARCH=`uname -m`</kbd></pre>
+       The first variables we need to define are the project to use and the architecture definition (32 or 64 bits):
+      <pre class="command_user"><kbd>ARCH=`uname -m`
+PROJECT=packages-$ARCH</kbd></pre>
 
      <h2>Version to use</h2>
       <p>
        NuTyX packages are in 2 versions available.
-       Once you decide on which version you want to work, make a copy/paste of the last colomn variables.
+       Once you decide on which version you want to work, make a copy/paste of the variables in the right colomn.
        <table>
         <caption>
          <EM>
@@ -68,7 +69,7 @@
      <h2>Structure des projets disponibles</h2>
       <p>
        Choose the collection and the project you're going to work with.
-       Once you made your choice, copy/paste defined variables in the last colomn.
+       Once you made your choice, copy/paste defined variables in the right colomn.
       <table>
        <caption>
         <EM>
@@ -84,88 +85,77 @@
         <td>
          base
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=base
+         <pre class="command_user"><kbd>COLLECTION=base
 RSYNC=(base)</kbd></pre>
 
        <tr class="odd">
         <td>
          cli
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=cli
+         <pre class="command_user"><kbd>COLLECTION=cli
 RSYNC=(base cli)</kbd></pre>
 
        <tr class="even">
         <td>
          gui
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=gui
+         <pre class="command_user"><kbd>PROJECT=COLLECTION=gui
 RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>
          cli-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=cli-extra
+         <pre class="command_user"><kbd>COLLECTION=cli-extra
 RSYNC=(base cli)</kbd></pre>
 
        <tr class="even">
         <td>
          gui-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=gui-extra
+         <pre class="command_user"><kbd>COLLECTION=gui-extra
 RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>
          mate and mate-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=mate
+         <pre class="command_user"><kbd>COLLECTION=mate
 RSYNC=(base cli gui mate mate-extra)</kbd></pre>
 
        <tr class="even">
         <td>
          lxde and lxde-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=lxde
+         <pre class="command_user"><kbd>COLLECTION=lxde
 RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
 
        <tr class="odd">
         <td>
          xfce4 and xfce4-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=xfce4
+         <pre class="command_user"><kbd>COLLECTION=xfce4
 RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
 
        <tr class="even">
         <td>
          lxqt and lxqt-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=extra
-COLLECTION=lxqt
+         <pre class="command_user"><kbd>COLLECTION=lxqt
 RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
 
        <tr class="odd">
         <td>
          kde5 and kde5-extra
         <td>
-         <pre class="command_user"><kbd>PROJECT=extra
-COLLECTION=kde5
+         <pre class="command_user"><kbd>COLLECTION=kde5
 RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
        <tr class="even">
         <td>
          nos
         <td>
-         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
-COLLECTION=nos
+         <pre class="command_user"><kbd>COLLECTION=nos
 RSYNC=(base cli gui nos)</kbd></pre>
 
      </table>
