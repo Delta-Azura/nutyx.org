@@ -7,9 +7,10 @@
     <h5>Application compilée</h5>
     <h5>Application interpretée</h5>
    <h4>Les bibliothèques</h4>
-   <h4>La documentation et pages de manuels</h4>
+   <h4>Les fichiers de documentation</h4>
+   <h4>Les pages de manuels</h4>
    <h4>Les locales</h4>
-   <h4>Les entêtes de bibliothèques</h4>
+   <h4>Les fichiers entêtes de développement</h4>
    <h4>Les services</h4>
  <h2>Une bibliothèque</h2>
   <h3>C'est quoi ?</h3>
