@@ -9,8 +9,7 @@
     Il est bon de posséder de bonnes connaissances sur le système GNU/Linux.
     Ses concepts originaux tel que <a href="install">l'installateur sur une ISO de base</a>, <a href="downloads#5">le script d'installation 'install-nutyx'</a>, <a href="grub-install">l'installation de la procédure d'amorçage de manière indépendante</a>, <a href="collections">les collections</a>, <a href="dictionary#ID025">les groupes</a> et <a href="http://cards.nutyx.org">le gestionnaire de paquets 'cards'</a> dérouteront très facilement les personnes non averties.
    <p>
-    C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine
-    et développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
+    C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine et développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
    <p>
     NuTyX propose les interfaces graphiques 
    <a href="https://lxqt.org">LXQt</a>, 
@@ -36,58 +35,65 @@
  
     <ol>
      <li>
-      Sa capacité d'être installée depuis quasi n'importe quelle autre distribution 
-      grâce à l'utilisation d'un <a href="downloads#5">script bash</a> 
-      qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
-      Le script fait un check des outils nécessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
-      Tous les détails et explications se trouvent <a href="install-offline">ici</a>
+      Sa capacité d'être installée depuis quasi n'importe quelle autre distribution grâce à l'utilisation d'un <a href="downloads#5">script bash</a> qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
+      <p>
+       Le script fait un check des outils nécessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
+      <p>
+       Tous les détails et explications se trouvent <a href="install-offline">ici</a>.
      <br>
      <br>
      <li>
       La hiérarchie des <a href="collections">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilité maximale dans la gestion de ceux-ci.
-      Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
+      <p>
+       Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
      <br>
      <br>
      <li>
       La syntaxe d'une <a href="dictionary#ID060">recette</a> d'un <a href="dictionary#ID005">paquet</a> est probablement la plus simple que l'on puisse trouver.
       Elle peut s'écrire dans la plupart des cas en moins de 10 lignes. 
-      Les <a href="dictionary#ID006">dépendances</a> (si on le souhaite) peuvent également être gérées.
-      Les <a href="dictionary#ID005">paquets</a> personnels créés localement peuvent également être gérés par
-      le gestionnaire de <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
+      <p>
+       Les <a href="dictionary#ID006">dépendances</a> (si on le souhaite) peuvent également être gérées.
+      <p>
+       Les <a href="dictionary#ID005">paquets</a> personnels créés localement peuvent également être gérés par le gestionnaire de <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
      <br>
      <br>
      <li>
       Une fois installée dans un dossier, il est très facile de <a href="generate-iso">produire une ISO personalisée</a> de sa NuTyX.
-      L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
+      <p>
+       L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
      <br>
      <br>
      <li>
       Un <a href="dictionary#ID005">paquet</a> est constitué de plusieurs "parties" un <a href="dictionary#ID005">paquet</a> "dit de base" indispensable 
       au fonctionnement du système d'exploitation et ses sous-<a href="dictionary#ID005">paquets</a> (optionnels). 
-      Comme exemple de sous-<a href="dictionary#ID005">paquets</a> 
-      on trouve les locales, la documentation, les fichiers nécessaires au développement.
+      <p>
+       Comme exemple de sous-<a href="dictionary#ID005">paquets</a> on trouve les locales, la documentation, les fichiers nécessaires au développement.
      <br>
      <br>
      <li>
       La création d'une partition ou disque séparé pour les données personnelles est superflue.
-      L'installateur est capable de (ré)installer NuTyX sans avoir à formater.
+      <p>
+       L'installateur est capable de (ré)installer NuTyX sans devoir reformater le support de stockage.
      <br>
      <br>
      <li>
       L'installateur ne FORMATERA JAMAIS de son propre gré une partition cible pour l'installation de NuTyX.
-      Cela signifie que NuTyX peut être installée sur une partition contenant (par exemple) ses données personnelles, 
-      des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes)
+      <p>
+       Cela signifie que NuTyX peut être installée sur une partition contenant (par exemple) ses données personnelles, des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes).
      <br>
      <br>
      <li>
-      Une simple commande permet de revenir sur <a href="dictionary#ID040">un système de base</a> et permet par exemple de changer complètement son environnement graphique 
+      Une simple commande permet de revenir sur <a href="dictionary#ID040">un système de base</a> et permet par exemple de changer complètement son environnement graphique.
+      <p>
       (par ex. de KDE vers XFCE) sans devoir tout réinstaller et sans devoir tout retélécharger, les <a href="dictionary#ID005">paquets</a> déjà téléchargés (et à jour) seront simplement réinstallés.
      <br>
      <br>
      <li>
       Le gestionnaire de <a href="dictionary#ID005">paquets</a> tout à fait unique écrit spécialement pour les besoins de NuTyX.
-      Il est constitué de modules cohérents et extensibles. <b>Un de ses points forts est certainement la possibilité 
-      de trouver automatiquement les <a href="dictionary#ID006">dépendances</a> pour le fonctionnement d'un <a href="dictionary#ID005">paquet</a></b>.
+      <p>
+       Il est constitué de modules cohérents et extensibles.
+      <p>
+       Un de ses points forts est certainement <b>la possibilité de trouver automatiquement</b> les <a href="dictionary#ID006">dépendances</a> pour le fonctionnement d'un <a href="dictionary#ID005">paquet</a>.
      <br>
      <br>
      <li>
@@ -102,7 +108,9 @@
      <li>
       <a class="url" href="https://forum.nutyx.org">Le forum</a>
      <li>
-      <a class="url" href="https://discord.gg/a6EWWFQ">Le salon de discussion discord</a>
+      <a class="url" href="http://webchat.freenode.net/?channels=nutyx">Le canal IRC (accès direct sans plugin)</a>
+     <li>
+      <a class="url" href="https://discord.gg/3KdqZZt">Le salon de discussion discord</a>
     <li>
       <a class="url" href="https://distrowatch.com/table.php?distribution=nutyx">Distrowatch</a>
      <li>
