@@ -59,14 +59,12 @@ PROJECT=packages-$ARCH</pre>
          <td>
           fixed
          <td>
-         <pre class="command_user"><kbd>VERSION=fixed
-BRANCH=fixed</kbd></pre>
+         <pre class="command_user"><kbd>VERSION=fixed</kbd></pre>
          <tr class="odd">
           <td>
            rolling
          <td>
-          <pre class="command_user"><kbd>VERSION=rolling
-BRANCH=rolling</kbd></pre>
+          <pre class="command_user"><kbd>VERSION=rolling</kbd></pre>
        </table>
       
      <h2>Structure des projets disponibles</h2>
@@ -185,7 +183,7 @@ mkdir: created directory '/home/moi/git/rolling'</pre>
      <h2>Récupération des ports de "$COLLECTION" depuis le projet git</h2>
       <p>
        On récupère les ports de la collection <b>$COLLECTION</b> pour la compilation:
-      <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+      <pre class="command_user"><kbd>git clone -b $VERSION https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
       <p>
        On crée maintenant les dossiers nécessaires pour le script:
       <pre class="command_user"><kbd>sudo mkdir -pv \
