@@ -19,7 +19,7 @@
   <h3>Clone the "NuTyX" git repository</h3>
    <p>
     Change to the directory where you want to download a temporary NuTyX repository: e.g. `cd /mnt`
-   <pre class="command"><kbd>git clone git://git.tuxfamily.org/gitroot/nutyx/nutyx-packages $NUTYX_TMP</kbd></pre>
+   <pre class="command"><kbd>git clone https://github.com/NuTyX/packages-x86_64 $NUTYX_TMP</kbd></pre>
   <h3>Install the NuTyX base system</h3>
    <pre class="command"><kbd>VERSION="rolling" install-nutyx</kbd></pre>
   <h3>Copy necessary files for the iso</h3>
