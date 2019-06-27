@@ -36,14 +36,15 @@
        On part du principe que votre NuTyX est vierge de tout paquet de développement.
        On commence donc par installer les utilitaires:
        <pre class="command_user"><kbd>get rsync git</kbd></pre>
-     <h2>Configuration de l'architecture</h2>
+     <h2>Choix de l'architecture (32 ou 64 bits)</h2>
       <p>
-       La première variable pour notre travail définit l'architecture (32 ou 64 Bits):
-       <pre class="command_user"><kbd>ARCH=`uname -m`</kbd></pre>
+       Les premières variables définissent l'architecture (32 ou 64 Bits) et donc le projet que l'on va utiliser:
+       <pre class="command_user"><kbd>ARCH=`uname -m`</kbd>
+PROJECT=packages-$ARCH</pre>
      <h2>Choix de la version</h2>
       <p>
        Les paquets de NuTyX sont disponibles dans 2 versions.
-       Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
+       Une fois votre choix fait, copiez-collez les variables définies dans la colonne de droite.
        <table>
         <caption>
          <EM>
@@ -52,13 +53,9 @@
          <tr class="sidebar">
           <th>
            Version
-          <th>
-           Branche
          <th>
           Variables à utiliser
         <tr class="even">
-         <td>
-          fixed
          <td>
           fixed
          <td>
@@ -68,145 +65,100 @@ BRANCH=fixed</kbd></pre>
           <td>
            rolling
          <td>
-           rolling
-         <td>
           <pre class="command_user"><kbd>VERSION=rolling
 BRANCH=rolling</kbd></pre>
-         <tr class="even">
-          <td>
-           development
-         <td>
-           master
-         <td>
-          <pre class="command_user"><kbd>VERSION=development
-BRANCH=master</kbd></pre>
        </table>
       
      <h2>Structure des projets disponibles</h2>
       <p>
-       Choisissez la collection et le projet que vous souhaitez travailler.
-       Une fois votre choix fait, copiez-collez les variables définies dans la dernière colonne.
+       Choisissez la collection sur laquelle vous souhaitez travailler.
+       Une fois votre choix fait, copiez-collez les variables définies dans la colonne de droite.
       <table>
        <caption>
         <EM>
-         Liste des collections disponibles par projet, copiez-collez les variables en fonction de votre choix:
+         Liste des collections, copiez-collez les variables en fonction de votre choix:
         </EM>
        </caption>
        <tr class="sidebar">
         <th>
          Collection
         <th>
-         Projet
-        <th>
          Variables à utiliser
        <tr class="even">
         <td>
          base
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=base
+         <pre class="command_user"><kbd>COLLECTION=base
 RSYNC=(base)</kbd></pre>
 
        <tr class="odd">
         <td>
          cli
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=cli
+         <pre class="command_user"><kbd>COLLECTION=cli
 RSYNC=(base cli)</kbd></pre>
 
        <tr class="even">
         <td>
          gui
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=gui
+         <pre class="command_user"><kbd>COLLECTION=gui
 RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>
          cli-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=cli-extra
+         <pre class="command_user"><kbd>COLLECTION=cli-extra
 RSYNC=(base cli)</kbd></pre>
 
        <tr class="even">
         <td>
          gui-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=gui-extra
+         <pre class="command_user"><kbd>COLLECTION=gui-extra
 RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>
          mate et mate-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=mate
+         <pre class="command_user"><kbd>COLLECTION=mate
 RSYNC=(base cli gui mate mate-extra)</kbd></pre>
 
        <tr class="even">
         <td>
          lxde et lxde-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=lxde
+         <pre class="command_user"><kbd>COLLECTION=lxde
 RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
 
        <tr class="odd">
         <td>
          xfce4 et xfce4-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=xfce4
+         <pre class="command_user"><kbd>COLLECTION=xfce4
 RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
 
        <tr class="even">
         <td>
          lxqt et lxqt-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=lxqt
+         <pre class="command_user"><kbd>COLLECTION=lxqt
 RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
 
       <tr class="odd">
         <td>
          kde5 et kde5-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=kde5
+         <pre class="command_user"><kbd>COLLECTION=kde5
 RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
        <tr class="even">
         <td>
          nos
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
-COLLECTION=nos
+         <pre class="command_user">COLLECTION=nos
 RSYNC=(base cli gui nos)</kbd></pre>
 
      </table>
@@ -223,9 +175,9 @@ RSYNC=(base cli gui nos)</kbd></pre>
       et
       <pre class="output">/home/$USER/git/$VERSION</pre>
       <p>
-       Les recettes se trouvent dans son dossier personnel.
+       Les recettes se trouvent dans votre dossier personnel.
       <p>
-       On peut maintenant créer le dossier necessaire, sous son propre compte:
+       On peut maintenant créer le dossier necessaire, sous votre propre compte:
       <pre class="command_user"><kbd> mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
       <pre class="output">mkdir: created directory '/home/moi/git'
 mkdir: created directory '/home/moi/git/rolling'</pre>
@@ -233,7 +185,7 @@ mkdir: created directory '/home/moi/git/rolling'</pre>
      <h2>Récupération des ports de "$COLLECTION" depuis le projet git</h2>
       <p>
        On récupère les ports de la collection <b>$COLLECTION</b> pour la compilation:
-      <pre class="command_user"><kbd>git clone -b $BRANCH git://git.tuxfamily.org/gitroot/nutyx/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+      <pre class="command_user"><kbd>git clone -b $BRANCH https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
       <p>
        On crée maintenant les dossiers nécessaires pour le script:
       <pre class="command_user"><kbd>sudo mkdir -pv \
