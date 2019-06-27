@@ -163,10 +163,10 @@
      Le contenu de ce fichier texte composé de trois parties suit un schéma standard:
      <ol>
       <li>
-        Les informations générales (optionnelles mais vivement recommandées) sur le <a href="#ID005">paquet</a>: Description, URL, Developpeur(s), Empaqueteur(s), <a href="#ID006">dépendances</a>
+        Les informations générales (optionnelles mais vivement recommandées) sur le <a href="#ID005">paquet</a>: Description, URL, Developpeur(s), Empaqueteur(s), <a href="#ID006">les dépendances</a>
       <li>
         Les informations indispensables pour la construction du <a href="#ID005">paquet</a>:
-      Nom, version, release
+      Le nom et la version
       <li>
         La fonction "build" définit la construction proprement dite du <a href="#ID005">paquet</a>.
      </ol>
@@ -174,15 +174,15 @@
         Il est indispensable de placer le fichier <a href="#ID080">Pkgfile</a> dans un dossier portant le même nom que la variable <i>name</i> définie dans ce fichier <a href="#ID080">Pkgfile</a>.
      <p>
       Exemple d'un tel Pkgfile situé dans le dossier <i>monpaquet</i>:
-      <pre class="output"># Depends on: glib atk
-
-description="Mon premier paquet"
+      <pre class="output">description="Mon premier paquet"
 url="http://downloads.nutyx.org"
 packager="tnut <tnut@nutyx.org>"
 
 name=monpaquet
 version=1.0
-release=1
+
+makedepends=(glib atk)
+
 source=(${url}/files/$name-$version.tar.xz)
 
 build() {
@@ -202,22 +202,20 @@ make DESTDIR=$PKG install
  <li>
   La branche "fixed"
   <p>
-   C'est la version stable de NuTyX. Tous les paquets sont gelés au moment de sa sortie, seuls les mises à jour de sécurité sont appliquées.
+   C'est la version stable de NuTyX. Tous les paquets sont gelés au moment de sa sortie.
   <p>
-   Des nouveaux paquets peuvent être ajoutés.
+   La durée de vie d'une version stable varie entre 1 et 3 mois.
  <li>
-  La branche "rolling" (ou "master")
+  La branche "rolling"
   <p>
-   C'est la ligne principale (master) du projet GIT des collections disponibles.
+   C'est la ligne principale (rolling) du projet GIT des collections disponibles.
   <p>
-   Le processus de mise à jour se fait pendant toute la vie de la version "fixed" et ses version mineures (approximativement un an).
+   Le processus de mise à jour se fait pendant toute la vie de la branche (approximativement un an).
   <p>
-   Puisque les mises à jour sont toujours très importantes et constantes, la branche "rolling" peut être incompatible avec la version "fixed" de NuTyX.
-   Elle ne peut donc pas être jointe (merge) dans la branche "fixed" de NuTyX
+   Puisque les mises à jour sont toujours très importantes et constantes, la branche "rolling" peut à un moment donné devenir incompatible avec la version "fixed" de NuTyX.
+  <p>
+   La durée de vie de la version rolling est de 1 an minimum.
   </ul>
-<p>
- La branche "fixed" a une "durée de vie limitée" qui correspond à la durée de vie de la version "fixed" de NuTyX à ce moment-là.
-
 
     <a name='ID100'></a>
     <h2>Une chroot</h2>
