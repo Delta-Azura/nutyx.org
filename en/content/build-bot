@@ -51,34 +51,18 @@
          <tr class="sidebar">
           <th>
            Version
-          <th>
-           Branch
          <th>
           Variables to use
         <tr class="even">
          <td>
           fixed
          <td>
-          fixed
-         <td>
-         <pre class="command_user"><kbd>VERSION=fixed
-BRANCH=fixed</kbd></pre>
+         <pre class="command_user"><kbd>VERSION=fixed</kbd></pre>
          <tr class="odd">
-          <td>
-           rolling
          <td>
            rolling
          <td>
-          <pre class="command_user"><kbd>VERSION=rolling
-BRANCH=rolling</kbd></pre>
-        <tr class="even">
-         <td>
-          development
-         <td>
-          master
-         <td>
-         <pre class="command_user"><kbd>VERSION=development
-BRANCH=master</kbd></pre>
+          <pre class="command_user"><kbd>VERSION=rolling</kbd></pre>
        </table>
 
      <h2>Structure des projets disponibles</h2>
@@ -95,16 +79,12 @@ BRANCH=master</kbd></pre>
         <th>
          Collection
         <th>
-         Project
-        <th>
          Variables to use
        <tr class="even">
         <td>
          base
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=base
 RSYNC=(base)</kbd></pre>
 
@@ -112,9 +92,7 @@ RSYNC=(base)</kbd></pre>
         <td>
          cli
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=cli
 RSYNC=(base cli)</kbd></pre>
 
@@ -122,9 +100,7 @@ RSYNC=(base cli)</kbd></pre>
         <td>
          gui
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=gui
 RSYNC=(base cli gui)</kbd></pre>
 
@@ -132,9 +108,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          cli-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=cli-extra
 RSYNC=(base cli)</kbd></pre>
 
@@ -142,9 +116,7 @@ RSYNC=(base cli)</kbd></pre>
         <td>
          gui-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=gui-extra
 RSYNC=(base cli gui)</kbd></pre>
 
@@ -152,9 +124,7 @@ RSYNC=(base cli gui)</kbd></pre>
         <td>
          mate and mate-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=mate
 RSYNC=(base cli gui mate mate-extra)</kbd></pre>
 
@@ -162,9 +132,7 @@ RSYNC=(base cli gui mate mate-extra)</kbd></pre>
         <td>
          lxde and lxde-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=lxde
 RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
 
@@ -172,9 +140,7 @@ RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
         <td>
          xfce4 and xfce4-extra
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=xfce4
 RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
 
@@ -182,29 +148,23 @@ RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
         <td>
          lxqt and lxqt-extra
         <td>
-         nutyx-packages
-        <td>
          <pre class="command_user"><kbd>PROJECT=extra
 COLLECTION=lxqt
 RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
 
-       <tr class="even">
+       <tr class="odd">
         <td>
          kde5 and kde5-extra
-        <td>
-         nutyx-packages
         <td>
          <pre class="command_user"><kbd>PROJECT=extra
 COLLECTION=kde5
 RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
 
-       <tr class="odd">
+       <tr class="even">
         <td>
          nos
         <td>
-         nutyx-packages
-        <td>
-         <pre class="command_user"><kbd>PROJECT=nutyx-packages
+         <pre class="command_user"><kbd>PROJECT=packages-$ARCH
 COLLECTION=nos
 RSYNC=(base cli gui nos)</kbd></pre>
 
@@ -232,7 +192,7 @@ mkdir: created directory '/home/me/git/rolling'</pre>
     <h2>Get all the ports of the "$COLLECTION" from git location</h2>
      <p>
       We will synchronise the status of all the ports of the <b>$COLLECTION</b> for the compilation:
-      <pre class="command_user"><kbd>git clone -b $BRANCH git://git.tuxfamily.org/gitroot/nutyx/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
+      <pre class="command_user"><kbd>git clone -b $VERSION https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
      <p>
        We now create all the folders needed for the script:
        <pre class="command_user"><kbd>sudo mkdir -pv \
