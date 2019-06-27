@@ -242,7 +242,7 @@
       <li>
        `Pkgfile-Header`: (optional but highly recommended) general information about the <a href="#ID005">package</a>: Description, URL, Developer(s), Packager(s), <a href="#ID006">dependencies</a>
       <li>
-       `Mandatory information`: for the construction of the <a href="#ID005">package</a>: Name, version, release
+       `Mandatory information`: for the construction of the <a href="#ID005">package</a>: The name and the version.
       <li>
        `Required build function`: The "build" function defines the construction itself of the <a href="#ID005">package</a>
      </ol>
@@ -253,14 +253,13 @@
       The folder name will be treated as the default name of the base binary package if it is not (re)defined by the name variable.
      <p>
       Example of a Pkgfile located in the <i>mypackage</i> folder:
-      <pre class="output"># Depends on: glib atk
-
-description="My first package"
+      <pre class="output">description="My first package"
 url="http://downloads.nutyx.org"
 packager="tnut at nutyx dot org"
 name=mypackage
-version=1.0
-release=1
+
+makedepends=(glib atk)
+
 source=(${url}/files/$name-$version.tar.xz)
 build() {
 cd ${name}-$version
