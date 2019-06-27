@@ -275,22 +275,21 @@ make DESTDIR=$PKG install
  <li>
   The "fixed" branch
   <p>
-   This is the stable version of NuTyX. For this, every package is frozen at the time of it's release; only security updates will be applied.
+   This is the stable version of NuTyX.
+   For this, every package is frozen at the time of it's release.
   <p>
-   New packages can still be added.
+   The lifetime of a stable version varies between 1 and 3 months.
  <li>
-  The "development" (or "master") branch
+  The "rolling" branch
   <p>
-   It's the main line (master) of the GIT project for every available collection.
+   It's the main line (rolling) of the GIT project for every available collection.
   <p>
-   The update process is a "rolling release" mode during the entire life of the fixed version and its minor versions (about one year).
+   The update process is a "rolling release" mode during its entire life.
   <p>
-   Since all updates are large and frequent, the  "development" branch is most often not compatible with the fixed version of NuTyX.
-   In this case, merging into the "fixed" branch is never possible.
+   Since all updates are large and frequent, the "rolling" branch can be not compatible with the fixed version of NuTyX.
+  <p>
+   The lifetime of the rolling version is at least 1 year.
   </ul>
-<p>
- The "fixed" branch have a "limited lifetime" corresponding to the lifetime of the fixed version of NuTyX at that time. 
-
 
     <a name='ID100'></a>
     <h2>A chroot</h2>
