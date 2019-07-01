@@ -373,7 +373,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.0.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.1.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>

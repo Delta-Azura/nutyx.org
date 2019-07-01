@@ -7,13 +7,13 @@
  <p>
   If you choose to install the rolling version of NuTyX, you can directly proceed to <a href="#3">updating the meta data about available packages</a>
  <p>
-  If you choose to install the 11.0 version of NuTyX, you need to mount the ISO.
+  If you choose to install the 11.1 version of NuTyX, you need to mount the ISO.
   All the available packages are on it.
   Insert now the USB key containing the ISO.
   Depending where your USB key is found, adapt the command below to your need:
   <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
  <div class="important">
-   If you test the NuTyX 11.0 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
+   If you test the NuTyX 11.1 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
  </div>
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
