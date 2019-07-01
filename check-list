@@ -14,34 +14,22 @@
    3.1 Replace install-nutyx with the latest one for nutyx package on nutyx.org/install-nutyx
    3.2 adjust the md5sum signature of the install-nutyx script in place
 
+4. NuTyX_<arch>_..._<new_version>.iso
 
-4. Rsync 
+   4.1 the fixed BASE ISO in 64 bits
+   4.2 the rolling BASE ISO in 64 bits
+   4.2 the rolling MATE ISO in 64 bits
+   4.3 the rolling BASE ISO in 32 bits
 
-  4.1 the depots of x86_64: rsync -av --delete .rolling/ .fixed/
+5. forum.nutyx.org and forums.nutyx.org
 
-5. Links:
+   5.1 Change the registration validation string on both forums
+   5.2 Adjust the news with the <new_version> iso link
 
-   5.1 ln -svf .fixed <new_version> in x86_64
-   5.2 ln -svf .rolling <new_version> in i686
+6. nutyx.org
 
-6. NuTyX_<arch>_..._<new_version>.iso
-
-   6.1 the fixed BASE ISO in 64 bits
-   6.2 the rolling BASE ISO in 64 bits
-   6.3 the fixed MATE ISO in 64 bits
-   6.4 the rolling MATE ISO in 64 bits
-   6.5 the rolling BASE ISO in 32 bits
-
-7. forum.nutyx.org and forums.nutyx.org
-
-   7.1 Change the registration validation string on both forums
-   7.2 Adjust the news with the <new_version> iso link
-
-8. nutyx.org
-
-   8.1 Copy existing <lang>/contents/news to <lang>/old-news/<Year-Mounth-Day>.html
-
-   8.2 Make the news in english and in french with following points
+   6.1 Copy existing <lang>/contents/news to <lang>/old-news/<Year-Mounth-Day>.html
+   6.2 Make the news in english and in french with following points
 
         NuTyX <new_version> available with cards <version>
 
@@ -56,24 +44,24 @@
         Olds news
         Anciennes nouvelles
 
-  8.3 Replace  the <old_version> string to <new_version> string on nutyx.org website on every concerned pages
-  8.4 Adjust the download page
+  6.3 Replace  the <old_version> string to <new_version> string on nutyx.org website on every concerned pages
+  6.4 Adjust the download page
 
-9. GIT:
+7. GIT:
 
-   9.1 Create new tags with <new_version> for base-sysv, core, extra, gnome, mate, lxde, kde5, xfce4
-   9.2 Delete existing branch fixed and create new ones at latest tags <new_version> for base-sysv, core, extra, gnome, mate, lxde, kde5, xfce4
+   7.1 Create new tags with <new_version> for packages-x86_64 and packages-i686
+   7.2 Delete existing branch fixed and create new ones at latest tags <new_version> for packages-x86_64 and packages-i686
 
-10. download.nutyx.org
+8. download.nutyx.org
 
-    10.1 adjust Package List on nutyx.org
-    10.2 Send everything on the download.nutyx.org mirror
+    8.1 adjust Package List on nutyx.org
+    8.2 Send everything on the download.nutyx.org mirror
 
-11  fr.wikipedia.org/wiki/NuTyX
+9  fr.wikipedia.org/wiki/NuTyX
 
-    11.1 adjust the <new_version> and date of the NuTyX
-    11.2 add news features if applicable
+    9.1 adjust the <new_version> and date of the NuTyX
+    9.2 add news features if applicable
 
-12  Mailling List
+10  Mailling List
 
-    12.1 Send the news to the nutyx.annonce@nutyx.org
+    10.1 Send the news to the nutyx.annonce@nutyx.org
