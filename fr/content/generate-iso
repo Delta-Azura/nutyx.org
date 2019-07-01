@@ -6,7 +6,7 @@
   <h3>Assurez vous d'avoir installé les logiciels nécessaires</h3>
    <pre class="command"><kbd>cards install git cdrtools syslinux libisoburn grub-efi dosfstools</kbd></pre>
   <h3>Récupérer les outils</h3>
-   <pre class="command"><kbd>git clone https://gihub.com/NuTyX/packages-x86_64</kbd></pre>
+   <pre class="command"><kbd>git clone https://github.com/NuTyX/packages-x86_64</kbd></pre>
   <h3>La variable indispensable pour la construction sera utilisée tout au long du processus</h3>
    <p>
     La variable LFS DOIT être définie.
@@ -15,7 +15,7 @@
     La chroot sera donc dans le dossier "/ISO-MINI".
     Libre à vous de choisir un autre dossier.
   <h3>Installer le système de base</h3>
-   <pre class="command"><kbd>VERSION="rolling" install-nutyx</kbd></pre>
+   <pre class="command"><kbd>install-nutyx</kbd></pre>
   <h3>Copier les fichiers pour l'iso</h3>
    <pre class="command"><kbd>cp -av packages-x86_64/iso $LFS/ISO</kbd></pre>
  <h2>Génération de l'iso</h2>
