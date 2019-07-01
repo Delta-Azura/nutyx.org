@@ -1,6 +1,6 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-   La version stable actuelle de NuTyX est la <b>11.0</b>.
+   La version stable actuelle de NuTyX est la <b>11.1</b>.
   <p>
    Les ISOs sont disponibles en 64 bits "Fixed" et "Rolling" releases.
   <p>
@@ -30,7 +30,7 @@
       Taille
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20190413.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20190701.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
        Installation en mode BIOS ou EFI possible.
@@ -40,7 +40,7 @@
       L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
     </td>
     <td>
-      Environ 1.59 GO
+      Environ 1.69 GO
     </td>
    <tr class="odd">
     <td>
@@ -73,11 +73,11 @@
        Taille
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-11.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-11.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20190325.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20190701.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20190421.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20190701.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
       <td>
         Installation en mode BIOS ou EFI possible.
@@ -87,9 +87,9 @@
         L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-installation.
       </td>
       <td>
-       Environ 5.3 GO
+       Environ 5.4 GO
       <p>
-       Environ 383 MO
+       Environ 384 MO
       <p>
        Environ 309 MO
       </td>
@@ -319,7 +319,7 @@ VERSION="rolling"</pre>
 mount /dev/sda2 /mnt/hd</kbd></pre>
         <li>
          Installation de la NuTyX de base
-         <pre class="command"><kbd>VERSION="rolling" sh install-nutyx</kbd></pre>
+         <pre class="command"><kbd>sh install-nutyx</kbd></pre>
         <li>
          Une fois l'installation terminée, on peut à nouveau entrer dans la NutyX fraîchement installée via la commande:
          <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
@@ -332,9 +332,9 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         Pour installer une NuTyX 32 bits depuis une machine hôte 64 bits, on utilise la variable <i><b>ARCH</b></i>:
         <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
        <p>
-        Par défaut, ce sera la branche stable qui sera choisie à l'installation, il est possible de spécifier la branche que l'on souhaite installer.
-        Pour installer une NuTyX de la branche rolling, on spécifie le nom de la branche via la variable <i><b>VERSION</b></i>
-        <pre class="command"><kbd>VERSION="rolling" sh install-nutyx</kbd></pre>
+        Par défaut, ce sera la branche rolling qui sera choisie à l'installation, il est possible de spécifier la branche que l'on souhaite installer.
+        Pour installer une version spécifique de NuTyX, on utilise la variable <i><b>VERSION</b></i>. A condition que la version existe sur le miroir de dépot:
+        <pre class="command"><kbd>VERSION="development" sh install-nutyx</kbd></pre>
        <p>
         Par défaut, ce sera l'URL par défaut qui sera utilisée lors du téléchargement et la configuration de la NuTyX.
         Pour spécifier une URL personalisée, on utilise la variable <i><b>URL</b></i>
