@@ -1,59 +1,71 @@
-<h1>Latest news 2019-03-25</h1>
+<h1>Latest news 2019-07-01</h1>
 
-<h2>NuTyX 11 available with cards 2.4.96</h2>
+<h2>NuTyX 11.1 available with cards 2.4.98</h2>
 <p>
- I'm very please to announce the new NuTyX 11 release.
+ I'm very please to announce the new NuTyX 11.1 release.
 <p>
- The NuTyX 11 is a complete recompilation of all the available binaries on NuTyX.
+ This new version contains more then 1000 packages upgrade.
 <p>
- Since everything has been recompiled, most of the packages have been update as well.
+ A 32 bits version of NuTyX 11.1 is now available as well.
 <p>
- The base of NuTyX comes with the new kernel LTS 4.19.28 and the very new kernel 5.0.3.
+ The base of NuTyX comes with the new kernel LTS 4.19.56 (4.9.183 for the 32 bits version) and the very new kernel 5.1.15 (in 64 bits only).
 <p>
- The toolchain is completely rebuild around glibc 2.29, gcc 8.3.0 and binutils 2.32.
+ The gnu compiler is now the gcc 9.1.0.
 <p>
- The graphical server is now in xorg-server 1.20.4, the mesa lib in 18.3.4, gtk3 3.24.3, qt 5.12.1.
+ The graphical server is now in xorg-server 1.20.5, the mesa lib in 18.3.6, gtk3 3.24.9, qt 5.12.4.
 <p>
- The python 3.7.2 and 2.7.16 are updated as well
+ The python 3.7.3 and 2.7.16 are updated as well
 <p>
- The MATE Desktop Environment comes in 1.22 the very last version as well.
+ The MATE Desktop Environment comes in 1.22.1 the very last version as well.
 <p>
- The KDE Desktop plasma in 5.15.3, Framework in 5.56.0 and applications in 18.12.3
+ The KDE Desktop plasma in 5.16.2, Framework in 5.59.0 and applications in 19.04.2
 <p>
- Browsers firefox in 65.0.2 and chromium in  72.0.3626.121 (build by the archlinux team)
+ Browsers firefox in 67.0.4 and chromium in 74.0.3729.169 (build by the archlinux team and only in 64 bits)
 <p>
- Many desktop applications have been updated as well like thunderbird 60.5.1, Scribus 1.5.5, libreoffice 6.2.0.3, gimp 2.10.8, etc.
+ Many desktop applications have been updated as well like thunderbird 60.7.2, Scribus 1.5.5, libreoffice 6.2.4.2, gimp 2.10.12, etc.
 <p>
- 2 news BASE ISO are available.
-<p>
- The first ISO is a base NuTyX "rolling" version with a size of 385 Mbytes and the second ISO is a base NuTyX "fixed" version which contains a completed binaries repository of the 11.0 NuTyX.
- It's size is 5.3 Gbytes.
-<p>
- With this last ISO, you can install a complete NuTyX  11.0 without having to use internet.
-<p>
- To install packages from this ISO, onces your base system is installed, configured and booting, it's just a question of mounting the media on the <b>/mnt</b> mounting point.
-<p>
- Suppose you media is found under <b>/dev/sdc1</b>, uses following command to mount it:
-  <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
- Adapt in consequence.
-<p>
+ 4 news ISOs are available.
+ <ul>
+  <li>
+  <b><i>in 64 bits:</i></b>
+   <p>
+    The first ISO is a base NuTyX "rolling" version with a size of 384 Mbytes.
+   <p>
+    A 5.3 GBytes ISO base NuTyX "fixed" version which contains a completed binaries repository of the 11.1 NuTyX.
+    You can install a complete NuTyX 11.1 without having to use internet.
+    To install packages from this ISO, onces your base system is installed, configured and booting,
+    it's just a question of mounting the media on the <b>/mnt</b> mounting point.
+   <p>
+    Suppose you media is found under <b>/dev/sdc1</b>, uses following command to mount it:
+    <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
+    Adapt in consequence.
+   <p>
+    A 1.7 GByte MATE desktop in "rolling" version.
+  <li>
+  <b><i>in 32 bits:</i></b>
+   <p>
+    A 310 Mbytes ISO base NuTyX "rolling" version.
+  
+ </ul><p>
  ISOs are available on <a href="downloads">the download page.</a>
-<p>
- The installer has been spit in two installation modes: Simple and Advanced installation mode.
-<p>
- Available graphical interfaces are:
- kde5, mate, xfce4, lxde, lxqt, gnome, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
 <h2>CARDS</h2>
  <p>
-  CARDS is now able to track orphelin packages and take care of them... by removing them automaticaly :)
- <p>
-  Locales are now beter treated, as they are automaticaly installed when they are available.
-  For example if we install libreoffice, the correct locale will be installed automatically.
+  CARDS is now able to track obsolets packages.
+  A package is obsolet when it's not available anymore on the remote server.
+  Such a package is delete automaticaly from your local installation if installed. 
 <h2>Upgrade process</h2>
 <p>
- Since this is a major release, an update is not recommanded.
+ Since this is a minor release, an upgrade is possible.
 <p>
- The best way to test this new version it's by remove your existing one and install the new one, possible from this ISO. Your personnal data files won't be touched
+ For a successfull upgrade, the 'cards' package need to be update first.
+<p>
+ Please use following commands to proceed:
+ <pre class="command_user"><kbd>check</kbd></pre>
+ We then update cards first:
+ <pre class="command_user"><kbd>up cards</kbd></pre>
+ We can now finish the upgrade process:
+ <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
+
 <h2>Old news</h2>
  Old news are now available <a href="old-news/?C=N;O=D">here</a>.
 
