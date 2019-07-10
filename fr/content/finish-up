@@ -204,6 +204,10 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
          <td>
           <pre class="command_user"><kbd>get xorg-xf86-video-openchrome</kbd></pre>
      </table>
+  <h2>Installation du pilote de votre écran tactile</h2>
+   Si votre machine utilise un écran tactile,
+   vous pouver installer le pilote prenant en charge la majorité des écrans tactile:
+   <pre class="command_user"><kbd>get xorg-xf86-input-wacom</kbd></pre> 
   <h2>Les applications utiles</h2>
     Vous installez maintenant les outils qui vous semblent utiles:
    <h3>Gestion des fichiers compressés</h3>
