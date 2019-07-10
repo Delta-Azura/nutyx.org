@@ -201,6 +201,9 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
          <td>
           <pre class="command_user"><kbd>get xorg-xf86-video-openchrome</kbd></pre>
      </table>
+ <h2>Touch screen Driver</h2>
+   If your machine use a touch screen, you could install the driver for it:
+   <pre class="command_user"><kbd>get xorg-xf86-input-wacom</kbd></pre>
  <h2>Usefull applications</h2>
     You should now install a few tools that might be very useful:
   <h3>Compressed files tools</h3>
