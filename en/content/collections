@@ -2,23 +2,23 @@
  <h2>Introduction</h2>
    They are a lot of synonyms for defining a set of packages in the informatics jargon.
   <p>
-   Under NuTyX, a set of packages is holded in a collection.
+   Under NuTyX, a set of packages is held in a collection.
   <p>
-   A collection include 3 fondamentals properties:
+   A collection includes 3 fundamental properties:
    <ul>
      <li>
-      Independant
+      Independent
      <li>
-      Hierachy
+      Hierarchy
      <li>
-      Interdepencies between thems
+      Interdepencies between them
    </ul>
-   Even if thoses properties could look contradictory, we will see in this tutorial why they are justified.
+   Even if these properties could look contradictory, we will see in this tutorial why they are justified.
      
  <h2>Definition</h2>
    Under NuTyX, a collection is a set of recepts and binaries packages.
-   This set provide certains functionnalities.
-   Those functionnalities are organised as follow:
+   This set provide certain functionalities.
+   These functionalities are organised as follows:
    <ul>
     <li>
      Librairies and utilities for a base system
@@ -27,17 +27,17 @@
     <li>
      Librairies and utilities for a graphical user interface (GUI)
     <li>
-     Extras librairies and utilities for a command line interface (CLI)
+     Extras librairies and utilities for a command line interface (CLI-extra)
     <li>
-     Extras librairies and utilities for a graphical user interface (GUI)
+     Extras librairies and utilities for a graphical user interface (GUI-extra)
     <li>
-     Graphical interface XXX
+     Graphical interface XXX (e.g. kde5)
     <li>
-    Extra graphical interface XXX-extra
+    Extra graphical interface XXX-extra (e.g. kde5-extra)
     <li>
-    Non open Sources Ports
+    Non open Sources Ports (nos)
    </ul>
-    At the moment, are availables as collections, following graphical interfaces:
+    At the moment, all of  following graphical interfaces are available as collections:
     <ul>
      <li>
       XFCE4
@@ -51,15 +51,15 @@
       LXQT
     </ul>
   <h2>Collections management via cards</h2>
-   Because of they concept, each collection contains it's own meta-data files.
-   When adding / removing a package from a collection, only the meta-datas file of this collection will be modify.
-   This property offer a maximal flexibility to the users and to the Package manager.
+   Because of their concept, each collection contains it's own meta-data files.
+   When adding / removing a package from a collection, only the meta-data files of this collection will need to be modified.
+   This property offers maximum flexibility to the users and to the Package manager.
   <h2>Collections hierachy</h2>
-   The hierachy of thoses collections is an important concept. 
+   The hierachy of collections is an important concept. 
     <p>
     Here the symbol "->" should be interpreted as "depends on"
     <p>
-     Here is the fondamental rule:
+     Here is the fundamental rule:
     <p>
      XXX-extra -> XXX -> gui -> cli -> base
     <p>
@@ -87,15 +87,15 @@
       <li>
        A package from the <i>mate</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i>, <i><u>gui</u></i> or <i><u>mate</u></i> collections. 
      </ul>
-     Same principle for the others graphical interfaces <i>lxde, lxqt, kde5 and xfce4</i>
+     The Same principle applies for the others graphical interfaces <i>lxde, lxqt, kde5 and xfce4</i>
 
   <h2>Interdependancies</h2>
-    The NuTyX collections are inter dependends in the following way: 
+    The NuTyX collections are interdependent in the following ways: 
     <ul>
      <li>
       <b>base</b>:
-       The <i>base</i> collection is the set of a minimum base system, it will be always needed.
-       All the others collections depends then on this <i>base</i> collection.
+       The <i>base</i> collection is the set of a minimum base system, it will always be needed.
+       All the others collections depend then on the <i>base</i> collection.
     <li>
      <b>cli</b>:
        The <i>cli</i> collection contains all the libraries and applications used by a command line interface.
@@ -104,7 +104,7 @@
     <li>
      <b>gui</b>:
       The <i>gui</i> collection contains all the libraries and applications used by a graphical interface.
-      The <i>base</i> and <i>cli</i> collections are the dependancies of the <i>gui</i> collection.
+      The <i>base</i> and <i>cli</i> collections are dependancies of the <i>gui</i> collection.
     <li>
      <b>cli-extra</b>:
       The <i>cli-extra</i> collection contains applications used by a command line interface.
@@ -117,14 +117,14 @@
     <p>
      The <i>base</i>, <i>cli</i> and <i>gui</i> are the dependencies of the <i>gui-extra</i> collection.
     <li>
-     <b>mate et mate-extra</b>:
+     <b>mate and mate-extra</b>:
       The <i>mate</i> and <i>mate-extra</i> contains respectively a minimalist version of the interfaces and it's applications and others extensions.
      <p>
       The <i>base</i>, <i>cli</i> and <i>gui</i> collections are the dependencies of the <i>mate</i> collection.
      <p>
       The <i>base</i>, <i>cli</i>, <i>gui</i> and <i>mate</i> are the dependancies of the <i>mate-extra</i> collection.    
     <li>
-     <b>xxx et xxx-extra</b>:
+     <b>xxx and xxx-extra</b>:
       Same principle as for the <i>mate</i> and <i>mate-extra</i> collections.
 
    </ul>
@@ -207,4 +207,4 @@
      nos
    </ul>
   <h2>And now ?</h2>
-   Collections have no secrets for you anymore, time to try to <a href="build-in-chroot">compile in an isolated chroot</a>.
+   Collections have no more secrets for you. Now is the time to try to <a href="build-in-chroot">compile in an isolated chroot</a>.
