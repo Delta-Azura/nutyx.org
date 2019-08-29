@@ -27,8 +27,8 @@
  <li>
    Enter this working directory.
  <li>
-   Check that all the dependencies of the package are installed in NuTyX.
-   (otherwise the build will not succeed)
+   Check that all the dependencies of the package are installed in NuTyX
+   (otherwise the build will not succeed).
  <li>
    Type the three magic commands (in most cases; there are exceptions):
 </ul>
@@ -40,7 +40,7 @@ make install</pre>
 <p>
   That's it! Your new program is built and installed on your NuTyX system.
 <p>
-  That's one way to go... but as you can see, there are a few disadvantages:
+  That's one way to do it... but as you can see, there are a few disadvantages:
 <ul>
  <li>
    You do not know what files have been installed.
@@ -56,7 +56,7 @@ make install</pre>
 <p>
   NuTyX has nice tools to help you with the integration of new programs.
   You will be then able to track them and maintain them.
-  The package manager will treat them like other NuTyX packages.
+  The package manager will treat them like any other NuTyX packages.
 <p>
   I suggest you to have a look <a href="faq#4">at the FAQ</a> to get an idea about the compilation modus under NuTyX.
 <p>
