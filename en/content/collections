@@ -23,13 +23,13 @@
     <li>
      Librairies and utilities for a base system
     <li>
-     Librairies and utilities for a command line interface (CLI)
+     Librairies and utilities for a command line interface (cli)
     <li>
-     Librairies and utilities for a graphical user interface (GUI)
+     Librairies and utilities for a graphical user interface (gui)
     <li>
-     Extras librairies and utilities for a command line interface (CLI-extra)
+     Extra librairies and utilities for a command line interface (cli-extra)
     <li>
-     Extras librairies and utilities for a graphical user interface (GUI-extra)
+     Extra librairies and utilities for a graphical user interface (gui-extra)
     <li>
      Graphical interface XXX (e.g. kde5)
     <li>
@@ -89,13 +89,13 @@
      </ul>
      The Same principle applies for the others graphical interfaces <i>lxde, lxqt, kde5 and xfce4</i>
 
-  <h2>Interdependancies</h2>
+  <h2>Interdependencies</h2>
     The NuTyX collections are interdependent in the following ways: 
     <ul>
      <li>
       <b>base</b>:
        The <i>base</i> collection is the set of a minimum base system, it will always be needed.
-       All the others collections depend then on the <i>base</i> collection.
+       All the others collections depend on the <i>base</i> collection.
     <li>
      <b>cli</b>:
        The <i>cli</i> collection contains all the libraries and applications used by a command line interface.
@@ -104,12 +104,12 @@
     <li>
      <b>gui</b>:
       The <i>gui</i> collection contains all the libraries and applications used by a graphical interface.
-      The <i>base</i> and <i>cli</i> collections are dependancies of the <i>gui</i> collection.
+      The <i>base</i> and <i>cli</i> collections are dependencies of the <i>gui</i> collection.
     <li>
      <b>cli-extra</b>:
       The <i>cli-extra</i> collection contains applications used by a command line interface.
     <p>
-      The <i>base</i> and <i>cli</i> collections are the dependancies of the <i>gui</i> collection.
+      The <i>base</i> and <i>cli</i> collections are the dependencies of the <i>gui</i> collection.
 
     <li>
      <b>gui-extra</b>:
@@ -122,7 +122,7 @@
      <p>
       The <i>base</i>, <i>cli</i> and <i>gui</i> collections are the dependencies of the <i>mate</i> collection.
      <p>
-      The <i>base</i>, <i>cli</i>, <i>gui</i> and <i>mate</i> are the dependancies of the <i>mate-extra</i> collection.    
+      The <i>base</i>, <i>cli</i>, <i>gui</i> and <i>mate</i> are the dependencies of the <i>mate-extra</i> collection.    
     <li>
      <b>xxx and xxx-extra</b>:
       Same principle as for the <i>mate</i> and <i>mate-extra</i> collections.
