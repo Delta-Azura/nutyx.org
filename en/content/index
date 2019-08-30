@@ -91,9 +91,13 @@
       <li>
        <a class="url" href="https://forums.nutyx.org">the forums</a>
       <li>
+       <a class="url" href="http://webchat.freenode.net/?channels=nutyx">the IRC channel (direct access without plugin)</a>
+      <li>
        <a class="url" href="https://distrowatch.com/table.php?distribution=nutyx">Distrowatch</a>
       <li>
        <a class="url" href="https://www.linuxquestions.org/questions/nutyx-125/">LinuxQuestions.org</a>
+      <li>
+       <a class="url" href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">YouTube</a>
       <li>
        <a class="url" href="https://github.com/NuTyX">github (NuTyX sourcecode).</a>
     </ul>
