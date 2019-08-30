@@ -20,7 +20,7 @@
      it seldom use the more complex options of the bash language.
    </ul>
    <p>
-    So let's start <img src="../graphics/smiley-wink.gif" alt="Wink" title="Wink" /> our little course on the bash programming 
+    So let's start <img src="../graphics/smiley-wink.gif" alt="Wink" title="Wink" /> our little course on bash programming. 
    <p>
     This article will explain some basic features of the language that are good to know to comprehend the syntax of a recipe:
   <h2>Declaring a variable</h2>
@@ -44,7 +44,7 @@ ${_name}     # so does this
 $_name       # wrongly interpreted and won't work</pre>
    <p>
     In order to see the result of this command, I suggest you create a little file containing this code.
-    You can call the file DeclareVar
+    You can call the file DeclareVar:
     <pre>name=kernel
 echo "The variable name contains the value: ${name}"</pre>
    <p>

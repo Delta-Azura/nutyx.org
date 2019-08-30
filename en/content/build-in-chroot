@@ -7,7 +7,7 @@
  <h2>Adjust /etc/cards.conf</h2>
   <p>
    To be able to install the compiled packages from your chroot, you need to adjust your <b>/etc/cards.conf</b> file.
-   You will add on the top of this file:
+   You will add on to the top of this file:
    <pre class="output">dir /mnt/hd/usr/ports/perso</pre>
   <p>
    You are now ready to proceed with your chroot.
@@ -44,7 +44,7 @@ EOF</kbd></pre>
    <p>
     Folder /var/log/pkgbuild will contain compilation logs.
    <p>
-    I don't need any specific NLS files, they can be all installed.
+    I don't need any specific NLS files, they can all be installed.
    <p>
     The folder /usr/ports/base defines the base system when the command <b>cards base -r</b>.
     is used.
@@ -80,9 +80,9 @@ PKGMK_CLEAN="no"
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 EOF</kbd></pre>
     <p>
-     It's very important to check all the variables so that the duo <b>pkgmk/cards</b> works fine and as expected.
+     It's very important to check all the variables so that the duo <b>pkgmk/cards</b> works fine as expected.
     <p>
-     Source codes are stored in a common folder. I want to keep them even after a successfull compilation.
+     Source codes are stored in a common folder. I want to keep them even after a successful compilation.
     <p>
      The produced binaries are compressed in <b>xz</b> format.
     <p>
@@ -92,7 +92,7 @@ EOF</kbd></pre>
 
  <h2>Binaries synchronisation via rsync</h2>
     <p>
-     This operation consists of download of all the binaries of the <b>base, cli and gui</b> collection. 
+     This operation consists of a download of all the binaries of the <b>base, cli and gui</b> collection. 
      It can take a while depending on the speed of your internet connection.
     <p>
      Luckily, this operation has to be done only once.
@@ -117,10 +117,10 @@ done</kbd></pre>
 
  <h2>Compilation and installation of your package</h2>
   <p>
-   You start to create the folder where you want to locate your new package. Let's call it <b>mypackage</b> (you need to adjust to your real one)
+   You start by creating the folder where you want to locate your new package. Let's call it <b>mypackage</b> (you need to adjust this name to your package)
    <pre class="command"><kbd>mkdir /usr/ports/perso/mypackage</kbd></pre>
   <p>
-   We just need to create the build recipe of our package (you need to adjust to your real one):
+   We just need to create the build recipe of our package (you need to adjust this to your real recipe):
    <pre class="output"># Depends on: python gtk3 librsvg
 description="My first package with plenty of  dependancies"
 packager="francis perrin"
@@ -144,7 +144,7 @@ build() {
 
  <h2>Conclusion</h2>
    <p>
-    Following commands should be used:
+   The following commands should be used:
       <pre class="command"><kbd>cards level
 cards base -r
 cards create -r</kbd></pre>
