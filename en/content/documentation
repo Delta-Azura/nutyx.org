@@ -82,7 +82,7 @@
    </tr>
    <tr class="odd">
     <td class="lien_article" >
-      <a class="url" href="setup-nfs">Setup of a NFS serveur</a>
+      <a class="url" href="setup-nfs">Setup of a NFS server</a>
     </td>
     <td>
      This little guide explains how to setup an NFS server on NuTyX.

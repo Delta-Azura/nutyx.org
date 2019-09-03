@@ -2,10 +2,10 @@
  <h2>Introduction</h2>
   <p>
    An http server can be useful if we want to test some html pages on a real browser.  
-   If we want to create our own website to be locally accessible from home or why not make it public on the net.
+    It will allow us to create our own website that is locally accessible from a home network. In addition, an http server also allows us to make a webpage that can be made public for all of the internet.
  <h2>Packages to install</h2>
   <p>
-   To install and activate the http service, you will see, it's very simple.
+   The installation and activation of the http service is very simple.
    Open a terminal and enter the command:
    <pre class="command_user"><kbd>get apache apache.service</kbd></pre>
   <p>
@@ -15,9 +15,9 @@
    The default configuration of the apache http server is basic.  
    It is recommended you make a custom configuration.
   <p>
-   An example follows, starting to create a customised html file.
+   The example that follows shows the creation of a customised html file.
   <p>
-   As root:
+   This command is ran as root:
    <pre class="command"><kbd>cat &gt; /srv/www/index.html &lt;&lt; EOF
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
      "http://www.w3.org/TR/html4/strict.dtd"&gt;
@@ -37,4 +37,4 @@ EOF</kbd></pre>
    <pre class="command"><kbd>/etc/rc.d/init.d/httpd start</kbd></pre>
    <pre class="output">  *   Starting Apache HTTP daemon... [  OK  ]</pre>
   <p>
-   You can check the result of your work by going to the URL address: <a href=http://localhost/>http://localhost/</a> with your favourite browser
+   You can check the result of your work by going to the URL address: <a href=http://localhost/>http://localhost/</a> with your favorite browser.

@@ -31,18 +31,18 @@
   <h3>Put the kernel and the initrd in the right place</h3>
       <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf</kbd></pre>
 
-  <h3>In Option, install the EFI's installation packages</h3>
+  <h3>Suggested Option, install the EFI's installation packages</h3>
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
 
-  <h3>In Option, install wifi and mouse support</h3>
+  <h3>Suggested Option, install wifi and mouse support</h3>
    <pre class="command"><kbd>get wireless-tools wpa-supplicant gpm gpm.service</kb></pre>
 
   <h3>Locales</h3>
    <p>
-    It's no no need to install your own locale, the command:
+    There is no need to install your own locale, the command:
     <pre class="command"><kbd>cards upgrade</kb></pre>
-    will install automaticaly all the packages locale define at the post-configuration.
-  <h3>In Option, install all the extras packages you want</h3>
+    will automatically install all the package locales defined during post-configuration.
+  <h3>Suggested Option, install all of the extra packages you want</h3>
    <pre class="command"><kbd>get ...</kb></pre>
 
   <h3>Flush the binary archives</h3>
