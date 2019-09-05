@@ -111,6 +111,16 @@
      It's up to you to add all the packages you want when you install the kernel, which is the minimum required.
     </td>
    </tr>
+   <tr class="even">
+    <td width="30%" class="lien_article" >
+      <a class="url" href="sysvinit">Brief SysVinit overview</a>
+    </td>
+    <td  width="40%">
+	 A brief walkthrough on SysVinit. Describes runlevels and provides
+	the bare essentials to aid a user in quickly understanding and managing
+	their system.
+    </td>
+   </tr>
   </table>   
  <h2>Contributor's Guides</h2>
 
