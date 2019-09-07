@@ -184,15 +184,20 @@ Updating collection base
     <h3>Créer le fichier Pkgfile</h3>
      <p>
       Completez le fichier <b>/usr/ports/personnel/clipit/Pkgfile</b> avec ceci:
-      <pre class="command"><kbd># Depends on: gtk2
-description="ClipIt is a lightweight GTK+ clipboard manager."
+      <pre class="command"><kbd>description="ClipIt is a lightweight GTK+ clipboard manager."
 url="http://clipit.rspwn.com/"
+
 maintainer="Gilberto Xyhthyx &lt;xyhthyx at gmail dot com&gt;"
 packager="François Perrin"
+
+makedepends=(gtk2)
+
 name=clipit
 version=1.4.2
 release=1
+
 source=(https://github.com/downloads/shantzu/ClipIt/$name-$version.tar.gz)
+
 build() {
   cd $name-$version
   ./configure --prefix=/usr \

@@ -309,7 +309,7 @@ make DESTDIR=$PKG install
       If a package named <i>BBBB</i> contains a <a href="#ID006">dependency</a> named <i>AAAA</i>, this package will be at second level: level 1 (one).
      <p>
       The list of <a href="#ID006">dependencies</a> for the compilation of a <a href="#ID005">package</a> is defined by the line:
-<pre class="output"># Depends on: glib atk pango gtk xorg-libx11</pre>
+<pre class="output">makedepends=(glib atk pango gtk xorg-libx11)</pre>
      <p>
       in a <a href="#ID080">Pkgfile</a>.
    <a name='ID300'></a>

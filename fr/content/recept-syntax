@@ -18,9 +18,6 @@
      <li>
       La fonction de construction build() { ..}
      </ul> 
-   <h3># Depends on:</h3>
-    <h4>Description</h4>
-    <h4>Syntaxe</h4>
    <h3>description</h3>
     <h4>Description</h4>
     <h4>Syntaxe</h4>
@@ -33,6 +30,11 @@
     <pre class="output"></pre>
     <pre class="command"><kbd></kbd></pre>
    <h3>maintainer</h3>
+    <h4>Description</h4>
+    <h4>Syntaxe</h4>
+    <pre class="output"></pre>
+    <pre class="command"><kbd></kbd></pre>
+   <h3>makedepends</h3>
     <h4>Description</h4>
     <h4>Syntaxe</h4>
     <pre class="output"></pre>

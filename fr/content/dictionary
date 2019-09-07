@@ -248,7 +248,7 @@ make DESTDIR=$PKG install
      <p>
       La liste des <a href="#ID006">dépendances</a> de compilation d'un <a href="#ID005">paquet</a> 
       se définit à la ligne:
-<pre class="output"># Depends on: glib atk pango gtk xorg-libx11</pre> du <a href="#ID080">Pkgfile</a>.
+<pre class="output">makedepends=(glib atk pango gtk xorg-libx11)</pre> du <a href="#ID080">Pkgfile</a>.
 
      <a name='ID300'></a>
     <h2>Les alias</h2>

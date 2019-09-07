@@ -157,15 +157,18 @@ Updating collection base
      <h3>Package creation</h3>
      <p>
       Complete the <b>/usr/ports/personal/clipit/Pkgfile</b> file with this:
-      <pre class="command"><kbd># Depends on: gtk
-description="ClipIt is a lightweight GTK+ clipboard manager."
+      <pre class="command"><kbd>description="ClipIt is a lightweight GTK+ clipboard manager."
 url="http://clipit.rspwn.com/"
+
 maintainer="Gilberto Xyhthyx &lt;xyhthyx at gmail dot com&gt;"
 packager="François Perrin"
+
+makedepends=(gtk)
 
 name=clipit
 version=1.4.2
 release=1
+
 source=(https://github.com/downloads/shantzu/ClipIt/$name-$version.tar.gz)
 build() {
   cd $name-$version

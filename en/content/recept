@@ -5,7 +5,8 @@
     The command <b>pkgmk</b> will be used to &quot;build&quot; the package, which can be installed afterwards.
    <p>
     This means that this directory must contain as a minimum a file named <b><span style="color: #007a00;">Pkgfile</span></b>.
-    The building of the package will be controlled by the contents of this file. It contains all the information necessary to compile and install the package from source.
+    The building of the package will be controlled by the contents of this file.
+    It contains all the information necessary to compile and install the package from source.
    <p>
     The name <b>port</b> comes from the BSD world where a port refers to software &quot;ported&quot; to another operating system or platform.
     In our case, the port is simply the definitions for building a package.
@@ -18,7 +19,8 @@
      <li>
       <i><b>version:</b></i> the version of the sources of the package.
      <li>
-      <i><b>release:</b></i> the nth attempt at building the package. Its value will always start at <b><i><u>1</u></i></b>
+      <i><b>release:</b></i> the nth attempt at building the package.
+      Its value will always start at <b><i><u>1</u></i></b>
      <li>
       <i><b>source:</b></i> the address of the sources of the package we want to build.
      <li>
@@ -60,19 +62,19 @@ make DESTDIR=$PKG install
     since the variable <u>version</u>=2.6.4
   <h2>Practical example of a port</h2>
    <h3>The xfce4-libutil/Pkgfile file</h3>
-    <pre class="output"># Depends on: glib intltool
-
-description="libxfce4util, base library for Xfce"
+    <pre class="output">description="libxfce4util, base library for Xfce"
 url="http://docs.xfce.org/"
-maintainer="git.xfce.org/xfce/xfce4-libutils"
-packager="tyrry at nutyx dot org, tnut at nutyx dot org"
 
-_name=libxfce4util
+maintainer="git.xfce.org/xfce/xfce4-libutils"
+packager="tnut <tnut@nutyx.org>"
+
+makedepends=(glib intltool)
 
 name=xfce4-libutil
 version=4.8.2
 release=1
 
+_name=libxfce4util
 source=(http://archive.xfce.org/src/xfce/${_name}/${version%.*}/${_name}-$version.tar.bz2)
 
 build() {
@@ -91,9 +93,9 @@ build() {
      Dependencies starting from the NuTyX base are always included.
      Indeed the bot will always build the package by starting from the NuTyX base.
     <p>
-     The line <b># Depends on: </b> is used for this purpose.
+     The line <b>makedepends=(...)</b> is used for this purpose.
      It defines all the needed dependencies for the <b>compilation</b> of the package.
-     Dependencies are separated by a comma, a space or both <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+     Dependencies are separated a space<img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
 
  <h2>Conclusion</h2>
  <p>

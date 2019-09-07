@@ -1,15 +1,12 @@
 <h1>Qu'est-ce qu'un port ?</h1>
  <h2>Introduction</h2>
   <p>
-   Le port est un dossier contenant un certain nombre de fichiers (au minimum 1)
-   nécessaire pour la construction d'un paquet.
+   Le port est un dossier contenant un certain nombre de fichiers (au minimum 1) nécessaire pour la construction d'un paquet.
    La commande <b>pkgmk</b> permet de "construire" le paquet qui sera ensuite installable.
   <p>
-   Pour être fonctionnel, ce dossier doit contenir au minimum un fichier
-   appelé <b><span style="color: #007a00;">Pkgfile</span></b>.
+   Pour être fonctionnel, ce dossier doit contenir au minimum un fichier appelé <b><span style="color: #007a00;">Pkgfile</span></b>.
    C'est grâce à ce fichier que la construction du paquet peut se faire.
-   Le contenu de Pkgfile contient toutes les informations nécéssaires
-   pour la construction ou plus exactement la compilation du paquet depuis les sources.
+   Le contenu de Pkgfile contient toutes les informations nécéssaires pour la construction ou plus exactement la compilation du paquet depuis les sources.
   <p>
    Le nom <i>port</i> est emprunté du monde BSD où un port se réfère à un logiciel
    "porté" sur un système d'exploitation ou une plateforme.
@@ -23,7 +20,8 @@
      <li>
       <i><b>version</b></i> spécifie la version des sources du paquet.
      <li>
-      <i><b>release</b></i> spécifie la N'ième tentative de construction du paquet. Sa valeur commence donc toujours à <b><i><u>1</u></i></b>
+      <i><b>release</b></i> spécifie la N'ième tentative de construction du paquet.
+      Sa valeur commence donc toujours à <b><i><u>1</u></i></b>
      <li>
       <i><b>source</b></i> contient l'adresse des sources du paquet que l'on souhaite empaqueter.
      <li>
@@ -67,19 +65,20 @@ make DESTDIR=$PKG install
     puisque la variable <u>version</u>=2.6.4
  <h2>Exemple pratique d'une recette</h2>
   <h3>Le fichier xfce4-libutil/Pkgfile</h3>
-   <pre class="output"># Depends on: glib intltool
-
-description="libxfce4util, base library for Xfce"
+   <pre class="output">description="libxfce4util, base library for Xfce"
 url="http://docs.xfce.org/"
-maintainer="git.xfce.org/xfce/xfce4-libutils"
-packager="tyrry at nutyx dot org, tnut at nutyx dot org"
 
-_name=libxfce4util
+maintainer="git.xfce.org/xfce/xfce4-libutils"
+packager="tnut <tnut@nutyx.org>"
+contributors="Tyrry, Geantbrun"
+
+makedepends=(glib intltool)
 
 name=xfce4-libutil
 version=4.8.2
 release=1
 
+_name=libxfce4util
 source=(http://archive.xfce.org/src/xfce/${_name}/${version%.*}/${_name}-$version.tar.bz2)
 
 build() {
@@ -95,10 +94,9 @@ make DESTDIR=$PKG install
     et ce en partant toujours d'une NuTyX de base.
     En effet le serveur construira toujours le paquet en partant de la même base.
    <p>
-    La ligne <b># Depends on:</b> est utilisée à cet effet,
+    La ligne <b>makedepends=(..)</b> est utilisée à cet effet,
     elle définie donc les dépendances nécéssaires à la <u>compilation</u> du paquet.
-    On y indique une dépendance séparée par un espace, une virgule
-    ou les deux.<img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+    On y indique les dépendances nécéssaires séparées par un espace.<img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
     
  <h2>Conclusion</h2>
  <p>

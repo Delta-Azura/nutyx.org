@@ -121,10 +121,13 @@ done</kbd></pre>
    <pre class="command"><kbd>mkdir /usr/ports/perso/mypackage</kbd></pre>
   <p>
    We just need to create the build recipe of our package (you need to adjust this to your real recipe):
-   <pre class="output"># Depends on: python gtk3 librsvg
-description="My first package with plenty of  dependancies"
-packager="francis perrin"
+   <pre class="output">description="My first package with plenty of  dependancies"
 url="http://www.my-first-package.org/"
+
+packager="francis perrin"
+
+makedepends=(python gtk3 librsvg)
+
 name=mypackage
 version=1.0.0
 release=1

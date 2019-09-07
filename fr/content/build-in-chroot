@@ -119,10 +119,13 @@ done</kbd></pre>
    <pre class="command"><kbd>mkdir /usr/ports/perso/monpaquet</kbd></pre>
   <p>
    On crée maintenant la recette (à adapter avec votre paquet réel):
-   <pre class="output"># Depends on: python gtk3 librsvg
-description="Mon premier paquet de la mort avec des dépendances"
-packager="francis perrin"
+   <pre class="output">description="Mon premier paquet de la mort avec des dépendances"
 url="http://www.mon-premier-paquet.org/"
+
+packager="francis perrin"
+
+makedepends=(python gtk3 librsvg)
+
 name=monpaquet
 version=1.0.0
 release=1
