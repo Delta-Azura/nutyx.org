@@ -49,6 +49,7 @@
 <p>
  Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 <h2>CARDS</h2>
+<h3>Les 6 collections officielles de la NuTyX 11.2</h3>
 <p>
  Le nombre de collection officielles est désormais de 6:
 <p>
@@ -70,16 +71,20 @@
    Tous les bureaux supportés sous NuTyX sont donc dans la collection <b><u><i>desktops</i></u></b>
  <p>
    Les collections <i>nos, lxde, mate, kde5, gnome et xfce4</i> seront supprimés des serveurs de depot.
- <p>
+ <div class="important">
    Il est donc primordial de mettre à jour <b>manuellement</b> le fichier de configuration <i>/etc/cards.conf></i> comme expliqué ci-après.
    Une mise à jour réussie ne peux se faire sans cette manipulation. 
+ </div>
+<h3>Un jeu de paquets</h3>
 <p>
  Le concept de "jeu de paquets" est introduit.
  Un jeu de paquets est un ensemble de paquets permettant d'ajouter une fonctionnalitée importante comme un bureau graphique.
  Désormais les bureaux principaux sont donc considérés comme des jeux de paquets.
 <p>
- Pour installer un bureau supporté sous NuTyX, dans la majorité des cas, la commande reste donc inchangée, exemple pour xfce4:
-<pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
+ Pour installer un bureau supporté sous NuTyX, la commande reste inchangée, par exemple pour kde5 (Plasma5):
+<pre class="command_user"><kbd>get kde5</kbd></pre>
+
+<h3>Nouvelle syntaxe de recette</h3>
 <p>
  La syntaxe d'une recette a été revue.
  Suite à un retour de bug très pertinant, j'ai décidé d'arrêter le support de mots clé via un commentaire dans une recette de construction de paquet.
@@ -123,7 +128,7 @@ build() {
 <p>
  On commence donc par supprimer les collections obsolètes:
   <pre class="command_user"><kbd>sudo bash</kbd></pre>
-  <pre class="command"><kbd>echo "url http://downloads.nutyx.org"> /etc/cards.conf
+  <pre class="command"><kbd>echo "url http://downloads.nutyx.org" > /etc/cards.conf
 for i in desktops gui-extra gui base cli-extra cli
 do
    echo "dir /var/lib/pkg/depot/$i" >> /etc/cards.conf
@@ -134,7 +139,7 @@ exit</kbd></pre>
 <p>
  Si vous ne connaissez pas le raccourci de votre langue, réexécutez la commande:
 <pre class="command_user"><kbd>sudo bash</kbd></pre>
-<pre class="command">setup-nutyx -cl
+<pre class="command"><kbd>setup-nutyx -cl
 exit</kbd></pre>
  Ensuite on peut effectuer la mise à jour:
  <pre class="command_user"><kbd>check
