@@ -1,0 +1,66 @@
+<h1>Dernière nouvelle 01-07-2019</h1>
+
+<h2>NuTyX 11.1 disponible avec cards 2.4.98</h2>
+<p>
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.1.
+<p>
+ Cette nouvelle version contient plus de 1000 mise à jour.
+<p>
+ Une version 32 bits de NuTyX 11.1 est également disponible.
+<p>
+ La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.56 (4.9.183 pour la version 32 bits)  et le tout nouveau kernel 5.1.15 (uniquement en 64 bits).
+<p>
+ Le compilateur gnu gcc est passé en version 9.1.0
+<p>
+ Le serveur graphique xorg-server version 1.20.5, la librairie Mesa 3D en 18.3.6, gtk3 3.24.9 et qt 5.12.4 sont également dans leurs dernières versions
+<p>
+ Les interpreteurs python sont en version 3.7.3 et 2.7.16.
+<p>
+ L'environnement de bureau MATE est également mis à jour en version 1.22.1, dernière version disponible.
+<p>
+ L'environnement de bureau KDE est disponible en Plasma 5.16.2, Framework 5.59.0 et les applications en 19.04.2
+<p>
+ Les navigateurs disponibles sont entre autre:  firefox 67.0.4 et chromium 74.0.3729.169 (compilé par l'équipe de ArchLinux et uniquement en 64 bits)
+<p>
+ De nombreuses applications on été mise à jour également comme thunderbird 60.7.2, Scribus 1.5.5, libreoffice 6.2.4.2, gimp 2.10.12, etc.
+<p>
+ 4 nouvelles ISOs sont disponible.
+<p>
+ <ul>
+  <li>
+    <b><i>en 64 bits:</i></b>
+    <p>
+	 Une ISO NuTyX de base de 384 Moctets en version "rolling".
+	<p>
+	 Une ISO de 5.3 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.1.
+     Avec cette ISO, vous pouvez installer une NuTyX 11.1 complète sans avoir recours à une connection internet.
+     Pour installer des paquets depuis cette ISO, une fois votre système de base installé sur votre disque dur, il faut monter la clé USB sur le dossier <b>/mnt</b>.
+    <p>
+     Supposons que votre clé est trouvé sous /dev/sdc1, utilisez la commande:
+     <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
+     Adaptez en conséquence.
+    <p>
+     Une ISO NuTyX avec l'environnement MATE de 1,7 Goctets en version "rolling".
+  <li>
+    <b><i>en 32 bits:</i></b>
+    <p>
+     Une ISO NuTyX de base de 310 Moctets en version "rolling".
+  </ul>
+<p>
+ Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
+<h2>CARDS</h2>
+<p>
+ CARDS gère désormais les paquets obsètes.
+ Un paquet est obsolète lorqu'il n'est plus disponible sur le serveur distant. Un tel paquet est supprimé automatiquement.
+ <h2>Mise à jour</h2>
+<p>
+ La NuTyX 11.1 est une mise à jour mineure, une mise à jour est donc possible.
+<p>
+ Il est impératif de mettre à jour le paquet cards en premier.
+<p>
+ Veuillez utilisez ces quelques commandes pour effectuer une mise à jour sans risque:
+ <pre class="command_user"><kbd>check</kbd></pre>
+ On met donc cards à jour:
+ <pre class="command_user"><kbd>up cards</kbd></pre>
+ Ensuite on peut terminer la mise à jour:
+ <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>

@@ -20,9 +20,9 @@
 <p>
  L'environnement de bureau KDE est disponible en Plasma 5.16.5, Framework 5.62.0 et les applications en 19.08.1
 <p>
- Les navigateurs disponibles sont entre autre:  firefox 67.0.4, falkon 3.1.0, epiphany 3.34.0
+ Les navigateurs disponibles sont entre autre:  firefox 69.0.2, falkon 3.1.0, epiphany 3.34.0
 <p>
- De nombreuses applications on été mise à jour également comme thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.2.4.2, gimp 2.10.12, etc.
+ De nombreuses applications on été mise à jour également comme thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
 <p>
  4 nouvelles ISOs sont disponible.
 <p>
@@ -50,25 +50,94 @@
  Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 <h2>CARDS</h2>
 <p>
- CARDS gère désormais les paquets obsètes.
- Un paquet est obsolète lorqu'il n'est plus disponible sur le serveur distant. Un tel paquet est supprimé automatiquement.
+ Le nombre de collection officielles est désormais de 6:
+<p>
+ <ul>
+  <li>
+   base 
+ <li>
+   cli
+ <li>
+   cli-extra
+ <li>
+   gui
+ <li>
+   gui-extra
+ <li>
+   desktops
+ </ul>
+ <p>
+   Tous les bureaux supportés sous NuTyX sont donc dans la collection <b><u><i>desktops</i></u></b>
+ <p>
+   Les collections <i>nos, lxde, mate, kde5, gnome et xfce4</i> seront supprimés des serveurs de depot.
+ <p>
+   Il est donc primordial de mettre à jour <b>manuellement</b> le fichier de configuration <i>/etc/cards.conf></i> comme expliqué ci-après.
+   Une mise à jour réussie ne peux se faire sans cette manipulation. 
 <p>
  Le concept de "jeu de paquets" est introduit.
  Un jeu de paquets est un ensemble de paquets permettant d'ajouter une fonctionnalitée importante comme un bureau graphique.
  Désormais les bureaux principaux sont donc considérés comme des jeux de paquets.
 <p>
+ Pour installer un bureau supporté sous NuTyX, dans la majorité des cas, la commande reste donc inchangée, exemple pour xfce4:
+<pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
+<p>
  La syntaxe d'une recette a été revue.
  Suite à un retour de bug très pertinant, j'ai décidé d'arrêter le support de mots clé via un commentaire dans une recette de construction de paquet.
  La définition d'une recette se fait donc uniquement via des variables et tableaux.
+ Les commentaires sont désormais considérés comme commentaires uniquement.
  Le nombre important de mise à jour est en grande partie la conséquence de cette nouvelle fonctionnalité.
- 
- <h2>Mise à jour</h2>
+<p>
+ Exemple de recette utilisant la nouvelle syntaxe:
+
+<pre class="output">description="Mon premier paquet de la mort avec des dépendances"
+url="http://www.mon-premier-paquet.org/"
+
+contributors="Tnut"
+packager="fper <fper@nutyx.org>"
+
+# Tableau de dépendances de compilation
+makedepends=(python gtk3 librsvg)
+
+# Tableau de dépendances de fonctionnement
+run=(gtk-update-icon-cache)
+
+# Tableau de jeux de paquets
+set=(mate gnome)
+
+name=monpaquet
+version=1.0.0
+
+source=(${url}downloads/$name/$name-$version.tar.xz)
+build() {
+   cd $name-$version
+   ./configure --prefix=/usr
+   make
+   make DESTDIR=$PKG install
+}</pre>
+
+<h2>Mise à jour</h2>
 <p>
  La NuTyX 11.2 est une mise à jour mineure, une mise à jour est donc possible.
 <p>
- Veuillez utilisez ces quelques commandes pour effectuer une mise à jour sans risque:
- <pre class="command_user"><kbd>check</kbd></pre>
+ Veuillez utilisez ces quelques commandes pour effectuer la mise à jour:
+<p>
+ On commence donc par supprimer les collections obsolètes:
+  <pre class="command_user"><kbd>sudo bash</kbd></pre>
+  <pre class="command"><kbd>echo "url http://downloads.nutyx.org"> /etc/cards.conf
+for i in desktops gui-extra gui base cli-extra cli
+do
+   echo "dir /var/lib/pkg/depot/$i" >> /etc/cards.conf
+done
+echo "base /var/lib/pkg/depot/base
+groupe fr ">> /etc/cards.conf
+exit</kbd></pre>
+<p>
+ Si vous ne connaissez pas le raccourci de votre langue, réexécutez la commande:
+<pre class="command_user"><kbd>sudo bash</kbd></pre>
+<pre class="command">setup-nutyx -cl
+exit</kbd></pre>
  Ensuite on peut effectuer la mise à jour:
- <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
+ <pre class="command_user"><kbd>check
+sudo cards upgrade</kbd></pre>
 <h2>Anciennes nouvelles</h2>
  Les anciennes nouvelles sont maintenant consultables <a href="old-news/?C=N;O=D">ici.</a>
