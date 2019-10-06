@@ -1,6 +1,6 @@
 <h1>Dernière nouvelle 07-10-2019</h1>
 
-<h2>NuTyX 11.2 disponible avec cards 2.4.203</h2>
+<h2>NuTyX 11.2 disponible avec cards 2.4.103</h2>
 <p>
  J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.2.
 <p>
@@ -8,11 +8,11 @@
 <p>
  La version 32 bits de NuTyX est toujours disponible.
 <p>
- La base de NuTyX est fournie avec le nouveau kernel LTS 4.19.76 (4.9.194 pour la version 32 bits) et le tout nouveau kernel 5.3.2 (uniquement en 64 bits).
+ La base de NuTyX est fournie avec le kernel LTS 4.19.76 (4.9.194 pour la version 32 bits) et le kernel 5.3.2 (uniquement en 64 bits).
 <p>
  Le compilateur gnu gcc est passé en version 9.2.0
 <p>
- Le serveur graphique xorg-server version 1.20.5, la librairie Mesa 3D en 19.2.0, gtk3 3.24.11 et qt 5.13.1 sont également dans leurs dernières versions
+ Le serveur graphique xorg-server version 1.20.5, la librairie Mesa 3D en 19.2.0, gtk3 3.24.12 et qt 5.13.1 sont également dans leurs dernières versions
 <p>
  Les interpreteurs python sont en version 3.7.4 et 2.7.16.
 <p>
@@ -20,7 +20,7 @@
 <p>
  L'environnement de bureau KDE est disponible en Plasma 5.16.5, Framework 5.62.0 et les applications en 19.08.1
 <p>
- Les navigateurs disponibles sont entre autre:  firefox 69.0.2, falkon 3.1.0, epiphany 3.34.0
+ Les navigateurs disponibles sont entre autre:  firefox 69.0.2, falkon 3.1.0, epiphany 3.34.0, etc
 <p>
  De nombreuses applications on été mise à jour également comme thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
 <p>
@@ -72,7 +72,7 @@
  <p>
    Les collections <i>nos, lxde, mate, kde5, gnome et xfce4</i> seront supprimés des serveurs de depot.
  <div class="important">
-   Il est donc primordial de mettre à jour <b>manuellement</b> le fichier de configuration <i>/etc/cards.conf></i> comme expliqué ci-après.
+   Il est donc primordial de mettre à jour <b>manuellement</b> le fichier de configuration <i>/etc/cards.conf</i> comme expliqué ci-après.
    Une mise à jour réussie ne peux se faire sans cette manipulation. 
  </div>
 <h3>Un jeu de paquets</h3>
@@ -126,15 +126,16 @@ build() {
 <p>
  Veuillez utilisez ces quelques commandes pour effectuer la mise à jour:
 <p>
- On commence donc par supprimer les collections obsolètes:
+ On commence donc par créer un nouveau fichier <i>/etc/cards.conf:</i>
   <pre class="command_user"><kbd>sudo bash</kbd></pre>
   <pre class="command"><kbd>echo "url http://downloads.nutyx.org" > /etc/cards.conf
-for i in desktops gui-extra gui base cli-extra cli
+for i in desktops gui-extra gui cli-extra cli base
 do
    echo "dir /var/lib/pkg/depot/$i" >> /etc/cards.conf
 done
 echo "base /var/lib/pkg/depot/base
-groupe fr ">> /etc/cards.conf
+group fr
+version rolling" >> /etc/cards.conf
 exit</kbd></pre>
 <p>
  Si vous ne connaissez pas le raccourci de votre langue, réexécutez la commande:

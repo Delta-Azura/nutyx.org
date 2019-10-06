@@ -1,28 +1,28 @@
-<h1>Latest news 2019-07-01</h1>
+<h1>Latest news 2019-10-07</h1>
 
-<h2>NuTyX 11.1 available with cards 2.4.98</h2>
+<h2>NuTyX 11.2 available with cards 2.4.103</h2>
 <p>
- I'm very pleased to announce the new NuTyX 11.1 release.
+ I'm very pleased to announce the new NuTyX 11.2 release.
 <p>
- This new version contains more than 1000 packages upgraded.
+ The 64 bits version contains more than 2600 packages upgraded.
 <p>
- A 32 bit version of NuTyX 11.1 is now available as well.
+ The 32 bit version of NuTyX is still available.
 <p>
- The base of NuTyX comes with the new kernel LTS 4.19.56 (4.9.183 for the 32 bits version) and the very new kernel 5.1.15 (in 64 bits only).
+ The base of NuTyX comes with the kernel LTS 4.19.76 (4.9.194 for the 32 bits version) and the kernel 5.3.2 (in 64 bits only).
 <p>
- The gnu compiler collection, gcc, is now gcc 9.1.0.
+ The gnu compiler collection, gcc, is now gcc 9.2.0.
 <p>
- The graphical server is now xorg-server 1.20.5, the mesa lib is 18.3.6, gtk3 is 3.24.9 and qt has been updated to 5.12.4.
+ The graphical server is now xorg-server 1.20.5, the mesa lib is 19.2.0, gtk3 is 3.24.12 and qt has been updated to 5.13.1.
 <p>
- Python 3.7.3 and 2.7.16 have been included in this release.
+ Python interpretors 3.7.4 and 2.7.16 have been included in this release.
 <p>
- The MATE Desktop Environment comes in 1.22.1, the latest version.
+ The MATE Desktop Environment comes in 1.22.2, the latest version.
 <p>
- The KDE Plasma Desktop is now 5.16.2, the Framework is now 5.59.0 and applications are now 19.04.2
+ The KDE Plasma Desktop is now 5.16.5, the Framework is now 5.62.0 and applications are now 19.08.1
 <p>
- The firefox browser has been updated to 67.0.4 and the chromium browser is updated to 74.0.3729.169 (build by the archlinux team and only in 64 bits)
+ Available browsers are: firefox 69.0.2, falkon3.1.0, epiphany 3.34.0, etc
 <p>
- Many desktop applications have been updated as well like thunderbird 60.7.2, Scribus 1.5.5, libreoffice 6.2.4.2, gimp 2.10.12, etc.
+ Many desktop applications have been updated as well like thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
 <p>
  4 news ISOs are available.
  <ul>
@@ -31,8 +31,8 @@
    <p>
     The first ISO is a base NuTyX "rolling" version with a size of 384 Mbytes.
    <p>
-    A 5.3 GBytes ISO base NuTyX "fixed" version which contains a complete repository of the binaries for the NuTyX 11.1 release.
-    You can install NuTyX 11.1 completely without having to use internet.
+    A 4.5 GBytes ISO base NuTyX "fixed" version which contains a complete repository of the binaries for the NuTyX 11.2 release.
+    You can install NuTyX 11.2 completely without having to use internet.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
    <p>
@@ -49,23 +49,104 @@
  </ul><p>
  ISOs are available on <a href="downloads">the download page.</a>
 <h2>CARDS</h2>
+<h3>The six official collections</h3>
  <p>
-  CARDS is now able to track obsolete packages.
-  A package is obsolete when it's not available anymore on the remote server.
-  Such a package is deleted automatically from your local installation if installed. 
+  The number of official collections is now 6:
+<p>
+ <ul>
+  <li>
+   base 
+ <li>
+   cli
+ <li>
+   cli-extra
+ <li>
+   gui
+ <li>
+   gui-extra
+ <li>
+   desktops
+ </ul>
+ <p>
+  All the supported desktops graphical interface under NuTyX are in the <b><u><i>desktops</i></u></b> collection.
+ <p>
+  Collections <i>nos, lxde, mate, kde5, gnome et xfce4</i> will be removed from the mirrors servers.
+ <div class="important">
+  It is therefore important to update <b>manually</b> the configuration file <i>/etc/cards.conf</i> as explained below.
+   A successful update can not be done without this manipulation.
+ </div>
+<h3>A set of packages</h3>
+
+<p>
+ The concept of "set of packages" is introduced.
+ A package set is a set of packages that add important functionality such as a graphical desktop.
+ Henceforth, the main desktops (kde5, xfce4, mate, etc..) are considered as sets of packages.
+<p>
+ To install a supported desktop under NuTyX, the command remains the same, for example for kde5 (Plasma5):
+<pre class="command_user"><kbd>get kde5</kbd></pre>
+
+<h3>New recipe syntax</h3>
+<p>
+ The syntax of a recept have been review.
+ Following a very relevant bug return, I decided to stop keyword support via a comment in a package build recipe.
+ The definition of a recipe is therefore only via variables and tables.
+ Comments are now considered comments only.
+ The large number of updates is largely the consequence of this new feature.
+ <p>
+  Recipe example using the new syntax:
+  
+<pre class="output">description="My first package with plenty of  dependancies"
+url="http://www.my-first-package.org/"
+
+packager="fpr <fpr@nutyx.org>"
+contributors="Tnut"
+
+# Compilation dependencies table
+makedepends=(python gtk3 librsvg)
+
+# Runtime dependencies table
+run=(gtk-update-icon-cache)
+
+# Set of packages table
+set=(mate gnome)
+
+name=mypackage
+version=1.0.0
+release=1
+source=(${url}downloads/$name/$name-$version.tar.xz)
+build() {
+   cd $name-$version
+   ./configure --prefix=/usr
+   make
+   make DESTDIR=$PKG install
+}</pre>
+
 <h2>Upgrade process</h2>
 <p>
  Since this is a minor release, an upgrade is possible.
 <p>
- For a successfull upgrade, the 'cards' package needs to be updated first.
-<p>
  Please use following commands to proceed:
+<p>
+ We start by creating a new <i>/etc/cards.conf</i> file:
+  <pre class="command_user"><kbd>sudo bash</kbd></pre>
+  <pre class="command"><kbd>echo "url http://downloads.nutyx.org" > /etc/cards.conf
+for i in desktops gui-extra gui cli-extra cli base
+do
+   echo "dir /var/lib/pkg/depot/$i" >> /etc/cards.conf
+done
+echo "base /var/lib/pkg/depot/base
+group en
+version rolling" >> /etc/cards.conf
+exit</kbd></pre>
+<p>
+ If you don't know the shortcut of your language, rerun the command:
+<pre class="command_user"><kbd>sudo bash</kbd></pre>
+<pre class="command"><kbd>setup-nutyx -cl
+exit</kbd></pre> 
  <pre class="command_user"><kbd>check</kbd></pre>
- We then update cards first:
- <pre class="command_user"><kbd>up cards</kbd></pre>
- We can now finish the upgrade process:
- <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
+ We can now start the upgrade process:
+ <pre class="command_user"><kbd>check
+sudo cards upgrade</kbd></pre>
 
 <h2>Old news</h2>
  Old news is now available <a href="old-news/?C=N;O=D">here</a>.
-

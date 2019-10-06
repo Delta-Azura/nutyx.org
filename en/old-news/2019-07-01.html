@@ -1,0 +1,67 @@
+<h1>Latest news 2019-07-01</h1>
+
+<h2>NuTyX 11.1 available with cards 2.4.98</h2>
+<p>
+ I'm very pleased to announce the new NuTyX 11.1 release.
+<p>
+ This new version contains more than 1000 packages upgraded.
+<p>
+ A 32 bit version of NuTyX 11.1 is now available as well.
+<p>
+ The base of NuTyX comes with the new kernel LTS 4.19.56 (4.9.183 for the 32 bits version) and the very new kernel 5.1.15 (in 64 bits only).
+<p>
+ The gnu compiler collection, gcc, is now gcc 9.1.0.
+<p>
+ The graphical server is now xorg-server 1.20.5, the mesa lib is 18.3.6, gtk3 is 3.24.9 and qt has been updated to 5.12.4.
+<p>
+ Python 3.7.3 and 2.7.16 have been included in this release.
+<p>
+ The MATE Desktop Environment comes in 1.22.1, the latest version.
+<p>
+ The KDE Plasma Desktop is now 5.16.2, the Framework is now 5.59.0 and applications are now 19.04.2
+<p>
+ The firefox browser has been updated to 67.0.4 and the chromium browser is updated to 74.0.3729.169 (build by the archlinux team and only in 64 bits)
+<p>
+ Many desktop applications have been updated as well like thunderbird 60.7.2, Scribus 1.5.5, libreoffice 6.2.4.2, gimp 2.10.12, etc.
+<p>
+ 4 news ISOs are available.
+ <ul>
+  <li>
+  <b><i>in 64 bits:</i></b>
+   <p>
+    The first ISO is a base NuTyX "rolling" version with a size of 384 Mbytes.
+   <p>
+    A 5.3 GBytes ISO base NuTyX "fixed" version which contains a complete repository of the binaries for the NuTyX 11.1 release.
+    You can install NuTyX 11.1 completely without having to use internet.
+    To install packages from this ISO, once your base system is installed, configured and booting,
+    it's just a question of mounting the media on the <b>/mnt</b> mounting point.
+   <p>
+    Suppose you media is found under <b>/dev/sdc1</b>, uses following command to mount it:
+    <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
+    Adapt in consequence.
+   <p>
+    A 1.7 GByte MATE desktop in "rolling" version.
+  <li>
+  <b><i>in 32 bits:</i></b>
+   <p>
+    A 310 Mbytes ISO base NuTyX "rolling" version.
+  
+ </ul><p>
+ ISOs are available on <a href="downloads">the download page.</a>
+<h2>CARDS</h2>
+ <p>
+  CARDS is now able to track obsolete packages.
+  A package is obsolete when it's not available anymore on the remote server.
+  Such a package is deleted automatically from your local installation if installed. 
+<h2>Upgrade process</h2>
+<p>
+ Since this is a minor release, an upgrade is possible.
+<p>
+ For a successfull upgrade, the 'cards' package needs to be updated first.
+<p>
+ Please use following commands to proceed:
+ <pre class="command_user"><kbd>check</kbd></pre>
+ We then update cards first:
+ <pre class="command_user"><kbd>up cards</kbd></pre>
+ We can now finish the upgrade process:
+ <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
