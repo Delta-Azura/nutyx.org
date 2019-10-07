@@ -1,4 +1,4 @@
-<h1>Latest news 2019-10-07</h1>
+<h1>Latest news 2019-10-14</h1>
 
 <h2>NuTyX 11.2 available with cards 2.4.103</h2>
 <p>
@@ -8,7 +8,7 @@
 <p>
  The 32 bit version of NuTyX is still available.
 <p>
- The base of NuTyX comes with the kernel LTS 4.19.76 (4.9.194 for the 32 bits version) and the kernel 5.3.2 (in 64 bits only).
+ The base of NuTyX comes with the kernel LTS 4.19.78 (4.9.194 for the 32 bits version) and the kernel 5.3.2 (in 64 bits only).
 <p>
  The gnu compiler collection, gcc, is now gcc 9.2.0.
 <p>
@@ -70,7 +70,7 @@
  <p>
   All the supported desktops graphical interface under NuTyX are in the <b><u><i>desktops</i></u></b> collection.
  <p>
-  Collections <i>nos, lxde, mate, kde5, gnome et xfce4</i> will be removed from the mirrors servers.
+  Collections <i>nos, lxde, mate, kde5, lxqt, gnome and xfce4</i> will be removed from the mirrors servers.
  <div class="important">
   It is therefore important to update <b>manually</b> the configuration file <i>/etc/cards.conf</i> as explained below.
    A successful update can not be done without this manipulation.
@@ -79,10 +79,10 @@
 
 <p>
  The concept of "set of packages" is introduced.
- A package set is a set of packages that add important functionality such as a graphical desktop.
+ A packages set add important functionality such as a graphical desktop.
  Henceforth, the main desktops (kde5, xfce4, mate, etc..) are considered as sets of packages.
 <p>
- To install a supported desktop under NuTyX, the command remains the same, for example for kde5 (Plasma5):
+ To install a supported desktop under NuTyX, the command remains the same, example for kde5 (Plasma5):
 <pre class="command_user"><kbd>get kde5</kbd></pre>
 
 <h3>New recipe syntax</h3>
@@ -143,7 +143,6 @@ exit</kbd></pre>
 <pre class="command_user"><kbd>sudo bash</kbd></pre>
 <pre class="command"><kbd>setup-nutyx -cl
 exit</kbd></pre> 
- <pre class="command_user"><kbd>check</kbd></pre>
  We can now start the upgrade process:
  <pre class="command_user"><kbd>check
 sudo cards upgrade</kbd></pre>
