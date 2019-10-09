@@ -4,45 +4,51 @@
 <p>
  I'm very pleased to announce the new NuTyX 11.2 release.
 <p>
- The 64 bits version contains more than 2600 packages upgraded.
+ The 64-bit version contains more than 2600 packages upgraded.
 <p>
- The 32 bit version of NuTyX is still available.
+ The 32-bit version of NuTyX is still actively supported.
 <p>
- The base of NuTyX comes with the kernel LTS 4.19.78 (4.9.194 for the 32 bits version) and the kernel 5.3.2 (in 64 bits only).
+ In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.78 (4.9.194 for the 32-bit version).
+<p>
+For 64-bit systems,the kernel release 5.3.2 is also available.
+<p>Changelogs for the kernels are available here:
+<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.78">kernel 4.19.78 changlog</a>  <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.2"> kernel 5.3.2 changelog</a>
 <p>
  The gnu compiler collection, gcc, is now gcc 9.2.0.
 <p>
- The graphical server is now xorg-server 1.20.5, the mesa lib is 19.2.0, gtk3 is 3.24.12 and qt has been updated to 5.13.1.
+ The graphical server is xorg-server 1.20.5.
 <p>
- Python interpretors 3.7.4 and 2.7.16 have been included in this release.
+The mesa lib is 19.2.0, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
+<p>
+ Python interpreters 3.7.4 and 2.7.16 have been included in this release.
 <p>
  The MATE Desktop Environment comes in 1.22.2, the latest version.
 <p>
  The KDE Plasma Desktop is now 5.16.5, the Framework is now 5.62.0 and applications are now 19.08.1
 <p>
- Available browsers are: firefox 69.0.2, falkon3.1.0, epiphany 3.34.0, etc
+ Available browsers are: firefox 69.0.2, falkon 3.1.0, epiphany 3.34.0, etc
 <p>
  Many desktop applications have been updated as well like thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
 <p>
  4 news ISOs are available.
  <ul>
   <li>
-  <b><i>in 64 bits:</i></b>
+  <b><i>for 64-bit:</i></b>
    <p>
     The first ISO is a base NuTyX "rolling" version with a size of 384 Mbytes.
    <p>
-    A 4.5 GBytes ISO base NuTyX "fixed" version which contains a complete repository of the binaries for the NuTyX 11.2 release.
-    You can install NuTyX 11.2 completely without having to use internet.
+    A 4.5 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.2 release.
+    You can install NuTyX 11.2 completely without having to use the internet.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
    <p>
-    Suppose you media is found under <b>/dev/sdc1</b>, uses following command to mount it:
+    Suppose you media is found under <b>/dev/sdc1</b>, use the following command to mount it:
     <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
-    Adapt in consequence.
+    Change this command to reflect your system.
    <p>
     A 1.7 GByte MATE desktop in "rolling" version.
   <li>
-  <b><i>in 32 bits:</i></b>
+  <b><i>for 32-bit:</i></b>
    <p>
     A 310 Mbytes ISO base NuTyX "rolling" version.
   
@@ -79,7 +85,7 @@
 
 <p>
  The concept of "set of packages" is introduced.
- A packages set add important functionality such as a graphical desktop.
+ A packages set adds important functionality such as a graphical desktop.
  Henceforth, the main desktops (kde5, xfce4, mate, etc..) are considered as sets of packages.
 <p>
  To install a supported desktop under NuTyX, the command remains the same, example for kde5 (Plasma5):
@@ -87,7 +93,7 @@
 
 <h3>New recipe syntax</h3>
 <p>
- The syntax of a recept have been review.
+ The syntax of a recipe has been revised.
  Following a very relevant bug return, I decided to stop keyword support via a comment in a package build recipe.
  The definition of a recipe is therefore only via variables and tables.
  Comments are now considered comments only.
