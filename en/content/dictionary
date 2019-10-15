@@ -119,28 +119,25 @@
      <p>
       Under NuTyX, it's possible to install <i>kde5</i>, <i>lxqt</i>, <i>mate</i> or <i>xfce4</i> desktop <a href="#ID010">collections</a>.
     <a name='ID020'></a>
-    <h2>A family</h2>
+    <h2>A set of packages</h2>
      <p>
-      A <b>family</b> defines a set of <a href="#ID005">packages</a> which begin with a common name (the mother package).
-      Additional parts are separated by a hyphen (-).
+      A <b>set</b> of <a href="#ID005">packages</a> add a major functionality to the system like a graphical interface.
      <p>
-      An example of a NuTyX package family:
+      Examples of a NuTyX package sets:
       <ul>
        <li>
-        gstreamer1
+        lxde
        <li>
-        gstreamer1-plugins-bad
+        xfce4
        <li>
-        gstreamer1-plugin-good
+        mate
        <li>
-        gstreamer1-plugin-libav
+        kde5
        <li>
-        gstreamer1-...
+        xorg 
       </ul>
       <p>
-       Usually, a family of <a href="#ID005">packages</a> will be in the same <a href="#ID010">collection</a>.
-      <p>
-       Such packages in a package family share variables with the mother package (gstreamer1 in this example).
+       Most of the case a set of package is a graphical interface.
     <a name='ID025'></a>
     <h2>A group</h2>
      <p>

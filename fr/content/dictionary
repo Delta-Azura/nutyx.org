@@ -62,27 +62,24 @@
      <p>Le <a href="#ID005">paquet</a> <i>qtbase</i> est une dépendance utilisée par de nombreux <a href="#ID005">paquets</a> de la <a href="./?branch=fixed&arch=x86_64&searchpkg=kde5">collection kde5</a>
 
     <a name='ID020'></a>
-    <h2>Une famille</h2>
+    <h2>Un jeu de paquets</h2>
      <p>
-      Sous NuTyX, une famille de <a href="#ID005">paquets</a> désigne un ensemble de <a href="#ID005">paquets</a> dont le commencement du nom est commun (paquet père): 
-      Un exemple de famille de <a href="#ID005">paquets</a> sous NuTyX:</p>
+      Sous NuTyX, un jeu de <a href="#ID005">paquets</a> désigne un ensemble de <a href="#ID005">paquets</a> qui ajoute une fonctionnalité majeure: 
+      Exemples de jeux de <a href="#ID005">paquets</a> sous NuTyX:</p>
      <ul>
       <li>
-       gstreamer1
+       kde5
       <li>
-       gstreamer1-plugins-bad
+       lxde
       <li>
-       gstreamer1-plugin-good
+       mate
       <li>
-       gstreamer1-plugin-libav
+       xfce4
       <li>
-       gstreamer1-...
+       etc...
      </ul>
       <p>
-       Une famille de <a href="#ID005">paquets</a> se trouve toujours dans une même <a href="#ID010">collection</a>
-      <p>
-       Une famille de <a href="#ID005">paquets</a> peut partager les mêmes variables telles que la <b>version</b>, les <b>sources</b>, etc
-
+       Un jeu de <a href="#ID005">paquets</a> est le plus souvent une interface graphique complète.
     <a name='ID025'></a>
     <h2>Un groupe</h2>
      <p>
