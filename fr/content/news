@@ -1,28 +1,28 @@
-<h1>Dernière nouvelle 14-10-2019</h1>
+<h1>Dernière nouvelle 15-10-2019</h1>
 
 <h2>NuTyX 11.2 disponible avec cards 2.4.103</h2>
 <p>
  J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.2.
 <p>
- La version 64 bit de la NuTyX 11.2 a reçu plus de 2600 mise à jour.
+ La version 64 bit de la NuTyX 11.2 a reçu plus de 2800 mise à jour.
 <p>
- La version 32 bits de NuTyX est toujours disponible.
+ La version 32 bits de NuTyX, toujours disponible a reçu plus de 1800 mise à jour.
 <p>
- La base de NuTyX est fournie avec le kernel LTS 4.19.78 (4.9.194 pour la version 32 bits) et le kernel 5.3.4 (uniquement en 64 bits).
+ La base de NuTyX est fournie avec le kernel LTS 4.19.79 (4.9.196 pour la version 32 bits) et le kernel 5.3.6 (uniquement en 64 bits).
 <p>
  Le compilateur gnu gcc est passé en version 9.2.0
 <p>
- Le serveur graphique xorg-server version 1.20.5, la librairie Mesa 3D en 19.2.0, gtk3 3.24.12 et qt 5.13.1 sont également dans leurs dernières versions
+ Le serveur graphique xorg-server version 1.20.5, la librairie Mesa 3D en 19.2.1, gtk3 3.24.12 et qt 5.13.1 sont également dans leurs dernières versions
 <p>
  Les interpreteurs python sont en version 3.7.4 et 2.7.16.
 <p>
  L'environnement de bureau MATE est également mis à jour en version 1.22.2, dernière version disponible.
 <p>
- L'environnement de bureau KDE est disponible en Plasma 5.16.5, Framework 5.62.0 et les applications en 19.08.1
+ L'environnement de bureau KDE est disponible en Plasma 5.16.5, Framework 5.62.0 et les applications en 19.08.2
 <p>
- Les navigateurs disponibles sont entre autre:  firefox 69.0.2, falkon 3.1.0, epiphany 3.34.0, etc
+ Les navigateurs disponibles sont entre autre:  firefox 69.0.3, falkon 3.1.0, epiphany 3.34.0, etc
 <p>
- De nombreuses applications on été mise à jour également comme thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
+ De nombreuses applications on été mise à jour également comme thunderbird 68.2.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
 <p>
  4 nouvelles ISOs sont disponible.
 <p>
@@ -30,9 +30,9 @@
   <li>
     <b><i>en 64 bits:</i></b>
     <p>
-	 Une ISO NuTyX de base de 384 Moctets en version "rolling".
-	<p>
-	 Une ISO de 4.5 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.2.
+     Une ISO NuTyX de base de 402 Moctets en version "rolling".
+    <p>
+     Une ISO de 4.5 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.2.
      Avec cette ISO, vous pouvez installer une NuTyX 11.2 complète sans avoir recours à une connection internet.
      Pour installer des paquets depuis cette ISO, une fois votre système de base installé sur votre disque dur, il faut monter la clé USB sur le dossier <b>/mnt</b>.
     <p>

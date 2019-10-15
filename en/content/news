@@ -1,41 +1,42 @@
-<h1>Latest news 2019-10-14</h1>
+<h1>Latest news 2019-10-15</h1>
 
 <h2>NuTyX 11.2 available with cards 2.4.103</h2>
 <p>
  I'm very pleased to announce the new NuTyX 11.2 release.
 <p>
- The 64-bit version contains more than 2600 packages upgraded.
+ The 64-bit version contains more than 2800 packages upgraded.
 <p>
- The 32-bit version of NuTyX is still actively supported.
+ The 32-bit version of NuTyX, still actively supported contains more then 1800 packages upgraded.
 <p>
- In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.78 (4.9.194 for the 32-bit version).
+ In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.79 (4.9.196 for the 32-bit version).
 <p>
-For 64-bit systems,the kernel release 5.3.2 is also available.
+For 64-bit systems,the kernel release 5.3.6 is also available.
 <p>Changelogs for the kernels are available here:
-<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.78">kernel 4.19.78 changlog</a>  <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.2"> kernel 5.3.2 changelog</a>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.79">kernel 4.19.79 changlog</a>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.6"> kernel 5.3.6 changelog</a>
 <p>
  The gnu compiler collection, gcc, is now gcc 9.2.0.
 <p>
  The graphical server is xorg-server 1.20.5.
 <p>
-The mesa lib is 19.2.0, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
+The mesa lib is 19.2.1, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
 <p>
  Python interpreters 3.7.4 and 2.7.16 have been included in this release.
 <p>
  The MATE Desktop Environment comes in 1.22.2, the latest version.
 <p>
- The KDE Plasma Desktop is now 5.16.5, the Framework is now 5.62.0 and applications are now 19.08.1
+ The KDE Plasma Desktop is now 5.16.5, the Framework is now 5.62.0 and applications are now 19.08.2
 <p>
- Available browsers are: firefox 69.0.2, falkon 3.1.0, epiphany 3.34.0, etc
+ Available browsers are: firefox 69.0.3, falkon 3.1.0, epiphany 3.34.0, etc
 <p>
- Many desktop applications have been updated as well like thunderbird 68.1.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
+ Many desktop applications have been updated as well like thunderbird 68.2.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
 <p>
  4 news ISOs are available.
  <ul>
   <li>
   <b><i>for 64-bit:</i></b>
    <p>
-    The first ISO is a base NuTyX "rolling" version with a size of 384 Mbytes.
+    The first ISO is a base NuTyX "rolling" version with a size of 402 Mbytes.
    <p>
     A 4.5 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.2 release.
     You can install NuTyX 11.2 completely without having to use the internet.
