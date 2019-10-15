@@ -1,6 +1,6 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>11.1</b>.
+   The current stable release of NuTyX is named <b>11.2</b>.
   <p>
    ISO images are available in "Fixed" and "Rolling" releases.
   <p>
@@ -27,7 +27,7 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20190701.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20191015.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
        Installation in BIOS or EFI modus is possible.
@@ -45,7 +45,7 @@
      Install packages
     </td>
     <td>
-     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a> et lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
+     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a> and <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
      zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
      system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
      gimp transmission cheese cherrytree deadbeef aisleriot
@@ -70,11 +70,11 @@
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-11.1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-11.2.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20190701.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20191015.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20190701.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20191015.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
       <td>
         Installation in BIOS or EFI modus is possible.
@@ -84,9 +84,9 @@
         Once the installation is done, you can directly connect with your new user account created at post-configuration time.
       </td>
       <td>
-       Approx. 5.4 GB
+       Approx. 4.5 GB
       <p>
-       Approx. 384 MB
+       Approx. 402 MB
       <p>
        Approx. 309 MB
       </td>
@@ -358,7 +358,7 @@ sh install-nutyx</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.1.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.2.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
