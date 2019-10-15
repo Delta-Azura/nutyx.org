@@ -7,14 +7,14 @@
   <p>
     Si vous avez choisi d'installer la version rolling de NuTyX, vous pouvez directement procéder à <a href=#3>la mise à jour des informations concernant les paquets disponibles</a>
   <p>
-    Si vous avez choisi d'installer la version 11.1 de NuTyX, les binaires sont fourni avec l'ISO.
+    Si vous avez choisi d'installer la version 11.2 de NuTyX, les binaires sont fourni avec l'ISO.
   Il faut donc maintenant monter l'ISO au bon endroit.
   Insérez le média sur lequel se trouve l'ISO (très probablement une clé USB).
   En fonction de l'emplacement reconnu, utilsez la commande:
   <pre class=command_user><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
   Adaptez le chemin <b>/dev/sdb1</b> à votre cas.
  <div class="important">
-   Si vous testez la NuTyX 11.1 dans un environnement virtuel tel que Virtualbox, l'ISO est reconnue sous <b>/dev/sr0</b>
+   Si vous testez la NuTyX 11.2 dans un environnement virtuel tel que Virtualbox, l'ISO est reconnue sous <b>/dev/sr0</b>
  </div>
  <h2>Mise à jour des informations concernant les paquets disponibles</h2>
   Il faut commencer par renseigner les paquets disponibles à votre nouvelle installation. 
@@ -22,14 +22,7 @@
   <pre class="command_user"><kbd>check</kbd></pre>
   <pre class="output">[sudo] password for thierry:</pre>
   Vous entrez le mot de passe que vous avez choisi lors de l'installation et la synchronisation démarre:
-  <pre class="output">/var/lib/pkg/depot/lxqt-extra/.PKGREPO
-/var/lib/pkg/depot/lxqt/.PKGREPO
-/var/lib/pkg/depot/mate-extra/.PKGREPO
-/var/lib/pkg/depot/mate/.PKGREPO
-/var/lib/pkg/depot/kde5-extra/.PKGREPO
-/var/lib/pkg/depot/kde5/.PKGREPO
-/var/lib/pkg/depot/xfce4-extra/.PKGREPO
-/var/lib/pkg/depot/xfce4/.PKGREPO
+  <pre class="output">/var/lib/pkg/depot/desktops/.PKGREPO
 /var/lib/pkg/depot/gui-extra/.PKGREPO
 /var/lib/pkg/depot/gui/.PKGREPO
 /var/lib/pkg/depot/cli-extra/.PKGREPO
@@ -51,7 +44,7 @@
          <td>
           kde5
          <td>
-          <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
+          <pre class="command_user"><kbd>get kde5</kbd></pre>
        <tr class="odd">
          <td>
           lxqt
@@ -71,7 +64,7 @@
         <td>
          lxde
         <td>
-         <pre class="command_user"><kbd>get lxde lxde-extra</kbd></pre>
+         <pre class="command_user"><kbd>get lxde</kbd></pre>
        <tr class="odd">
         <td>
          openbox
@@ -145,7 +138,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
 
   <h3>Lancement du serveur graphique depuis une console non graphique</h3>
     On installe le serveur graphique et son initialisateur:
-    <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
+    <pre class="command_user"><kbd>get xorg</kbd></pre>
     Comme pour le lancement manuel du gestionnaire de connection graphique <i>xdm</i>,
     il est indispensable de configurer un fichier de configuration <i>.xinitrc</i> à placer à la racine du dossier utilisateur.
    <p>

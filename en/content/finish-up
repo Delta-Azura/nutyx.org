@@ -7,13 +7,13 @@
  <p>
   If you choose to install the rolling version of NuTyX, you can directly proceed to <a href="#3">updating the meta data about available packages</a>
  <p>
-  If you choose to install the 11.1 version of NuTyX, you need to mount the ISO.
+  If you choose to install the 11.2 version of NuTyX, you need to mount the ISO.
   All the available packages are on it.
   Insert now the USB key containing the ISO.
   Depending where your USB key is found, adapt the command below to your need:
   <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
  <div class="important">
-   If you test the NuTyX 11.1 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
+   If you test the NuTyX 11.2 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
  </div>
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
@@ -21,14 +21,7 @@
   <pre class="command_user"><kbd>check</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
   You enter now the password you specified during the installation, and synchronisation starts:
-  <pre class="output">/var/lib/pkg/depot/lxqt-extra/.PKGREPO
-/var/lib/pkg/depot/lxqt/.PKGREPO
-/var/lib/pkg/depot/mate-extra/.PKGREPO
-/var/lib/pkg/depot/mate/.PKGREPO
-/var/lib/pkg/depot/kde5-extra/.PKGREPO
-/var/lib/pkg/depot/kde5/.PKGREPO
-/var/lib/pkg/depot/xfce4-extra/.PKGREPO
-/var/lib/pkg/depot/xfce4/.PKGREPO
+  <pre class="output">/var/lib/pkg/depot/desktops/.PKGREPO
 /var/lib/pkg/depot/gui-extra/.PKGREPO
 /var/lib/pkg/depot/gui/.PKGREPO
 /var/lib/pkg/depot/cli-extra/.PKGREPO
@@ -47,9 +40,9 @@
         <th>Command:
        <tr class="even">
         <td>
-         kde5 kde5-extra
+         kde5
         <td>
-         <pre class="command_user"><kbd>get kde5 kde5-extra</kbd></pre>
+         <pre class="command_user"><kbd>get kde5</kbd></pre>
        <tr class="odd">
         <td>
          lxqt lxqt-extra
@@ -69,7 +62,7 @@
         <td>
          lxde
         <td>
-         <pre class="command_user"><kbd>get lxde lxde-extra</kbd></pre>
+         <pre class="command_user"><kbd>get lxde</kbd></pre>
        <tr class="odd">
         <td>
          openbox
@@ -145,7 +138,7 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
 
   <h3>Starting the graphical server from a non graphical console</h3>
     We install the graphical server and the initialiser:
-    <pre class="command_user"><kbd>get xorg-xinit</kbd></pre>
+    <pre class="command_user"><kbd>get xorg</kbd></pre>
     As for the manual graphical login <i>xdm</i>,
     it needs an <i>.xinitrc</i> configuration file at the root of the home directory.
    <p>
