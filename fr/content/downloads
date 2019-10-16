@@ -77,7 +77,7 @@
        <p>
         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20191015.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20191015.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20191016.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
       <td>
         Installation en mode BIOS ou EFI possible.
@@ -87,11 +87,11 @@
         L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-installation.
       </td>
       <td>
-       Environ 4.5 GO
+       Environ 4.4 GO
       <p>
        Environ 402 MO
       <p>
-       Environ 309 MO
+       Environ 327 MO
       </td>
      </tr>
    </table>
