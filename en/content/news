@@ -38,7 +38,7 @@ The mesa lib is 19.2.1, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
    <p>
     The first ISO is a base NuTyX "rolling" version with a size of 402 Mbytes.
    <p>
-    A 4.5 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.2 release.
+    A 4.4 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.2 release.
     You can install NuTyX 11.2 completely without having to use the internet.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
@@ -51,7 +51,7 @@ The mesa lib is 19.2.1, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
   <li>
   <b><i>for 32-bit:</i></b>
    <p>
-    A 310 Mbytes ISO base NuTyX "rolling" version.
+    A 327 Mbytes ISO base NuTyX "rolling" version.
   
  </ul><p>
  ISOs are available on <a href="downloads">the download page.</a>
