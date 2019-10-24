@@ -66,7 +66,7 @@ an attempt at creating a safer, faster, and more stable browser
    <h2>Add a user</h2>
     <p>
      Adding a user under NuTyX is very simple. The command:
-    <pre class="command_user"><kbd>sudo nu</kbd></pre>
+    <pre class="command_user"><kbd>nu</kbd></pre>
     <p>
      will add a new user, you will be asked two questions:
     <pre class="output">Name of the user: james
