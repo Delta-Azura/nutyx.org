@@ -1,4 +1,4 @@
-   <h1>Build bot Setup</h1>
+   <h1>"build-collection" command setup</h1>
     <h2>Introduction</h2>
      <div class="important">
        <img alt="[Important]" src="../graphics/caution.gif" />
@@ -66,7 +66,7 @@ PROJECT=packages-$ARCH</kbd></pre>
           <pre class="command_user"><kbd>VERSION=rolling</kbd></pre>
        </table>
 
-     <h2>Structure des projets disponibles</h2>
+     <h2>Available projets</h2>
       <p>
        Choose the collection and the project you're going to work with.
        Once you made your choice, copy/paste defined variables in the right colomn.
@@ -118,45 +118,10 @@ RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>
-         mate and mate-extra
+         desktops
         <td>
-         <pre class="command_user"><kbd>COLLECTION=mate
-RSYNC=(base cli gui mate mate-extra)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         lxde and lxde-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=lxde
-RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
-
-       <tr class="odd">
-        <td>
-         xfce4 and xfce4-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=xfce4
-RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         lxqt and lxqt-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=lxqt
-RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
-
-       <tr class="odd">
-        <td>
-         kde5 and kde5-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=kde5
-RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         nos
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=nos
-RSYNC=(base cli gui nos)</kbd></pre>
+         <pre class="command_user"><kbd>COLLECTION=desktops
+RSYNC=(base cli gui desktops)</kbd></pre>
 
      </table>
 
@@ -186,7 +151,7 @@ mkdir: created directory '/home/me/git/rolling'</pre>
      <p>
        We now create all the folders needed for the script:
        <pre class="command_user"><kbd>sudo mkdir -pv \
-/srv/www/{logs/$ARCH/$VERSION/$COLLECTION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
+/srv/www/{logs/$ARCH/$VERSION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
 
     <h2>Get all the binaries define in the $RSYNC variable from the remote server </h2>
       <p>
@@ -230,7 +195,7 @@ done</kbd></pre>
    <h2>Let's go</h2>
     <p>
      If you have done all the steps correctly, you should be able to start the compilation of all the ports of the project <b>$PROJECT</b>.
-    <pre class="command_user"><kbd>sudo build-collection /$VERSION/$COLLECTION</kbd></pre>
+    <pre class="command_user"><kbd>build-collection /$VERSION/$COLLECTION -c</kbd></pre>
     <pre><class="output">CHROOT: &lt;your collection&gt;
 COLLECTION: &lt;your collection&gt;
 VERSION: &lt;your version&gt;

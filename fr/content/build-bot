@@ -1,4 +1,4 @@
-   <h1>Mise en place d'un serveur de compilation</h1>
+   <h1>Mise en place de la commande "build-collection"</h1>
     <h2>Introduction</h2>
      <div class="important">
         <img alt="[Important]" src="../graphics/caution.gif" />
@@ -119,45 +119,10 @@ RSYNC=(base cli gui)</kbd></pre>
 
        <tr class="odd">
         <td>
-         mate et mate-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=mate
-RSYNC=(base cli gui mate mate-extra)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         lxde et lxde-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=lxde
-RSYNC=(base cli gui lxde lxde-extra)</kbd></pre>
-
-       <tr class="odd">
-        <td>
-         xfce4 et xfce4-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=xfce4
-RSYNC=(base cli gui xfce4 xfce4-extra)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         lxqt et lxqt-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=lxqt
-RSYNC=(base cli gui lxqt lxqt-extra)</kbd></pre>
-
-      <tr class="odd">
-        <td>
-         kde5 et kde5-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=kde5
-RSYNC=(base cli gui kde5 kde5-extra)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         nos
+         desktops
         <td>
          <pre class="command_user">COLLECTION=nos
-RSYNC=(base cli gui nos)</kbd></pre>
+RSYNC=(base cli gui desktops)</kbd></pre>
 
      </table>
 
@@ -187,7 +152,7 @@ mkdir: created directory '/home/moi/git/rolling'</pre>
       <p>
        On crée maintenant les dossiers nécessaires pour le script:
       <pre class="command_user"><kbd>sudo mkdir -pv \
-/srv/www/{logs/$ARCH/$VERSION/$COLLECTION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
+/srv/www/{logs/$ARCH/$VERSION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
      <h2>Récupération des collections définies dans la variable $RSYNC</h2>
       <p>
        Cette commande peut prendre un certain temps si votre connection internet n'est pas très rapide:
@@ -230,7 +195,7 @@ done</kbd></pre>
    <h2>Lancement du script</h2>
     <p>
      Si vous avez bien suivi ce tutoriel, vous pouvez maintenant lancer la compilation de l'ensemble des ports du projet <b>$PROJECT</b>:
-    <pre class="command_user"><kbd>sudo build-collection /$VERSION/$COLLECTION</kbd></pre>
+    <pre class="command_user"><kbd>build-collection /$VERSION/$COLLECTION -c</kbd></pre>
     <pre><class="output">CHROOT: &lt;your collection&gt;
 COLLECTION: &lt;your collection&gt;
 VERSION: &lt;your version&gt;
