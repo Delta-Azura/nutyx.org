@@ -119,6 +119,11 @@
      <p>
       Under NuTyX, we currently have the <i>base</i>, <i>cli</i> (command-line interface), <i>cli-extra</i>, <i>gui</i>,
       <gui-extra>  and <i>desktops</i> <a href="#ID010">collections</a>.
+     <p>
+       Even if it's not realy usefull, it's possible to install a collection.
+       For example the command:
+       <pre class="command_user"><kbd>get gui</kbd></pre>
+       will install the approximatly <a href="http://www.nutyx.org/en/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">the 544 packages from the gui collection</a> and all the dependencies.
     <a name='ID020'></a>
     <h2>A set of packages</h2>
      <p>
