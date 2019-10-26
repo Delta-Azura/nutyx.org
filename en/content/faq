@@ -101,17 +101,11 @@
        <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
       <p>
        He (She) adjusts the <b>/etc/cards.conf</b> configuration file as:
-       <pre class="output">dir /usr/ports/kde5-extra
-dir /usr/ports/kde5
-dir /usr/ports/lxqt-extra
-dir /usr/ports/lxqt
-dir /usr/ports/mate-extra
-dir /usr/ports/mate
-dir /usr/ports/xfce4-extra
-dir /usr/ports/xfce4
+       <pre class="output">dir /usr/ports/desktops
 dir /usr/ports/gui-extra
 dir /usr/ports/gui
 dir /usr/ports/cli-extra
+dir /usr/ports/cli
 dir /usr/ports/base
 base /usr/ports/base
 logdir /var/log/pkgbuild</pre>
