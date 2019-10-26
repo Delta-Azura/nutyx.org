@@ -51,11 +51,10 @@
       Par exemple, la <a href="http://nutyx.org/fr/?branch=fixed&arch=x86_64&searchpkg=gui">collection gui</a> permet d'avoir une inteface utilisateur graphique. 
       Sur cette interface graphique, on choisira son gestionnaire de fenêtres favori.
      <p>
-      Sous NuTyX, il est possible d'installer les <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=kde5">collections kde5</a>,
-      <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=lxqt">lxqt</a>,
-      <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=mate">mate</a>
-      ou <a href="./?type=col&branch=fixed&arch=x86_64&searchpkg=xfce4">xfce4</a>.
- 
+      Même si cela n'a pas grand intérêt, il est possible d'installer une collection avec la commande.
+      La commande:
+      <pre class="command_user"><kbd>get gui</kbd></pre>
+      installera approximatiment les 400 paquets de la collection gui.
     <a name='ID006'></a>
     <h2>Une dépendance</h2>
      <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est nécessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
