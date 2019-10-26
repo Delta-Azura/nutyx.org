@@ -52,7 +52,7 @@
       Sur cette interface graphique, on choisira son gestionnaire de fenêtres favori.
      <p>
       Sous NuTyX, nous avons les <a href="#ID010">collections</a> <i>base</i>, <i>cli</i> (interface de ligne de commande), <i>cli-extra</i>, <i>gui</i>,
-      <gui-extra>  and <i>desktops</i>.
+      <gui-extra> et <i>desktops</i>.
      <p>
       Même si cela n'a pas grand intérêt, il est possible d'installer une collection.
       Par exemple, la commande:
