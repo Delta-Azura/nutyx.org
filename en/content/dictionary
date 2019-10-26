@@ -117,7 +117,8 @@
       The <i>gui</i> <a href="#ID010">collection</a>, for example, allows you to install a graphical user interface.
       For such a graphical user interface, you can choose your favorite windows manager.
      <p>
-      Under NuTyX, it's possible to install <i>kde5</i>, <i>lxqt</i>, <i>mate</i> or <i>xfce4</i> desktop <a href="#ID010">collections</a>.
+      Under NuTyX, we currently have the <i>base</i>, <i>cli</i> (command-line interface), <i>cli-extra</i>, <i>gui</i>,
+      <gui-extra>  and <i>desktops</i> <a href="#ID010">collections</a>.
     <a name='ID020'></a>
     <h2>A set of packages</h2>
      <p>
