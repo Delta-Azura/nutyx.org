@@ -31,13 +31,9 @@
     <li>
      Librairies et utilitaires supplémentaires pour une interface graphique (GUI)
     <li>
-     Interface graphique XXX
-    <li>
-    Interface graphique XXX-extra
-    <li>
-    Ports non libre
+     Interfaces graphique
    </ul>
-    Actuellement, sont à disposition sous forme de collections, les interfaces graphique:
+    Actuellement, sont à disposition, les interfaces graphique:
     <ul>
      <li>
       XFCE4
@@ -61,7 +57,7 @@
     <p>
      Elle se fait de la façon suivante:
     <p>
-     XXX-extra -> XXX -> gui -> cli -> base
+     desktops -> gui -> cli -> base
     <p>
      cli-extra -> cli -> base
     <p>
@@ -83,11 +79,8 @@
       Et pour les interfaces graphiques <i>mate, kde5, lxde, lxqt et xfce4</i>, le concept suivant est défini:
      <ul>
       <li>
-       Un paquet de la collection <i>mate</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
-      <li>
-       Un paquet de la collection <i>mate-extra</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli, gui</u></i> ou <i><u>mate-extra</u></i>.
+       Un paquet de la collection <i>desktops</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i>, <i><u>gui</u></i> ou <i><u>desktops</u></i>.
      </ul>
-     Même principe pour les autres interfaces graphiques <i>mate, kde5 et xfce4</i>.
 
   <h2>Leur interdépendances</h2>
     Les collections de NuTyX sont interdépendantes de la façon suivante:
@@ -118,15 +111,10 @@
     <p>
      Les collections <i>base</i>, <i>cli</i> et <i>gui</i>sont les dépendances de la collection <i>gui-extra</i>
     <li>
-     <b>mate et mate-extra</b>:
-    Les collections <i>mate</i> et <i>mate-extra</i> contiennent respectivement une version minimaliste l'interface de mate et ses applications et autres extensions.
+     <b>desktops</b>:
+    La collection <i>desktops</i> contient toutes les interfaces graphique disponibles sous NuTyX
     <p>
-    Les collections <i>base</i>, <i>cli</i> et <i>gui</i> sont les dépendances de la collection <i>mate</i>.
-    <p>
-    Les collections <i>base</i>, <i>cli</i>, <i>gui</i> et <i>mate</i> sont les dépendances de la collection <i>mate-extra</i>.    
-    <li>
-     <b>xxx et xxx-extra</b>:
-    Même principe que pour les collections <i>mate</i> et <i>mate-extra</i>.
+    Les collections <i>base</i>, <i>cli</i> et <i>gui</i> sont les dépendances de la collection <i>desktops</i>.
 
    </ul>
  <h2>Les differents groupes de collection</h2>
@@ -156,56 +144,39 @@
     gui-extra
  </ul>
    
-  <h3>D. Les collections des interfaces graphiques</h3>
+  <h3>D. La collection des interfaces graphiques</h3>
    <p>
-    Les collections des interfaces graphiques sont pour:
+    La collection des interfaces graphiques est pour:
    <p>
     mate:
     <ul>
      <li>
       mate
-     <li>
-      mate-extra
      </ul>
     <p>
     kde5:
     <ul>
      <li>
       kde5
-     <li>
-      kde5-extra
     </ul>
     <p>
     xfce4:
     <ul>
      <li>
       xfce4
-     <li>
-      xfce4-extra
      </ul>
     <p>
     lxqt:
     <ul>
      <li>
       lxqt
-     <li>
-      lxqt-extra
      </ul>
     <p>
     lxde:
     <ul>
      <li>
       lxde
-     <li>
-      lxde-extra
      </ul>
 
-  <h3>E. La collection Code Non Ouvert</h3>
-   <p>
-   La collection proposée est:
-   <ul>
-    <li>
-     nos
-   </ul>
   <h2>Et maintenant ?</h2>
    Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-in-chroot">dans la compilation dans un environnement isolé</a>.
