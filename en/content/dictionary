@@ -118,7 +118,7 @@
       For such a graphical user interface, you can choose your favorite windows manager.
      <p>
       Under NuTyX, we currently have the <i>base</i>, <i>cli</i> (command-line interface), <i>cli-extra</i>, <i>gui</i>,
-      <gui-extra>  and <i>desktops</i> <a href="#ID010">collections</a>.
+      <i>gui-extra</i>  and <i>desktops</i> <a href="#ID010">collections</a>.
      <p>
        Even if it's not realy usefull, it's possible to install a collection.
        For example the command:
