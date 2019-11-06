@@ -49,17 +49,17 @@
          <td>
           lxqt
          <td>
-          <pre class="command_user"><kbd>get lxqt lxqt-extra</kbd></pre>
+          <pre class="command_user"><kbd>get lxqt</kbd></pre>
        <tr class="even">
          <td>
-          xfce4
+          xfce4 xfce4-extra
          <td>
           <pre class="command_user"><kbd>get xfce4 xfce4-extra</kbd></pre>
        <tr class="odd">
         <td>
          mate
         <td>
-         <pre class="command_user"><kbd>get mate mate-extra</kbd></pre>
+         <pre class="command_user"><kbd>get mate</kbd></pre>
        <tr class="even">
         <td>
          lxde
