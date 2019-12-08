@@ -27,7 +27,26 @@
       Size
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-mate-20191015.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191204/NuTyX_x86_64-jwm-20191204.iso"><img src="../graphics/downloads/start-here-2.svg" alt="logo mate"/>Rolling</a>
+    <td>
+     This ISO is optimise for NuTyX.
+     <p>
+      It is a respin made by Miyo Linux.
+     <p>
+     It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
+     <p>
+      Install packages:
+     <p>
+      jwm dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
+      lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
+    </td>
+    <td>
+     Approx. 803 Mo
+    </td>
+   <tr class="even">
+    <td class="lien_article">
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191015/NuTyX_x86_64-mate-20191015.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
        Installation in BIOS or EFI modus is possible.
@@ -35,26 +54,23 @@
       The ISO contains a complete installation with a very customised <a href="https://en.wikipedia.org/wiki/MATE">MATE</a> as graphical interface as default.
      <p>
       Once the installation is done, you will be able to connect directly to you new account created at post-configuration.
+     <p>
+       Install packages
+     <p>
+      lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a> and <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
+      zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
+      system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
+      gimp transmission cheese cherrytree deadbeef aisleriot
+      gnome-mahjongg inxi gawk htop flcards rsync tar pigz
+      lbzip2 xdg-user-dirs sound-theme-freedesktop nano
+      network-manager-applet alsa-utils alsa-plugins
+      ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
+      gparted xorg-setxkbmap ntp ntp.service
+      virtualbox-guest
+       
     </td>
     <td>
       Approx. 1.69 GB
-    </td>
-   </tr>
-   <tr class="odd">
-    <td>
-     Install packages
-    </td>
-    <td>
-     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a> and <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate-extra">mate-extra</a>
-     zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
-     system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
-     gimp transmission cheese cherrytree deadbeef aisleriot
-     gnome-mahjongg inxi gawk htop flcards rsync tar pigz
-     lbzip2 xdg-user-dirs sound-theme-freedesktop nano
-     network-manager-applet alsa-utils alsa-plugins
-     ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
-     gparted xorg-setxkbmap ntp ntp.service
-     virtualbox-guest
     </td>
    </tr>
   </table>
@@ -70,11 +86,11 @@
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-11.2.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.2/NuTyX_x86_64-11.2.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_x86_64-20191015.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191015/NuTyX_x86_64-20191015.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
-        <a class="url" href="http://downloads.nutyx.org/NuTyX_i686-20191016.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191015/NuTyX_i686-20191016.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
       <td>
         Installation in BIOS or EFI modus is possible.
@@ -107,183 +123,7 @@
   <p>
    It must be executed from the root account.
   <p>
-   The script will analyse the <b>/etc/install-nutyx.conf</b> file if it exist and used defined variables in it.
-  <p>
-   At the moment, they are 6 configurables variables:
-  <ul>
-   <li>
-    the installation path define by the <b>LFS</b> variable
-   <li>
-    the url adress of the mirror where are the binaries located via the <b>URL</b> variable
-   <li>
-    the version to installed (fixed or rolling) define by the <b>VERSION</b> variable
-   <l>
-    the kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
-   <li>
-    the <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
-   <li>
-    the architecture we want to install define by the <b>ARCH</b> varible.
-    <p>
-     The ARCH variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS. The otherway around is not possible.
-  </ul>
-   Here is a summary example of the <b>/etc/install-nutyx.conf</b> file:</p>
-     <pre class="output">URL="http://localhost"
-DEPOT="/DEPOT"
-LFS="/mnt/lfs"
-VERSION="rolling"</pre>
-  <p>
-   If you want to have your own configuration, it's possible to place your configuration files in the <b>/etc/install-nutyx.conf.d/</b> folder.
-   When you run the script, if files are found there, they will be used instead of the default ones.
-  <p>
-       <table width="100%" cellspacing="0">
-        <caption><EM>Recognised configuration files list:</EM></caption>
-       <tr class="sidebar">
-        <th>
-        File name
-        <th>
-       File final path destionation
-       <tr>
-        <td>
-         cards.conf
-        </td>
-        <td>
-         /etc/cards.conf
-        </td>
-       <tr>
-        <td>
-         pkgmk.conf
-        </td>
-        <td>
-         /etc/pkgmk.conf
-        </td>
-       <tr>
-        <td>
-         fstab
-        </td>
-        <td>
-         /etc/fstab
-        </td>
-       <tr>
-        <td>
-         .bashrc
-        </td>
-        <td>
-         /root/.bashrc and /home/&lt;username&gt;/.bashrc
-        </td>
-       <tr>
-        <td>
-         bashrc
-        </td>
-        <td>
-         /etc/bashrc
-        </td>
-       <tr>
-        <td>
-         profile
-        </td>
-        <td>
-         /etc/profile
-        </td>
-       <tr>
-        <td>
-         hosts
-        </td>
-        <td>
-         /etc/hosts
-        </td>
-      <tr>
-        <td>
-         inputrc
-        </td>
-        <td>
-         /etc/inputrc
-        </td>
-      <tr>
-        <td>
-         rc_site
-        </td>
-        <td>
-         /etc/sysconfig/rc_site
-        </td>
-      <tr>
-        <td>
-         .bash_profile
-        </td>
-        <td>
-         /root/.bash_profile and /home/&lt;username&gt;/.bash_profile
-        </td>
-      <tr>
-       <td>
-        .dmrc
-       </td>
-       <td>
-        /etc/skel/.dmrc
-       </td>
-      <tr>
-       <td>
-        shells
-       </td>
-       <td>
-        /etc/shells
-       </td>
-      <tr>
-       <td>
-        dircolors.sh
-       </td>
-       <td>
-        /etc/profile.d/dircolors.sh
-       </td>
-      <tr>
-       <td>
-        extrapaths.sh
-       </td>
-       <td>
-        /etc/profile.d/extrapaths.sh
-       </td>
-      <tr>
-       <td>
-        readline.sh
-       </td>
-       <td>
-        /etc/profile.d/readline.sh
-       </td>
-      <tr>
-       <td>
-        umask.sh
-       </td>
-       <td>
-        /etc/profile.d/umask.sh
-       </td>
-      <tr>
-       <td>
-        modules
-       </td>
-       <td>
-        /etc/sysconfig/modules
-       </td>
-      <tr>
-       <td>
-        createfiles
-       </td>
-       <td>
-        /etc/sysconfig/createfiles
-       </td>
-      <tr>
-       <td>
-        mouse
-       </td>
-       <td>
-        /etc/sysconfig/mouse
-       </td>
-     </table>
-  <p>
-   As a conclusion:
-  <div class="important">
-        <img alt="[Important]" src="../graphics/caution.gif" />
-        Don't forget to remove/check the <i>/etc/install-nutyx.conf</i> file and
-        the contents of the <i>/etc/install-nutyx.d/</i> directory if necessary.
-        Found files will be read and used by the script and allow a more powerful configuration. 
-  </div>
+   <a class="url" href="install-nutyx">All details informations about the script are now found here.</a>
 
    <table width="100%" cellspacing="0">
     <caption><EM>This script is widely used in many tutorials of NuTyX:</EM></caption>
@@ -319,33 +159,6 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
          Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
          <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
        </ul>
-      
-       <p>
-        The script can be used for both 32 bits and 64 bits architectures.
-        By default, it will be the host architecture of the host machine that will be chosen.
-        It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
-        To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
-        <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
-       <p>
-        By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
-        Specify the name of the branch via the <i><b>VERSION</b></i> variable.
-        It should exist on the depot server.
-        <pre class="command"><kbd>VERSION="development" sh install-nutyx</kbd></pre>
-       <p>
-        The default URL will be used for downloading and configuration of NuTyX.
-        To instead specify another URL, use the  <i><b>URL</b></i> variable.
-        <pre class="command"><kbd>URL="http://192.168.0.254" sh install-nutyx</kbd></pre>
-       <p>
-        By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
-        <pre class="command"><kbd>LFS="/My-NuTyX" sh install-nutyx</kbd></pre>
-        The folder will be automatically created if it does not already exist.
-       <p>
-        You can combine several variables:
-        <pre class="command"><kbd>LFS="/MINI-ISO" \
-VERSION="rolling" \
-URL="http://192.168.0.254" \
-ARCH="i686" \
-sh install-nutyx</kbd></pre>
      </td>
     </tr>
    </table>

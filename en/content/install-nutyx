@@ -1,0 +1,265 @@
+<h1>The install-nutyx script</h1>
+ <h2>Introduction</h2>
+  <p>
+   The script can be started from an already installed NuTyX or from another distribution.
+  <p>
+   It must be executed from the root account.
+  <p>
+   This script allows the installation of a base NuTyX in a folder.
+  <p>
+   It's signature can be verified by downloading the <a class="url" href="http://download.nutyx.org/install-nutyx.md5sum">http://download.nutyx.org/install-nutyx.md5sum</a> file.
+
+ <h2>Let's start with a simple example</h2>
+  <p>
+   The traditionnal example to show how simple it is.
+  <p>
+   The script can install a Base NuTyX in the <b>/mnt/hd</b> by default. The command is as simple as:
+   <pre class="command"><kbd>install-nutyx</kbd></pre>
+  <p>
+   The installation will start immediatly.
+
+ <h2>Advanced options</h2>
+  <p>
+   At the moment, they are 6 configurables variables:
+  <ul>
+   <li>
+    the installation path define by the <b>LFS</b> variable
+   <li>
+    the url adress of the mirror where are the binaries located via the <b>URL</b> variable
+   <li>
+    the version to installed (fixed or rolling) define by the <b>VERSION</b> variable
+   <l>
+    the kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
+   <li>
+    the <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
+   <li>
+    the architecture we want to install define by the <b>ARCH</b> varible.
+    <p>
+     The ARCH variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS. The otherway around is not possible.
+  </ul>
+   <p>
+   The script will analyse the <b>/etc/install-nutyx.conf</b> file if it exist and used defined variables in it.
+   Here is a summary example of the <b>/etc/install-nutyx.conf</b> file:</p>
+     <pre class="output">URL="http://localhost"
+DEPOT="/DEPOT"
+LFS="/mnt/lfs"
+VERSION="rolling"</pre>
+  <p>
+   If you want to have your own configuration, it's possible to place your configuration files in the <b>/etc/install-nutyx.conf.d/</b> folder.
+   When you run the script, if files are found there, they will be used instead of the default ones.
+  <p>
+       <table width="100%" cellspacing="0">
+        <caption><EM>Recognised configuration files list:</EM></caption>
+       <tr class="sidebar">
+        <th>
+        File name
+        <th>
+       File final path destionation
+       <tr>
+        <td>
+         cards.conf
+        </td>
+        <td>
+         /etc/cards.conf
+        </td>
+       <tr>
+        <td>
+         pkgmk.conf
+        </td>
+        <td>
+         /etc/pkgmk.conf
+        </td>
+       <tr>
+        <td>
+         fstab
+        </td>
+        <td>
+         /etc/fstab
+        </td>
+       <tr>
+        <td>
+         .bashrc
+        </td>
+        <td>
+         /root/.bashrc and /home/&lt;username&gt;/.bashrc
+        </td>
+       <tr>
+        <td>
+         bashrc
+        </td>
+        <td>
+         /etc/bashrc
+        </td>
+       <tr>
+        <td>
+         profile
+        </td>
+        <td>
+         /etc/profile
+        </td>
+       <tr>
+        <td>
+         hosts
+        </td>
+        <td>
+         /etc/hosts
+        </td>
+      <tr>
+        <td>
+         inputrc
+        </td>
+        <td>
+         /etc/inputrc
+        </td>
+      <tr>
+        <td>
+         rc_site
+        </td>
+        <td>
+         /etc/sysconfig/rc_site
+        </td>
+      <tr>
+        <td>
+         .bash_profile
+        </td>
+        <td>
+         /root/.bash_profile and /home/&lt;username&gt;/.bash_profile
+        </td>
+      <tr>
+       <td>
+        .dmrc
+       </td>
+       <td>
+        /etc/skel/.dmrc
+       </td>
+      <tr>
+       <td>
+        shells
+       </td>
+       <td>
+        /etc/shells
+       </td>
+      <tr>
+       <td>
+        dircolors.sh
+       </td>
+       <td>
+        /etc/profile.d/dircolors.sh
+       </td>
+      <tr>
+       <td>
+        extrapaths.sh
+       </td>
+       <td>
+        /etc/profile.d/extrapaths.sh
+       </td>
+      <tr>
+       <td>
+        readline.sh
+       </td>
+       <td>
+        /etc/profile.d/readline.sh
+       </td>
+      <tr>
+       <td>
+        umask.sh
+       </td>
+       <td>
+        /etc/profile.d/umask.sh
+       </td>
+      <tr>
+       <td>
+        modules
+       </td>
+       <td>
+        /etc/sysconfig/modules
+       </td>
+      <tr>
+       <td>
+        createfiles
+       </td>
+       <td>
+        /etc/sysconfig/createfiles
+       </td>
+      <tr>
+       <td>
+        mouse
+       </td>
+       <td>
+        /etc/sysconfig/mouse
+       </td>
+     </table>
+  <p>
+   As a conclusion:
+  <div class="important">
+        <img alt="[Important]" src="../graphics/caution.gif" />
+        Don't forget to remove/check the <i>/etc/install-nutyx.conf</i> file and
+        the contents of the <i>/etc/install-nutyx.d/</i> directory if necessary.
+        Found files will be read and used by the script and allow a more powerful configuration. 
+  </div>
+
+   <table width="100%" cellspacing="0">
+    <caption><EM>This script is widely used in many tutorials of NuTyX:</EM></caption>
+     <tr class="sidebar">
+      <th>
+       Script
+      <th>
+       Description
+     <tr class="even">
+      <td class="lien_article">
+        <a class="url" href="http://www.nutyx.org/install-nutyx"><img src="../graphics/downloads/script.png" alt="logo script"/>install-nutyx</a>
+      </td>
+      <td>
+        The installation of NuTyX is done following these steps:
+       <ul>
+        <li>
+         Open a temporary root session
+         <pre class="command_user"><kbd>sudo bash</kbd></pre>
+        <li>
+         Download the script and the signature
+         <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
+        <li>
+         Check the signature
+         <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
+        <li>
+         Mount the destination partition (here /dev/sda2 for example)
+         <pre class="command"><kbd>mkdir -p /mnt/hd
+mount /dev/sda2 /mnt/hd</kbd></pre>
+        <li>
+         Install the base NuTyX
+         <pre class="command"><kbd>sh install-nutyx</kbd></pre>
+        <li>
+         Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
+         <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
+       </ul>
+      
+       <p>
+        The script can be used for both 32 bits and 64 bits architectures.
+        By default, it will be the host architecture of the host machine that will be chosen.
+        It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
+        To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
+        <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
+       <p>
+        By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
+        Specify the name of the branch via the <i><b>VERSION</b></i> variable.
+        It should exist on the depot server.
+        <pre class="command"><kbd>VERSION="development" sh install-nutyx</kbd></pre>
+       <p>
+        The default URL will be used for downloading and configuration of NuTyX.
+        To instead specify another URL, use the  <i><b>URL</b></i> variable.
+        <pre class="command"><kbd>URL="http://192.168.0.254" sh install-nutyx</kbd></pre>
+       <p>
+        By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
+        <pre class="command"><kbd>LFS="/My-NuTyX" sh install-nutyx</kbd></pre>
+        The folder will be automatically created if it does not already exist.
+       <p>
+        You can combine several variables:
+        <pre class="command"><kbd>LFS="/MINI-ISO" \
+VERSION="rolling" \
+URL="http://192.168.0.254" \
+ARCH="i686" \
+sh install-nutyx</kbd></pre>
+     </td>
+    </tr>
+   </table>
+ 
