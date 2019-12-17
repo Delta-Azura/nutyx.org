@@ -30,7 +30,7 @@
       Taille
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191204/NuTyX_x86_64-jwm-20191204.iso"><img src="../graphics/downloads/start-here-2.svg" alt="logo mate"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191216/NuTyX_x86_64-jwm-20191216.iso"><img src="../graphics/downloads/jwm-blue.svg" alt="logo mate"/>Rolling</a>
     <td>
       Cette iso est optimalisée pour NuTyX.
      <p>
@@ -45,7 +45,7 @@
       volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
     </td>
     <td>
-     Environ 803 Mo
+     Environ 802 Mo
     </td>
    <tr class="odd">
     <td class="lien_article">
