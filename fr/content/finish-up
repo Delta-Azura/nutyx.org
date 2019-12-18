@@ -7,14 +7,14 @@
   <p>
     Si vous avez choisi d'installer la version rolling de NuTyX, vous pouvez directement procéder à <a href=#3>la mise à jour des informations concernant les paquets disponibles</a>
   <p>
-    Si vous avez choisi d'installer la version 11.2 de NuTyX, les binaires sont fourni avec l'ISO.
+    Si vous avez choisi d'installer la version 11.3 de NuTyX, les binaires sont fourni avec l'ISO.
   Il faut donc maintenant monter l'ISO au bon endroit.
   Insérez le média sur lequel se trouve l'ISO (très probablement une clé USB).
   En fonction de l'emplacement reconnu, utilsez la commande:
   <pre class=command_user><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
   Adaptez le chemin <b>/dev/sdb1</b> à votre cas.
  <div class="important">
-   Si vous testez la NuTyX 11.2 dans un environnement virtuel tel que Virtualbox, l'ISO est reconnue sous <b>/dev/sr0</b>
+   Si vous testez la NuTyX 11.3 dans un environnement virtuel tel que Virtualbox, l'ISO est reconnue sous <b>/dev/sr0</b>
  </div>
  <h2>Mise à jour des informations concernant les paquets disponibles</h2>
   Il faut commencer par renseigner les paquets disponibles à votre nouvelle installation. 
