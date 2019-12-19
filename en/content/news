@@ -1,35 +1,35 @@
-<h1>Latest news 2019-10-15</h1>
+<h1>Latest news 2019-12-19</h1>
 
-<h2>NuTyX 11.2 available with cards 2.4.103</h2>
+<h2>NuTyX 11.2 available with cards 2.4.108</h2>
 <p>
- I'm very pleased to announce the new NuTyX 11.2 release.
+ I'm very pleased to announce the new NuTyX 11.3 release.
 <p>
- The 64-bit version contains more than 2800 packages upgraded.
+ The 64-bit version contains about 850 packages upgraded.
 <p>
- The 32-bit version of NuTyX, still actively supported contains more then 1800 packages upgraded.
+ The 32-bit version of NuTyX, still actively supported.
 <p>
- In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.79 (4.9.196 for the 32-bit version).
+ In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.90 (4.9.206 for the 32-bit version).
 <p>
-For 64-bit systems,the kernel release 5.3.6 is also available.
+For 64-bit systems,the kernel release 5.4.4 is also available.
 <p>Changelogs for the kernels are available here:
-<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.79">kernel 4.19.79 changlog</a>
-<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.6"> kernel 5.3.6 changelog</a>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.90">kernel 4.19.90 changlog</a>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.4"> kernel 5.4.4 changelog</a>
 <p>
- The gnu compiler collection, gcc, is now gcc 9.2.0.
+ The gnu c library, glibc, is now glibc 2.30
 <p>
- The graphical server is xorg-server 1.20.5.
+ The graphical server is xorg-server 1.20.6.
 <p>
-The mesa lib is 19.2.1, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
+The mesa lib is 19.2.7, gtk3 is 3.24.13, and qt has been updated to 5.13.2.
 <p>
- Python interpreters 3.7.4 and 2.7.16 have been included in this release.
+ Python interpreters 3.7.4 and 2.7.17 have been included in this release.
 <p>
  The MATE Desktop Environment comes in 1.22.2, the latest version.
 <p>
- The KDE Plasma Desktop is now 5.16.5, the Framework is now 5.62.0 and applications are now 19.08.2
+ The KDE Plasma Desktop is now 5.17.4, the Framework is now 5.64.0 and applications are now 19.12.0
 <p>
- Available browsers are: firefox 69.0.3, falkon 3.1.0, epiphany 3.34.0, etc
+ Available browsers are: firefox 71.0, falkon 3.1.0, epiphany 3.34.2, etc
 <p>
- Many desktop applications have been updated as well like thunderbird 68.2.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.12, etc.
+ Many desktop applications have been updated as well like thunderbird 68.3.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.14, etc.
 <p>
  4 news ISOs are available.
  <ul>
@@ -38,8 +38,8 @@ The mesa lib is 19.2.1, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
    <p>
     The first ISO is a base NuTyX "rolling" version with a size of 402 Mbytes.
    <p>
-    A 4.4 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.2 release.
-    You can install NuTyX 11.2 completely without having to use the internet.
+    A 4.4 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.3 release.
+    You can install NuTyX 11.3 completely without having to use the internet.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
    <p>
@@ -52,105 +52,22 @@ The mesa lib is 19.2.1, gtk3 is 3.24.12, and qt has been updated to 5.13.1.
   <b><i>for 32-bit:</i></b>
    <p>
     A 327 Mbytes ISO base NuTyX "rolling" version.
-  
  </ul><p>
  ISOs are available on <a href="downloads">the download page.</a>
-<h2>CARDS</h2>
-<h3>The six official collections</h3>
- <p>
-  The number of official collections is now 6:
-<p>
- <ul>
-  <li>
-   base 
- <li>
-   cli
- <li>
-   cli-extra
- <li>
-   gui
- <li>
-   gui-extra
- <li>
-   desktops
- </ul>
- <p>
-  All the supported desktops graphical interface under NuTyX are in the <b><u><i>desktops</i></u></b> collection.
- <p>
-  Collections <i>nos, lxde, mate, kde5, lxqt, gnome and xfce4</i> will be removed from the mirrors servers.
- <div class="important">
-  It is therefore important to update <b>manually</b> the configuration file <i>/etc/cards.conf</i> as explained below.
-   A successful update can not be done without this manipulation.
- </div>
-<h3>A set of packages</h3>
-
-<p>
- The concept of "set of packages" is introduced.
- A packages set adds important functionality such as a graphical desktop.
- Henceforth, the main desktops (kde5, xfce4, mate, etc..) are considered as sets of packages.
-<p>
- To install a supported desktop under NuTyX, the command remains the same, example for kde5 (Plasma5):
-<pre class="command_user"><kbd>get kde5</kbd></pre>
-
-<h3>New recipe syntax</h3>
-<p>
- The syntax of a recipe has been revised.
- Following a very relevant bug return, I decided to stop keyword support via a comment in a package build recipe.
- The definition of a recipe is therefore only via variables and tables.
- Comments are now considered comments only.
- The large number of updates is largely the consequence of this new feature.
- <p>
-  Recipe example using the new syntax:
-  
-<pre class="output">description="My first package with plenty of  dependancies"
-url="http://www.my-first-package.org/"
-
-packager="fpr <fpr@nutyx.org>"
-contributors="Tnut"
-
-# Compilation dependencies table
-makedepends=(python gtk3 librsvg)
-
-# Runtime dependencies table
-run=(gtk-update-icon-cache)
-
-# Set of packages table
-set=(mate gnome)
-
-name=mypackage
-version=1.0.0
-release=1
-source=(${url}downloads/$name/$name-$version.tar.xz)
-build() {
-   cd $name-$version
-   ./configure --prefix=/usr
-   make
-   make DESTDIR=$PKG install
-}</pre>
-
+<h2>News</h2>
+ <h3>ISO</h3>
+    <p>
+      The installeur set the right keyboard in graphical mode for many contries.
+    <p>
+      By default, the ISO is loading the minimal in RAM, a new entry is add for forcing all in RAM.
+ <h3>CARDS</h3>
+    <p>
+      When a package is not existing anymore, cards thow an error message instead of freezing
+    <p>
+      The command <b>cards upgrade</b> take now care of synchronisation the meta datas, upgrading and cleaning the cache.
 <h2>Upgrade process</h2>
 <p>
  Since this is a minor release, an upgrade is possible.
-<p>
- Please use following commands to proceed:
-<p>
- We start by creating a new <i>/etc/cards.conf</i> file:
-  <pre class="command_user"><kbd>sudo bash</kbd></pre>
-  <pre class="command"><kbd>echo "url http://downloads.nutyx.org" > /etc/cards.conf
-for i in desktops gui-extra gui cli-extra cli base
-do
-   echo "dir /var/lib/pkg/depot/$i" >> /etc/cards.conf
-done
-echo "base /var/lib/pkg/depot/base
-group en
-version rolling" >> /etc/cards.conf
-exit</kbd></pre>
-<p>
- If you don't know the shortcut of your language, rerun the command:
-<pre class="command_user"><kbd>sudo bash</kbd></pre>
-<pre class="command"><kbd>setup-nutyx -cl
-exit</kbd></pre> 
- We can now start the upgrade process:
  <pre class="command_user"><kbd>check
 sudo cards upgrade</kbd></pre>
 
