@@ -24,7 +24,7 @@
 <p>
  De nombreuses applications on été mise à jour également comme thunderbird 68.3.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.14, etc.
 <p>
- 4 nouvelles ISOs sont disponible.
+ 5 nouvelles ISOs sont disponible.
 <p>
  <ul>
   <li>
@@ -40,6 +40,9 @@
      <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
      Adaptez en conséquence.
     <p>
+     Une ISO créée par Miyo, désormais le createur officiel des ISO NuTyX.
+     Sa taille est de 804 Mbyte, elle embarque le stricte minimum avec comme bureau JWM en version "rolling".
+    <p>
      Une ISO NuTyX avec l'environnement MATE de 1,7 Goctets en version "rolling".
   <li>
     <b><i>en 32 bits:</i></b>
@@ -48,9 +51,31 @@
   </ul>
 <p>
  Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
-<h2>Nouveautées</h2>
+<h2>Quoi de neuf ?</h2>
  <h3>ISO</h3>
+  <p>
+   L'installateur ajuste correctement le clavien en mode graphique pour la plupart des pays.
+  <p>
+   L'ISO utilise désormais le minimum de RAM disponible par défaut lors de son lancement.
+   Cet nouvel approche accélère le processus de démarrage de l'ISO.
+   Une nouvelle entrée est désormais proposée au lancement avec la possibilité de lancer l'ISO en RAM.
+
  <h3>CARDS</h3>
+   <p>
+    Quand un paquet n'existe plus, cards affiche une erreur dans la console au lieu de geler éternellement.
+   <p>
+     Un dossier sans fichier Pkgfile suivi par cards affichera une erreur dans le terminal via les commandes cards deptree, cards depends ou cards create.
+   <p>
+    La commande <b>cards search</b> recherche dans toutes les informations possibles, une recherche peut être faîte sur base de la version, l'url, et le packager.
+   <p>
+    La commande <b>sudo cards upgrade</b> gère en une seule commande le processus de synchronisation des données meta, la mise à jour des paquets à mettre à jour, la suppression des paquets obsolets et la suppression des archives installées.
+    Il n'est donc plus necessaire de faire un <b><i>sudo cards sync</i></b> et un <b><i>sudo cards purge</i></b> si <b>cards upgrade</b> est utilisée.
+ <h3>Nouveau membre dans l'équipe</h3>
+   <p>
+    J'ai le plaisir de vous annoncer l'intégration de Miyo Linux dans l'équipe.
+    Dan s'occupe des ISOs NuTyX personnalisées.
+    Son expertise dans la matière est très appréciée.
+    Dan propose également de très bonnes présentations vidéos sur son <a href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">canal YouTube qui est également le canal officiel de NuTyX anglais</a>.
 <h2>Mise à jour</h2>
 <p>
  La NuTyX 11.3 est une mise à jour mineure, une mise à jour est donc possible.
