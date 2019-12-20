@@ -60,27 +60,27 @@ The mesa lib is 19.2.7, gtk3 is 3.24.13, and qt has been updated to 5.13.2.
 <h2>What's new ?</h2>
  <h3>ISO</h3>
     <p>
-      The installeur set the right keyboard in graphical mode for many contries.
+      The installer sets the right keyboard in graphical mode for many countries.
     <p>
       The ISO is using the minimal in RAM when booting up.
-      This processus speed up the BOOT process.
-      In case of, a new entry is add to give the possibility to load the ISO in RAM if necessary.
+      This speeds up the BOOT process.
+      In case of, a new entry is added to give the possibility to load the ISO in RAM if necessary.
  <h3>CARDS</h3>
     <p>
-      When a package is not existing anymore, cards throw an error message instead of freezing
+      When a package is not existing anymore, cards throws an error message instead of freezing.
     <p>
-      When a folder without Pkgfile file is track by cards, an error will be throw in the terminal when commands cards deptree cards depends or cards create are used.
+      When a folder without Pkgfile file is tracked by cards, an error will be throw in the terminal when commands cards deptree cards depends or cards create are used.
     <p>
       The command <b>cards search</b> is looking in every posssible information, means seach can be done based on version, url and packager infos as well.
     <p>
-      The command <b>cards upgrade</b> take now care of synchronisation the meta datas, upgrading and cleaning the cache.
-      It's no need to make a <b><i>sudo cards sync</i></b> and a <b><i>sudo cards purge</i></b> if <b>cards upgrade</b> is used.
+      The command <b>cards upgrade</b> now takes care of synchronisation the meta datas, upgrading and cleaning the cache.
+      It's no longer needed to make a <b><i>sudo cards sync</i></b> and a <b><i>sudo cards purge</i></b> if <b>cards upgrade</b> is used.
  <h3>New team member</h3>
   <p>
    I'm please to annonce that Miyo Linux is joining the team.
-   Dan will take care of the customise ISO.
+   Dan will take care of the customised ISO.
    We appreciate his expertise in this task.
-   Dan propose very nice presentations video on his <a href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">Youtube channel which is the official NuTyX YouTube channel for the non french speaking peoples</a>.
+   Dan proposed a very nice presentation video on his <a href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">Youtube channel which is the official NuTyX YouTube channel for the non french speaking peoples</a>.
 <h2>Upgrade process</h2>
 <p>
  Since this is a minor release, an upgrade is possible.
