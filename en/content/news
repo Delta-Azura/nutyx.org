@@ -1,6 +1,6 @@
-<h1>Latest news 2019-12-19</h1>
+<h1>Latest news 2019-12-20</h1>
 
-<h2>NuTyX 11.2 available with cards 2.4.108</h2>
+<h2>NuTyX 11.3 available with cards 2.4.108</h2>
 <p>
  I'm very pleased to announce the new NuTyX 11.3 release.
 <p>
@@ -58,6 +58,9 @@ The mesa lib is 19.2.7, gtk3 is 3.24.13, and qt has been updated to 5.13.2.
  </ul><p>
  ISOs are available on <a href="downloads">the download page.</a>
 <h2>What's new ?</h2>
+ <h3>Sourceforge.net</h3>
+  <p>
+   All the ISOs are now at <a href="https://sourceforge.net/projects/nutyx/files/">sourceforge.net website</a> available.
  <h3>ISO</h3>
     <p>
       The installer sets the right keyboard in graphical mode for many countries.

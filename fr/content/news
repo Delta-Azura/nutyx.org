@@ -1,4 +1,4 @@
-<h1>Dernière nouvelle 19-12-2019</h1>
+<h1>Dernière nouvelle 20-12-2019</h1>
 
 <h2>NuTyX 11.3 disponible avec cards 2.4.108</h2>
 <p>
@@ -52,6 +52,9 @@
 <p>
  Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 <h2>Quoi de neuf ?</h2>
+ <h3>Sourceforge.net</h3>
+  <p>
+   Toutes les ISOs sont désormais disponible sur <a href="https://sourceforge.net/projects/nutyx/files/">le site sourceforge.net</a>
  <h3>ISO</h3>
   <p>
    L'installateur ajuste correctement le clavien en mode graphique pour la plupart des pays.
