@@ -116,9 +116,8 @@
       <a class="url" href="sysvinit">Brief SysVinit overview</a>
     </td>
     <td  width="40%">
-	 A brief walkthrough on SysVinit. Describes runlevels and provides
-	the bare essentials to aid a user in quickly understanding and managing
-	their system.
+	 A brief walkthrough on SysVinit.
+	 Describes runlevels and provides the bare essentials to aid a user in quickly understanding and managing their system.
     </td>
    </tr>
   </table>   

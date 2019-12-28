@@ -127,6 +127,14 @@
      tous les logiciels que vous souhaitez, y compris une interface graphique. Le minimum à ajouter est un kernel.
     </td>
    </tr>
+   <tr class="even">
+    <td class="lien_article" >
+     <a class="url" href="sysvinit">Bref aperçu de SysVinit</a>
+    </td>
+    <td>
+     Une brève description pas à pas sur SysVinit.
+     Décrit les niveaux d'exécution et fournit l'essentiel pour aider un utilisateur à comprendre et à gérer rapidement son système.
+   </tr>
   </table>
  <h2>Guides du contributeur</h2>
   <table width="100%" cellspacing="0">

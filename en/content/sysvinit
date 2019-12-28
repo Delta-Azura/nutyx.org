@@ -1,101 +1,88 @@
 <h1>SysVinit</h1>
  <h2>Introduction</h2>
   <p>
-	SysVinit is the init process (the process that starts other processies)
-	of NuTyX. Inits are often called PID1 (process ID 1) since they are
-	always the first process to start on a system. They INITialize the 
-	system. SysVinit's origins can be traced back to unix and has 
-	been frequently used in numerous distros.
+   SysVinit is the init process (the process that starts other processies) of NuTyX.
+   Inits are often called PID1 (process ID 1) since they are always the first process to start on a system.
+   They INITialize the system.
+   SysVinit's origins can be traced back to unix and has been frequently used in numerous distros.
   <p>
  <h2>Runlevels</h2>
   <p>
-	SysVinit functions by defining what processes startup based on their
- 	runlevels. Runlevels can be found be in /etc/rc.d and are defined in 
-	/etc/initab.
+   SysVinit functions by defining what processes startup based on their runlevels.
+   Runlevels can be found be in the /etc/rc.d folder and are defined in the /etc/initab file.
   <p>
-	Navigate to /etc/rc.d using the cd command:
+   Navigate to /etc/rc.d using the cd command:
   <p>
-   	<pre class="command"><kbd>cd /etc/rc.d</kbd></pre>
-
+   <pre class="command"><kbd>cd /etc/rc.d</kbd></pre>
   <p>
-	The output from an ls command should be:
+   The output from an ls command should be:
   <p>
-   	<pre class="output">init.d  rc0.d  rc1.d  rc2.d  rc3.d  rc4.d  rc5.d  rc6.d  rcS.d</pre>
+   <pre class="output">init.d  rc0.d  rc1.d  rc2.d  rc3.d  rc4.d  rc5.d  rc6.d  rcS.d</pre>
   <p>
    The following directories e.g. rc0, rc1, etc are all runlevels in NuTyX.
   <p>
  <h2>Runlevels in NuTyX</h2>
   <p>
-   	The default configuration of the NuTyX runlevels is:
-	<ul>
+   The default configuration of the NuTyX runlevels is:
+   <ul>
+    <li>
+     rc0 (runlevel 0): Halt.
+    <li>
+     rc1 (runlevel 1): Single user mode.
+    <li>
+     rc2 (runlevel 2): Multiuser Mode.
+    <li>
+     rc3 (runlevel 3): Full Multiuser Mode
+    <li>
+     rc4 (runlevel 4): Full Multiuser Mode
 	<li>
-	rc0 (runlevel 0): Halt.
+     rc5 (runlevel 5): Graphical Environment Mode
 	<li>
-	rc1 (runlevel 1): Single user mode.
-	<li>
-	rc2 (runlevel 2): Multiuser Mode.
-	<li>
-	rc3 (runlevel 3): Full Multiuser Mode
-	<li>
-	rc4 (runlevel 4): Full Multiuser Mode
-	<li>
-	rc5 (runlevel 5): Graphical Environment Mode
-	<li>
-	rc6 (runlevel 6): Reboot
+	 rc6 (runlevel 6): Reboot
 	<li> 
-	rcS (runlevel S): Tells the system what to run during initialization.
-	</ul>
+     rcS (runlevel S): Tells the system what to run during initialization.
+   </ul>
   <p>
-   	rcS is a runlevel whose main use is for the initialization of the 
-	system. Runlevel 4 is a repeat of 3 so that a user may edit it and use
-	it for what they seem fit. 
+   rcS is a runlevel whose main use is for the initialization of the system.
+   Runlevel 4 is a repeat of 3 so that a user may edit it and use it for what they seem fit. 
   <p>
-<h2>Contents of the Folders</h2>
+ <h2>Contents of the Folders</h2>
   <p>
-	Navigating to each runlevel, the contents can be listed out through an
-	ls command:
+   Navigating to each runlevel, the contents can be listed out through an ls command:
   <p>
-   	<pre class="command"><kbd>ls</kbd></pre>	
+   <pre class="command"><kbd>ls</kbd></pre>	
   <p>
-	Example of my runlevel 2:
+   Example of my runlevel 2:
   <p>
-
-   	<pre class="output">K46ntpd  K80network  S15dbus  S25cups  S25random  S31elogind  S70gpm</pre>
-
-	<p>
-	All files within this directory are not startup scripts themselves but
-	symbolic links to startup scripts. These scripts are contained in the 
-	/etc/init.d directory. The letter beginning each link has significance.
-	A link beginning with k means that the service is killed at this run
-	level and needs the appropriate portion of the script to run. S means
-	that the service must start at this runlevel. The number following the
-	letter indicates the priority for the service to start or be killed 		(when starting up services, in what order to start them). The lower 
-	numbers are started first and then the higher ones are started.
-   <p>
-
-
-<h2>Looking at a Startup Script</h2>
-   <p> 
-	Open a script in /etc/init.d with your favorite text editor.
-	The following is a portion of my cups file within init.d:
-   <p>
-
-   	<pre class="output">case $1 in
+   <pre class="output">K46ntpd  K80network  S15dbus  S25cups  S25random  S31elogind  S70gpm</pre>
+  <p>
+   All files within this directory are not startup scripts themselves but symbolic links to startup scripts.
+   These scripts are contained in the /etc/init.d directory.
+   The letter beginning each link has significance.
+   A link beginning with k means that the service is killed at this run level and needs the appropriate portion of the script to run.
+   S means that the service must start at this runlevel.
+   The number following the letter indicates the priority for the service to start or be killed (when starting up services, in what order to start them).
+   The lower numbers are started first and then the higher ones are started.
+  <p>
+ <h2>Looking at a Startup Script</h2>
+  <p> 
+   Open a script in /etc/init.d with your favorite text editor.
+   The following is a portion of my cups file within init.d:
+  <p>
+   <pre class="output">case $1 in
    start)
-      log_info_msg "Starting CUPS Printserver..."
-      start_daemon /usr/sbin/cupsd
-      evaluate_retval
-      ;;
+        log_info_msg "Starting CUPS Printserver..."
+        start_daemon /usr/sbin/cupsd
+        evaluate_retval
+        ;;
 
-   stop)
-      log_info_msg "Stopping CUPS Printserver..."
-      killproc /usr/sbin/cupsd
-      evaluate_retval
-      ;;</pre>
-
-	<p>
-	Each script is a file written in bash that contains a case statement.
-	Case statements are used to match an arguement to several different
-	outcomes. Through case statements, these scripts only run portions
-	of code needed for specific tasks. For example, upon starting a service,
-	a script will run all of the lines relating to start and then end.
+    stop)
+       log_info_msg "Stopping CUPS Printserver..."
+       killproc /usr/sbin/cupsd
+       evaluate_retval
+       ;;</pre>
+  <p>
+   Each script is a file written in bash that contains a <i>"case"</i> statement.
+   <i>"Case"</i> statements are used to match an arguement to several different outcomes.
+   Through <i>"case"</i> statements, these scripts only run portions of code needed for specific tasks.
+   For example, upon starting a service, a script will run all of the lines relating to <i>"start"</i> and then <i>"end"</i>.

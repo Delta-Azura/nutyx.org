@@ -1,0 +1,85 @@
+<h1>SysVinit</h1>
+ <h2>Introduction</h2>
+  <p>
+   SysVinit est le processus d'initialisation (le processus qui démarre d'autres processus) de NuTyX.
+   Les inits sont souvent appelés PID1 (ID de processus 1) car ils sont toujours le premier processus à démarrer sur un système.
+   Ils INITialisent le système.
+   Les origines de SysVinit remontent à Unix et ont été fréquemment utilisées dans de nombreuses distributions.
+  <p>
+ <h2>Runlevels</h2>
+  <p>
+   SysVinit fonctionne en définissant les processus à démarrer en fonction de leurs niveaux d'exécution.
+   Les niveaux d'exécution se trouvent dans le dossier /etc/rc.d et sont définis dans le fichier /etc/initab.
+  <p>
+   Accédez à /etc/rc.d à l'aide de la commande cd:
+  <p>
+   <pre class="command"><kbd>cd /etc/rc.d</kbd></pre>
+  <p>
+   La sortie d'une commande ls devrait être:
+  <p>
+   <pre class="output">init.d  rc0.d  rc1.d  rc2.d  rc3.d  rc4.d  rc5.d  rc6.d  rcS.d</pre>
+  <p>
+ <h2>Les niveaux d'exécutions dans NuTyX</h2>
+  <p>
+   Le niveaux d'exécution par défaut configuré dans NuTyX est:
+   <ul>
+    <li>
+     rc0 (runlevel 0): Halt. Arrêt.
+    <li>
+     rc1 (runlevel 1): Single user mode. Mode simple utilisateur.
+    <li>
+     rc2 (runlevel 2): Multiuser Mode. Mode multiutilisateur.
+    <li>
+     rc3 (runlevel 3): Full Multiuser Mode. Mode multiutilisateur complet.
+    <li>
+     rc4 (runlevel 4): Full Multiuser Mode.
+	<li>
+     rc5 (runlevel 5): Graphical Environment Mode. Mode environnement graphique.
+	<li>
+	 rc6 (runlevel 6): Reboot. Redémarrage.
+	<li> 
+     rcS (runlevel S): Spécifie les tâches à lancer/arrêter durant l'initialisation/l'arrêt du système.
+   </ul>
+  <p>
+   rcS est un niveau d'exécution dont l'utilisation principale est l'initialisation du système.
+   Le niveau d'exécution 4 est une répétition de 3 afin qu'un utilisateur puisse le modifier et l'utiliser pour ce qu'il semble convenir.
+  <p>
+ <h2>Contenu des dossiers</h2>
+  <p>
+   En naviguant vers chaque niveau d'exécution, le contenu peut être répertorié via une commande ls:
+  <p>
+   <pre class="command"><kbd>ls</kbd></pre>	
+  <p>
+   Exemple de mon niveau d'exécution 2:
+  <p>
+   <pre class="output">K46ntpd  K80network  S15dbus  S25cups  S25random  S31elogind  S70gpm</pre>
+  <p>
+   Tous les fichiers de ce répertoire ne sont pas des scripts de démarrage eux-mêmes mais des liens symboliques vers des scripts de démarrage.
+   Ces scripts sont contenus dans le répertoire /etc/init.d.
+   La lettre commençant chaque lien a une signification.
+   Un lien commençant par k signifie que le service est tué à ce niveau d'exécution et a besoin de la partie appropriée du script pour s'exécuter.
+   S signifie que le service doit démarrer à ce niveau d'exécution.
+   Le nombre suivant la lettre indique la priorité de démarrage ou d'arrêt du service (lors du démarrage des services, dans quel ordre les démarrer).
+   Les nombres inférieurs sont d'abord démarrés, puis les plus élevés sont démarrés.
+ <h2>Regardons un script de démarrage de plus près</h2>
+  <p>
+   Ouvrez un script dans /etc/init.d avec votre éditeur de texte préféré.
+   Ce qui suit est une partie de mon fichier cups dans init.d:
+  <p>
+   <pre class="output">case $1 in
+   start)
+        log_info_msg "Starting CUPS Printserver..."
+        start_daemon /usr/sbin/cupsd
+        evaluate_retval
+        ;;
+
+    stop)
+       log_info_msg "Stopping CUPS Printserver..."
+       killproc /usr/sbin/cupsd
+       evaluate_retval
+       ;;</pre>
+  <p>
+   Chaque script est un fichier écrit en bash qui contient une instruction <i>"case"</i>.
+   Les instructions <i>"case"</i> sont utilisées pour faire correspondre un argument à plusieurs résultats différents.
+   Par le biais d'instructions <i>"case"</i>, ces scripts exécutent uniquement les parties de code nécessaires à des tâches spécifiques.
+   Par exemple, au démarrage d'un service, un script exécutera toutes les lignes relatives à "start" puis à "end".
