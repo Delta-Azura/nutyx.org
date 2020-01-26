@@ -18,6 +18,8 @@
   <p>
    Les locales s'installent à la première mise à jour.
    Une fois l'ISO installée, faites une mise à jour pour installer les paquets de locales correspondants.
+  <p>
+   <a class="url" href="install">Cet article vous explique comment installer depuis zéro la distribution NuTyX sur votre machine</a>
  <h2>Pour le nouvel utilisateur sur NuTyX</h2>
    <table width="100%" cellspacing="0">
    <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
@@ -113,9 +115,6 @@
   <p>
    Vous pouvez également trouver diverses ISOS NuTyX <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">sur le site linuxtracker</a>.
 
- <h2>Installation classique de NuTyX sur une seule partition en images</h2>
-  <p>
-   <a class="url" href="install">Cet article vous explique comment installer depuis zéro la distribution NuTyX sur votre machine</a>
  <h2>Pour l'utilisateur confirmé</h2>
    Ce script permet l'installation d'une NuTyX de base dans un dossier.
   <p>

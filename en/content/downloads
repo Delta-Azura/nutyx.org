@@ -15,7 +15,9 @@
   <p>
    Locales will be installed at the first upgrade process.
    Onces the ISO installed, make an upgrade of your system to get the locales installed.
- <h2>For the new user coming to NuTyX</h2>
+   <p>
+   Typical installation of NuTyX on a single partition <a class="url" href="install">from scratch on your PC is located here</a>.
+<h2>For the new user coming to NuTyX</h2>
    <table width="100%" cellspacing="0">
    <caption><EM>Available ISO list for a new user who wants to discover NuTyX without minimum technical dificulty:</EM></caption>
    <tr class="sidebar">
@@ -111,9 +113,6 @@
   <p>
    You can also find a lot of various ISOS <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">on linuxtracker website</a>.
 
- <h2>Typical installation of NuTyX on a single partition</h2>
-  <p>
-   <a class="url" href="install">How to install NuTyX from scratch on your PC</a>.
  <h2>For the experienced NuTyX user</h2>
   This script allows the installation of a base NuTyX in a folder.
   <p>
