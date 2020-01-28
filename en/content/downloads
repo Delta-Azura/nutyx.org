@@ -18,6 +18,11 @@
    <p>
    Typical installation of NuTyX on a single partition <a class="url" href="install">from scratch on your PC is located here</a>.
 <h2>For the new user coming to NuTyX</h2>
+ <p>
+   Installation in BIOS or EFI modus is possible.
+ <p>
+   Once the installation is done, you can directly connect with your new user account created at post-configuration time.
+ 
    <table width="100%" cellspacing="0">
    <caption><EM>Available ISO list for a new user who wants to discover NuTyX without minimum technical dificulty:</EM></caption>
    <tr class="sidebar">
@@ -27,6 +32,25 @@
       Description
     <th>
       Size
+    <tr class="odd">
+    <td class="lien_article">
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-openbox-20200109.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/>Rolling</a>
+    <td>
+     This ISO is optimise for NuTyX.
+     <p>
+      It is a respin made by Miyo Linux.
+     <p>
+     It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
+     <p>
+      Install packages:
+     <p>
+      openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
+      lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
+    </td>
+    <td>
+     Approx. 835 Mo
+    </td>
    <tr class="even">
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-jwm-20200110.iso"><img src="../graphics/downloads/jwm-blue.svg" alt="logo mate"/>Rolling</a>
@@ -51,11 +75,8 @@
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191015/NuTyX_x86_64-mate-20191015.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
-       Installation in BIOS or EFI modus is possible.
      <p>
       The ISO contains a complete installation with a very customised <a href="https://en.wikipedia.org/wiki/MATE">MATE</a> as graphical interface as default.
-     <p>
-      Once the installation is done, you will be able to connect directly to you new account created at post-configuration.
      <p>
        Install packages
      <p>
@@ -95,11 +116,8 @@
         <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191216/NuTyX_i686-20191221.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
       <td>
-        Installation in BIOS or EFI modus is possible.
        <p>
         The ISO contains a basic system WITHOUT graphical installation.
-       <p>
-        Once the installation is done, you can directly connect with your new user account created at post-configuration time.
       </td>
       <td>
        Approx. 4.4 GB
