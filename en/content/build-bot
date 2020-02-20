@@ -1,207 +1,91 @@
-   <h1>"build-collection" command setup</h1>
-    <h2>Introduction</h2>
-     <div class="important">
-       <img alt="[Important]" src="../graphics/caution.gif" />
-       <img alt="[Important]" src="../graphics/caution.gif" />
-       <img alt="[Important]" src="../graphics/caution.gif" />
-       <img alt="[Important]" src="../graphics/caution.gif" />
-       It's highly recommended to know NuTyX very well to succeed with this tutorial.
-     </div>
-      <div class="important">
-       All the manipulations MUST BE done in the same SINGLE terminal. Do no use more then one terminal.
-     </div>
-    <h2>Each step</h2>
-     <p>
-      We will:
-     <ol>
-      <li>
-       get the tools
-      <li>
-       put the user folders in place
-      <li>
-       get all the recepts
-      <li>
-       put the script folders in place
-      <li>
-       get the binaries from the remote server
-      <li>
-       set up the configuration files
-      <li>
-       Launch the script
-     </ol>
-   <h2>Setting up the tools (packages to install)</h2>
-      <p>
-       We assume that your NuTyX is clean from any devel package.
-       We start to install all the utilities:
-      <pre class="command_user"><kbd>get rsync git</kbd></pre>
-   <h2>Configuration of the project (32 or 64 bits architecture)</h2>
-      <p>
-       The first variables we need to define are the project to use and the architecture definition (32 or 64 bits):
-      <pre class="command_user"><kbd>ARCH=`uname -m`
-PROJECT=packages-$ARCH</kbd></pre>
-
-     <h2>Version to use</h2>
-      <p>
-       NuTyX packages are in 2 versions available.
-       Once you decide on which version you want to work, make a copy/paste of the variables in the right colomn.
-       <table>
-        <caption>
-         <EM>
-          List of available versions, copy/paste the correct variables depending on your choice:
-         </EM>
-         <tr class="sidebar">
-          <th>
-           Version
-         <th>
-          Variables to use
-        <tr class="even">
-         <td>
-          fixed
-         <td>
-         <pre class="command_user"><kbd>VERSION=fixed</kbd></pre>
-         <tr class="odd">
-         <td>
-           rolling
-         <td>
-          <pre class="command_user"><kbd>VERSION=rolling</kbd></pre>
-       </table>
-
-     <h2>Available projets</h2>
-      <p>
-       Choose the collection and the project you're going to work with.
-       Once you made your choice, copy/paste defined variables in the right colomn.
-      <table>
-       <caption>
-        <EM>
-         Available collections list per project, copy/paste the variables depending your choice:
-        </EM>
-       </caption>
-       <tr class="sidebar">
-        <th>
-         Collection
-        <th>
-         Variables to use
-       <tr class="even">
-        <td>
-         base
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=base
-RSYNC=(base)</kbd></pre>
-
-       <tr class="odd">
-        <td>
-         cli
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=cli
-RSYNC=(base cli)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         gui
-        <td>
-         <pre class="command_user"><kbd>PROJECT=COLLECTION=gui
-RSYNC=(base cli gui)</kbd></pre>
-
-       <tr class="odd">
-        <td>
-         cli-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=cli-extra
-RSYNC=(base cli)</kbd></pre>
-
-       <tr class="even">
-        <td>
-         gui-extra
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=gui-extra
-RSYNC=(base cli gui)</kbd></pre>
-
-       <tr class="odd">
-        <td>
-         desktops
-        <td>
-         <pre class="command_user"><kbd>COLLECTION=desktops
-RSYNC=(base cli gui desktops)</kbd></pre>
-
-     </table>
-
-   <h2>The git user folder in place</h3>
-      <p>
-       A build bot requires a lot of space.
-      <p>
-       At least 10 Gb of space is perfect.
-      <p>
-       All the folders needed are in:
-      <pre class="output">/srv/www/</pre>
-       and
-      <pre class="output">/home/$USER/git/$VERSION</pre>
-      <p>
-       All the receipts will be in our personnal folder.
-      <p>
-       We can now create the user git folder with our own account:
-      <pre class="command_user"><kbd>mkdir -pv /home/$USER/git/$VERSION</kbd></pre>
-     <pre class="output">mkdir: created directory '/home/me/git'
-mkdir: created directory '/home/me/git/rolling'</pre>
-      
-
-    <h2>Get all the ports of the "$COLLECTION" from git location</h2>
-     <p>
-      We will synchronise the status of all the ports of the <b>$COLLECTION</b> for the compilation:
-      <pre class="command_user"><kbd>git clone -b $VERSION https://github.com/NuTyX/$PROJECT.git ~/git/$VERSION/$PROJECT</kbd></pre>
-     <p>
-       We now create all the folders needed for the script:
-       <pre class="command_user"><kbd>sudo mkdir -pv \
-/srv/www/{logs/$ARCH/$VERSION,$ARCH/$VERSION/$COLLECTION,sources}</kbd></pre>
-
-    <h2>Get all the binaries define in the $RSYNC variable from the remote server </h2>
-      <p>
-       This command might take some time if your connection is not very fast.
-      <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
-       You need to type this command every time you want to resync your local copy with the remote server.
-      </div>
-      <pre class="command_user"><kbd>for i in ${RSYNC[@]}
-do
-  sudo rsync -av --delete rsync://downloads.nutyx.org/nutyx/$ARCH/$VERSION/$i/ \
-  /srv/www/$ARCH/$VERSION/$i/
-done</kbd></pre>
-    <h2>The /etc/fstab configuration file</h2>
-      <p>
-       We need to adjust 1 existing file
-
-      <pre class="command_user"><kbd>sudo echo "
-#    PROJECT $PROJECT
-##   COLLECTION $COLLECTION
-###  VERSION $VERSION
-#### GIT
-/home/$USER/git/$VERSION/$PROJECT \
-/$VERSION/$COLLECTION/root/$PROJECT none noauto,bind" \
-| sudo tee --append /etc/fstab</kbd></pre>
-   <h2>Finalisation and step to reproduce</h2>
-     <p>
-      You're now ready to work with the compilation script. The command below needs to be reproduce in three cases:
-      <ul>
-       <li>
-        The first time.
-       <li>
-        When you did something wrong with your chroot and then with your own binaries.
-       <li>
-        When you want to come back on the official binaries from the server.
-      </ul>
-     <pre class="command_user"><kbd>for i in ${RSYNC[@]}
-do
-  sudo rsync -av --delete rsync://downloads.nutyx.org/nutyx/$ARCH/$VERSION/$i/ \
-  /srv/www/$ARCH/$VERSION/$i/
-done</kbd></pre>
-   <h2>Let's go</h2>
+<h1>"mybld" command setup</h1>
+ <h2>Introduction</h2>
+  Once the GIT project is recovered,
+  all manipulations MUST be done from the folder containing your GIT project.
+ <h2>Tools (packages to install)</h2>
+  <p>
+   It is assumed that your NuTyX is free from any development package.
+   So we start by installing the utilities:
+   <pre class="command_user"><kbd>get rsync git</kbd></pre>
+ <h2>Collections disponibles</h2>
+  <p>
+   Choose the collection you want to work on.
+   Depending on the collection chosen,
+   you will need to retrieve the collections specified in the right column.
+   <table>
+    <caption>
+     <EM>
+      Collections list.
+     </EM>
+    </caption>
+    <tr class="sidebar">
+     <th>
+      Collection
+     <th>
+      Collection(s) to retrieve
+    <tr class="even">
+     <td>
+      base
+     <td>
+      base
+    <tr class="odd">
+     <td>
+      cli
+     <td>
+      base cli
+    <tr class="even">
+     <td>
+      gui
+     <td>
+      base cli gui
+    <tr class="odd">
+     <td>
+      cli-extra
+     <td>
+      base cli cli-extra
+    <tr class="even">
+     <td>
+      gui-extra
+     <td>
+      base cli gui gui-extra
+    <tr class="odd">
+     <td>
+      desktops
+     <td>
+      base cli gui desktops
+   </table>
+ <h2>Get the GIT project/h2>
+  <p>
+   We can now start by cloning the GIT project containing all the NuTyX recipes:
+   <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+   Once the GIT project in place, we move to the root of it,
+   indeed the command <i><b>mybld</b></i> uses information from the GIT (VERSION, USERNAME, EMAIL, etc).
+ <h2>Implementation of working directories</h2>
+  <p>
+   The <i>mybld</i> command uses a set of folders for its operation,
+   they must therefore be created using the command:
+   <pre class="command_user"><kbd>mybld -i</kbd></pre>
+  <p>
+   You can adjust the operating folders in the configuration file <b>~/.mybld</b> via the variables <b>ROOT</b> and <b>ROOTMOUNT</b>.
+ <h2>Retrieving binaries collections</h2>
+  <p>
+   Depending on the collections required, launch the command:
+   <pre class="command_user"><kbd>mybld -s name_of_collection</kbd></pre>
+   For example, to use the <i>gui</i> collection, run the command:
+   <pre class="command_user"><kbd>for i in base cli gui; do mybld -s $i;done</kbd></pre>
+  <p>
+   If you want to recover the entire collection, run the same command but without arguments:
+   <pre class="command_user"><kbd>mybld -s</kbd></pre>
+  <p>
+   You can specify a custom address in the <b>~/.mybld</b> configuration file via the <b>URL</b> variable.
+ <h2>(Re)Compile a package</h2>
     <p>
-     If you have done all the steps correctly, you should be able to start the compilation of all the ports of the project <b>$PROJECT</b>.
-    <pre class="command_user"><kbd>build-collection /$VERSION/$COLLECTION -c</kbd></pre>
-    <pre><class="output">CHROOT: &lt;your collection&gt;
-COLLECTION: &lt;your collection&gt;
-VERSION: &lt;your version&gt;
-The command: KERNEL=NONE LFS=/&lt;your version&gt;/&lt;your collection&gt; DEPOT=/DEPOT install-nutyx
-DEVEL: cards.devel &&
-cd /root/&lt;your collection&gt; &&
-bash scripts/&lt;your collection&gt; -a &&
-bash scripts/&lt;your collection&gt;-extra -a  OK ? (y)</pre>
-<pre class="command_user"><kbd>y</kbd></pre>
+    <pre class="command_user"><kbd>mybld name_of_package</kbd></pre>
+    Compilation begins immediately.
+ <h2>Help</h2>
+  <p>
+   the <i>mybld</i> command allows all kinds of options.
+   Remember to consult mybld's help and man page.
+   <pre class="command_user"><kbd>mybld -h</kbd></pre>
+   and
+   <pre class="command_user"><kbd>man mybld</kbd></pre>
