@@ -22,7 +22,7 @@
   <h3>Entrer dans la chroot</h3>
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
   <h3>Mettre le kernel et l'initrd au bon endroit</h3>
-   <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf</kbd></pre>
+   <pre class="command"><kbd>mkinitramfs $(basename /lib/modules/*) -nf</kbd></pre>
   <h3>En Option, installer les paquets pour l'installation en EFI</h3>
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
   <h3>En Option, installer le support wifi et la souris</h3>

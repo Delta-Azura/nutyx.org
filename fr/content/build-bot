@@ -1,17 +1,45 @@
 <h1>Mise en place de la commande "mybld"</h1>
  <h2>Introduction</h2>
-  Une fois le projet GIT récupéré,
-  toutes les manipulations DOIVENT se faire depuis le dosssier contenant votre projet GIT.
+  <p>
+   Toutes les commandes se tapent dans votre compte personnel.
+   Autrement dit, il ne faut pas utiliser le compte <i>root</i>.
+  <p> 
+   Une fois le projet GIT récupéré,
+   toutes les manipulations DOIVENT se faire depuis le dosssier contenant votre projet GIT.
+ <h2>Aide</h2>
+  <p>
+   la commande <b><i>mybld</i></b> permet toute sorte d'options.
+   Pensez à consulter l'aide et le man page de mybld.
+   <pre class="command_user"><kbd>mybld -h</kbd></pre>
+   et
+   <pre class="command_user"><kbd>man mybld</kbd></pre>
  <h2>Les outils (paquets à installer)</h2>
   <p>
    On part du principe que votre NuTyX est vierge de tout paquet de développement.
    On commence donc par installer les utilitaires:
    <pre class="command_user"><kbd>get rsync git</kbd></pre>
+ <h2>Récupérations des recettes via le projet GIT</h2>
+  <p>
+   On peut maintenant commencer par cloner
+   le projet GIT contenant toutes les recettes des paquets 64 bits de la NuTyX:
+   <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+   Une fois le projet GIT en place, on se déplace à la racine de celui-ci,
+   en effet la commande <i><b>mybld</b></i> utilise des information du GIT
+   (VERSION, USERNAME, EMAIL, etc).
+ <h2>Mise en place des dossiers de fonctionement</h2>
+  <p>
+   La commande <i><b>mybld</b></i> utilise un ensemble de dossiers pour son fonctionnement,
+   il faut donc les créer via la commande:
+   <pre class="command_user"><kbd>mybld -i</kbd></pre>
+  <p>
+   Vous pouvez ajuster l'emplacement des dossiers de fonctionnement dans le fichier de configuration <i><b>~/.mybld</b></i>
+   via les variables <b>ROOT</b>, <b>ROOTMOUNT</b> et <b>VERSION</b>.
  <h2>Collections disponibles</h2>
   <p>
    Choisissez la collection sur laquelle vous souhaitez travailler.
-   En fonction de la collection choisie,
-   vous allez devroir récupérer les collections spécifiées dans la colonne de droite.
+  <p>
+   En fonction de la collection choisie dans la colonne de gauche,
+   vous récupérez les collections spécifiées dans la colonne de droite.
    <table>
     <caption>
      <EM>
@@ -20,7 +48,7 @@
     </caption>
     <tr class="sidebar">
      <th>
-      Collection
+      Collection choisie
      <th>
       Collection(s) à récupérer
     <tr class="even">
@@ -54,38 +82,23 @@
      <td>
       base cli gui desktops
    </table>
- <h2>Récupérations des recettes via le projet GIT</h2>
-  <p>
-   On peut maintenant commencer par cloner le projet GIT contenant toutes les recettes NuTyX:
-   <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
-   Une fois le projet GIT en place, on se déplace à la racine de celui-ci,
-   en effet la commande <i><b>mybld</b></i> utilise des information du GIT (VERSION, USERNAME, EMAIL, etc).
- <h2>Mise en place des dossiers de fonctionement</h2>
-  <p>
-   La commande <i>mybld</i> utilise un ensemble de dossiers pour son fonctionnement,
-   il faut donc les créer via la commande:
-   <pre class="command_user"><kbd>mybld -i</kbd></pre>
-  <p>
-   Vous pouvez ajuster les dossiers de fonctionnement dans le fichier de configuration <b>~/.mybld</b> via les variables <b>ROOT</b> et <b>ROOTMOUNT</b>.
  <h2>Récupération des collections en binaires</h2>
   <p>
-   En fonction des collections necessaires, lancer la commande:
-   <pre class="command_user"><kbd>mybld -s nom_de_collection</kbd></pre>
+   En fonction de la collections choisie, lancer la commande:
+   <pre class="command_user"><kbd>mybld -s nom_de_collection</kbd></pre> afin de récupérer la (les) collections necessaires
+  <p>
    Par exemple, pour une utilisation de la collection <i>gui</i>, lancer la commande:
    <pre class="command_user"><kbd>for i in base cli gui; do mybld -s $i;done</kbd></pre>
   <p>
-   Si vous souhaitez récupérer l'intégralitée des collections, lancer la même commande mais sans arguments:
+   Si vous le souhaitez, vous pouvez également récupérer l'intégralitée des collections.
+   Lancez alors la même commande mais sans arguments:
    <pre class="command_user"><kbd>mybld -s</kbd></pre>
   <p>
-   Vous pouvez spécifier une adresse personnalisée dans le fichier de configuration <b>~/.mybld</b> via la variable <b>URL</b>.
+   Il est possible de spécifier une adresse et une version personnalisées
+   dans le fichier de configuration <i><b>~/.mybld</b></i>
+   via les variables <b>URL</b> et <b>VERSION</b>.
  <h2>(Re)Compiler un paquet</h2>
     <p>
-    <pre class="command_user"><kbd>mybld nom_du_paquet</kbd></pre>
-    La compilation commence immédiatement.
- <h2>Aide</h2>
-  <p>
-   la commande <i>mybld</i> permet toute sorte d'options.
-   Pensez à consulter l'aide et le man page de mybld.
-   <pre class="command_user"><kbd>mybld -h</kbd></pre>
-   et
-   <pre class="command_user"><kbd>man mybld</kbd></pre>
+     <pre class="command_user"><kbd>mybld nom_du_paquet</kbd></pre>
+     La compilation commence immédiatement.
+    <p>

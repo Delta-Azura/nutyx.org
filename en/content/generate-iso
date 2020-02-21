@@ -29,7 +29,7 @@
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
 
   <h3>Put the kernel and the initrd in the right place</h3>
-      <pre class="command"><kbd>mkinitramfs `basename /lib/modules/*` -nf</kbd></pre>
+   <pre class="command"><kbd>mkinitramfs $(basename /lib/modules/*) -nf</kbd></pre>
 
   <h3>Suggested Option, install the EFI's installation packages</h3>
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
