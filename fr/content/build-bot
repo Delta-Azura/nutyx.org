@@ -1,43 +1,33 @@
 <h1>Mise en place de la commande "mybld"</h1>
- <h2>Introduction</h2>
+ <h2>Important</h2>
   <p>
    Toutes les commandes se tapent dans votre compte personnel.
    Autrement dit, il ne faut pas utiliser le compte <i>root</i>.
   <p> 
    Une fois le projet GIT récupéré,
    toutes les manipulations DOIVENT se faire depuis le dosssier contenant votre projet GIT.
- <h2>Aide</h2>
-  <p>
-   la commande <b><i>mybld</i></b> permet toute sorte d'options.
-   Pensez à consulter l'aide et le man page de mybld.
-   <pre class="command_user"><kbd>mybld -h</kbd></pre>
-   et
-   <pre class="command_user"><kbd>man mybld</kbd></pre>
- <h2>Les outils (paquets à installer)</h2>
-  <p>
+ <h2>Mise en place</h2>
+  <h3>Les outils (paquets à installer)</h3>
    On part du principe que votre NuTyX est vierge de tout paquet de développement.
    On commence donc par installer les utilitaires:
    <pre class="command_user"><kbd>get rsync git</kbd></pre>
- <h2>Récupérations des recettes via le projet GIT</h2>
-  <p>
+  <h3>Les recettes du projet GIT</h3>
    On peut maintenant commencer par cloner
    le projet GIT contenant toutes les recettes des paquets 64 bits de la NuTyX:
    <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
    Une fois le projet GIT en place, on se déplace à la racine de celui-ci,
    en effet la commande <i><b>mybld</b></i> utilise des information du GIT
    (VERSION, USERNAME, EMAIL, etc).
- <h2>Mise en place des dossiers de fonctionement</h2>
-  <p>
-   La commande <i><b>mybld</b></i> utilise un ensemble de dossiers pour son fonctionnement,
-   il faut donc les créer via la commande:
-   <pre class="command_user"><kbd>mybld -i</kbd></pre>
-  <p>
-   Vous pouvez ajuster l'emplacement des dossiers de fonctionnement dans le fichier de configuration <i><b>~/.mybld</b></i>
-   via les variables <b>ROOT</b>, <b>ROOTMOUNT</b> et <b>VERSION</b>.
- <h2>Collections disponibles</h2>
-  <p>
+  <h3>Les dossiers de fonctionement</h3>
+    La commande <i><b>mybld</b></i> utilise un ensemble de dossiers pour son fonctionnement,
+    il faut donc les créer via la commande:
+    <pre class="command_user"><kbd>mybld -I</kbd></pre>
+   <p>
+    Vous pouvez ajuster l'emplacement des dossiers de fonctionnement dans le fichier de configuration <i><b>~/.mybld</b></i>
+    via les variables <b>ROOT</b>, <b>ROOTMOUNT</b> et <b>VERSION</b>.
+  <h3>Collections disponibles</h3>
    Choisissez la collection sur laquelle vous souhaitez travailler.
-  <p>
+   <p>
    En fonction de la collection choisie dans la colonne de gauche,
    vous récupérez les collections spécifiées dans la colonne de droite.
    <table>
@@ -82,8 +72,7 @@
      <td>
       base cli gui desktops
    </table>
- <h2>Récupération des collections en binaires</h2>
-  <p>
+  <h3>Les collections en binaires</h3>
    En fonction de la collections choisie, lancer la commande:
    <pre class="command_user"><kbd>mybld -s nom_de_collection</kbd></pre> afin de récupérer la (les) collections necessaires
   <p>
@@ -97,8 +86,21 @@
    Il est possible de spécifier une adresse et une version personnalisées
    dans le fichier de configuration <i><b>~/.mybld</b></i>
    via les variables <b>URL</b> et <b>VERSION</b>.
- <h2>(Re)Compiler un paquet</h2>
+ <h2>Utiliser la commande</h2>
+  <h3>(Re)Compiler un paquet</h3>
     <p>
      <pre class="command_user"><kbd>mybld nom_du_paquet</kbd></pre>
      La compilation commence immédiatement.
     <p>
+  <h3>Incrementer la version et recompiler un paquet</h3>
+    <p>
+     <pre class="command_user"><kbd>mybld -i nom_du_paquet</kbd></pre>
+     Après confirmation, la compilation commence immédiatement.
+    <p>
+ <h2>Aide</h2>
+  <p>
+   La commande <b><i>mybld</i></b> permet toute sorte d'options.
+   <pre class="command_user"><kbd>mybld -h</kbd></pre>
+  <p>
+   Pensez à (re)lire le manuel disponible pour obternir plus d'information sur les options possibles:
+   <pre class="command_user"><kbd>man mybld</kbd></pre>
