@@ -1,28 +1,30 @@
-<h1>Dernière nouvelle 20-12-2019</h1>
+<h1>Dernière nouvelle 12-03-2020</h1>
 
-<h2>NuTyX 11.3 disponible avec cards 2.4.108</h2>
+<h2>NuTyX 11.4 disponible avec cards 2.4.114</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.3.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.4.
 <p>
- La version 64 bit de la NuTyX 11.3 a reçu près de 850 mise à jour.
+ La version 64 bit de la NuTyX 11.4 a reçu près de 1150 mise à jour.
 <p>
  La version 32 bits de NuTyX est toujours disponible.
 <p>
- La base de NuTyX est fournie avec le kernel LTS 4.19.90 (4.9.206 pour la version 32 bits) et le kernel 5.4.4 (uniquement en 64 bits).
+ La base de NuTyX est fournie avec le kernel LTS 4.19.108 (4.9.206 pour la version 32 bits) et le kernel 5.5.8 (uniquement en 64 bits).
 <p>
  La librairie glibc gnu est passé en version 2.30
 <p>
- Le serveur graphique xorg-server version 1.20.6, la librairie Mesa 3D en 19.2.7, gtk3 3.24.13 et qt 5.13.2 sont également dans leurs dernières versions
+ Le serveur graphique xorg-server version 1.20.7, la librairie Mesa 3D en 19.3.4, gtk3 3.24.14 et qt 5.14.1 sont également dans leurs dernières versions
 <p>
- Les interpreteurs python sont en version 3.7.4 et 2.7.17.
+ Les interpreteurs python sont en version 3.8.2 et 2.7.17.
 <p>
- L'environnement de bureau MATE est également mis à jour en version 1.22.2, dernière version disponible.
+ L'environnement de bureau MATE est mis à jour en version 1.24.0, dernière version disponible.
 <p>
- L'environnement de bureau KDE est disponible en Plasma 5.17.4, Framework 5.64.0 et les applications en 19.12.0
+ L'environnement de bureau XFCE4 est également mis à jour en version 4.14.1, dernière version disponible.
 <p>
- Les navigateurs disponibles sont entre autre:  firefox 71.0, falkon 3.1.0, epiphany 3.34.2, etc
+ L'environnement de bureau KDE est disponible en Plasma 5.18.2, Framework 5.67.0 et les applications en 19.12.3
 <p>
- De nombreuses applications on été mise à jour également comme thunderbird 68.3.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.14, etc.
+ Les navigateurs disponibles sont entre autre:  firefox 73.0.1, falkon 3.1.0, epiphany 3.34.4, etc
+<p>
+ De nombreuses applications on été mise à jour également comme thunderbird 68.5.0, Scribus 1.5.5, libreoffice 6.4.1.2, gimp 2.10.18, etc.
 <p>
  5 nouvelles ISOs sont disponible.
 <p>
@@ -32,8 +34,8 @@
     <p>
      Une ISO NuTyX de base de 402 Moctets en version "rolling".
     <p>
-     Une ISO de 4.4 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.3.
-     Avec cette ISO, vous pouvez installer une NuTyX 11.3 complète sans avoir recours à une connection internet.
+     Une ISO de 4.9 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.4.
+     Avec cette ISO, vous pouvez installer une NuTyX 11.4 complète sans avoir recours à une connection internet.
      Pour installer des paquets depuis cette ISO, une fois votre système de base installé sur votre disque dur, il faut monter la clé USB sur le dossier <b>/mnt</b>.
     <p>
      Supposons que votre clé est trouvé sous /dev/sdc1, utilisez la commande:
@@ -57,32 +59,19 @@
    Toutes les ISOs sont désormais disponible sur <a href="https://sourceforge.net/projects/nutyx/files/">le site sourceforge.net</a>
  <h3>ISO</h3>
   <p>
-   L'installateur ajuste correctement le clavien en mode graphique pour la plupart des pays.
+   L'installateur ajuste correctement le clavier en mode graphique pour la plupart des pays.
   <p>
    L'ISO utilise désormais le minimum de RAM disponible par défaut lors de son lancement.
    Cet nouvel approche accélère le processus de démarrage de l'ISO.
    Une nouvelle entrée est désormais proposée au lancement avec la possibilité de lancer l'ISO en RAM.
 
- <h3>CARDS</h3>
-   <p>
-    Quand un paquet n'existe plus, cards affiche une erreur dans la console au lieu de geler éternellement.
-   <p>
-     Un dossier sans fichier Pkgfile suivi par cards affichera une erreur dans le terminal via les commandes cards deptree, cards depends ou cards create.
-   <p>
-    La commande <b>cards search</b> recherche dans toutes les informations possibles, une recherche peut être faîte sur base de la version, l'url, et le packager.
-   <p>
-    La commande <b>sudo cards upgrade</b> gère en une seule commande le processus de synchronisation des données meta, la mise à jour des paquets à mettre à jour, la suppression des paquets obsolets et la suppression des archives installées.
-    Il n'est donc plus necessaire de faire un <b><i>sudo cards sync</i></b> et un <b><i>sudo cards purge</i></b> si <b>cards upgrade</b> est utilisée.
- <h3>Nouveau membre dans l'équipe</h3>
-   <p>
-    J'ai le plaisir de vous annoncer l'intégration de Miyo Linux dans l'équipe.
-    Dan s'occupe des ISOs NuTyX personnalisées.
-    Son expertise dans la matière est très appréciée.
-    Dan propose également de très bonnes présentations vidéos sur son <a href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">canal YouTube qui est également le canal officiel de NuTyX anglais</a>.
 <h2>Mise à jour</h2>
 <p>
- La NuTyX 11.3 est une mise à jour mineure, une mise à jour est donc possible.
- <pre class="command_user"><kbd>check
-sudo cards upgrade</kbd></pre>
+ La NuTyX 11.4 est une mise à jour mineure, une mise à jour est donc possible.
+ <pre class="command_user"><kbd>check</kbd></pre>
+ Si vous avez une NuTyX Miyo, supprimez le paquet xfce4-conf:
+ <pre class="command_user"><kbd>del xfce4-conf</kbd></pre>
+ Vous pouvez maintenant terminer la mise à jour:
+ <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 <h2>Anciennes nouvelles</h2>
  Les anciennes nouvelles sont maintenant consultables <a href="old-news/?C=N;O=D">ici.</a>

@@ -1,35 +1,37 @@
-<h1>Latest news 2019-12-20</h1>
+<h1>Latest news 2020-03-12</h1>
 
-<h2>NuTyX 11.3 available with cards 2.4.108</h2>
+<h2>NuTyX 11.4 available with cards 2.4.114</h2>
 <p>
- I'm very pleased to announce the new NuTyX 11.3 release.
+ I'm very pleased to announce the new NuTyX 11.4 release.
 <p>
- The 64-bit version contains about 850 packages upgraded.
+ The 64-bit version contains about 1150 packages upgraded.
 <p>
  The 32-bit version of NuTyX, still actively supported.
 <p>
- In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.90 (4.9.206 for the 32-bit version).
+ In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.108 (4.9.206 for the 32-bit version).
 <p>
-For 64-bit systems,the kernel release 5.4.4 is also available.
+For 64-bit systems,the kernel release 5.5.8 is also available.
 <p>Changelogs for the kernels are available here:
-<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.90">kernel 4.19.90 changlog</a>
-<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.4"> kernel 5.4.4 changelog</a>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.108">kernel 4.19.108 changlog</a>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.5.8"> kernel 5.5.8 changelog</a>
 <p>
  The gnu c library, glibc, is now glibc 2.30
 <p>
- The graphical server is xorg-server 1.20.6.
+ The graphical server is xorg-server 1.20.7.
 <p>
-The mesa lib is 19.2.7, gtk3 is 3.24.13, and qt has been updated to 5.13.2.
+The mesa lib is 19.3.4, gtk3 is 3.24.14, and qt has been updated to 5.14.1.
 <p>
- Python interpreters 3.7.4 and 2.7.17 have been included in this release.
+ Python interpreters 3.8.2 and 2.7.17 have been included in this release.
 <p>
- The MATE Desktop Environment comes in 1.22.2, the latest version.
+ The MATE Desktop Environment comes in 1.24.0, the latest version.
 <p>
- The KDE Plasma Desktop is now 5.17.4, the Framework is now 5.64.0 and applications are now 19.12.0
+ The XFCE Desktop Environment comes in 4.14.1, the latest version.
 <p>
- Available browsers are: firefox 71.0, falkon 3.1.0, epiphany 3.34.2, etc
+ The KDE Plasma Desktop is now 5.18.2, the Framework is now 5.67.0 and applications are now 19.12.3
 <p>
- Many desktop applications have been updated as well like thunderbird 68.3.1, Scribus 1.5.5, libreoffice 6.3.2.2, gimp 2.10.14, etc.
+ Available browsers are: firefox 73.0.1, falkon 3.1.0, epiphany 3.34.4, etc
+<p>
+ Many desktop applications have been updated as well like thunderbird 68.5.0, Scribus 1.5.5, libreoffice 6.4.1.2, gimp 2.10.18, etc.
 <p>
  5 news ISOs are available.
  <ul>
@@ -38,8 +40,8 @@ The mesa lib is 19.2.7, gtk3 is 3.24.13, and qt has been updated to 5.13.2.
    <p>
     The first ISO is a base NuTyX "rolling" version with a size of 402 Mbytes.
    <p>
-    A 4.4 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.3 release.
-    You can install NuTyX 11.3 completely without having to use the internet.
+    A 4.9 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.4 release.
+    You can install NuTyX 11.4 completely without having to use the internet.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
    <p>
@@ -68,27 +70,14 @@ The mesa lib is 19.2.7, gtk3 is 3.24.13, and qt has been updated to 5.13.2.
       The ISO is using the minimal in RAM when booting up.
       This speeds up the BOOT process.
       In case of, a new entry is added to give the possibility to load the ISO in RAM if necessary.
- <h3>CARDS</h3>
-    <p>
-      When a package is not existing anymore, cards throws an error message instead of freezing.
-    <p>
-      When a folder without Pkgfile file is tracked by cards, an error will be throw in the terminal when commands cards deptree cards depends or cards create are used.
-    <p>
-      The command <b>cards search</b> is looking in every posssible information, means seach can be done based on version, url and packager infos as well.
-    <p>
-      The command <b>cards upgrade</b> now takes care of synchronisation the meta datas, upgrading and cleaning the cache.
-      It's no longer needed to make a <b><i>sudo cards sync</i></b> and a <b><i>sudo cards purge</i></b> if <b>cards upgrade</b> is used.
- <h3>New team member</h3>
-  <p>
-   I'm please to annonce that Miyo Linux is joining the team.
-   Dan will take care of the customised ISO.
-   We appreciate his expertise in this task.
-   Dan proposed a very nice presentation video on his <a href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">Youtube channel which is the official NuTyX YouTube channel for the non french speaking peoples</a>.
-<h2>Upgrade process</h2>
+ h2>Upgrade process</h2>
 <p>
  Since this is a minor release, an upgrade is possible.
- <pre class="command_user"><kbd>check
-sudo cards upgrade</kbd></pre>
+ <pre class="command_user"><kbd>check</kbd></pre>
+ If you have a Miyo NuTyX Linux install, remove the xfce4-conf package:
+ <pre class="command_user"><kbd>del xfce4-conf</kbd></pre>
+ You can now finish the upgrade process:
+ <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 
 <h2>Old news</h2>
  Old news is now available <a href="old-news/?C=N;O=D">here</a>.
