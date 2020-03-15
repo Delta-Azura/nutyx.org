@@ -4,7 +4,7 @@
   <p>
    Cet article vous explique chaque étape pour la compilation de paquets dans une chroot.
   <div class="important">
-    Ce tutoriel est désormais déprecié, <a href="build-bot">il est vivement recommender de suivre ce tutoriel</a>
+    Ce tutoriel est désormais déprecié, <a href="mybld">il est vivement recommender de suivre ce tutoriel</a>
   </div>
 
  <h2>Ajuster /etc/cards.conf</h2>
