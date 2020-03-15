@@ -1,15 +1,288 @@
-<h1><span>How to build a package</span></h1>
- <h2>Introduction</h2>
+<h1>How to build a first package</h1>
+
+ <a name='#ID010'></a>
+ <h2>Why should you contribute?</h2>
+  <div class="introduction">
+   Today NuTyX has about <a href="packages" title="Read in another windows" class="external" onclick="window.open(this.href); return false;">1,700 applications</a> available in binary form.
+   In one sense, that's a lot.
+   But it really isn't when you consider that new programs are released on the net every day, many under open source licences.
+  </div>
   <p>
-   We have provided the <a href="bash-basics">required Know-how</a>,
-   the <a href="base-commands">available base commands</a>,
-   the <a href="recept">minimum syntax of instructions</a> and
+   It's clear that you will never see all these programs ready for installation on NuTyX.
+   Just using the <a href="https://github.com/">github</a> web site,
+   we can find more than 52,000,000 repositories for all platforms. 
+  <p>
+   If you find the application of your dreams,
+   you will have to find all the dependencies,
+   compile it yourself,
+   install it and make it work on NuTyX.
+   That is why we are asking you to contribute a little bit.
+   It is you who will build the package... if you want to of course.
+  <p>
+   Building an application is often something like:
+  <ul>
+   <li>
+    Find an application not available in NuTyX.
+   <li>
+    Download the source code of the application.
+   <li>
+    Check the MD5SUM (strongly recommended but not always possible).
+   <li>
+    Extract sources into a working directory.
+   <li>
+    Enter this working directory.
+   <li>
+    Check that all the dependencies of the package are installed in NuTyX
+    (otherwise the build will not succeed).
+   <li>
+    Type the three magic commands (in most cases; there are exceptions):
+  </ul>
+   <pre class="output">./configure --prefix=/usr
+make
+make install</pre>
+  <p>
+   The &quot;make install&quot; step must be carried out as root. 
+  <p>
+   That's it! Your new program is built and installed on your NuTyX system.
+  <p>
+   That's one way to do it... but as you can see, there are a few disadvantages:
+  <ul>
+   <li>
+    You do not know what files have been installed.
+   <li>
+    You cannot easily get information about the installed <a href="dictionary#ID005">package</a> such as its name, version, description, etc...
+   <li>
+    You cannot share the application with another NuTyX installation.
+   <li>
+    This method is tedious because it needs to be repeated whenever there is an update available.
+   <li>
+    Your NuTyX system is no longer really clean, since you have added files that are not tracked by <a href="dictionary#ID000">the package manager</a>.
+  </ul>
+  <p>
+   NuTyX has nice tools to help you with the integration of new programs.
+   You will be then able to track them and maintain them.
+   <a href="dictionary#ID000">The package manager</a> will treat them like any other NuTyX packages.
+  <p>
+   I suggest you to have a look <a href="faq#4">at the FAQ</a> to get an idea about the compilation modus under NuTyX.
+
+  <a name='#ID020'></a>
+  <h2>What do you need to know to build a package?</h2>
+   <h3>Introduction</h3>
+    <p>
+     You don't need to be an experienced programmer to contribute to this project.
+     A rudimentary knowledge of the bash scripting language is good enough.
+     If you have no knowledge of bash, this article will explain the basic principles
+     for creating a recipe without going crazy.
+    <p>
+     The bash langage is used to edit a recipe and to generate a package from it.
+     The fact that bash is a programming language might seem frightening to some potential users, who might think:
+     "I don't know how to program". There are three reasons why you should not feel scared:
+     <ul>
+      <li>
+       Bash is an interpreted language, not a compiled one,
+       which means that the commands you type in at the keyboard (or read in from a file)
+       are directly executed without the need to construct a complete program.
+      <li>
+       The syntax of bash is very simple and intuitive.
+      <li>
+       Finally the recipe and the creation of the binary package from
+       it seldom use the more complex options of the bash language.
+     </ul>
+    <p>
+     So let's start <img src="../graphics/smiley-wink.gif" alt="Wink" title="Wink" /> our little course on bash programming. 
+
+   <h3>Declaring a variable</h3>
+    <p>
+     All you need to do to declare a variable is this:
+     <pre>name=mypackage</pre>
+    <p>
+     You declare the variable <strong><em>name</em></strong> by using the equals sign,
+     with the name of the variable to the left of the sign and the value <strong><em>mypackage</em></strong> to the right.
+
+   <h3>Using a variable</h3>
+    <p>
+     So you know how to declare a variable; that's very nice, but how do you get at its content in order to use it?
+    <p>
+     To extract the content of a variable you use the dollar sign ($) with brackets if required. Both forms are valid:
+     <pre>${name}<br />$name</pre>
+    <p>
+     It is better to use the first form, otherwise if the variable name contains an underscore,
+     it will not be interpreted correctly by bash:
+     <pre>name=xorg-libx11<br />_name=libX11<br />$name        # this works
+${_name}     # so does this
+$_name       # wrongly interpreted and won't work</pre>
+    <p>
+     In order to see the result of this command, I suggest you create a little file containing this code.
+     You can call the file DeclareVar:
+     <pre>name=kernel
+echo "The variable name contains the value: ${name}"</pre>
+    <p>
+     Now give the command:
+     <pre class="command" ><kbd>sh DeclareVar</kbd></pre>
+     <pre class="output" >The variable name contains the value: kernel</pre>
+
+   <h3>Using predefined variables in a recipe</h3>
+    <p>
+     When you construct a recipe, you will have access to a whole series of predefined variables.
+     <div>
+      <strong>PKG</strong>: Certainly the most often used, this defines the destination folder for the compiled files.
+      This folder then contains the file structure before it is packaged up
+     </div>
+     <div>
+      <strong>SRC</strong>: This variable defines the folder where all the source files are extracted.
+       It is therefore very useful when you need to loop through subfolders and then return to the end of the loop to where you started.
+       This is also the variable which defines the current working directory for the main function of the recipe.
+     </div>
+     <div>
+      <strong>MAKEFLAGS</strong>: This variable is not used so often.
+      It is initialized in the pkgmk configuration file. Its use is detailed in another article.
+      For the time being, all you need to know is that it allows you to specify the extent of parallel compilation.
+     </div>
+     <div>
+      There are others, but personally I see no need for them when constructing recipes.
+     </div>
+
+   <h3>Declaring an array</h3>
+    <p>
+     To declare an array of strings (or anything else), you add parentheses:
+     <pre class="output">source=(firefox.png firefox.desktop)</pre>
+    <p>
+     This array <strong>source</strong> contains 2 variables: firefox.png and firefox.desktop.
+     The source array from the recipe for the kernel provides a particularly good example:
+     <pre>source=(http://www.kernel.org/pub/linux/kernel/v3.0/linux-${_BaseVersion}.tar.bz2 \
+	 config_64 config \
+	 http://www.kernel.org/pub/linux/kernel/v3.0/patch-$version.bz2 \
+	 http://downloads.nutyx.org/files/patchs/$name/broadcom-wl-kernel3-01.patch \
+	 http://downloads.nutyx.org/files/patchs/$name/3.2.8.patch \
+	 http://downloads.nutyx.org/files/patchs/$name/3.4.patch \
+	 http://downloads.nutyx.org/files/patchs/$name/makefile_compat.patch \
+	 http://downloads.nutyx.org/files/patchs/$name/bc_wl_abiupdate.patch)</pre>
+    <p>
+     Each line is a variable in its own right and can be accessed using the syntax:
+     <pre>echo "$(source[1])"</pre>
+    <p>
+     You will notice that each variable can in turn contain other variables provided that they have been defined earlier.
+
+   <h3>Declaring a function</h3>
+    <p>
+     To declare a function is almost as simple.
+     You use parentheses when giving the name of the function; the function code is always enclosed in brackets { etc }.
+     A little example:
+     <pre class="output">build() {<br />cd $name-$version<br />./configure --prefix=/usr<br />make<br />make DESTDIR=$PKG install<br />}</pre>
+    <p>
+     As you can see, it's very pretty and also contains a minimal recipe (without the variable declarations).
+     Here you can see the essential use of the <b>PKG</b> variable.
+ 
+ <a name='#ID030'></a>
+ <h2>What's a port?</h2>
+  <h3>Introduction</h3>
+   <p>
+    A port is a directory containing the files needed for building a package.
+    The command <b>pkgmk</b> will be used to &quot;build&quot; the package, which can be installed afterwards.
+   <p>
+    This means that this directory must contain as a minimum a file named <b><span style="color: #007a00;">Pkgfile</span></b>.
+    The building of the package will be controlled by the contents of this file.
+    It contains all the information necessary to compile and install the package from source.
+   <p>
+    The name <b>port</b> comes from the BSD world where a port refers to software &quot;ported&quot; to another operating system or platform.
+    In our case, the port is simply the definitions for building a package.
+
+  <h3>Minimal syntax of a port</h3>
+   <p>
+    The minimum information required for producing a binary are:
+    <ul>
+     <li>
+      <i><b>name:</b></i> the name of the build package.
+     <li>
+      <i><b>version:</b></i> the version of the sources of the package.
+     <li>
+      <i><b>release:</b></i> the nth attempt at building the package.
+      Its value will always start at <b><i><u>1</u></i></b>
+     <li>
+      <i><b>source:</b></i> the address of the sources of the package we want to build.
+     <li>
+      <i><b>build():</b></i> the function which contains the recipe.
+    </ul>
+   <p>
+    A little example with comments:
+   <pre class="output"># Name of the package
+name=gnome-terminal
+
+# Version of the package
+version=2.6.4
+
+# Release of the package
+release=1
+
+# Location of the sources of the package to be built
+source=(http://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.bz2)
+
+# Recipe for building the package (often uses three standard commands)
+build() {
+cd $name-$version
+./configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info
+make
+make DESTDIR=$PKG install
+}</pre>
+   <p>
+    If you compare this example with an official NuTyX port, you can see that the official one contains more information.
+    We will see this in the next paragraph. One line could catch you:
+   <pre class="output">http://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/</pre>
+   <p>
+    The syntax ${version%.*} allows us to substitute a variable of N digits for a variable of N-1 digits.
+    It's often necessary for the sources of gnome packages. In our example, the line:
+   <pre class="output">http://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/</pre>
+   <p>
+    is identical to
+   <pre class="output">http://ftp.gnome.org/pub/gnome/sources/$name/2.6/</pre>
+   <p>
+    since the variable <u>version</u>=2.6.4
+
+  <h3>Practical example of a port</h3>
+   <h4>The libxfce4util/Pkgfile file</h4>
+    <pre class="output">description="libxfce4util, base library for Xfce"
+url="http://docs.xfce.org/"
+
+maintainer="git.xfce.org/xfce/xfce4-libutils"
+packager="tnut <tnut@nutyx.org>"
+
+makedepends=(glib intltool)
+
+name=libxfce4util
+version=4.8.2
+release=1
+
+source=(http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-$version.tar.bz2)
+
+build() {
+
+  cd ${name}-$version
+
+  ./configure --prefix=/usr \
+           --disable-static
+
+  make
+
+  make DESTDIR=$PKG install
+}</pre>
+    <p>
+     If you want to make sure that the build bot is able to compile the package without any problems, it's important to specify all the dependencies needed for the compilation of the package.
+     Dependencies starting from the NuTyX base are always included.
+     Indeed the bot will always build the package by starting from the NuTyX base.
+    <p>
+     The line <b>makedepends=(...)</b> is used for this purpose.
+     It defines all the needed dependencies for the <b>compilation</b> of the package.
+     Dependencies are separated a space<img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
+
+ <a name='#ID040'></a>
+ <h2>Build your first package</h2>
+  <p>
+   We have provided the <a href="#ID020">required Know-how</a>,
+   the <a href="#ID030">minimum syntax of instructions</a> and
    a list of <a href="packages">available packages</a> for you to choose from.
   <p>
    Come and join the many participants of all ages and gender, from all over the world, and venture along this exciting road we call NuTyX.
    We can promise you a rewarding experience as you build your very first NuTyX system, following our (NuTyX) rules <img src="../graphics/smiley-laughing.gif" alt="Laughing" title="Laughing" />.
-
- <h2>Build your first package</h2>
   <p>
    We will show you how to build and install a first package in a very straightforward way.
   <p>
@@ -20,9 +293,18 @@
    The chosen package is a little text editor which doesn't need any dependencies.
    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
     For this package, we won't use an isolated environment named <a href="dictionary#ID100">chroot</a>.
-    We will see in the next article how to build in isolated environments: that's the only working method if we need to build a package having dependencies.
+    We will see in another tutorial how to build in isolated environments: that's the only working method if we need to build a package having dependencies.
    </div>
- <h2>Make the build recipe</h2>
+ <h3>A few explainations</h3>
+  <p>
+   All the available <a href="dictionary#ID005">packages</a> under NuTyX use a <a href="dictionary#ID060">recipe</a>.
+  <p>
+   This recipe (<a href="dictionary#ID080">Pkgfile</a>) is located in a folder call as the package name which is stored in a <a href="dictionary#ID010">collection</a>.  
+  <p>
+   By default, all the collections are under the folder /usr/ports.
+ <h3>The recipe</h3>
+  <p>
+   We create first the folder: the "perso" collection and the folder of the package.
   <pre class="command_user"><kbd>sudo mkdir -p /usr/ports/perso/nano</kbd></pre>
   <pre class="command"><kbd>echo '
 description="Text Editor"
@@ -50,16 +332,18 @@ make DESTDIR=$PKG install
 rm $PKG/usr/share/info/dir
 }' &gt; /usr/ports/perso/nano/Pkgfile</kbd></pre>     
 
- <h2>Install the development packages</h2>
-  <pre class="command_user"><kbd>get cards.devel</kbd></pre> 
- <h2>Compile the package</h2>
+ <h3>Install the development packages</h3>
+  <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+
+ <h3>Compile the package</h3>
   <pre class="command_user"><kbd>cd /usr/ports/perso/nano
 sudo pkgmk -d</kbd></pre>
- <h2>Install the package</h2>
+
+ <h3>Install the package</h3>
   <pre class="command_user"><kbd>sudo pkgadd nano1*</kbd></pre>
 
- <h2>The configuration files</h2>
-  <h3>The /etc/cards.conf file</h3>
+ <h3>The configuration files</h3>
+  <h4>The /etc/cards.conf file</h4>
    <p>
     This file is always present on a NuTyX installation.</p>
    <p>
@@ -83,14 +367,16 @@ sudo pkgmk -d</kbd></pre>
     <p>
      You can find more information by reading the cards.conf manual
      <pre class="command"><kbd>man cards.conf</kbd></pre>     
-   <h3>The /etc/pkgmk.conf file</h3>
+
+   <h4>The /etc/pkgmk.conf file</h4>
     <p>
      This file is used when compiling news ports.
      It specifies all the variables used by the <b>pkgmk</b> command.
     <p>
      Please take the time to read the main page of pkgmk.conf
      <pre class="command"><kbd>man pkgmk.conf</kbd></pre>
-    <h3>Example of /etc/pkgmk.conf file</h3>
+
+      <h5>Example of /etc/pkgmk.conf file</h5>
 <pre class="output">export CFLAGS="-O2 -pipe"
 export CXXFLAGS="${CFLAGS}"
 
@@ -124,6 +410,6 @@ esac
 # PKGMK_IGNORE_COLLECTION="yes"
 # PKGMK_IGNORE_RUNTIMEDEPS="yes"</pre>
 
-<h2>Conclusion</h2>
-<p>
- We are now ready to build our packages <a href="build-in-chroot">in a chroot.</a>
+ <h2>Conclusion</h2>
+  <p>
+   We are now ready to build our packages. Lets see now what's a <a href="collections">collection.</a>
