@@ -3,6 +3,9 @@
  <h2>Introduction</h2>
   <p>
    This article explains every step to compile packages in a chroot.
+  <div class="important">
+    This tutorial is depreciate, <a href="build-bot">it's higly recommended to use this tutorial from now on.</a>
+  </div>
 
  <h2>Adjust /etc/cards.conf</h2>
   <p>
