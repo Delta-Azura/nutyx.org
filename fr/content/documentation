@@ -1,5 +1,6 @@
 <h1>Documentation</h1>
  <h2>Guides du nouvel utilisateur sur NuTyX</h2>
+
   <table width="100%" cellspacing="0">
    <tr class="odd">
     <td class="lien_article">
@@ -50,6 +51,7 @@
    </tr>
    </table>
  <h2>Guides de l'utilisateur</h2>
+
   <table width="100%" cellspacing="0">
    <tr class="odd">
     <td class="lien_article">
@@ -137,45 +139,14 @@
    </tr>
   </table>
  <h2>Guides du contributeur</h2>
+
   <table width="100%" cellspacing="0">
-   <tr class="even">
-    <td class="lien_article" >
-      <a class="url" href="why-contribute">Pourquoi contribuer ?</a>
-    </td>
-    <td>
-     NuTyX dispose actuellement de quelques <a href="packages" title="Lire dans une autre fenêtre" class="external" onclick="window.open(this.href); return false;">1700 applications</a> 
-     disponibles en binaires. C'est à la fois peu et beaucoup. 
-     En effet tous les jours ou presque, sortent de nouvelles applications sous licence libre (ou pas)
-    </td>
-    <td>
-    </td>
-   </tr>
-   <tr class="odd">
-    <td class="lien_article" >
-      <a class="url" href="bash-basics">Quelles sont les connaissances requises ?</a>
-    </td>
-    <td>
-     Pour pouvoir contribuer, il ne faut pas être un programmeur averti. 
-     Quelques notions rudimentaires du langage BASH suffisent. Si vous n'avez aucune idée du langage BASH, 
-     cet article vous expliquera les notions de base pour réaliser une <a href="dictionary#ID060">recette</a> sans se prendre la tête
-    </td>
-   </tr>
-   <tr class="even">
-    <td class="lien_article" >
-      <a class="url" href="recept">Qu'est-ce qu'un port, une recette</a>) ?
-    </td>
-    <td>
-     Pour construire votre premier <a href="dictionary#ID005">paquet</a>, vous avez besoin de créer une recette. 
-     Cette recette se trouve dans un port qui est un dossier contenant un certain nombre de fichiers nécessaires pour 
-     la construction d'un paquet. La commande <b>pkgmk</b> permet de "construire" le paquet qui sera ensuite installable.
-    </td>
-   </tr>
-   <tr class="odd">
+    <tr class="odd">
     <td class="lien_article" >
       <a class="url" href="build-package">Comment construire un paquet ?</a>
     </td>
     <td>
-     Cette section vous explique comment construire depuis zéro un <a href="dictionary#ID005">paquet</a> pour NuTyX.
+     Ce tutoriel vous explique comment construire depuis zéro un <a href="dictionary#ID005">paquet</a> pour NuTyX.
      On y aborde toutes les fonctionnalités (de base et avancées) du gestionnaire de 
      <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
     </td>
