@@ -97,7 +97,7 @@
      <br>
      <br>
      <li>
-      Tous les <a href="dictionary#ID005">paquets</a> sont soigneusement compilés par <a href="dictionary#ID200">niveau</a> dans un <a href="build-bot">serveur de compilation</a> dédié.
+      Tous les <a href="dictionary#ID005">paquets</a> sont soigneusement compilés par <a href="dictionary#ID200">niveau</a> dans un <a href="mybld">serveur de compilation</a> dédié.
       Après compilation, toutes les <a href="dictionary#ID006">dépendances</a> de fonctionnement des <a href="dictionary#ID005">paquets</a> sont revérifiées pour ne pas avoir de liens cassés.
      <br>
      <br>

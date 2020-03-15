@@ -80,7 +80,7 @@
       <br>
       <li>
        It has the ability to compile all the <a href="dictionary#ID005">packages</a> 
-       properly per <a href="dictionary#ID200">level</a> in a <a href="build-bot">dedicated chroot</a> environment.
+       properly per <a href="dictionary#ID200">level</a> in a <a href="mybld">dedicated chroot</a> environment.
        After compilation, all the <a href="dictionary#ID006">dependencies</a> are again checked to make sure no broken links are found.
       <br>
       <br>
