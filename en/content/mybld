@@ -1,99 +1,114 @@
 <h1>"mybld" command setup</h1>
- <h2>Introduction</h2>
+ <h2>Important</h2>
   <p>
    All the commands are enter via your account.
    It means no need to use the <i>root</i> account.
   <p>
    Once the GIT project is recovered,
    all manipulations MUST be done from the folder containing your GIT project.
- <h2>Help</h2>
-  <p>
-   the <b><i>mybld</i></b> command allows all kinds of options.
-   Remember to consult mybld's help and man page.
-   <pre class="command_user"><kbd>mybld -h</kbd></pre>
-   and
-   <pre class="command_user"><kbd>man mybld</kbd></pre>
- <h2>Tools (packages to install)</h2>
-  <p>
-   It is assumed that your NuTyX is free from any development package.
-   So we start by installing the utilities:
-   <pre class="command_user"><kbd>get rsync git</kbd></pre>
- <h2>Get the GIT project/h2>
-  <p>
-   We can now start by cloning the GIT project containing all the NuTyX recipes:
-   <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
-   Once the GIT project in place, we move to the root of it,
-   indeed the command <i><b>mybld</b></i> uses information from the GIT (VERSION, USERNAME, EMAIL, etc).
- <h2>Implementation of working directories</h2>
-  <p>
-   The <b><i>mybld</i></b> command uses a set of folders for its operation,
-   they must therefore be created using the command:
-   <pre class="command_user"><kbd>mybld -i</kbd></pre>
-  <p>
-   You can adjust the operating folders locations in the configuration file <b><i>~/.mybld</i></b>
-   via the variables <b>ROOT</b>, <b>ROOTMOUNT</b> and <b>VERSION</b>.
- <h2>Available Collections</h2>
-  <p>
-   Choose the collection you want to work on.
-   Depending on the collection chosen,
-   you will need to retrieve the collections specified in the right column.
-   <table>
-    <caption>
-     <EM>
-      Collections list.
-     </EM>
-    </caption>
-    <tr class="sidebar">
-     <th>
-      Collection
-     <th>
-      Collection(s) to retrieve
-    <tr class="even">
-     <td>
-      base
-     <td>
-      base
-    <tr class="odd">
-     <td>
-      cli
-     <td>
-      base cli
-    <tr class="even">
-     <td>
-      gui
-     <td>
-      base cli gui
-    <tr class="odd">
-     <td>
-      cli-extra
-     <td>
-      base cli cli-extra
-    <tr class="even">
-     <td>
-      gui-extra
-     <td>
-      base cli gui gui-extra
-    <tr class="odd">
-     <td>
-      desktops
-     <td>
-      base cli gui desktops
-   </table>
- <h2>Retrieving binaries collections</h2>
-  <p>
-   Depending the choose collection, launch the command:
-   <pre class="command_user"><kbd>mybld -s name_of_collection</kbd></pre>
-   to retrieve the collection(s) needed.
-  <p> 
-   For example, to use the <i>gui</i> collection, run the command:
-   <pre class="command_user"><kbd>for i in base cli gui; do mybld -s $i;done</kbd></pre>
-  <p>
-   If you want to recover the entire collection, run the same command but without arguments:
-   <pre class="command_user"><kbd>mybld -s</kbd></pre>
-  <p>
-   You can specify a custom address and version in the <b>~/.mybld</b> configuration file
-   via the <b>URL</b> and <b>VERSION</b> variables.
- <h2>(Re)Compile a package</h2>
-    <p>
+
+ <h2>Setup</h2>
+  <h3>Tools (packages to install)</h3>
+   <p>
+    It is assumed that your NuTyX is free from any development package.
+    So we start by installing the utilities:
+    <pre class="command_user"><kbd>get rsync git</kbd></pre>
+
+  <h3>Get the GIT project/h3>
+   <p>
+    We can now start by cloning the GIT project containing all the NuTyX recipes:
+    <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+    Once the GIT project in place, we move to the root of it,
+    indeed the command <i><b>mybld</b></i> uses information from the GIT
+    (VERSION, USERNAME, EMAIL, etc).
+
+  <h3>Implementation of working directories</h3>
+   <p>
+    The <b><i>mybld</i></b> command uses a set of folders for its operation,
+    they must therefore be created using the command:
+    <pre class="command_user"><kbd>mybld -I</kbd></pre>
+   <p>
+    You can adjust the operating folders locations in the configuration file <b><i>~/.mybld</i></b>
+    via the variables <b>ROOT</b>, <b>ROOTMOUNT</b> and <b>VERSION</b>.
+
+  <h3>Available Collections</h3>
+   <p>
+    Choose the collection you want to work on.
+    Depending on the collection chosen,
+    you will need to retrieve the collections specified in the right column.
+    <table>
+     <caption>
+      <EM>
+       Collections list.
+      </EM>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Collection
+      <th>
+       Collection(s) to retrieve
+     <tr class="even">
+      <td>
+       base
+      <td>
+       base
+     <tr class="odd">
+      <td>
+       cli
+      <td>
+       base cli
+     <tr class="even">
+      <td>
+       gui
+      <td>
+       base cli gui
+     <tr class="odd">
+      <td>
+       cli-extra
+      <td>
+       base cli cli-extra
+     <tr class="even">
+      <td>
+       gui-extra
+      <td>
+       base cli gui gui-extra
+     <tr class="odd">
+      <td>
+       desktops
+      <td>
+       base cli gui desktops
+    </table>
+
+  <h3>Retrieving binaries collections</h3>
+   <p>
+    Depending the choose collection, launch the command:
+    <pre class="command_user"><kbd>mybld -s name_of_collection</kbd></pre>
+    to retrieve the collection(s) needed.
+   <p> 
+    For example, to use the <i>gui</i> collection, run the command:
+    <pre class="command_user"><kbd>for i in base cli gui; do mybld -s $i;done</kbd></pre>
+   <p>
+    If you want to recover the entire collection, run the same command but without arguments:
+    <pre class="command_user"><kbd>mybld -s</kbd></pre>
+   <p>
+    You can specify a custom address and version in the <b>~/.mybld</b> configuration file
+    via the <b>URL</b> and <b>VERSION</b> variables.
+
+ <h2>Using the command</h2> 
+  <h3>(Re)Compile a package</h3>
+   <p>
     <pre class="command_user"><kbd>mybld name_of_package</kbd></pre>
     Compilation begins immediately.
+  <h3>Increment the version and recompile a package</h3>
+   <p>
+    <pre class="command_user"><kbd>mybld -i name_of_the_package</kbd></pre>
+    After confirmation, the compilation start immediatly.
+
+ <h2>Help</h2>
+  <p>
+   The <b><i>mybld</i></b> command allows all kinds of options.
+   <pre class="command_user"><kbd>mybld -h</kbd></pre>
+  <p>
+   Remember to consult mybld's man page to obtain more information about other possible options:
+   <pre class="command_user"><kbd>man mybld</kbd></pre>
+

@@ -6,11 +6,13 @@
   <p> 
    Une fois le projet GIT récupéré,
    toutes les manipulations DOIVENT se faire depuis le dosssier contenant votre projet GIT.
+
  <h2>Mise en place</h2>
   <h3>Les outils (paquets à installer)</h3>
    On part du principe que votre NuTyX est vierge de tout paquet de développement.
    On commence donc par installer les utilitaires:
    <pre class="command_user"><kbd>get rsync git</kbd></pre>
+
   <h3>Les recettes du projet GIT</h3>
    On peut maintenant commencer par cloner
    le projet GIT contenant toutes les recettes des paquets 64 bits de la NuTyX:
@@ -18,6 +20,7 @@
    Une fois le projet GIT en place, on se déplace à la racine de celui-ci,
    en effet la commande <i><b>mybld</b></i> utilise des information du GIT
    (VERSION, USERNAME, EMAIL, etc).
+
   <h3>Les dossiers de fonctionement</h3>
     La commande <i><b>mybld</b></i> utilise un ensemble de dossiers pour son fonctionnement,
     il faut donc les créer via la commande:
@@ -25,53 +28,55 @@
    <p>
     Vous pouvez ajuster l'emplacement des dossiers de fonctionnement dans le fichier de configuration <i><b>~/.mybld</b></i>
     via les variables <b>ROOT</b>, <b>ROOTMOUNT</b> et <b>VERSION</b>.
+
   <h3>Collections disponibles</h3>
-   Choisissez la collection sur laquelle vous souhaitez travailler.
+    Choisissez la collection sur laquelle vous souhaitez travailler.
    <p>
-   En fonction de la collection choisie dans la colonne de gauche,
-   vous récupérez les collections spécifiées dans la colonne de droite.
-   <table>
-    <caption>
+    En fonction de la collection choisie dans la colonne de gauche,
+    vous récupérez les collections spécifiées dans la colonne de droite.
+    <table>
+     <caption>
      <EM>
       Liste des collections.
      </EM>
-    </caption>
-    <tr class="sidebar">
-     <th>
-      Collection choisie
-     <th>
-      Collection(s) à récupérer
-    <tr class="even">
-     <td>
-      base
-     <td>
-      base
-    <tr class="odd">
-     <td>
-      cli
-     <td>
-      base cli
-    <tr class="even">
-     <td>
-      gui
-     <td>
-      base cli gui
-    <tr class="odd">
-     <td>
-      cli-extra
-     <td>
-      base cli cli-extra
-    <tr class="even">
-     <td>
-      gui-extra
-     <td>
-      base cli gui gui-extra
-    <tr class="odd">
-     <td>
-      desktops
-     <td>
-      base cli gui desktops
-   </table>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Collection choisie
+      <th>
+       Collection(s) à récupérer
+     <tr class="even">
+      <td>
+       base
+      <td>
+       base
+     <tr class="odd">
+      <td>
+       cli
+      <td>
+       base cli
+     <tr class="even">
+      <td>
+       gui
+      <td>
+       base cli gui
+     <tr class="odd">
+      <td>
+       cli-extra
+      <td>
+       base cli cli-extra
+     <tr class="even">
+      <td>
+       gui-extra
+      <td>
+       base cli gui gui-extra
+     <tr class="odd">
+      <td>
+       desktops
+      <td>
+       base cli gui desktops
+    </table>
+
   <h3>Les collections en binaires</h3>
    En fonction de la collections choisie, lancer la commande:
    <pre class="command_user"><kbd>mybld -s nom_de_collection</kbd></pre> afin de récupérer la (les) collections necessaires
@@ -86,21 +91,24 @@
    Il est possible de spécifier une adresse et une version personnalisées
    dans le fichier de configuration <i><b>~/.mybld</b></i>
    via les variables <b>URL</b> et <b>VERSION</b>.
+
  <h2>Utiliser la commande</h2>
   <h3>(Re)Compiler un paquet</h3>
     <p>
      <pre class="command_user"><kbd>mybld nom_du_paquet</kbd></pre>
      La compilation commence immédiatement.
     <p>
+
   <h3>Incrementer la version et recompiler un paquet</h3>
     <p>
      <pre class="command_user"><kbd>mybld -i nom_du_paquet</kbd></pre>
      Après confirmation, la compilation commence immédiatement.
     <p>
+
  <h2>Aide</h2>
   <p>
    La commande <b><i>mybld</i></b> permet toute sorte d'options.
    <pre class="command_user"><kbd>mybld -h</kbd></pre>
   <p>
-   Pensez à (re)lire le manuel disponible pour obternir plus d'information sur les options possibles:
+   Pensez à (re)lire le manuel disponible pour obternir plus d'information sur les autres options possibles:
    <pre class="command_user"><kbd>man mybld</kbd></pre>
