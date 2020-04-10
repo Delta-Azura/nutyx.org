@@ -21,6 +21,14 @@
    en effet la commande <i><b>mybld</b></i> utilise des information du GIT
    (VERSION, USERNAME, EMAIL, etc).
 
+  <h3>Aller à la racine du projet</h3>
+   Le projet GIT est cloné.
+   Il faut maintenant se rendre à la racine de celui-ci.
+   <pre class="command_user"><kbd>cd packages-x86_64</kbd></pre>
+   <div class="important">
+    Désormais toutes les commandes qui suivent doivent être effectuées depuis le dossier actuel.
+   </div>
+
   <h3>Les dossiers de fonctionement</h3>
     La commande <i><b>mybld</b></i> utilise un ensemble de dossiers pour son fonctionnement,
     il faut donc les créer via la commande:

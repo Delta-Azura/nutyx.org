@@ -14,13 +14,20 @@
     So we start by installing the utilities:
     <pre class="command_user"><kbd>get rsync git</kbd></pre>
 
-  <h3>Get the GIT project/h3>
+  <h3>Get the GIT project</h3>
    <p>
     We can now start by cloning the GIT project containing all the NuTyX recipes:
     <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
     Once the GIT project in place, we move to the root of it,
     indeed the command <i><b>mybld</b></i> uses information from the GIT
     (VERSION, USERNAME, EMAIL, etc).
+  <h3>Go to the root of the projet</h3>
+   The GIT project is cloned.
+   We need to go to the root of it.
+   <pre class="command_user"><kbd>cd packages-x86_64</kbd></pre>
+   <div class="important">
+    From now on all the followings commands are launched from the actual folder.
+   </div>
 
   <h3>Implementation of working directories</h3>
    <p>
