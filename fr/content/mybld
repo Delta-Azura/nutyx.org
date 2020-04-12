@@ -29,6 +29,12 @@
     Désormais toutes les commandes qui suivent doivent être effectuées depuis le dossier actuel.
    </div>
 
+  <h3>Configurer son nom et email</h3>
+   Cette étape est nécessaire si vous souhaitez partager vos nouveaux paquets, en effet,
+   la commande <i><b>mybld -n</b></i> utilise cette information lors de la création de votre nouveau paquet.
+   <pre class="command_user"><kbd>git config --global user.name "François Pignon"
+git config --global user.email "francois@nutyx.org"</kbd></pre>
+
   <h3>Les dossiers de fonctionement</h3>
     La commande <i><b>mybld</b></i> utilise un ensemble de dossiers pour son fonctionnement,
     il faut donc les créer via la commande:
@@ -87,7 +93,7 @@
 
   <h3>Les collections en binaires</h3>
    En fonction de la collections choisie, lancer la commande:
-   <pre class="command_user"><kbd>mybld -s nom_de_collection</kbd></pre> afin de récupérer la (les) collections necessaires
+   <pre class="command_user"><kbd>mybld -s nom_de_collection</kbd></pre> afin de récupérer la (les) collection(s) nécessaire(s).
   <p>
    Par exemple, pour une utilisation de la collection <i>gui</i>, lancer la commande:
    <pre class="command_user"><kbd>for i in base cli gui; do mybld -s $i;done</kbd></pre>

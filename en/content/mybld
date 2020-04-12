@@ -28,6 +28,11 @@
    <div class="important">
     From now on all the followings commands are launched from the actual folder.
    </div>
+  <h3>Setup my name and email</h3>
+   This step is necessary if you want to share your new packages, indeed,
+   the <b><i>mybld -n</i></b> command uses this information when creating your new package.
+   <pre class="command_user"><kbd>git config --global user.name "James Bond"
+git config --global user.email "james@nutyx.org"</kbd></pre>
 
   <h3>Implementation of working directories</h3>
    <p>
