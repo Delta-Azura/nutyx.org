@@ -1,0 +1,112 @@
+<h1>Mise à jour du kernel-lts</h1>
+ <h2>Pourquoi cette mise à jour</h2>
+   Il existe désormais sous NuTyX plusieurs versions de kernel-lts.
+   Le paquet kernel-lts est remplacé par kernel-XXX
+   Afin de recevoir les mises à jour, vous devez donc changer de kernel LTS.
+   Les explications ci-dessous ne sont applicable que si vous avez installer
+   NuTyX en mode BIOS ou EFI avec l'amorçage configuré par l'installateur de NuTyX.
+  <p>
+   La mise à jour du kernel-lts en mode UEFI est uniquement necessaire si tous les critères ci-dessous sont remplis:
+   <ul>
+    <li>
+     Votre NuTyX se lance en mode UEFI.
+    <li>
+     Grub n'est pas utilisé
+    <li>
+     Le kernel-lts est lancé au démarrage.
+   </ul>
+    Si tous ces critères sont remplis, vous devez mettre ce kernel à jour.
+ <h2>Choix possibles entre les kernels lts disponible</h2>
+  Au moment de la rédaction de cet article, voici les kernel-lts proposés:
+      <table>
+     <caption>
+     <EM>
+      Liste des kernels LTS.
+     </EM>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Version du kernel
+      <th>
+       Nom du paquet à installer
+     <tr class="even">
+      <td>
+       4.9.x
+      <td>
+       kernel-49
+     <tr class="odd">
+      <td>
+       4.14.x
+      <td>
+       kernel-414
+     <tr class="even">
+      <td>
+       4.19.x
+      <td>
+       kernel-419
+     <tr class="odd">
+      <td>
+       5.4.x
+      <td>
+       kernel-54
+    </table>
+
+ <h2>Mise à jour du kernel</h2>
+  <h3>Téléchargement et installation du nouveau kernel LTS</h3>
+   Une fois votre choix effectué, téléchargez et installez le nouveau kernel LTS.
+   Par exemple pour le kernel 4.19.x:
+   <pre class="command_user"><kbd>sudo cards sync
+sudo cards install kernel-419</kbd></pre>
+   Vous pouvez même installer plusieurs version différentes.
+   <h4>Modification de l'entrée de GRuB</h4>
+    On ajoute d'abord une entrée pour pouvoir tester le nouveau kernel.
+    Ici, la NuTyX est installée sur la 3ième partition du premier disque dur.
+    A vous d'adapter en conséquence:
+    <pre class="output"><kbd>menuentry "NuTyX Kernel 4.19.x sur /dev/sda3" {
+    set root=(hd0,3)
+    linux /boot/kernel-419 root=/dev/sda3 ro quiet
+}</kbd></pre>
+   <h4>Modificationde l'entrée UEFI</h4>
+    On commence par analyser la liste des entrées UEFI:
+    <pre class="command_user"><kbd>efibootmfr</kbd></pre>
+    La sortie en console peut ressembler à:
+<pre class="output"><kbd>BootCurrent: 0003
+BootOrder: 0003,0000,0001,0002
+Boot0000*: EFI DVD/CDROM
+Boot0001*: EFI Hard Drive
+Boot0002*: EFI Internal Shell
+Boot0003*: NuTyX Linux kernel-lts Quiet on /dev/sda3</kbd></pre>
+  Dans notre cas, c'est donc l'entrée <b>Boot0003*</b> qu'il faut manipuler.
+  <p>
+   On commence par créer une nouvelle entrée UEFI avec le nouveau kernel lts.
+   Comme plus haut, c'est le kernel-419 qui sera choisi:
+  <pre class="command_user"><kbd>sudo efibootmgr -c -L "NuTyX Linux kernel-419 Quiet on /dev/sda3" \
+-d "/dev/sda" -l "\EFI\BOOT\3\kernel-419 \
+-u "root=/dev/sda3 ro quiet"</kbd></pre>
+  <p>
+   Une nouvelle entrée devrait s'afficher:
+   <pre class="command_user"><kbd>efibootmfr</kbd></pre>
+    La sortie en console peut ressembler à:
+   
+<pre class="output"><kbd>BootCurrent: 0003
+BootOrder: 0003,0000,0001,0002
+Boot0000*: EFI DVD/CDROM
+Boot0001*: EFI Hard Drive
+Boot0002*: EFI Internal Shell
+Boot0003*: NuTyX Linux kernel-lts Quiet on /dev/sda3
+Boot0004*: NuTyX Linux kernel-419 Quiet on /dev/sda3</kbd></pre>
+  <p>
+   On va maintenant réorganiser l'ordre de démarrage en choisissant l'entrée <b>Boot0004</b> en premier:
+   <pre class="command_user"><kbd>sudo efibootmfr 0004,0003,0000,0001,0002</kbd></pre>
+  <p>
+   Pour l'instant le kernel-419 est installé en mode bios. Il faut donc le passer en mode efi:
+   <pre class="command_user"><kbd>KERNEL="kernel-419" && \
+L=$(readlink /boot/$KERNEL) && \
+sudo mv -v /boot/$L /boot/efi/EFI/BOOT/3/$KERNEL.efi && \
+sudo ln -sv efi/EFI/BOOT/3/$KERNEL.efi /boot/$L && \
+sudo ln -svf efi/EFI/BOOT/3/$KERNEL.efi /boot/$KERNEL</kbd></pre>
+  <h3>Tentative de redémarrage sur le nouveau kernel</h3>
+   Une fois l'entrée effectuée, on peut tenter un redémarrage de la machine.
+  <h3>Suppression du paquet obsolet kernel-lts</h3>
+  Si votre machine démarre correctement, vous pouvez maintenant supprimer l'entrée GRUB et le paquet kernel-lts
+  <pre class="command_user"><kbd>sudo cards remove -a kernel-lts</kbd></pre>
