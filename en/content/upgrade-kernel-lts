@@ -68,7 +68,7 @@ sudo cards install kernel-419</kbd></pre>
 }</kbd></pre>
    <h4>UEFI entry modification</h4>
     We start by analyzing the list of UEFI entries:
-    <pre class="command_user"><kbd>efibootmfr</kbd></pre>
+    <pre class="command_user"><kbd>efibootmgr</kbd></pre>
     Console output may look like:
 <pre class="output"><kbd>BootCurrent: 0003
 BootOrder: 0003,0000,0001,0002
@@ -81,11 +81,11 @@ Boot0003*: NuTyX Linux kernel-lts Quiet on /dev/sda3</kbd></pre>
    We start by creating a new UEFI entry with the new kernel lts.
    As above, the kernel-419 will be chosen:
   <pre class="command_user"><kbd>sudo efibootmgr -c -L "NuTyX Linux kernel-419 Quiet on /dev/sda3" \
--d "/dev/sda" -l "\EFI\BOOT\3\kernel-419 \
+-d "/dev/sda" -l "\EFI\BOOT\3\kernel-419.efi" \
 -u "root=/dev/sda3 ro quiet"</kbd></pre>
   <p>
    A new entry should appear:
-   <pre class="command_user"><kbd>efibootmfr</kbd></pre>
+   <pre class="command_user"><kbd>efibootmgr</kbd></pre>
     Console output may look like:
    
 <pre class="output"><kbd>BootCurrent: 0003
@@ -97,7 +97,7 @@ Boot0003*: NuTyX Linux kernel-lts Quiet on /dev/sda3
 Boot0004*: NuTyX Linux kernel-419 Quiet on /dev/sda3</kbd></pre>
   <p>
    We will now rearrange the boot order by choosing the <b>Boot0004</b> entry first:
-   <pre class="command_user"><kbd>sudo efibootmfr 0004,0003,0000,0001,0002</kbd></pre>
+   <pre class="command_user"><kbd>sudo efibootmfr --bootorder 0004,0003,0000,0001,0002</kbd></pre>
   <p>
    For now the kernel-419 is installed in bios mode. It must therefore be put in efi mode:
    <pre class="command_user"><kbd>KERNEL="kernel-419" && \
