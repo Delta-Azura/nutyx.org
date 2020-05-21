@@ -1,6 +1,6 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-   La version stable actuelle de NuTyX est la <b>11.4</b>.
+   La version stable actuelle de NuTyX est la <b>11.5</b>.
   <p>
    Les ISOs sont disponibles en 64 bits "Fixed" et "Rolling" releases.
   <p>
@@ -37,7 +37,7 @@
       Taille
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-Openbox-20200504.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-Openbox-20200518.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/>Rolling</a>
     <td>
       Cette iso est optimisée pour NuTyX.
      <p>
@@ -52,12 +52,12 @@
       volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
     </td>
     <td>
-     Environ 833.6 Mo
+     Environ 891.3 Mo
     </td>
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200504.iso"><img src="../graphics/downloads/jwm-blue.svg" alt="logo JWM"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200518.iso"><img src="../graphics/downloads/jwm-blue.svg" alt="logo JWM"/>Rolling</a>
     <td>
       Cette iso est optimalisée pour NuTyX.
      <p>
@@ -72,11 +72,11 @@
       volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
     </td>
     <td>
-     Environ 810.5 Mo
+     Environ 868.2 Mo
     </td>
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-mate-20200312.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-mate-20200518.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
      <p>
@@ -93,10 +93,9 @@
      network-manager-applet alsa-utils alsa-plugins
      ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
      gparted xorg-setxkbmap ntp ntp.service
-     virtualbox-guest
     </td>
     <td>
-      Environ 1.69 GO
+      Environ 1.7 GO
     </td>
   </table>
  <h2>Pour l'utilisateur régulier</h2>
@@ -111,9 +110,9 @@
        Taille
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.4/NuTyX_x86_64-11.4.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.5/NuTyX_x86_64-11.5.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200312/NuTyX_x86_64-20200312.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200518/NuTyX_x86_64-20200518.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
         <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191216/NuTyX_i686-20191221.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
@@ -122,9 +121,9 @@
         L'ISO contient une installation de base sans interface graphique.
       </td>
       <td>
-       Environ 4.4 GO
+       Environ 5.3 GO
       <p>
-       Environ 402 MO
+       Environ 432 MO
       <p>
        Environ 327 MO
       </td>
@@ -190,7 +189,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
    Avec grub 2.XX installé, il suffit de modifier votre grub.cfg selon:
    <pre class="command"><kbd>menuentry "NuTyX sur /dev/sda1" {
     set root=(hd0,1)
-    linux /boot/kernel-lts root=/dev/sda1 ro quiet
+    linux /boot/kernel-419 root=/dev/sda1 ro quiet
 }</kbd></pre>
   <h2>Créez une clé bootable</h2>
   <p>
@@ -201,7 +200,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.4.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.5.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>
