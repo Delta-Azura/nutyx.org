@@ -113,11 +113,10 @@ logdir /var/log/pkgbuild</pre>
       So, for example, to compile the graphical server xorg:
       <pre class="command_user"><kbd>sudo cards depcreate xorg-server</kbd></pre>
 
-   <h2>Is it possible to upgrade NuTyX (prior to 10.0) to NuTyX 10.X without reinstalling everything?</h2>
+   <h2>Is NuTyX (from 9.0 on) a rolling release ?</h2>
     <p>
-     No. The number of changes is too great.
-     The package manager has changed, the initrd has changed,
-     the installer has changed, and the ports location has changed.
+     Yes.
+     After various successfulls tests and reinstallations, NuTyX is now consider as a rolling release.
 
    <h2>How to activate the root account ?</h2>
     <p>

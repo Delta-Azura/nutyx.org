@@ -99,16 +99,10 @@ logdir /var/log/pkgbuild</pre>
       Et peut maintenant compiler ses paquets <u><b>sans devoir être dans une chroot</b></u>. Pour compiler le server graphique xorg par exemple:
       <pre class="command_user"><kbd>sudo cards depcreate xorg-server</kbd></pre>
 
-   <h2>Est-il possible de mettre à jour sa NuTyX (plus ancienne que la 10.0) vers NuTyX 10.X sans devoir tout réinstaller ?</h2>
+   <h2>Est-ce que NuTyX (à partir de la 9.0) est une distribution à publication continue?</h2>
     <p>
-     Il n'est pas possible de mettre à jour une ancienne version de NuTyX (plus ancienne que la version 10.0) vers NuTyX 10.X,
-     le nombre de changements est trop important.
-     Il faut savoir aussi que tous les <a href="dictionary#ID005">paquets</a> sont à chaque mise à jour majeure recompiler
-     sur une nouvelle chaîne de compilation glibc+gcc+binutis,
-     cela permet d'avoir un système cohérent et très robuste.
-     Comme expliqué plus haut, il suffit d'effacer la NuTyX actuelle,
-     le dossier /home et tous vos MP3 qui se trouvent dans /MP3 (par exemple) restent intacts,
-     ensuite vous installez directement la NuTyX 10.X sur la même partition.
+     Oui.
+     Aprés nombreux tests et mises à jours faites avec succès, NuTyX est maintenant considérée comme une &lt&ltrolling release&gt&gt ou &lt&ltpublication continue&gt&gt.
    <h2>Comment activer le compte root ?</h2>
     <p>
      Par défaut, NuTyX n'active pas le compte root, si vous souhaitez compilez vos propres paquets, il est plus simple d'activer le compte root.
