@@ -175,12 +175,13 @@
       Exemple d'un tel Pkgfile situé dans le dossier <i>monpaquet</i>:
       <pre class="output">description="Mon premier paquet"
 url="http://downloads.nutyx.org"
+
 packager="tnut <tnut@nutyx.org>"
+
+makedepends=(glib atk)
 
 name=monpaquet
 version=1.0
-
-makedepends=(glib atk)
 
 source=(${url}/files/$name-$version.tar.xz)
 
@@ -207,11 +208,11 @@ make DESTDIR=$PKG install
  <li>
   La branche "rolling"
   <p>
-   C'est la ligne principale (rolling) du projet GIT des collections disponibles.
+   C'est la ligne principale (rolling) du projet GIT.
   <p>
-   Le processus de mise à jour se fait pendant toute la vie de la branche (approximativement un an).
+   Le processus de mise à jour se fait pendant toute la vie de la branche.
   <p>
-   Puisque les mises à jour sont toujours très importantes et constantes, la branche "rolling" peut à un moment donné devenir incompatible avec la version "fixed" de NuTyX.
+   Puisque les mises à jour sont toujours très importantes et constantes, la branche "rolling" peut à un moment donné n'être plus compatible avec la version "fixed" de NuTyX.
   <p>
    La durée de vie de la version rolling est de 1 an minimum.
   </ul>
@@ -265,12 +266,12 @@ if [ $EUID -eq 0 ]; then
          alias del='cards remove'
          alias get='cards install'
          alias up='cards install -u'
-         alias check='cards sync;cards diff'
+         alias check='cards diff'
 else
          alias del='sudo cards remove'
          alias get='sudo cards install'
          alias up='sudo cards install -u'
-         alias check='sudo cards sync;sudo cards diff'
+         alias check='sudo cards diff'
 fi
 alias search='cards search'
 alias ll='ls -l'

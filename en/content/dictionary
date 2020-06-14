@@ -250,20 +250,22 @@
        `Required build function`: The "build" function defines the construction itself of the <a href="#ID005">package</a>
      </ol>
      <p>
-      <b>NOTE:</b> the above outlines only the most general situation. See also package <a href="#ID020">family</a> for exceptions.
-     <p>
       It is highly recommended to put the <a href="#ID080">Pkgfile</a> file in a folder with the same name as the <i>name</i> variable defined in the <a href="#ID080">Pkgfile</a>.
       The folder name will be treated as the default name of the base binary package if it is not (re)defined by the name variable.
      <p>
       Example of a Pkgfile located in the <i>mypackage</i> folder:
       <pre class="output">description="My first package"
 url="http://downloads.nutyx.org"
+
 packager="tnut at nutyx dot org"
-name=mypackage
 
 makedepends=(glib atk)
 
+name=mypackage
+version=1.0
+
 source=(${url}/files/$name-$version.tar.xz)
+
 build() {
 cd ${name}-$version
 ./configure --prefix=/usr \
@@ -284,11 +286,11 @@ make DESTDIR=$PKG install
  <li>
   The "rolling" branch
   <p>
-   It's the main line (rolling) of the GIT project for every available collection.
+   It's the main line (rolling) of the GIT project.
   <p>
    The update process is a "rolling release" mode during its entire life.
   <p>
-   Since all updates are large and frequent, the "rolling" branch can be not compatible with the fixed version of NuTyX.
+   Since all updates are large and frequent, the "rolling" branch may not be compatible with the fixed version of NuTyX.
   <p>
    The lifetime of the rolling version is at least 1 year.
   </ul>
@@ -332,12 +334,12 @@ if [ $EUID -eq 0 ]; then
          alias del='cards remove'
          alias get='cards install'
          alias up='cards install -u'
-         alias check='cards sync;cards diff'
+         alias check='cards diff'
 else
          alias del='sudo cards remove'
          alias get='sudo cards install'
          alias up='sudo cards install -u'
-         alias check='sudo cards sync;sudo cards diff'
+         alias check='sudo cards diff'
 fi
 alias search='cards search'
 alias ll='ls -l'
