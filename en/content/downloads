@@ -46,7 +46,7 @@
      <p>
       openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg graphical drivers.
     </td>
     <td>
      Approx. 891.3 Mo
@@ -65,12 +65,29 @@
      <p>
       jwm dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg graphical drivers.
     </td>
     <td>
      Approx. 868.2 Mo
     </td>
-   <tr class="odd">
+    <tr class="odd">
+    <td class="lien_article">
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200618-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/>Rolling</a>
+    <td>
+     This ISO is optimise for NuTyX.
+     <p>
+     It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
+     <p>
+      Install packages:
+     <p>
+      lxde flcards leafpad lxde-appearance lxde-input lxde-randr lxde-terminal lxdm
+      gparted pcmanfm xorg graphical drivers.
+    </td>
+    <td>
+     Approx. 812.6 Mo
+    </td>
+
+   <tr class="even">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-mate-20200518.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
