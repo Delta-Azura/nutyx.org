@@ -31,23 +31,18 @@
   You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
  <h2>Desktop installation:</h2>
   You can now choose your favorite desktop.
-  Under NuTyX: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.
+  Under NuTyX: kde5, xfce4, mate, lxde, openbox, enlightenment, flwm, ratpoison, etc are available.
   <p>
       <table>
        <caption><EM>Available desktops:</EM></caption>
        <tr class="sidebar">
         <th>Desktop name:
         <th>Command:
-       <tr class="even">
+       <tr class="odd">
         <td>
          kde5
         <td>
          <pre class="command_user"><kbd>get kde5</kbd></pre>
-       <tr class="odd">
-        <td>
-         lxqt
-        <td>
-         <pre class="command_user"><kbd>get lxqt</kbd></pre>
        <tr class="even">
         <td>
          xfce4 xfce4-extra

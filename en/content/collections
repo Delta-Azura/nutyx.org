@@ -43,8 +43,6 @@
       MATE
      <li>
       LXDE
-     <li>
-      LXQT
     </ul>
   <h2>Collections management via cards</h2>
    Because of their concept, each collection contains it's own meta-data files.
@@ -76,7 +74,7 @@
       <li>
        A package from the <i>gui-extra</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
      </ul>
-      And for the graphical interfaces <i>mate, kde5, lxde, lxqt, and xfce4</i>, the concept is defined as follow:
+      And for the graphical interfaces <i>mate, kde5, lxde, and xfce4</i>, the concept is defined as follow:
      <ul>
       <li>
        A package from the <i>desktops</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i>, <i><u>gui</u></i> or <i><u>desktops</u></i> collections.
@@ -162,12 +160,6 @@
     <ul>
      <li>
       xfce4
-     </ul>
-    <p>
-    lxqt:
-    <ul>
-     <li>
-      lxqt
      </ul>
     <p>
     lxde:

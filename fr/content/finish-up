@@ -33,23 +33,18 @@
  <h2>Installation d'un bureau:</h2>
   On commence par choisir un bureau.
  <p>
-  Sous NuTyX, vous avez le choix entre: kde5, xfce4, mate, lxqt, lxde, openbox, enlightenment, ratpoison, flubox, flwm, i3wm, icewm, jwm, openbox, blackbox etc
+  Sous NuTyX, vous avez le choix entre: kde5, xfce4, mate, lxde, openbox, enlightenment, ratpoison, flubox, flwm, i3wm, icewm, jwm, openbox, blackbox etc
   <p>
       <table>
        <caption><EM>Quelques exemples de bureaux disponibles</EM></caption>
        <tr class="sidebar">
         <th>Nom du bureau:
         <th>Commande:
-       <tr class="even">
+       <tr class="odd">
          <td>
           kde5
          <td>
           <pre class="command_user"><kbd>get kde5</kbd></pre>
-       <tr class="odd">
-         <td>
-          lxqt
-         <td>
-          <pre class="command_user"><kbd>get lxqt</kbd></pre>
        <tr class="even">
          <td>
           xfce4 xfce4-extra

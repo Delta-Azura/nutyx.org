@@ -32,28 +32,45 @@
       Description
     <th>
       Size
-    <tr class="odd">
+
+   <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-Openbox-20200518.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200618-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
-     <p>
-      It is a respin made by Miyo Linux.
      <p>
      It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
      <p>
       Install packages:
      <p>
-      openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
-      lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg graphical drivers.
+      lxde flcards leafpad lxde-appearance lxde-input lxde-randr lxde-terminal lxdm
+      gparted pcmanfm xorg graphical drivers.
     </td>
     <td>
-     Approx. 891.3 Mo
+     Approx. 812.6 Mo
     </td>
+
+   <tr class="odd">
+    <td class="lien_article">
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200619-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/>Rolling</a>
+    <td>
+     This ISO is optimise for NuTyX.
+     <p>
+     It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
+     <p>
+      Install packages:
+     <p>
+      xfce4 flcards mousepad orage ristretto xfburn parole xfce4-terminal lxdm
+      networkmanager gparted thunar xorg graphical drivers.
+    </td>
+    <td>
+     Approx. 852 Mo
+    </td>
+
+
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200518.iso"><img src="../graphics/downloads/jwm-blue.svg" alt="logo mate"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200518.iso"><img src="../graphics/downloads/jwm-blue.png" alt="JWM Logo"/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -70,32 +87,56 @@
     <td>
      Approx. 868.2 Mo
     </td>
-    <tr class="odd">
+
+   <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200618-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-Openbox-20200518.iso"><img src="../graphics/downloads/Openbox-72.png" alt="Openbox Logo"/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
+     <p>
+      It is a respin made by Miyo Linux.
      <p>
      It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
      <p>
       Install packages:
      <p>
-      lxde flcards leafpad lxde-appearance lxde-input lxde-randr lxde-terminal lxdm
-      gparted pcmanfm xorg graphical drivers.
+      openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
+      lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg graphical drivers.
     </td>
     <td>
-     Approx. 812.6 Mo
+     Approx. 891.3 Mo
     </td>
 
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-mate-20200518.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200621-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/>Rolling</a>
+    </td>
+    <td>
+     <p>
+      The ISO contains a complete installation with a very customised <a href="https://en.wikipedia.org/wiki/KDE">KDE</a> as graphical interface as default
+     <p>
+      Install packages:
+     <p>
+     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=plasma">Plasma KDE5</a>
+     firefox thunderbird flcards xdg-user-dirs clementine k3b kdenlive vlc
+     sound-theme-freedesktop network-manager-applet
+     gparted xorg-setxkbmap ntp ntp.service
+    </td>
+    <td>
+      Environ 1.6 GO
+    </td>
+
+
+   <tr class="odd">
+    <td class="lien_article">
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-mate-20200518.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/>Rolling</a>
     </td>
     <td>
      <p>
       The ISO contains a complete installation with a very customised <a href="https://en.wikipedia.org/wiki/MATE">MATE</a> as graphical interface as default.
      <p>
-       Install packages
+       Install packages:
      <p>
       lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a>
       zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf

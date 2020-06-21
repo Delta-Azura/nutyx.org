@@ -43,8 +43,6 @@
       MATE
      <li>
       LXDE
-     <li>
-      LXQT
     </ul>
   <h2>La gestion des collections par cards</h2>
    De par leur conception, chaque collection possède son propre fichier contenant les meta-données.
@@ -76,7 +74,7 @@
       <li>
        Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
      </ul>
-      Et pour les interfaces graphiques <i>mate, kde5, lxde, lxqt et xfce4</i>, le concept suivant est défini:
+      Et pour les interfaces graphiques <i>mate, kde5, lxde et xfce4</i>, le concept suivant est défini:
      <ul>
       <li>
        Un paquet de la collection <i>desktops</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i>, <i><u>gui</u></i> ou <i><u>desktops</u></i>.
@@ -166,17 +164,10 @@
       xfce4
      </ul>
     <p>
-    lxqt:
-    <ul>
-     <li>
-      lxqt
-     </ul>
-    <p>
     lxde:
     <ul>
      <li>
       lxde
      </ul>
-
   <h2>Et maintenant ?</h2>
    Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-in-chroot">dans la compilation dans un environnement isolé</a>.
