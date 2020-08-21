@@ -168,4 +168,4 @@
       lxde
      </ul>
   <h2>And now ?</h2>
-   Collections have no more secrets for you. Now is the time to try to <a href="build-in-chroot">compile in an isolated chroot</a>.
+   Collections have no more secrets for you. Now is the time to try to <a href="mybld">compile in an isolated chroot</a>.

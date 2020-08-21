@@ -170,4 +170,4 @@
       lxde
      </ul>
   <h2>Et maintenant ?</h2>
-   Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="build-in-chroot">dans la compilation dans un environnement isolé</a>.
+   Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="mybld">dans la compilation dans un environnement isolé</a>.
