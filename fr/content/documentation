@@ -164,12 +164,10 @@
    </tr>
    <tr class="odd">
     <td class="lien_article" >
-      <a class="url" href="build-in-chroot">Comment construire dans une chroot ?</a>
+      <a class="url" href="mybld">Comment construire ses paquets dans une chroot ?</a>
     </td>
     <td>
      Cet article explique comment construire vos paquets dans un environnement isolé.
-     Vous DEVEZ utiliser cette méthode si vous n'êtes pas sur un système de base ou
-     si vous avez choisi d'utiliser NuTyX comme une distribution binaire comme expliqué dans la <a href="faq#4">FAQ</a>.
     </td>
    </tr>
   </table>

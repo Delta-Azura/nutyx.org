@@ -146,12 +146,10 @@
     </td>
    <tr class="odd">
     <td width="30%" class="lien_article" >
-      <a class="url" href="build-in-chroot">How to build in a chroot ?</a>
+      <a class="url" href="mybld">How to build your own packages in a chroot ?</a>
     </td>
     <td width="70%">
      This article explains how to build your packages in an isolated environment.
-     You HAVE TO use this method in case you are not in a base system or
-     choose to go for a "binaries" distribution, as explained in the <a href="faq#4">FAQ</a>.
     </td>
    </tr>
   </table>   
