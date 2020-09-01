@@ -520,10 +520,6 @@ Redémarrage du serviceX cette option n'est pas toujours disponible.
       <div>
        <b>Site des utilisateurs</b> http://www.nutyx.org
       </div>
-      <div>
-       <b>Forum des utilisateurs</b> http://forum.nutyx.org
-      </div>
-
      <li><h2>FICHIERS</h2></li>
       <pre class="output"><b>/etc/cards.conf,
 /etc/pkgmk.conf,

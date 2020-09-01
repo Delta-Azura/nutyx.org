@@ -3,7 +3,8 @@
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />L'auteur n'est pas responsable pour les pertes de données ou autre que pourrait engendrer une mauvaise manipulation. Cet article s'adresse à un public averti.</div>
    <p>Toutes les opérations vont devoir se faire en compte root. Il est donc INDISPENSABLE d'être très vigilent sinon vous pouvez "casser" votre distribution actuelle.</p>
     <p>La variable LFS pointe dans notre exemple sur /mnt/lfs. A vous d'ajuster si vous avez choisi un autre emplacement.</p>
-    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />Veuillez noter que la passe 2 peut s'avérer beaucoup plus "aventureuse" dans le sens où il est tout à fait possible qu'un paquet ne se compile pas du premier coup. Il est important de le signaler <a href="http://forum.nutyx.org/index.php?board=16.0" title="Lire dans une autre fenêtre" class="external" onclick="window.open(this.href); return false;">sur le forum</a> ou sur le canal irc</div>
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />Veuillez noter que la passe 2 peut s'avérer beaucoup plus "aventureuse" dans le sens où il est tout à fait possible qu'un paquet ne se compile pas du premier coup.
+    Il est important de le signaler sur le canal irc</div>
     <p>Pour éviter tout risque de dispersion et pour faciliter la lecture, l'article sera divisé en deux parties. La première reprend chaque action numérotée une à une et la deuxième donne une explication de chaque action.</p> 
     <p>Il y a 22 actions. Donc encore une fois:</p>
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />Toutes les opértations se font dans le compte root</div>
@@ -146,7 +147,7 @@ source  ~/.bash_profile</kbd></pre>
     </ol>
     <h2>Ce qu'il faut savoir:</h2>
     <ol>
-      <li><div class="note"><img alt="[Note]" src="../graphics/note.gif" />Si vous avez une erreur lors de la compilation d'une recette, ce n'est pas grave, lorsque vous relancez la commande pass, le script reprend le travail là où il s'est arrêté. Afin de faire profiter un maximum de lecteurs, merci de nous informer du problème soit sur <a class="url" href="http://webchat.freenode.net/?channels=nutyx">le canal irc</a> ou sur <a class="url" href="http://forum.nutyx.org">le forum</a>.</div></li>
+      <li><div class="note"><img alt="[Note]" src="../graphics/note.gif" />Si vous avez une erreur lors de la compilation d'une recette, ce n'est pas grave, lorsque vous relancez la commande pass, le script reprend le travail là où il s'est arrêté. Afin de faire profiter un maximum de lecteurs, merci de nous informer du problème soit sur <a class="url" href="http://webchat.freenode.net/?channels=nutyx">le canal irc</a>.</div></li>
       <li><div class="note"><img alt="[Note]" src="../graphics/note.gif" />Vous pouvez effectuer la passe 2 en plusieurs étapes. Si vous êtes sorti de la chroot, vous DEVEZ alors vous assurez de retaper <u>les commandes 12 et 13.</u> Si vous avez arrêté la machine, assurez-vous de tapez <u>la commande 9</u> en plus des commandes 12 et 13.</div></li>
     </ol>
   <div class="pied_page"><a class="url" href="build-post">Une fois la passe 2 terminée, vous pouvez passer à la post-installation et génération de l'iso</a></div>

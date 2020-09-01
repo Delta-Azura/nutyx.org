@@ -14,7 +14,7 @@
     <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
      Please note that the pass2 can be much more an "adventure" as it can have problems when compiling a package the first time.
      It is up to you to give us a feedback with all the details of the error.
-     You can use <a href="http://forums.nutyx.org/index.php?board=8.0" title="Lire dans une autre fenÃªtre" class="external" onclick="window.open(this.href); return false;">the forums</a> or the irc channel for that.
+     You can use the irc channel for that.
     </div>
     <p>
      To avoid any confusion and avoid dispersion in the actions taken, the article is split into two parts.
@@ -221,8 +221,7 @@ source  ~/.bash_profile</kbd></pre>
        <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
         If you have an error when compiling a package, it's not a big deal, when you restart the command <b>pass</b> the script will restart where it stopped.
         It is up to you to inform us what kind of error it is.
-        You can use <a class="url" href="http://webchat.freenode.net/?channels=nutyx">the irc channel</a>
-        or <a class="url" href="http://forums.nutyx.org">the forum</a>.
+        You can use <a class="url" href="http://webchat.freenode.net/?channels=nutyx">the irc channel</a>.
        </div>
       <li>
        <div class="note"><img alt="[Note]" src="../graphics/note.gif" />
