@@ -19,7 +19,28 @@
      <div>
       L'installateur est développé depuis zéro par Thierry Nuttens et sous licence <a class="url" href="http://www.gnu.org/copyleft/gpl.html" target="_blank" title="Lire dans une autre fenêtre">http://www.gnu.org/copyleft/gpl.html</a>
      </div>
-
+  <h2>Contact pour support</h2>
+   Retrouvez NuTyX sur:
+    <ul>
+     <li>
+      <a class="url" href="https://t.me/groupnutyx">Telegram</a>
+     <li>
+      <a class="url" href="http://webchat.freenode.net/?channels=nutyx">Le canal IRC (accès direct sans plugin)</a>
+     <li>
+      <a class="url" href="https://distrowatch.com/table.php?distribution=nutyx">Distrowatch</a>
+     <li>
+      <a class="url" href="https://fr.wikipedia.org/wiki/NuTyX">Wikipédia</a>
+     <li>
+       <a class="url" href="https://www.linuxquestions.org/questions/nutyx-125/">LinuxQuestions.org</a>
+     <li>
+      <a class="url" href="https://github.com/NuTyX">Le git (les sources de NuTyX).</a>
+     <li>
+      <a class="url" href="https://www.youtube.com/channel/UCkjOkxMwZhmdD3QlGsivtFA">YouTube</a>
+     <li>
+      <a class="url" href="https://vimeo.com/user84550361">vimeo</a>
+    </ul>
+   <p>
+    Pour me contacter, il suffit de m'envoyer un courrier électronique et je me ferai un plaisir de vous répondre à l'adresse: tnut AT nutyx DOT org
   <h2>L'équipe</h2>
    <p>
     L'équipe de NuTyX est composée de personnes bénévoles qui rendent ce projet viable.
