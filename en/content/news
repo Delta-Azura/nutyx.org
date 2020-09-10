@@ -4,7 +4,7 @@
 <p>
  I'm very pleased to announce the new NuTyX 11.6 release.
 <p>
- The 64-bit version contains more then 1000 packages upgraded.
+ The 64-bit version contains more than 1000 packages upgraded.
 <p>
  The 32-bit version of NuTyX, still actively supported.
 <p>
@@ -45,7 +45,7 @@ The mesa lib is 20.1.7, gtk3 is 3.24.22, and qt has been updated to 5.15.0.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
    <p>
-    Suppose you media is found under <b>/dev/sdc1</b>, use the following command to mount it:
+    Suppose your media is found under <b>/dev/sdc1</b>, use the following command to mount it:
     <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
     Change this command to reflect your system.
    <p>
@@ -68,14 +68,14 @@ The mesa lib is 20.1.7, gtk3 is 3.24.22, and qt has been updated to 5.15.0.
 <h2>What's new ?</h2>
  <h3>Flatpak available</h3>
   <p>
-   A lot of effort have been concentrate to make possible the installation of universal flatpak packages.
-   This open the door to a lot of new packages.
+   A lot of effort has been concentrated to make possible the installation of universal flatpak packages.
+   This opens the door to a lot of new packages.
  <h3>New Telegram channel</h3>
   <p>
    You are welcome on the new <a class="url" href="https://t.me/groupnutyx">Telegram channel</a> to discuss with us about the project or ask for support.
  <h3>New contributor</h3>
   <p>
-   Spiky has join us to contribute on NuTyX.
+   Spiky has joined us to contribute on NuTyX.
    His big knowledge about Linux From Scratch project is highly appreciate.  
  <h3>News kernels</h3>
   <p>

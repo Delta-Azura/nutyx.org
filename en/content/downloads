@@ -146,7 +146,7 @@
       network-manager-applet alsa-utils alsa-plugins
       ntfs-3g vlc fuse xorg-xdpyinfo lm-sensors
       gparted xorg-setxkbmap ntp ntp.service.
-I    </td>
+    </td>
     <td>
       Approx. 1.47 GB
     </td>
@@ -164,7 +164,7 @@ I    </td>
        Size
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
         <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_x86_64-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
@@ -175,7 +175,7 @@ I    </td>
         The ISO contains a basic system WITHOUT graphical installation.
       </td>
       <td>
-       Approx. 5.3 GB
+       Approx. 5.4 GB
       <p>
        Approx. 432 MB
       <p>
