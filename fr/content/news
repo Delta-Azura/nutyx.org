@@ -1,43 +1,48 @@
-<h1>Dernière nouvelle 20-05-2020</h1>
+<h1>Dernière nouvelle 10-09-2020</h1>
 
-<h2>NuTyX 11.5 disponible avec cards 2.4.115</h2>
+<h2>NuTyX 11.6 disponible avec cards 2.4.122</h2>
 <p>
- J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.5.
+ J'ai le grand plaisir de vous annoncer la sortie de la nouvelle NuTyX version 11.6.
 <p>
- La version 64 bit de la NuTyX 11.5 a reçu près de 700 mise à jour.
-<p>
- La chaîne de compilation est refaite sur la glibc  2.31, le compilateur gcc 10.1.0 et l'éditeur de liens binutils 2.34.
+ La version 64 bit de la NuTyX 11.6 a reçu plus de 1000 mise à jour.
 <p>
  La version 32 bits de NuTyX est toujours disponible.
 <p>
- La base de NuTyX est fournie avec le kernel LTS 4.19.123 (4.9.224 pour la version 32 bits) et le kernel 5.6.13 (uniquement en 64 bits).
+ La base de NuTyX est fournie avec le kernel LTS 4.19.143 et le kernel 5.8.7.
+<p>
+ Les Changelogs pour les kernels sont disponibles ici:
+<p>
+ <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.143">kernel 4.19.143 changlog</a>
+<p>
+ <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.8.7"> kernel 5.8.7 changelog</a>
+
 <p>
  La librairie glibc gnu est passé en version 2.31
 <p>
- Le serveur graphique xorg-server version 1.20.8, la librairie Mesa 3D en 20.0.6, gtk3 3.24.20 et qt 5.14.2 sont également dans leurs dernières versions
+ Le serveur graphique xorg-server version 1.20.9, la librairie Mesa 3D en 20.1.7, gtk3 3.24.22 et qt 5.15.0 sont également dans leurs dernières versions
 <p>
  Les interpreteurs python sont en version 3.8.3 et 2.7.18.
 <p>
- L'environnement de bureau MATE est mis à jour en version 1.24.0, dernière version disponible.
+ L'environnement de bureau MATE est mis à jour en version 1.24.1, dernière version disponible.
 <p>
  L'environnement de bureau XFCE4 est également mis à jour en version 4.14.1, dernière version disponible.
 <p>
- L'environnement de bureau KDE est disponible en Plasma 5.18.5, Framework 5.70.0 et les applications en 20.04.1
+ L'environnement de bureau KDE est disponible en Plasma 5.19.5, Framework 5.73.0 et les applications en 20.08.1
 <p>
- Les navigateurs disponibles sont entre autre:  firefox 76.0.1, falkon 3.1.0, epiphany 3.36.1, etc
+ Les navigateurs disponibles sont entre autre:  firefox 80.0.1, falkon 3.1.0, epiphany 3.36.4, etc
 <p>
- De nombreuses applications on été mise à jour également comme thunderbird 68.8.0, Scribus 1.5.5, libreoffice 6.4.3.2, gimp 2.10.18, etc.
+ De nombreuses applications on été mise à jour également comme thunderbird 78.2.1, Scribus 1.5.5, libreoffice 7.0.1.2, gimp 2.10.20, etc.
 <p>
- 5 nouvelles ISOs sont disponible.
+ 8 nouvelles ISOs sont disponible.
 <p>
  <ul>
   <li>
     <b><i>en 64 bits:</i></b>
     <p>
-     Une ISO NuTyX de base de 412 Moctets en version "rolling".
+     Une ISO NuTyX de base de 432 Moctets en version "rolling".
     <p>
-     Une ISO de 5.3 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.5.
-     Avec cette ISO, vous pouvez installer une NuTyX 11.5 complète sans avoir recours à une connection internet.
+     Une ISO de 5.3 Goctets est une NuTyX de base version "fixed" qui contient un dépot complet des paquets binaires de la NuTyX 11.6.
+     Avec cette ISO, vous pouvez installer une NuTyX 11.6 complète sans avoir recours à une connection internet.
      Pour installer des paquets depuis cette ISO, une fois votre système de base installé sur votre disque dur, il faut monter la clé USB sur le dossier <b>/mnt</b>.
     <p>
      Supposons que votre clé est trouvé sous /dev/sdc1, utilisez la commande:
@@ -45,17 +50,34 @@
      Adaptez en conséquence.
     <p>
      Une ISO créée par Miyo, désormais le createur officiel des ISO NuTyX.
-     Sa taille est de 891.3 Mbyte, elle embarque le stricte minimum avec comme bureau Openbox en version "rolling".
+     Sa taille est 840 Mbyte, elle embarque le stricte minimum avec comme bureau JWM en version "rolling".
+    <p>
+     Une ISO NuTyX avec l'environnement lxde de 810 Moctets en version "rolling".
+    <p>
+     Une ISO NuTyX avec l'environnement XFCE de 893 Moctets en version "rolling".
+    <p>
+     Une ISO NuTyX avec l'environnement KDE de 1.6 Goctets en version "rolling".
     <p>
      Une ISO NuTyX avec l'environnement MATE de 1.6 Goctets en version "rolling".
   <li>
     <b><i>en 32 bits:</i></b>
     <p>
-     Une ISO NuTyX de base de 327 Moctets en version "rolling".
+     Une ISO NuTyX de base de 383 Moctets en version "rolling".
   </ul>
 <p>
  Les ISOs sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 <h2>Quoi de neuf ?</h2>
+ <h3>Flatpak disponible</h3>
+  <p>
+   Un gros effort a été fait pour permettre la bonne intégration des paquets universels flatpak.
+   Cette nouvelle fonctionnalitée permet donc d'installer de nombreux nouveaux paquets.
+ <h3>Nouveau groupe Telegram</h3>
+  <p>
+   Vous êtes bienvenu sur le nouveau <a class="url" href="https://t.me/groupnutyx">groupe Telegram</a> pour discuter du projet ou nous demander de l'aide.
+ <h3>Nouveau contributeur</h3>
+  <p>
+   Spiky est venu rejoindre l'équipe pour contribuer sur NuTyX.
+   Sa grande expérience du projet Linux From Scratch est très appréciée.
  <h3>Nouveaux kernels LTS</h3>
   <p>
    Le paquet 'kernel-419' remplace le paquet 'kernel-lts'.
@@ -78,10 +100,9 @@
  <h3>Virtualbox</h3>
   <p>
    Les pilotes de virtualbox sont disponible pour les 5 kernels de NuTyX.
-
 <h2>Mise à jour</h2>
 <p>
- La NuTyX 11.5 est une mise à jour mineure, une mise à jour est donc possible et aussi simple que:
+ La NuTyX 11.6 est une mise à jour mineure, une mise à jour est donc possible et aussi simple que:
  <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 <h2>Anciennes nouvelles</h2>
  Les anciennes nouvelles sont maintenant consultables <a href="old-news/?C=N;O=D">ici.</a>

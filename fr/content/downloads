@@ -1,6 +1,6 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-   La version stable actuelle de NuTyX est la <b>11.5</b>.
+   La version stable actuelle de NuTyX est la <b>11.6</b>.
   <p>
    Les ISOs sont disponibles en 64 bits "Fixed" et "Rolling" releases.
   <p>
@@ -38,7 +38,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200618-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200910-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/>Rolling</a>
     <td>
       Cette iso est optimisée pour NuTyX.
      <p>
@@ -46,16 +46,16 @@
      <p>
       Paquets installés:
      <p>
-      lxde flcards leafpad lxde-appearance lxde-input lxde-randr lxde-terminal
-      gparted lxdm pcmanfm pilotes graphiques xorg.
+      lxde flcards make-ca leafpad lxde-appearance lxde-input lxde-randr lxde-gpicview lxde-terminal
+      lxdm gparted pcmanfm xdg-user-dirs firefox pilotes graphiques xorg.
     </td>
     <td>
-     Environ 812.6 Mo
+     Environ 772 Mo
     </td>
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200619-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200910-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/>Rolling</a>
     <td>
      Cette iso est optimisée pour NuTyX.
      <p>
@@ -63,16 +63,16 @@
      <p>
       Paquets installés:
      <p>
-      xfce4 flcards mousepad orage ristretto xfburn parole xfce4-terminal lxdm
-      networkmanager gparted thunar xorg graphical drivers.
+      xfce4 flcards make-ca mousepad orage ristretto xfburn parole xfce4-terminal lxdm
+      networkmanager gparted thunar firefox gvfs xdg-user-dirs xorg graphical drivers.
     </td>
     <td>
-     Environ 852 Mo
+     Environ 851 Mo
     </td>
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200518.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-20200910-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/>Rolling</a>
     <td>
       Cette iso est optimalisée pour NuTyX.
      <p>
@@ -82,7 +82,7 @@
      <p>
       Paquets installés:
      <p>
-      jwm dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
+      jwm dmenu flcards make-ca gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
       volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
     </td>
@@ -113,7 +113,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200621-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200910-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/>Rolling</a>
     </td>
     <td>
      <p>
@@ -121,19 +121,18 @@
      <p>
       Paquets installés:
      <p>
-     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=plasma">Plasma KDE5</a>
-     firefox thunderbird flcards xdg-user-dirs clementine k3b kdenlive vlc
-     sound-theme-freedesktop network-manager-applet
-     gparted xorg-setxkbmap ntp ntp.service
+     lxdm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
+     clementine k3b kdenlive vlc sound-theme-freedesktop
+     network-manager-applet gparted xorg-setxkbmap hardinfo.
     </td>
     <td>
-      Environ 1.6 GO
+      Environ 1.46 GO
     </td>
 
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-mate-20200518.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20200910-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/>Rolling</a>
     </td>
     <td>
      <p>
@@ -141,18 +140,18 @@
      <p>
       Paquets installés:
      <p>
-     lxdm <a href="./?type=col&branch=rolling&arch=x86_64&searchpkg=mate">mate</a>
-     zip unzip pciutils usbutils cups openssh gvfs dejavu-ttf
-     system-config-printer firefox thunderbird libreoffice gnome-disk-utility hplip
-     gimp transmission cheese cherrytree deadbeef aisleriot
-     gnome-mahjongg inxi gawk htop flcards rsync tar pigz
-     lbzip2 xdg-user-dirs sound-theme-freedesktop nano
-     network-manager-applet alsa-utils alsa-plugins
-     ntfs-3g pidgin vlc fuse xorg-xdpyinfo lm-sensors
-     gparted xorg-setxkbmap ntp ntp.service
+      lxdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
+      gvfs dejavu-ttf system-config-printer firefox thunderbird
+      libreoffice gnome-disk-utility hplip gimp transmission
+      cheese cherrytree deadbeef aisleriot hardinfo
+      gnome-mahjongg inxi gawk htop rsync tar pigz
+      lbzip2 xdg-user-dirs sound-theme-freedesktop nano
+      network-manager-applet alsa-utils alsa-plugins
+      ntfs-3g vlc fuse xorg-xdpyinfo lm-sensors
+      gparted xorg-setxkbmap ntp ntp.service.
     </td>
     <td>
-      Environ 1.7 GO
+      Environ 1.47 GO
     </td>
   </table>
  <h2>Pour l'utilisateur régulier</h2>
@@ -167,11 +166,11 @@
        Taille
      <tr class="even">
       <td class="lien_article">
-         <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.5/NuTyX_x86_64-11.5.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+         <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
        <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200518/NuTyX_x86_64-20200518.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_x86_64-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
        <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20191216/NuTyX_i686-20191221.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_i686-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
       </td>
       <td>
        <p>
@@ -182,7 +181,7 @@
       <p>
        Environ 432 MO
       <p>
-       Environ 327 MO
+       Environ 365 MO
       </td>
      </tr>
    </table>
@@ -257,7 +256,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.5.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.6.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>

@@ -1,47 +1,47 @@
-<h1>Latest news 2020-05-20</h1>
+<h1>Latest news 2020-09-10</h1>
 
-<h2>NuTyX 11.5 available with cards 2.4.115</h2>
+<h2>NuTyX 11.6 available with cards 2.4.122</h2>
 <p>
- I'm very pleased to announce the new NuTyX 11.5 release.
+ I'm very pleased to announce the new NuTyX 11.6 release.
 <p>
- The 64-bit version contains about 700 packages upgraded.
+ The 64-bit version contains more then 1000 packages upgraded.
 <p>
  The 32-bit version of NuTyX, still actively supported.
 <p>
- In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.123 (4.9.224 for the 32-bit version).
-<p>
-For 64-bit systems,the kernel release 5.6.13 is also available.
+ In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.143 and the latest stable 5.8.7.
 <p>Changelogs for the kernels are available here:
-<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.123">kernel 4.19.123 changlog</a>
-<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.6.13"> kernel 5.6.13 changelog</a>
+<p>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.143">kernel 4.19.143 changlog</a>
+<p>
+<a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.8.7"> kernel 5.8.7 changelog</a>
 <p>
  The gnu c library, glibc, is now glibc 2.31
 <p>
- The graphical server is xorg-server 1.20.8.
+ The graphical server is xorg-server 1.20.9.
 <p>
-The mesa lib is 20.0.6, gtk3 is 3.24.20, and qt has been updated to 5.14.2.
+The mesa lib is 20.1.7, gtk3 is 3.24.22, and qt has been updated to 5.15.0.
 <p>
  Python interpreters 3.8.3 and 2.7.18 have been included in this release.
 <p>
- The MATE Desktop Environment comes in 1.24.0, the latest version.
+ The MATE Desktop Environment comes in 1.24.1, the latest version.
 <p>
  The XFCE Desktop Environment comes in 4.14.1, the latest version.
 <p>
- The KDE Plasma Desktop is now 5.18.5, the Framework is now 5.70.0 and applications are now 20.04.1
+ The KDE Plasma Desktop is now 5.19.5, the Framework is now 5.73.0 and applications are now 20.08.1
 <p>
- Available browsers are: firefox 76.0.1, falkon 3.1.0, epiphany 3.36.1, etc
+ Available browsers are: firefox 80.0.1, falkon 3.1.0, epiphany 3.36.4, etc
 <p>
- Many desktop applications have been updated as well like thunderbird 68.8.0, Scribus 1.5.5, libreoffice 6.4.3.2, gimp 2.10.18, etc.
+ Many desktop applications have been updated as well like thunderbird 78.2.1, Scribus 1.5.5, libreoffice 7.0.1.2, gimp 2.10.20, etc.
 <p>
- 5 news ISOs are available.
+ 8 news ISOs are available.
  <ul>
   <li>
   <b><i>for 64-bit:</i></b>
    <p>
-    The first ISO is a base NuTyX "rolling" version with a size of 412 Mbytes.
+    The first ISO is a base NuTyX "rolling" version with a size of 432 Mbytes.
    <p>
-    A 5.3 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.5 release.
-    You can install NuTyX 11.5 completely without having to use the internet.
+    A 5.3 GByte ISO base NuTyX "fixed" version is available which contains a complete repository of the binaries for the NuTyX 11.6 release.
+    You can install NuTyX 11.6 completely without having to use the internet.
     To install packages from this ISO, once your base system is installed, configured and booting,
     it's just a question of mounting the media on the <b>/mnt</b> mounting point.
    <p>
@@ -49,23 +49,39 @@ The mesa lib is 20.0.6, gtk3 is 3.24.20, and qt has been updated to 5.14.2.
     <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
     Change this command to reflect your system.
    <p>
-    A 891.3 Mbyte ISO Miyo Linux Openbox desktop in "rolling" version.
+    A 840 Mbyte ISO Miyo Linux JWM desktop in "rolling" version.
     This ISO is the result of the expertise of Miyo, our new ISOs maintainer.
+   <p>
+    A 810 MByte lxde desktop in "rolling" version.
+   <p>
+    A 893 MByte lxde desktop in "rolling" version.
+   <p>
+    A 1.6 GByte KDE desktop in "rolling" version.
    <p>
     A 1.6 GByte MATE desktop in "rolling" version.
   <li>
   <b><i>for 32-bit:</i></b>
    <p>
-    A 327 Mbytes ISO base NuTyX "rolling" version.
+    A 383 Mbytes ISO base NuTyX "rolling" version.
  </ul><p>
  ISOs are available on <a href="downloads">the download page.</a>
 <h2>What's new ?</h2>
+ <h3>Flatpak available</h3>
+  <p>
+   A lot of effort have been concentrate to make possible the installation of universal flatpak packages.
+   This open the door to a lot of new packages.
+ <h3>New Telegram channel</h3>
+  <p>
+   You are welcome on the new <a class="url" href="https://t.me/groupnutyx">Telegram channel</a> to discuss with us about the project or ask for support.
+ <h3>New contributor</h3>
+  <p>
+   Spiky has join us to contribute on NuTyX.
+   His big knowledge about Linux From Scratch project is highly appreciate.  
  <h3>News kernels</h3>
   <p>
    The 'kernel-419' package replaces the 'kernel-lts' package.
   <p>
    There are now 4 versions of LTS kernel in addition to the last stable kernel to date:
-  
    <ul>
     <li>
      kernel 4.9
@@ -83,8 +99,7 @@ The mesa lib is 20.0.6, gtk3 is 3.24.20, and qt has been updated to 5.14.2.
  <h3>Virtualbox</h3>
   <p>
    The virtualbox drivers are available for the 5 kernels of NuTyX.
-
- <h2>Upgrade process</h2>
+<h2>Upgrade process</h2>
 <p>
  Since this is a minor release, an upgrade is possible and as simple as:
  <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
