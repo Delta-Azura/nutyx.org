@@ -15,7 +15,9 @@
 
   <h3>Les recettes du projet GIT</h3>
    On  commence par cloner le projet GIT contenant toutes les recettes des paquets 64 bits de la NuTyX:
-   <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+   <pre class="command_user"><kbd>git clone -b &ltbranch&gt git://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+   La variable &ltbranch&gt peut prendre les valeurs <i>testing</i> ou <i>rolling</i>.
+   <p>
    Une fois le projet GIT en place, on se déplace à la racine de celui-ci,
    en effet la commande <i><b>mybld</b></i> utilise des information du GIT
    (VERSION, USERNAME, EMAIL, etc).

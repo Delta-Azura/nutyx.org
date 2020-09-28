@@ -17,7 +17,9 @@
   <h3>Get the GIT project</h3>
    <p>
     We start by cloning the GIT project containing all the NuTyX recipes:
-    <pre class="command_user"><kbd>git clone https://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+    <pre class="command_user"><kbd>git clone -b &ltbranch&gt git://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+    The variable &ltbranch&gt can take <i>testing</i> or <i>rolling</i> as value.
+    <p>
     Once the GIT project in place, we move to the root of it,
     indeed the command <i><b>mybld</b></i> uses information from the GIT
     (VERSION, USERNAME, EMAIL, etc).
