@@ -9,13 +9,13 @@
  <h2>What would you need an initrd for ?</h2>
   The first file your computer is loading is the kernel which is responsible of almost everything regarding hardware.
   The kernel is his name means, the core of the system. Unfortunatly, it can not guess things alone.
-  You might use a RAID, LVM, NFS systems or an enencrypted partition. 
-  For all thoses raisons, and perhaps more other, you need an initrd image to complete that task.
+  You might use a RAID, LVM, NFS systems or an encrypted partition.
+  For all thoses reason, and perhaps more other, you need an initrd image to complete that task.
  <h2>How does it work on NuTyX</h2>
-  An initrd have an naming schema that follows the name and the version of the kernel that is associate with.
+  An initrd has a naming schema that follows the name and the version of the kernel that is associate with.
   For example, if you are running on the latest kernel version as today.
   The name of the kernel is: <b><i>kernel-5.8.14-mainline</i></b> .
-  If we look in the folder where all the kernels reside, we find indeed a kernel with such a name and linked file to it:
+  If we look in the directory where all the kernels reside, we find indeed a kernel with such a name and linked file to it:
   <pre class="command_user"><kbd>ls -al /boot/kernel*
 lrwxrwxrwx 1 root root   22  7 oct 16:00 /boot/kernel -> kernel-5.8.14-mainline
 -rw-r--r-- 1 root root 9.7M  7 oct 15:09 /boot/kernel-5.8.14-mainline
@@ -27,7 +27,7 @@ lrwxrwxrwx 1 root root   22  7 oct 16:00 /boot/kernel -> kernel-5.8.14-mainline
    And as the kernel-5.8.14-mainline file, a link file named initrd would be associate.
  <h2>Build an initrd</h2>
   If you decide to use an initrd image at boot time, you need to build the initrd yourself ONES.
-  To build this file, the only restriction is that you have the root credencies rights.
+  To build this file, the only restriction is that you have the root credentials rights.
   Either you use sudo command either <a href="faq#8">you activate the root account</a> and switch to root:
   <p>
    To know which kernel you are running on, use this command:
@@ -40,7 +40,7 @@ lrwxrwxrwx 1 root root   22  7 oct 16:00 /boot/kernel -> kernel-5.8.14-mainline
 Creating ... 
 done.</pre>
   <p>
-   If we look in the folder where all the kernels reside, we find indeed a new file named: initrd-4.9.238-NuTyX-49
+   If we look in the directory where all the kernels reside, we find indeed a new file named: initrd-4.9.238-NuTyX-49
    <pre class="command_user"><kbd>l /boot -tr </kbd></pre>
    <pre class="output">.....
 ...
@@ -48,7 +48,7 @@ done.</pre>
 -rw-r--r--  1 root root  80M 10 oct 19:47 initrd-4.9.238-NuTyX-49
 drwxr-xr-x  4 root root 4.0K 10 oct 19:47 .</pre>
   <p>
-   As mentionned earlier, we also need to buildup a link <b><u>with the right name</u></b> so that <a href="dictionary#ID000">cards</a> can do the upgrade process of this initrd.
+   As mentionned earlier, we also need to create a link <b><u>with the right name</u></b> so that <a href="dictionary#ID000">cards</a> can do the upgrade process of this initrd.
    As a convention, the name of the link is ALWAYS made of <i>init</i> and last part of the initrd filename separated by a dash, in our example:
    <p>
     <b>initrd-49</b>
