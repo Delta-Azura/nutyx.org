@@ -24,7 +24,7 @@ lrwxrwxrwx 1 root root   22  7 oct 16:00 /boot/kernel -> kernel-5.8.14-mainline
   If they would be an initrd with it's link,
   <p>
    In this example, the name of the initrd file would be: <b><i>initrd-5.8.14-mainline</i></b>
-   And as the kernel-5.8.14-mainline file, a link file named initrd would be associate.
+   And as the kernel-5.8.14-mainline file, a link file named <b><i>initrd</i></b> would be associate.
  <h2>Build an initrd</h2>
   If you decide to use an initrd image at boot time, you need to build the initrd yourself ONES.
   To build this file, the only restriction is that you have the root credentials rights.
