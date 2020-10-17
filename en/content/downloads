@@ -35,7 +35,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200910-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200910-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/><br/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -52,7 +52,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200910-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200910-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -70,7 +70,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200910.iso"><img src="../graphics/downloads/jwm-blue.png" alt="JWM Logo"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20200910.iso"><img src="../graphics/downloads/jwm-blue.png" alt="JWM Logo"/><br/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -90,7 +90,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20200913-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="Openbox Logo"/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20200913-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="Openbox Logo"/><br/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -110,7 +110,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200910-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200910-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -129,7 +129,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20200910-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20200910-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -164,11 +164,11 @@
        Size
      <tr class="even">
       <td class="lien_article">
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Fixed</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Fixed</a>
        <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_x86_64-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_x86_64-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling</a>
        <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_i686-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/>Rolling 32bits</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_i686-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling 32bits</a>
       </td>
       <td>
        <p>
