@@ -1,0 +1,102 @@
+<h1>Syntaxes et formalitées pour la construction d'un paquet</h1>
+<h2>Le dossier</h2>
+
+Le dossier d'un paquet doit s'appeler par le nom du paquet,
+la longueur du nom du dossier (et donc le nom du paquet) ne doit pas dépasser 50 caractères.
+<p>
+- Il ne peut pas contenir de majuscules, ne peut pas commencer par un chiffre.
+<p>
+- Il doit commencer par une lettre minuscule
+<p>
+- Il peut contenir les 26 lettres a à z, les 10 chiffres 0 à 9, et les trois symboles -, _ et +
+
+Exemple: /usr/ports/mes_paquets/xmms
+<p>
+Ici le nom du paquet DOIT être <i><b>xmms</b></i>
+<h2>Le contenu du dossier</h2>
+On trouve dans le dossier  /usr/ports/mes_paquets/xmms au minimum un fichier qui s'appelle Pkgfile
+<p>
+On peut également trouver un script de pré-installation et un script de post-installation.
+Ils devront prendre le nom du paquet en préfix, donc toujours avec xmms comme nom de paquet:
+
+<p>
+- xmms.pre-install
+<p>
+- xmms.post-install
+
+On peut également trouver un fichier README.
+Il prendra également le nom du paquet en préfix:
+<p>
+- xmms.README
+<h2>Le contenu du fichier Pkgfile</h2>
+<h3>Les dépendances</h3>
+Les dépendances sont spécifiées par les variables <i>makedepends</i> et <i>run</i>
+<pre class=output><kbd>makedepends=(glib gtk2 libvorbis python)
+# Dépendances non détectées automatiquement et devant être spécifiées pour le fonctionnement du paquet
+run=(desktop-file-utils)</kbd></pre>
+<h3>Les variables à notre disposition</h3>
+Une recette suit toujours un modèle choisi qui dépendra du genre de paquet que l'on souhaite produire.
+<p>
+Les variables sont alors utiles pour personnaliser notre modèle choisi à moindre effort et en faire une recette spécifique.
+<h4>La variable indispensable</h4>
+<pre class=output><kbd>version=versiondupaquet</kbd></pre>
+<h4> La variable indispensable si c'est la nième tentative</h4>
+<pre class=output><kbd>release=nième tentative</kbd></pre>
+<h4>Les variables vivements recommandées</h4>
+<pre class=output><kbd># Même si la variable name n'est pas obligatoire
+# elle est vivement recommandée pour améliorer la clarté du Pkgfile
+name=nomdupaquet
+# Un ou plusieurs alias peuvent être spécifiés
+# Dans tous les cas, à utiliser avec prudence. Il faut s'assurer qu'aucun paquet existant ne porte le nom d'un des alias.
+# Contrairement au nom, un alias peut contenir des majuscules.
+alias=(nom1 nom2 nom3)
+# Une description peut contenir 110 caractères maximum,
+# pensez à être court et précis dans la description du paquet
+description="Description du paquet"
+
+# Informations  disponible sur le net
+url="http://www.siteinternetdupaquet.com"
+packager="celui@qui.fait.lepaquet.com"
+maintainer="celui@qui.maintient.le.paquet.en.amont.com"
+group=nom_du_groupe_du_paquet
+source=(http://downloads.siteinternetdupaquet.com/$name.$version.tar.xz)</kbd></pre>
+<h4>Les variables disponible</h4>
+Toutes les variables définies dans le fichier de configuration <i><b>/etc/pkgmk.conf</b></i> peuvent être réutilisées et donc redéfinies.
+Consultez le man de <i>pkgmk.conf</i>
+<pre class=output><kbd>PKGMK_KEEP_SOURCES="no"
+PKGMK_GROUPS=()
+PKGMK_COMPRESSION_MODE="xz"
+PKGMK_NO_STRIP="yes"</kbd></pre>
+<h3>Les fonctions à notre disposition</h3>
+<h4>La fonction build() optionnlle</h4>
+<pre class=output><kbd>Si le modèle utilisé est le suivant:
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr
+  make
+  make DESTDIR=$PKG install
+}</kbd></pre>
+la fonction ne doit pas être spécifiée.
+<h4>Les autres fonctions reconnues en option</h4>
+<pre class=output><kbd>prepare() {
+...
+}
+package() {
+...
+}
+man(){
+...
+}
+devel() {
+...
+}
+service() {
+...
+}
+doc() {
+...
+}
+lib() {
+...
+}</kbd></pre>
+<h2>Et maintenant ?</h2>
