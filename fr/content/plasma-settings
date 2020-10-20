@@ -1,0 +1,75 @@
+<h1>Premiers réglages sur Plasma - KDE5 </h1>
+
+<p>
+Lorsqu'on arrive la première fois sur le bureau de kde5, il y a des réglages à faire tout de suite:
+<p>
+Nous allons commencer par systemsettings. (menu K / favoris / configuration du système)
+
+<h2> Mettre le clavier en Français</h2>
+
+<p>
+Matériel / périphérique d'entrée :
+<p>
+clavier :
+<p>
+matériel : verrouillage clavlier numerique : activé
+<p>
+disposition : configuration des dispositions : coché
+
+<h2> Franciser l'ensemble</h2>
+<p>
+Régional settings
+<p>
+Traductions : deplacer français vers la droite
+<p>
+Formats : checher dans la liste deroulante fr_FR
+
+<h2> Apparence de l'espace de travail </h2>
+<p>
+Theme pointeur souris : choisir n'importte quel autre theme, valider, revenir a breeze et valider. Toutes les decorations en fonctions de l'action apparaitront.
+<p>
+Theme de bureaux : vous pourez en profiter pour changer de theme (perso j'utilise breeze foncé)
+
+<h2> Couleurs </h2>
+<p>
+sur un theme foncé la barre des menus devient invisible.
+<p>
+couleurs : barre active de titre : l'eclaircir un peu
+
+<h2> Polices </h2>
+<p>
+Utiliser lissage activé
+<p>
+configurer : RVB / leger
+<p
+>forcer 96ppp
+
+<h2> Apparence des applications</h2>
+<p>
+style composant graphique / reglage fin / texte sous les icones (prend moins de place)
+<p>
+décorations des fenetres : a coté de la barre de defilement de la décoration active, il y a un petit carre, cliquez dessus : taille des boutons : choisir tiny
+<p>
+style des app gtk : comme pour le pointeur souris , changez de reglage, valider, revenez au reglages initiaux et valider. Firefox, thunderbird et libreoffice seront plus beaux.
+
+<h2> comportement de l'espace de travail </h2>
+Verouillage de l'ecran : regler le delais du verouillage de l'ecran
+
+<h2> Gestion de fenetres</h2>
+comportement des fenetres / action de la barre de titre / evenement de la molette / enrouler derouler
+<p>
+très commode pour voir ce qu'il y a sous une fenetre, sans passer par la barre des taches.
+<p>
+Il y a bien d'autres possibibilités de réglages dans systemsettings, je vous laisse découvrir.
+
+<h2>Autres trucs</h2>
+<p>
+1/ Pour améliorer le rendu dans firefox : installer les ttf-ms-fonts (beaucoup de sites sont fait avec des outils ms)
+<p>
+2/ kmix / réglage balance : clic gauche sur kmix / mixer / au niveau du haut parleur clic droit / cocher separtion canaux
+<p>
+3/ augmenter la capacite du presse papier : clic droit sur icone presse papier / configuer ....
+<p>
+4/ remplacer gestion fenetre par gestion fenetre par icones... clic sur le carre a droite / clic sur +
+<p>
+5/ ...... je vous laisse découvrir :-D
