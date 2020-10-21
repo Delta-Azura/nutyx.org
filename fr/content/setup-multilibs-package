@@ -1,0 +1,99 @@
+<h1>Construire un paquet 32bits et l'utiliser dans une 64bits</h1>
+<h2>Remerciements</h2>
+Merci à Guy pour avoir écrit ce tutoriel.
+<p>
+<h2>Installer une NuTyX 32 bits</h2>
+L'idée de ce tuto est de pouvoir utiliser des applications 32 bits dans une 64 bits sans avoir à installer des paquets multilibs encombrants.
+Pour installer une NuTyX 32 bits, il suffit de <a href="install-chroot-32bits">suivre ce turoriel</a>
+<h2>Copier les fichiers runtime de la glibc 32bits</h2>
+Pour les librairies, j'utilise celles de la NuTyX i686.
+je les ai copiées dans <i><b>/opt/i686/lib</b></i>
+Celles permettant de lancer des binaires 32 bits sont dans le paquet glibc:
+<pre class=output>lib/ld-2.27.so          lib/ld-linux.so.2
+lib/libc-2.27.so        lib/libc.so.6
+lib/libdl-2.27.so       lib/libdl.so.6
+lib/libm-2.27.so        lib/libm.so.6
+lib/libpthread-2.27.so  lib/libpthread.so.6</pre>
+<h2>Configurer le loader linux pour quil trouve les libs 32 bits</h2>
+<pre class=command_user><kbd>cd /lib
+sudo ln -s /opt/i686/lib/ld-linux.so.2
+sudo sh -c "echo /opt/i686/lib      > /etc/ld.so.conf.d/i686.conf"
+sudo sh -c "echo /opt/i686/usr/lib >> /etc/ld.so.conf.d/i686.conf"
+sudo ldconfig</kbd></pre>
+Il faut bien sûr ajouter les autres librairies dynamiques 32 bits nécessaires au programme à lancer,
+je les ai mises soit dans /opt/i686/lib, soit dans /opt/i686/usr/lib
+<p>
+Pour la facilité d'exécution, j'ai rajouté un lien symbolique:
+<pre class=command><kbd>cd /usr/bin
+ln -s /opt/wine/usr/bin/wine</kbd></pre>
+<h2>Compiler le paquet 32bits</h2>
+Dans cet exemple, ce sera wine qui sera utilisé:
+<pre class=output>
+description="Emulateur Windows 32"
+url="http://www.winehq.com/"
+
+makedepends=(xorg-libx11 xorgproto freetype sane samba libgphoto2 giflib lcms openal)
+
+name=wine
+version=3.0.3
+
+source=(https://sourceforge.net/projects/wine/files/Source/$name-$version.tar.xz)
+
+build() {
+   cd $name-$version
+   ./configure \
+      --prefix=/opt/i686/usr \
+      --mandir=/usr/share/man \
+      --sysconfdir=/etc \
+      --with-x
+   make depend
+   make
+   make DESTDIR=$PKG install
+   mkdir -p $PKG/etc/wine
+}
+</pre>
+Le paquet doit ête compilé dans la NuTyX 32 bits.
+
+<h2>Installer le paquet 32 bits dans la 64 bits</h2>
+<pre class=command_user><kbd>sudo pkgadd &lt;chemin_de_la_32_bits_et des binaires&gt;/wine/wine1xxxi686.cards.tar</kbd></pre>
+<h2>Cards files wine</h2>
+On peut vérifier si les fichiers sont bien au bonne endroit:
+<pre class=command_user><kbd>cards files wine
+/opt/i686
+/opt/i686/lib
+/opt/i686/lib/libblkid.so.1.1.0
+/opt/i686/lib/librt-2.27.so
+/opt/i686/lib/libmount.so.1
+/opt/i686/lib/libm-2.27.so
+/opt/i686/lib/libpcre.so.1.2.10
+/opt/i686/lib/libz.so.1.2.11
+/opt/i686/lib/libm.so.6
+/opt/i686/lib/libpthread-2.27.so
+/opt/i686/lib/libblkid.so.1
+/opt/i686/lib/libmount.so.1.1.0
+/opt/i686/lib/libz.so.1
+/opt/i686/lib/libuuid.so.1
+/opt/i686/lib/libresolv.so.2
+/opt/i686/lib/librt.so.1
+/opt/i686/lib/libc-2.27.so
+/opt/i686/lib/libuuid.so.1.3.0
+/opt/i686/lib/libpcre.so.1
+/opt/i686/lib/libbz2.so.1.0
+/opt/i686/lib/libbz2.so.1.0.6
+/opt/i686/lib/libdl-2.27.so
+/opt/i686/lib/libc.so.6
+/opt/i686/lib/libresolv-2.27.so
+/opt/i686/lib/libpthread.so.0
+/opt/i686/lib/ld-2.27.so
+/opt/i686/lib/ld-linux.so.2
+/opt/i686/lib/libdl.so.2
+/opt/i686/usr
+/opt/i686/usr/lib
+/opt/i686/usr/lib/libffi.so.6
+/opt/i686/usr/lib/libpixman-1.so.0.34.0
+/opt/i686/usr/lib/libXdamage.so.1.1.0
+...
+..
+</kbd></pre>
+
+
