@@ -1,0 +1,86 @@
+<h1>Compiler dans une chroot 32bits</h1>
+<h2>Installer une NuTyX 32 bits depuis la NuTyX 64 bits</h2>
+<pre class=command_user><kbd>sudo ARCH=i686 install-nutyx</kbd></pre>
+<h2>Entrer dans la chroot 32 bits</h2>
+Je rentre ensuite dans ma chroot:
+<pre class=command_user><kbd>sudo ARCH=i686 install-nutyx -ec</kbd></pre>
+<h2>Rapatrier les ports des recettes qui m'intéressent</h2>
+<pre class=command><kbd>ports -u base
+ports -u cli
+ports -u gui</kbd></pre>
+<h2>Installation des paquets de dévelopment</h2>
+<pre class=command><kbd>cards install cards.devel</kbd></pre>
+<h2>Rapatrier les binaires pour ces trois collections</h2>
+<pre class=command><kbd>for i in base cli gui
+do
+rsync -av --delete rsync://downloads.nutyx.org/nutyx/i686/rolling/$i/ /usr/ports/$i/
+done</kbd></pre>
+<h2>Modifier /etc/cards.conf</h2>
+<pre class=output>dir /usr/ports/gui
+dir /usr/ports/cli
+dir /usr/ports/base
+
+....
+## For all the graphical applications
+dir /var/lib/pkg/depot/gui-extra|http://rsync.nutyx.org
+#
+## For a minimal graphical interface
+# dir /var/lib/pkg/depot/gui|http://rsync.nutyx.org
+#
+## For all the console applications
+dir /var/lib/pkg/depot/cli-extra|http://rsync.nutyx.org
+#
+## For a minimal console interface
+# dir /var/lib/pkg/depot/cli|http://rsync.nutyx.org
+#
+## Chroot system without reboot possibilities for a chroot
+# dir /var/lib/pkg/depot/base|http://rsync.nutyx.org
+#
+...</pre>
+C'est à dire que je commente les dépots officiels de base, cli et gui et utilises les ports officiels AVEC LES BINAIRES dispos
+<p>
+Pour vérifier si la configuration est correcte, on peux utiliser les commandes:
+<pre class=command_user><kbd>cards config</kbd></pre
+
+<pre class=output>1 Directory: /usr/ports/gui
+2 Directory: /usr/ports/cli
+3 Directory: /usr/ports/base
+4 Directory: /var/lib/pkg/depot/nos from http://downloads.nutyx.org/i686/10.4/nos
+5 Directory: /var/lib/pkg/depot/lxqt-extra from http://downloads.nutyx.org/i686/10.4/lxqt-extra
+...
+..
+.
+17 Directory: /var/lib/pkg/depot/gui-extra from http://downloads.nutyx.org/i686/10.4/gui-extra
+18 Directory: /var/lib/pkg/depot/cli-extra from http://downloads.nutyx.org/i686/10.4/cli-extra
+Base System list directory: /var/lib/pkg/depot/base
+Binaries : i686</pre>
+
+et
+<pre class=command><kbd>cards level</kbd></pre>
+<pre class=output>0: /usr/ports/gui/gsfonts
+0: /usr/ports/gui/libcap-ng
+0: /usr/ports/gui/libdvbpsi
+0: /usr/ports/gui/libsepol
+0: /usr/ports/gui/printproto
+0: /usr/ports/gui/tinyxml
+0: /usr/ports/gui/xorg-font-alias
+0: /usr/ports/gui/xorg-font-util
+0: /usr/ports/gui/xorg-libpciaccess
+0: /usr/ports/gui/xorg-util-macros
+0: /usr/ports/gui/xorg-xbitmaps
+0: /usr/ports/gui/xorgproto
+0: /usr/ports/gui/xulrunner
+0: /usr/ports/cli/ack
+...
+..
+26: /usr/ports/gui/kguiaddons
+26: /usr/ports/gui/kidletime
+26: /usr/ports/gui/kwayland
+26: /usr/ports/gui/kwindowsystem
+26: /usr/ports/gui/oxygen-icons5
+26: /usr/ports/gui/solid
+27: /usr/ports/gui/libkscreen</pre>
+
+Je peux maintenant compiler n'importe quel paquet des ces trois collections,
+mais si je ne modifie aucun Pkgfile,
+la compilation ne se fera pas puisque la version binaire est à jour.
