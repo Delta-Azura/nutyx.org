@@ -1,0 +1,12 @@
+<h1>Parcourir le contenu d'un paquet cards avec midnight commander</h1>
+<h2>Remerciement</h2>
+Merci à Guy pour l'astuce.
+<h2>Installer mc (Midnight Commander is a text based filemanager/shell that emulates Norton Commander)</h2>
+<pre class="command_user"><kbd>sudo cards install mc</kbd></pre>
+<h2>Configuration</h2>
+Il est facile de visualiser / copier les différents fichiers d'une archive cards sans l'installer:
+<p>
+Ajouter ceci à votre fichier <b><i>~/.config/mc/mc.ext</i></b>
+<pre class="output">regex/\.cards\.xz$
+        Open=%cd %p/utar://
+        View=%view{ascii} /usr/libexec/mc/ext.d/archive.sh view tar.xz</pre>
