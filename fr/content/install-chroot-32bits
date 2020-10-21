@@ -40,7 +40,7 @@ dir /var/lib/pkg/depot/cli-extra|http://rsync.nutyx.org
 C'est à dire que je commente les dépots officiels de base, cli et gui et utilises les ports officiels AVEC LES BINAIRES dispos
 <p>
 Pour vérifier si la configuration est correcte, on peux utiliser les commandes:
-<pre class=command_user><kbd>cards config</kbd></pre
+<pre class=command><kbd>cards config</kbd></pre>
 
 <pre class=output>1 Directory: /usr/ports/gui
 2 Directory: /usr/ports/cli
