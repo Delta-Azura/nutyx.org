@@ -68,3 +68,49 @@ menuentry "Windows 10" {
  chainloader (hd0,3)+1
 }
 </pre>
+<h2>Bonus, merci Guy</h2>
+Merci à Guy pour ces quelques astuces:
+<p>
+1. La possibilité de démarrer l'installation de NuTyX directement depuis le fichier iso,
+sans utiliser de cdrom ni de clé usb.
+<p>
+Par exemple, pour booter sur l'iso téléchargée à la racine de ma partition /dev/mapper/vg-iso,
+je configre grub comme ceci:
+<pre class="output">menuentry 'NuTyX 12 x86 installation iso on (lvm/vg-iso)' {
+   insmod lvm
+   set root=(lvm/vg-iso)
+   set isofile="/NuTyX_x86_64-8.2.iso"
+   loopback loop $isofile
+   linux  (loop)/isolinux/kernel fromdev=/dev/mapper/vg-iso fromiso=$isofile rootdelay=3 ro quiet
+   initrd (loop)/isolinux/initrd
+}</pre>
+Ceci fonctionne également avec un clef usb bootable en copiant l'iso parmi les autres fichiers.
+<p>
+ 2. la possiblité de démarrer sa NuTyX principale en lecture seule, grâce au
+module overlay intégré dans le noyau linux. 
+<p>
+Cela permet de conserver son installation inchangée en reportant les modifications sur une deuxième partiton utilisée temporairement.
+<p>
+Je me suis servi de ceci lorsque j'ai voulu tester un programme propriétaire (VMware) qu'il est difficile de désintaller proprement.
+<pre class="output">menuentry 'NuTyX 12 x86_64 OVERLAY      on /dev/mapper/vg-nu82' {
+   insmod lvm
+   set root=(lvm/vg-nu82)
+   linux  /boot/kernel root=/dev/mapper/vg-nu82 overlayroot=/dev/mapper/vg-OVL82 ro rootdelay=3
+   initrd /boot/initrd
+}</pre>
+Un fois les tests terminés, il suffit de redémarrer normalement, et éventuellement de formatter la deuxième partition
+<pre class="output">menuentry 'NuTyX 12 x86_64              on /dev/mapper/vg-nu82' {
+   insmod lvm
+   set root=(lvm/vg-nu82)
+   linux  /boot/kernel root=/dev/mapper/vg-nu82 ro rootdelay=3
+   initrd /boot/initrd
+}</pre>
+PS: J'utilise lvm2, mais n'importe quelle partition fera l'affaire,
+on pourrrait par exemple remplacer
+
+<pre class="output">(lvm/vg-nu82) par (hd0,X)
+(lvm/vg-iso) par (hd0,Z)
+/dev/mapper/vg-nu82 par /dev/sdaX
+/dev/mapper/vg-OVL82 par /dev/sdaY
+/dev/mapper/vg-iso par /dev/sdaZ</pre>
+
