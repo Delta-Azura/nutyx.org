@@ -1,0 +1,53 @@
+<h1>Installer sur une partition cryptée</h1>
+<h2>Remerciements</h2>
+Merci à Guy pour avoir écrit ce tutoriel.
+<h2>Installer cryptsetup</h2>
+<pre class="command_user"><kbd>sudo cards install cryptsetup</kbd></pre> 
+<h2>Passer en root</h2>
+<pre class="command_user"><kbd>sudo su -</kbd></pre>
+<h2>Crypter la partition</h2>
+La partition <i>/dev/sda3</i> dans notre exemple.
+<pre class=output><kbd>CDEV=/dev/sda3</kbd></pre>
+<pre class=output><kbd># formatter
+cryptsetup luksFormat $CDEV
+cryptsetup luksOpen $CDEV CPART
+mkfs.ext4 /dev/mapper/CPART
+# monter
+mkdir -p /mnt/CPART
+mount /dev/mapper/CPART /mnt/CPART
+# installer
+LFS=/mnt/CPART install-nutyx
+cp cryptsetup14*x86_64.cards.tar /mnt/CPART/root
+cp /etc/wpa_supplicant.conf.* /mnt/CPART/etc  # si on utilise le wifi
+ 
+# ajouter un fichier keyfile
+CDIR=/mnt/CPART/root/.crypto
+mkdir -p $CDIR
+chmod 700 $CDIR
+KEYFILE=$CDIR/keyfile.bin
+dd if=/dev/urandom of=$KEYFILE bs=512 count=4
+chmod 000 $KEYFILE
+cryptsetup luksAddKey $CDEV $KEYFILE</kbd></pre>
+<h2>Chroot dans la partition cryptée</h2>
+
+<pre class="command"><kbd>LFS=/mnt/CPART install-nutyx -ec</kbd></pre>
+
+Dans la partition cryptée:
+
+<pre class="command"><kbd>mkinitramfs 5.9.1-NuTyX
+cd /boot
+ln -svf initrd-5.9.1-NuTyX initrd
+get wpa-supplicant # si on utilise le wifi
+exit</kbd></pre>
+
+<h2>Mise à jour de l'entrée GRUB</h2>
+Ajouter l'entrée suivante à son fichier grub.cfg
+<p>
+--> attention: utiliser croot=/dev/... et pas root=/dev/...
+<pre class=output><kbd>menuentry 'NuTyX 12.0 x86_64 LUKS on /dev/sda3' {
+  insmod luks
+  cryptomount (hd0,msdos3)
+  set root=(crypto0)
+  linux /boot/kernel croot=/dev/sda3 rootdelay=3 ro quiet
+  initrd /boot/initrd
+}</kbd></pre>
