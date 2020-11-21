@@ -1,0 +1,36 @@
+<h1>Install UEFI with multiple OS</h1>
+ <h2>Introduction</h2>
+  We will install UEFI with grub, to allow multi Distros to be installed.
+ <p>
+  We will need the hard drive to have a GPT table written.
+  We then create a vfat efi partition, and a partition for NuTyX and swap, you can also leave room for other partitions as well.
+ <p>
+  AS OF WRITING, THIS CAN ONLY BE DONE FROM THE <a href="http://www.nutyx.org/en/downloads#4"target="blank">install-nutyx</a> SCRIPT
+ <p>
+  BOOT IN USING A LIVE EFI ISO
+ <p>
+  <h2>Preliminaries</h2>
+   <p>
+    CREATE AN EFI PARTITION 500MB FAT32
+   <p>
+    Install nutyx base. Chroot into nutyx. cards install grub-efi efibootmgr.
+   <p>
+      <pre class="command"><kbd>mkdir /boot/efi</kbd></pre>
+       mount EFI partition to /boot/efi 
+   <p>
+  <h2>Install Grub</h2>
+   <p>
+    <pre class="command"><kbd>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=NUTYX</kbd></pre>
+   <p>
+    <img src="../../graphics/grub-uefi-install/Grub-Install.png">
+   <p>
+  <h2>Create your grub.cfg</h2>
+   <p>
+    <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
+   <p>
+    <img src="../../graphics/grub-uefi-install/Grub.cfg.png">
+  <h2>Note</h2>
+   <p>
+    Add efi partition to /etv/fstab   (optional)
+   <p>
+    <pre class="output">/dev/sda?   /boot/efi  vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro   0 2</pre>
