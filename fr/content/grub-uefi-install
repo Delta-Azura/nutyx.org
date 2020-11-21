@@ -31,6 +31,6 @@
             <img src="../../graphics/grub-uefi-install/Grub.cfg.png">
      <h2>REMARQUE</h2>
        <p>
-       Ajouter une partition efi Ã  / etv / fstab (facultatif) 
+       Ajouter une partition efi Ã  / etc / fstab (facultatif) 
        <p>
             <pre class="output">/dev/sda?   /boot/efi  vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro   0 2</pre>
