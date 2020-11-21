@@ -1,7 +1,7 @@
-<h1>Latest news 2020-10-16</h1>
- <h2>NuTyX 12-beta4 available</h2>
+<h1>Latest news 2020-11-17</h1>
+ <h2>NuTyX 12-rc1 available</h2>
   <p>
-   I'm very please to annonce the new NuTyX 12-beta4 testing release.
+   I'm very please to annonce the new NuTyX 12-rc1 testing release.
    The 64-bit version is a complete new project.
    They are no plan to release a version 12 of NuTyX in 32 bits.
   <p>
@@ -17,9 +17,31 @@
       Description
     <th>
       Size
+   <tr class="odd">
+    <td class="lien_article">
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="mate logo"/><br/>Testing</a>
+    </td>
+    <td>
+     <p>
+      The ISO contains a complete installation with a customised <a href="https://en.wikipedia.org/wiki/KDE">KDE</a> as graphical interface as default.
+     <p>
+       Install packages:
+     <p>
+      lxdm flcards make-ca kde5 zip unzip pciutils usbutils cups openssh
+      gvfs dejavu-ttf chromium thunderbird
+      hplip gimp transmission hardinfo
+      inxi gawk htop rsync tar pigz lbzip2
+      xdg-user-dirs sound-theme-freedesktop nano
+      network-manager-applet alsa-utils alsa-plugins
+      ntfs-3g vlc fuse xorg-xdpyinfo lm-sensors
+      gparted xorg-setxkbmap ntp ntp.service.
+    </td>
+    <td>
+      Approx. 1.8 GB
+    </td>
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-beta4/NuTyX_x86_64-12-beta4-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Testing</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Testing</a>
     </td>
     <td>
      <p>
@@ -38,11 +60,11 @@
       gparted xorg-setxkbmap ntp ntp.service.
     </td>
     <td>
-      Approx. 1.3 GB
+      Approx. 1.5 GB
     </td>
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-beta4/NuTyX_x86_64-12-beta4-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Testing</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Testing</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -54,11 +76,11 @@
       networkmanager gparted thunar firefox gvfs xdg-user-dirs network-manager-applet.
     </td>
     <td>
-     Approx. 1 GB
+     Approx. 1.1 GB
     </td>
      <tr class="even">
       <td class="lien_article">
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-beta4/NuTyX_x86_64-12-beta4.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Testing</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Testing</a>
       </td>
       <td>
        <p>
@@ -66,12 +88,9 @@
         Make sure to remove dhcpcd package one you install networkmanager to avoid them to enter in conflict with each other.
       </td>
       <td>
-       Approx. 540 MB
+       Approx. 600 MB
       </td>
      </tr>
-
-   </tr>
-
    </table>
  <h2>What's new ?</h2>
   <p>
@@ -90,12 +109,12 @@
    <p>
     you have a choice at boot time on the conventional GRUB menu.
    <p>
-    In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.151 and the latest stable 5.9.
+    In the newest release, base NuTyX comes with the Long-Term Support (LTS) kernel 4.19.151 and the latest stable 5.9.8
     Changelogs for the kernels are available here:
    <p>
-    <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.151">kernel 4.19.151 changelog</a>
+    <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.157">kernel 4.19.157 changelog</a>
    <p>
-    <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9">kernel 5.9 changelog</a>
+    <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.8">kernel 5.9.8 changelog</a>
    
   <h3>Software Core change</h3>
    <h4>RuNyX</h4>
@@ -108,6 +127,11 @@
      You should consult the documentation for more info.
      <pre class="command_user"><kbd>sudo cards install runyx.man
 man runit</kbd></pre>
+   <h4>Busybox</h4>
+    <p>
+     Busybox is part of the core NuTyX system.
+     This makes it possible to reduce the size of a basic NuTyX.
+     The initrd is also considerably reduced.
    <h4>Elogind</h4>
     <p>
      At first we want to take profit of systemd init and use systemd for the logind daemon, this was not working.
@@ -131,6 +155,11 @@ man runit</kbd></pre>
       <li>
        SysV compat (sysVinit)
      </ul>
+ <h2>Thanks</h2>
+  <p>
+   Thank you to all my team for the feedback from the tests carried out on this new version.
+  <p>
+   A special thank you to Spiky for his great patience and attention to detail.
  <h2>Manual update procedure process</h2>
   <p>
    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
