@@ -1,38 +1,77 @@
 <h1>Les fichiers de configuration de NuTyX</h1>
  
  <h2>Le clavier</h2>
- /etc/X11/xorg.xonf.d/20-keyboard.conf
- 
+  <ul>
+   <li>
+    /etc/X11/xorg.xonf.d/20-keyboard.conf
+  </ul>
  <h2>Le réseau, nom de la machine</h2>
+<ul>
+ <li>
   /sys/class/net/
+ <li>
   /etc/sysconfig/network
-  /etc/sysconfif/ifconfig.<nom_de_la_carte>
+ <li>
+  /etc/sysconfif/ifconfig.&lt;nom_de_la_carte_réseau&gt;
+ <li>
   /etc/wpa_supplicant.&lt;nom_de_la_carte_wifi&gt;
+ <li>
   /etc/resolv.conf
+ <li>
+  /etc/hostname
+</ul>
  <h2>La langue</h2>
-  /etc/profile.d/i18n.sh
+  <ul>
+   <li>
+    /etc/profile.d/i18n.sh
+  </ul>
  <h2>La position géographique ou région</h2>
-  /etc/localtime
-  
+  <ul>
+   <li>
+    /etc/localtime
+  </ul>
  <h2>Emplacements de montage des partitions, clés USB, NFS, partitions d'échanges, etc</h2>
- /etc/fstab 
+  <ul>
+   <li>
+    /etc/fstab
+  </ul>
  <h2>L'horloge</h2>
- /etc/sysconfig/clock
- 
+  <ul>
+   <li>
+    /etc/sysconfig/clock
+  </ul>
  <h2>L'amorçage de la machine</h2>
- /boot/grub/grub.cfg
- 
+  <ul>
+   <li>
+    /boot/grub/grub.cfg
+  </ul>
  <h2>Chargement manuel de modules du kernel, Parametres de chargement des modules du kernel</h2>
- /etc/profile.d/modules.d/
- /etc/modprobe.d/
-
+ <ul>
+  <li>
+   /etc/profile.d/modules.d/
+  <li>
+   /etc/modprobe.d/
+ </ul>
  <h2>Création de fichiers/ dossiers (normalement temporaires) au démarrage</h2>
- /etc/sysconfig/createfiles
- 
- <h2>Emplacement des scripts de lancement des services<h2>
- /etc/rc.d/init.d/
- <h2>Emplacement des scripts des utilisateurs</h2
- /home/<nom_de_utilisateur>/.bashrc
-/home/<nom_de_utilisateur>/.bash_profile
+ <ul>
+  <li>
+   /etc/sysconfig/createfiles
+ </ul>
+ <h2>Emplacement des scripts de lancement des services</h2>
+ <ul>
+  <li>
+   /etc/rc.d/init.d/
+ </ul>
+
+<h2>Emplacement des scripts des utilisateurs</h2>
+ <ul>
+  <li>
+   /home/&lt;nom_de_utilisateur&gt;/.bashrc
+  <li>
+   /home/&lt;nom_de_utilisateur&gt;/.bash_profile
+ </ul>
  <h2>Login graphique via lxdm</h2>
- /etc/lxdm/lxdm.conf
+  <ul>
+   <li>
+    /etc/lxdm/lxdm.conf
+  </ul>

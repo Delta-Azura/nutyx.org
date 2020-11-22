@@ -53,6 +53,15 @@
  <h2>Guides de l'utilisateur</h2>
 
   <table width="100%" cellspacing="0">
+   <tr class="even">
+    <td class="lien_article">
+     <a class="url" href="configuration-files">Fichiers de configuration</a>
+    </td>
+    <td>
+     Vous cherchez l'emplacement des fichiers de configuration de votre NuTyX.
+     Ne cherchez plus, ils sont tous listés.
+    </td>
+   </tr>
    <tr class="odd">
     <td class="lien_article">
       <a class="url" href="grub-install">Mise en place de GRUB</a>
