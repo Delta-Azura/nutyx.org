@@ -49,6 +49,11 @@
        5.4.x
       <td>
        kernel-54
+     <tr class="even">
+      <td>
+       5.10.x
+      <td>
+       kernel-510
     </table>
 
  <h2>Mise à jour du kernel</h2>
