@@ -2,11 +2,13 @@
  <h2>Introduction</h2>
       Nous installerons UEFI avec grub, pour permettre l'installation de plusieurs Distros.
      <p>
-      Nous aurons besoin du disque dur pour avoir une table GPT écrite.
-      Nous créons ensuite une partition vfat efi, et une partition pour la NuTyX et swap, vous pouvez également laisser de la place pour d'autres partitions.
+      Nous aurons besoin de créer une table de partitions GPT sur le disque dur.
+      Nous créons ensuite une partition vfat efi, une partition pour la NuTyX et une partition swap.
      <p>
-      POUR LE MOMENT, CE TUTORIEL NE PEUT ÊTRE FAIT QUE DEPUIS LE SCRIPT <a href="http://www.nutyx.org/en/downloads#4"target="blank">install-nutyx</a>.
-     <p>
+      Vous pouvez également laisser de la place pour d'autres partitions.
+     <div class="important">
+      POUR LE MOMENT, CE TUTORIEL NE PEUT ÊTRE UTILISÉ QUE DEPUIS LE SCRIPT <a href="http://www.nutyx.org/en/downloads#4"target="blank">install-nutyx</a>.
+     </div>
       LANCER L'UTILISATION D'UNE ISO EFI.
      <p>
  <h2>Préliminaires</h2>
@@ -19,13 +21,11 @@
      <p>
          <pre class="command"><kbd>mkdir /boot/efi</kbd></pre>
          monter la partition EFI sur / boot / efi
-     <p>
  <h2>Installer Grub</h2>
      <p>
-          <pre class="command"><kbd>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=NUTYX</kbd></pre>
-      <p>
-          <img src="../../graphics/grub-uefi-install/Grub-Install.png">
-      <p>
+         <pre class="command"><kbd>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=NUTYX</kbd></pre>
+     <p>
+         <img src="../../graphics/grub-uefi-install/Grub-Install.png">
  <h2>Créez votre grub.cfg</h2>
       <p>
         <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
@@ -33,6 +33,6 @@
         <img src="../../graphics/grub-uefi-install/Grub.cfg.png">
  <h2>Remarque</h2>
       <p>
-       Ajouter une partition efi Ã  / etc / fstab (facultatif) 
+       Ajouter une partition efi dans le fichier <b>/etc/fstab</b> (facultatif)
       <p>
         <pre class="output">/dev/sda?   /boot/efi  vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro   0 2</pre>
