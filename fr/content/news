@@ -1,7 +1,7 @@
-<h1>Dernière nouvelle 17-11-2020</h1>
- <h2>NuTyX 12-rc1 disponible</h2>
+<h1>Dernière nouvelle 02-12-2020</h1>
+ <h2>NuTyX 12-rc3 disponible</h2>
   <p>
-   Je suis très heureux d'annoncer la nouvelle version de test de NuTyX 12-rc1.
+   Je suis très heureux d'annoncer la nouvelle version de test de NuTyX 12-rc3.
    La version 64 bits est un nouveau projet complet.
    Il n'est pas prévu de publier une version 12 de NuTyX en 32 bits.
   <p>
@@ -19,7 +19,7 @@
       Taille
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="mate logo"/><br/>Testing</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc3/NuTyX_x86_64-12-rc3-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="mate logo"/><br/>Testing</a>
     </td>
     <td>
      <p>
@@ -41,7 +41,7 @@
     </td>
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Testing</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc3/NuTyX_x86_64-12-rc3-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Testing</a>
     </td>
     <td>
      <p>
@@ -64,7 +64,7 @@
     </td>
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Testing</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc3/NuTyX_x86_64-12-rc3-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Testing</a>
     <td>
      <p>
       Cette iso est optimisée pour NuTyX.
@@ -81,7 +81,7 @@
     </td>
      <tr class="even">
       <td class="lien_article">
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc1/NuTyX_x86_64-12-rc1.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Testing</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/12-rc3/NuTyX_x86_64-12-rc3.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Testing</a>
       </td>
       <td>
         <p>
@@ -110,12 +110,12 @@
    <p>
     Vous avez le choix au moment du démarrage dans le menu GRUB conventionnel.
    <p>
-    Dans la dernière version, NuTyX de base est livré avec le noyau de support à long terme (LTS) 4.19.157 et la dernière version stable 5.9.8.
+    Dans la dernière version, NuTyX de base est livré avec le noyau de support à long terme (LTS) 4.19.161 et la dernière version stable 5.9.12.
     Les journaux de modifications des noyaux sont disponibles ici:
    <p>
-    <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.157">Journal kernel 4.19.157</a>
+    <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.161">Journal kernel 4.19.161</a>
    <p>
-    <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.8">Journal kernel 5.9.8</a>
+    <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.12">Journal kernel 5.9.12</a>
    
   <h3>Changement du coeur des logiciels.</h3>
    <h4>RuNyX</h4>
