@@ -1,8 +1,8 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>11.6</b>.
+   The current stable release of NuTyX is named <b>20.12</b>.
   <p>
-   ISO images are available in "Fixed" and "Rolling" releases.
+   ISO images are available in "Rolling" releases.
   <p>
    The available ISO images can be used to install a base system without the need of the internet.
   <p>
@@ -35,7 +35,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200910-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20.12.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/><br/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -44,15 +44,17 @@
       Install packages:
      <p>
       lxde flcards make-ca leafpad lxde-appearance lxde-input lxde-randr lxde-gpicview lxde-terminal
-      lxdm gparted pcmanfm xdg-user-dirs firefox xorg graphical drivers.
+      lxdm gparted pcmanfm xdg-user-dirs firefox xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Approx. 772 Mo
+     Approx. 960 Mb
     </td>
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200910-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20.12.0-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
     <td>
      This ISO is optimise for NuTyX.
      <p>
@@ -60,11 +62,13 @@
      <p>
       Install packages:
      <p>
-      xfce4 flcards make-ca mousepad orage ristretto xfburn parole xfce4-terminal lxdm
-      networkmanager gparted thunar firefox gvfs xdg-user-dirs xorg graphical drivers.
+      xfce4 xfce4-extra flcards make-ca mousepad orage ristretto xfburn parole xfce4-terminal lxdm
+      networkmanager gparted thunar firefox gvfs xdg-user-dirs xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Approx. 851 Mo
+     Approx. 1 Gb
     </td>
 
 
@@ -82,10 +86,12 @@
      <p>
       jwm dmenu flcards make-ca gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg graphical drivers.
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Approx. 868.2 Mo
+     Approx. 868.2 Mb
     </td>
 
    <tr class="odd">
@@ -102,15 +108,17 @@
      <p>
       openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg graphical drivers.
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Approx. 891.3 Mo
+     Approx. 891.3 Mb
     </td>
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200910-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20.12.0-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -120,16 +128,20 @@
      <p>
      lxdm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
      clementine k3b kdenlive vlc sound-theme-freedesktop
-     network-manager-applet gparted xorg-setxkbmap hardinfo.
+     gparted xorg-setxkbmap hardinfo
+     xorg-xf86-input-synaptics xorg-xf86-input-wacom
+     xorg-xf86-video-ati xorg-xf86-video-fbdev
+     xorg-xf86-video-intel xorg-xf86-video-nouveau
+     xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-      Environ 1.46 GO
+      Environ 1.46 Gb
     </td>
 
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20200910-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20.12.0-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -137,18 +149,22 @@
      <p>
        Install packages:
      <p>
-      lxdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
+      lightdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
       gvfs dejavu-ttf system-config-printer firefox thunderbird
       libreoffice gnome-disk-utility hplip gimp transmission
       cheese cherrytree deadbeef aisleriot hardinfo
       gnome-mahjongg inxi gawk htop rsync tar pigz
       lbzip2 xdg-user-dirs sound-theme-freedesktop nano
-      network-manager-applet alsa-utils alsa-plugins
+      alsa-utils alsa-plugins
       ntfs-3g vlc fuse xorg-xdpyinfo lm-sensors
-      gparted xorg-setxkbmap ntp ntp.service.
+      gparted xorg-setxkbmap ntp ntp.service 
+      xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev
+      xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-      Approx. 1.47 GB
+      Approx. 1.7 Gb
     </td>
    </tr>
   </table>
@@ -164,22 +180,14 @@
        Size
      <tr class="even">
       <td class="lien_article">
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Fixed</a>
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_x86_64-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling</a>
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_i686-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling 32bits</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/BASE/NuTyX_x86_64-20.12.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling</a>
       </td>
       <td>
        <p>
         The ISO contains a basic system WITHOUT graphical installation.
       </td>
       <td>
-       Approx. 5.4 GB
-      <p>
-       Approx. 432 MB
-      <p>
-       Approx. 365 MB
+       Approx. 630 Mb
       </td>
      </tr>
    </table>
@@ -243,7 +251,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.6.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-20.12.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
