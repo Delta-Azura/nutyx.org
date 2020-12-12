@@ -35,7 +35,7 @@
    </tr>
    <tr class="odd">
     <td width="30%" class="lien_article" >
-      <a class="url" href="install-uefi-multi-partitions">Typical base installation on a single partition in UEFI mode</a>
+      <a class="url" href="grub-uefi-install">Typical base installation for multiple partition in UEFI mode</a>
     </td>
     <td width="40%">
      This topic shows how to install NuTyX with multile partitions.
