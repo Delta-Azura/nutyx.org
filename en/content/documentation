@@ -38,7 +38,7 @@
       <a class="url" href="grub-uefi-install">Typical base installation for multiple partition in UEFI mode</a>
     </td>
     <td width="40%">
-     This topic shows how to install NuTyX with multile partitions.
+     This topic shows how to install NuTyX with multiple partitions.
      GRUB will be the bootloader used.
      This method can be used if your hardware does have UEFI mode, so you can take advantage of it.
      You can use this method if you have Windows installed or want other distro,s installed

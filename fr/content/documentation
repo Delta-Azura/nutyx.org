@@ -31,6 +31,18 @@
      Pour ceux qui souhaitent une approche de l'installation en mod UEFI sans se prendre la tête.
     </td>
    </tr>
+    <td class="lien_article">
+      <a class="url" href="grub-uefi-install">Installation de base typique pour plusieurs partitions en mode UEFI</a>
+    </td>
+    <td>
+     Cette rubrique montre comment installer NuTyX avec plusieurs partitions.
+     GRUB sera le chargeur de démarrage utilisé.
+     Cette méthode peut être utilisée si votre matériel dispose du mode UEFI, afin que vous puissiez en profiter.
+      Vous pouvez utiliser cette méthode si Windows est installé ou si vous souhaitez installer une autre distribution
+      Cet article est conçu pour que vous n'ayez pas à trop réfléchir.
+      Le processus est assez simple et installera NuTyX en mode UEFI.
+    </td>
+   </tr>
    <tr class="even">
     <td class="lien_article">
       <a class="url" href="finish-up">Finalisation de votre installation.</a>
