@@ -35,13 +35,26 @@
    </tr>
    <tr class="odd">
     <td width="30%" class="lien_article" >
+      <a class="url" href="install-uefi-multi-partitions">Typical base installation on a single partition in UEFI mode</a>
+    </td>
+    <td width="40%">
+     This topic shows how to install NuTyX with multile partitions.
+     GRUB will be the bootloader used.
+     This method can be used if your hardware does have UEFI mode, so you can take advantage of it.
+     You can use this method if you have Windows installed or want other distro,s installed
+     This article is designed so that you won't have to do too much thinking.
+     The process is quite straightforward and will install NuTyX in UEFI mode.
+    </td>
+   </tr>
+   <tr class="even">
+    <td width="30%" class="lien_article" >
       <a class="url" href="finish-up">Finish up your installation</a>
     </td>
     <td width="70%">
      Installation of a graphical interface and a few useful tools to make your NuTyX really usable.
     </td>
    </tr>
-   <tr class="even">
+   <tr class="odd">
     <td width="30%" class="lien_article" >
       <a class="url" href="base-commands">Base commands</a>
     </td>
