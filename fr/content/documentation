@@ -31,6 +31,7 @@
      Pour ceux qui souhaitent une approche de l'installation en mod UEFI sans se prendre la tête.
     </td>
    </tr>
+   <tr class="even">
     <td class="lien_article">
       <a class="url" href="grub-uefi-install">Installation de base typique pour plusieurs partitions en mode UEFI</a>
     </td>
@@ -43,7 +44,7 @@
       Le processus est assez simple et installera NuTyX en mode UEFI.
     </td>
    </tr>
-   <tr class="even">
+   <tr class="odd">
     <td class="lien_article">
       <a class="url" href="finish-up">Finalisation de votre installation.</a>
     </td>
@@ -53,7 +54,7 @@
     <td>
     </td>
    </tr>
-   <tr class="odd">
+   <tr class="even">
     <td class="lien_article" >
        <a class="url" href="base-commands">Les commandes de base</a>
     </td>
