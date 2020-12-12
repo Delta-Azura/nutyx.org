@@ -1,8 +1,8 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-   La version stable actuelle de NuTyX est la <b>11.6</b>.
+   La version stable actuelle de NuTyX est la <b>20.12.0</b>.
   <p>
-   Les ISOs sont disponibles en 64 bits "Fixed" et "Rolling" releases.
+   Les ISOs sont disponibles en 64 bits "Rolling" releases.
   <p>
    Ce n'est pas une multi-lib mais une 64 bits pure.
   <p>
@@ -38,7 +38,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20200910-lxde.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20.12.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>Rolling</a>
     <td>
       Cette iso est optimisée pour NuTyX.
      <p>
@@ -47,15 +47,17 @@
       Paquets installés:
      <p>
       lxde flcards make-ca leafpad lxde-appearance lxde-input lxde-randr lxde-gpicview lxde-terminal
-      lxdm gparted pcmanfm xdg-user-dirs firefox pilotes graphiques xorg.
+      lxdm gparted pcmanfm xdg-user-dirs firefox xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Environ 772 Mo
+     Environ 960 Mo
     </td>
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20200910-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20.12.0-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
     <td>
      Cette iso est optimisée pour NuTyX.
      <p>
@@ -63,11 +65,13 @@
      <p>
       Paquets installés:
      <p>
-      xfce4 flcards make-ca mousepad orage ristretto xfburn parole xfce4-terminal lxdm
-      networkmanager gparted thunar firefox gvfs xdg-user-dirs xorg graphical drivers.
+      lxdm xfce4 flcards make-ca mousepad orage ristretto xfburn parole xfce4-terminal
+      gparted thunar firefox gvfs xdg-user-dirs xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Environ 851 Mo
+     Environ 1 Go
     </td>
 
    <tr class="even">
@@ -84,7 +88,9 @@
      <p>
       jwm dmenu flcards make-ca gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
      Environ 868.2 Mo
@@ -105,7 +111,9 @@
      <p>
       openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
       lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad pilotes graphiques xorg.
+      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
      Environ 891.3 Mo
@@ -113,7 +121,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20200910-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20.12.0-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -123,7 +131,10 @@
      <p>
      lxdm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
      clementine k3b kdenlive vlc sound-theme-freedesktop
-     network-manager-applet gparted xorg-setxkbmap hardinfo.
+     network-manager-applet gparted xorg-setxkbmap hardinfo
+     xorg-xf86-input-synaptics xorg-xf86-input-wacom
+     xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel
+     xorg-xf86-video-nouveau xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
       Environ 1.46 GO
@@ -132,7 +143,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20200910-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20.12.0-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -140,7 +151,7 @@
      <p>
       Paquets installés:
      <p>
-      lxdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
+      lightdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
       gvfs dejavu-ttf system-config-printer firefox thunderbird
       libreoffice gnome-disk-utility hplip gimp transmission
       cheese cherrytree deadbeef aisleriot hardinfo
@@ -148,10 +159,14 @@
       lbzip2 xdg-user-dirs sound-theme-freedesktop nano
       network-manager-applet alsa-utils alsa-plugins
       ntfs-3g vlc fuse xorg-xdpyinfo lm-sensors
-      gparted xorg-setxkbmap ntp ntp.service.
+      gparted xorg-setxkbmap ntp ntp.service 
+      xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      xorg-xf86-video-ati xorg-xf86-video-fbdev
+      xorg-xf86-video-intel xorg-xf86-video-nouveau
+      xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-      Environ 1.47 GO
+      Environ 1.7 GO
     </td>
   </table>
  <h2>Pour l'utilisateur régulier</h2>
@@ -166,22 +181,15 @@
        Taille
      <tr class="even">
       <td class="lien_article">
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/11.6/NuTyX_x86_64-11.6.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Fixed</a>
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_x86_64-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling</a>
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/20200910/NuTyX_i686-20200910.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling 32bits</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/BASE/NuTyX_x86_64-20.12.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling</a>
       </td>
       <td>
        <p>
         L'ISO contient une installation de base sans interface graphique.
       </td>
       <td>
-       Environ 5.4 GO
       <p>
-       Environ 432 MO
-      <p>
-       Environ 365 MO
+       Environ 630 MO
       </td>
      </tr>
    </table>
@@ -256,7 +264,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-11.6.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-20.12.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>
