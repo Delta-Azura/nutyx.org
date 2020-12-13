@@ -1,6 +1,138 @@
-<h1>Très prochainement</h1>
- <h2>NuTyX 20.12.0 disponible</h2>
+<h1>Dernière nouvelle 15-12-2020</h1>
+
+ <h2>NuTyX 20.12.0 disponible avec cards 2.4.123</h2>
+  <p>
+   21 mois après la sortie de la première version de NuTyX 11,
+   je suis très heureux d'annoncer la nouvelle version de NuTyX 20.12.0 et cards 2.4.123.
+   La version 64 bits est un nouveau projet complet.
+  <p>
+   La chaîne de compilation est complètement reconstruite auout de la glibc 2.32, gcc 10.2.0 et binutils 2.34
+  <p>
+   Le serveur graphique xorg-server version 1.20.10,
+   la librairie Mesa 3D en 20.3.0, gtk3 3.24.24
+   et qt 5.15.2 sont également dans leurs dernières versions.
+  <p>
+   Les interpreteurs python sont ent 3.9.0 et 2.7.18.
+  <p>
+   L'environnement de bureau MATE est également mis à jour en version 1.24, dernière version disponible. 
+  <p>
+   L'environnement de bureau KDE est disponible en Plasma 5.20.4, Framework 5.76.0
+   et les applications en 20.12.0.
+  <p>
+   NuTyX de base est livré avec les noyaux de support à long terme (LTS):
+   4.9.248, 4.14.212, 4.19.163, 5.4.83 et 5.10.0
+   et la dernière version stable 5.9.14.
+  <p>
+   Les journaux de modifications des noyaux sont disponibles ici:
+  <p>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.248">kernel 4.9.248 changelog</a>
+  <p>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.212">kernel 4.14.212 changelog</a>
+  <p>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.163">kernel 4.19.163 changelog</a>
+  <p>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.83">kernel 5.5.83 changelog</a>
+  <p>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.14">kernel 5.9.14 changelog</a>
+  <p>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.0"> kernel 5.10.0 changelog</a>
+  <p>
+   Les ISOs se déclinent en BASE, JWM, Openbox, KDE, XFCE, LXDE et MATE.
+  <p>
+   Elles sont disponibles sur <a href="downloads">la page de téléchargement.</a>
+
+ <h2>Quoi de neuf ?</h2>
+  <p>
+   Avec la sortie à venir de la nouvelle version NuTyX. Il y a eu un développement majeur dans le système d'init.
+
+  <h3>L'installateur conserve vos données personnelles</h3>
+   <p>
+    Désormais si vous le souhaitez, vous pouver installer la dernière NuTyX sans devoir effacer / formatter la partition de destination.
+    Les dossiers systèmes seront simplement remplacés et le dossier personnel (/home) conservé.
+
+  <h3>Flatpak disponible</h3>
+   <p>
+    Un gros effort a été fait pour permettre la bonne intégration des paquets universels flatpak.
+    Cette nouvelle fonctionnalitée permet donc d'installer de nombreux nouveaux paquets.
+
+  <h3>Nouveau groupe Telegram</h3>
+   <p>
+    Vous êtes bienvenu sur le nouveau <a class="url" href="https://t.me/groupnutyx">groupe Telegram</a> pour discuter du projet ou nous demander de l'aide.
+
+  <h3>Nouveau contributeur</h3>
+   <p>
+    Schrodinger72 est venu rejoindre l'équipe pour contribuer sur NuTyX.
+    Son expérience IT est très utile.  
+
+  <h3>RuNyX, SysV ou systemD comme système d'init</h3>
+   <p>
+    NuTyX est maintenant livré avec 3 systèmes d'initialisation réunis en 1.
+    Donc, ce que cela signifie, c'est que l'utilisateur peut choisir l'initialisation qu'il souhaite utiliser,
+    SysV, SystemD ou RuNyX (fork de runit).
+   <p>
+    Cela permet un choix plus large de l'utilisateur.
+    L'init de base principal est SysV. 
+    Cela signifie que les paquets RuNyX et SystemD peuvent être supprimés.
+    Le paquet Sysinit doit rester installé dans tous les cas.
+    Il est utilisé par les 3 modes d'inits.
+   <p>
+    Vous avez le choix au moment du démarrage dans le menu GRUB conventionnel.
+      
+  <h3>Changement du coeur des logiciels.</h3>
+
+   <h4>RuNyX</h4>
+    <p>
+      NuTyX propose maintenant son propre système d'initialisation RuNyX.
+     RuNyX est un fork du <a href="http://smarden.org/runit/"> projet runit Gerrit Pape </a>.
+     Nous avons principalement ajouté les composants manquants pour que ce système d'initialisation
+     fonctionne correctement dans toutes les situations.
+    <p> 
+     Nous décidons également d'utiliser notre propre schéma de répertoire pour être plus cohérent avec l'autre système init.
+     Consultez la documentation pour plus d'informations.
+     </p><pre class="command_user"><kbd>sudo cards install runyx.man
+man runit</kbd></pre>
+     
+   <h4>Busybox</h4>
+    <p>
+     Busybox fait parti du système de base de NuTyX.
+     Cela permet de réduire la taille d'une NuTyX de base.
+     L'initrd est également considérablement réduite.
+
+   <h4>elogind</h4>
+    <p>
+     Au début, nous voulions profiter de systemd et utiliser systemd pour le démon logind, cela ne fonctionnait pas.
+     Après plusieurs tests, nous avons pu réussir à faire fonctionner elogind et
+     à remplacer complètement le paquet obsolète consolekit2.
+
+   <h4>Eudev</h4>
+    <p>
+     Le paquet Eudev est maintenant la partie eudev du projet systemd.
+     Il fonctionne sur les 3 inits et sur les ISO sans problèmes.
+
+   <h4>Systemd</h4>
+    <p>
+     Systemd est livré par défaut avec de nombreux modules.
+     Pour que NuTyX fonctionne toujours et soit compatible autant que possible avec la version actuelle de NuTyX,
+     certains modules principaux ont été désactivés:
+     </p><ul>
+      <li>
+       timed (ntp)
+      </li><li>
+       networkd (dhcpcd, networkmanager)
+      </li><li>
+       resolve (dhcpcd, networkmanager)
+      </li><li>
+       SysV compat (sysVinit)
+     </li></ul>
+ <h2>Remerciements</h2>
+  <p>
+   Merci à toute mon équipe pour les retours de tests effectués sur cette nouvelle version.
+  <p>
+   Un merci tout particulier à Spiky pour sa grande patience et son soucis des détails.
+  <p>
+   Merci à Schrodinger72 d'avoir rejoint l'équipe. 
+   
  <h2>Anciennes nouvelles</h2>
   <p>
-   Les anciennes nouvelles sont disponible <a href="old-news">ici</a>. 
-     
+   Les anciennes nouvelles sont disponible <a href="old-news">ici</a>.
+    
