@@ -76,7 +76,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-20200910-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-20.12.0-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/><br/>Rolling</a>
     <td>
       Cette iso est optimalisée pour NuTyX.
      <p>
@@ -93,13 +93,13 @@
       xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Environ 868.2 Mo
+     Environ 1.2 Go
     </td>
 
 
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20200913-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20.12.0-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/><br/>Rolling</a>
     <td>
       Cette iso est optimisée pour NuTyX.
      <p>
@@ -116,7 +116,7 @@
       xorg-xf86-video-vesa network-manager-applet.
     </td>
     <td>
-     Environ 891.3 Mo
+     Environ 1.2 Go
     </td>
 
    <tr class="even">
