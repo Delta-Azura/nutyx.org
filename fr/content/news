@@ -1,4 +1,4 @@
-<h1>Dernière nouvelle 15-12-2020</h1>
+<h1>Dernière nouvelle 14-12-2020</h1>
 
  <h2>NuTyX 20.12.0 disponible avec cards 2.4.123</h2>
   <p>
@@ -14,10 +14,16 @@
   <p>
    Les interpreteurs python sont ent 3.9.0 et 2.7.18.
   <p>
+   L'environnement de bureau XFCE est mis à jour en version 4.14.3.
+  <p>
    L'environnement de bureau MATE est également mis à jour en version 1.24, dernière version disponible. 
   <p>
    L'environnement de bureau KDE est disponible en Plasma 5.20.4, Framework 5.76.0
    et les applications en 20.12.0.
+  <p>
+   Les navigateurs disponibles sont entre autre: firefox 82.0, chromium 87.0.4280.88, falkon 3.1.0, epiphany 3.38.2, etc 
+  <p>
+   De nombreuses applications on été mise à jour également comme thunderbird 78.5.1, Scribus 1.5.6, libreoffice 7.0.3.1, gimp 2.10.22, etc. 
   <p>
    NuTyX de base est livré avec les noyaux de support à long terme (LTS):
    4.9.248, 4.14.212, 4.19.163, 5.4.83 et 5.10.0
@@ -35,7 +41,7 @@
   <p>
    <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.14">kernel 5.9.14 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.0"> kernel 5.10.0 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10"> kernel 5.10 changelog</a>
   <p>
    Les ISOs se déclinent en BASE, JWM, Openbox, KDE, XFCE, LXDE et MATE.
   <p>
@@ -43,7 +49,8 @@
 
  <h2>Quoi de neuf ?</h2>
   <p>
-   Avec la sortie à venir de la nouvelle version NuTyX. Il y a eu un développement majeur dans le système d'init.
+   Avec la sortie à venir de la nouvelle version NuTyX,
+   il y a eu un développement majeur dans le système d'init.
 
   <h3>L'installateur conserve vos données personnelles</h3>
    <p>
@@ -62,7 +69,7 @@
   <h3>Nouveau contributeur</h3>
    <p>
     Schrodinger72 est venu rejoindre l'équipe pour contribuer sur NuTyX.
-    Son expérience IT est très utile.  
+    Son expérience IT est très utile.
 
   <h3>RuNyX, SysV ou systemD comme système d'init</h3>
    <p>
@@ -71,23 +78,23 @@
     SysV, SystemD ou RuNyX (fork de runit).
    <p>
     Cela permet un choix plus large de l'utilisateur.
-    L'init de base principal est SysV. 
-    Cela signifie que les paquets RuNyX et SystemD peuvent être supprimés.
+    L'init de base principal est SysV.
+    Cela signifie que les paquets RuNyX et SystemD peuvent être supprimés si vous souhaitez utiliser SysV uniquement.
     Le paquet Sysinit doit rester installé dans tous les cas.
     Il est utilisé par les 3 modes d'inits.
    <p>
     Vous avez le choix au moment du démarrage dans le menu GRUB conventionnel.
-      
+
   <h3>Changement du coeur des logiciels.</h3>
 
    <h4>RuNyX</h4>
     <p>
-      NuTyX propose maintenant son propre système d'initialisation RuNyX.
+     NuTyX propose maintenant son propre système d'initialisation RuNyX.
      RuNyX est un fork du <a href="http://smarden.org/runit/"> projet runit Gerrit Pape </a>.
      Nous avons principalement ajouté les composants manquants pour que ce système d'initialisation
      fonctionne correctement dans toutes les situations.
     <p> 
-     Nous décidons également d'utiliser notre propre schéma de répertoire pour être plus cohérent avec l'autre système init.
+     Nous décidons également d'utiliser notre propre schéma de répertoire pour être plus cohérent avec les autres systèmes d'init.
      Consultez la documentation pour plus d'informations.
      </p><pre class="command_user"><kbd>sudo cards install runyx.man
 man runit</kbd></pre>
@@ -124,15 +131,22 @@ man runit</kbd></pre>
       </li><li>
        SysV compat (sysVinit)
      </li></ul>
+
+ <h2>Mise à jour</h2>
+  <p>
+   Bien que la NuTyX 20.12.0 soit une mise à jour majeure, une mise à jour est tout à fait possible.
+   Une simple commande classique permet la mise à jour:
+ </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
+  
  <h2>Remerciements</h2>
   <p>
    Merci à toute mon équipe pour les retours de tests effectués sur cette nouvelle version.
   <p>
    Un merci tout particulier à Spiky pour sa grande patience et son soucis des détails.
   <p>
-   Merci à Schrodinger72 d'avoir rejoint l'équipe. 
-   
+   Merci à Schrodinger72 d'avoir rejoint l'équipe.
+
  <h2>Anciennes nouvelles</h2>
   <p>
    Les anciennes nouvelles sont disponible <a href="old-news">ici</a>.
-    
+
