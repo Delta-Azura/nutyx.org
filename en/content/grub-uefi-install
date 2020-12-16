@@ -13,12 +13,36 @@
  <p>
   <h2>Preliminaries</h2>
    <p>
-    CREATE AN EFI PARTITION 500MB FAT32
+    Boot into live media as root, <pre class="command"><kbd>cards install wget</kbd></pre>
    <p>
-    Install nutyx base. Chroot into nutyx. <pre class="command"><kbd>cards install grub-efi efibootmgr</kbd></pre>
+    Download the install script,<pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
    <p>
-    <pre class="command"><kbd>mkdir /boot/efi</kbd></pre>
-    mount EFI partition to /boot/efi
+   Creating the partition
+   <p>
+   Make sure you select <b>gpt</b> as label type, if you select <b>dos</b>, the boot of NuTyX in UEFI mode will fail.
+      <table align="center">
+       <tr><td><img src="graphics/install-uefi/CreateYoursPartitions.png"></td></tr>
+       <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionTypeSelection.png"></td></tr>
+       <tr><td><img src="graphics/install-uef/EmptyDisk1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate2.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/PartitionCreate3.png"></td></tr>
+     </table>
+   <p>
+    <pre class="command"><kbd>mkfs.vfat /dev/sda1</kbd></pre>
+    Create a swap partition, and a Nutyx partition ext4 <pre class="command"><kbd>mkfs.ext4 /dev/sda3</kbd></pre>
+   <p>
+    Then create a mount point for install, <pre class="command"><kbd>mkdir -pv /mnt/hd</kbd></pre>
+    Mount the Nutyx partition, <pre class="command"><kbd>mount -v /dev/sda3 /mnt/hd</kbd></pre>
+   <p>
+    Install Nutyx <pre class="command"><kbd>sh install-nutyx</kbd></pre>
+    Chroot into nutyx. <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
+   <p>
+    Install grub-efi and efibootmgr <pre class="command"><kbd>cards install grub-efi efibootmgr</kbd></pre>
+   <p>
+    Create /boot/efi directory<pre class="command"><kbd>mkdir /boot/efi</kbd></pre>
+    Mount EFI partition to /boot/efi<pre class="command"><kbd>mount -v /dev/sda1 /boot/efi</kbd></pre>
   <h2>Install Grub</h2>
    <p>
     <pre class="command"><kbd>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=NUTYX</kbd></pre>
@@ -35,3 +59,4 @@
     Add efi partition to the <b>/etc/fstab</b> file.   (optional)
    <p>
     <pre class="output">/dev/sda?   /boot/efi  vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro   0 2</pre>
+
