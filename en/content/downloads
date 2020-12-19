@@ -126,7 +126,7 @@
      <p>
       Install packages:
      <p>
-     lxdm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
+     sddm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
      clementine k3b kdenlive vlc sound-theme-freedesktop
      gparted xorg-setxkbmap hardinfo
      xorg-xf86-input-synaptics xorg-xf86-input-wacom
@@ -201,8 +201,6 @@
   <p>
    The script can be started from an already installed NuTyX or from another distribution.
   <p>
-   It must be executed from the root account.
-  <p>
    <a class="url" href="install-nutyx">All details informations about the script are now found here.</a>
 
    <table width="100%" cellspacing="0">
@@ -234,10 +232,14 @@
 mount /dev/sda2 /mnt/hd</kbd></pre>
         <li>
          Install the base NuTyX
-         <pre class="command"><kbd>sh install-nutyx</kbd></pre>
+         <pre class="command"><kbd>bash install-nutyx</kbd></pre>
         <li>
          Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
-         <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
+         <pre class="command"><kbd>bash install-nutyx -ec</kbd></pre>
+        <li>
+         Adjust the <i>/etc/fstab</i> file if you choose to use systemD as init system.
+         <pre class="command"><kbd>echo "/dev/sda2    /    ext4   defaults    0    0" >> /etc/fstab</kbd></pre>
+         We assume in this example, <i>/dev/sda2</i> is the destination partition formated in ext4 file system.
        </ul>
      </td>
     </tr>
