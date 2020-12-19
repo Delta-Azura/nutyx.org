@@ -123,7 +123,7 @@
        Even if it's not realy usefull, it's possible to install a collection.
        For example the command:
        <pre class="command_user"><kbd>get gui</kbd></pre>
-       will install the approximatly <a href="http://www.nutyx.org/en/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">the 544 packages from the gui collection</a> and all the dependencies.
+       will install the complete <a href="http://www.nutyx.org/en/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">gui collection</a> and all the dependencies.
     <a name='ID020'></a>
     <h2>A set of packages</h2>
      <p>
@@ -131,6 +131,10 @@
      <p>
       Examples of a NuTyX package sets:
       <ul>
+       <li>
+        printer
+       <li>
+        enlightenment
        <li>
         lxde
        <li>
@@ -277,22 +281,16 @@ make DESTDIR=$PKG install
     <h2>Branchs</h2>
 <ul>
  <li>
-  The "fixed" branch
+  The "testing" branch
   <p>
-   This is the stable version of NuTyX.
-   For this, every package is frozen at the time of it's release.
+   This is the testing version of NuTyX.
   <p>
-   The lifetime of a stable version varies between 1 and 3 months.
+   Packages are frequently updated.
  <li>
   The "rolling" branch
   <p>
-   It's the main line (rolling) of the GIT project.
-  <p>
-   The update process is a "rolling release" mode during its entire life.
-  <p>
-   Since all updates are large and frequent, the "rolling" branch may not be compatible with the fixed version of NuTyX.
-  <p>
-   The lifetime of the rolling version is at least 1 year.
+   The update process is done on a week based.
+   Updates comes from the "testing" branch and are normally reliable.
   </ul>
 
     <a name='ID100'></a>

@@ -57,7 +57,7 @@
       Même si cela n'a pas grand intérêt, il est possible d'installer une collection.
       Par exemple, la commande:
       <pre class="command_user"><kbd>get gui</kbd></pre>
-      installera approximativement <a href="http://www.nutyx.org/fr/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">les 544 paquets de la collection gui</a> et leurs dépendances respectives.
+      installera  <a href="http://www.nutyx.org/fr/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">tous les paquets de la collection gui</a> ainsi que leurs dépendances respectives.
     <a name='ID006'></a>
     <h2>Une dépendance</h2>
      <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est nécessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
@@ -69,6 +69,10 @@
       Sous NuTyX, un jeu de <a href="#ID005">paquets</a> désigne un ensemble de <a href="#ID005">paquets</a> qui ajoute une fonctionnalité majeure: 
       Exemples de jeux de <a href="#ID005">paquets</a> sous NuTyX:</p>
      <ul>
+      <li>
+       printer
+      <li>
+       enlightenment
       <li>
        kde5
       <li>
@@ -96,9 +100,9 @@
      <p>
       La plupart des paquets sont répartis dans ces groupes.
      <p>
-      Les groupes actuels sont: <a href="./?branch=fixed&arch=x86_64&searchpkg=devel">devel</a>, <a href="./?branch=fixed&arch=x86_64&searchpkg=man">man</a>,
-      <a href="./?branch=fixed&arch=x86_64&searchpkg=doc">doc</a>, lib et
-      <a href="./?branch=fixed&arch=x86_64&searchpkg=service">service</a> ainsi que chaque locale disponible
+      Les groupes actuels sont: <a href="./?branch=rolling&arch=x86_64&searchpkg=devel">devel</a>, <a href="./?branch=rolling&arch=x86_64&searchpkg=man">man</a>,
+      <a href="./?branch=testing&arch=x86_64&searchpkg=doc">doc</a>, lib et
+      <a href="./?branch=testing&arch=x86_64&searchpkg=service">service</a> ainsi que chaque locale disponible
      <b>
       fr, de, da, it, pt, tr, ru, sv, nn, es, nl et fi</b>
 
@@ -200,21 +204,14 @@ make DESTDIR=$PKG install
     <h2>Les branches</h2>
  <ul>
  <li>
-  La branche "fixed"
+  La branche "testing"
   <p>
-   C'est la version stable de NuTyX. Tous les paquets sont gelés au moment de sa sortie.
-  <p>
-   La durée de vie d'une version stable varie entre 1 et 3 mois.
+   C'est la version de tests de NuTyX. Tous les paquets y sont mis à jour aussi rapidement que possible.
  <li>
   La branche "rolling"
   <p>
-   C'est la ligne principale (rolling) du projet GIT.
-  <p>
-   Le processus de mise à jour se fait pendant toute la vie de la branche.
-  <p>
-   Puisque les mises à jour sont toujours très importantes et constantes, la branche "rolling" peut à un moment donné n'être plus compatible avec la version "fixed" de NuTyX.
-  <p>
-   La durée de vie de la version rolling est de 1 an minimum.
+   Les mise à jour se font de manière plus espacées cad plus ou moins chaque semaine. 
+   Les mises à jour proviennent de la branche "testing" et sont normalement fiables.
   </ul>
 
     <a name='ID100'></a>
