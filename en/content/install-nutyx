@@ -3,6 +3,10 @@
   <p>
    The script can be started from an already installed NuTyX or from another distribution.
   <p>
+   Make sure you are using Bash interpreter otherwise the script will fail.
+  <p>
+   Make sure your distribution is running 2.32 glibc version minimum otherwise the script will fail.
+  <p>
    It must be executed from the root account.
   <p>
    This script allows the installation of a base NuTyX in a folder.
@@ -14,7 +18,7 @@
    The traditionnal example to show how simple it is.
   <p>
    The script can install a Base NuTyX in the <b>/mnt/hd</b> by default. The command is as simple as:
-   <pre class="command"><kbd>install-nutyx</kbd></pre>
+   <pre class="command"><kbd>bash install-nutyx</kbd></pre>
   <p>
    The installation will start immediatly.
 
@@ -227,10 +231,13 @@ VERSION="rolling"</pre>
 mount /dev/sda2 /mnt/hd</kbd></pre>
         <li>
          Install the base NuTyX
-         <pre class="command"><kbd>sh install-nutyx</kbd></pre>
+         <pre class="command"><kbd>bash install-nutyx</kbd></pre>
         <li>
          Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
-         <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
+         <pre class="command"><kbd>bash install-nutyx -ec</kbd></pre>
+        <li>
+         Adjust the /etc/fstab file if you choose to use systemD as init system:
+         <pre class="command"><kbd>echo "/dev/sda2    /    ext4   defaults    0    0" >> /etc/fstab</kbd></pre>
        </ul>
       
        <p>
@@ -238,19 +245,19 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         By default, it will be the host architecture of the host machine that will be chosen.
         It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
         To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
-        <pre class="command"><kbd>ARCH="i686" sh install-nutyx</kbd></pre>
+        <pre class="command"><kbd>ARCH="i686" bash install-nutyx</kbd></pre>
        <p>
         By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
         Specify the name of the branch via the <i><b>VERSION</b></i> variable.
         It should exist on the depot server.
-        <pre class="command"><kbd>VERSION="development" sh install-nutyx</kbd></pre>
+        <pre class="command"><kbd>VERSION="development" bash install-nutyx</kbd></pre>
        <p>
         The default URL will be used for downloading and configuration of NuTyX.
         To instead specify another URL, use the  <i><b>URL</b></i> variable.
-        <pre class="command"><kbd>URL="http://192.168.0.254" sh install-nutyx</kbd></pre>
+        <pre class="command"><kbd>URL="http://192.168.0.254" bash install-nutyx</kbd></pre>
        <p>
         By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
-        <pre class="command"><kbd>LFS="/My-NuTyX" sh install-nutyx</kbd></pre>
+        <pre class="command"><kbd>LFS="/My-NuTyX" bash install-nutyx</kbd></pre>
         The folder will be automatically created if it does not already exist.
        <p>
         You can combine several variables:
@@ -258,7 +265,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
 VERSION="rolling" \
 URL="http://192.168.0.254" \
 ARCH="i686" \
-sh install-nutyx</kbd></pre>
+bash install-nutyx</kbd></pre>
      </td>
     </tr>
    </table>
