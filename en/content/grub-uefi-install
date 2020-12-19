@@ -7,16 +7,11 @@
  <p>
   You can also leave room for other partitions as well.
  <div class="important">
-  AS OF WRITING, THIS CAN ONLY BE DONE FROM THE <a href="http://www.nutyx.org/en/downloads#4"target="blank">install-nutyx</a> SCRIPT.
+  AS OF WRITING, THIS CAN ONLY BE DONE FROM THE <a href="http://www.nutyx.org/en/install-nutyx "blank">install-nutyx</a> SCRIPT.
  </div>
   BOOT IN USING A LIVE EFI ISO
  <p>
   <h2>Preliminaries</h2>
-   <p>
-    Boot into live media as root, <pre class="command"><kbd>cards install wget</kbd></pre>
-   <p>
-    Download the install script,<pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
-   <p>
    Creating the partition
    <p>
    Make sure you select <b>gpt</b> as label type, if you select <b>dos</b>, the boot of NuTyX in UEFI mode will fail.
@@ -24,20 +19,20 @@
        <tr><td><img src="graphics/install-uefi/CreateYoursPartitions.png"></td></tr>
        <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
        <tr><td><img src="graphics/install-uefi/PartitionTypeSelection.png"></td></tr>
-       <tr><td><img src="graphics/install-uef/EmptyDisk1.png"></td></tr>
+       <tr><td><img src="graphics/install-uefi/EmptyDisk1.png"></td></tr>
        <tr><td><img src="graphics/install-uefi/PartitionCreate1.png"></td></tr>
        <tr><td><img src="graphics/install-uefi/PartitionCreate2.png"></td></tr>
        <tr><td><img src="graphics/install-uefi/PartitionCreate3.png"></td></tr>
      </table>
    <p>
     <pre class="command"><kbd>mkfs.vfat /dev/sda1</kbd></pre>
-    Create a swap partition, and a Nutyx partition ext4 <pre class="command"><kbd>mkfs.ext4 /dev/sda3</kbd></pre>
+    Create a swap partition, and a NuTyX partition ext4 <pre class="command"><kbd>mkfs.ext4 /dev/sda3</kbd></pre>
    <p>
     Then create a mount point for install, <pre class="command"><kbd>mkdir -pv /mnt/hd</kbd></pre>
-    Mount the Nutyx partition, <pre class="command"><kbd>mount -v /dev/sda3 /mnt/hd</kbd></pre>
+    Mount the NuTyX partition, <pre class="command"><kbd>mount -v /dev/sda3 /mnt/hd</kbd></pre>
    <p>
-    Install Nutyx <pre class="command"><kbd>sh install-nutyx</kbd></pre>
-    Chroot into nutyx. <pre class="command"><kbd>sh install-nutyx -ec</kbd></pre>
+    Install NuTyX <pre class="command"><kbd>install-nutyx</kbd></pre>
+    Chroot into NuTyX. <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
    <p>
     Install grub-efi and efibootmgr <pre class="command"><kbd>cards install grub-efi efibootmgr</kbd></pre>
    <p>
