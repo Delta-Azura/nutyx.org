@@ -77,7 +77,7 @@ EOF</kbd></pre>
          <h4>Compilation of one of the available port kernels</h4>
           <p>
            This choice is mandatory if you plan to produce an installable ISO. It's also the simplest choice:
-          <pre class="command"><kbd>cd /usr/ports/base/kernel-lts
+          <pre class="command"><kbd>cd /usr/ports/base/kernel
 pkgmk -d -i</kbd></pre>
         <li>
          <h4>Compile your own kernel</h4>

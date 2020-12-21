@@ -54,7 +54,7 @@ EOF</kbd></pre>
        <h4>Compilation d'un des kernels disponibles en ports</h4>
       </li>
          <p>Ce choix sera indispensable si vous décidez de produire une ISO installable, c'est également le choix le plus simple:</p>
-         <pre class="command"><kbd>cd /usr/ports/base/kernel-lts
+         <pre class="command"><kbd>cd /usr/ports/base/kernel
 pkgmk -d -i</kbd></pre>
       <li>
        <h4>Compilation de son propre kernel</h4>
