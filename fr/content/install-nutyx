@@ -24,20 +24,22 @@
    L'installation commence immédiatement.
  <h2>Options avancées</h2> 
   <p>
-    Actuellement 6 variables sont configurables:
+    Actuellement 7 variables sont configurables:
     <ul>
      <li>
        le chemin d'installation défini par la variable <b>LFS</b>
      <li> 
        l'adresse url où se trouvent les binaires défini par la variable <b>URL</b>
      <li>
-       la version à installer (fixed ou rolling) définie par la variable <b>VERSION</b>
+       la version à installer (rolling ou testing) définie par la variable <b>VERSION</b>
      <li>
        le kernel que l'on souhaite installer (autre que celui par défaut) défini par la variable <b>KERNEL</b>
      <li>
        le chemin <b>local</b> des binaires téléchargés défini par la variable <b>DEPOT</b>
      <li>
        l'architecture que l'on souhaite installer défini par la variable <b>ARCH</b>.
+     <li>
+       la liste des paquets à installer en chroot défini par la variable <b>CHROOT</b>.
       <p>
        La variable ARCH sera utilisée si l'on souhaite installer une NuTyX 32 bits à partir d'une OS 64 bits. L'inverse n'est pas possible.
     </ul>
@@ -269,6 +271,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
 VERSION="rolling" \
 URL="http://192.168.0.254" \
 ARCH="i686" \
+CHROOT="acl attr expat" \
 bash install-nutyx</kbd></pre>
      </td>
     </tr>

@@ -24,7 +24,7 @@
 
  <h2>Advanced options</h2>
   <p>
-   At the moment, they are 6 configurables variables:
+   At the moment, they are 7 configurables variables:
   <ul>
    <li>
     the installation path define by the <b>LFS</b> variable
@@ -36,6 +36,8 @@
     the kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
    <li>
     the <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
+   <li>
+    the list of packages to install prior the chroot define by the <b>CHROOT</b> variable.
    <li>
     the architecture we want to install define by the <b>ARCH</b> varible.
     <p>
@@ -265,6 +267,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
 VERSION="rolling" \
 URL="http://192.168.0.254" \
 ARCH="i686" \
+CHROOT="acl attr expat" \
 bash install-nutyx</kbd></pre>
      </td>
     </tr>
