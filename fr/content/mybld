@@ -15,7 +15,7 @@
 
   <h3>Les recettes du projet GIT</h3>
    On  commence par cloner le projet GIT contenant toutes les recettes des paquets 64 bits de la NuTyX:
-   <pre class="command_user"><kbd>git clone -b &ltbranch&gt git://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+   <pre class="command_user"><kbd>git clone -b &ltbranch&gt git://github.com/NuTyX/packages-x86_64.git &ltbranch&gt</kbd></pre>
    La variable &ltbranch&gt peut prendre les valeurs <i>testing</i> ou <i>rolling</i>.
    <p>
    Une fois le projet GIT en place, on se déplace à la racine de celui-ci,
@@ -25,7 +25,7 @@
   <h3>Aller à la racine du projet</h3>
    Le projet GIT est cloné.
    Il faut maintenant se rendre à la racine de celui-ci.
-   <pre class="command_user"><kbd>cd packages-x86_64</kbd></pre>
+   <pre class="command_user"><kbd>cd  &ltbranch&gt</kbd></pre>
    <div class="important">
     Désormais toutes les commandes qui suivent doivent être effectuées depuis le dossier actuel.
    </div>
@@ -120,6 +120,138 @@ git config --global user.email "francois@nutyx.org"</kbd></pre>
      Après confirmation, la compilation commence immédiatement.
     <p>
 
+ <h2>Mode avancée</h2>
+   Supposons que vous ayez un paquet qui ne veut pas se compiler correctement.
+   Dans ce cas le meilleur moyen est d'utiliser l'option <i>-p</i> pour <i>pause</i>.
+  <p>
+   Pour illustrer l'option <b>--pause</b>, je vais essayer de compiler le paquet nftables.
+  <h3>Entrer dans la chroot</h3>
+    <pre class="command_user"><kbd>mybld -p nftables</kbd></pre>
+    <pre class="output">You are now in chroot.
+Type exit when finish.
+
+ Good luck !!!
+ 
+</pre>
+  <h3>Une nouvelle commande est née</h3>
+   En fonction de la collection dans laquelle se trouve le paquet que vous souhaitez construire, une nouvelle commande appelée <b>&ltcollection_name&gt</b> est disponible.
+   <p>
+    Dans cette exemple, le paquet <i>nftables</i> appartient à la collection <i>cli-extra</i> on peut donc taper la commande:
+    <pre class="command"><kbd>cli-extra -h</kbd></pre>
+    <pre class="output">usage: cli-extra [option]
+options:
+   -a,   --all                 will build all the ports of the 'cli-extra' collection in the right order
+   -l,   --list                will list all the ports of the 'cli-extra' collection in the right order
+  -ru,   --remove-url          remove the URL part in /etc/cards.conf file for the 'cli-extra' collection
+  -cp,   --check-ports         check if new ports are available
+  -cb,   --check-binaries      check if binaries are uptodate
+   -d,   --dry                 check if binaries are different then the ports but dont build anything
+   -s,   --sync                synchronise binaries from rsync server location
+   -c,   --config              printout the configuration
+   -h,   --help                print help and exit
+   -v,   --version             print version and exit
+   -u,   --usage               print the recommended way of using the 'gui' script</pre>
+
+  <h3>Où est quoi ?</h3>
+  Voilà une bonne question.
+     <table>
+     <caption>
+      <EM>
+       Emplacements de:
+      </EM>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Dossier / Fichier
+      <th>
+       Emplacement
+     <tr class="even">
+      <td>
+       DEPOT
+      <td>
+       /DEPOT
+     <tr class="odd">
+      <td>
+       cli-extra collection DEPOT
+      <td>
+       /DEPOT/cli-extra
+     <tr class="even">
+      <td>
+       nftables Pkgfile
+      <td>
+       /DEPOT/cli-extra/nftables/Pkgfile
+     <tr class="odd">
+      <td>
+       Sources files
+      <td>
+       /sources
+     <tr class="even">
+      <td>
+       Compilation logs
+      <td>
+       /LOGS
+     <tr class="odd">
+      <td>
+       working directory
+      <td>
+       /tmp/work/src and
+       /tmp/work/pkg
+    </table>
+  <h3>Continuer avec la compilation</h3>
+  Essayons maintenant de compiler le paquet nftables. Tapez simplement:
+  <pre class="command"><kbd>cli-extra nftables</kbd></pre>
+  La compilation commence normalement.
+  <p>
+   Si une erreur survient, nous serons simplement à nouvau au prompt:
+   <pre class="output">checking for LIBMNL... yes
+checking for LIBNFTNL... no
+configure: error: Package requirements (libnftnl >= 1.1.8) were not met:
+
+No package 'libnftnl' found
+
+Consider adjusting the PKG_CONFIG_PATH environment variable if you
+installed software in a non-standard prefix.
+
+Alternatively, you may set the environment variables LIBNFTNL_CFLAGS
+and LIBNFTNL_LIBS to avoid the need to call pkg-config.
+See the pkg-config man page for more details.
+=======> ERROR: Building '/DEPOT/cli-extra/nftables/nftables1608914972x86_64.cards.tar.xz' failed.
+cards 2.4.124 create: could not parse Pkgfile: While running 'build()'</pre>
+
+   
+   
+  <h3>Corriger l'erreur</h3>
+   On peut maintenant corriger l'erreur en ajustant les dépendances:
+   <pre class="command"><kbd>cards install libnftnl libnftnl.devel</kbd></pre>
+   Nous allons donc dans le dossier de travail et essayons à nouveau:
+   <pre class="command"><kbd>cd /tmp/work/src/nftables-0.9.7
+ ./configure --prefix=/usr \
+        --sysconfdir=/etc/nftables \
+        --mandir=/usr/share/man \
+        --with-json</kbd></pre>
+  Déjà bien mieux.
+  <pre class="output">nft configuration:
+  cli support:			readline
+  enable debugging symbols:	yes
+  use mini-gmp:			no
+  enable man page:              yes
+  libxtables support:		no
+  json output support:          yes
+  enable Python:		yes (with /usr/bin/python)</pre>
+  On peut maintenant terminer les commandes du Pkgfile:
+  <pre class="command"><kbd>make</kbd></pre>
+  La dernière commande du Pkgfile est:
+  <pre class="output">make DESTDIR=$PKG install</pre>
+  La variable PKG doit être définie sur /tmp/work/pkg:
+  <pre class="command"><kbd>PKG=/tmp/work/pkg</kbd></pre>
+  Il est temps de terminer:
+  <pre class="command"><kbd>make DESTDIR=$PKG install
+install -Dm644 ../nftables.conf "$PKG/etc/nftables/nftables.conf"</kbd></pre>
+ 
+  <h3>Empaqueter</h3>
+  Lorsque toutes les commandes du Pkgfile ont été tapé, on peut alors se rendre dans le dossier du Pkgfile et utiliser la commande pkgmk -po pour finir le paquet:
+  <pre class="command"><kbd>cd /DEPOT/cli-extra/nftables/
+pkgmk -po</kbd></pre>
  <h2>Aide</h2>
   <p>
    La commande <b><i>mybld</i></b> permet toute sorte d'options.

@@ -17,7 +17,7 @@
   <h3>Get the GIT project</h3>
    <p>
     We start by cloning the GIT project containing all the NuTyX recipes:
-    <pre class="command_user"><kbd>git clone -b &ltbranch&gt git://github.com/NuTyX/packages-x86_64.git</kbd></pre>
+    <pre class="command_user"><kbd>git clone -b &ltbranch&gt git://github.com/NuTyX/packages-x86_64.git &ltbranch&gt</kbd></pre>
     The variable &ltbranch&gt can take <i>testing</i> or <i>rolling</i> as value.
     <p>
     Once the GIT project in place, we move to the root of it,
@@ -26,7 +26,7 @@
   <h3>Go to the root of the projet</h3>
    The GIT project is cloned.
    We need to go to the root of it.
-   <pre class="command_user"><kbd>cd packages-x86_64</kbd></pre>
+   <pre class="command_user"><kbd>cd &ltbranch&gt</kbd></pre>
    <div class="important">
     From now on all the followings commands are launched from the actual folder.
    </div>
@@ -118,6 +118,138 @@ git config --global user.email "james@nutyx.org"</kbd></pre>
     <pre class="command_user"><kbd>mybld -i name_of_the_package</kbd></pre>
     After confirmation, the compilation start immediatly.
 
+ <h2>Advanced mode</h2>
+   Let's say we have a critical package that doen't want to build properly.
+   In that case, the best way is then to use the <i>-p</i> option for <i>pause</i>.
+  <p>
+   To illustrate the purpose of <b>--pause</b> option, I will try to compile nftables
+  <h3>Entering into the chroot</h3>
+    <pre class="command_user"><kbd>mybld -p nftables</kbd></pre>
+    <pre class="output">You are now in chroot.
+Type exit when finish.
+
+ Good luck !!!
+ 
+</pre>
+  <h3>A new command is born</h3>
+   Depending of the collection the package you want to build, you get a new command named <b>&ltcollection_name&gt</b>.
+   <p>
+    In this example <i>nftables</i> package belong to <i>cli-extra</i> collection so we can now type:
+    <pre class="command"><kbd>cli-extra -h</kbd></pre>
+    <pre class="output">usage: cli-extra [option]
+options:
+   -a,   --all                 will build all the ports of the 'cli-extra' collection in the right order
+   -l,   --list                will list all the ports of the 'cli-extra' collection in the right order
+  -ru,   --remove-url          remove the URL part in /etc/cards.conf file for the 'cli-extra' collection
+  -cp,   --check-ports         check if new ports are available
+  -cb,   --check-binaries      check if binaries are uptodate
+   -d,   --dry                 check if binaries are different then the ports but dont build anything
+   -s,   --sync                synchronise binaries from rsync server location
+   -c,   --config              printout the configuration
+   -h,   --help                print help and exit
+   -v,   --version             print version and exit
+   -u,   --usage               print the recommended way of using the 'gui' script</pre>
+
+  <h3>Where is what</h3>
+  That's now the big question.
+     <table>
+     <caption>
+      <EM>
+       Location of:
+      </EM>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Directory
+      <th>
+       Location
+     <tr class="even">
+      <td>
+       DEPOT
+      <td>
+       /DEPOT
+     <tr class="odd">
+      <td>
+       cli-extra collection DEPOT
+      <td>
+       /DEPOT/cli-extra
+     <tr class="even">
+      <td>
+       nftables Pkgfile
+      <td>
+       /DEPOT/cli-extra/nftables/Pkgfile
+     <tr class="odd">
+      <td>
+       Sources files
+      <td>
+       /sources
+     <tr class="even">
+      <td>
+       Compilation logs
+      <td>
+       /LOGS
+     <tr class="odd">
+      <td>
+       working directory
+      <td>
+       /tmp/work/src and
+       /tmp/work/pkg
+    </table>
+  <h3>Go on with compilation</h3>
+  So let's give a try to compile nftables now. Just type:
+  <pre class="command"><kbd>cli-extra nftables</kbd></pre>
+  Compilation with start just like normal.
+  <p>
+   If an error occur now, it will just return to the prompt:
+   <pre class="output">checking for LIBMNL... yes
+checking for LIBNFTNL... no
+configure: error: Package requirements (libnftnl >= 1.1.8) were not met:
+
+No package 'libnftnl' found
+
+Consider adjusting the PKG_CONFIG_PATH environment variable if you
+installed software in a non-standard prefix.
+
+Alternatively, you may set the environment variables LIBNFTNL_CFLAGS
+and LIBNFTNL_LIBS to avoid the need to call pkg-config.
+See the pkg-config man page for more details.
+=======> ERROR: Building '/DEPOT/cli-extra/nftables/nftables1608914972x86_64.cards.tar.xz' failed.
+cards 2.4.124 create: could not parse Pkgfile: While running 'build()'</pre>
+
+   
+   
+  <h3>Fix the issue</h3>
+   We can now fix the issue by adjusting the deps:
+   <pre class="command"><kbd>cards install libnftnl libnftnl.devel</kbd></pre>
+   We go to the working directory and we give another try :
+   <pre class="command"><kbd>cd /tmp/work/src/nftables-0.9.7
+ ./configure --prefix=/usr \
+        --sysconfdir=/etc/nftables \
+        --mandir=/usr/share/man \
+        --with-json</kbd></pre>
+  Looks beter.
+  <pre class="output">nft configuration:
+  cli support:			readline
+  enable debugging symbols:	yes
+  use mini-gmp:			no
+  enable man page:              yes
+  libxtables support:		no
+  json output support:          yes
+  enable Python:		yes (with /usr/bin/python)</pre>
+  We can now continue the rest of the pkgfile commands:
+  <pre class="command"><kbd>make</kbd></pre>
+  the last command in Pkgfile is:
+  <pre class="output">make DESTDIR=$PKG install</pre>
+  PKG variable need to be assign to /tmp/work/pkg:
+  <pre class="command"><kbd>PKG=/tmp/work/pkg</kbd></pre>
+  time to finish:
+  <pre class="command"><kbd>make DESTDIR=$PKG install
+install -Dm644 ../nftables.conf "$PKG/etc/nftables/nftables.conf"</kbd></pre>
+ 
+  <h3>Packing up</h3>
+  when Pkgfile is complete, we can go back to the Pkgfile directory and use the command pkgmk -po to finish the job:
+  <pre class="command"><kbd>cd /DEPOT/cli-extra/nftables/
+pkgmk -po</kbd></pre>
  <h2>Help</h2>
   <p>
    The <b><i>mybld</i></b> command allows all kinds of options.
