@@ -148,7 +148,7 @@ options:
    -c,   --config              printout the configuration
    -h,   --help                print help and exit
    -v,   --version             print version and exit
-   -u,   --usage               print the recommended way of using the 'gui' script</pre>
+   -u,   --usage               print the recommended way of using the 'cli-extra' script</pre>
 
   <h3>Where is what</h3>
   That's now the big question.
