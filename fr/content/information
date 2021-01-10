@@ -45,8 +45,15 @@
    <p>
     L'équipe de NuTyX est composée de personnes bénévoles qui rendent ce projet viable.
     N'hésitez pas à leur poser des questions et leur faire part de vos remarques.
-    <h3>Guth</h3>
-      <b>Guth</b> est une personne très très discrête mais sans lui, le serveur downloads.nutyx.org n'existerait pas. Merci encore pour ton excellent support.
+    Il a une grande expérience de l'empaquetage et de NuTyX.
+
+   <h3>Delta</h3>
+       <b>Delta</b> est notre plus jeune contributeur.
+       Nous lui souhaitons beaucoup de plaisir avec NuTyX
+
+   <h3>Rémy</h3>
+     <b>Rémy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
+     Empaqueteur de nombreux paquets des git core, extra, desktops et extra.
 
     <h3>Schrodinger72</h3>
       <b>Schrodinger72</b> empaqueteur de divers paquets.
@@ -61,6 +68,9 @@
       <b>Miyo</b> nous produit les meilleurs ISO NuTyX.
       Il amène son expérience au service de NuTyX.
       Il dispose de sa propre chaîne Youtube <a href="https://www.youtube.com/channel/UCYiPwGBGTJFQg_GggFfvfig">Miyo Linux</a>. 
+
+    <h3>Guth</h3>
+      <b>Guth</b> est une personne très très discrête mais sans lui, le serveur downloads.nutyx.org n'existerait pas. Merci encore pour ton excellent support.
 
     <h3>Tnut</h3>
       <b>Tnut</b> créateur et fondateur de NuTyX supervise la totalité du projet avec l'aide des contributeurs.
@@ -87,11 +97,6 @@
    <p>
     <div>
      <b>Sipo</b> empaqueteur de divers paquets dans diverses collections.
-    </div>
-   <p>
-    <div>
-     <b>Remy</b> Créateur des ISO en diverses saveurs disponibles sur <a href="http://linuxtracker.org/index.php?page=torrents&search=NuTyX&category=0&active=1">linuxtracker.org</a>.
-     Empaqueteur de nombreux paquets des git core, extra, gnome et extra.
     </div>
    <p>
     <div>
