@@ -53,7 +53,7 @@ done</kbd></pre>
   <h3>Quit the NuTyX chroot</h3>
    <pre class="command"><kbd>exit</kbd></pre>
   <h3>Generate the ISO</h3>
-   <pre class="command"><kbd>bash scripts/mkiso $(basename $LFS) $(basename $LFS/lib/modules/*)</kbd></pre>
+   <pre class="command"><kbd>bash packages-x86_64/scripts/mkiso $(basename $LFS) $(basename $LFS/lib/modules/*)</kbd></pre>
  <h2>Create a bootable USB-Stick</h2>
   <p>
    Insert your USB-Stick and check the disk. Run:
