@@ -2,6 +2,7 @@
  <div class="note"><img alt="[NOTE IMPORTANT]" src="../graphics/note.gif"/>
   All the commands should be entered as root
  </div>
+
  <h2>Installation of a NuTyX system</h2>
   <h3>The "LFS" variable MUST be defined</h3>
    <p>
@@ -19,30 +20,43 @@
    <pre class="command"><kbd>install-nutyx</kbd></pre>
   <h3>Copy necessary files for the iso</h3>
    <pre class="command"><kbd>cp -av packages-x86_64/iso $LFS/ISO</kbd></pre>
- <h2>Generate the ISO</h2>
+
   <h3>Enter the chroot</h3>
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
 
   <h3>Put the kernel and the initrd in the right place</h3>
    <pre class="command"><kbd>mkinitramfs $(basename /lib/modules/*) -nf</kbd></pre>
 
-  <h3>Suggested Option, install the EFI's installation packages</h3>
+ <h2>Create a NuTyX according to your needs</h2>
+  <h3>About the locales</h3>
+   <p>
+    There is no need to install your own locale,
+    indeed the command <b><i>cards upgrade</i></b> will automatically install them during post-configuration.
+  <h3>Install DHCP service</h3>
+   <p>
+    If you not plan to install network-manager package and not want to use a static IP adress.
+    You want to connect to a DHCP server, you then need a dhcpcd package:
+    <pre class="command"><kbd>get dhcpcd</kbd></pre>
+  <h3>Install the EFI's installation packages</h3>
+   <p>
+    If your machine supports UEFI, it's a good idea to add the packages for the management of this one:
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
 
-  <h3>Suggested Option, install wifi and mouse support</h3>
-   <pre class="command"><kbd>get wireless-tools wpa-supplicant gpm gpm.service</kb></pre>
-
-  <h3>Locales</h3>
+  <h3>Install wifi</h3>
    <p>
-    There is no need to install your own locale, the command:
-    <pre class="command"><kbd>cards upgrade</kb></pre>
-    will automatically install all the package locales defined during post-configuration.
-  <h3>Suggested Option, install all of the extra packages you want</h3>
-   <pre class="command"><kbd>get ...</kb></pre>
-
+    If your machine is able to connect to a wireless network,
+    install at least the following packages to be able to benefit from it:
+   <pre class="command"><kbd>get wireless-tools wpa-supplicant</kb></pre>
+  <h3>Mouse support</h3>
+   <p>
+    If you want to use the mouse in the console, install the packages:
+    <pre class="command"><kbd>get gpm gpm.service</kb></pre>
+  <h3>Install all of the extra packages you want</h3>
+   <pre class="command"><kbd>get mate lightdm firefox ...</kb></pre>
   <h3>Flush the binary archives</h3>
    <pre class="command"><kbd>cards purge</kbd></pre>
 
+ <h2>Generate the ISO</h2>
   <h3>Generate the squashfs files </h3>
    <pre class="command"><kbd>for dir in opt bin etc lib lib64 root run sbin usr var home
 do
