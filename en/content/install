@@ -50,7 +50,8 @@
      <table align="center">
       <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
       <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
-      <tr><td><img src="graphics/install/GoodToKnowMBR.png"></td></tr>
+      <tr><td><img src="graphics/install/ConfigureBootAfterInstall.png"></td></t>
+      <tr><td><img src="graphics/install/Init1.png"></td></tr>
      </table>
 
    <h2>Configure NuTyX</h2>
@@ -60,7 +61,6 @@
      The configuration is very straightforward: network card configuration, setting date and time, and modification of the default password of the 
 administrator account <b>root</b>.
      <table align="center">
-      <tr><td><img src="graphics/install/Init1.png"></td></tr>
       <tr><td><img src="graphics/install/ConfigureEth0.png"></td></tr>
       <tr><td><img src="graphics/install/ConfigureUTC.png"></td></tr>
       <tr><td><img src="graphics/install/ConfigureDate.png"></td></tr>
