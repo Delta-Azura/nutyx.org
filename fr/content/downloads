@@ -25,6 +25,8 @@
    Les ISOs permettent une installation en mode BIOS ou EFI.
   <p>
    L'installation terminée, vous pouvez directement vous connecter avec votre compte créé durant la post-configuration.
+  <p>
+   Vous pouvez également trouver diverses ISOS NuTyX <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">sur le site linuxtracker</a>.
  
    <table width="100%" cellspacing="0">
    <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
@@ -40,7 +42,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20.12.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>Rolling</a>
     <td>
-      Cette iso est optimisée pour NuTyX.
      <p>
       Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
      <p>
@@ -50,6 +51,8 @@
       lxdm gparted pcmanfm xdg-user-dirs firefox xorg-xf86-input-synaptics xorg-xf86-input-wacom
       xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
+     <p>
+      SHA1: 1bcd2da6265e8ab05ef69d33327125a06f222816
     </td>
     <td>
      Environ 960 Mo
@@ -59,7 +62,6 @@
     <td class="lien_article">
       <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20.12.0-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
     <td>
-     Cette iso est optimisée pour NuTyX.
      <p>
      Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
      <p>
@@ -69,6 +71,8 @@
       gparted thunar firefox gvfs xdg-user-dirs xorg-xf86-input-synaptics xorg-xf86-input-wacom
       xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
+     <p>
+      SHA1: 2226e79bde5dee25974d9e1ae8365e72a4fc7d33
     </td>
     <td>
      Environ 1 Go
@@ -78,7 +82,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-20.12.0-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/><br/>Rolling</a>
     <td>
-      Cette iso est optimalisée pour NuTyX.
      <p>
       C'est une respin créé par Miyo Linux.
      <p>
@@ -91,6 +94,8 @@
       volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
       xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
+     <p>
+      SHA1: 56fe71960eb10c245e88e63bd12a5190dec99c60
     </td>
     <td>
      Environ 1.2 Go
@@ -101,7 +106,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20.12.0-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/><br/>Rolling</a>
     <td>
-      Cette iso est optimisée pour NuTyX.
      <p>
       C'est une respin créé par Miyo Linux.
      <p>
@@ -114,6 +118,8 @@
       volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
       xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
+     <p>
+      SHA1: 9b0a693331bca0855097a7508da2befe7c4320d2
     </td>
     <td>
      Environ 1.2 Go
@@ -135,9 +141,11 @@
      xorg-xf86-input-synaptics xorg-xf86-input-wacom
      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel
      xorg-xf86-video-nouveau xorg-xf86-video-vesa network-manager-applet.
+     <p>
+      SHA1: d68b92d11623ca698c4768851063c10abf742cb3
     </td>
     <td>
-      Environ 1.46 GO
+      Environ 1.7 GO
     </td>
 
 
@@ -164,38 +172,13 @@
       xorg-xf86-video-ati xorg-xf86-video-fbdev
       xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
+     <p>
+      SHA1: cf8a4bf7085a1354a731418bad476a3d6a5aff21
     </td>
     <td>
       Environ 1.7 GO
     </td>
   </table>
- <h2>Pour l'utilisateur régulier</h2>
-   <table width="100%" cellspacing="0">
-    <caption><EM>Listes des images ISO disponibles pour l'utilisateur ayant une certaine maîtrise de NuTyX:</EM></caption>
-     <tr class="sidebar">
-      <th>
-       ISO
-      <th>
-       Description
-      <th>
-       Taille
-     <tr class="even">
-      <td class="lien_article">
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/BASE/NuTyX_x86_64-20.12.0.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>Rolling</a>
-      </td>
-      <td>
-       <p>
-        L'ISO contient une installation de base sans interface graphique.
-      </td>
-      <td>
-      <p>
-       Environ 630 MO
-      </td>
-     </tr>
-   </table>
-
-  <p>
-   Vous pouvez également trouver diverses ISOS NuTyX <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">sur le site linuxtracker</a>.
 
  <h2>Pour l'utilisateur confirmé</h2>
    Ce script permet l'installation d'une NuTyX de base dans un dossier.
@@ -203,45 +186,21 @@
     Sa signature peut être vérifiée en téléchargeant le fichier <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
   <p>
     Le script peut être démarré depuis une NuTyX déjà installée ou depuis une autre distribution.
-  <p>
-    <a class="url" href="install-nutyx">Toutes les informations détaillées sur le script se trouve désormais ici</a>.
    <table width="100%" cellspacing="0">
     <caption><EM>Ce script est utilisé dans de nombreux cas de figures sous NuTyX:</EM></caption>
      <tr class="sidebar">
       <th>
        Script
       <th>
-       Description
+       Information
      <tr class="even">
       <td class="lien_article">
         <a class="url" href="http://www.nutyx.org/install-nutyx"><img src="../graphics/downloads/script.png" alt="logo script"/>install-nutyx</a>
       </td>
       <td>
-        L'installation de NuTyX via le script se déroulera ainsi:
        <ul>
         <li>
-         On ouvre une session en root de manière temporaire
-         <pre class="command_user"><kbd>sudo bash</kbd></pre>
-        <li>
-         Téléchargement du script et de sa signature
-         <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
-        <li>
-         Vérification de sa signature
-         <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
-        <li>
-         Montage de la partition de destination (ici /dev/sda2 par exemple)
-         <pre class="command"><kbd>mkdir -p /mnt/hd
-mount /dev/sda2 /mnt/hd</kbd></pre>
-        <li>
-         Installation de la NuTyX de base
-         <pre class="command"><kbd>bash install-nutyx</kbd></pre>
-        <li>
-         Une fois l'installation terminée, on peut à nouveau entrer dans la NutyX fraîchement installée via la commande:
-         <pre class="command"><kbd>bash install-nutyx -ec</kbd></pre>
-        <li>
-         Ajuster le fichier <i>/etc/fstab</i> si vous choisissez d'utiliser systemD comme system d'initialisation:
-         <pre class="command"><kbd>echo "/dev/sda2     /     ext4    defaults    0   0"  >> /etc/fstab</kbd></pre>
-         Ici la partition de destination est la <i>/dev/sda2</i> formatée en ext4 comme système de fichiers.
+         <a class="url" href="install-nutyx">Toutes les informations détaillées sur le script se trouve désormais ici</a>.
        </ul>
       </td>
      </tr>
