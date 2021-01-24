@@ -1,9 +1,9 @@
 <h1>Latest news 2020-12-14</h1>
 
- <h2>NuTyX 20.12.0 available with cards 2.4.123</h2>
+ <h2>NuTyX 20.12.1 available with cards 2.4.123</h2>
   <p>
    21 months after the release of the first version of NuTyX 11,
-   I am very happy to announce the new version of NuTyX 20.12.0 and cards 2.4.123.
+   I am very happy to announce the new version of NuTyX 20.12.1 and cards 2.4.123.
    The 64-bit version is a complete new project.
   <p>
    The compilation chain is completely rebuilt in addition to glibc 2.32, gcc 10.2.0 and binutils 2.34
@@ -18,8 +18,8 @@
   <p>
    The MATE desktop environment is also updated to version 1.24, the latest version available.
   <p>
-   The KDE desktop environment is available in Plasma 5.20.4, Framework 5.76.0 and applications in 20.12.0.
-   et les applications en 20.12.0.
+   The KDE desktop environment is available in Plasma 5.20.4, Framework 5.76.0 and applications in 20.12.1.
+   et les applications en 20.12.1.
   <p>
    Available browsers are: firefox 83.0, chromium 87.0.4280.88, falkon 3.1.0, epiphany 3.38.2, etc
   <p>
@@ -134,7 +134,7 @@ man runit</kbd></pre>
 
  <h2>Upgrade process</h2>
   <p>
-   Even if NuTyX 20.12.0 is a major release, an upgrade process is possible and as simple as:
+   Even if NuTyX 20.12.1 is a major release, an upgrade process is possible and as simple as:
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 
  <h2>Thanks</h2>

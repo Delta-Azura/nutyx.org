@@ -38,7 +38,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20.12.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20.12.1-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="Lxde Logo"/><br/>Rolling</a>
     <td>
      <p>
      It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
@@ -58,7 +58,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20.12.0-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20.12.1-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
     <td>
      <p>
      It contains the minimum for a good start on NuTyX, means a  minimum set of packages so you can personalise your packages choice to install.
@@ -79,7 +79,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20.12.0.iso"><img src="../graphics/downloads/jwm-blue.png" alt="JWM Logo"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-JWM-20.12.1.iso"><img src="../graphics/downloads/jwm-blue.png" alt="JWM Logo"/><br/>Rolling</a>
     <td>
      <p>
       It is a respin made by Miyo Linux.
@@ -102,7 +102,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20.12.0-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="Openbox Logo"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20.12.1-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="Openbox Logo"/><br/>Rolling</a>
     <td>
      <p>
       It is a respin made by Miyo Linux.
@@ -125,7 +125,7 @@
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20.12.0-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20.12.1-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="kde Logo"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -150,7 +150,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20.12.0-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20.12.1-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="mate logo"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -215,7 +215,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then, by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-20.12.0.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-20.12.1.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>
