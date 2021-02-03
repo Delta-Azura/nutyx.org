@@ -150,14 +150,16 @@ done</kbd></pre>
  <h2>Create a bootable USB-Stick</h2>
   <p>
    Insert your USB-Stick and check the disk. Run:
-  <pre class="command"><kbd>fdisk -l</kbd></pre>
-  <pre class="output">........
-Disk /dev/sdb: 960.8 MiB ......
-Disk model: ...</pre>
+  <pre class="command"><kbd>lsblk -S</kbd></pre>
+  <pre class="output">
+NAME HCTL       TYPE VENDOR   MODEL                 REV SERIAL           TRAN
+sda  0:0:0:0    disk ...
+sdb  2:0:0:0    disk ...
+sdc  8:0:0:0    disk TDKMedia Trans-It_Drive       PMAP 07991E033A9CAF0E usb</pre>
   <p>
    Create a bootable USB-Stick specifying the correct filename and disk (replace sdX with your USB disk)
   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" >
-   Following command will remove all existing data on the USB key.
+   The following command will delete all data that is on the USB key.
   </div>
   <pre class="command"><kbd>dd if=$LFS/NuTyX_x86_64-ISO-MINI.iso of=/dev/sdX status=progress
 sync</kbd></pre>
