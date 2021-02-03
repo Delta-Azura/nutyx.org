@@ -24,9 +24,6 @@
   <h3>Enter the chroot</h3>
    <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
 
-  <h3>Put the kernel and the initrd in the right place</h3>
-   <pre class="command"><kbd>mkinitramfs $(basename /lib/modules/*) -nf</kbd></pre>
-
  <h2>Create a NuTyX according to your needs</h2>
   <h3>About the locales</h3>
    <p>
@@ -80,17 +77,23 @@
    <p>
     For example, if you wish to install the LTS kernel 5.10.x
     <pre class="command"><kbd>get kernel-510</kbd></pre>
+
+  <h3>Put the kernel and the initrd in the right place</h3>
+   <pre class="command"><kbd>mkinitramfs $(basename /lib/modules/*) -nf</kbd></pre>
+
   <h3>Install the other init systems</h3>
    <p>
     Your NuTyX uses systemV by default.
     If you want to use systemD or runyx, then you need to install them.
     Either or both are possible:
     <pre class="command"><kbd>get systemd runyx</kbd></pre>
+
   <h3>Install packages for a RAID</h3>
    <p>
     If you intend to use RAID on your machine,
     install the package:
     <pre class="command"><kbd>get mdadm</kbd></pre>
+
   <h3>Firmwares</h3>
    <p>
     If you need firmwares for the proper functioning of the machine.
@@ -98,11 +101,18 @@
     <pre class="command"><kbd>get linux-firmware</kbd></pre>
    <p>
     This package contains over 2000 firmwares and use 500 Mbytes in space on the hard drive.
+
+  <h3>Install the package to encrypt partitions</h3>
+   <p>
+    If you want to encrypt your partitions, install:
+    <pre class="command"><kbd>get cryptsetup</kbd></pre>
+
   <h3>Install DHCP service</h3>
    <p>
     If you not plan to install network-manager package and not want to use a static IP adress.
     You want to connect to a DHCP server, you then need a dhcpcd package:
     <pre class="command"><kbd>get dhcpcd</kbd></pre>
+
   <h3>Install the EFI's installation packages</h3>
    <p>
     If your machine supports UEFI, it's a good idea to add the packages for the management of this one:
@@ -113,12 +123,15 @@
     If your machine is able to connect to a wireless network,
     install at least the following packages to be able to benefit from it:
    <pre class="command"><kbd>get wireless-tools wpa-supplicant</kb></pre>
+
   <h3>Mouse support</h3>
    <p>
     If you want to use the mouse in the console, install the packages:
     <pre class="command"><kbd>get gpm gpm.service</kb></pre>
+
   <h3>Install all of the extra packages you want</h3>
    <pre class="command"><kbd>get mate lightdm firefox ...</kb></pre>
+
   <h3>Flush the binary archives</h3>
    <pre class="command"><kbd>cards purge</kbd></pre>
 
