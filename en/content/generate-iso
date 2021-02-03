@@ -32,6 +32,72 @@
    <p>
     There is no need to install your own locale,
     indeed the command <b><i>cards upgrade</i></b> will automatically install them during post-configuration.
+  <h3>Install a kernel</h3>
+   <p>Your NuTyX needs a kernel.
+      Please choose one from this list:
+      <table>
+     <caption>
+     <EM>
+      Kernels list.
+     </EM>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Kernel Version
+      <th>
+       Name of the package to install
+     <tr class="even">
+      <td>
+       4.9.x
+      <td>
+       kernel-49
+     <tr class="odd">
+      <td>
+       4.14.x
+      <td>
+       kernel-414
+     <tr class="even">
+      <td>
+       4.19.x
+      <td>
+       kernel-419
+     <tr class="odd">
+      <td>
+       5.4.x
+      <td>
+       kernel-54
+     <tr class="even">
+      <td>
+       5.10.x
+      <td>
+       kernel-510
+     <tr class="odd">
+      <td>
+       latest
+      <td>
+       kernel
+    </table>
+   <p>
+    For example, if you wish to install the LTS kernel 5.10.x
+    <pre class="command"><kbd>get kernel-510</kbd></pre>
+  <h3>Install the other init systems</h3>
+   <p>
+    Your NuTyX uses systemV by default.
+    If you want to use systemD or runyx, then you need to install them.
+    Either or both are possible:
+    <pre class="command"><kbd>get systemd runyx</kbd></pre>
+  <h3>Install packages for a RAID</h3>
+   <p>
+    If you intend to use RAID on your machine,
+    install the package:
+    <pre class="command"><kbd>get mdadm</kbd></pre>
+  <h3>Firmwares</h3>
+   <p>
+    If you need firmwares for the proper functioning of the machine.
+    install the package:
+    <pre class="command"><kbd>get linux-firmware</kbd></pre>
+   <p>
+    This package contains over 2000 firmwares and use 500 Mbytes in space on the hard drive.
   <h3>Install DHCP service</h3>
    <p>
     If you not plan to install network-manager package and not want to use a static IP adress.

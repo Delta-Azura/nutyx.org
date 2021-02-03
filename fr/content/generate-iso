@@ -29,6 +29,73 @@
    <p>
     Il n'est plus necessaire d'installer les locales, en effet
     la commande <b><i>cards upgrade</i></b> se chargera d'installer la locale définie lors de la post-configuration.
+  <h3>Installer un kernel</h3>
+   <p>
+    Votre NuTyX necessite un kernel.
+    Choisissez un kernel dans liste ci-dessous:
+      <table>
+     <caption>
+     <EM>
+      Liste des kernels.
+     </EM>
+     </caption>
+     <tr class="sidebar">
+      <th>
+       Version du kernel
+      <th>
+       Nom du paquet à installer
+     <tr class="even">
+      <td>
+       4.9.x
+      <td>
+       kernel-49
+     <tr class="odd">
+      <td>
+       4.14.x
+      <td>
+       kernel-414
+     <tr class="even">
+      <td>
+       4.19.x
+      <td>
+       kernel-419
+     <tr class="odd">
+      <td>
+       5.4.x
+      <td>
+       kernel-54
+     <tr class="even">
+      <td>
+       5.10.x
+      <td>
+       kernel-510
+     <tr class="odd">
+      <td>
+       stable
+      <td>
+       kernel
+    </table>
+   <p>
+    Par exemple, pour installer le kernel LTS 5.10:
+    <pre class="command"><kbd>get kernel-510</kbd></pre>
+  <h3>Installer les systèmes d'initialisation</h3>
+   <p>
+    Votre NuTyX utilise systemV par défaut.
+    Si vous souhaitez utiliser systemD ou runyx, il faut alors les installer.
+    Au choix l'un ou l'autre ou les deux sont possible:
+    <pre class="command"><kbd>get systemd runyx</kbd></pre>
+  <h3>Installer les paquets pour un RAID</h3>
+   <p>
+    Si vous avez l'intention d'utiliser un RAID sur votre machine,
+    installez le paquet:
+    <pre class="command"><kbd>get mdadm</kbd></pre>
+  <h3>Les firmwares</h3>
+   <p>
+    Si vous avez besoin de firmwares pour le bon fonctionnement de la machine.
+    installer le paquet:
+    <pre class="command"><kbd>get linux-firmware</kbd></pre>
+   <p>
+    Ce paquet contient plus de 2000 firmwares et necessite 500 Moctets d'espace sur le disque dur.
   <h3>Service DHCP</h3>
    <p>
     Si vous n'avez pas l'intention d'installer le paquet network-manager et si vous ne souhaitez pas utiliser une adresse statique.
@@ -37,7 +104,7 @@
     <pre class="command"><kbd>get dhcpcd</kbd></pre>
   <h3>Installer les paquets pour l'installation en EFI</h3>
    <p>
-    Si votre machine supporte l'UEFI, il est bon d'ajouter les paquets pour la gestion de celui-ci:
+    Si votre machine supporte l'UEFI, ajoutez les paquets pour la gestion de celui-ci:
    <pre class="command"><kbd>get efibootmgr dosfstools</kbd></pre>
   <h3>Installer le support wifi</h3>
    <p>
