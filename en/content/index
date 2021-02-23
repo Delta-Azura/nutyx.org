@@ -37,8 +37,9 @@
       <br>
       <li>
        The hierarchical <a href="dictionary#ID070">ports</a> <a href="collections">collection</a> system provides maximum flexibility in managing software.
-       Each <a href="dictionary#ID010">collection</a> is divided into a mandatory and an extra part.
-      <br>
+       Each <a href="dictionary#ID010">collection</a> is responsible for a set of functionnality.
+       The base system, command lines applications and libraries, graphical interface and graphical libraries, all the desktops and non-graphicals or graphicals applications.
+     <br>
       <br>
       <li>
        A very simple method called <b>porting</b> allows you to download a <a href="dictionary#ID060">recipe</a> from our repositories.

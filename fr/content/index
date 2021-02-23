@@ -44,7 +44,8 @@
      <li>
       La hiérarchie des <a href="collections">collections</a> de <a href="dictionary#ID070">ports</a> permet une flexibilité maximale dans la gestion de ceux-ci.
       <p>
-       Chaque <a href="dictionary#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
+       Chaque <a href="dictionary#ID010">collection</a> est responsable d'un ensemble de fonctionnalitées.
+       Le système de base, le système en ligne de commande, le système graphique, les bureaux et les application non-graphiques ou graphiques.
      <br>
      <br>
      <li>
@@ -53,7 +54,7 @@
       <p>
        Les <a href="dictionary#ID006">dépendances</a> (si on le souhaite) peuvent également être gérées.
       <p>
-       Les <a href="dictionary#ID005">paquets</a> personnels créés localement peuvent également être gérés par le gestionnaire de <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
+       Les <a href="dictionary#ID005">paquets</a> personnels créés localement sont gérés par le gestionnaire de <a href="dictionary#ID005">paquets</a> <a href="dictionary#ID000">cards</a>.
      <br>
      <br>
      <li>
@@ -63,8 +64,8 @@
      <br>
      <br>
      <li>
-      Un <a href="dictionary#ID005">paquet</a> est constitué de plusieurs "parties" un <a href="dictionary#ID005">paquet</a> "dit de base" indispensable 
-      au fonctionnement du système d'exploitation et ses sous-<a href="dictionary#ID005">paquets</a> (optionnels). 
+      Un <a href="dictionary#ID005">paquet</a> est constitué de <a href="dictionary#ID025">plusieurs groupes</a> un <a href="dictionary#ID005">paquet</a> "dit de base" indispensable 
+      au fonctionnement du système d'exploitation et <a href="dictionary#ID025">ses sous-paquets</a> (optionnels). 
       <p>
        Comme exemple de sous-<a href="dictionary#ID005">paquets</a> on trouve les locales, la documentation, les fichiers nécessaires au développement.
      <br>
