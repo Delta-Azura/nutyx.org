@@ -40,19 +40,22 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/LXDE/NuTyX_x86_64-20.12.1-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>Rolling</a>
     <td>
      <p>
       Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
      <p>
       Paquets installés:
      <p>
-      lxde flcards make-ca leafpad lxde-appearance lxde-input lxde-randr lxde-gpicview lxde-terminal
-      lxdm gparted pcmanfm xdg-user-dirs firefox xorg-xf86-input-synaptics xorg-xf86-input-wacom
-      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
+      lxdm lxde make-ca lxde-appearance lxde-input lxde-randr lxde-gpicview
+      lxde-terminal xdg-user-dirs flcards
+      gparted pcmanfm firefox thunderbird telegram deadbeef transmission geany mplayer
+      xorg-xf86-input-synaptics
+      xorg-xf86-input-wacom xorg-xf86-video-ati xorg-xf86-video-fbdev
+      xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
      <p>
-      SHA1: 1bcd2da6265e8ab05ef69d33327125a06f222816
+      SHA1: 73877ed04cd3db1ce35ba8424217dd3c6cbe483d
     </td>
     <td>
      Environ 960 Mo
@@ -60,19 +63,20 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/XFCE/NuTyX_x86_64-20.12.1-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
     <td>
      <p>
      Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
      <p>
       Paquets installés:
      <p>
-      lxdm xfce4 flcards make-ca mousepad orage ristretto xfburn parole xfce4-terminal
-      gparted thunar firefox gvfs xdg-user-dirs xorg-xf86-input-synaptics xorg-xf86-input-wacom
+      lxdm flcards xfce4 make-ca mousepad orage ristretto xfburn parole xfce4-terminal
+      gparted thunar firefox thunderbird gvfs xdg-user-dirs transmission vlc
+      xorg-xf86-input-synaptics xorg-xf86-input-wacom
       xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
      <p>
-      SHA1: 2226e79bde5dee25974d9e1ae8365e72a4fc7d33
+      SHA1: 0b92f8958fdd26895f5a09965b27c954daf3dd3f
     </td>
     <td>
      Environ 1 Go
@@ -80,7 +84,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/JWM/NuTyX_x86_64-20.12.1-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/><br/>Rolling</a>
     <td>
      <p>
       C'est une respin créé par Miyo Linux.
@@ -95,39 +99,41 @@
       xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
      <p>
-      SHA1: 56fe71960eb10c245e88e63bd12a5190dec99c60
+      SHA1: 6cfc7fb524fca8d81044aad4a9b728e0a1d48f21
     </td>
     <td>
      Environ 1.2 Go
     </td>
-
 
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/Openbox/NuTyX_x86_64-20.12.1-Openbox.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo Openbox"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-GNOME.iso/download"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>Rolling</a>
+    </td>
     <td>
      <p>
-      C'est une respin créé par Miyo Linux.
-     <p>
-      Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
+      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/GNOME">GNOME</a> comme interface graphique.
      <p>
       Paquets installés:
      <p>
-      openbox dmenu flcards gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
-      lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
-      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
-      xorg-xf86-video-vesa network-manager-applet.
+     gdm gnome make-ca flcards firefox thunderbird xdg-user-dirs
+     vlc sound-theme-freedesktop
+     gparted xorg-setxkbmap telegram
+     seahorse-nautilus evolution simple-scan gnome-weather epiphany gnome-chess balsa
+     xorg-xf86-input-synaptics xorg-xf86-input-wacom
+     xorg-xf86-video-ati xorg-xf86-video-fbdev
+     xorg-xf86-video-intel xorg-xf86-video-nouveau
+     xorg-xf86-video-vesa network-manager-applet.
      <p>
-      SHA1: 9b0a693331bca0855097a7508da2befe7c4320d2
+      SHA1: 158cdb6b665d27e9aaa79d4f7c6d8db12efb1b96
     </td>
     <td>
-     Environ 1.2 Go
+      Environ 1.4 Gb
     </td>
+
 
    <tr class="even">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/KDE/NuTyX_x86_64-20.12.1-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -137,12 +143,13 @@
      <p>
      sddm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
      clementine k3b kdenlive vlc sound-theme-freedesktop
-     network-manager-applet gparted xorg-setxkbmap hardinfo
+     gparted xorg-setxkbmap telegram
      xorg-xf86-input-synaptics xorg-xf86-input-wacom
-     xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel
-     xorg-xf86-video-nouveau xorg-xf86-video-vesa network-manager-applet.
+     xorg-xf86-video-ati xorg-xf86-video-fbdev
+     xorg-xf86-video-intel xorg-xf86-video-nouveau
+     xorg-xf86-video-vesa network-manager-applet.
      <p>
-      SHA1: d68b92d11623ca698c4768851063c10abf742cb3
+      SHA1: a43ef0734fe6c6f04da45fa438caaa052bb4294b
     </td>
     <td>
       Environ 1.7 GO
@@ -151,7 +158,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/MATE/NuTyX_x86_64-20.12.1-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>Rolling</a>
+      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>Rolling</a>
     </td>
     <td>
      <p>
@@ -161,8 +168,8 @@
      <p>
       lightdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
       gvfs dejavu-ttf system-config-printer firefox thunderbird
-      libreoffice gnome-disk-utility hplip gimp transmission
-      cheese cherrytree deadbeef aisleriot hardinfo
+      libreoffice gnome-disk-utility hplip gimp transmission telegram
+      cheese cherrytree deadbeef aisleriot
       gnome-mahjongg inxi gawk htop rsync tar pigz
       lbzip2 xdg-user-dirs sound-theme-freedesktop nano
       network-manager-applet alsa-utils alsa-plugins
@@ -173,7 +180,7 @@
       xorg-xf86-video-intel xorg-xf86-video-nouveau
       xorg-xf86-video-vesa network-manager-applet.
      <p>
-      SHA1: cf8a4bf7085a1354a731418bad476a3d6a5aff21
+      SHA1: ecfe5f53e8de8c2febd1af9982adefa95c663ee8
     </td>
     <td>
       Environ 1.7 GO
