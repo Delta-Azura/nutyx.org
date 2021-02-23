@@ -1,140 +1,69 @@
-<h1>Dernière nouvelle 14-12-2020</h1>
+<h1>Dernière nouvelle 24-01-2021</h1>
 
- <h2>NuTyX 20.12.1 disponible avec cards 2.4.123</h2>
+ <h2>NuTyX 20.12.1 disponible avec cards 2.4.124</h2>
   <p>
-   21 mois après la sortie de la première version de NuTyX 11,
-   je suis très heureux d'annoncer la nouvelle version de NuTyX 20.12.1 et cards 2.4.123.
-   La version 64 bits est un nouveau projet complet.
+   Je suis très heureux d'annoncer la nouvelle version de NuTyX 20.12.1 et cards 2.4.124.
   <p>
    La chaîne de compilation est complètement reconstruite auout de la glibc 2.32, gcc 10.2.0 et binutils 2.34
   <p>
    Le serveur graphique xorg-server version 1.20.10,
-   la librairie Mesa 3D en 20.3.0, gtk3 3.24.24
+   la librairie Mesa 3D en 20.3.2, gtk3 3.24.24
    et qt 5.15.2 sont également dans leurs dernières versions.
   <p>
    Les interpreteurs python sont ent 3.9.0 et 2.7.18.
   <p>
-   L'environnement de bureau XFCE est mis à jour en version 4.14.3.
+   L'environnement de bureau XFCE est mis à jour en version 4.16.
   <p>
-   L'environnement de bureau MATE est également mis à jour en version 1.24, dernière version disponible. 
+   L'environnement de bureau MATE est mis à jour en version 1.24. 
   <p>
-   L'environnement de bureau KDE est disponible en Plasma 5.20.4, Framework 5.76.0
+   L'environnement de bureau GNOME est également mis à jour en version 3.38. 
+  <p>
+   L'environnement de bureau KDE est disponible en Plasma 5.20.5, Framework 5.78.0
    et les applications en 20.12.1.
   <p>
-   Les navigateurs disponibles sont entre autre: firefox 83.0, chromium 87.0.4280.88, falkon 3.1.0, epiphany 3.38.2, etc
+   Les navigateurs disponibles sont entre autre: firefox 84.0.2, chromium 87.0.4280.88, falkon 3.1.0, epiphany 3.38.2, etc
   <p>
-   De nombreuses applications on été mise à jour également comme thunderbird 78.5.1, Scribus 1.5.6, libreoffice 7.0.3.1, gimp 2.10.22, etc. 
+   De nombreuses applications on été mise à jour également comme thunderbird 78.6.1, Scribus 1.5.6.1, libreoffice 7.0.4.2, gimp 2.10.22, etc. 
   <p>
    NuTyX de base est livré avec les noyaux de support à long terme (LTS):
-   4.9.248, 4.14.212, 4.19.163, 5.4.83 et 5.10.0
-   et la dernière version stable 5.9.14.
+   4.9.253, 4.14.217, 4.19.170, 5.4.92 et 5.10.10
+   et la dernière version stable 5.10.10.
   <p>
    Les journaux de modifications des noyaux sont disponibles ici:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.248">kernel 4.9.248 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.253">kernel 4.9.253 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.212">kernel 4.14.212 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.217">kernel 4.14.217 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.163">kernel 4.19.163 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.170">kernel 4.19.170 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.83">kernel 5.5.83 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.92">kernel 5.4.92 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.14">kernel 5.9.14 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.10">kernel 5.10.10 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10"> kernel 5.10 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.10">kernel 5.10.10 changelog</a>
   <p>
-   Les ISOs se déclinent en BASE, JWM, Openbox, KDE, XFCE, LXDE et MATE.
+   Les ISOs se déclinent en LXDE, XFCE, JWM, GNOME, KDE, et MATE.
   <p>
    Elles sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 
  <h2>Quoi de neuf ?</h2>
-  <p>
-   Avec la sortie à venir de la nouvelle version NuTyX,
-   il y a eu un développement majeur dans le système d'init.
-
   <h3>L'installateur conserve vos données personnelles</h3>
    <p>
     Désormais si vous le souhaitez, vous pouver installer la dernière NuTyX sans devoir effacer / formatter la partition de destination.
-    Les dossiers systèmes seront simplement remplacés et le dossier personnel (/home) conservé.
+    Seul Les dossiers systèmes seront remplacés (usr,lib.bin,sbin,etc) et le dossier personnel (/home) conservé.
 
-  <h3>Flatpak disponible</h3>
+  <h3>Nouveaux contributeurs</h3>
    <p>
-    Un gros effort a été fait pour permettre la bonne intégration des paquets universels flatpak.
-    Cette nouvelle fonctionnalitée permet donc d'installer de nombreux nouveaux paquets.
-
-  <h3>Nouveau groupe Telegram</h3>
+    Rems est venu rejoindre l'équipe pour contribuer sur NuTyX.
+    Son grande expérience sur NuTyX est très appréciée au sein de l'équipe.
    <p>
-    Vous êtes bienvenu sur le nouveau <a class="url" href="https://t.me/groupnutyx">groupe Telegram</a> pour discuter du projet ou nous demander de l'aide.
-
-  <h3>Nouveau contributeur</h3>
-   <p>
-    Schrodinger72 est venu rejoindre l'équipe pour contribuer sur NuTyX.
-    Son expérience IT est très utile.
-
-  <h3>RuNyX, SysV ou systemD comme système d'init</h3>
-   <p>
-    NuTyX est maintenant livré avec 3 systèmes d'initialisation réunis en 1.
-    Donc, ce que cela signifie, c'est que l'utilisateur peut choisir l'initialisation qu'il souhaite utiliser,
-    SysV, SystemD ou RuNyX (fork de runit).
-   <p>
-    Cela permet un choix plus large de l'utilisateur.
-    L'init de base principal est SysV.
-    Cela signifie que les paquets RuNyX et SystemD peuvent être supprimés si vous souhaitez utiliser SysV uniquement.
-    Le paquet Sysinit doit rester installé dans tous les cas.
-    Il est utilisé par les 3 modes d'inits.
-   <p>
-    Vous avez le choix au moment du démarrage dans le menu GRUB conventionnel.
-
-  <h3>Changement du coeur des logiciels.</h3>
-
-   <h4>RuNyX</h4>
-    <p>
-     NuTyX propose maintenant son propre système d'initialisation RuNyX.
-     RuNyX est un fork du <a href="http://smarden.org/runit/"> projet runit Gerrit Pape </a>.
-     Nous avons principalement ajouté les composants manquants pour que ce système d'initialisation
-     fonctionne correctement dans toutes les situations.
-    <p> 
-     Nous décidons également d'utiliser notre propre schéma de répertoire pour être plus cohérent avec les autres systèmes d'init.
-     Consultez la documentation pour plus d'informations.
-     </p><pre class="command_user"><kbd>sudo cards install runyx.man
-man runit</kbd></pre>
-     
-   <h4>Busybox</h4>
-    <p>
-     Busybox fait parti du système de base de NuTyX.
-     Cela permet de réduire la taille d'une NuTyX de base.
-     L'initrd est également considérablement réduite.
-
-   <h4>elogind</h4>
-    <p>
-     Au début, nous voulions profiter de systemd et utiliser systemd pour le démon logind, cela ne fonctionnait pas.
-     Après plusieurs tests, nous avons pu réussir à faire fonctionner elogind et
-     à remplacer complètement le paquet obsolète consolekit2.
-
-   <h4>Eudev</h4>
-    <p>
-     Le paquet Eudev est maintenant la partie eudev du projet systemd.
-     Il fonctionne sur les 3 inits et sur les ISO sans problèmes.
-
-   <h4>Systemd</h4>
-    <p>
-     Systemd est livré par défaut avec de nombreux modules.
-     Pour que NuTyX fonctionne toujours et soit compatible autant que possible avec la version actuelle de NuTyX,
-     certains modules principaux ont été désactivés:
-     </p><ul>
-      <li>
-       timed (ntp)
-      </li><li>
-       networkd (dhcpcd, networkmanager)
-      </li><li>
-       resolve (dhcpcd, networkmanager)
-      </li><li>
-       SysV compat (sysVinit)
-     </li></ul>
+    Delta est maintenant le junior de l'équipe.
+    Nous lui souhaitons beaucoup de plaisir dans sa formation sur NuTyX.
 
  <h2>Mise à jour</h2>
   <p>
-   Bien que la NuTyX 20.12.1 soit une mise à jour majeure, une mise à jour est tout à fait possible.
+   La NuTyX 20.12.1 est une mise à jour mineure.
    Une simple commande classique permet la mise à jour:
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
   
@@ -142,9 +71,9 @@ man runit</kbd></pre>
   <p>
    Merci à toute mon équipe pour les retours de tests effectués sur cette nouvelle version.
   <p>
-   Un merci tout particulier à Spiky pour sa grande patience et son soucis des détails.
+   Un merci tout particulier à toute mon équipe.
   <p>
-   Merci à Schrodinger72 d'avoir rejoint l'équipe.
+   Merci à Rémy et Delta d'avoir rejoint l'équipe.
 
  <h2>Anciennes nouvelles</h2>
   <p>

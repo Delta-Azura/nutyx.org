@@ -1,149 +1,85 @@
-<h1>Latest news 2020-12-14</h1>
+<h1>Latest news 2021-01-24</h1>
 
- <h2>NuTyX 20.12.1 available with cards 2.4.123</h2>
+ <h2>NuTyX 20.12.1 available with cards 2.4.124</h2>
   <p>
-   21 months after the release of the first version of NuTyX 11,
-   I am very happy to announce the new version of NuTyX 20.12.1 and cards 2.4.123.
-   The 64-bit version is a complete new project.
+   I am very happy to announce the new version of NuTyX 20.12.1 and cards 2.4.124.
   <p>
    The compilation chain is completely rebuilt in addition to glibc 2.32, gcc 10.2.0 and binutils 2.34
   <p>
    The xorg-server graphics server version 1.20.10,
-   the Mesa 3D library in 20.3.0, gtk3 3.24.24
+   the Mesa 3D library in 20.3.2, gtk3 3.24.24
    and qt 5.15.2 are also in their latest versions.
   <p>
    The python interpreters are ent 3.9.0 and 2.7.18.
   <p>
-   The XFCE desktop environment is updated to version 4.14.3.
+   The XFCE desktop environment is updated to version 4.16.
   <p>
-   The MATE desktop environment is also updated to version 1.24, the latest version available.
+   The MATE desktop environment is updated to version 1.24.
   <p>
-   The KDE desktop environment is available in Plasma 5.20.4, Framework 5.76.0 and applications in 20.12.1.
+   The GNOME desktop environment is also updated to version 3.38.
+  <p>
+   The KDE desktop environment is available in Plasma 5.20.5, Framework 5.78.0 and applications in 20.12.1.
    et les applications en 20.12.1.
   <p>
-   Available browsers are: firefox 83.0, chromium 87.0.4280.88, falkon 3.1.0, epiphany 3.38.2, etc
+   Available browsers are: firefox 84.0.2, chromium 87.0.4280.88, falkon 3.1.0, epiphany 3.38.2, etc
   <p>
-   Many desktop applications have been updated as well like thunderbird 78.5.1, Scribus 1.5.6, libreoffice 7.0.3.2, gimp 2.10.22, etc. 
+   Many desktop applications have been updated as well like thunderbird 78.6.1, Scribus 1.5.6.1, libreoffice 7.0.4.2, gimp 2.10.22, etc. 
   <p>
    Core NuTyX ships with Long Term Support (LTS) kernels:
-   4.9.248, 4.14.212, 4.19.163, 5.4.83, and 5.10.0
-   and the latest stable version 5.9.14.
+   4.9.253, 4.14.217, 4.19.170, 5.4.92 and 5.10.10
+   and the latest stable version 5.10.10.
   <p>
    The kernel change logs are available here:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.248">kernel 4.9.248 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.253">kernel 4.9.253 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.212">kernel 4.14.212 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.217">kernel 4.14.217 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.163">kernel 4.19.163 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.170">kernel 4.19.170 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.83">kernel 5.5.83 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.92">kernel 5.4.92 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.9.14">kernel 5.9.14 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.10">kernel 5.10.10 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10"> kernel 5.10 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.10">kernel 5.10.10 changelog</a>
   <p>
-   ISOs are available in BASE, JWM, Openbox, KDE, XFCE, LXDE and MATE.
+   ISOs are available in LXDE, XFCE, JWM, GNOME, KDE and MATE.
   <p>
    They are available on the <a href="downloads">download page.</a>
 
  <h2>What's up ?</h2>
-  <p>
-   With the upcoming release of the new NuTyX version,
-   there has been a major development in the init system.
 
   <h3>The installer keeps your personal data</h3>
    <p>
     Now if you want, you can install the latest NuTyX without having to wipe / format the destination partition.
     The system folders will simply be replaced and the personal folder (/ home) kept.
+    Only the system folders are replaced with the one of NuTyX (usr,bin,sbin,lib,var,etc).
 
-  <h3>Flatpak available</h3>
+  <h3>New english YouTube channel</h3>
    <p>
-    A great effort has been made to allow the proper integration of the universal flatpak packages.
-    This new functionality therefore makes it possible to install many new packages.
+    You are welcome to visit the new <a class="url" href="https://www.youtube.com/channel/UCjve7BBrlLYr1YwfCZgnjbw">YouTube channel</a>.
+    More videos will come.
 
-  <h3>New Telegram group</h3>
+  <h3>News contributors</h3>
    <p>
-    You are welcome to the new <a class="url" href="https://t.me/groupnutyx">Telegram group</a> to discuss the project or ask us for help.
-
-  <h3>New contributor</h3>
+    Rems join the NuTyX team.
+    His big experience on NuTyX is highly appreciate in the team.
    <p>
-    Schrodinger72 came to join the team to contribute on NuTyX.
-    His IT experience is very useful.
-
-  <h3>RuNyX, SysV or systemD as init system</h3>
-   <p>
-    NuTyX now comes with 3 initialization systems put together in 1.
-    So what this means is that the user can choose which initialization they want to use,
-    SysV, SystemD or RuNyX (fork of runit).
-   <p>
-    This allows a wider choice for the user.
-    The main base init is SysV.
-    This means that the RuNyX and SystemD packages can be dropped if you wish to use SySV only.
-    The Sysinit package must remain installed in all cases.
-    It is used by the 3 init modes.
-   <p>
-    You have a choice at boot time in the conventional GRUB menu.
-
-  <h3>Changes in the heart of software.</h3>
-
-   <h4>RuNyX</h4>
-    <p>
-     NuTyX now offers its own RuNyX initialization system.
-     RuNyX is a fork of the <a href="http://smarden.org/runit/">Gerrit Pape runit projet</a>.
-     We mainly added the missing components to make this boot system
-     work properly in all situations.
-    <p> 
-     We also decide to use our own directory scheme to be more consistent with the other init systems.
-     See the documentation for more information.
-     </p><pre class="command_user"><kbd>sudo cards install runyx.man
-man runit</kbd></pre>
-     
-   <h4>Busybox</h4>
-    <p>
-     Busybox is part of the core NuTyX system.
-     This makes it possible to reduce the size of a basic NuTyX.
-     The initrd is also considerably reduced.
-
-   <h4>elogind</h4>
-    <p>
-     At first we wanted to take advantage of systemd and use systemd for the logind daemon, it didn't work.
-     After several tests we were able to get elogind to work and
-     completely replace the obsolete consolekit2 package.
-
-   <h4>Eudev</h4>
-    <p>
-     The Eudev package is now the eudev part of the systemd project.
-     It works on all 3 inits and on ISOs without problems.
-
-   <h4>Systemd</h4>
-    <p>
-     Systemd ships with many modules by default.
-     To keep NuTyX running and compatible as much as possible with the current version of NuTyX,
-     some core modules have been disabled:
-     </p><ul>
-      <li>
-       timed (ntp)
-      </li><li>
-       networkd (dhcpcd, networkmanager)
-      </li><li>
-       resolve (dhcpcd, networkmanager)
-      </li><li>
-       SysV compat (sysVinit)
-     </li></ul>
+    Delta is now our new junior contributor.
+    We wish him a great time by learning the inside of NuTyX.
 
  <h2>Upgrade process</h2>
   <p>
-   Even if NuTyX 20.12.1 is a major release, an upgrade process is possible and as simple as:
+   Even if NuTyX 20.12.1 is a minor release.
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 
  <h2>Thanks</h2>
   <p>
    Thank you to all my team for the feedback from the tests carried out on this new version.
   <p>
-   A special thank you to Spiky for his great patience and attention to detail.
+   A special thank you to all my team.
   <p>
-   Thanks to Schrodinger72 for joining the team.
+   Thanks to Rems and Delta for joining the team.
 
  <h2>Old news</h2>
   <p>
