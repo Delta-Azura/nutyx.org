@@ -5,7 +5,7 @@
 
  <h2>Intallation d'une NuTyX</h2>
   <h3>Assurez vous d'avoir installé les logiciels nécessaires</h3>
-   <pre class="command"><kbd>cards install git cdrtools syslinux libisoburn grub-efi dosfstools</kbd></pre>
+   <pre class="command"><kbd>cards install git cdrtools syslinux libisoburn dosfstools</kbd></pre>
   <h3>Récupérer les outils</h3>
    <pre class="command"><kbd>git clone https://github.com/NuTyX/packages-x86_64</kbd></pre>
   <h3>La variable indispensable pour la construction sera utilisée tout au long du processus</h3>
