@@ -203,8 +203,82 @@ VERSION="rolling"</pre>
         the contents of the <i>/etc/install-nutyx.d/</i> directory if necessary.
         Found files will be read and used by the script and allow a more powerful configuration. 
   </div>
+ <h2> Produce a customised ISO</h2>
+  <p>
+    As specified above, the <b><i>ISO</i></b> variable allows you to specify the name of the ISO to generate.
+  <p>
+   For example, the command below:
+    <pre class="command"><kbd>ISO=gnome bash install-nutyx</kbd></pre>
+    will install and produce a gnome NuTyX in the <b><i>/mnt/hd</i></b> folder.
+   <p>
+    Possible ISO names are:
+      <p>
+    <i>strict, mini, base, cli, gui, xorg, gui_extra, openbox, jwm, lxde, xfce4, mate, gnome and kde5</i>
+   <p>
+    It is possible to test the command and thus view all the commands that are affected.
+       <pre class="command"><kbd>ISO=gnome bash install-nutyx -t</kbd></pre>
+   <pre class="output">
+List of variables: 
 
-   <table width="100%" cellspacing="0">
+LFS        : /mnt/hd
+URL        : http://downloads.nutyx.org
+VERSION    : rolling
+KERNEL     : 
+DEPOT      : /var/lib/pkg/depot
+MOUNT      : 
+SHELL      : /bin/bash
+DEPOT_BASE : http://downloads.nutyx.org/x86_64/rolling/base
+CHROOT     : nutyx busybox curl gcc bzip2 glibc zlib lz4 xz zstd libarchive openssl cards
+INITS      : eudev sysklogd sysvinit
+CORE       : acl attr bash coreutils readline expat ncurses lzo gmp flex file gzip mpc mpfr \
+grep sed findutils binutils inetutils diffutils shadow bc less libcap util-linux kmod kbd pam \
+gdbm e2fsprogs libpipeline gettext procps-ng psmisc sudo tzdata iproute2 iana-etc groff \
+man-db cards.man nutyx.man dialog cpio squashfs lsb-release grub  kernel efibootmgr \
+linux-firmware systemd runyx wireless-tools wpa-supplicant gpm gpm.service dosfstools \
+make-ca xdg-user-dirs sound-theme-freedesktop ntp flcards gvfs network-manager-applet \
+xorg-xinit xorg-xf86-input-synaptics xorg-xf86-input-wacom xorg-xf86-video-ati \
+xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau xorg-xf86-video-vesa \
+xorg-xrandr xorg-setxkbmap firefox thunderbird gparted leafpad scrot vlc telegram \
+gnome epiphany seahorse-nautilus evolution simple-scan gnome-weather gnome-chess balsa
+DEVEL      : 
+for k in $(ls /lib/modules/)
+do
+  mkinitramfs $k -nf
+done
+sed -i "s@kernel-419@$KERNEL@g" /sbin/setup-nutyx
+cards purge
+for d in opt bin etc lib lib64 root run sbin usr var home
+do
+  [[ -f /ISO/boot/$d.squashfs ]] && rm /ISO/boot/$d.squashfs
+  mksquashfs /$d /ISO/boot/$d.squashfs
+done
+exit 0
+ISO        : GNOME
+STRICT     : kernel
+MINI       : dhcpcd
+BASE       : efibootmgr linux-firmware systemd runyx wireless-tools wpa-supplicant
+CLI        : gpm gpm.service dosfstools make-ca xdg-user-dirs sound-theme-freedesktop ntp
+GUI        : flcards gvfs network-manager-applet
+GUI_EXTRA  : firefox thunderbird gparted leafpad scrot vlc telegram
+XORG       : xorg-xinit xorg-xf86-input-synaptics xorg-xf86-input-wacom xorg-xf86-video-ati \
+xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau xorg-xf86-video-vesa \
+xorg-xrandr xorg-setxkbmap
+GNOME_EXTRA: epiphany seahorse-nautilus evolution simple-scan gnome-weather gnome-chess balsa
+KDE5_EXTRA : kdenlive k3b
+JWM        : jwm lxdm
+LXDE       : lxdm lxde
+XFCE4      : xfce4 xfce4-extra lxdm
+MATE       : mate lightdm
+GNOME      : gnome
+KDE5       : kde5
+ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
+  <p>
+    As we can see, new variables are now available.
+   These can also be redefined at your convenience:
+  <p>
+   STRICT, BASE, CLI, GUI, GUI_EXTRA, XORG, GNOME, GNOME_EXTRA, KDE5, KDE5_EXTRA, JWM, LXDE, XFCE4, MATE.
+
+  <table width="100%" cellspacing="0">
     <caption><EM>This script is widely used in many tutorials of NuTyX:</EM></caption>
      <tr class="sidebar">
       <th>

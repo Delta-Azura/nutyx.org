@@ -280,11 +280,10 @@ GNOME      : gnome
 KDE5       : kde5
 ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
 <p>
- Comme on peut le voir, de nouvelles variables sont désormais disponible. Celles-ci peuvent également être redéfinies à votre convenance:
+ Comme on peut le voir, de nouvelles variables sont désormais disponible.
+ Celles-ci peuvent également être redéfinies à votre convenance:
  <p>
-  ISO, STRICT, BASE, CLI, GUI, GUI_EXTRA, XORG, GNOME, GNOME_EXTRA, KDE5, KDE5_EXTRA, JWM, LXDE, XFCE4, MATE.
-   
-   
+   STRICT, BASE, CLI, GUI, GUI_EXTRA, XORG, GNOME, GNOME_EXTRA, KDE5, KDE5_EXTRA, JWM, LXDE, XFCE4, MATE.
 
    <table width="100%" cellspacing="0">
     <caption><EM>Ce script est utilisé dans de nombreux cas de figures sous NuTyX:</EM></caption>
