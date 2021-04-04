@@ -22,26 +22,33 @@
   <p>
    The installation will start immediatly.
 
- <h2>Advanced options</h2>
+ <h2>Configuration variables</h2>
   <p>
-   At the moment, they are 7 configurables variables:
+   At the moment, they are 9 configurables variables,
+   they are used to adapt the script.
   <ul>
    <li>
-    the installation path define by the <b>LFS</b> variable
+    The installation path define by the <b>LFS</b> variable
    <li>
-    the url adress of the mirror where are the binaries located via the <b>URL</b> variable
+    The url adress of the mirror where are the binaries located via the <b>URL</b> variable
    <li>
-    the version to installed (fixed or rolling) define by the <b>VERSION</b> variable
+    The version to installed (fixed or rolling) define by the <b>VERSION</b> variable
    <l>
-    the kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
+    The kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
    <li>
-    the <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
+    The <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
    <li>
-    the list of packages to install prior the chroot define by the <b>CHROOT</b> variable.
+    The <b>local</b> path of the packages depot to used for installation define by the <b>MOUNT</b> variable.
+    The script will install the packages from this local depot.
+    This variable allows us to install an NuTyX without the need of a network connection. 
    <li>
-    the architecture we want to install define by the <b>ARCH</b> varible.
+    The architecture we want to install define by the <b>ARCH</b> variable.
     <p>
-     The ARCH variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS. The otherway around is not possible.
+    The ARCH variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS. The otherway around is not possible.
+   <li>
+    The list of packages to install prior the chroot define by the <b>CHROOT</b> variable.
+   <li>
+    If we want to generate an ISO from this installation, we can specify the name of the ISO to generate via the <b>ISO</b> variable.
   </ul>
    <p>
    The script will analyse the <b>/etc/install-nutyx.conf</b> file if it exist and used defined variables in it.
@@ -50,8 +57,65 @@
 DEPOT="/DEPOT"
 LFS="/mnt/lfs"
 VERSION="rolling"</pre>
+
+ <h2>Typical example of the script</h2>
+       <ul>
+        <li>
+         Open a temporary root session
+         <pre class="command_user"><kbd>sudo bash</kbd></pre>
+        <li>
+         Download the script and the signature
+         <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
+        <li>
+         Check the signature
+         <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
+        <li>
+         Mount the destination partition (here /dev/sda2 for example)
+         <pre class="command"><kbd>mkdir -p /mnt/hd
+mount /dev/sda2 /mnt/hd</kbd></pre>
+        <li>
+         Install the base NuTyX
+         <pre class="command"><kbd>bash install-nutyx</kbd></pre>
+        <li>
+         Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
+         <pre class="command"><kbd>bash install-nutyx -ec</kbd></pre>
+        <li>
+         Adjust the /etc/fstab file if you choose to use systemD as init system:
+         <pre class="command"><kbd>echo "/dev/sda2    /    ext4   defaults    0    0" >> /etc/fstab</kbd></pre>
+       </ul>
+      
+       <p>
+        The script can be used for both 32 bits and 64 bits architectures.
+        By default, it will be the host architecture of the host machine that will be chosen.
+        It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
+        To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
+        <pre class="command"><kbd>ARCH="i686" bash install-nutyx</kbd></pre>
+       <p>
+        By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
+        Specify the name of the branch via the <i><b>VERSION</b></i> variable.
+        It should exist on the depot server.
+        <pre class="command"><kbd>VERSION="development" bash install-nutyx</kbd></pre>
+       <p>
+        The default URL will be used for downloading and configuration of NuTyX.
+        To instead specify another URL, use the  <i><b>URL</b></i> variable.
+        <pre class="command"><kbd>URL="http://192.168.0.254" bash install-nutyx</kbd></pre>
+       <p>
+        By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
+        <pre class="command"><kbd>LFS="/My-NuTyX" bash install-nutyx</kbd></pre>
+        The folder will be automatically created if it does not already exist.
+       <p>
+        You can combine several variables:
+        <pre class="command"><kbd>LFS="/MINI-ISO" \
+VERSION="rolling" \
+URL="http://192.168.0.254" \
+ARCH="i686" \
+CHROOT="acl attr expat" \
+bash install-nutyx</kbd></pre>
+
   <p>
-   If you want to have your own configuration, it's possible to place your configuration files in the <b>/etc/install-nutyx.conf.d/</b> folder.
+   If you want to have your own configuration,
+   it's possible to place your configuration files in the <b>/etc/install-nutyx.conf.d/</b> folder.
+
    When you run the script, if files are found there, they will be used instead of the default ones.
   <p>
        <table width="100%" cellspacing="0">
@@ -276,74 +340,84 @@ ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
     As we can see, new variables are now available.
    These can also be redefined at your convenience:
   <p>
-   STRICT, BASE, CLI, GUI, GUI_EXTRA, XORG, GNOME, GNOME_EXTRA, KDE5, KDE5_EXTRA, JWM, LXDE, XFCE4, MATE.
-
-  <table width="100%" cellspacing="0">
-    <caption><EM>This script is widely used in many tutorials of NuTyX:</EM></caption>
-     <tr class="sidebar">
-      <th>
-       Script
-      <th>
-       Description
-     <tr class="even">
-      <td class="lien_article">
-        <a class="url" href="http://www.nutyx.org/install-nutyx"><img src="../graphics/downloads/script.png" alt="logo script"/>install-nutyx</a>
-      </td>
-      <td>
-        The installation of NuTyX is done following these steps:
-       <ul>
-        <li>
-         Open a temporary root session
-         <pre class="command_user"><kbd>sudo bash</kbd></pre>
-        <li>
-         Download the script and the signature
-         <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
-        <li>
-         Check the signature
-         <pre class="command"><kbd>md5sum -c install-nutyx.md5sum</kbd></pre>
-        <li>
-         Mount the destination partition (here /dev/sda2 for example)
-         <pre class="command"><kbd>mkdir -p /mnt/hd
-mount /dev/sda2 /mnt/hd</kbd></pre>
-        <li>
-         Install the base NuTyX
-         <pre class="command"><kbd>bash install-nutyx</kbd></pre>
-        <li>
-         Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
-         <pre class="command"><kbd>bash install-nutyx -ec</kbd></pre>
-        <li>
-         Adjust the /etc/fstab file if you choose to use systemD as init system:
-         <pre class="command"><kbd>echo "/dev/sda2    /    ext4   defaults    0    0" >> /etc/fstab</kbd></pre>
-       </ul>
-      
-       <p>
-        The script can be used for both 32 bits and 64 bits architectures.
-        By default, it will be the host architecture of the host machine that will be chosen.
-        It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
-        To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
-        <pre class="command"><kbd>ARCH="i686" bash install-nutyx</kbd></pre>
-       <p>
-        By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
-        Specify the name of the branch via the <i><b>VERSION</b></i> variable.
-        It should exist on the depot server.
-        <pre class="command"><kbd>VERSION="development" bash install-nutyx</kbd></pre>
-       <p>
-        The default URL will be used for downloading and configuration of NuTyX.
-        To instead specify another URL, use the  <i><b>URL</b></i> variable.
-        <pre class="command"><kbd>URL="http://192.168.0.254" bash install-nutyx</kbd></pre>
-       <p>
-        By default, it will be the <i>/mnt/hd</i>  folder used for the installation, the <i><b>LFS</b></i> variable can be set to specify a new destination folder:
-        <pre class="command"><kbd>LFS="/My-NuTyX" bash install-nutyx</kbd></pre>
-        The folder will be automatically created if it does not already exist.
-       <p>
-        You can combine several variables:
-        <pre class="command"><kbd>LFS="/MINI-ISO" \
-VERSION="rolling" \
-URL="http://192.168.0.254" \
-ARCH="i686" \
-CHROOT="acl attr expat" \
-bash install-nutyx</kbd></pre>
-     </td>
-    </tr>
-   </table>
- 
+   STRICT, BASE, CLI, GUI, GUI_EXTRA, XORG, GNOME, GNOME_EXTRA, KDE5, KDE5_EXTRA, OPENBOX, JWM, LXDE, XFCE4, MATE.
+  <p>
+   Each variable specify a set of packages to be installed.
+   Each ISO name use a set of thoses variables to build up the specified ISO.
+   That means, by specifying your own set of packages for some or all of those variables,
+   you will generate your very own ISO.
+  <p>
+   The table below shows which combination of each of thoses variables are used for each ISO.
+  <table>
+   <caption><EM>Combinations of available variables for each ISO name:</EM></caption>
+    <tr class="sidebar">
+     <th>
+      ISO name
+     <th>
+      Used variable(s)
+    <tr> 
+     <td>
+      STRICT
+     <td>
+      STRICT
+    <tr>
+     <td>
+      MINI
+     <td>
+      STRICT + MINI
+    <tr>
+     <td>
+      BASE
+     <td>
+      STRICT + BASE
+    <tr>
+     <td>
+      CLI
+     <td>
+      STRICT + BASE + CLI
+    <tr>
+     <td>
+      GUI
+     <td>
+      STRICT + BASE + CLI + GUI
+    <tr>
+     <td>
+      XORG
+     <td>
+      STRICT + BASE + CLI + GUI + XORG
+    <tr>
+     <td>
+      JWM
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + JWM
+    <tr>
+     <td>
+      OPENBOX
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + OPENBOX
+    <tr>
+     <td>
+      LXDE
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + LXDE
+    <tr>
+     <td>
+      XFCE4
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + XFCE4
+    <tr>
+     <td>
+      MATE
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + MATE
+    <tr>
+     <td>
+      GNOME
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + GNOME + GNOME_EXTRA
+    <tr>
+     <td>
+      KDE5
+     <td>
+      STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + KDE5 + KDE5_EXTRA
+  </table>
