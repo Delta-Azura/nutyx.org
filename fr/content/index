@@ -63,7 +63,7 @@
      <br>
      <br>
      <li>
-      Une fois installée dans un dossier, il est très facile de <a href="generate-iso">produire une ISO personalisée</a> de sa NuTyX.
+      Une fois installée dans un dossier, il est très facile de <a href="install-nutyx#5">produire une ISO personalisée</a> de sa NuTyX.
       <p>
        L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
      <br>

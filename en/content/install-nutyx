@@ -329,10 +329,11 @@ xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau xorg-xf86-vi
 xorg-xrandr xorg-setxkbmap
 GNOME_EXTRA: epiphany seahorse-nautilus evolution simple-scan gnome-weather gnome-chess balsa
 KDE5_EXTRA : kdenlive k3b
-JWM        : jwm lxdm
+OPENBOX    : lxdm openbox dmenu
+JWM        : lxdm jwm
 LXDE       : lxdm lxde
-XFCE4      : xfce4 xfce4-extra lxdm
-MATE       : mate lightdm
+XFCE4      : lxdm xfce4 xfce4-extra
+MATE       : lightdm mate
 GNOME      : gnome
 KDE5       : kde5
 ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
