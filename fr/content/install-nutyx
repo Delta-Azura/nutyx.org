@@ -427,3 +427,23 @@ ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
      <td>
       STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + KDE5 + KDE5_EXTRA
   </table>
+ <h2>Quelques exemples</h2>
+  <pre class="command"><kbd>sudo ISO=KDE5 install-nutyx</kbd></pre>
+  <p>
+   installe et produit une ISO kde5 standard dans le dossier /mnt/hd
+
+  <pre class="command"><kbd>sudo \
+ISO="lxde" \
+XORG="xorg-xf86-input-synaptics" \
+BASE="linux-firmware wireless-tools wpa-supplicant" \
+GUI="xorg-xrandr" \
+GUI_EXTRA="deadbeef geany firefox" \
+DEVEL="&& setup-nutyx start && echo 'ready ?' && read a" \
+CLI="dhcpcd openssh git cdrtools syslinux libisoburn dosfstools" \
+LFS="/MyIso" \
+DEPOT="/media/www/x86_64/rolling" \
+MOUNT="/media/www/x86_64/rolling" \
+install-nutyx</kbd></pre>
+   <p>
+    installe et produit une ISO lxde personalisée. Les variables BASE, CLI, GUI, XORG, GUI_EXTRA, DEVEL, LFS, MOUNT et DEPOT sont redéfinies.
+
