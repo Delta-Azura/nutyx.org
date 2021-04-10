@@ -61,11 +61,14 @@ DEPOT="/DEPOT"
 LFS="/mnt/lfs"
 VERSION="rolling"</pre>
 
-  <h2>Utilisation typique du script</h2>
+  <h2>Utilisation typique du script: Installer NuTyX sur une partition</h2>
        <ul>
         <li>
          On ouvre une session en root de manière temporaire
          <pre class="command_user"><kbd>sudo bash</kbd></pre>
+        <li>
+         Formater la partition libre
+         <pre class="command"><kbd>mkfs.ext4 /dev/sda2</kbd></pre>
         <li>
          Téléchargement du script et de sa signature
          <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
@@ -428,11 +431,11 @@ ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
       STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + KDE5 + KDE5_EXTRA
   </table>
  <h2>Quelques exemples</h2>
-  <pre class="command"><kbd>sudo ISO=KDE5 install-nutyx</kbd></pre>
+  <pre class="command_user"><kbd>sudo ISO=KDE5 install-nutyx</kbd></pre>
   <p>
    installe et produit une ISO kde5 standard dans le dossier /mnt/hd
 
-  <pre class="command"><kbd>sudo \
+  <pre class="command_user"><kbd>sudo \
 ISO="lxde" \
 XORG="xorg-xf86-input-synaptics" \
 BASE="linux-firmware wireless-tools wpa-supplicant" \

@@ -58,11 +58,17 @@ DEPOT="/DEPOT"
 LFS="/mnt/lfs"
 VERSION="rolling"</pre>
 
- <h2>Typical example of the script</h2>
+ <h2>Typical example of the script: Install a NuTyX on a partition</h2>
+  Assuming the second partition of my harddisk is free,
+  I'm going to install a NuTyX on the second partition of the first harddisk.
+  
        <ul>
         <li>
          Open a temporary root session
          <pre class="command_user"><kbd>sudo bash</kbd></pre>
+        <li>
+         Format the second partition in ext4 file system:
+         <pre class="command"><kbd>mkfs.ext4 /dev/sda2</kbd></pre>
         <li>
          Download the script and the signature
          <pre class="command"><kbd>wget http://www.nutyx.org/install-nutyx{,.md5sum}</kbd></pre>
@@ -272,7 +278,7 @@ bash install-nutyx</kbd></pre>
     As specified above, the <b><i>ISO</i></b> variable allows you to specify the name of the ISO to generate.
   <p>
    For example, the command below:
-    <pre class="command"><kbd>ISO=gnome bash install-nutyx</kbd></pre>
+    <pre class="command_user"><kbd>ISO=gnome bash install-nutyx</kbd></pre>
     will install and produce a gnome NuTyX in the <b><i>/mnt/hd</i></b> folder.
    <p>
     Possible ISO names are:
@@ -280,7 +286,7 @@ bash install-nutyx</kbd></pre>
     <i>strict, mini, base, cli, gui, xorg, gui_extra, openbox, jwm, lxde, xfce4, mate, gnome and kde5</i>
    <p>
     It is possible to test the command and thus view all the commands that are affected.
-       <pre class="command"><kbd>ISO=gnome bash install-nutyx -t</kbd></pre>
+       <pre class="command_user"><kbd>ISO=gnome bash install-nutyx -t</kbd></pre>
    <pre class="output">
 List of variables: 
 
