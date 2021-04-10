@@ -278,7 +278,7 @@ bash install-nutyx</kbd></pre>
     As specified above, the <b><i>ISO</i></b> variable allows you to specify the name of the ISO to generate.
   <p>
    For example, the command below:
-    <pre class="command_user"><kbd>ISO=gnome bash install-nutyx</kbd></pre>
+    <pre class="command_user"><kbd>sudo ISO=gnome bash install-nutyx</kbd></pre>
     will install and produce a gnome NuTyX in the <b><i>/mnt/hd</i></b> folder.
    <p>
     Possible ISO names are:
@@ -429,11 +429,11 @@ ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
       STRICT + BASE + CLI + GUI + GUI_EXTRA + XORG + KDE5 + KDE5_EXTRA
   </table>
  <h2>A few examples</h2>
-  <pre class="command"><kbd>sudo ISO=KDE5 install-nutyx</kbd></pre>
+  <pre class="command_user"><kbd>sudo ISO=KDE5 install-nutyx</kbd></pre>
   <p>
    install and produce a standard kde5 ISO in the /mnt/hd directory.
 
-  <pre class="command"><kbd>sudo \
+  <pre class="command_user"><kbd>sudo \
 ISO="lxde" \
 XORG="xorg-xf86-input-synaptics" \
 BASE="linux-firmware wireless-tools wpa-supplicant" \

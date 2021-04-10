@@ -280,7 +280,7 @@ bash install-nutyx</kbd></pre>
    Comme précisé plus haut, la variables <b><i>ISO</i></b> permet de spécifier le nom de l'ISO à générer.
   <p>
    Par exemple, la commande ci-dessous:
-   <pre class="command"><kbd>ISO=gnome bash install-nutyx</kbd></pre>
+   <pre class="command_user"><kbd>sudo ISO=gnome bash install-nutyx</kbd></pre>
    installera et produira une NuTyX gnome dans le dossier <b><i>/mnt/hd</i></b>
    <p>
     Les noms d'ISO possible sont: 
@@ -288,7 +288,7 @@ bash install-nutyx</kbd></pre>
     <i>strict, mini, base, cli, gui, xorg, gui_extra, openbox, jwm, lxde, xfce4, mate, gnome et kde5</i>
    <p>
      Il est possible de faire un test de la commande et ainsi de visualiser toutes les commandes qui sont concernées.
-   <pre class="command"><kbd>ISO=gnome bash install-nutyx -t</kbd></pre>
+   <pre class="command_user"><kbd>ISO=gnome bash install-nutyx -t</kbd></pre>
    <pre class="output">
 List of variables: 
 
