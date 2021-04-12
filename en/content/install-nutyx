@@ -298,18 +298,21 @@ DEPOT      : /var/lib/pkg/depot
 MOUNT      : 
 SHELL      : /bin/bash
 DEPOT_BASE : http://downloads.nutyx.org/x86_64/rolling/base
-CHROOT     : nutyx busybox curl gcc bzip2 glibc zlib lz4 xz zstd libarchive openssl cards
-INITS      : eudev sysklogd sysvinit
-CORE       : acl attr bash coreutils readline expat ncurses lzo gmp flex file gzip mpc mpfr \
-grep sed findutils binutils inetutils diffutils shadow bc less libcap util-linux kmod kbd pam \
-gdbm e2fsprogs libpipeline gettext procps-ng psmisc sudo tzdata iproute2 iana-etc groff \
-man-db cards.man nutyx.man dialog cpio squashfs lsb-release grub  kernel efibootmgr \
-linux-firmware systemd runyx wireless-tools wpa-supplicant gpm gpm.service dosfstools \
-make-ca xdg-user-dirs sound-theme-freedesktop ntp flcards gvfs network-manager-applet \
-xorg-xinit xorg-xf86-input-synaptics xorg-xf86-input-wacom xorg-xf86-video-ati \
-xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau xorg-xf86-video-vesa \
-xorg-xrandr xorg-setxkbmap firefox thunderbird gparted leafpad scrot vlc telegram \
-gnome epiphany seahorse-nautilus evolution simple-scan gnome-weather gnome-chess balsa
+CHROOT     : nutyx busybox curl gcc bzip2 glibc zlib lz4 xz zstd \
+libarchive openssl cards
+CORE       : acl attr bash coreutils readline expat ncurses lzo gmp \
+flex file gzip mpc mpfr grep sed findutils binutils inetutils diffutils \
+shadow bc less libcap util-linux kmod kbd pam gdbm e2fsprogs libpipeline \
+gettext procps-ng psmisc sudo tzdata iproute2 iana-etc groff man-db \
+cards.man nutyx.man dialog cpio squashfs lsb-release grub eudev sysklogd \
+sysvinit kernel efibootmgr linux-firmware systemd runyx wireless-tools \
+wpa-supplicant gpm gpm.service dosfstools make-ca xdg-user-dirs \
+sound-theme-freedesktop ntp ntp.service flcards gvfs network-manager-applet \
+xorg-xinit xorg-xf86-input-synaptics xorg-xf86-input-wacom \
+xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel \
+xorg-xf86-video-nouveau xorg-xf86-video-vesa xorg-xrandr xorg-setxkbmap \
+firefox thunderbird gparted leafpad scrot vlc telegram gnome epiphany \
+seahorse-nautilus evolution simple-scan gnome-weather gnome-chess balsa
 DEVEL      : 
 for k in $(ls /lib/modules/)
 do
@@ -319,30 +322,32 @@ sed -i "s@kernel-419@$KERNEL@g" /sbin/setup-nutyx
 cards purge
 for d in opt bin etc lib lib64 root run sbin usr var home
 do
-  [[ -f /ISO/boot/$d.squashfs ]] && rm /ISO/boot/$d.squashfs
+  rm -f /ISO/boot/$d.squashfs
   mksquashfs /$d /ISO/boot/$d.squashfs
 done
 exit 0
 ISO        : GNOME
 STRICT     : kernel
 MINI       : dhcpcd
-BASE       : efibootmgr linux-firmware systemd runyx wireless-tools wpa-supplicant
-CLI        : gpm gpm.service dosfstools make-ca xdg-user-dirs sound-theme-freedesktop ntp
+BASE       : efibootmgr linux-firmware systemd runyx wireless-tools \
+wpa-supplicant
+CLI        : gpm gpm.service dosfstools make-ca xdg-user-dirs \
+sound-theme-freedesktop ntp ntp.service
 GUI        : flcards gvfs network-manager-applet
 GUI_EXTRA  : firefox thunderbird gparted leafpad scrot vlc telegram
-XORG       : xorg-xinit xorg-xf86-input-synaptics xorg-xf86-input-wacom xorg-xf86-video-ati \
-xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau xorg-xf86-video-vesa \
-xorg-xrandr xorg-setxkbmap
-GNOME_EXTRA: epiphany seahorse-nautilus evolution simple-scan gnome-weather gnome-chess balsa
+XORG       : xorg-xinit xorg-xf86-input-synaptics xorg-xf86-input-wacom \
+xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel \
+xorg-xf86-video-nouveau xorg-xf86-video-vesa xorg-xrandr xorg-setxkbmap
+GNOME_EXTRA: epiphany seahorse-nautilus evolution simple-scan \
+gnome-weather gnome-chess balsa
 KDE5_EXTRA : kdenlive k3b
-OPENBOX    : lxdm openbox dmenu
 JWM        : lxdm jwm
 LXDE       : lxdm lxde
 XFCE4      : lxdm xfce4 xfce4-extra
 MATE       : lightdm mate
 GNOME      : gnome
 KDE5       : kde5
-ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc2-GNOME.iso</pre>
+ISO Filename /mnt/hd/NuTyX_x86_64-21.03.0-rc4-GNOME.iso</pre>
   <p>
     As we can see, new variables are now available.
    These can also be redefined at your convenience:
