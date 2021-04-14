@@ -7,9 +7,14 @@
      NuTyX is a complete GNU/Linux distribution with high flexibility, thanks to the <a href="dictionary#ID010">collections</a> and the <a href="dictionary#ID025">groups</a> concepts.
     <p>
      We recommend that potential users first acquire some good knowledge about the GNU/Linux system.
-     Original concepts like <a href="install">Base ISO installation</a>, <a href="downloads#5">'install-nutyx' script</a>, <a href="grub-install">the independent GRUB installation procedure</a>, <a href="collections">the collections</a>, <a href="http://cards.nutyx.org">the 'cards' package manager</a> will trouble those with little GNU/Linux system experience.
+     Original concepts like <a href="install">Base ISO installation</a>,
+     <a href="install-nutyx">'install-nutyx' script</a>,
+     <a href="grub-install">the independent GRUB installation procedure</a>,
+     <a href="collections">the collections</a>,
+     <a href="dictionary#1">the 'cards' package manager</a> will trouble those with little GNU/Linux system experience.
     <p>
-     It's an excellent operating system for people who want to commit themselves to developing their skills further and learning how a Linux system is put together.
+     It's an excellent operating system for people who want to commit themselves to developing their skills further and
+     learning how a Linux system is put together.
     <p>
      NuTyX offers the
      <a href="http://www.mate-desktop.com">MATE</a>,
@@ -48,7 +53,7 @@
       <br>
       <br>
       <li>
-       It has the ability, once installed in a folder, to produce a <a href="generate-iso">personalized installable ISO</a> version of NuTyX. 
+       It has the ability, once installed in a folder, to produce a <a href="install-nutyx#5">personalized installable ISO</a> version of NuTyX. 
        The new live version can also be re-installed on other machines,  should you so desire.
       <br>
       <br>

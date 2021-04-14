@@ -143,12 +143,12 @@
    </tr>
    <tr class="odd">
     <td class="lien_article" >
-      <a class="url" href="generate-iso">Produire une ISO installable</a>
+      <a class="url" href="install-nutyx#5">Produire une ISO installable</a>
     </td>
     <td>
      Il est possible de générer très facilement une ISO depuis une NuTyX installée dans un dossier. 
-     Cette ISO peut ensuite être réinstallée et servir de base de déploiement. Libre à vous d'ajouter 
-     tous les logiciels que vous souhaitez, y compris une interface graphique. Le minimum à ajouter est un kernel.
+     Cette ISO peut ensuite être réinstallée et servir de base de déploiement.
+     Libre à vous d'ajouter tous les logiciels que vous souhaitez, y compris une interface graphique.
     </td>
    </tr>
    <tr class="even">

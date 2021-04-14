@@ -7,9 +7,14 @@
     NuTyX est une distribution GNU/Linux complète très flexible grâce au concept des <a href="dictionary#ID010">collections</a> et des <a href="dictionary#ID025">groupes</a>. 
    <p>
     Il est bon de posséder de bonnes connaissances sur le système GNU/Linux.
-    Ses concepts originaux tel que <a href="install">l'installateur sur une ISO de base</a>, <a href="downloads#5">le script d'installation 'install-nutyx'</a>, <a href="grub-install">l'installation de la procédure d'amorçage de manière indépendante</a>, <a href="collections">les collections</a>, <a href="dictionary#ID025">les groupes</a> et <a href="http://cards.nutyx.org">le gestionnaire de paquets 'cards'</a> dérouteront très facilement les personnes non averties.
+    Ses concepts originaux tel que <a href="install">l'installateur sur une ISO de base</a>,
+    <a href="install-nutyx">le script d'installation 'install-nutyx'</a>,
+    <a href="grub-install">l'installation de la procédure d'amorçage de manière indépendante</a>,
+    <a href="collections">les collections</a>, <a href="dictionary#ID025">les groupes</a> et
+    <a href="dictionary#1">le gestionnaire de paquets 'cards'</a> dérouteront très facilement les personnes non averties.
    <p>
-    C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine et développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
+    C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine et
+    développer leurs connaîssances sur les fonctionnements d'une distribution GNU/Linux.
    <p>
     NuTyX propose les interfaces graphiques 
    <a href="http://www.mate-desktop.com">MATE</a>, 
@@ -58,7 +63,7 @@
      <br>
      <br>
      <li>
-      Une fois installée dans un dossier, il est très facile de <a href="generate-iso">produire une ISO personalisée</a> de sa NuTyX.
+      Une fois installée dans un dossier, il est très facile de <a href="install-nutyx#5">produire une ISO personalisée</a> de sa NuTyX.
       <p>
        L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
      <br>
