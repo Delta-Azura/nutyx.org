@@ -34,10 +34,12 @@
     Install NuTyX <pre class="command"><kbd>install-nutyx</kbd></pre>
     Chroot into NuTyX. <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
    <p>
-    Install grub-efi and efibootmgr <pre class="command"><kbd>cards install grub-efi efibootmgr</kbd></pre>
+    Install efibootmgr <pre class="command"><kbd>cards install grub-efi efibootmgr</kbd></pre>
    <p>
     Create /boot/efi directory<pre class="command"><kbd>mkdir /boot/efi</kbd></pre>
     Mount EFI partition to /boot/efi<pre class="command"><kbd>mount -v /dev/sda1 /boot/efi</kbd></pre>
+   <p>
+    Mount efivars /sys/firmware/efi/efivars<pre class="command"><kbd>mount -t efivarfs efivarfs /sys/firmware/efi/efivars</kbd></pre>
   <h2>Install Grub</h2>
    <p>
     <pre class="command"><kbd>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=NUTYX</kbd></pre>
@@ -51,7 +53,7 @@
     <img src="../../graphics/grub-uefi-install/Grub.cfg.png">
   <h2>Note</h2>
    <p>
-    Add efi partition to the <b>/etc/fstab</b> file.   (optional)
+    Add efi partition to the <b>/etc/fstab</b> file.
    <p>
-    <pre class="output">/dev/sda?   /boot/efi  vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro   0 2</pre>
+    <pre class="output">efivarfs    /sys/firmware/efi/efivars    efivarfs    rw,nosuid,nodev,noexec,noatime 0 0</pre>
 
