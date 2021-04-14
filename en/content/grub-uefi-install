@@ -53,7 +53,7 @@
     <img src="../../graphics/grub-uefi-install/Grub.cfg.png">
   <h2>Note</h2>
    <p>
-    Add efi partition to the <b>/etc/fstab</b> file.
+    Add efivars to the <b>/etc/fstab</b> file.
    <p>
     <pre class="output">efivarfs    /sys/firmware/efi/efivars    efivarfs    rw,nosuid,nodev,noexec,noatime 0 0</pre>
 
