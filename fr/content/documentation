@@ -129,19 +129,8 @@
      tout en protégeant votre machine.
     </td>
    </tr>
-    <tr class="even">
-    <td class="lien_article" >
-      <a class="url" href="build-kernel">Construire son propre noyau</a>
-    </td>
-    <td>
-     Il existe beaucoup de raisons de vouloir compiler son propre noyau. 
-     Avoir un noyau optimalisé pour son propre matériel est sans doute la meilleure raison. 
-     Cela permet d'avoir un noyau optimalisé en taille, en vitesse de lancement, 
-     en utilisation de la charge du processeur, etc. Si vous avez choisi de compiler 
-     et installer votre propre noyau, suivez pas à pas cet article.
-    </td>
    </tr>
-   <tr class="odd">
+   <tr class="even">
     <td class="lien_article" >
       <a class="url" href="install-nutyx#5">Produire une ISO installable</a>
     </td>
@@ -151,7 +140,7 @@
      Libre à vous d'ajouter tous les logiciels que vous souhaitez, y compris une interface graphique.
     </td>
    </tr>
-   <tr class="even">
+   <tr class="odd">
     <td class="lien_article" >
      <a class="url" href="sysvinit">Bref aperçu de SysVinit</a>
     </td>

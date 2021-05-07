@@ -106,15 +106,6 @@
    </tr>
    <tr class="even">
     <td width="30%" class="lien_article" >
-      <a class="url" href="build-kernel">Compile and install your own kernel</a>
-    </td>
-    <td width="70%">
-     This document explains how to compile and install your own kernel from source as an alternative to the stock kernel.
-     You will need to have some knowledge of your hardware, such as the make and model of the network card, graphics card, processor type, etc.
-    </td>
-   </tr>
-   <tr class="odd">
-    <td width="30%" class="lien_article" >
       <a class="url" href="install-nutyx#5">Produce a customised ISO</a>
     </td>
     <td  width="40%">
@@ -124,7 +115,7 @@
      It's up to you to add all the packages you want.
     </td>
    </tr>
-   <tr class="even">
+   <tr class="odd">
     <td width="30%" class="lien_article" >
       <a class="url" href="sysvinit">Brief SysVinit overview</a>
     </td>
