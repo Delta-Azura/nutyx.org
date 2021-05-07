@@ -276,7 +276,11 @@ bash install-nutyx</kbd></pre>
      et contenu du dossier <i>/etc/install-nutyx.d/</i> si necessaire.
     </div>
  <h2>Générer une ISO personnalisée</h2>
-  <p>
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+    La génération d'une ISO n'est possible que sur une NuTyX.
+    Autrement dit il n'est pas possible d'utiliser une autre distribution pour construire une ISO.
+    </div>
+   <p>
    Comme précisé plus haut, la variables <b><i>ISO</i></b> permet de spécifier le nom de l'ISO à générer.
   <p>
    Par exemple, la commande ci-dessous:

@@ -274,6 +274,10 @@ bash install-nutyx</kbd></pre>
         Found files will be read and used by the script and allow a more powerful configuration. 
   </div>
  <h2> Produce a customised ISO</h2>
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+    Producing an ISO is only possible on NuTyX.
+    Means, it's not possible to use another distribution for building an ISO.
+    </div>
   <p>
     As specified above, the <b><i>ISO</i></b> variable allows you to specify the name of the ISO to generate.
   <p>
