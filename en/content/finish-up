@@ -21,8 +21,7 @@
   <pre class="command_user"><kbd>check</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
   You enter now the password you specified during the installation, and synchronisation starts:
-  <pre class="output">/var/lib/pkg/depot/desktops/.PKGREPO
-/var/lib/pkg/depot/gui-extra/.PKGREPO
+  <pre class="output">/var/lib/pkg/depot/gui-extra/.PKGREPO
 /var/lib/pkg/depot/gui/.PKGREPO
 /var/lib/pkg/depot/cli-extra/.PKGREPO
 /var/lib/pkg/depot/cli/.PKGREPO

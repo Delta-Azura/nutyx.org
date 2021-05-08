@@ -33,8 +33,10 @@
     <li>
      Graphicals interface
    </ul>
-    At the moment, all of  following graphical interfaces are available as collections:
+    At the moment, all of following graphical interfaces are available:
     <ul>
+     <li>
+      GNOME
      <li>
       XFCE4
      <li>
@@ -55,8 +57,6 @@
     <p>
      Here is the fundamental rule:
     <p>
-     desktops -> gui -> cli -> base
-    <p>
      cli-extra -> cli -> base
     <p>
      gui-extra -> gui -> cli -> base
@@ -72,12 +72,7 @@
       <li>
        A package from the <i>gui</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
       <li>
-       A package from the <i>gui-extra</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
-     </ul>
-      And for the graphical interfaces <i>mate, kde5, lxde, and xfce4</i>, the concept is defined as follow:
-     <ul>
-      <li>
-       A package from the <i>desktops</i> collection can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i>, <i><u>gui</u></i> or <i><u>desktops</u></i> collections.
+       A package from the <i>gui-extra</i> collection, including all available graphical interfaces on NuTyX,  can only use dependencies from <i><u>base</u></i>, <i><u>cli</u></i> or <i><u>gui</u></i> collections.
      </ul>
 
   <h2>Interdependencies</h2>
@@ -107,11 +102,6 @@
      The <i>gui-extra</i> collection contains apllications used by a graphical interface.
     <p>
      The <i>base</i>, <i>cli</i> and <i>gui</i> are the dependencies of the <i>gui-extra</i> collection.
-    <li>
-     <b>desktops</b>:
-      The <i>desktops</i> contains all the available graphical interfaces available on NutyX.
-     <p>
-      The <i>base</i>, <i>cli</i> and <i>gui</i> collections are the dependencies of the <i>desktops</i> collection.
    </ul>
  <h2>The groups of collection</h2>
   <h3>A. The base system collection</h3>
@@ -140,32 +130,5 @@
     gui-extra
  </ul>
    
-  <h3>D. The graphical interfaces collection</h3>
-   <p>
-    The collection includes thoses graphical interfaces:
-   <p>
-    mate:
-    <ul>
-     <li>
-      mate
-     </ul>
-    <p>
-    kde5:
-    <ul>
-     <li>
-      kde5
-    </ul>
-    <p>
-    xfce4:
-    <ul>
-     <li>
-      xfce4
-     </ul>
-    <p>
-    lxde:
-    <ul>
-     <li>
-      lxde
-     </ul>
   <h2>And now ?</h2>
    Collections have no more secrets for you. Now is the time to try to <a href="mybld">compile in an isolated chroot</a>.

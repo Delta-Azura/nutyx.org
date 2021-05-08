@@ -85,11 +85,6 @@ git config --global user.email "francois@nutyx.org"</kbd></pre>
        gui-extra
       <td>
        base cli gui gui-extra
-     <tr class="odd">
-      <td>
-       desktops
-      <td>
-       base cli gui desktops
     </table>
 
   <h3>Les collections en binaires</h3>

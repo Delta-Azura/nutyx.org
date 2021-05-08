@@ -101,8 +101,7 @@
        <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
       <p>
        He (She) adjusts the <b>/etc/cards.conf</b> configuration file as:
-       <pre class="output">dir /usr/ports/desktops
-dir /usr/ports/gui-extra
+       <pre class="output">dir /usr/ports/gui-extra
 dir /usr/ports/gui
 dir /usr/ports/cli-extra
 dir /usr/ports/cli

@@ -31,10 +31,12 @@
     <li>
      Librairies et utilitaires supplémentaires pour une interface graphique (GUI)
     <li>
-     Interfaces graphique
+     Les Interfaces graphique
    </ul>
     Actuellement, sont à disposition, les interfaces graphique:
     <ul>
+     <li>
+      GNOME
      <li>
       XFCE4
      <li>
@@ -55,8 +57,6 @@
     <p>
      Elle se fait de la façon suivante:
     <p>
-     desktops -> gui -> cli -> base
-    <p>
      cli-extra -> cli -> base
     <p>
      gui-extra -> gui -> cli -> base
@@ -72,12 +72,7 @@
       <li>
        Un paquet de la collection <i>gui</i> utilise des dépendances en provenance des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
       <li>
-       Un paquet de la collection <i>gui-extra</i> utilise des dépendances en provenance des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
-     </ul>
-      Et pour les interfaces graphiques <i>mate, kde5, lxde et xfce4</i>, le concept suivant est défini:
-     <ul>
-      <li>
-       Un paquet de la collection <i>desktops</i> utilise des dépendances en provenance uniquement des collections <i><u>base, cli</u></i>, <i><u>gui</u></i> ou <i><u>desktops</u></i>.
+       Un paquet de la collection <i>gui-extra</i> y compris les interfaces graphiques, utilise des dépendances en provenance des collections <i><u>base, cli</u></i> ou <i><u>gui</u></i>.
      </ul>
 
   <h2>Leur interdépendances</h2>
@@ -105,14 +100,9 @@
      Les collections <i>base</i> et <i>cli</i> sont les dépendances de la collection <i>cli-extra</i>.
     <li>
      <b>gui-extra</b>:
-    La collection <i>gui-extra</i> contient des applications pouvant être utilisés par une interface graphique.
+    La collection <i>gui-extra</i> contient des applications pouvant être utilisés par une interface graphique et toutes les interfaces graphique disponible sous NuTyX.
     <p>
      Les collections <i>base</i>, <i>cli</i> et <i>gui</i>sont les dépendances de la collection <i>gui-extra</i>
-    <li>
-     <b>desktops</b>:
-    La collection <i>desktops</i> contient toutes les interfaces graphique disponibles sous NuTyX
-    <p>
-    Les collections <i>base</i>, <i>cli</i> et <i>gui</i> sont les dépendances de la collection <i>desktops</i>.
 
    </ul>
  <h2>Les differents groupes de collection</h2>
@@ -142,32 +132,5 @@
     gui-extra
  </ul>
    
-  <h3>D. La collection des interfaces graphiques</h3>
-   <p>
-    La collection des interfaces graphiques est pour:
-   <p>
-    mate:
-    <ul>
-     <li>
-      mate
-     </ul>
-    <p>
-    kde5:
-    <ul>
-     <li>
-      kde5
-    </ul>
-    <p>
-    xfce4:
-    <ul>
-     <li>
-      xfce4
-     </ul>
-    <p>
-    lxde:
-    <ul>
-     <li>
-      lxde
-     </ul>
   <h2>Et maintenant ?</h2>
    Les collections n'ont désormais plus de secrets, il est temps de se lancer <a href="mybld">dans la compilation dans un environnement isolé</a>.
