@@ -2,7 +2,13 @@
   <p>
    Si vous n'avez pas installé de procédure d'amorçage lors de l'installation de NuTyX (par erreur ou par volonté).
    Il n'est pas trop tard. Avec l'ISO, c'est très simple d'installer GRUB sur votre machine et de façon indépendante.
-  <h2>Historique</h2>
+ <h2>Important</h2>
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+   Il est fortement déconseillé d'utiliser les commandes native de grub.
+   Le fichier grub.cfg sera écrasé et contiendra des informations inutiles voir incompatibles avec NuTyX.
+   D'autre part, la structure des menus sera perdue.
+   </div> 
+ <h2>Historique</h2>
    <p>
     Au début de l'existance de la distribution NuTyX, l'installation de celle-ci se faisait uniquement par le script,
     et <b>grub</b> s'installait également via le script.

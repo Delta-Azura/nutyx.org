@@ -1,5 +1,5 @@
 <h1>Le script install-nutyx</h1>
- <h2>Introduction</h2>
+ <h2>Préliminaires</h2>
   <p>
     Le script peut être démarré depuis une NuTyX déjà installée ou depuis une autre distribution.
   <p>
@@ -11,9 +11,17 @@
   <p>
      Ce script permet l'installation d'une NuTyX de base dans un dossier.
   <p>
-    Sa signature peut être vérifiée en téléchargeant le fichier <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
+    Sa signature peut être vérifiée en téléchargeant le fichier:
+    <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
   <p>
-    Si vous choisissez systemD comme system d'init, assurez-vous d'ajouter le point de montage de NuTyX dans le fichier <i>/etc/fstab</i> de celle-ci, sinon NuTyX démarrera en lecture seule par défaut.
+    Si vous choisissez systemD comme system d'init,
+    assurez-vous d'ajouter le point de montage de NuTyX dans le fichier <i>/etc/fstab</i> de celle-ci,
+    sinon NuTyX démarrera en lecture seule par défaut.
+  <div class="important">
+    <img alt="[Important]" src="../graphics/caution.gif" />
+    Ce script ne permet pas d'écraser une autre distribution ou une NuTyX déjà installée dans le dossier cible (/mnt/hd par défaut).
+    Et donc si vous devez relancez le script il est important d'effacer le contenu du dossier cible au préalable.   
+  </div>
  <h2>Faisons simple pour commencer</h2>
    Le traditionnel exemple tout simple histoire de se faire rapidement une idée
   <p>
@@ -24,8 +32,7 @@
    L'installation commence immédiatement.
  <h2>Variables de configuration</h2> 
   <p>
-    Actuellement 9 variables sont configurables,
-    elles permettent l'adaptation du script.
+    L'utilisation de variables permettent l'adaptation du script à différents scénarios:
     <ul>
      <li>
        Le chemin d'installation défini par la variable <b>LFS</b>.

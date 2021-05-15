@@ -1,6 +1,13 @@
  <h1>Setting up GRUB</h1>
   <p>
    If you haven't installed GRUB yet (by mistake or on purpose), it's not too late. As you will see, it's very simple to install GRUB separately.
+  <h2>Important</h2>
+  <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+   It is strongly recommended not to use native grub commands.
+   The grub.cfg file will be overwritten and will contain unnecessary information
+   or even incompatible with NuTyX.
+   Moreover, the menu structure will be lost.
+  </div>
   <h2>To be able to install GRUB</h2>
    <p>
     It is not necessary to have NuTyX installed; you can install GRUB to any other distribution.

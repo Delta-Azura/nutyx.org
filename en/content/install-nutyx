@@ -13,6 +13,10 @@
   <p>
    It's signature can be verified by downloading the <a class="url" href="http://download.nutyx.org/install-nutyx.md5sum">http://download.nutyx.org/install-nutyx.md5sum</a> file.
 
+  <div class="important">
+    <img alt="[Important]" src="../graphics/caution.gif" />
+    This script does not allow you to overwrite another distribution or a NuTyX already installed in the target folder (/mnt/hd by default).
+    And so if you have to restart the script it is important to delete the contents of the target folder first.  </div>
  <h2>Let's start with a simple example</h2>
   <p>
    The traditionnal example to show how simple it is.
@@ -24,8 +28,7 @@
 
  <h2>Configuration variables</h2>
   <p>
-   At the moment, they are 9 configurables variables,
-   they are used to adapt the script.
+   The use of variables allows the adaptation of the script to different scenarios:
   <ul>
    <li>
     The installation path define by the <b>LFS</b> variable
