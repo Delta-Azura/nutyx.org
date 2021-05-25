@@ -46,8 +46,8 @@
     This variable allows us to install an NuTyX without the need of a network connection. 
    <li>
     The architecture we want to install define by the <b>ARCH</b> variable.
-    <p>
-    The ARCH variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS. The otherway around is not possible.
+    The variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS.
+    The otherway around is not possible.
    <li>
     The list of packages to install prior the chroot define by the <b>CHROOT</b> variable.
    <li>
@@ -103,7 +103,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
         Specify the name of the branch via the <i><b>VERSION</b></i> variable.
         It should exist on the depot server.
-        <pre class="command"><kbd>VERSION="development" bash install-nutyx</kbd></pre>
+        <pre class="command"><kbd>VERSION="testing" bash install-nutyx</kbd></pre>
        <p>
         The default URL will be used for downloading and configuration of NuTyX.
         To instead specify another URL, use the  <i><b>URL</b></i> variable.
