@@ -27,32 +27,85 @@
    The installation will start immediatly.
 
  <h2>Configuration variables</h2>
-  <p>
-   The use of variables allows the adaptation of the script to different scenarios:
-  <ul>
-   <li>
-    The installation path define by the <b>LFS</b> variable
-   <li>
-    The url adress of the mirror where are the binaries located via the <b>URL</b> variable
-   <li>
-    The version to installed (fixed or rolling) define by the <b>VERSION</b> variable
-   <l>
-    The kernel we want to install (if not the default one) can be define by the <b>KERNEL</b> variable
-   <li>
-    The <b>local</b> path of the downloaded binaries define by the <b>DEPOT</b> variable.
-   <li>
-    The <b>local</b> path of the packages depot to used for installation define by the <b>MOUNT</b> variable.
-    The script will install the packages from this local depot.
-    This variable allows us to install an NuTyX without the need of a network connection. 
-   <li>
-    The architecture we want to install define by the <b>ARCH</b> variable.
-    <p>
-    The ARCH variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS. The otherway around is not possible.
-   <li>
-    The list of packages to install prior the chroot define by the <b>CHROOT</b> variable.
-   <li>
-    If we want to generate an ISO from this installation, we can specify the name of the ISO to generate via the <b>ISO</b> variable.
-  </ul>
+       <table width="100%" cellspacing="0">
+        <caption><EM>The use of variables allows the adaptation of the script to different scenarios: :</EM></caption>
+       <tr class="sidebar">
+        <th>
+        Variable name
+        <th>
+        Explaination
+        <th>
+        Comments
+       <tr class="even">
+        <td>
+         LFS
+        <td>
+         The installation path.
+        <td>
+         Ok in most cases.
+       <tr class="odd">
+        <td>
+         CHROOT
+        <td>
+         The list of packages to install prior the chroot of install-nutyx itself.
+        <td>
+         Need to be used when trying from another distribution.
+       <tr class="even">
+        <td>
+         URL
+        <td>
+         The url adress of the mirror where are the binaries located (remote or local).
+        <td>
+         We can use our own server.
+       <tr class="odd">
+        <td>
+         VERSION
+        <td>
+         The version to be installed (fixed or rolling).
+        <td>
+         The version is not checked by the script.
+         <p>
+         We can then install any version as long it exist on the server.
+       <tr class="even">
+        <td>
+         KERNEL
+        <td>
+         As per default they are no kernel installed, up to you to choose one.
+        <td>
+         Available kernel names:
+        <p>
+         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel and linux-mainline.
+       <tr class="odd">
+        <td>
+         DEPOT
+        <td>
+         The <b>local</b> path of the downloaded binaries.
+        <td>
+         This variable can be used in case you want to mount the depot directory (see the MOUNT variable).
+       <tr class="even">
+        <td>
+         MOUNT
+        <td>
+         The <b>local</b> path of the packages depot to used for installation 
+        <td>
+         Allows us to install an NuTyX without the need of a network connection.
+       <tr class="odd">
+        <td>
+         ISO
+        <td>
+         If we want to generate an ISO from this installation,
+         we can specify the name of the ISO to generate via this variable.
+        <td>
+         See below.
+       <tr class="even">
+        <td>
+         ARCH
+        <td>
+         The architecture we want to install.
+        <td>
+         The variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS.
+         The otherway around is not possible.
+    </table>
    <p>
    The script will analyse the <b>/etc/install-nutyx.conf</b> file if it exist and used defined variables in it.
    Here is a summary example of the <b>/etc/install-nutyx.conf</b> file:</p>

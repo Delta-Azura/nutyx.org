@@ -23,41 +23,96 @@
     Et donc si vous devez relancez le script il est important d'effacer le contenu du dossier cible au préalable.   
   </div>
  <h2>Faisons simple pour commencer</h2>
-   Le traditionnel exemple tout simple histoire de se faire rapidement une idée
+  <p>
+   Si vous êtes sur une NuTyX, le traditionnel exemple tout simple histoire de se faire rapidement une idée.
   <p>
    Le script permet d'installer une NuTyX de base dans le dossier <b>/mnt/hd</b>.
+  <p>
    La commande est tout simplement:
    <pre class="command"><kbd>bash install-nutyx</kbd></pre>
   <p>
    L'installation commence immédiatement.
  <h2>Variables de configuration</h2> 
-  <p>
-    L'utilisation de variables permettent l'adaptation du script à différents scénarios:
-    <ul>
-     <li>
-       Le chemin d'installation défini par la variable <b>LFS</b>.
-     <li> 
-       L'adresse url où se trouvent les binaires défini par la variable <b>URL</b>.
-     <li>
-       La version à installer (rolling ou testing) définie par la variable <b>VERSION</b>.
-     <li>
-       Le kernel que l'on souhaite installer (autre que celui par défaut) défini par la variable <b>KERNEL</b>.
-     <li>
-       Le chemin <b>local</b> des binaires téléchargés défini par la variable <b>DEPOT</b>.
-     <li>
-       Le chemin <b>local</b> du dépot des paquets à utiliser défini par la variable <b>MOUNT</b>.
-       Le script installera les paquets depuis ce dépot local.
-       Cette variable permet donc l'installation d'une NuTyX sans connection internet.
-     <li>
-       L'architecture que l'on souhaite installer défini par la variable <b>ARCH</b>.
-      <p>
-       La variable ARCH sera utilisée si l'on souhaite installer une NuTyX 32 bits à partir d'une OS 64 bits.
-       L'inverse n'est pas possible.
-     <li>
-       La liste des paquets à installer en chroot défini par la variable <b>CHROOT</b>.
-      <li>
-       Si l'on souhaite générer une ISO depuis cette l'installation, on spécifiera le nom de l'iso à générer via la variable <b>ISO</b>. 
-    </ul>
+       <table width="100%" cellspacing="0">
+        <caption><EM>L'utilisation de variables permettent l'adaptation du script à différents scénarios:</EM></caption>
+       <tr class="sidebar">
+        <th>
+        Nom de la variable
+        <th>
+        Explication
+        <th>
+        Remarques
+       <tr class="even">
+        <td>
+         LFS
+        <td>
+         Chemin d'installation
+        <td>
+         Convient dans la plus part des cas.
+       <tr class="odd">
+        <td>
+         CHROOT
+        <td>
+         Liste supplémentaire de paquets à installer avant l'entrée dans chroot par le script install-nutyx lui-même.
+        <td>
+         A utiliser lors d'une installation depuis une autre distribution.
+       <tr class="even">
+        <td>
+         URL
+        <td>
+         Adresse http du serveur de dépot distant (ou local).
+        <td>
+         Permet de choisir son propre serveur de dépot.
+       <tr class="odd">
+        <td>
+         VERSION
+        <td>
+         Détermine la version à installer (rolling ou testing).
+        <td>
+         Le nom de la version n'est pas vérifiée par le script.
+         <p>
+         On peut donc choisir n'importe quelle valeur pour autant que celle-ci existe dans les dépots.
+       <tr class="even">
+        <td>
+         KERNEL
+        <td>
+         Par défaut aucun kernel n'est installé, à vous de choisir le kernel à installer.
+        <td>
+         Nom des kernels disponible:
+        <p>
+         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel et linux-mainline.
+       <tr class="odd">
+        <td>
+         DEPOT
+        <td>
+         Le dossier <b>local</b> utilisé pour les binaires téléchargés.
+        <td>
+         Cette variable est utilisée dans le cas d'un point de montage (voir la variable MOUNT).
+       <tr class="even">
+        <td>
+         MOUNT
+        <td>
+         Le dossier <b>local</b> utilisé pour le montage des paquets à installer.
+        <td>
+         Permet une installation sans connection internet.
+       <tr class="odd">
+        <td>
+         ISO
+        <td>
+         Si l'on souhaite générer une ISO depuis cette l'installation.
+         On spécifiera le nom de l'iso à génére via cette variable.
+        <td>
+         Voir ci-dessous
+       <tr class="even">
+        <td>
+         ARCH
+        <td>
+         L'architecture que l'on souhaite installer.
+        <td>
+         La variable ARCH sera utilisée si l'on souhaite installer une NuTyX 32 bits à partir d'une OS 64 bits.
+         L'inverse n'est pas possible.
+
+    </table>
   <p>
     Le script va analyser le contenu du fichier <b>/etc/install-nutyx.conf</b> si il existe
     et en utiliser les variables définies dans ce dernier.
