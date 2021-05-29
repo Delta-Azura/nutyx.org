@@ -156,7 +156,7 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
         Specify the name of the branch via the <i><b>VERSION</b></i> variable.
         It should exist on the depot server.
-        <pre class="command"><kbd>VERSION="development" bash install-nutyx</kbd></pre>
+        <pre class="command"><kbd>VERSION="testing" bash install-nutyx</kbd></pre>
        <p>
         The default URL will be used for downloading and configuration of NuTyX.
         To instead specify another URL, use the  <i><b>URL</b></i> variable.
