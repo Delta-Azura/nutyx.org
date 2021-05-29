@@ -7,8 +7,8 @@
     NuTyX est une distribution GNU/Linux complète très flexible grâce au concept des <a href="dictionary#ID010">collections</a> et des <a href="dictionary#ID025">groupes</a>. 
    <p>
     Il est bon de posséder de bonnes connaissances sur le système GNU/Linux.
-    Ses concepts originaux tel que <a href="install">l'installateur sur une ISO de base</a>,
-    <a href="install-nutyx">le script d'installation 'install-nutyx'</a>,
+   <p>
+    Ses concepts originaux tel que <a href="install-nutyx">le script d'installation 'install-nutyx'</a>,
     <a href="grub-install">l'installation de la procédure d'amorçage de manière indépendante</a>,
     <a href="collections">les collections</a>, <a href="dictionary#ID025">les groupes</a> et
     <a href="dictionary#1">le gestionnaire de paquets 'cards'</a> dérouteront très facilement les personnes non averties.
@@ -19,6 +19,7 @@
     NuTyX propose les interfaces graphiques 
    <a href="http://www.mate-desktop.com">MATE</a>, 
    <a href="http://www.lxde.org">LXDE</a>, 
+   <a href="http://www.gnome.org">GNOME</a>,
    <a href="http://www.kde.org">KDE5</a> 
    et <a href="http://www.xfce.org">XFCE</a> en binaires.
    <p>
@@ -43,7 +44,7 @@
       <p>
        Le script fait un check des outils nécessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
       <p>
-       Tous les détails et explications se trouvent <a href="install-offline">ici</a>.
+       Tous les détails et explications se trouvent <a href="install-nutyx">ici</a>.
      <br>
      <br>
      <li>
