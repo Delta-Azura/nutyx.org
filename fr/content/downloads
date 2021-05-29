@@ -187,6 +187,93 @@
     </td>
   </table>
 
+ <h2>Pour l'utilisateur régulier</h2>
+   <table width="100%" cellspacing="0">
+    <caption><EM>Listes des images ISO disponibles pour l'utilisateur ayant une certaine maîtrise de NuTyX:</EM></caption>
+     <tr class="sidebar">
+      <th>
+       ISO
+      <th>
+       Description
+      <th>
+       Taille
+     <tr class="even">
+      <td class="lien_article">
+       <p>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.05.0-rc3-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
+      <td>
+       <p>
+        L'ISO contient une installation de base sans interface graphique.
+       <p>
+        Système d'initialisation: SystemV, Runyx et systemd
+       <p>
+        Client DHCP: NON
+       <p>
+        Outils Wifi: wireless-tools, wpa-supplicant
+       <p>
+        Firmwares: OUI
+       <p>
+        EFI bootmanager: OUI
+       <p>
+        kernels: LTS 5.10 et dernier kernel stable.
+       <p>
+        SHA1: 7693dcf9c69e43fad291c24722747d29a8b0318d
+      <td>
+       Environ 592 MO
+     </tr>
+     <tr class="odd">
+      <td class="lien_article">
+       <p>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.05.0-rc3-MINI.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>MINI</a>
+      <td>
+       <p>
+        L'ISO contient une installation de base sans interface graphique.
+       <p>
+        Système d'initialisation: SystemV
+       <p>
+        Client DHCP: OUI
+       <p>
+        Outils Wifi: Aucun
+       <p>
+        Firmwares: NON
+       <p>
+        EFI bootmanager: NON
+       <p>
+        kernels: LTS 5.10 et dernier kernel stable.
+       <p>
+        SHA1: bef11f6b43c635334e68b663f9ad0086806231d0
+      <td>
+       Environ 400 MO
+     </tr>
+     <tr class="even">
+      <td class="lien_article">
+       <p>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.05.0-rc3-STRICT.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>STRICT</a>
+      <td>
+       <p>
+        L'ISO contient une installation de base sans interface graphique.
+       <p>
+        Système d'initialisation: SystemV
+       <p>
+        Client DHCP: NON
+       <p>
+        Outils Wifi: Aucun
+       <p>
+        Firmwares: NON
+       <p>
+        EFI bootmanager: NON
+       <p>
+        kernels: LTS 5.10 et dernier kernel stable.
+       <p>
+        SHA1: 5b1f85edc8ab55962f5a17d649b8761a5d8da811
+      <td>
+       Environ 400 MO
+    </tr>
+   </table>
+
+  <p>
+   Vous pouvez également trouver diverses ISOS NuTyX <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">sur le site linuxtracker</a>.
+
  <h2>Pour l'utilisateur confirmé</h2>
    Ce script permet l'installation d'une NuTyX de base dans un dossier.
   <p>
