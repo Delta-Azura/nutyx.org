@@ -200,7 +200,7 @@
      <tr class="even">
       <td class="lien_article">
        <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.05.0-rc3-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
+        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.06.0-rc1-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
       <td>
        <p>
        The ISO contains a base system withount any graphical interface.
@@ -215,60 +215,12 @@
        <p>
         EFI bootmanager: YES
        <p>
-        kernels: LTS 5.10 and last stable kernel.
+        kernel: LTS 4.19 and last stable kernel.
        <p>
-        SHA1: 7693dcf9c69e43fad291c24722747d29a8b0318d
+        SHA1: 19750a0a69ac3df272c99a846f7f5b3b5edd7779
       <td>
-       Environ 592 MB
+       Approx. 738 MO
      </tr>
-     <tr class="odd">
-      <td class="lien_article">
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.05.0-rc3-MINI.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>MINI</a>
-      <td>
-       <p>
-        The ISO contains a base system withount any graphical interface.
-       <p>
-        Init system: SystemV
-       <p>
-        DHCP client: YES
-       <p>
-        Wireless tools: None
-       <p>
-        Firmwares: NO
-       <p>
-        EFI bootmanager: NO
-       <p>
-        kernels: LTS 5.10 and last stable kernel.
-       <p>
-        SHA1: bef11f6b43c635334e68b663f9ad0086806231d0
-      <td>
-       Environ 400 MB
-     </tr>
-     <tr class="even">
-      <td class="lien_article">
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.05.0-rc3-STRICT.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>STRICT</a>
-      <td>
-       <p>
-        The ISO contains a base system withount any graphical interface.
-       <p>
-        Init system: SystemV
-       <p>
-        DHCP client: NO
-       <p>
-        Wireless tools: None
-       <p>
-        Firmwares: NO
-       <p>
-        EFI bootmanager: NO
-       <p>
-        kernels: LTS 5.10 and last stable kernel.
-       <p>
-        SHA1: 5b1f85edc8ab55962f5a17d649b8761a5d8da811
-      <td>
-       Environ 400 MB
-    </tr>
    </table>
 
  <h2>For the experienced NuTyX user</h2>
