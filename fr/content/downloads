@@ -1,6 +1,6 @@
 <h1>Téléchargements</h1>
  <h2>Introduction</h2>
-   La version stable actuelle de NuTyX est la <b>20.12.1</b>.
+   La version stable actuelle de NuTyX est la <b>21.07.1</b>.
   <p>
    Les ISOs sont disponibles en 64 bits "Rolling" releases.
   <p>
@@ -29,7 +29,7 @@
    Vous pouvez également trouver diverses ISOS NuTyX <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">sur le site linuxtracker</a>.
  
    <table width="100%" cellspacing="0">
-   <caption><EM>Listes des images ISO disponibles pour un nouvel utilisateur souhaitant découvrir facilement NuTyX:</EM></caption>
+   <caption><EM>Listes des images ISO disponibles:</EM></caption>
    <tr class="sidebar">
     <th>
       ISO
@@ -40,167 +40,8 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>Rolling</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.1-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo Lxde"/><br/>Rolling</a>
     <td>
-     <p>
-      Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
-     <p>
-      Paquets installés:
-     <p>
-      lxdm lxde make-ca lxde-appearance lxde-input lxde-randr lxde-gpicview
-      lxde-terminal xdg-user-dirs flcards
-      gparted pcmanfm firefox thunderbird telegram deadbeef transmission geany mplayer
-      xorg-xf86-input-synaptics
-      xorg-xf86-input-wacom xorg-xf86-video-ati xorg-xf86-video-fbdev
-      xorg-xf86-video-intel xorg-xf86-video-nouveau
-      xorg-xf86-video-vesa network-manager-applet.
-     <p>
-      SHA1: 73877ed04cd3db1ce35ba8424217dd3c6cbe483d
-    </td>
-    <td>
-     Environ 960 Mo
-    </td>
-
-   <tr class="odd">
-    <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-XFCE.iso"><img src="../graphics/downloads/xfce.png" alt="Xfce Logo"/><br/>Rolling</a>
-    <td>
-     <p>
-     Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
-     <p>
-      Paquets installés:
-     <p>
-      lxdm flcards xfce4 make-ca mousepad orage ristretto xfburn parole xfce4-terminal
-      gparted thunar firefox thunderbird gvfs xdg-user-dirs transmission vlc
-      xorg-xf86-input-synaptics xorg-xf86-input-wacom
-      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
-      xorg-xf86-video-vesa network-manager-applet.
-     <p>
-      SHA1: 0b92f8958fdd26895f5a09965b27c954daf3dd3f
-    </td>
-    <td>
-     Environ 1 Go
-    </td>
-
-   <tr class="even">
-    <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-JWM.iso"><img src="../graphics/downloads/jwm-blue.png" alt="logo JWM"/><br/>Rolling</a>
-    <td>
-     <p>
-      C'est une respin créé par Miyo Linux.
-     <p>
-      Elle contient le minimum pour bien démarrer sous NuTyX avec le minimum d'applications permettant ainsi de personnaliser le choix de d'applications à installer.
-     <p>
-      Paquets installés:
-     <p>
-      jwm dmenu flcards make-ca gnome-themes-extra gtk-engines gvfs inxi leafpad lxde-appearance lxde-input lxde-randr
-      lxde-terminal lxdm murrine nitrogen ntp papirus-icon-theme pavucontrol pcmanfm scrot sound-theme-freedesktop
-      volumeicon xdg-user-dirs xfce4-notifyd xfce4-power-manager yad xorg-xf86-input-synaptics xorg-xf86-input-wacom
-      xorg-xf86-video-ati xorg-xf86-video-fbdev xorg-xf86-video-intel xorg-xf86-video-nouveau
-      xorg-xf86-video-vesa network-manager-applet.
-     <p>
-      SHA1: 6cfc7fb524fca8d81044aad4a9b728e0a1d48f21
-    </td>
-    <td>
-     Environ 1.2 Go
-    </td>
-
-   <tr class="odd">
-    <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-GNOME.iso/download"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>Rolling</a>
-    </td>
-    <td>
-     <p>
-      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/GNOME">GNOME</a> comme interface graphique.
-     <p>
-      Paquets installés:
-     <p>
-     gdm gnome make-ca flcards firefox thunderbird xdg-user-dirs
-     vlc sound-theme-freedesktop
-     gparted xorg-setxkbmap telegram
-     seahorse-nautilus evolution simple-scan gnome-weather epiphany gnome-chess balsa
-     xorg-xf86-input-synaptics xorg-xf86-input-wacom
-     xorg-xf86-video-ati xorg-xf86-video-fbdev
-     xorg-xf86-video-intel xorg-xf86-video-nouveau
-     xorg-xf86-video-vesa network-manager-applet.
-     <p>
-      SHA1: 158cdb6b665d27e9aaa79d4f7c6d8db12efb1b96
-    </td>
-    <td>
-      Environ 1.4 Gb
-    </td>
-
-
-   <tr class="even">
-    <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-KDE.iso/download"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>Rolling</a>
-    </td>
-    <td>
-     <p>
-      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/KDE">KDE</a> comme interface graphique.
-     <p>
-      Paquets installés:
-     <p>
-     sddm kde5 make-ca flcards firefox thunderbird xdg-user-dirs
-     clementine k3b kdenlive vlc sound-theme-freedesktop
-     gparted xorg-setxkbmap telegram
-     xorg-xf86-input-synaptics xorg-xf86-input-wacom
-     xorg-xf86-video-ati xorg-xf86-video-fbdev
-     xorg-xf86-video-intel xorg-xf86-video-nouveau
-     xorg-xf86-video-vesa network-manager-applet.
-     <p>
-      SHA1: a43ef0734fe6c6f04da45fa438caaa052bb4294b
-    </td>
-    <td>
-      Environ 1.7 GO
-    </td>
-
-
-   <tr class="odd">
-    <td class="lien_article">
-      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-20.12.1-MATE.iso/download"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>Rolling</a>
-    </td>
-    <td>
-     <p>
-      l'ISO contient une installation complète avec <a href="https://fr.wikipedia.org/wiki/MATE">MATE</a> comme interface graphique.
-     <p>
-      Paquets installés:
-     <p>
-      lightdm flcards make-ca mate zip unzip pciutils usbutils cups openssh
-      gvfs dejavu-ttf system-config-printer firefox thunderbird
-      libreoffice gnome-disk-utility hplip gimp transmission telegram
-      cheese cherrytree deadbeef aisleriot
-      gnome-mahjongg inxi gawk htop rsync tar pigz
-      lbzip2 xdg-user-dirs sound-theme-freedesktop nano
-      network-manager-applet alsa-utils alsa-plugins
-      ntfs-3g vlc fuse xorg-xdpyinfo lm-sensors
-      gparted xorg-setxkbmap ntp ntp.service 
-      xorg-xf86-input-synaptics xorg-xf86-input-wacom
-      xorg-xf86-video-ati xorg-xf86-video-fbdev
-      xorg-xf86-video-intel xorg-xf86-video-nouveau
-      xorg-xf86-video-vesa network-manager-applet.
-     <p>
-      SHA1: ecfe5f53e8de8c2febd1af9982adefa95c663ee8
-    </td>
-    <td>
-      Environ 1.7 GO
-    </td>
-  </table>
-
- <h2>Pour l'utilisateur régulier</h2>
-   <table width="100%" cellspacing="0">
-    <caption><EM>Listes des images ISO disponibles pour l'utilisateur ayant une certaine maîtrise de NuTyX:</EM></caption>
-     <tr class="sidebar">
-      <th>
-       ISO
-      <th>
-       Description
-      <th>
-       Taille
-     <tr class="even">
-      <td class="lien_article">
-       <p>
-        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.06.0-rc1-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
       <td>
        <p>
         L'ISO contient une installation de base sans interface graphique.
@@ -217,15 +58,13 @@
        <p>
         kernel: LTS 4.19 et dernier kernel stable.
        <p>
-        SHA1: 19750a0a69ac3df272c99a846f7f5b3b5edd7779
+        SHA1: 00893f52495dc4f3c357343b8dfa5d84d4b8b88a
       <td>
-       Environ 738 MO
+       Environ 785 MO
      </tr>
-   </table>
-
-  <p>
-   Vous pouvez également trouver diverses ISOS NuTyX <a href="http://linuxtracker.org/index.php?page=torrents&search=nutyx">sur le site linuxtracker</a>.
-
+    </table>     
+    
+ 
  <h2>Pour l'utilisateur confirmé</h2>
    Ce script permet l'installation d'une NuTyX de base dans un dossier.
   <p>
