@@ -1,6 +1,6 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>21.07.1</b>.
+   The current stable release of NuTyX is named <b>21.07</b>.
   <p>
    ISO images are available in "Rolling" releases.
   <p>
@@ -36,9 +36,9 @@
     <th>
       Size
 
-   <tr class="odd">
+   <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.1-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
     <td>
      <p>
       The ISO contains a base system withount any graphical interface.
@@ -55,9 +55,69 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: 00893f52495dc4f3c357343b8dfa5d84d4b8b88a
+        SHA1: 12daa51aa236527d7e52209562b13ee9d260a67b
       <td>
        Approx. 785 MO
+   </tr>
+   <tr class="odd">
+    <td class="lien_article">
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE</a>
+    <td>
+     <p>
+      The ISO contains a LXDE desktop.
+     <p>
+      Init system: SystemV, Runyx and systemd
+     <p>
+      kernel: LTS 4.19 and last stable kernel.
+     <p>
+        SHA1: d5d69f4e1e1ac7dbdbf2dec2c0b18839c6cae168
+      <td>
+       Approx. 1.4 GO
+   </tr>
+   <tr class="even">
+    <td class="lien_article">
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo lxde"/><br/>XFCE</a>
+    <td>
+     <p>
+      The ISO contains a XFCE4 desktop.
+     <p>
+      Init system: SystemV, Runyx and systemd
+     <p>
+      kernel: LTS 4.19 and last stable kernel.
+     <p>
+        SHA1: 584335c93bccdde4b13cf1b400074eceef4993bd
+      <td>
+       Approx. 1.4 GO
+   </tr>
+   <tr class="odd">
+    <td class="lien_article">
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE</a>
+    <td>
+     <p>
+      The ISO contains a MATE desktop.
+     <p>
+      Init system: SystemV, Runyx and systemd
+     <p>
+      kernel: LTS 4.19 and last stable kernel.
+     <p>
+        SHA1: f287c471b4fa0e33d25c88111c5934acfe533720
+      <td>
+       Approx. 1.6 GO
+   </tr>
+   <tr class="even">
+    <td class="lien_article">
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
+    <td>
+     <p>
+      The ISO contains a GNOME desktop.
+     <p>
+      Init system: SystemV, Runyx and systemd
+     <p>
+      kernel: LTS 4.19 and last stable kernel.
+     <p>
+        SHA1: dcc42bc96cf4203fbc03729b41cabffdc1da97eb
+      <td>
+       Approx. 1.7 GO
    </tr>
   </table>
  <h2>For the experienced NuTyX user</h2>
