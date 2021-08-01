@@ -33,7 +33,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    Then by using the command <b>dd</b>, create a bootable key:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-BASE-21.07.2.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-BASE-21.07.3.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    The <b>sdX</b> value is the one that you have previously found using fdisk.
   <p>

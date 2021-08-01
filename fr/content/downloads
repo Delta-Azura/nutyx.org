@@ -40,7 +40,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo Lxde"/><br/>BASE</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo Lxde"/><br/>BASE</a>
     <td>
       <td>
        <p>
@@ -58,13 +58,13 @@
        <p>
         kernel: LTS 4.19 et dernier kernel stable.
        <p>
-        SHA1: 12daa51aa236527d7e52209562b13ee9d260a67b
+        SHA1: 5f343fe913d9068404590fff8699efd795338fad
       <td>
        Environ 785 MO
      </tr>
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>LXDE</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>LXDE</a>
     <td>
       <td>
        <p>
@@ -74,13 +74,13 @@
        <p>
         kernel: LTS 4.19 et dernier kernel stable.
        <p>
-        SHA1: d5d69f4e1e1ac7dbdbf2dec2c0b18839c6cae168
+        SHA1: 458d3b5d70fdfa7bbc2a787695d35c817d25dffa
       <td>
        Environ 1.4 GO
      </tr>
    <tr class="odd">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE</a>
     <td>
       <td>
        <p>
@@ -90,13 +90,13 @@
        <p>
         kernel: LTS 4.19 et dernier kernel stable.
        <p>
-        SHA1: 584335c93bccdde4b13cf1b400074eceef4993bd
+        SHA1: 639c263b8742fedeb51c39c4e1e08095d1839655
       <td>
        Environ 1.4 GO
      </tr>
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE</a>
     <td>
       <td>
        <p>
@@ -106,14 +106,14 @@
        <p>
         kernel: LTS 4.19 et dernier kernel stable.
        <p>
-        SHA1: f287c471b4fa0e33d25c88111c5934acfe533720
+        SHA1: ef0e1c7eec20aedb97bd6687c6ccae24881b7171
       <td>
        Environ 1.6 GO
      </tr>
    <tr class="odd">
    
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.2-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
     <td>
       <td>
        <p>
@@ -123,9 +123,26 @@
        <p>
         kernel: LTS 4.19 et dernier kernel stable.
        <p>
-        SHA1: dcc42bc96cf4203fbc03729b41cabffdc1da97eb
+        SHA1: 73b8a565ac7aa5a1bb9dbbb611b5deaa0de29e98
       <td>
        Environ 1.7 GO
+     </tr>
+   <tr class="even">
+   
+    <td class="lien_article">
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-KDE.iso"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>KDE</a>
+    <td>
+      <td>
+       <p>
+        L'ISO contient le bureau KDE5 comme interface graphique.
+       <p>
+        Système d'initialisation: SystemV, Runyx et systemd
+       <p>
+        kernel: LTS 4.19 et dernier kernel stable.
+       <p>
+        SHA1: d0b4910ca6d13d438e78b334b866d2600028cc89
+      <td>
+       Environ 1.9 GO
      </tr>
     </table>     
     

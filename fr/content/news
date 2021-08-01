@@ -1,75 +1,107 @@
-<h1>Dernière nouvelle 04-07-2021</h1>
+<h1>Dernière nouvelle 21-07-2021</h1>
 
- <h2>NuTyX 21.07.2 disponible avec cards 2.4.132</h2>
+ <h2>NuTyX 21.07.3 disponible avec cards 2.4.132</h2>
   <p>
-   Nous sommes heureux d'annoncer la nouvelle version de NuTyX 21.07.2 et cards 2.4.132.
+   Nous sommes heureux d'annoncer la nouvelle version de NuTyX 21.07.3 et cards 2.4.132.
   <p>
-    La chaîne de compilation est complètement reconstruite autour de la Glibc 2.33, de Gcc 11.1.0 et de Binutils 2.34
+   Le depot GIT nous informe qu'il y a eu plus de 4000 commits depuis la sortie de la première version 20.12.
   <p>
-   Le serveur graphique Xorg-server version 1.20.11,
+   Le serveur graphique Xorg-server version 1.20.12
    la librairie Mesa 3D en 21.1.4, Gtk3 3.24.29
-   et Qt 5.15.2 sont également dans leurs dernières versions.
+   et Qt 5.15.2.
   <p>
    Les interpreteurs Python sont ent 3.9.6 et 2.7.18.
   <p>
    L'environnement de bureau XFCE est mis à jour en version 4.16.
   <p>
-   L'environnement de bureau MATE est mis à jour en version 1.24. 
+   L'environnement de bureau MATE est en version 1.24. 
   <p>
-   L'environnement de bureau GNOME est également mis à jour en version 40.0. 
+   L'environnement de bureau GNOME est également mis à jour en version 40.2. 
   <p>
-   L'environnement de bureau KDE est disponible en Plasma 5.22.2.1, Framework 5.82.0
-   et les applications en 21.04.2.
+   L'environnement de bureau KDE est disponible en Plasma 5.22.3, Framework 5.84.0
+   et les applications en 21.04.3.
   <p>
-   Les navigateurs disponibles sont entre autre: Firefox 89.0.2, Chromium 91.0.4472.114, Epiphany 40.2, etc
+   Les navigateurs disponibles sont entre autre: Firefox 90.0.1, Chromium 91.0.4472.164, Epiphany 40.2, etc
   <p>
-   De nombreuses applications on été mise à jour également comme Thunderbird 78.11.0, Scribus 1.5.6.1, Libreoffice 7.1.3.2, gimp 2.10.24, etc. 
+   De nombreuses applications on été mise à jour également comme Thunderbird 78.12.0, Scribus 1.5.6.1, Libreoffice 7.1.4.2, gimp 2.10.24, etc. 
   <p>
    NuTyX de base est livré avec les noyaux de support à long terme (LTS):
-   4.9.272, 4.14.236, 4.19.196, 5.4.129 et 5.10.47 et la dernière version stable 5.13.0.
+   4.9.275, 4.14.239, 4.19.197, 5.4.133 et 5.10.51
+   et la dernière version stable 5.13.3 .
   <p>
    Les journaux de modifications des noyaux sont disponibles ici:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.272">kernel 4.9.272 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.275">kernel 4.9.275 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.236">kernel 4.14.236 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.239">kernel 4.14.239 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.196">kernel 4.19.196 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.197">kernel 4.19.197 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.129">kernel 5.4.129 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.133">kernel 5.4.133 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.47">kernel 5.10.47 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.51">kernel 5.10.51 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.13">kernel 5.13 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.13.3">kernel 5.13.3 changelog</a>
   <p>
-   Les ISOs se déclinent en saveur LXDE, GNOME, MATE et en version BASE (mode console sans environnement de bureau). 
+   Les ISOs se déclinent en saveur LXDE, XFCE4, GNOME, MATE, KDE5 et en version BASE (mode console sans environnement de bureau). 
   <p>
    Elles sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 
  <h2>Quoi de neuf ?</h2>
   <h3>L'installateur</h3>
    <p>
+    Les ISOs fonctionnent en mode  UEFI et BIOS.
+    En mode UEFI, il est maintenant possible de choisir entre GRUB, EFIBootmgr ou rien comme gestionnaire de démarrage.
+   <p>
     Si une partition swap a été formatée une première fois, elle ne sera plus formatée lors d'une nouvelle installation. 
    <p>
     Si l'ISO contient un environnement de bureau, le nombre de menus de configuration sera réduit au strict minimum.
     Seuls la langue, le clavier, l'utilisateur et le nom de la machine seront à spécifier. 
 
-  <h3>Le nombre de collections passe à 5</h3>
+  <h3>Le script setup-nutyx</h3>
+   <p>
+    Une nouvelle option permet désormais de mettre à jour les locales générée à l'installation de NuTyX depuis une ISO / script install-nutyx.
+
+  <h3>Le script install-nutyx</h3>
+   <p>
+    Construire une ISO (même personnalisée) est maintenant très simple avec la nouvelle variable ISO.
+    Il suffit de spécifier quelle ISO l'on souhaite construire en la spécifiant dans cette variable.
+  <h3>Le gestionnaire de paquets cards</h3>
+   <p>
+    mybld ajuste automatiquement les contributeurs et l'empaqueteur lors d'un changement de celui-ci.
+    Une nouvelle option -p permet d'interagir avec la construction d'un paquet.
+   <p>
+    flcards est maintenant plus stable, les gêles intempestif sont de l'histoire ancienne.
+    Il permet l'installation de GNOME depuis son icone dans l'onglet "jeux de paquets".
+   <p>
+    pkgmk reconnait deux nouveau tableaux de variables PKGMK_COLLECTIONS et PKGMK_DEPENDS.
+    Elles permettent l'installation des dépendances définis par le tableau de variables PKGMK_DEPENDS.
+    Plus d'info dans man pkgmk.conf.
+
+  <h3>Les collections</h3>
    <p>
     Afin de simplifier la configuration de NuTyX, la collection <i>desktops</i> est désormais intégrée dans la collection <i>gui-extra</i>.
-
+    Cela signifie que NuTyX utilise désormais 5 collections officielles.
+  <h3>Autres</h3>
+   <p>
+    Un nouveau fond d'écran au démarrage de grub a été créé afin d'améliorer la lisibilitée du menu de démarrage.
+   <p>
+    Nombreux fonds d'écrans NuTyX sont désormais disponible par défaut.
+   <p>
+    Le paquet QEMU inclus désormais quelques scritps bien utiles afin de simplifier la configuration et le lancement d'une machine virtuelle.
+    Les scripts configvm et startvm sont là pour vous simplifier la vie. 
  <h2>Mise à jour</h2>
   <p>
-   La NuTyX 21.07.2 est une mise à jour mineure.
+   La NuTyX 21.07.3 est une mise à jour mineure.
    Une simple commande classique permet la mise à jour:
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 
   <p>
    Une fois la mise à jour effectuée,
-   il est nécesssaire de supprimer la collection "desktops" dans le fichier <i>/etc/cards.conf</i>
+   la collection "desktops" dans le fichier <i>/etc/cards.conf</i> sera supprimée automatiquement.
  <h2>Remerciements</h2>
   <p>
-   Merci à Spiky pour son implication dans le projet.
+   Merci à Spiky pour sa grande patience et sa générosité pour la mise à jour des très nombreux paquets.
 
  <h2>Anciennes nouvelles</h2>
   <p>
