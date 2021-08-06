@@ -61,7 +61,7 @@
         <td>
          VERSION
         <td>
-         The version to be installed (fixed or rolling).
+         The version to be installed (testing or rolling).
         <td>
          The version is not checked by the script.
          <p>
@@ -97,14 +97,6 @@
          we can specify the name of the ISO to generate via this variable.
         <td>
          See below.
-       <tr class="even">
-        <td>
-         ARCH
-        <td>
-         The architecture we want to install.
-        <td>
-         The variable will be use if we want to install a 32 bits NuTyX from a 64 bits OS.
-         The otherway around is not possible.
     </table>
    <p>
    The script will analyse the <b>/etc/install-nutyx.conf</b> file if it exist and used defined variables in it.
@@ -145,13 +137,6 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
          Adjust the /etc/fstab file if you choose to use systemD as init system:
          <pre class="command"><kbd>echo "/dev/sda2    /    ext4   defaults    0    0" >> /etc/fstab</kbd></pre>
        </ul>
-      
-       <p>
-        The script can be used for both 32 bits and 64 bits architectures.
-        By default, it will be the host architecture of the host machine that will be chosen.
-        It's possible to install a 32 bits NuTyX from a 64 bits host machine but not the other way around.
-        To install a 32 bits NuTyX from a 64 bits host machine, use the  <i><b>ARCH</b></i> variable:
-        <pre class="command"><kbd>ARCH="i686" bash install-nutyx</kbd></pre>
        <p>
         By default, it will be the rolling branch of the NuTyX installed; it's possible to specify another branch.
         Specify the name of the branch via the <i><b>VERSION</b></i> variable.

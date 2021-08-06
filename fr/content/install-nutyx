@@ -103,14 +103,6 @@
          On spécifiera le nom de l'iso à génére via cette variable.
         <td>
          Voir ci-dessous
-       <tr class="even">
-        <td>
-         ARCH
-        <td>
-         L'architecture que l'on souhaite installer.
-        <td>
-         La variable ARCH sera utilisée si l'on souhaite installer une NuTyX 32 bits à partir d'une OS 64 bits.
-         L'inverse n'est pas possible.
 
     </table>
   <p>
@@ -153,12 +145,6 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
        </ul>
       
        <p>
-        Le script peut être utilisé pour les deux architectures 32 ou 64 bits.
-        Par défaut, ce sera l'architecture de la machine hôte qui sera choisie.
-        Il est possible d'installer une NuTyX 32 bits à partir d'une machine hôte 64 bits mais pas l'inverse.
-        Pour installer une NuTyX 32 bits depuis une machine hôte 64 bits, on utilise la variable <i><b>ARCH</b></i>:
-        <pre class="command"><kbd>ARCH="i686" bash install-nutyx</kbd></pre>
-       <p>
         Par défaut, ce sera la branche rolling qui sera choisie à l'installation, il est possible de spécifier la branche que l'on souhaite installer.
         Pour installer une version spécifique de NuTyX, on utilise la variable <i><b>VERSION</b></i>. A condition que la version existe sur le miroir de dépot:
         <pre class="command"><kbd>VERSION="testing" bash install-nutyx</kbd></pre>
@@ -175,7 +161,6 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         <pre class="command"><kbd>LFS="/MINI-ISO" \
 VERSION="rolling" \
 URL="http://192.168.0.254" \
-ARCH="i686" \
 CHROOT="acl attr expat" \
 bash install-nutyx</kbd></pre>
 
