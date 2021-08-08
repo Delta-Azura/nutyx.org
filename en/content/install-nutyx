@@ -155,7 +155,6 @@ mount /dev/sda2 /mnt/hd</kbd></pre>
         <pre class="command"><kbd>LFS="/MINI-ISO" \
 VERSION="rolling" \
 URL="http://192.168.0.254" \
-ARCH="i686" \
 CHROOT="acl attr expat" \
 bash install-nutyx</kbd></pre>
 
