@@ -135,3 +135,11 @@ logdir /var/log/pkgbuild</pre>
       <img src="graphics/faq/ActivateRoot3.png" alt="Figure 3: Confirm the password" title="Figure 3: Confirm the password"/>
      <p>
       and you're done.
+   <h2>Can't compile C/C++ code with gcc ?</h2>
+    <p>
+     All the development packages are in... the devel group means: 
+     You need to install them if you want to make some development.
+     The easiest way is to install cards.devel package which it going to
+     pull all the necessary dependencies.
+     <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+   

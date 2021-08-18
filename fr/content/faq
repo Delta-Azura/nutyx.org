@@ -101,7 +101,7 @@ logdir /var/log/pkgbuild</pre>
    <h2>Est-ce que NuTyX (à partir de la 9.0) est une distribution à publication continue?</h2>
     <p>
      Oui.
-     Aprés nombreux tests et mises à jours faites avec succès, NuTyX est maintenant considérée comme une &lt&ltrolling release&gt&gt ou &lt&ltpublication continue&gt&gt.
+     Aprés nombreux tests et mises à jours faites avec succès, NuTyX est maintenant considérée comme une "rolling release" ou "publication continue".
    <h2>Comment activer le compte root ?</h2>
     <p>
      Par défaut, NuTyX n'active pas le compte root, si vous souhaitez compilez vos propres paquets, il est plus simple d'activer le compte root.
@@ -120,3 +120,10 @@ logdir /var/log/pkgbuild</pre>
       <img src="graphics/faq/ActivateRoot3.png" alt="Figure 3: Confirmer le mot de passe" title="Figure 3: Confirmer le mot de passe"/>
      <p>
       et c'est tout.
+    <h2>Vous ne pouvez pas compiler du code C/C++ avec gcc ?</h2>
+     <p>
+      Tous les paquets de développement sont dans ... le groupe de développement ce qui signifie :
+     Vous devez les installer si vous voulez faire du développement.
+     Le moyen le plus simple est d'installer le paquet 'cards.devel' il va
+     installer automatiquement toutes les dépendances nécessaires.
+     <pre class="command_user"><kbd>get cards.devel</kbd></pre>
