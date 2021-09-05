@@ -3,7 +3,7 @@
   Assurez vous tout d'abord d'avoir un espace libre sur votre disque dur d'au moins 8Go ou mieux 15Go pour plus de confort.</p>
  <h2>Téléchargez la dernière version de NuTyX</h2>
   <p>
-   La version stable actuelle de NuTyX s'appelle <b>21.07</b>.
+   La version stable actuelle de NuTyX s'appelle <b>21.09</b>.
   <p>
    Elle est disponible en 64 bits uniquement.
   <p>
@@ -34,7 +34,7 @@
    <pre class="command"><kbd>fdisk -l</kbd></pre>
   <p>
    A l'aide de <b>dd</b>, créez votre clé bootable:
-   <pre class="command"><kbd>dd if=NuTyX_x86_64-BASE-21.07.3.iso of=/dev/sdX status=progress</kbd></pre>
+   <pre class="command"><kbd>dd if=NuTyX_x86_64-BASE-21.09.0.iso of=/dev/sdX status=progress</kbd></pre>
   <p>
    La valeur <b>sdX</b> est donnée par la commande:
    <pre class="command"><kbd>fdisk -l</kbd></pre>

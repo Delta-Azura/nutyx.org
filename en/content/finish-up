@@ -3,29 +3,13 @@
    Now you have a brand new base NuTyX installed.
    If you already know how to go on to get a graphical interface, you can directly check the website documentation.
    If  you wondering how to install a complete graphical interface, continue reading.
- <h2>Mounting the ISO</h2>
- <p>
-  If you choose to install the rolling version of NuTyX, you can directly proceed to <a href="#3">updating the meta data about available packages</a>
- <p>
-  If you choose to install the 21.07 version of NuTyX, you need to mount the ISO.
-  All the available packages are on it.
-  Insert now the USB key containing the ISO.
-  Depending where your USB key is found, adapt the command below to your need:
-  <pre class="command_user"><kbd>sudo mount /dev/sdc1 /mnt</kbd></pre>
- <div class="important">
-   If you test the NuTyX 21.07 in a virtual environment like Virtualbox, the ISO is located at <b>/dev/sr0</b>
- </div>
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
   An <a href="dictionary#ID300">alias</a> is available for that:
   <pre class="command_user"><kbd>check</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
   You enter now the password you specified during the installation, and synchronisation starts:
-  <pre class="output">/var/lib/pkg/depot/gui-extra/.PKGREPO
-/var/lib/pkg/depot/gui/.PKGREPO
-/var/lib/pkg/depot/cli-extra/.PKGREPO
-/var/lib/pkg/depot/cli/.PKGREPO
-/var/lib/pkg/depot/base/.PKGREPO</pre>
+  <pre class="output">[/]</pre>
   Synchronisation is done.
   You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
  <h2>Desktop installation:</h2>

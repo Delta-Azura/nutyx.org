@@ -1,99 +1,78 @@
-<h1>Latest news 2021-07-21</h1>
+<h1>Latest news 2021-09-05</h1>
 
- <h2>NuTyX 21.07.3 available with cards 2.4.132</h2>
+ <h2>NuTyX 21.09.0 available with cards 2.4.136</h2>
   <p>
-   The NuTyX team is happy to announce the new version of NuTyX 21.07.3 and cards 2.4.132.
+   The NuTyX team is happy to announce the new version of NuTyX 21.09.0 and cards 2.4.136.
   <p>
-   The GIT depot inform us that we did more then 4000 commits since the release of the first 20.12 version.
-  <p>
-   The xorg-server graphics server version 1.20.12,
-   the Mesa 3D library in 21.1.4, gtk3 3.24.29
+   The xorg-server graphics server version 1.20.13,
+   the Mesa 3D library in 21.2.1, gtk3 3.24.30
    and qt 5.15.2.
   <p>
    The python interpreters are en 3.9.6 et 2.7.18.
   <p>
    The XFCE desktop environment is updated to version 4.16.
   <p>
-   The MATE desktop environment is a 1.24 version .
+   The MATE desktop environment is a 1.26 version .
   <p>
-   The GNOME desktop environment is also updated to version 40.2.
+   The GNOME desktop environment is also updated to version 40.4.
   <p>
-   The KDE desktop environment is available in Plasma 5.22.3, Framework 5.84.0 and applications in 21.04.3.
+   The KDE desktop environment is available in Plasma 5.22.5, Framework 5.85.0 and applications in 21.08.1.
   <p>
-   Available browsers are: firefox 90.0.1, chromium 91.0.4472.164, epiphany 40.2, etc
+   Available browsers are: firefox 91.0.2, chromium 92.0.4515.159, epiphany 40.3, etc
   <p>
-   Many desktop applications have been updated as well like thunderbird 78.11.0, Scribus 1.5.6.1, libreoffice 7.1.4.2, gimp 2.10.24, etc. 
+   Many desktop applications have been updated as well like thunderbird 78.13.0, Scribus 1.5.7, libreoffice 7.1.5.2, gimp 2.10.24, etc. 
   <p>
    Core NuTyX ships with Long Term Support (LTS) kernels:
-   4.9.275, 4.14.239, 4.19.197, 5.4.133 and 5.10.51
-   and the latest stable version 5.13.3 .
+   4.9.282, 4.14.246, 4.19.206, 5.4.144 and 5.10.62
+   and the latest stable version 5.14.1 .
   <p>
    The kernel change logs are available here:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.275">kernel 4.9.275 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.282">kernel 4.9.282 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.239">kernel 4.14.239 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.246">kernel 4.14.246 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.197">kernel 4.19.197 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.206">kernel 4.19.206 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.133">kernel 5.4.133 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.144">kernel 5.4.144 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.51">kernel 5.10.51 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.62">kernel 5.10.62 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.13.3">kernel 5.13.3 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.14.1">kernel 5.14.1 changelog</a>
   <p>
-   ISOs are available in LXDE, XFCE4, GNOME, MATE, KDE5 and BASE (command line interface only without graphical interface).
+   ISOs are available in LXDE, XFCE4, GNOME, MATE, KDE5, BASE and MINI (those last two propose command line interface only without graphical interface).
   <p>
    They are available on the <a href="downloads">download page.</a>
 
  <h2>What's up ?</h2>
 
-  <h3>The installer</h3>
+  <h3>The upgrade-nutyx command</h3>
    <p>
-    ISOs works in UEFI and BIOS modes.
-    In UEFI mode, it's now possible to choose between GRUB, EFIbootmgr or nothing as boot manager.
-   <p>
-    If a swap partition has been formatted for the first time, it will not be formatted again if already done.
-   <p>
-    If the ISO contain a desktop, the number of configuration menus will be reduced to the minimum that are needed.
-    Basically only language, Keyboard, user and hostname are required then.
-  <h3>The setup-nutyx script</h3>
-   <p>
-    A new option added that allow to upgrade locales installed by the ISOs medias / install-nutyx script.
-
-  <h3>The install-nutyx script</h3>
-   <p>
-    Building an ISO is now very simple with the new ISO variable.
-    Just specify which ISO you want to build by specifying this variable.
+    The upgrade-nutyx command offer the possibility to upgrade automatically your NuTyX.
+    A scheduled task planned every 30 minutes as default check for any updates.
+    Availables packages for update are installed at next shutdown of the PC.
+    To install upgrade-nutyx package, a;
+    </p><pre class="command_user"><kbd>sudo cards install upgrade-nutyx</kbd></pre>
+    will do it.
+    Just run it ones with your own account.
+    Explainations will be found in the post-install of the package.
     
   <h3>The package manager cards</h3>
    <p>
-    mybld adust automatically contibutors and packager when this one changes.
-    A new option allows to interact with the contruction of a package.
-   <p>
-    flcards is now more stable, freezing are history.
-    It can now installed GNOME desktop from it's icons in the "set of packages" tab.
-   <p>
-    pkgmk reconise two new table variable PKGMK_COLLECTIONS and PKGMK_DEPENDS.
-    They allows installation of dependencies specified in the PKGMK_DEPENDS table.
-    More info in man pkgmk.conf.
+    The cards search command shows now all the sub-packages as well if success packages found.
     
   <h3>The collections</h3>
    <p>
     In order to simplify the configuration of NuTyX, the <i>desktops</i> collection is now integrated into the <i>gui-extra</i> collection.
+   <p>
     Means NuTyX does use 5 official collections now.
   <h3>Others</h3>
    <p>
-    A new bootsplash at boot time makes the grub menu more readable.
-   <p>
-    Many new wallpapers are now included by default. 
-   <p>
-    QEMU package got some handy scripts to make use of this software more easy.
-    configvm and startvm are your friends.
+   A discussion forum is back in service in a more NuTyX theme like.
     
  <h2>Upgrade process</h2>
   <p>
-   Even if NuTyX 21.07.3 is a minor release.
+   Even if NuTyX 21.09.0 is a minor release.
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
   <p>
    Once the upgrade process done,

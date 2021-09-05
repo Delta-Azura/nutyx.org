@@ -1,6 +1,6 @@
 <h1>Downloads</h1>
  <h2>Introduction</h2>
-   The current stable release of NuTyX is named <b>21.07</b>.
+   The current stable release of NuTyX is named <b>21.09</b>.
   <p>
    ISO images are available in "Rolling" releases.
   <p>
@@ -36,9 +36,32 @@
     <th>
       Size
 
+   <tr class="odd">
+    <td class="lien_article">
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-MINI.iso"><img src="../graphics/downloads/terminal.png" alt="logo Lxde"/><br/>MINI</a>
+    <td>
+       <p>
+        The ISO contains a base system withount any graphical interface.
+       <p>
+        Init system: SystemV only
+     <p>
+      DHCP client: NO
+     <p>
+      Wireless tools: NO
+     <p>
+      Firmwares: NO
+     <p>
+      EFI bootmanager: NO
+     <p>
+      kernel: LTS 4.19 and last stable kernel.
+     <p>
+      SHA1: 00d921ddb184d9ef078616ae4425b4e0bf35df77
+      <td>
+       Environ 316 MO
+     </tr>
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE</a>
     <td>
      <p>
       The ISO contains a base system withount any graphical interface.
@@ -55,13 +78,13 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: 5f343fe913d9068404590fff8699efd795338fad
+        SHA1: 3d08363fb855f9650b650a2cfeb893de39692b45
       <td>
-       Approx. 785 MO
+       Approx. 808 MO
    </tr>
    <tr class="odd">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE</a>
     <td>
      <p>
       The ISO contains a LXDE desktop.
@@ -70,13 +93,13 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: 458d3b5d70fdfa7bbc2a787695d35c817d25dffa
+        SHA1: 74825304b69d09c34353578782c1a802f035eeab
       <td>
        Approx. 1.4 GO
    </tr>
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo lxde"/><br/>XFCE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo lxde"/><br/>XFCE</a>
     <td>
      <p>
       The ISO contains a XFCE4 desktop.
@@ -85,13 +108,13 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: 639c263b8742fedeb51c39c4e1e08095d1839655
+        SHA1: 48c3411f36836ded440f902475797f445648b0a1 
       <td>
-       Approx. 1.4 GO
+       Approx. 1.5 GO
    </tr>
    <tr class="odd">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE</a>
     <td>
      <p>
       The ISO contains a MATE desktop.
@@ -100,13 +123,13 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: ef0e1c7eec20aedb97bd6687c6ccae24881b7171
+        SHA1: e873228942ab1c98113521833db2691fdd34a5ac
       <td>
-       Approx. 1.6 GO
+       Approx. 1.7 GO
    </tr>
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
     <td>
      <p>
       The ISO contains a GNOME desktop.
@@ -115,13 +138,13 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: 73b8a565ac7aa5a1bb9dbbb611b5deaa0de29e98
+        SHA1: 8556121de9e0bde2056610289e92acda678049a0
       <td>
        Approx. 1.7 GO
    </tr>
    <tr class="odd">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.07.3-KDE.iso"><img src="../graphics/downloads/kde.png" alt="logo kde5"/><br/>KDE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-KDE5.iso"><img src="../graphics/downloads/kde.png" alt="logo kde5"/><br/>KDE</a>
     <td>
      <p>
       The ISO contains a KDE5 desktop.
@@ -130,7 +153,7 @@
      <p>
       kernel: LTS 4.19 and last stable kernel.
      <p>
-        SHA1: d0b4910ca6d13d438e78b334b866d2600028cc89
+        SHA1: 4fec14907532b3c60cb917f8d26013a4a676e931
       <td>
        Approx. 1.9 GO
    </tr>
