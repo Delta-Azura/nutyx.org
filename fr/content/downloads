@@ -65,7 +65,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo Lxde"/><br/>BASE</a>
     <td>
-      <td>
        <p>
         L'ISO contient une installation de base sans interface graphique.
        <p>
@@ -89,7 +88,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>LXDE</a>
     <td>
-      <td>
        <p>
         L'ISO contient le bureau LXDE comme interface graphique.
        <p>
@@ -104,7 +102,6 @@
    <tr class="odd">
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE</a>
-    <td>
       <td>
        <p>
         L'ISO contient le bureau XFCE4 comme interface graphique.
@@ -121,7 +118,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE</a>
     <td>
-      <td>
        <p>
         L'ISO contient le bureau MATE comme interface graphique.
        <p>
@@ -138,7 +134,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
     <td>
-      <td>
        <p>
         L'ISO contient le bureau GNOME comme interface graphique.
        <p>
@@ -155,7 +150,6 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.09.0-KDE5.iso"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>KDE</a>
     <td>
-      <td>
        <p>
         L'ISO contient le bureau KDE5 comme interface graphique.
        <p>
