@@ -1,12 +1,12 @@
-<h1>Latest news 2021-09-05</h1>
+<h1>Latest news 2021-10-22</h1>
 
- <h2>NuTyX 21.09.0 available with cards 2.4.136</h2>
+ <h2>NuTyX 21.10.0 available with cards 2.4.138</h2>
   <p>
-   The NuTyX team is happy to announce the new version of NuTyX 21.09.0 and cards 2.4.136.
+   The NuTyX team is happy to announce the new version of NuTyX 21.10.0 and cards 2.4.138.
   <p>
    The xorg-server graphics server version 1.20.13,
-   the Mesa 3D library in 21.2.1, gtk3 3.24.30
-   and qt 5.15.2.
+   the Mesa 3D library in 21.2.4, Gtk4 4.4.0
+   and Qt 5.15.2.
   <p>
    The python interpreters are en 3.9.6 et 2.7.18.
   <p>
@@ -16,69 +16,44 @@
   <p>
    The GNOME desktop environment is also updated to version 40.4.
   <p>
-   The KDE desktop environment is available in Plasma 5.22.5, Framework 5.85.0 and applications in 21.08.1.
+   The KDE desktop environment is available in Plasma 5.23.1, Framework 5.87.0 and applications in 21.08.2.
   <p>
-   Available browsers are: firefox 91.0.2, chromium 92.0.4515.159, epiphany 40.3, etc
+   Available browsers are: Firefox 93.0, Chromium 94.0.4606.81, Epiphany 40.3, etc
   <p>
-   Many desktop applications have been updated as well like thunderbird 78.13.0, Scribus 1.5.7, libreoffice 7.1.5.2, gimp 2.10.24, etc. 
+   Many desktop applications have been updated as well like Thunderbird 91.2.0, Scribus 1.5.7, Libreoffice 7.1.5.2, Gimp 2.10.28, etc. 
   <p>
    Core NuTyX ships with Long Term Support (LTS) kernels:
-   4.9.282, 4.14.246, 4.19.206, 5.4.144 and 5.10.62
-   and the latest stable version 5.14.1 .
+   4.9.287, 4.14.249, 4.19.212, 5.4.154 and 5.10.74
+   and the latest stable version 5.14.13 .
   <p>
    The kernel change logs are available here:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.282">kernel 4.9.282 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.287">kernel 4.9.287 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.246">kernel 4.14.246 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.249">kernel 4.14.249 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.206">kernel 4.19.206 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.212">kernel 4.19.212 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.144">kernel 5.4.144 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.154">kernel 5.4.154 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.62">kernel 5.10.62 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.74">kernel 5.10.74 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.14.1">kernel 5.14.1 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.14.13">kernel 5.14.13 changelog</a>
   <p>
-   ISOs are available in LXDE, XFCE4, GNOME, MATE, KDE5, BASE and MINI (those last two propose command line interface only without graphical interface).
+   16 ISOs are now available in LXDE, LXQT, XFCE4, ENLIGHTENMENT, GNOME, MATE, KDE5, BASE and MINI (those last two propose command line interface only without graphical interface).
   <p>
-   They are available on the <a href="downloads">download page.</a>
+   They are available in 32 and 64 bits on the <a href="downloads">download page.</a>
 
  <h2>What's up ?</h2>
 
-  <h3>The upgrade-nutyx command</h3>
+  <h3>A 32-bits version</h3>
    <p>
-    The upgrade-nutyx command offer the possibility to upgrade automatically your NuTyX.
-    A scheduled task planned every 30 minutes as default check for any updates.
-    Availables packages for update are installed at next shutdown of the PC.
-    To install upgrade-nutyx package, a;
-    </p><pre class="command_user"><kbd>sudo cards install upgrade-nutyx</kbd></pre>
-    will do it.
-    Just run it ones with your own account.
-    Explainations will be found in the post-install of the package.
-    
-  <h3>The package manager cards</h3>
-   <p>
-    The cards search command shows now all the sub-packages as well if success packages found.
-    
-  <h3>The collections</h3>
-   <p>
-    In order to simplify the configuration of NuTyX, the <i>desktops</i> collection is now integrated into the <i>gui-extra</i> collection.
-   <p>
-    Means NuTyX does use 5 official collections now.
-  <h3>Others</h3>
-   <p>
-   A discussion forum is back in service in a more NuTyX theme like.
+    We decide to continue development of the 32-bits version of NuTyX.
     
  <h2>Upgrade process</h2>
   <p>
-   Even if NuTyX 21.09.0 is a minor release.
+   Even if NuTyX 21.10.0 is a minor release.
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
-  <p>
-   Once the upgrade process done,
-   the "desktops" collection in the <i>/etc/cards.conf</i> file will be deleted automatically
-  <p>
-   Many NuTyX wallpapers are now included by default.
 
  <h2>Thanks</h2>
   <p>

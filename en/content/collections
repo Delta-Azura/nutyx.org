@@ -1,8 +1,10 @@
-<h1>The collections</h1>
+<h1>The five collections</h1>
  <h2>Introduction</h2>
    They are a lot of synonyms for defining a set of packages in the informatics jargon.
   <p>
    Under NuTyX, a set of packages is held in a collection.
+  <p>
+   They are 5 officials collections on NuTyX.
   <p>
    A collection includes 3 fundamental properties:
    <ul>
@@ -33,7 +35,7 @@
     <li>
      Graphicals interface
    </ul>
-    At the moment, all of following graphical interfaces are available:
+    At the moment, some  of the most common graphical interfaces are available:
     <ul>
      <li>
       GNOME
@@ -45,6 +47,10 @@
       MATE
      <li>
       LXDE
+     <li>
+       LXQT
+     <li>
+       ENLIGHTENMENT
     </ul>
   <h2>Collections management via cards</h2>
    Because of their concept, each collection contains it's own meta-data files.

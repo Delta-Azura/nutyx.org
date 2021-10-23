@@ -1,10 +1,12 @@
-<h1>Les différentes collections</h1>
+<h1>Les cinq collections</h1>
  <h2>Introduction</h2>
    Il existe de nombreux synonymes pour définir un jeu de paquets dans le jargon informatique.
   <p>
    Sous NuTyX, un jeu de paquets est regroupé dans une collection.
   <p>
-   Une collection possède 3 propriétés fondamentales:
+   Il y a 5 collections officielles sur NuTyX.
+  <p> 
+   Chaque collection possède 3 propriétés fondamentales:
    <ul>
      <li>
       Indépendante
@@ -33,7 +35,7 @@
     <li>
      Les Interfaces graphique
    </ul>
-    Actuellement, sont à disposition, les interfaces graphique:
+    Actuellement, sont à disposition, parmis les interfaces graphique les plus courantes, on peut trouver:
     <ul>
      <li>
       GNOME
@@ -45,6 +47,10 @@
       MATE
      <li>
       LXDE
+     <li>
+      LXQT
+     <li>
+      ENLIGHTENMENT
     </ul>
   <h2>La gestion des collections par cards</h2>
    De par leur conception, chaque collection possède son propre fichier contenant les meta-données.

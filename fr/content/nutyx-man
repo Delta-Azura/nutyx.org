@@ -1,4 +1,4 @@
-<h1>Manuel NuTyX version 21.09</h1>
+<h1>Manuel NuTyX version 21.10</h1>
  <h2>CONFIGURATION</h2>
    <ol>
     <li><h3>La langue et la région de la machine</h3></li>
@@ -191,7 +191,7 @@ eth1       IEEE 802.11abg
       Dans l'exemple qui suit: NuTyX est installée sur la première partition du deuxième disque, grub est installé sur le premier disque.
      <p>
       Le fichier de configurations sera:
-    <pre class="output">menuentry "NuTyX 8.0" {
+    <pre class="output">menuentry "NuTyX 21.10" {
   set root=(hd1,1)
   linux /boot/kernel root=/dev/sdb1 ro quiet 3
   initrd /boot/initrd
