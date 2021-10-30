@@ -69,7 +69,7 @@
       <br>
       <br>
       <li>
-       It has unique installation coding, which prevents the NuTyX installer from FORMATTING the target partition.
+       It has unique installation coding, which prevents the NuTyX installer from FORMATTING any already existing target partition.
        This means that NuTyX can be installed on a partition containing data: (for example) personal files and various non-system folders.
       <br>
       <br>
