@@ -1,58 +1,60 @@
-<h1>Dernière nouvelle 22-10-2021</h1>
+<h1>Dernière nouvelle 28-11-2021</h1>
 
- <h2>NuTyX 21.10.0 disponible avec cards 2.4.138</h2>
+ <h2>NuTyX 21.10.5 disponible avec cards 2.4.140</h2>
   <p>
    Nous sommes heureux d'annoncer la nouvelle version de NuTyX 21.10.0 et cards 2.4.138.
   <p>
-   Le serveur graphique Xorg-server version 1.20.13
-   la librairie Mesa 3D en 21.2.4, Gtk4 4.4.0
+   Le serveur graphique Xorg-server version 21.1.1
+   la librairie Mesa 3D en 21.2.5, Gtk4 4.4.0
    et Qt 5.15.2.
   <p>
-   Les interpreteurs Python sont ent 3.9.7 et 2.7.18.
+   Les interpreteurs Python sont ent 3.10.0 et 2.7.18.
   <p>
    L'environnement de bureau XFCE est mis à jour en version 4.16.
   <p>
    L'environnement de bureau MATE est en version 1.26. 
   <p>
-   L'environnement de bureau GNOME est également mis à jour en version 40.4. 
+   L'environnement de bureau GNOME est également mis à jour en version 40.1.1
   <p>
-   L'environnement de bureau KDE est disponible en Plasma 5.23.1, Framework 5.87.0 et les applications en 21.08.2.
+   L'environnement de bureau KDE est disponible en Plasma 5.23.3, Framework 5.88.0 et les applications en 21.08.3.
   <p>
-   Les navigateurs disponibles sont entre autre: Firefox 93.0, Chromium 94.0.4606.81, Epiphany 40.3, etc
+   Les navigateurs disponibles sont entre autre: Firefox 94.0.2, Chromium 96.0.4664.45, Epiphany 40.3, etc
   <p>
-   De nombreuses applications on été mise à jour également comme Thunderbird 91.2.0, Scribus 1.5.7, Libreoffice 7.1.5.2, Gimp 2.10.28, etc. 
+   De nombreuses applications on été mise à jour également comme Thunderbird 91.3.2, Scribus 1.5.7, Libreoffice 7.1.5.2, Gimp 2.10.28, etc.
   <p>
    NuTyX de base est livré avec les noyaux de support à long terme (LTS):
-   4.9.287, 4.14.249, 4.19.212, 5.4.154 et 5.10.74
-   et la dernière version stable 5.14.13 .
+   4.9.291, 4.14.256, 4.19.218, 5.4.162 et 5.10.82
+   et la dernière version stable 5.15.5 .
   <p>
    Les journaux de modifications des noyaux sont disponibles ici:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.287">kernel 4.9.287 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.291">kernel 4.9.291 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.249">kernel 4.14.249 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.256">kernel 4.14.256 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.212">kernel 4.19.212 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.218">kernel 4.19.218 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.154">kernel 5.4.154 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.162">kernel 5.4.162 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.74">kernel 5.10.74 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.82">kernel 5.10.82 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.14.13">kernel 5.14.13 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.5">kernel 5.15.5 changelog</a>
   <p>
    16 ISOs se déclinent en saveur LXDE, LXQT, XFCE4, ENLIGHTENMENT, GNOME, MATE, KDE5, BASE et MINI (ces deux dernière propose le mode console sans environnement de bureau). 
   <p>
    Elles sont disponibles en 32 et 64 bits sur <a href="downloads">la page de téléchargement.</a>
 
  <h2>Quoi de neuf ?</h2>
-  <h3>Une version 32 bits</h3>
+  <h3>Installation automatique</h3>
    <p>
-    Nous avons décider de reprendre le développement de la version 32 bits de NuTyX.
+    La version 21.10.5 introduit une première version de l'installateur en mode automatique.
+    Si toutes les conditions sont remplies, le partitionnement, le formatage et l'installation de GRUB se font de manière automatique.
+    Les conditions étant un disque dur unique et vierge n'ayant donc aucune table de partitions.
    <p>
 
  <h2>Mise à jour</h2>
   <p>
-   La NuTyX 21.10.0 est une mise à jour mineure.
+   La NuTyX 21.10.5 est une mise à jour mineure.
    Une simple commande classique permet la mise à jour:
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 
