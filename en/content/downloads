@@ -40,7 +40,7 @@
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-MINI.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>MINI 32bits</a>
        <p> 
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-MINI.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>MINI 64bits</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-MINI.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>MINI 64bits</a>
     <td>
        <p>
         The ISO contains a base system withount any graphical interface.
@@ -59,16 +59,16 @@
      <p>
       SHA1 32bits: 85771a71caf6d97353df781e07e7fd29c55bf85d
      <p>
-      SHA1 64bits: 231f2af209a1febfe9dc69d3ddf67e3e1cd89c09
+      SHA1 64bits: f5bcd77e799a10468f76d3ebd4ca19b17c206851
       <td>
-       Environ 316 MO
+       Environ 356 MO
      </tr>
 
    <tr class="odd">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 32bits</a>
       <p> 
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 64bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 64bits</a>
     <td>
      <p>
       The ISO contains a base system withount any graphical interface.
@@ -87,16 +87,16 @@
      <p>
         SHA1 32bits: a2855a300142a998e313b156bf0ec431c4b15202
      <p>
-        SHA1 64bits: 184a0442842cc878d853eab1808f88815e8517cf
+        SHA1 64bits: d26a11f5a2d7833d60bacf1255b93a4592551a11
       <td>
-       Approx. 770 MO
+       Approx. 874 MO
    </tr>
 
    <tr class="even">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE 32bits</a>
      <p>
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE 64bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE 64bits</a>
     <td>
      <p>
       The ISO contains a LXDE desktop.
@@ -107,16 +107,16 @@
      <p>
       SHA1 32bits: 190a08a0717d0167ea79874d13abfed1c47a73d0
      <p>
-      SHA1 64bits: 8e42bc62fc45f740b7dfa67bcea90797a5aa6003 
+      SHA1 64bits: bc06bbe927a6a83096a691f27191890e17aca9b7
       <td>
-       Approx. 1.4 GO
+       Approx. 1.5 GO
    </tr>
 
    <tr class="odd">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-LXQT.iso"><img src="../graphics/downloads/lxqt.png" alt="logo lxqt"/><br/>LXQT 32bits</a>
      <p> 
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-LXQT.iso"><img src="../graphics/downloads/lxqt.png" alt="logo lxqt"/><br/>LXQT 64bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-LXQT.iso"><img src="../graphics/downloads/lxqt.png" alt="logo lxqt"/><br/>LXQT 64bits</a>
     <td>
      <p>
       The ISO contains a LXQT desktop.
@@ -127,16 +127,16 @@
      <p>
        SHA1 32bits: 4263ca14e10bdb856339730051c44e1624143600
      <p>
-       SHA1 64bits: 59a87022c8eefa74f6ebbd005e8c153d6fef9613
+       SHA1 64bits: a1f60064aaaf77106bfdf659249c12c7f6850a97
       <td>
-       Approx. 1.7 GO
+       Approx. 1.6 GO
    </tr>
 
    <tr class="even">
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 32bits</a>
       <p> 
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 64bits</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 64bits</a>
     <td>
      <p>
       The ISO contains a XFCE4 desktop.
@@ -147,16 +147,16 @@
      <p>
       SHA1 32bits: 026f3e14d3348d0a78de306f720353a269e75b1c
      <p>
-      SHA1 64bits: f19259b7984f6216245d066594d80f94c1dab074
+      SHA1 64bits: e04b0560db0d9e81fdbca36703c9c5215582f8ea
       <td>
-       Approx. 1.5 GO
+       Approx. 1.6 GO
    </tr>
 
    <tr class="odd">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-ENLIGHTENMENT.iso"><img src="../graphics/downloads/enlightenment.png" alt="logo enlightenment"/><br/>ENLIGHTENMENT 32bits</a>
      <p> 
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-ENLIGHTENMENT.iso"><img src="../graphics/downloads/enlightenment.png" alt="logo enlightenment"/><br/>ENLIGHTENMENT 64bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-ENLIGHTENMENT.iso"><img src="../graphics/downloads/enlightenment.png" alt="logo enlightenment"/><br/>ENLIGHTENMENT 64bits</a>
     <td>
      <p>
       The ISO contains a ENLIGHTENMENT desktop.
@@ -167,16 +167,16 @@
      <p>
       SHA1 32bits: 16c47c65568f856480a515d9af0caab4e211a2fd
      <p>
-      SHA1 64bits: 3c7142826a23be97b58634515e6ffb045385d9e6
+      SHA1 64bits: 2ba05a468ca13c1e709b1646cef84289d63fe13c
       <td>
-       Approx. 1.7 GO
+       Approx. 1.6 GO
    </tr>
 
    <tr class="even">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE 32bits</a>
          <p>
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE 64bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE 64bits</a>
     <td>
      <p>
       The ISO contains a MATE desktop.
@@ -187,13 +187,13 @@
      <p>
        SHA1 32bits: ca0b5cb5faf49c152c64b4c7884ba67a0e59e564
      <p>
-       SHA1 64bits: 3217930d7b51c9b71201227b35ccb70c4616930a
+       SHA1 64bits: 0310e2e6b405c77978be85ef77e49cb45b445b8b
       <td>
-       Approx. 1.7 GO
+       Approx. 1.8 GO
    </tr>
    <tr class="odd">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME</a>
     <td>
      <p>
       The ISO contains a GNOME desktop.
@@ -202,13 +202,13 @@
      <p>
       kernel: LTS 5.10 and last stable kernel.
      <p>
-        SHA1: 562018540cd8e2c671fdb01fe0756e6a6e421376
+        SHA1: 8064e5dc9248d414f30f7b3d3c696cc9ffc20c17
       <td>
-       Approx. 1.7 GO
+       Approx. 1.8 GO
    </tr>
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.0-KDE5.iso"><img src="../graphics/downloads/kde.png" alt="logo kde5"/><br/>KDE</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-KDE5.iso"><img src="../graphics/downloads/kde.png" alt="logo kde5"/><br/>KDE</a>
     <td>
      <p>
       The ISO contains a KDE5 desktop.
@@ -217,9 +217,9 @@
      <p>
       kernel: LTS 5.10 and last stable kernel.
      <p>
-      SHA1: c90232689bb28c9d55824218daa509822e5bf93a
+      SHA1: 956675f7e2049fe2634cf5159ea7ad2215614a96
     <td>
-      Approx. 1.9 GO
+      Approx. 2.0 GO
    </tr>
   </table>
  <h2>For the experienced NuTyX user</h2>
