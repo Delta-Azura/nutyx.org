@@ -1,0 +1,103 @@
+<h1>Construire une initrd</h1>
+ <h2>Qu'est-ce qu'une initrd ?</h2>
+  <p>
+   Si l'on se tien à la définition de <a href="https://fr.wikipedia.org/wiki/Initrd">Wikipedia</a>
+   en informatique, l'initrd (initial ramdisk) est utilisée pour charger un système de fichiers temporaire en mémoire.
+   Ce système de fichier temporarire est utilisée lors du processus de démarrage de Linux.
+  <p>
+   L'initrd et l'initramfs sont deux méthodes différentes. Elles sont toutes deux courament utilisées lors du processus de démarrage de Linux avant le montage réelle du système de fichiers racine.
+
+ <h2>Pour quoi faire ?</h2>
+  <p>
+   Le noyau est le premier fichier chargé dans l'ordinateur.
+   Il est responsable du bon fonctionnement du matériel.
+   Comme son nom l'indique, le noyau est le coeur du système d'exploitation.
+   Malheureusement, il ne peut pas trouver tout le matériel seul.
+   Par exemple si la machine utilise un RAID, un LVM, une partition encryptée, vous devez utiliser une image initrd pour accomplir cette tache.
+
+ <h2>Comment ça marche sur NuTyX</h2>
+  <p>
+   Le nom de l'initrd suit le nom et la version du kernel.
+   Par exemple, si vous utiliser le dernier kernel stable, 
+   Le nom du kernel est: <i><b>kernel-5.15.1</b></i>.
+   Si l'on regarde dans le dossier où se trouvent les kernels, 
+   on trouve en effet un kernel avec ce nom et son lien:
+   <pre class="command_user"><kbd>ls -al /boot/
+lrwxrwxrwx 1 root root   22  7 oct 16:00 /boot/kernel -> kernel-5.15.1
+-rw-r--r-- 1 root root 9.7M  7 oct 15:09 /boot/kernel-5.15.1
+   </kbd></pre>
+   Le lien est créé lors de la post-installation du paquet 'kernel' par le gestionnaire de paquets <a href="dictionary#ID000">cards</a>.
+  <p>
+   Dans cet exemple, le nom du fichier de l'initrd serait: <b><i>initrd-5.15.1</i></b>.
+   Et comme le fichier kernel-5.15.1, un lien appelé <b><i>initrd</i></b> serait associé.
+ <h2>Construire une initrd</h2>
+  <p>
+   Si vous décidez d'utiliser une initrd au démarrage de NuTyX, vous devez la créer une première fois.
+   Pour construire l'initrd, la seule restriction est que vous ayez les droits administrateurs.
+   Vous pouvez donc utiliser la commande sudo ou <a href="faq#8">activer le compte root</a> et basculer en root:
+  <p>
+   Pour connaître quel est le kernel installé sur votre machine, utilisez cette commande:
+   <pre class="command_user"><kbd>uname -r</kbd></pre>
+   <pre class="output">4.9.238-NuTyX-49</pre>
+   J'utilise le kernel 4.9 LTS et vais construire une initrd pour.
+   La commande <i>mkinitramfs</i> demande un argument qui est exactement le résultat de <i>uname -r</i> ci-dessus.
+   <pre class="command_user"><kbd>sudo mkinitramfs 4.9.238-NuTyX-49</kbd></pre>
+   <pre class="output">[sudo] Mot de passe de thierry :
+Creating ... 
+done.</pre>
+  <p>
+   Si vous regarder dans le dossier où se trouvent tous les kernel, on peut y trouver un nouveau fichier appelé: initrd-4.9.238-NuTyX-49
+   <pre class="command_user"><kbd>l /boot -tr </kbd></pre>
+   <pre class="output">.....
+...
+..
+-rw-r--r--  1 root root  80M 10 oct 19:47 initrd-4.9.238-NuTyX-49
+drwxr-xr-x  4 root root 4.0K 10 oct 19:47 .</pre>
+  <p>
+   Comme mentionné avant, nous devont créer un lien avec <b><i>le nom exact</i></b> afin que <a href="dictionary#ID000">cards</a> puisse faire la mise à jour de cet initrd quand c'est necessaire.
+   Par convention, le nom du lien est TOUJOURS <i>initrd</i> et la dernière partie du fichier initrd séparé par un tirer.
+   Dans notre exemple:
+  <p>
+   <b>initrd-49</b>
+  <p>
+   On peut maintenant créer le lien avec la commande:
+   <pre class="command_user"><kbd>sudo ln -svf initrd-4.9.238-NuTyX-49 /boot/initrd-49</kbd></pre>
+   <pre class="output">[sudo] Mot de passe de thierry : 
+'/boot/initrd-49' -> 'initrd-4.9.238-NuTyX-49'</pre>
+  <p>
+   Et voilà, nous avons terminé la procedure et sommes prêt pour vérifier le processus de mise à jour.
+ <h2>Vérifier le processus de mise à jour</h2>
+  <p>
+   La vérification du processus de mise à jour consiste à réinstaller simplement le paquet <i>kernel-49</i>:
+   <pre class="command_user"><kbd>sudo cards install kernel-49</kbd></pre>
+   <pre class="output">[sudo] Mot de passe de thierry :
+  kernel-49 4.9.238-1   62.70 MB (111.97 MB/s) 100 % - 0 s 
+Obtenir les infos sur les 704 paquets: 100 %
+SUPPRIME: (base) kernel-49 4.9.238-1, 5138 fichiers: 100 %
+  AJOUTE: (base) kernel-49 4.9.238-1, 5146 fichiers: 100 %
+post-installation: démarrée
+This is a bios installation
+Creating ... 
+done.
+post-installation: finie
+post-installation: démarrée
+  /sbin/ldconfig -r /
+post-installation: finie</pre>
+  <p>
+   Nous pouvoir qu'une initrd a bien été créé.
+   Et avec la commande ci-dessous, tout devrait être clair:
+   <pre class="command_user"><kbd>l /boot -tr </kbd></pre>
+   <pre class="output">.....
+...
+lrwxrwxrwx  1 root root   23 10 oct 20:13 kernel-49 -> kernel-4.9.238-NuTyX-49
+lrwxrwxrwx  1 root root   23 10 oct 20:13 initrd-49 -> initrd-4.9.238-NuTyX-49
+drwxr-xr-x 35 root root 4.0K 10 oct 20:13 ..
+drwxr-xr-x  4 root root 4.0K 10 oct 20:13 .</pre> 
+ 
+ <h2>Ajuster votre GRUB</h2>
+  <p>
+   L'explication pour ajuster le grub se trouve <a href="nutyx-man#10">ici</a>.
+   Ajustez uniquement le nom de l'initrd avec le votre.
+  <p>
+   Bonne chance !!!
+

@@ -49,7 +49,7 @@ done.</pre>
 drwxr-xr-x  4 root root 4.0K 10 oct 19:47 .</pre>
   <p>
    As mentionned earlier, we also need to create a link <b><u>with the right name</u></b> so that <a href="dictionary#ID000">cards</a> can do the upgrade process of this initrd.
-   As a convention, the name of the link is ALWAYS made of <i>init</i> and last part of the initrd filename separated by a dash, in our example:
+   As a convention, the name of the link is ALWAYS made of <i>initrd</i> and last part of the initrd filename separated by a dash, in our example:
    <p>
     <b>initrd-49</b>
    <p> We can now make the link with following command:
