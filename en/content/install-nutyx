@@ -128,8 +128,8 @@ VERSION="rolling"</pre>
          <pre class="command"><kbd>mkdir -p /mnt/hd
 mount /dev/sda2 /mnt/hd</kbd></pre>
         <li>
-         Install the base NuTyX
-         <pre class="command"><kbd>bash install-nutyx</kbd></pre>
+         Install the base NuTyX with the last kernel
+         <pre class="command"><kbd>KERNEL=kernel bash install-nutyx</kbd></pre>
         <li>
          Once the installation is done, you can re-enter into the freshly installed NuTyX via the command:
          <pre class="command"><kbd>bash install-nutyx -ec</kbd></pre>
