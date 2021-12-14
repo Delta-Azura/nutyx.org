@@ -66,7 +66,7 @@
 
    <tr class="odd">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 32bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.5-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 32bits</a>
       <p> 
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 64bits</a>
     <td>
@@ -85,7 +85,7 @@
      <p>
       kernel: LTS 5.10 and last stable kernel.
      <p>
-        SHA1 32bits: a2855a300142a998e313b156bf0ec431c4b15202
+        SHA1 32bits: f860c038c175ace1ba17e5ebfeca5cfd36f58596
      <p>
         SHA1 64bits: d26a11f5a2d7833d60bacf1255b93a4592551a11
       <td>
@@ -94,7 +94,7 @@
 
    <tr class="even">
     <td class="lien_article">
-       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE 32bits</a>
+       <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.5-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE 32bits</a>
      <p>
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo lxde"/><br/>LXDE 64bits</a>
     <td>
@@ -105,7 +105,7 @@
      <p>
       kernel: LTS 5.10 and last stable kernel.
      <p>
-      SHA1 32bits: 190a08a0717d0167ea79874d13abfed1c47a73d0
+      SHA1 32bits: e1bc31e6608294e8b8ed0412d2aa7b32b9029891
      <p>
       SHA1 64bits: bc06bbe927a6a83096a691f27191890e17aca9b7
       <td>
@@ -134,7 +134,7 @@
 
    <tr class="even">
     <td class="lien_article">
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.0-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 32bits</a>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-21.10.5-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 32bits</a>
       <p> 
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-21.10.5-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 64bits</a>
     <td>
@@ -145,7 +145,7 @@
      <p>
       kernel: LTS 5.10 and last stable kernel.
      <p>
-      SHA1 32bits: 026f3e14d3348d0a78de306f720353a269e75b1c
+      SHA1 32bits: ebcd5059337f1a30cb7c975d0147b092207efc71
      <p>
       SHA1 64bits: e04b0560db0d9e81fdbca36703c9c5215582f8ea
       <td>
