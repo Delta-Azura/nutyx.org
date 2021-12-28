@@ -1,60 +1,91 @@
-<h1>Dernière nouvelle 28-11-2021</h1>
+<h1>Dernière nouvelle 26-12-2021</h1>
 
- <h2>NuTyX 21.10.5 disponible avec cards 2.4.140</h2>
+ <h2>NuTyX 21.10.12 disponible avec cards 2.4.142</h2>
   <p>
-   Nous sommes heureux d'annoncer la nouvelle version de NuTyX 21.10.5 et cards 2.4.140.
+   Nous sommes heureux d'annoncer la nouvelle version de NuTyX 21.10.12 et cards 2.4.142.
   <p>
-   Le serveur graphique Xorg-server version 21.1.1
-   la librairie Mesa 3D en 21.2.5, Gtk4 4.4.0
+   Le serveur graphique Xorg-server version 21.1.2
+   la librairie Mesa 3D en 21.3.2, Gtk4 4.4.0
    et Qt 5.15.2.
   <p>
-   Les interpreteurs Python sont ent 3.10.0 et 2.7.18.
+   Les interpreteurs Python sont ent 3.10.1 et 2.7.18.
   <p>
-   L'environnement de bureau XFCE est mis à jour en version 4.16.
+   L'environnement de bureau XFCE est mis à jour en version 4.16.0.
   <p>
-   L'environnement de bureau MATE est en version 1.26. 
+   L'environnement de bureau MATE est en version 1.26.0.
   <p>
-   L'environnement de bureau GNOME est également mis à jour en version 40.1.1
+   L'environnement de bureau GNOME est également mis à jour en version 41.2
   <p>
-   L'environnement de bureau KDE est disponible en Plasma 5.23.3, Framework 5.88.0 et les applications en 21.08.3.
+   L'environnement de bureau KDE est disponible en Plasma 5.23.4, Framework 5.89.0 et les applications en 21.12.0.
   <p>
-   Les navigateurs disponibles sont entre autre: Firefox 94.0.2, Chromium 96.0.4664.45, Epiphany 40.3, etc
+   Les navigateurs disponibles sont entre autre: Firefox 94.0.2, Chromium 96.0.4664.45, Epiphany 41.3, etc
   <p>
-   De nombreuses applications on été mise à jour également comme Thunderbird 91.3.2, Scribus 1.5.7, Libreoffice 7.1.5.2, Gimp 2.10.28, etc.
+   De nombreuses applications on été mise à jour également comme Telegram-desktop 3.3, Thunderbird 91.4.1, Scribus 1.5.7, Libreoffice 7.2.4.1, Gimp 2.10.30, etc.
   <p>
    NuTyX de base est livré avec les noyaux de support à long terme (LTS):
-   4.9.291, 4.14.256, 4.19.218, 5.4.162 et 5.10.82
-   et la dernière version stable 5.15.5 .
+   4.9.294, 4.14.259, 4.19.222, 5.4.168 et 5.10.88
+   et la dernière version stable 5.15.11 .
   <p>
    Les journaux de modifications des noyaux sont disponibles ici:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.291">kernel 4.9.291 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.294">kernel 4.9.294 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.256">kernel 4.14.256 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.259">kernel 4.14.259 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.218">kernel 4.19.218 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.222">kernel 4.19.222 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.162">kernel 5.4.162 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.168">kernel 5.4.168 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.82">kernel 5.10.82 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.88">kernel 5.10.88 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.5">kernel 5.15.5 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.11">kernel 5.15.11 changelog</a>
   <p>
-   16 ISOs se déclinent en saveur LXDE, LXQT, XFCE4, ENLIGHTENMENT, GNOME, MATE, KDE5, BASE et MINI (ces deux dernière propose le mode console sans environnement de bureau). 
+   14 ISOs se déclinent en saveur LXDE, LXQT, XFCE4, ENLIGHTENMENT, MATE, GNOME (uniquement en 64bits), KDE5 (uniquement en 64bits) et BASE (cette dernière propose le mode console sans environnement de bureau).
   <p>
    Elles sont disponibles en 32 et 64 bits sur <a href="downloads">la page de téléchargement.</a>
 
  <h2>Quoi de neuf ?</h2>
+
+  <h3>Installation de GRUB</h3>
+   <p>
+    La mise en place de GRUB est désormais standard sur une machine EFI.
+
   <h3>Installation automatique</h3>
    <p>
-    La version 21.10.5 introduit une première version de l'installateur en mode automatique.
+    La version 21.10.12 introduit une première version de l'installateur en mode automatique.
     Si toutes les conditions sont remplies, le partitionnement, le formatage et l'installation de GRUB se font de manière automatique.
     Les conditions étant un disque dur unique et vierge n'ayant donc aucune table de partitions.
+
+  <h3>Nouveau mode d'installation en mode live: entièrement personnalisable</h3>
    <p>
+     Si vous choisissez le mode 'LIVE' lors du lancement d'une ISO,
+     vous pouvez désormais utiliser la commande 'KERNEL=&lt;kernel_de_votre_choix&gt; install-nutyx' pour installer NuTyX de manière entièrement manuel.
+     Le partionnement, le formatage et le montage des partitions est sous votre responsabilitée.
+     Veuillez consulter <a href="install-nutyx#4">la documentation</a>.
+
+  <h3>Les dépendances d'un paquet sont protégées</h3>
+   <p>
+    La commande 'cards remove' ne vous permet plus de supprimer un paquet utilié par une autre.
+    Cela signifie que c'est une dépendance.
+
+ <h2>Résolution de bugs</h2>
+  <p>
+   Les problèmes ci-dessous ont été résolu:
+   <ul>
+    <li>
+     L'installation de NuTyX en mode EFI sous virtualbox.
+    <li>
+     La commande grub-mkconfig rend le système impossible à démarrer après la mise du kernel.
+    <li>
+     Lors de la post-installation, si le mot de passe est vide, l'installation est inutilisable.
+    <li>
+     Lors de la post-installation, un mauvais choix d'utilisateur peut rendre l'installation inutilisable.
+
+   </ul>
 
  <h2>Mise à jour</h2>
   <p>
-   La NuTyX 21.10.5 est une mise à jour mineure.
+   La NuTyX 21.10.12 est une mise à jour mineure.
    Une simple commande classique permet la mise à jour:
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
 
