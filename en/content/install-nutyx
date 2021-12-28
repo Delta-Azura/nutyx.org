@@ -5,7 +5,8 @@
   <p>
    Make sure you are using Bash interpreter otherwise the script will fail.
   <p>
-   Make sure your distribution is running 2.32 glibc version minimum otherwise the script will fail.
+   If you use another distribution, make sure your distribution is running a compatible glibc version
+   otherwise the script will fail.
   <p>
    It must be executed from the root account.
   <p>
@@ -74,7 +75,7 @@
         <td>
          Available kernel names:
         <p>
-         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel and linux-mainline.
+         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel or linux-mainline.
        <tr class="odd">
         <td>
          DEPOT
@@ -110,6 +111,9 @@ VERSION="rolling"</pre>
        <ul>
         <li>
          Create a root account when starting the 'LIVE' iso and open a terminal (in root)
+        <li>
+         Make sure the network is working.
+         <pre class="command"><kbd>ping nutyx.org</pre>
         <li>
          Create the needed partitions for NuTyX:
          <pre class="command"><kbd>cfdisk /dev/sda</kbd></pre>

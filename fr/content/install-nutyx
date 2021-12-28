@@ -5,11 +5,12 @@
   <p>
     Assurez-vous d'utiliser l'interpréteur de commande Bash, sinon le script ne fonctionnera pas.
   <p>
-    Assurez-vous que la distribution utilise la version glibc 2.32 au minimum, sinon le script ne fonctionnera pas.
+    Si vous utilisez une distribution externe, assurez-vous qu'elle utilise une glibc compatible avec celle de NuTyX,
+    sinon le script ne fonctionnera pas.
   <p>
     Il doit être lancé depuis le compte root.
   <p>
-     Ce script permet l'installation d'une NuTyX de base dans un dossier.
+     Ce script permet l'installation d'une NuTyX de base dans un dossier ou sur une partition montée.
   <p>
     Sa signature peut être vérifiée en téléchargeant le fichier:
     <a class="url" href="http://www.nutyx.org/install-nutyx.md5sum">http://www.nutyx.org/install-nutyx.md5sum</a> 
@@ -80,7 +81,7 @@
         <td>
          Nom des kernels disponible:
         <p>
-         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel et linux-mainline.
+         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel ou linux-mainline.
        <tr class="odd">
         <td>
          DEPOT
@@ -119,6 +120,9 @@ VERSION="rolling"</pre>
        <ul>
         <li>
          Créer un compte root lors du lancement du live et ouvrir un terminal (en root)
+        <li>
+         S'assurer que la connection réseau est fonctionnelle:
+         <pre class="command"><kbd>ping nutyx.org</pre>
         <li>
          Créer les partititons necessaire pour la mise en place de NuTyX
          <pre class="command"><kbd>cfdisk /dev/sda</kbd></pre>
