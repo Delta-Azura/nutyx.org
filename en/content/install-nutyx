@@ -110,7 +110,8 @@ VERSION="rolling"</pre>
  <h2>Typical example of the script: Install a NuTyX from the 'LIVE' iso</h2>  
        <ul>
         <li>
-         Create a root account when starting the 'LIVE' iso and open a terminal (in root)
+         Open a terminal and switch to the root account if not yet set:
+         <pre class="command_user"><kbd>sudo bash</pre>
         <li>
          Make sure the network is working.
          <pre class="command"><kbd>ping nutyx.org</pre>
@@ -184,7 +185,7 @@ mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
            <pre class="command">grub-install --target=x86_64-efi /dev/sda<kbd></pre>
           <li>
            For the 'BIOS' machine:
-           <pre class="command">grub-install --target=x86_64 /dev/sda<kbd></pre>
+           <pre class="command">grub-install --target=i386-pc /dev/sda<kbd></pre>
          </ul>  
         <li>
          Create the /boot/grub/grub.cfg file:

@@ -119,7 +119,8 @@ VERSION="rolling"</pre>
   <h2>Utilisation typique du script: Installer NuTyX depuis l'iso 'LIVE'</h2>
        <ul>
         <li>
-         Créer un compte root lors du lancement du live et ouvrir un terminal (en root)
+         Ouvrir un terminal et passer en root si ce n'est pas encore le cas:
+         <pre class="command_user"><kbd>sudo bash</pre>
         <li>
          S'assurer que la connection réseau est fonctionnelle:
          <pre class="command"><kbd>ping nutyx.org</pre>
@@ -194,7 +195,7 @@ mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
            <pre class="command">grub-install --target=x86_64-efi /dev/sda<kbd></pre>
           <li>
            Pour la machine BIOS:
-           <pre class="command">grub-install --target=x86_64 /dev/sda<kbd></pre>
+           <pre class="command">grub-install --target=i386-pc /dev/sda<kbd></pre>
          </ul>
         <li>
          Créer le fichier /boot/grub/grub.cfg
