@@ -1,11 +1,13 @@
-  <h1>Typical installation of NuTyX on a single partition</h1>
+  <h1>Automatic installation of NuTyX on a single partition</h1>
    <p>
-    These following screenshots show you a typical installation on a single partition in BIOS mode.
-    In this example we have a disk of 8 Gbytes.
-    The first partition is the swap partition of size 2 Gbytes.
+    These following screenshots show you an automatic installation on a single partition in BIOS or UEFI mode.
+   <p>
+    The first partition is the swap partition. Size of twice the memory size if less then 4 Gytes.
     The rest of the disk space will be available for the NuTyX install partition.
    <p>
-    A minimum of 1 Gigabyte RAM is best suited. We assume that you have already burnt the ISO onto a CD.
+    If the machine did start in UEFI mode, the first partition is the 100 Mbytes EFI partition. 
+   <p>
+    A minimum of 1 Gigabyte RAM is needed. We assume that you have already burnt the ISO onto a CD.
    <p>
     If you prefer, you can prepare a NuTyX bootable USB flash-drive.  Either option will work.
    <p>

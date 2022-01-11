@@ -1,11 +1,13 @@
-  <h1>Installation classique de NuTyX sur une seule partition</h1>
+  <h1>Installation automatique de NuTyX sur une seule partition</h1>
    <p>
-    Ces captures d'écrans vous montrent une installation classique sur une seule partition en mode bios.
-    Le disque dur est de 8 goctets.
-    La première partition est la partition d'échange et sa taille est de 2 goctets.
-    Le reste de la partition est disponible et libre.
+    Ces captures d'écrans vous montrent une installation automatique sur une seule partition en mode BIOS ou UEFI.
    <p>
-    La taille mémoire minimum recommandée est de 1 Goctet.
+    La première partition est la partition d'échange et sa taille est de 2 x la taille mémoire si celle-ci est moins de 4 goctets.
+    Le reste de la partition sera utilisée pour le système d'exploitation.
+   <p>
+    Si la machine démarre en mode UEFI, la première partition est la partition EFI d'une taille de 100 Moctets.
+   <p>
+    La taille mémoire minimum necessaire est de 1 Goctet.
    <p>
     L'iso est transférée sur CD. Vous pouvez évidemment utiliser une clé USB si votre PC le permet.
    <p>
