@@ -2,7 +2,7 @@
  <h2>Guides du nouvel utilisateur sur NuTyX</h2>
 
   <table width="100%" cellspacing="0">
-   <tr class="odd">
+   <tr class="even">
     <td class="lien_article">
       <a class="url" href="dictionary">Petit lexique du NuTyXien</a>
     </td>
@@ -10,25 +10,14 @@
      Tous les termes utilisés dans la documentation sont référencés et expliqués dans ce petit lexique
     </td>
    </tr>   
-   <tr class="even">
+   <tr class="odd">
     <td class="lien_article">
-      <a class="url" href="install">Installation de base classique sur une seule partition en mode BIOS</a>
+      <a class="url" href="install">Installation automatique sur une seule partition</a>
     </td>
     <td>
      L'installation proposée ici consiste à utiliser un disque complet,
      une seule partition et l'outil d'amorçage (GRUB) installé sur la même partition.
      Pour ceux qui souhaitent une première approche de l'installation sans se prendre la tête.
-    </td>
-   </tr>
-   <tr class="odd">
-    <td class="lien_article">
-      <a class="url" href="install-uefi">Installation de base classique sur une seule partition en mode UEFI</a>
-    </td>
-    <td>
-     L'installation proposée ici consiste à utiliser un disque complet,
-     une seule partition sans outil d'amorçage (GRUB).
-     Cette methode peut-être utilisée si votre machine supporte l'UEFI, vous pouvez alors tirer profit de cette fonctionnalité.
-     Pour ceux qui souhaitent une approche de l'installation en mod UEFI sans se prendre la tête.
     </td>
    </tr>
    <tr class="even">

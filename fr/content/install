@@ -12,37 +12,9 @@
     Le disque est totalement vierge et n'a jamais été formaté.
     <h2>Démarrer la clé / le CD sur la(le)quel se trouve l'ISO</h2>
       <table align="center">
-       <tr><td><img src="../../graphics/install/BootBios.png"></td></tr>
+       <tr><td><img src="../../graphics/install/BootUefi.png"></td></tr>
        <tr><td><img src="graphics/install/SelectLanguage.png"></td></tr>
-       <tr><td><img src="graphics/install/HowToProceed.png"></td></tr>
       </table>
-    <h2>Création de la partition (optionnel)</h2>
-      <p>
-       La création de la partition n'est pas indispensable.
-       Si vous avez déjà une partition disponible <a href="#3">vous pouvez directement passer au formatage de la partition.</a>
-      <table align="center">
-       <tr><td><img src="graphics/install/CreateYoursPartitions.png"></td></tr>
-       <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
-       <tr><td><img src="graphics/install/PartitionTypeSelection.png"></td></tr>
-       <tr><td><img src="graphics/install/EmptyDisk1.png"></td></tr>
-       <tr><td><img src="graphics/install/PartitionCreate1.png"></td></tr>
-       <tr><td><img src="graphics/install/PartitionCreate2.png"></td></tr>
-      </table>
-
-    <h2>Formatage de la partition (optionnel)</h2>
-     <p>
-      Le formatage de la partition est à faire que si vous venez de la créer ou vous souhaitez effacer l'intégralité de son contenu.
-      Si au contraire vous souhaitez conserver certains dossiers, vous pouvez alors supprimer uniquement
-      les dossiers <b>opt, bin, etc, root, run, sbin, usr et var</b> qui se trouvent sur la partition de destination.
-      Cette méthode permet de conserver vos données personnelles par exemple.
-      <a href='#4'>Si la partition de destination est vierge et déjà formatée,
-      vous pouvez directement passer à l'installation de NuTyX.</a>
-      <table align="center">
-       <tr><td><img src="graphics/install/FormatPartition.png"></td></tr>
-       <tr><td><img src="graphics/install/AvailableFileSystems.png"></td></tr>
-       <tr><td><img src="graphics/install/LaunchFormatSda2Btrfs.png"></td></tr>
-      </table>
-
     <h2>Installation de NuTyX</h2>
       <p>
        L'installation de NuTyX se fait sans connection réseau.
@@ -51,8 +23,6 @@
       <table align="center">
        <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
        <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
-       <tr><td><img src="graphics/install/ConfigureBootAfterInstall.png"></td></tr>
-       <tr><td><img src="graphics/install/Init1.png"></td></tr>
       </table>
     <h2>Configuration de NuTyX</h2>
       <p>

@@ -15,33 +15,8 @@
 
    <h2>Boot-up the USB Flash Drive/CD on which you copied/burned the ISO.</h2>
      <table align="center">
-      <tr><td><img src="../../graphics/install/BootBios.png"></td></tr>
+      <tr><td><img src="../../graphics/install/BootUefi.png"></td></tr>
       <tr><td><img src="graphics/install/SelectLanguage.png"></td></tr>
-      <tr><td><img src="graphics/install/HowToProceed.png"></td></tr>
-     </table>
-   <h2>Partition creation (optional)</h2>
-     <p>
-      Creating a partition is optional.
-      If you already have an empty partition available, you can <a href="#3">go directly to the format of the partition.</a>
-     <table align="center">
-      <tr><td><img src="graphics/install/CreateYoursPartitions.png"></td></tr>
-      <tr><td><img src="graphics/install/PartitionTools.png"></td></tr>
-      <tr><td><img src="graphics/install/PartitionTypeSelection.png"></td></tr>
-      <tr><td><img src="graphics/install/EmptyDisk1.png"></td></tr>
-      <tr><td><img src="graphics/install/PartitionCreate1.png"></td></tr>
-      <tr><td><img src="graphics/install/PartitionCreate2.png"></td></tr>
-     </table>
-
-    <h2>Format the partition (optional)</h2>
-     <p>
-      The formatting of the partition is optional.
-      If you have an unformated partition or you want get rid of everything on the partition, then just format it.
-      If you still want to keep your personal data, you need to manually remove the following directories: <b>opt, bin, etc, root, run, sbin, usr and var</b>.
-      If you already have an <u>empty</u> formated partition, you can <a href="#4">go directly to the installation of NuTyX</a>
-     <table align="center">
-      <tr><td><img src="graphics/install/FormatPartition.png"></td></tr>
-      <tr><td><img src="graphics/install/AvailableFileSystems.png"></td></tr>
-      <tr><td><img src="graphics/install/LaunchFormatSda2Btrfs.png"></td></tr>
      </table>
 
     <h2>Install NuTyX</h2>
@@ -50,8 +25,6 @@
      <table align="center">
       <tr><td><img src="graphics/install/InstallNuTyX.png"></td></tr>
       <tr><td><img src="graphics/install/InstallInProgress.png"></td></tr>
-      <tr><td><img src="graphics/install/ConfigureBootAfterInstall.png"></td></t>
-      <tr><td><img src="graphics/install/Init1.png"></td></tr>
      </table>
 
    <h2>Configure NuTyX</h2>
