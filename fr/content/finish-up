@@ -6,11 +6,11 @@
  <h2>Mise à jour des informations concernant les paquets disponibles</h2>
   Il faut commencer par renseigner les paquets disponibles à votre nouvelle installation. 
   Un <a href="dictionary#ID300">alias</a> est disponible à cet effet:
-  <pre class="command_user"><kbd>check</kbd></pre>
+  <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
   <pre class="output">[sudo] password for thierry:</pre>
-  Vous entrez le mot de passe que vous avez choisi lors de l'installation et la synchronisation démarre:
+  Vous entrez le mot de passe que vous avez choisi lors de l'installation et la mise à jour commence:
   <pre class="output">[/]</pre>
- La synchronisation est terminée.
+ La mise à jour est terminée.
  Vous êtes à présent prêt pour installer le reste des paquets pour obtenir une NuTyX utilisable.
  <h2>Installation d'un bureau:</h2>
   On commence par choisir un bureau.
@@ -198,6 +198,8 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
     <pre class="command_user"><kbd>get libreoffice</kbd></pre>
    <h3>Messagerie instantanée</h3>
     <pre class="command_user"><kbd>get pidgin</kbd></pre>
+    ou
+    <pre class="command_user"><kbd>get telegram-desktop</kbd></pre>
    <h3>Gestion du pad d'un ordinateur portable</h3>
      <pre class="command_user"><kbd>get xorg-xf86-input-synaptics</kbd></pre>
    <h3>Réseau sans fils en mode itinérant</h3>

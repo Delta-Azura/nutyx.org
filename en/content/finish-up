@@ -6,11 +6,11 @@
  <h2>Updating the meta data about available packages</h2>
   We need to inform your NuTyX about all the available packages that can be installed.
   An <a href="dictionary#ID300">alias</a> is available for that:
-  <pre class="command_user"><kbd>check</kbd></pre>
+  <pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
   <pre class="output">[sudo] password for charly:</pre>
-  You enter now the password you specified during the installation, and synchronisation starts:
+  You enter now the password you specified during the installation, and upgrade process starts:
   <pre class="output">[/]</pre>
-  Synchronisation is done.
+  Upgrade is done.
   You are now ready to install the rest of the packages to obtain a graphical NuTyX interface.
  <h2>Desktop installation:</h2>
   You can now choose your favorite desktop.
@@ -195,6 +195,8 @@ exec xterm -geometry 80x66+0+0 -name login</pre>
    <pre class="command_user"><kbd>get libreoffice</kbd></pre>
   <h3>Instant message</h3>
    <pre class="command_user"><kbd>get pidgin</kbd></pre>
+   or
+   <pre class="command_user"><kbd>get telegram-desktop</kbd></pre>
   <h3>Laptop pad management</h3>
    <pre class="command_user"><kbd>get xorg-xf86-input-synaptics</kbd></pre>
   <h3>Wireless tools management</h3>
