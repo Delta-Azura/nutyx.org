@@ -59,17 +59,17 @@ set timeout 5<br />set color_highlight=blue/white
 set color_normal=cyan/black<br />set gfxpayload=1024x768x16
 menuentry "NuTyX SysV on /dev/sda2" {
  set root=(hd0,2)
- linux /boot/kernel-54 root=/dev/sda2 ro quiet verbose=no
+ linux /boot/kernel root=/dev/sda2 ro quiet verbose=no
 # initrd /boot/initrd
 }
 menuentry "NuTyX RuNyX on /dev/sda2" {
  set root=(hd0,2)
- linux /boot/kernel-54 root=/dev/sda2 init=/sbin/runit-init ro quiet verbose=no
+ linux /boot/kernel root=/dev/sda2 init=/sbin/runit-init ro quiet verbose=no
 # initrd /boot/initrd
 }
 menuentry "NuTyX Systemd on /dev/sda2" {
  set root=(hd0,2)
- linux /boot/kernel-54 root=/dev/sda2 init=/sbin/systemd-init ro quiet
+ linux /boot/kernel root=/dev/sda2 init=/sbin/systemd-init ro quiet
 # initrd /boot/initrd
 }
 menuentry "Windows 10" {
