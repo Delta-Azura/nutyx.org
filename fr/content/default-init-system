@@ -1,0 +1,27 @@
+<h1>Changer le système d'initilisation par défaut</h1>
+    <h2>Introduction</h2>
+        <p>
+            NuTyX propose trois systèmes d'initilisation : Sysvinit, Systemd et Runyx.
+        <p>
+            Site web de runyx : https://github.com/NuTyX/runyx
+        <p> 
+            Site web de systemd : https://systemd.io/
+
+    <h2>Comment procéder</h3>
+        <p>
+            Il vous suffit d'aller éditer le fichier /etc/default/grub à l'aide d'un quelquonque éditeur de texte.
+        <p>
+            La ligne à modifier est : "GRUB_CMDLINE_LINUX"
+        <p> 
+            Pour démarrer par défaut avec SystemD : GRUB_CMDLINE_LINUX="init=/sbin/systemd-init"
+        <p>
+            Pour démarrer avec Runyx : GRUB_CMDLINE_LINUX="init=/sbin/runit-init"
+
+    <h2>Générer la nouvelle configuration grub</h2>
+        </p>
+            Pour que modifications soient effectives, il faut générer la configuration de grub.
+        </p>
+            Cela se fera à l'aide de cette commande :
+            <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
+            
+        
