@@ -1,0 +1,25 @@
+<h1>Change the default init system</h1>
+    <h2>Introduction</h2>
+        <p>
+            NuTyX provide three init system.
+        <p>
+            runyx : https://github.com/NuTyX/runyx
+        <p> 
+            systemd : https://systemd.io/
+
+    <h2>How to proceed</h3>
+        <p>
+            Edit the /etc/default/grub file with a random text editor.
+        <p>
+            Modifiy this line : "GRUB_CMDLINE_LINUX"
+        <p> 
+            To boot with systemd : GRUB_CMDLINE_LINUX="init=/sbin/systemd-init"
+        <p>
+            To boot with Runyx : GRUB_CMDLINE_LINUX="init=/sbin/runit-init"
+
+    <h2>Make the new grub configuration effective</h2>
+        </p>
+            To save the new grub configuration
+            <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
+            
+        
