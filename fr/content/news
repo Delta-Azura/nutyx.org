@@ -65,7 +65,7 @@
 
   <h3>Les dépendances d'un paquet sont protégées</h3>
    <p>
-    La commande 'cards remove' ne vous permet plus de supprimer un paquet utilié par une autre.
+    La commande 'cards remove' ne vous permet plus de supprimer un paquet utilisé par une autre.
     Cela signifie que c'est une dépendance.
 
  <h2>Résolution de bugs</h2>
