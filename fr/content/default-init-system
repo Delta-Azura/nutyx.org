@@ -9,7 +9,7 @@
 
     <h2>Comment procéder</h3>
         <p>
-            Il vous suffit d'aller éditer le fichier /etc/default/grub à l'aide d'un quelquonque éditeur de texte.
+            Il vous suffit d'aller éditer le fichier /etc/default/grub à l'aide d'un quelconque éditeur de texte.
         <p>
             La ligne à modifier est : "GRUB_CMDLINE_LINUX"
         <p> 
