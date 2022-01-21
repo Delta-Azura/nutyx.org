@@ -179,8 +179,13 @@ mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
            <pre class="command"><kbd>swapon /dev/sda1</kbd></pre>
           </ul>
         <li> 
-         Installation de la NuTyX de base avec le dernier kernel
-         <pre class="command"><kbd>KERNEL=kernel install-nutyx</kbd></pre>
+         Installation de la NuTyX de base avec le dernier kernel:
+         <p>
+          Si vous utilisez une ISO NuTyX:
+		  <pre class="command"><kbd>KERNEL=kernel install-nutyx</kbd></pre>
+		 <p>
+		  Si vous utilisez une autre distribution:
+		  <pre class="command"><kbd>CHROOT="coreutils" SHELL=/bin/bash KERNEL=kernel install-nutyx</kbd></pre>
         <li>
          Une fois l'installation terminée, entrer dans la NutyX fraîchement installée via la commande:
          <pre class="command"><kbd>install-nutyx -ec</kbd></pre>
