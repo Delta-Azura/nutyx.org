@@ -39,9 +39,9 @@
         <p>
             Ou :
             <pre class="command_user"><kbd>del systemd -a</pre>
-                
+
                 <h3>Attention</h3>
                     <p>
-                        Il ne faut en aucun cas supprimer le paquet sysvinit qui contient des librairies essentielles au démarre de votre système !
+                        Il ne faut en aucun cas supprimer le paquet sysvinit qui contient des librairies essentielles au démarrage de votre système !
             
         
