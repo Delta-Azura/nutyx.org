@@ -6,7 +6,7 @@
             Pour les lister : 
             <pre class="command_user"><kbd>search kernel</kbd></pre>
         <p> 
-            Ici nous uriliser
+            Ici nous utiliserons le kernel-419 pour l'exemple.
     <h2>Installation d'un kernel</h2>
         <p> 
             L'installation d'un kernel se fera à l'aide de cette commande (exemple pour le 4.19):
