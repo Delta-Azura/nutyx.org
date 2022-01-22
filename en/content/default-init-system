@@ -1,15 +1,15 @@
 <h1>Change the default init system</h1>
     <h2>Introduction</h2>
         <p>
-            NuTyX provide three init system.
-        <p>
-            runyx : https://github.com/NuTyX/runyx
+            NuTyX provides three init system.
         <p> 
-            systemd : https://systemd.io/
+            <a href ='https://github.com/NuTyX/runyx'>runyx</a>
+        <p>
+            <a href ='https://system.io'>systemd</a>
 
     <h2>How to proceed</h3>
         <p>
-            Edit the /etc/default/grub file with a random text editor.
+            Edit /etc/default/grub file.
         <p>
             Modifiy this line : "GRUB_CMDLINE_LINUX"
         <p> 
@@ -18,8 +18,32 @@
             To boot with Runyx : GRUB_CMDLINE_LINUX="init=/sbin/runit-init"
 
     <h2>Make the new grub configuration effective</h2>
-        </p>
-            To save the new grub configuration
+        <p>
+            To generate the new grub configuration
             <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
+
+    <h2>Remove an init system</h2>
+        <p>
+            It's possible to remove an init system if you don't use it.
+        <p>
+            To remove Runyx :
+            <pre class="command">cards remove runyx -a<kdb>
+        <p>
+            Or :
+            <pre class="command_user"><kbd>del runyx -a</pre>
+        <p>
+            For systemd :
+            <pre class="command">cards remove systemd -a<kdb></kdb>
+        <p>
+            Or :
+            <pre class="command_user"><kbd>del systemd -a</pre>
+
+            <h3>Warning</h3>
+                <p>
+                    You must not remove the sysvinit package because it contains needed libraries for the startup of the system.
+        
+    <h2>Related articles</h2>
+        <p>
+            Related : <a href = "https://www.nutyx.org/en/?page=grub-uefi-install">grub-uefi-install</a>
             
         
