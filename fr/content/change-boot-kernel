@@ -10,7 +10,7 @@
     <h2>Installation d'un kernel</h2>
         <p> 
             L'installation d'un kernel se fera à l'aide de cette commande (exemple pour le 4.19):
-            <pre class="command_user"><kbd>get kernel-419</kbd><pre>
+            <pre class="command_user"><kbd>get kernel-419</kbd></pre>
         <p> 
             Pour plus d'information sur la manière de gérer les paquets sous nutyx :
             <a href ='https://nutyx.org/fr/base-commands'>commande de base</a>
