@@ -1,15 +1,17 @@
 <h1>Change the default init system</h1>
     <h2>Introduction</h2>
         <p>
-            NuTyX provides three init system.
+            NuTyX provides three init system :
+        <p>
+            <a href="sysvinit">SysVinit</a>
         <p> 
             <a href ='https://github.com/NuTyX/runyx'>runyx</a>
         <p>
-            <a href ='https://system.io'>systemd</a>
+            <a href ='https://systemd.io'>systemd</a>
 
     <h2>How to proceed</h3>
         <p>
-            Edit /etc/default/grub file.
+            Edit /etc/default/grub filex:
         <p>
             Modifiy this line : "GRUB_CMDLINE_LINUX"
         <p> 
@@ -27,16 +29,16 @@
             It's possible to remove an init system if you don't use it.
         <p>
             To remove Runyx :
-            <pre class="command">cards remove runyx -a<kdb>
+            <pre class="command"><kbd>cards remove runyx -a</kdb></pre>
         <p>
             Or :
-            <pre class="command_user"><kbd>del runyx -a</pre>
+            <pre class="command_user"><kbd>del runyx -a</kbd></pre>
         <p>
             For systemd :
-            <pre class="command">cards remove systemd -a<kdb></kdb>
+            <pre class="command">cards remove systemd -a</kdb></pre>
         <p>
             Or :
-            <pre class="command_user"><kbd>del systemd -a</pre>
+            <pre class="command_user"><kbd>del systemd -a</kbd></pre>
 
             <h3>Warning</h3>
                 <p>
@@ -44,6 +46,6 @@
         
     <h2>Related articles</h2>
         <p>
-            Related : <a href = "https://www.nutyx.org/en/?page=grub-uefi-install">grub-uefi-install</a>
+            Related : <a href="install-nutyx#4">install-nutyx</a>
             
         

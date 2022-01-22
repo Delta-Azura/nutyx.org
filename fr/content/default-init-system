@@ -1,11 +1,13 @@
 <h1>Changer le système d'initilisation par défaut</h1>
     <h2>Introduction</h2>
         <p>
-            NuTyX propose trois systèmes d'initilisation : Sysvinit, Systemd et Runyx.
+            NuTyX propose trois systèmes d'initilisation :
         <p>
-            <a href ='https://github.com/NuTyX/runyx'>runyx</a>
+            <a href="sysvinit">SysVinit</a>
+        <p>
+            <a href="https://github.com/NuTyX/runyx">runyx</a>
         <p> 
-            <a href ='https://systemd.io/'>systemd</a>
+            <a href="https://systemd.io">systemd</a>
 
     <h2>Comment procéder</h3>
         <p>
@@ -29,22 +31,22 @@
             Il est possible de supprimer un système d'initilisation si vous ne l'utilisez pas.
         <p>
             Cela se fera à l'aide de la commande suivante pour runyx:
-            <pre class="command">cards remove runyx -a<kdb>
+            <pre class="command"><kbd>cards remove runyx -a</kdb></pre>
         <p>
             Ou :
-            <pre class="command_user"><kbd>del runyx -a</pre>
+            <pre class="command_user"><kbd>del runyx -a</kbd></pre>
         <p>
             Pour systemd :
-            <pre class="command">cards remove systemd -a<kdb></kdb>
+            <pre class="command"><kbd>cards remove systemd -a</kdb></pre>
         <p>
             Ou :
-            <pre class="command_user"><kbd>del systemd -a</pre>
+            <pre class="command_user"><kbd>del systemd -a</kbd></pre>
 
                 <h3>Attention</h3>
                     <p>
                         Il ne faut en aucun cas supprimer le paquet sysvinit qui contient des librairies essentielles au démarrage de votre système !
     <h2>Articles en lien</h2>
         <p>
-            Relié : <a href = "https://www.nutyx.org/fr/?page=grub-uefi-install">grub-uefi-install</a>
+            Relié : <a href="install-nutyx#4">install-nutyx</a>
             
         
