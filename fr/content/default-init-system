@@ -3,9 +3,9 @@
         <p>
             NuTyX propose trois systèmes d'initilisation : Sysvinit, Systemd et Runyx.
         <p>
-            Site web de runyx : https://github.com/NuTyX/runyx
+            <a href ='https://github.com/NuTyX/runyx'>runyx</a>
         <p> 
-            Site web de systemd : https://systemd.io/
+            <a href ='https://systemd.io/'>systemd</a>
 
     <h2>Comment procéder</h3>
         <p>
@@ -23,5 +23,25 @@
         </p>
             Cela se fera à l'aide de cette commande :
             <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
+    
+    <h2>Supprimer les systèmes d'initilisation</h2>
+        <p>
+            Il est possible de supprimer un système d'initilisation si vous ne l'utilisez pas.
+        <p>
+            Cela se fera à l'aide de la commande suivante pour runyx:
+            <pre class="command">cards remove runyx -a<kdb>
+        <p>
+            Ou :
+            <pre class="command_user"><kbd>del runyx -a</pre>
+        <p>
+            Pour systemd :
+            <pre class="command">cards remove systemd -a<kdb></kdb>
+        <p>
+            Ou :
+            <pre class="command_user"><kbd>del systemd -a</pre>
+                
+                <h3>Attention</h3>
+                    <p>
+                        Il ne faut en aucun cas supprimer le paquet sysvinit qui contient des librairies essentielles au démarre de votre système !
             
         
