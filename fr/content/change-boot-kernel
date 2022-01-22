@@ -1,0 +1,44 @@
+<h1>Changer le kernel de boot par défaut</h1>
+    <h2>Introduction</h2>
+        <p>
+            NuTyX propose plusieurs kernel. 
+        <p> 
+            Pour les lister : 
+            <pre class="command_user"><kbd>search kernel</kbd></pre>
+        <p> 
+            Ici nous uriliser
+    <h2>Installation d'un kernel</h2>
+        <p> 
+            L'installation d'un kernel se fera à l'aide de cette commande (exemple pour le 4.19):
+            <pre class="command_user"><kbd>get kernel-419</kbd><pre>
+        <p> 
+            Pour plus d'information sur la manière de gérer les paquets sous nutyx :
+            <a href ='https://nutyx.org/fr/base-commands'>commande de base</a>
+
+    <h2>Définir ce kernel par défaut</h2>
+        <p> 
+            La modification se fera dans le fichier /boot/grub/grub.cfg qui constitue la configuration de GRUB.
+        <p> 
+            C'est donc la fonction "menuentry" qu'il va falloir éditer.
+        <p> 
+            Par défaut le kernel est définit via cette ligne : linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no
+        <p> 
+            /boot/kernel/stable indique donc a GRUB qu'il doit lancer le kernel portant ce nom. 
+        <p> 
+            C'est donc "kernel-stable" qu'il va falloir modifier.
+        <p>
+            Dans notre cas, on remplacera "kernel-stable" par "kernel-419".
+        <p> 
+            Après enregistrement et reboot, il est possible d'ouvrir un terminal et de lancer la commande "uname -a" afin de vérifier si la manipulation a bien fonctionnée.
+        
+    <h2>Définir ce kernel en option avancée</h2>
+        <p>
+            Il est possible de définir le kernel choisi en option par défaut.
+        <p>
+            Il faudra éditer la fonction "submenu" et plus particulièrement la ligne "linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no"
+        <p>
+            Il ne reste plus qu'à réitérer l'action effectuée plus haut, modifier "/boot/kernel-stable" par le kernel de votre choix, dans notre exemple par : "/boot/kernel-419"
+ 
+
+
+
