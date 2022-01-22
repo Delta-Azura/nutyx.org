@@ -18,9 +18,9 @@
             Pour démarrer avec Runyx : GRUB_CMDLINE_LINUX="init=/sbin/runit-init"
 
     <h2>Générer la nouvelle configuration grub</h2>
-        </p>
+        <p>
             Pour que modifications soient effectives, il faut générer la configuration de grub.
-        </p>
+        <p>
             Cela se fera à l'aide de cette commande :
             <pre class="command"><kbd>grub-mkconfig -o /boot/grub/grub.cfg</kbd></pre>
     
@@ -43,5 +43,8 @@
                 <h3>Attention</h3>
                     <p>
                         Il ne faut en aucun cas supprimer le paquet sysvinit qui contient des librairies essentielles au démarrage de votre système !
+    <h2>Articles en lien</h2>
+        <p>
+            Relié : <a href = "https://www.nutyx.org/fr/?page=grub-uefi-install">grub-uefi-install</a>
             
         
