@@ -203,7 +203,9 @@ mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
            <pre class="command">grub-install --target=i386-pc /dev/sda<kbd></pre>
          </ul>
         <li>
-         Créer le fichier /boot/grub/grub.cfg
+         Voir cet article si vous souhaitez <a href="default-init-system">changer le système d'initialisation par défaut</a>.
+         <p>
+          Créer le fichier /boot/grub/grub.cfg
          <pre class="command">grub-mkconfig -o /boot/grub/grub.cfg<kbd></pre>
         <li>
          Sortir et démonter les partitions
