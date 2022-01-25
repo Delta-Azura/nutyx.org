@@ -1,0 +1,40 @@
+<h1>Change the default kernel boot</h1>
+    <h2>Introduction</h2>
+        <p>
+            NuTyX provides several kernel. 
+        <p> 
+            To list them : 
+            <pre class="command_user"><kbd>search kernel</kbd></pre>
+        <p> 
+            For this example, we are going to use the "kernel-419".
+    <h2>Kernel installation</h2>
+        <p> 
+            To install the kernel (4.19) :
+            <pre class="command_user"><kbd>get kernel-419</kbd></pre>
+        <p> 
+            More information about cards commands :
+            <a href ='https://nutyx.org/fr/base-commands'>commande de base</a>
+
+    <h2>Set the new kernel by default</h2>
+        <p> 
+            You have to edit /boot/grub/grub.cfg which is the file configuration of GRUB.
+        <p> 
+            Edit the menuentry function.
+        <p> 
+            By default the kernel is defined by this line : linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no
+        <p> 
+            /boot/kernel-stable indicates that the stable version of the kernel will be used.
+        <p> 
+            You have to modify "kenerl-stable" by the kernel that you want to use.
+        <p>
+            In this example "kernel-stable" by "kernel-419".
+        <p> 
+            Then, save the file and reboot, you can launch "uname -a" to verify if it succed.
+        
+    <h2>Advanced option submenu</h2>
+        <p>
+            It's possible to modify the "Advanced option" submenu to boot on the kernel of you choice.
+        <p>
+            You have to edit the "submenu" function and in particular this line : "linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no"
+        <p>
+            Then, you have to repeat the previous actions.

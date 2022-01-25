@@ -23,7 +23,7 @@
         <p> 
             Par défaut le kernel est définit via cette ligne : linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no
         <p> 
-            /boot/kernel/stable indique donc a GRUB qu'il doit lancer le kernel portant ce nom. 
+            /boot/kernel-stable indique donc a GRUB qu'il doit lancer le kernel portant ce nom. 
         <p> 
             C'est donc "kernel-stable" qu'il va falloir modifier.
         <p>
