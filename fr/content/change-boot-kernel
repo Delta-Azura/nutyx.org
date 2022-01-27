@@ -5,6 +5,19 @@
         <p> 
             Pour les lister : 
             <pre class="command_user"><kbd>search kernel</kbd></pre>
+            <pre class="output">(cli-extra) kernel-49 4.9.295 The 4.9 longterm support Linux Kernel version
+...
+(cli-extra) kernel-414 4.14.260 The 4.14 longterm support Linux Kernel version
+...
+(cli-extra) kernel-419 4.19.223 The 4.19 longterm support Linux Kernel version
+...
+(cli-extra) kernel-54 5.4.169 The 5.4 longterm support Linux Kernel version
+...
+(cli-extra) kernel-510 5.10.89 The 5.10 longterm support Linux Kernel version
+...
+(base) kernel 5.15.12 The latest stable kernel version
+..</pre>
+
         <p> 
             Ici nous utiliserons le kernel-419 pour l'exemple.
     <h2>Installation d'un kernel</h2>
@@ -13,32 +26,28 @@
             <pre class="command_user"><kbd>get kernel-419</kbd></pre>
         <p> 
             Pour plus d'information sur la manière de gérer les paquets sous nutyx :
-            <a href ='https://nutyx.org/fr/base-commands'>commande de base</a>
+            <a href ='base-commands'>commande de base</a>
 
     <h2>Définir ce kernel par défaut</h2>
         <p> 
-            La modification se fera dans le fichier /boot/grub/grub.cfg qui constitue la configuration de GRUB.
+            La modification se fera dans le fichier <i>/boot/grub/grub.cfg</i> qui constitue la configuration de GRUB.
         <p> 
-            C'est donc la fonction "menuentry" qu'il va falloir éditer.
+            C'est donc la fonction <i>menuentry</i> qu'il va falloir éditer.
         <p> 
-            Par défaut le kernel est définit via cette ligne : linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no
+            Par défaut le kernel est définit via cette ligne : 
+            <pre class="output">linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no</pre>
         <p> 
-            /boot/kernel-stable indique donc a GRUB qu'il doit lancer le kernel portant ce nom. 
+            <i>/boot/kernel-stable</i> indique donc a GRUB qu'il doit lancer le kernel portant ce nom. 
         <p> 
-            C'est donc "kernel-stable" qu'il va falloir modifier.
+            C'est donc <b>kernel-stable</b> qu'il va falloir modifier.
         <p>
-            Dans notre cas, on remplacera "kernel-stable" par "kernel-419".
+            Dans notre cas, on remplacera <b>kernel-stable</b> avec <b>kernel-419</b>.
+            <pre class="output">linux	/boot/kernel-419 root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no</pre>
         <p> 
-            Après enregistrement et reboot, il est possible d'ouvrir un terminal et de lancer la commande "uname -a" afin de vérifier si la manipulation a bien fonctionnée.
-        
-    <h2>Définir ce kernel en option avancée</h2>
-        <p>
-            Il est possible de définir le kernel choisi en option par défaut.
-        <p>
-            Il faudra éditer la fonction "submenu" et plus particulièrement la ligne "linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no"
-        <p>
-            Il ne reste plus qu'à réitérer l'action effectuée plus haut, modifier "/boot/kernel-stable" par le kernel de votre choix, dans notre exemple par : "/boot/kernel-419"
- 
+            Après enregistrement et reboot, il est possible d'ouvrir un terminal et de lancer la commande:
+            <pre class="command_user"><kbd>uname -r</kbd></pre>
+            <pre class="output">4.19.223-NuTyX-419</pre>
+            afin de vérifier si la manipulation a bien fonctionnée. 
 
 
 

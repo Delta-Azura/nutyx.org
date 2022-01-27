@@ -5,6 +5,18 @@
         <p> 
             To list them : 
             <pre class="command_user"><kbd>search kernel</kbd></pre>
+            <pre class="output">(cli-extra) kernel-49 4.9.295 The 4.9 longterm support Linux Kernel version
+...
+(cli-extra) kernel-414 4.14.260 The 4.14 longterm support Linux Kernel version
+...
+(cli-extra) kernel-419 4.19.223 The 4.19 longterm support Linux Kernel version
+...
+(cli-extra) kernel-54 5.4.169 The 5.4 longterm support Linux Kernel version
+...
+(cli-extra) kernel-510 5.10.89 The 5.10 longterm support Linux Kernel version 
+...
+(base) kernel 5.15.12 The latest stable kernel version
+..</pre>
         <p> 
             For this example, we are going to use the "kernel-419".
     <h2>Kernel installation</h2>
@@ -17,24 +29,21 @@
 
     <h2>Set the new kernel by default</h2>
         <p> 
-            You have to edit /boot/grub/grub.cfg which is the file configuration of GRUB.
+            You have to edit <i>/boot/grub/grub.cfg</i> file which is the GRUB configuration file.
         <p> 
-            Edit the menuentry function.
+            Edit the <i>menuentry</i> function.
         <p> 
-            By default the kernel is defined by this line : linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no
+            By default the kernel is defined by this line :
+            <pre class="output">linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no</pre>
         <p> 
-            /boot/kernel-stable indicates that the stable version of the kernel will be used.
+            <i>/boot/kernel-stable</i> indicates that the stable version of the kernel will be used.
         <p> 
-            You have to modify "kenerl-stable" by the kernel that you want to use.
+            You have to modify <b>kenerl-stable</b> by the kernel that you want to use.
         <p>
-            In this example "kernel-stable" by "kernel-419".
+            In this example <b>kernel-stable</b> with <b>kernel-419</b>.
+            <pre class="output">linux	/boot/kernel-419 root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no</pre>
         <p> 
-            Then, save the file and reboot, you can launch "uname -a" to verify if it succed.
-        
-    <h2>Advanced option submenu</h2>
-        <p>
-            It's possible to modify the "Advanced option" submenu to boot on the kernel of you choice.
-        <p>
-            You have to edit the "submenu" function and in particular this line : "linux	/boot/kernel-stable root=/dev/nvme0n1p3 ro init=/sbin/systemd-init quiet verbose=no"
-        <p>
-            Then, you have to repeat the previous actions.
+            Then, save the file and reboot, you can then check by opening a terminal and type the command:
+            <pre class="command_user"><kbd>uname -r</kbd></pre>
+            <pre class="output">4.19.223-NuTyX-419</pre>
+            to verify if it succed.
