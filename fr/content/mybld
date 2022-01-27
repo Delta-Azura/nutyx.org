@@ -29,7 +29,7 @@
    <div class="important">
     Désormais toutes les commandes qui suivent doivent être effectuées depuis le dossier actuel.
    </div>
-
+   
   <h3>Configurer son nom et email</h3>
    Cette étape est nécessaire si vous souhaitez partager vos nouveaux paquets, en effet,
    la commande <i><b>mybld -n</b></i> utilise cette information lors de la création de votre nouveau paquet.
@@ -101,6 +101,54 @@ git config --global user.email "francois@nutyx.org"</kbd></pre>
    Il est possible de spécifier une adresse et une version personnalisées
    dans le fichier de configuration <i><b>~/.mybld</b></i>
    via les variables <b>URL</b> et <b>VERSION</b>.
+  <h3>Configuration de cards</h3>
+   Par défaut, la configuration de cards spécifie les collections disponibles sur le serveur officiel de NuTyX.
+   Afin de pouvoir installer, conserver ou supprimer les futures paquets personnels, il faut spécifier dans le fichier
+   <i>/etc/cards.conf</i> la provenance de chaque collection de manière indépendante. 
+   <p>
+    Dans la configuration ci-dessous, les paquets personnels seront stockés dans le dossier:
+    <i><b>/home/tnut/www/x86_64/&lt;nom_de_la_branche&gt;/&lt;nom_de_la_collection&gt;</b></i>
+   <p>
+    Les collections officielles restent sur le serveur distant.
+   <p>
+    Le contenu du fichier /etc/cards.conf après modifications:
+     <pre class="output"># No global url should be defined
+# We need to specify an url only for remote repositories collection
+#
+# Default global server URL 
+# url http://downloads.nutyx.org
+#
+# My own repository (this repository) without specified url 
+dir /home/tnut/www/x86_64/&lt;nom_de_la_branche&gt;/&lt;nom_de_la_collection&gt;
+#
+## For all the graphical applications and desktops
+dir /var/lib/pkg/depot/gui-extra|http://downloads.nutyx.org
+#
+## For a minimal graphical interface
+dir /var/lib/pkg/depot/gui|http://downloads.nutyx.org
+#
+## For all the console applications
+dir /var/lib/pkg/depot/cli-extra|http://downloads.nutyx.org
+#
+## For a minimal console interface
+dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org
+#
+## Chroot system without reboot possibilities for a chroot
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+#
+## Normaly you want to keep base and
+base /var/lib/pkg/depot/base
+#
+#
+## If you want to keep more collections remove comments below
+# Adjust to your needs
+#
+# base /var/lib/pkg/depot/cli
+# base /var/lib/pkg/depot/cli-extra
+# base /var/lib/pkg/depot//gui
+# base /var/lib/pkg/depot/gui-extra
+# base /var/lib/pkg/depot/...</pre>
+
 
  <h2>Utiliser la commande</h2>
   <h3>(Re)Compiler un paquet</h3>

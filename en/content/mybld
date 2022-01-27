@@ -103,6 +103,53 @@ git config --global user.email "james@nutyx.org"</kbd></pre>
     You can specify a custom address and version in the <b>~/.mybld</b> configuration file
     via the <b>URL</b> and <b>VERSION</b> variables.
 
+  <h3>Configuration of cards</h3>
+    By default, the cards configuration specifies the collections available on the official NuTyX server.
+    In order to be able to install, keep or remove future personal packages, you must specify in the file
+    <i>/etc/cards.conf</i> source each collection independently.
+    <p>
+     In the configuration below, personal packages will be stored in folders:
+     <i><b>/home/tnut/www/x86_64/&lt;branch_name&gt;/&lt;collection_name&gt;</b></i> 
+    <p>
+     Official collections remain on the remote server.
+    <p>
+     The contents of /etc/cards.conf file after modifications:     
+     <pre class="output"># No global url should be defined
+# We need to specify an url only for remote repositories collection
+#
+# Default global server URL 
+# url http://downloads.nutyx.org
+#
+# My own repository (this repository) without specified url 
+/home/tnut/www/x86_64/&lt;branch_name&gt;/&lt;collection_name&gt;
+#
+## For all the graphical applications and desktops
+dir /var/lib/pkg/depot/gui-extra|http://downloads.nutyx.org
+#
+## For a minimal graphical interface
+dir /var/lib/pkg/depot/gui|http://downloads.nutyx.org
+#
+## For all the console applications
+dir /var/lib/pkg/depot/cli-extra|http://downloads.nutyx.org
+#
+## For a minimal console interface
+dir /var/lib/pkg/depot/cli|http://downloads.nutyx.org
+#
+## Chroot system without reboot possibilities for a chroot
+dir /var/lib/pkg/depot/base|http://downloads.nutyx.org
+#
+## Normaly you want to keep base and
+base /var/lib/pkg/depot/base
+#
+#
+## If you want to keep more collections remove comments below
+# Adjust to your needs
+#
+# base /var/lib/pkg/depot/cli
+# base /var/lib/pkg/depot/cli-extra
+# base /var/lib/pkg/depot//gui
+# base /var/lib/pkg/depot/gui-extra
+# base /var/lib/pkg/depot/...</pre>
  <h2>Using the command</h2> 
   <h3>(Re)Compile a package</h3>
    <p>
