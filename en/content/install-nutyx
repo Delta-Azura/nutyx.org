@@ -152,7 +152,8 @@ VERSION="rolling"</pre>
          <ul>
           <li>
            For the 'UEFI' machine:
-           <pre class="command"><kbd>mount /dev/sda3 /mnt/hd mkdir -p /mnt/hd/boot/efi
+           <pre class="command"><kbd>mount /dev/sda3 /mnt/hd 
+mkdir -p /mnt/hd/boot/efi
 mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
           <li>
            For the 'BIOS' machine:
