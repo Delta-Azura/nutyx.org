@@ -75,7 +75,7 @@
         <td>
          Available kernel names:
         <p>
-         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel or linux-mainline.
+         kernel-49, kernel-414, kernel-419, kernel-54, kernel-510, kernel-515, kernel or linux-mainline.
        <tr class="odd">
         <td>
          DEPOT
@@ -187,7 +187,9 @@ mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
          <ul>
           <li>
            For the 'UEFI' machine:
-           <pre class="command">grub-install --target=x86_64-efi /dev/sda<kbd></pre>
+            <pre class="command">grub-install --target=x86_64-efi /dev/sda<kbd></pre>
+             or
+            <pre class="command">grub-install --target=i386-efi /dev/sda<kbd></pre>
           <li>
            For the 'BIOS' machine:
            <pre class="command">grub-install --target=i386-pc /dev/sda<kbd></pre>

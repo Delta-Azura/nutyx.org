@@ -1,97 +1,179 @@
-<h1>Dernière nouvelle 26-12-2021</h1>
+<h1>Dernière nouvelle 05-02-2022</h1>
 
- <h2>NuTyX 21.10.12 disponible avec cards 2.4.142</h2>
+ <h2>NuTyX 22.02.4 disponible avec cards 2.4.144</h2>
   <p>
-   Nous sommes heureux d'annoncer la nouvelle version de NuTyX 21.10.12 et cards 2.4.142.
+   Nous sommes heureux d'annoncer la nouvelle version de NuTyX 22.02.4 et cards 2.4.144.
   <p>
-   Le serveur graphique Xorg-server version 21.1.2
-   la librairie Mesa 3D en 21.3.2, Gtk4 4.4.0
+   Le serveur graphique Xorg-server version 21.1.3
+   la librairie Mesa 3D en 21.3.5, Gtk4 4.6.0
    et Qt 5.15.2.
   <p>
-   Les interpreteurs Python sont ent 3.10.1 et 2.7.18.
+   Les interpreteurs Python sont ent 3.10.2 et 2.7.18.
   <p>
    L'environnement de bureau XFCE est mis à jour en version 4.16.0.
   <p>
    L'environnement de bureau MATE est en version 1.26.0.
   <p>
-   L'environnement de bureau GNOME est également mis à jour en version 41.2
+   L'environnement de bureau GNOME est également mis à jour en version 41.3
   <p>
-   L'environnement de bureau KDE est disponible en Plasma 5.23.4, Framework 5.89.0 et les applications en 21.12.0.
+   L'environnement de bureau KDE est disponible en Plasma 5.23.5, Framework 5.90.0
+   et les applications en 21.12.2.
   <p>
-   Les navigateurs disponibles sont entre autre: Firefox 94.0.2, Chromium 96.0.4664.45, Epiphany 41.3, etc
+   Les navigateurs disponibles sont entre autre: Firefox 96.0.3, Chromium 98.0.4758.80, Epiphany 41.3, etc
   <p>
-   De nombreuses applications on été mise à jour également comme Telegram-desktop 3.3, Thunderbird 91.4.1, Scribus 1.5.7, Libreoffice 7.2.4.1, Gimp 2.10.30, etc.
+   De nombreuses applications on été mise à jour également comme Telegram-desktop 3.5.0,
+   Thunderbird 91.5.1, Scribus 1.5.8, Libreoffice 7.3.0.3, Gimp 2.10.30, etc.
   <p>
    NuTyX de base est livré avec les noyaux de support à long terme (LTS):
-   4.9.294, 4.14.259, 4.19.222, 5.4.168 et 5.10.88
-   et la dernière version stable 5.15.11 .
+   4.9.299, 4.14.264, 4.19.227, 5.4.176 et 5.10.96 et 5.15.19.
+   et la dernière version stable 5.16.5 .
   <p>
    Les journaux de modifications des noyaux sont disponibles ici:
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.294">kernel 4.9.294 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.9.299">kernel 4.9.299 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.259">kernel 4.14.259 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.14.264">kernel 4.14.264 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.222">kernel 4.19.222 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.19.227">kernel 4.19.227 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.168">kernel 5.4.168 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.176">kernel 5.4.176 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.88">kernel 5.10.88 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.96">kernel 5.10.96 changelog</a>
   <p>
-   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.11">kernel 5.15.11 changelog</a>
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.19">kernel 5.15.19 changelog</a>
   <p>
-   14 ISOs se déclinent en saveur LXDE, LXQT, XFCE4, ENLIGHTENMENT, MATE, GNOME (uniquement en 64bits), KDE5 (uniquement en 64bits) et BASE (cette dernière propose le mode console sans environnement de bureau).
+   <a href="https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.16.5">kernel 5.16.5 changelog</a>
   <p>
-   Elles sont disponibles en 32 et 64 bits sur <a href="downloads">la page de téléchargement.</a>
+   13 ISOs se déclinent en saveur
+   BASE (propose le mode console sans environnement de bureau),
+   LXDE,
+   XFCE4,
+   CDE en 32 et 64 bits.
+   LXQT,
+   ENLIGHTENMENT,
+   MATE,
+   GNOME,
+   KDE5 en 64 bits seule.
+  <p>
+   Elles sont disponibles sur <a href="downloads">la page de téléchargement.</a>
 
  <h2>Quoi de neuf ?</h2>
 
-  <h3>Installation de GRUB</h3>
+  <h3>Nouveau kernel LTS 5.15</h3>
    <p>
-    La mise en place de GRUB est désormais standard sur une machine EFI.
+    Un nouveau kernel LTS 5.15.x est disponible.
+    Le nom du paquet est: <b>kernel-515</b>
 
-  <h3>Installation automatique</h3>
+  <h3>Mode d'installations semi-automatique et automatique</h3>
    <p>
-    La version 21.10.12 introduit une première version de l'installateur en mode automatique.
-    Si toutes les conditions sont remplies, le partitionnement, le formatage et l'installation de GRUB se font de manière automatique.
-    Les conditions étant un disque dur unique et vierge n'ayant donc aucune table de partitions.
+    La progression de l'installation est désormais calculée précise.
+    L'installateur a été réécrit.
 
-  <h3>Nouveau mode d'installation en mode live: entièrement personnalisable</h3>
+  <h3>Mode d'installation en mode live entièrement personnalisé</h3>
    <p>
-     Si vous choisissez le mode 'LIVE' lors du lancement d'une ISO,
-     vous pouvez désormais utiliser la commande 'KERNEL=&lt;kernel_de_votre_choix&gt; install-nutyx' pour installer NuTyX de manière entièrement manuel.
-     Le partionnement, le formatage et le montage des partitions est sous votre responsabilitée.
-     Veuillez consulter <a href="install-nutyx#4">la documentation</a>.
+     Une nouvelle commande est disponible pour entrer dans une NuTyX installée.
+     La commande <b>chroot-nutyx</b> est désormais disponible.
 
-  <h3>Les dépendances d'un paquet sont protégées</h3>
+  <h3>Installation d'un kernel</h3
    <p>
-    La commande 'cards remove' ne vous permet plus de supprimer un paquet utilisé par une autre.
-    Cela signifie que c'est une dépendance.
+    Avec la stabilisation du mode d'installation UEFI, les liens utilisés dans le paquet du kernel est obsolète.
+    Ce changement radical peut rentre votre machine inutilisable si elle a été il y a plus de 6 mois en mode uefi à l'époque expérimentale.
+   <p>
+     Après 15 ans, j'ai enfin décidé de me débarasser de ces liens qui pertubent gravement l'outil grub-mkconfig (entre autre).
+
+
+  <h3>cards list --sets</h3>
+   <p>
+    La commande <b>cards list --sets</b>  affiche la liste des jeux de paquet à disposition.
+
+
+  <h3>docker disponible</h3>
+   <p>
+    La possibilitée d'utiliser docker était une demande récurrente sous NuTyX.
+
+  <h3>la commande mybld</h3>
+   <p>
+    mybld est la commande centrale pour la construction des paquets sous NuTyX.
+    Nombreux petits bugs ont été corrigés, utilisation encore simplifiée et
+    nouvelles fonctionnalitées ajoutées. Lire le manuel :)
+
+  <h3>Thèmes propre à NuTyX (toujours en cours)</h3>
+   <p>
+    Les thèmes sous les différents bureaux sont plus cohérents.
+    Merci Hakerdefo pour les précieux conseils.
+
+  <h3>Rester en contact</h3>
+   <p>
+    <a href="https://discord.gg/uTYTCF6">Un nouveau canal discord est à votre disposition.</a>
+   <p>
+    <a href="https://forum.nutyx.org>Le forum est disponible.</a>
+
 
  <h2>Résolution de bugs</h2>
   <p>
    Les problèmes ci-dessous ont été résolu:
    <ul>
     <li>
-     L'installation de NuTyX en mode EFI sous virtualbox.
+     Impossible d'installer une ISO (KDE par exemple) sur une machine de 1Go de RAM.
     <li>
-     La commande grub-mkconfig rend le système impossible à démarrer après la mise du kernel.
+     Sur certaines ISO, la barre de progression semble se figer et bloquer l'installation.
+     Rien ne se passe pendant plusieurs minutes.
     <li>
-     Lors de la post-installation, si le mot de passe est vide, l'installation est inutilisable.
-    <li>
-     Lors de la post-installation, un mauvais choix d'utilisateur peut rendre l'installation inutilisable.
+     L'installation de NuTyX en mode live échoue.
 
    </ul>
+ <h2>Bugs connus</h2>
+  <p>
+   Les problèmes ci-dessous sont toujours présents
+   <ul>
+    <li>
+     Si vous utilisez GDM comme gestionnaire de sessions ( par défaut sur l'ISO gnome),
+     il faut utiliser le clavier virtuel, la configuration de celui-ci reste en clavier us.
+   </ul>
 
+ <h2>Fonctionnalitées obsolètes</h2>
+  <p>
+    Le système d'initialisation runyx sera à l'avenir retiré.
+    Il sera toujours disponible pour le lancement d'une initrd
+    via le paquet 'busybox' dans lequel 'runit' est intégré.
+  <p>
+    La methode de construction des paquets via la commande 'ports' sera abandonnée.
+    La commande mybld devient la commande centrale pour la construction des paquets
+  <p>
+    Le groupe de paquets 'sources' va être supprimé, voir ci-dessous: Et après.
  <h2>Mise à jour</h2>
   <p>
-   La NuTyX 21.10.12 est une mise à jour mineure.
+   La NuTyX 22.02.4 est une mise à jour mineure.
    Une simple commande classique permet la mise à jour:
  </p><pre class="command_user"><kbd>sudo cards upgrade</kbd></pre>
+
+ <h2>Et après</h2>
+  <p>
+   Il y aura une nouvelle chaîne d'outils avec glibc 2.35.
+  <p>
+   Le paradigme de 'cards' sera ajusté au nouveau monde de 'git'
+   car il s'agit désormais de la méthode de dépôt de code source dominante.
+   Une nouvelle approche de la gestion du code source des paquets compilés sera développée.
+  <p>
+   Le système d'init runyx sera abandonné.
+   Maintenir 2 systèmes d'initialisation demande déjà beaucoup de travail.
+   La selection sera faîte au moment de l'installation.
+   Il ne faudra plus toucher grub pour cela.
+   Seul 2 systèmes d'init seront proposés:
+   <ul>
+    <li>
+     systemv
+    <li>
+     systemd
+   </ul>
+  <p>
+    Plus d'information disponible sur <a href="https://t.me/groupnutyx">le salon telegram.</a>
 
  <h2>Remerciements</h2>
   <p>
    Merci à Spiky pour sa grande patience et sa générosité pour la mise à jour des très nombreux paquets.
+  <p>
+   Merci à vous tous pour vos retours positifs ou négatifs sur la distribution.
 
  <h2>Anciennes nouvelles</h2>
   <p>

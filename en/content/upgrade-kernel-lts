@@ -54,6 +54,11 @@
        5.10.x
       <td>
        kernel-510
+     <tr class="odd">
+      <td>
+       5.15.x
+      <td>
+       kernel-515
     </table>
 
  <h2>Kernel update</h2>
