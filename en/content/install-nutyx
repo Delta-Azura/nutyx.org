@@ -135,7 +135,7 @@ VERSION="rolling"</pre>
          Reserve a 4 Gbytes if you have 2 Gbyte or more of RAM.
          Otherwise double the size of your RAM.
         <li>
-         Format all the partitions, in our example, we have 3 or 3 partitions depending of the machine (UEFI or BIOS):
+         Format all the partitions, in our example, we have 3 or 2 partitions depending of the machine (UEFI or BIOS):
          <ul>
           <li>
            For the 'UEFI' machine:
@@ -152,7 +152,7 @@ VERSION="rolling"</pre>
          <ul>
           <li>
            For the 'UEFI' machine:
-           <pre class="command"><kbd>mount /dev/sda3 /mnt/hdmkdir -p /mnt/hd/boot/efi
+           <pre class="command"><kbd>mount /dev/sda3 /mnt/hd mkdir -p /mnt/hd/boot/efi
 mount /dev/sda1 /mnt/hd/boot/efi</kbd></pre>
           <li>
            For the 'BIOS' machine:
