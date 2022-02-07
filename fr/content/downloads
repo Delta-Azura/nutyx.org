@@ -31,6 +31,7 @@
    <table width="100%" cellspacing="0">
    <caption><EM>Listes des images ISO disponibles:</EM></caption>
    <tr class="sidebar">
+
     <th>
       ISO
     <th>
@@ -59,13 +60,16 @@
        <p>
         kernel: Dernier kernel stable.
        <p>
-        SHA1 32bits: db1fb7fa93d2d12c00649705b13b701538365dea
+        SHA1 32bits: 4806c9cd4b4bcc1f4f9bec4eb9a5ecfcc5b805f1
        <p>
         SHA1 64bits: 12d333f68326929cb88ca5124a8b3ea0df73b8bf
       <td>
        Environ 715 MO
-     </tr>
+
+   </tr>
+
    <tr class="odd">
+
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-22.02.4-CDE.iso"><img src="../graphics/downloads/cde.png" alt="logo cde"/><br/>CDE 32bits</a>
        <p> 
@@ -78,14 +82,16 @@
        <p>
         kernel: Dernier kernel stable.
        <p>
-        SHA1 32bits: c7102edecd7ebe8cbee96a68f48c7c5bbd86356f
+        SHA1 32bits: 0a09ffcfbc778b271823394893cdc5220e235f1e
        <p>
         SHA1 64bits: 0ca20d593d2a9ed83961f8261f6b364471dc6fa0
       <td>
-       Environ 1.3 GO
-     </tr>
+       Environ 1.4 GO
+
+   </tr>
 
    <tr class="even">
+
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-22.02.4-LXDE.iso"><img src="../graphics/downloads/lxde.png" alt="logo Lxde"/><br/>LXDE 32bits</a>
        <p> 
@@ -98,32 +104,16 @@
        <p>
         kernel: Dernier kernel stable.
        <p>
-        SHA1 32bits: c7102edecd7ebe8cbee96a68f48c7c5bbd86356f
+        SHA1 32bits: c865c80bac391e32d6727bd8fce3cfa5c1f9e41f
        <p>
         SHA1 64bits: 4297e92caa02f95b6941345d4a4015aff91c0282
       <td>
-       Environ 1.3 GO
-     </tr>
+       Environ 1.4 GO
+
+   </tr>
 
    <tr class="odd">
-    <td class="lien_article">
-       <p> 
-     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-LXQT.iso"><img src="../graphics/downloads/lxqt.png" alt="logo mate"/><br/>LXQT 64bits</a>
-    <td>
-       <p>
-        L'ISO contient le bureau LXQT comme interface graphique.
-       <p>
-        Système d'initialisation: SystemV, Runyx et systemd
-       <p>
-        kernel: Dernier kernel stable.
-       <p>
-        SHA1 64bits: f8bc317b58dbff61e4133ef98be678b3ff7ff044
-      <td>
-       Environ 1.4 GO
-     </tr>
 
-
-   <tr class="even">
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-22.02.4-XFCE4.iso"><img src="../graphics/downloads/xfce.png" alt="logo Xfce4"/><br/>XFCE 32bits</a>
        <p> 
@@ -136,14 +126,35 @@
        <p>
         kernel: Dernier kernel stable.
        <p>
-        SHA1 32bits: de5115d9d57d7b904ae625d70b014e8817a3bf31
+        SHA1 32bits: c789a8d5ad770d249dd259d9f702a72a673d3a7e
        <p>
         SHA1 64bits: b91018d6373c5d3615d7554afb6a51839c21b994
       <td>
        Environ 1.4 GO
-     </tr>
+
+   </tr>
+
+
+   <tr class="even">
+
+    <td class="lien_article">
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-LXQT.iso"><img src="../graphics/downloads/lxqt.png" alt="logo lxqt"/><br/>LXQT 64bits</a>
+    <td>
+       <p>
+        L'ISO contient le bureau LXQT comme interface graphique.
+       <p>
+        Système d'initialisation: SystemV, Runyx et systemd
+       <p>
+        kernel: Dernier kernel stable.
+       <p>
+        SHA1 64bits: f8bc317b58dbff61e4133ef98be678b3ff7ff044
+      <td>
+       Environ 1.4 GO
+
+   </tr>
 
    <tr class="odd">   
+
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-ENLIGHTENMENT.iso"><img src="../graphics/downloads/enlightenment.png" alt="logo gnome"/><br/>ENLIGHTENMENT 64bits</a>
     <td>
@@ -156,10 +167,12 @@
        <p>
         SHA1 64bits: 0b380ad3a54009732a036a64dbb396c415386cc6
       <td>
-       Environ 1.4 GO
-     </tr>
+       Environ 1.8 GO
+
+   </tr>
 
    <tr class="even">
+
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-MATE.iso"><img src="../graphics/downloads/mate.png" alt="logo mate"/><br/>MATE 64bits</a>
     <td>
@@ -173,9 +186,11 @@
         SHA1 64bits: a1f981b691eb7f1190fe512128cd276a660066fd
       <td>
        Environ 1.6 GO
-     </tr>
+
+   </tr>
 
    <tr class="odd"> 
+
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-GNOME.iso"><img src="../graphics/downloads/gnome.png" alt="logo gnome"/><br/>GNOME 64bits</a>
     <td>
@@ -189,9 +204,11 @@
         SHA1 64bits: cd70ec127b50fb7d9fa3e95cc8bce813158a6f81
       <td>
        Environ 1.6 GO
-     </tr>
+
+   </tr>
 
    <tr class="even"> 
+
     <td class="lien_article">
      <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-KDE5.iso"><img src="../graphics/downloads/kde.png" alt="logo kde"/><br/>KDE 64bits</a>
     <td>
@@ -204,11 +221,13 @@
        <p>
         SHA1 64bits: 38927b322ad646a3555fb9bd07651c4e9de15a6e
       <td>
-       Environ 1.8 GO
-     </tr>
-    </table>     
-    
- 
+       Environ 1.9 GO
+
+   </tr>
+
+  </table>
+
+
  <h2>Pour l'utilisateur confirmé</h2>
    Ce script permet l'installation d'une NuTyX de base dans un dossier.
   <p>
