@@ -1,11 +1,11 @@
-<h1>Install QEMU and start a VM</h1>
+<h1>Install QEMU and start a virtual machine</h1>
 
  <h2>Introduction</h2>
   To Create a qemu virtual machine using NuTyX unique scripts and start the vm
 
  <h2>Install Qemu</h2>
   The package is named qemu. 
-  <pre class="command"><kbd>sudo cards install qemu</kbd></pre>
+  <pre class="command_user"><kbd>sudo cards install qemu</kbd></pre>
  <p>
   This will install all needed files and 2 scripts "<b>configvm</b> and <b>startvm</b>" that will helpe us to create and start a vm.
 
@@ -20,7 +20,7 @@
       Make sure the Downloaded iso is in ~/VM-qemu/iso dir.
    </ul>
   <p>
-   for example, the BASE iso version 22.02.4 will be:
+   for example, the <b>64bits</b> <b>22.02.4</b> version <b>BASE</b> iso will be:
   <p>
    <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-BASE.iso">https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-BASE.iso</a>
   <ul>
@@ -93,11 +93,13 @@
      <pre class="command_user"><kbd>startvm</kbd></pre>
    </ul>
   <p>
-   This will give 2 Warnings " You didn't state WHICH VM to start, but it will list all availble VM's. Select the 1 you want. Simply enter the Name of which VM.
+   This will give 2 Warnings " You didn't state WHICH VM to start, but it will list all availble VM's.
+   Select the 1 you want. Simply enter the Name of which VM.
   <p>
    <ul>
     <li>
-     There is a nice feature if Zenity is availble The script will use that to list all VM's.
+     There is a nice feature if Zenity is availble.
+     The script will use that to list all VM's.
      <p>
       Just select VM and hit "OK"
    </ul>

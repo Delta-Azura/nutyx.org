@@ -1,11 +1,11 @@
-<h1>Installer QEMU et démarrer une VM</h1>
+<h1>Installer QEMU et démarrer une machine virtuelle</h1>
 
  <h2>Introduction</h2>
   Pour créer une machine virtuelle qemu à l'aide de scripts uniques NuTyX et démarrer la machine virtuelle
 
  <h2>Install Qemu</h2>
   Le paquet est nommé qemu.
-  <pre class="command"><kbd>sudo cards install qemu</kbd></pre>
+  <pre class="command_user"><kbd>sudo cards install qemu</kbd></pre>
  <p>
   Cela installera tous les fichiers nécessaires et 2 scripts "<b>configvm</b> et <b>startvm</b>" qui nous aideront à créer et démarrer une vm.
 
@@ -20,7 +20,7 @@
       Assurez-vous que l'iso téléchargé se trouve dans le répertoire ~/VM-qemu/iso.
    </ul>
   <p>
-   par exemple, la version BASE iso 22.02.4 sera :
+   par exemple, l'iso <b>64bits</b> version <b>22.02.4</b> de <b>BASE</b>  sera :
   <p>
    <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-BASE.iso">https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-BASE.iso</a>
   <ul>
@@ -38,7 +38,7 @@
       La taille de la VM par défaut est <b>30G</b>
       Vous pouvez changer en entrant la taille requise.
      <li>
-      Voulez-vous un "<b>bios</b> ou <b>uefi</b>" installer.
+      Voulez-vous une machine "<b>bios</b> ou <b>uefi</b>" installer.
       <b>Bios</b> est la valeur par défaut.
      <li>
       L'interface du disque.
@@ -47,17 +47,17 @@
       La mémoire par défaut de la machine virtuelle est <b>2G</b>.
       Vous pouvez modifier cette entrer une nouvelle taille.
      <li>
-      Le processeur à utiliser <b>l'hôte est par défaut</b> mais d'autres options sont répertoriées.
+      Le processeur à utiliser est <b>l'hôte par défaut</b> mais d'autres options sont répertoriées.
      <li>
-      Le nombre de cœurs à allouer à la VM :
+      Le nombre de cœurs à allouer à la machine virtuelle:
       <b>2 noyaux</b> est la valeur par défaut, elle peut être modifiée.
      <li>
       La carte réseau.
-      Utiliser <b>défaut</b> peut être utilisé.
+      La valeur par <b>défaut</b> peut être utilisé.
      <li>
       Quel ISO utiliser.
-      La liste sera ce qui est dans <b>~/VM-qemu/iso</b> annuaire.
-      Sélectionnez le <b>ISO</b> nom que vous souhaitez utiliser.
+      La liste des isos diponibles est dans le dossier <b>~/VM-qemu/iso</b>.
+      Sélectionnez le nom de l' <b>ISO</b> que vous souhaitez utiliser.
      <li>
       La carte GRAPHIQUE.
       Sélectionnez par défaut <b>Virtio</b>
@@ -81,7 +81,7 @@
     <ul>
      <li>
       <p>
-         Cela démarrera la VM.
+         Cela démarrera la machine virtuelle.
     </ul>
   </ul>
 
@@ -93,11 +93,13 @@
      <pre class="command_user"><kbd>startvm</kbd></pre>
    </ul>
   <p>
-   Cela donnera 2 avertissements "Vous n'avez pas indiqué QUELLE VM démarrer, mais il listera toutes les VM disponibles. Sélectionnez celle que vous voulez. Entrez simplement le nom de quelle VM.
+   Cela donnera 2 avertissements "Vous n'avez pas indiqué QUELLE VM démarrer, mais il listera toutes les VM disponibles.
+   Sélectionnez celle que vous voulez. Entrez simplement le nom de quelle VM.
   <p>
    <ul>
     <li>
-     Une fonctionnalité intéressante de Zenity est disponible. Le script l'utilisera pour répertorier toutes les machines virtuelles.
+     Une fonctionnalité intéressante de Zenity est disponible.
+     Le script l'utilisera pour répertorier toutes les machines virtuelles.
      <p>
       Sélectionnez simplement VM et appuyez sur "OK"
    </ul>
