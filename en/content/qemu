@@ -1,0 +1,84 @@
+<h1>Install QEMU and start a VM</h1>
+ <h2>Introduction</h2>
+  To Create a qemu vm using Nutyx unique scripts and start the vm
+ <p>
+  Install Qemu 
+  <pre class="command"><kbd>sudo cards install qemu</kbd></pre>
+ <p>
+  This will install all needed files and 2 scripts "<b>configvm and startvm</b>" that will create and start a vm.
+ <p>
+
+ <h2>Preperation</h2>
+ <p>
+       <ul>
+        <li>
+         Open a terminal in USER account and create the needed Dirs.
+         <pre class="command_user"><kbd>mkdir -pv ~/VM-qemu/iso</pre>
+        <li>
+         Download ISO. Make sure the Downloaded iso is in ~/VM-qemu/iso dir.
+ <p>
+         <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-BASE.iso">https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-BASE.iso</a>
+ <p>
+        <li>
+         Start the config script
+         <pre class="command"><kbd>configvm</kbd></pre>
+ <p>
+       <li>
+        This will start the script asking a number of options.
+       <li>
+        <ul>
+         <li>
+          The name of the VM. Enter a name.
+         <li>
+          Next is the size of VM "Default is <b>30G</b>" You can change by entering the size required.
+         <li>
+          Next do you want a "<b>bios</b> or <b>uefi</b>" install. Bios is the default.
+         <li>
+          Next is disc interface, Accept the default "<b>ide</b>"
+         <li>
+          Next is memory for VM default is 2G. You can change this enter new size.
+         <li>
+          Next is cpu to use "host is default" but other options are listed.
+         <li>
+          Next is the number of cores to allocate to VM "2 is default" can be changed.
+         <li>
+          Next is Network card. "Use default"
+         <li>
+          Next is which ISO to use. The list will be what is in <b>~/VM-qemu/iso dir</b>. Select the ISO you wish to use.
+         <li>
+          Next is GRAPHICS Card. Select default "Virtio"
+         <li>
+          Next is OpenGL support. Select default which is "No".
+         <li>
+          Next is Graphic option. Select default "Local"
+         <li>
+          Next is open in Full screen or Reduced size. The default is reduced, enter Full if prefered.
+         <li>
+          Next is Sound Card. The default is "AC97" 
+         <li>
+          Next is Tablet Pointer. The default is "No"
+       </ul>
+      </li>
+     <li>
+ <p>
+  This will start the VM.
+     </li>
+    </ul>
+
+<h1>Start a pre built VM</h1> 
+ <p>
+      <ul>
+       <li>
+        To start a prebuilt VM.
+        <pre class="command"><kbd>startvm</kbd></pre>
+      </ul>
+     </li>
+ <p>
+  This will give 2 Warnings " You didn't state WHICH VM to start, but it will list all availble VM's. Select the 1 you want. Simply enter the Name of which VM.
+ <p>
+    <ul>
+     <li>
+      There is a nice feature if Zenity is availble The script will use that to list all VM's. Just select VM and hit "OK"
+    </ul>
+   </li>
+
