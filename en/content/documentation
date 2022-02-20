@@ -52,6 +52,7 @@
  <h2>User's Guides</h2>
 
   <table width="100%" cellspacing="0">
+
    <tr class="even">
     <td width="30%" class="lien_article" >
       <a class="url" href="grub-install">Setting up GRUB</a>
@@ -60,6 +61,7 @@
      If you haven't installed GRUB yet (by mistake or on purpose), it's not too late.
      As you will see with a few screenshots, it's very simple to install GRUB as a separate task.
     </td>
+
    <tr class="odd">
     <td width="30%" class="lien_article" >
       <a class="url" href="nutyx-man">NuTyX manual of the 22.02 version</a>
@@ -69,6 +71,7 @@
      Here you will find everything you need to know about configuring and using your NuTyX system.
      </td>
    </tr>
+
    <tr class="even">
     <td class="lien_article" >
       <a class="url" href="setup-http">Setup of an HTTP server</a>
@@ -78,6 +81,7 @@
      An HTTP server can be usefull if we want to test some html pages on a real browser.
      If we want to create our own website localy accessible from home or why not make it public on the net.
     </td>
+
    </tr>
    <tr class="odd">
     <td class="lien_article" >
@@ -90,6 +94,7 @@
      We can say we are lucky - all the distributions support it.
    </td>
    </tr>
+
    <tr class="even">
     <td width="30%" class="lien_article" >
       <a class="url" href="install-nutyx#5">Produce a customised ISO</a>
@@ -101,7 +106,19 @@
      It's up to you to add all the packages you want.
     </td>
    </tr>
+
    <tr class="odd">
+    <td width="30%" class="lien_article" >
+      <a class="url" href="qemu">Config and start a virtual machine with QEMU</a>
+    </td>
+    <td  width="40%">
+     It's very easy to create and use a virtual machine with QEMU.
+     When you install QEMU on NuTyX, 2 very handy scripts can be used: <b>configvm</b> and <b>startvm</b>.
+     Thoses scripts makes live so easy with QEMU.
+    </td>
+   </tr>
+
+   <tr class="even">
     <td width="30%" class="lien_article" >
       <a class="url" href="sysvinit">Brief SysVinit overview</a>
     </td>
@@ -124,6 +141,7 @@
      We talk about the functionality (both basic and advanced) of the <b>cards</b> package manager.
     </td>
    </tr>
+
    <tr class="even">
     <td width="30%" class="lien_article" >
       <a class="url" href="collections">Collections</a>
@@ -134,6 +152,7 @@
      Collections are organised in five different sets.
      Each set has a dedicated responsibility. 
     </td>
+
    <tr class="odd">
     <td width="30%" class="lien_article" >
       <a class="url" href="mybld">How to build your own packages in a chroot ?</a>

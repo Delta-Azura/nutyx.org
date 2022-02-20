@@ -106,6 +106,7 @@
      toutes les distributions le supportent.
     </td>
    </tr>
+
    <tr class="odd">
     <td class="lien_article" >
       <a class="url" href="setup-firewall">Mise en place d'un parefeu simple avec Iptables</a>
@@ -117,6 +118,7 @@
     </td>
    </tr>
    </tr>
+
    <tr class="even">
     <td class="lien_article" >
       <a class="url" href="install-nutyx#5">Produire une ISO installable</a>
@@ -127,7 +129,19 @@
      Libre à vous d'ajouter tous les logiciels que vous souhaitez, y compris une interface graphique.
     </td>
    </tr>
+
    <tr class="odd">
+    <td class="lien_article" >
+      <a class="url" href="qemu">Configurer et Lancer une machine virtuelle avec QEMU</a>
+    </td>
+    <td>
+     Il est très facile de créer et utiliser une machine virtuelle avec QEMU.
+     Lorsque vous installez QEMU sur NuTyX, 2 scripts très utiles peuvent alors être utilisés: <b>configvm</b> et <b>startvm</b>.
+     Ces scripts rendent la vie très facile sur QEMU.
+    </td>
+   </tr>
+
+   <tr class="even">
     <td class="lien_article" >
      <a class="url" href="sysvinit">Bref aperçu de SysVinit</a>
     </td>
