@@ -23,6 +23,8 @@
        <b>name</b>: (port-name)
       <li>
        <b>.group-name</b>: only if it is a group package archive. See configuration: 'PKGMK_GROUPS'
+      </li>
+       or
       <li>
        <b>.locale-name</b>: only if it is a locale package archive. See configuration: 'PKGMK_LOCALES'
       <li>
@@ -38,7 +40,7 @@
       <table>
        <caption>
         <EM>
-         Pkgarchive Names Without Compression:
+         Examples of Packages archive names:
         </EM>
        </caption>
        <tr class="sidebar">
@@ -53,15 +55,15 @@
          name: cards, no group</br>
          buildvers: 1462695664</br>
          arch: x86_64</br>
-         ext: cards.tar
+         ext: cards.tar, uncompressed
        <tr class="odd">
         <td>
          cards.devel1462695664x86_64.cards.tar
         <td>
          name: cards,group: devel</br>
          buildvers: 1462695664</br>
-         arch: x86_64</b>
-         ext: cards.tar
+         arch: x86_64</br>
+         ext: cards.tar, uncompressed
        <tr class="even">
         <td>
          cards.man1462695664any.cards.tar
@@ -69,29 +71,16 @@
          name: cards, group: man</br>
          buildvers: 1462695664</br>
          arch: any</br>
-         ext: cards.tar
-     </table>
-     <p>
-     <table>
-       <caption>
-        <EM>
-         Pkgarchive Names With Compression:
-        </EM>
-       </caption>
-        <tr class="sidebar">
-         <th>
-          Package archive Name
-         <th>
-          Description
-        <tr class="even">
+         ext: cards.tar, uncompressed
+       <tr class="odd">
          <td>
           acl.fr1462707691any.cards.tar.xz
          <td>
-          name: acl, group: fr</br>
+          name: acl, locale: fr</br>
           buildvers: 1462707691</br>
           arch: any</br>
           ext: cards.tar, compressed
-        <tr class="odd">
+        <tr class="even">
          <td>
           acl1462707691x86_64.cards.tar.xz
          <td>
@@ -100,29 +89,27 @@
           arch: x86_64</br>
           ext: cards.tar, compressed
      </table>
-    <a name='ID006'></a>
-    <h2>A dependency</h2>
+
+    <a name='ID025'></a>
+    <h2>A group of packages</h2>
      <p>
-      A dependency is a <a href="#ID005">package</a> <b>AAA</b> needed either for running or for compiling another <a href="#ID005">package</a> <b>BBB</b>.
+      A group of packages is made of a set of packages providing a specific usage, for example the <b>devel</b> group provides tools for compilation.
      <p>
-      A good example of a dependency is the <i>qtbase</i> <a href="#ID005">package</a> which is used by many <a href="#ID005">packages</a> of the <i>kde5</i> <a href="#ID010">collection</a>.
-    <a name='ID010'></a>
-    <h2>A collection</h2>
+      In a group, it's the part of the name after the dot which specifies the group.
      <p>
-      A collection is a collection of all the <a href="#ID005">packages</a> that provide a particular set of functions.
+      For example, the <b>gcc.devel</b> package is part of the <b>devel</b> group.
      <p>
-      When you install a base system from the MINI ISO or with the installation <a href="#ID050">scripts</a>,
-      you install the <i>base</i> <a href="#ID010">collection</a>.
+      Each locale is a group as well.
      <p>
-      The <i>gui</i> <a href="#ID010">collection</a>, for example, allows you to install a graphical user interface.
-      For such a graphical user interface, you can choose your favorite windows manager.
+      Most of available packages are split into such groups.
      <p>
-      Under NuTyX, we currently have the <i>base</i>, <i>cli</i> (command-line interface), <i>cli-extra</i>, <i>gui</i> and <i>gui-extra</i> <a href="#ID010">collections</a>.
-     <p>
-       Even if it's not realy usefull, it's possible to install a collection.
-       For example the command:
-       <pre class="command_user"><kbd>get gui</kbd></pre>
-       will install the complete <a href="http://www.nutyx.org/en/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">gui collection</a> and all the dependencies.
+      Current groups include: <a href="./?branch=fixed&arch=x86_64&searchpkg=devel">devel</a>,
+      <a href="./?branch=fixed&arch=x86_64&searchpkg=man">man</a>,
+      <a href="./?branch=fixed&arch=x86_64&searchpkg=doc">doc</a>,
+      lib and <a href="./?branch=fixed&arch=x86_64&searchpkg=service">service</a>
+      and each available locale <b>fr, de, da, it, pt, tr, ru, sv, nn, es, nl and fi</b>.
+
+
     <a name='ID020'></a>
     <h2>A set of packages</h2>
      <p>
@@ -147,29 +134,42 @@
       </ul>
       <p>
        Most of the case a set of package is a graphical interface.
-    <a name='ID025'></a>
-    <h2>A group</h2>
+      <p>
+       To know the list of available package sets:
+        <pre class="command_user"><kbd>cards list --sets</kbd></pre>
+
+    <a name='ID010'></a>
+    <h2>A collection of packages</h2>
      <p>
-      A group of packages is made of a set of packages providing a specific usage, for example the <b>devel</b> group provides tools for compilation.
+      A collection is a collection of all the <a href="#ID005">packages</a> that provide a particular set of functions.
      <p>
-      In a group, it's the part of the name after the dot which specifies the group.
+      When you install a base system from the MINI ISO or with the installation <a href="#ID050">scripts</a>,
+      you install the <i>base</i> <a href="#ID010">collection</a>.
      <p>
-      For example, the <b>gcc.devel</b> package is part of the <b>devel</b> group.
-     <p>      
-      Each locale is a group as well.
+      The <i>gui</i> <a href="#ID010">collection</a>, for example, allows you to install a graphical user interface.
+      For such a graphical user interface, you can choose your favorite windows manager.
      <p>
-      Most of available packages are split into such groups.
+      Under NuTyX, we currently have the <i>base</i>, <i>cli</i> (command-line interface), <i>cli-extra</i>, <i>gui</i> and <i>gui-extra</i> <a href="#ID010">collections</a>.
      <p>
-      Current groups include: <a href="./?branch=fixed&arch=x86_64&searchpkg=devel">devel</a>,
-      <a href="./?branch=fixed&arch=x86_64&searchpkg=man">man</a>,
-      <a href="./?branch=fixed&arch=x86_64&searchpkg=doc">doc</a>,
-      lib and <a href="./?branch=fixed&arch=x86_64&searchpkg=service">service</a>
-      and each available locale <b>fr, de, da, it, pt, tr, ru, sv, nn, es, nl and fi</b>.
+       Even if it's not realy usefull, it's possible to install a collection.
+       For example the command:
+       <pre class="command_user"><kbd>get gui</kbd></pre>
+       will install the complete <a href="http://www.nutyx.org/en/?type=col&branch=rolling&arch=x86_64&searchpkg=gui">gui collection</a> and all the dependencies.
+
     <a name='ID030'></a>
-    <h2>A category</h2>
+    <h2>A category of packages</h2>
      <p>
       A category defines a set of applications which have similar functions.
       A typical example of a category is "Internet", which includes browsers, irc and mail clients, etc.
+
+    <a name='ID006'></a>
+    <h2>A dependency of a package</h2>
+     <p>
+      A dependency is a <a href="#ID005">package</a> <b>AAA</b> needed either for running or for compiling another <a href="#ID005">package</a> <b>BBB</b>.
+     <p>
+      A good example of a dependency is the <i>qtbase</i> <a href="#ID005">package</a> which is used by many <a href="#ID005">packages</a> of the <i>kde5</i> <a href="#ID010">collection</a>.
+
+
     <a name='ID040'></a>
     <h2>The base system</h2>
      <p>
