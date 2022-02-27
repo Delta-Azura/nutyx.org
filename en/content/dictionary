@@ -263,6 +263,8 @@ url="http://downloads.nutyx.org"
 packager="tnut at nutyx dot org"
 
 makedepends=(glib atk)
+run=(gtk-update-icon-cache)
+
 
 name=mypackage
 version=1.0
@@ -276,21 +278,23 @@ cd ${name}-$version
 make
 make DESTDIR=$PKG install
 }</pre>
+
     <a name='ID090'></a>
     <h2>Branchs</h2>
-<ul>
- <li>
-  The "testing" branch
-  <p>
-   This is the testing version of NuTyX.
-  <p>
-   Packages are frequently updated.
- <li>
-  The "rolling" branch
-  <p>
-   The update process is done on a week based.
-   Updates comes from the "testing" branch and are normally reliable.
-  </ul>
+     <ul>
+      <li>
+       The "testing" branch
+       <p>
+        This is the testing version of NuTyX.
+       <p>
+        Packages are frequently updated.
+      <li>
+        The "rolling" branch
+       <p>
+        The update process is done on a week based.
+        A larger update takes place between 1 and 3 months maximum.
+        Updates comes from the "testing" branch and are normally reliable.
+     </ul>
 
     <a name='ID100'></a>
     <h2>A chroot</h2>
@@ -299,8 +303,9 @@ make DESTDIR=$PKG install
      coming from various <a href="#ID070">ports</a>.
      <p>
       It is also needed to ensure that no <a href="#ID006">dependency</a> will be installed from the host operating system.
-    <a name='ID200'></a>
-    <h2>Levels</h2>
+
+   <a name='ID200'></a>
+   <h2>Levels</h2>
      <p>
       When <a href="#ID000">cards</a> compiles a <a href="#ID005">package</a>, it needs to know the level of compilation of that <a href="#ID005">package</a>.
      <p>
@@ -314,6 +319,7 @@ make DESTDIR=$PKG install
 <pre class="output">makedepends=(glib atk pango gtk xorg-libx11)</pre>
      <p>
       in a <a href="#ID080">Pkgfile</a>.
+
    <a name='ID300'></a>
    <h2>Alias</h2>
     <p>

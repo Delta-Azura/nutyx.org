@@ -198,6 +198,7 @@ url="http://downloads.nutyx.org"
 packager="tnut <tnut@nutyx.org>"
 
 makedepends=(glib atk)
+run=(gtk-update-icon-cache)
 
 name=monpaquet
 version=1.0
@@ -214,20 +215,22 @@ cd ${name}-$version
 make
 
 make DESTDIR=$PKG install
-}</pre>     
+}</pre>
+
     <a name='ID090'></a>
     <h2>Les branches</h2>
- <ul>
- <li>
-  La branche "testing"
-  <p>
-   C'est la version de tests de NuTyX. Tous les paquets y sont mis à jour aussi rapidement que possible.
- <li>
-  La branche "rolling"
-  <p>
-   Les mise à jour se font de manière plus espacées cad plus ou moins chaque semaine. 
-   Les mises à jour proviennent de la branche "testing" et sont normalement fiables.
-  </ul>
+     <ul>
+      <li>
+       La branche "testing"
+       <p>
+        C'est la version de tests de NuTyX. Tous les paquets y sont mis à jour aussi rapidement que possible.
+      <li>
+       La branche "rolling"
+       <p>
+        Les mise à jour se font de manière plus espacées cad plus ou moins chaque semaine pour les paquets finaux.
+        Une mise à jour plus importante a lieu entre 1 et 3 mois maximum. 
+        Les mises à jour proviennent de la branche "testing" et sont normalement fiables.
+     </ul>
 
     <a name='ID100'></a>
     <h2>Une chroot</h2>
@@ -246,6 +249,7 @@ make DESTDIR=$PKG install
        <li>
         La chroot vous assure qu'aucune <a href="#ID006">dépendance</a> ne sera installée depuis ou sur le système d'exploitation hôte à votre insu.
      </ul>
+
     <a name='ID200'></a>
     <h2>Les niveaux</h2>
      <p>
