@@ -37,7 +37,7 @@
     <th>
       Size
 
-   <tr class="even">
+   <tr class="odd">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-22.02.4-BASE.iso"><img src="../graphics/downloads/terminal.png" alt="logo console"/><br/>BASE 32bits</a>
       <p> 
@@ -65,7 +65,7 @@
        Approx. 715 MO
    </tr>
 
-   <tr class="odd">
+   <tr class="even">
     <td class="lien_article">
        <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-22.02.4-CDE.iso"><img src="../graphics/downloads/cde.png" alt="logo cde"/><br/>CDE 32bits</a>
      <p>
@@ -81,6 +81,26 @@
       SHA1 32bits: 0a09ffcfbc778b271823394893cdc5220e235f1e
      <p>
       SHA1 64bits: 0ca20d593d2a9ed83961f8261f6b364471dc6fa0
+      <td>
+       Approx. 1.4 GO
+   </tr>
+
+   <tr class="odd">
+    <td class="lien_article">
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_i686-22.02.4-OPENBOX.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo cde"/><br/>OPENBOX 32bits</a>
+    <p>
+     <a class="url" href="https://sourceforge.net/projects/nutyx/files/NuTyX_x86_64-22.02.4-OPENBOX.iso"><img src="../graphics/downloads/Openbox-72.png" alt="logo cde"/><br/>OPENBOX 64bits</a>
+    <td>
+     <p>
+      The ISO contains a OpenBox desktop.
+     <p>
+      Init system: SystemV, Runyx and systemd
+     <p>
+      kernel: Last stable kernel.
+     <p>
+      SHA1 32bits: b1e38358af2e8c50401dca42a68d09e50be9e86f
+     <p>
+      SHA1 64bits: 3f25010800b90da64201b5668372b5895b92da2e
       <td>
        Approx. 1.4 GO
    </tr>
