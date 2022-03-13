@@ -3,11 +3,25 @@
  <h2>Introduction</h2>
   Pour créer une machine virtuelle qemu à l'aide de scripts uniques NuTyX et démarrer la machine virtuelle
 
- <h2>Install Qemu</h2>
+ <h2>Installer Qemu</h2>
   Le paquet est nommé qemu.
   <pre class="command_user"><kbd>sudo cards install qemu</kbd></pre>
  <p>
   Cela installera tous les fichiers nécessaires et 2 scripts "<b>configvm</b> et <b>startvm</b>" qui nous aideront à créer et démarrer une vm.
+
+ <h2>Configurer Qemu</h2>
+  <pre class="output">
+
+Your account needs to be part of the 'kvm' group
+to be able to use qemu:
+
+  usermod -a -G kvm <username>
+ ***</pre>
+ <p>
+ Comme il est écrit en jaune, vous devez vous ajoutez comme membre du groupe <b>kvm</b>. 
+ Dans ce tutoriel, l'utilisateur s'appelle 'francis'
+ <pre class="command_user"><kbd>usermod -a -G kvm francis</kbd></pre>
+ Il ne devrait avoir aucun message au prompt.
 
  <h2>Préparation</h2>
   <p>

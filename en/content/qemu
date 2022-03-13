@@ -9,7 +9,21 @@
  <p>
   This will install all needed files and 2 scripts "<b>configvm</b> and <b>startvm</b>" that will helpe us to create and start a vm.
 
- <h2>Preperation</h2>
+ <h2>Configure Qemu</h2>
+  <pre class="output">
+
+Your account needs to be part of the 'kvm' group
+to be able to use qemu:
+
+  usermod -a -G kvm <username>
+ ***</pre>
+ <p>
+ As it's says in yellow, you needs to be part of the <b>kvm</b> group. 
+ In this tutorial, user's name is james
+ <pre class="command_user"><kbd>usermod -a -G kvm james</kbd></pre>
+ They should me no output at prompt
+
+ <h2>Preparation</h2>
   <p>
    <ul>
      <li>
