@@ -107,7 +107,7 @@
       <a href="./?branch=fixed&arch=x86_64&searchpkg=man">man</a>,
       <a href="./?branch=fixed&arch=x86_64&searchpkg=doc">doc</a>,
       lib and <a href="./?branch=fixed&arch=x86_64&searchpkg=service">service</a>
-      and each available locale <b>fr, de, da, it, pt, tr, ru, sv, nn, es, nl and fi</b>.
+      and each available locale <b>fr, de, da, it, pt, tr, ru, sv, nn, es, nl, fi, etc</b>.
 
 
     <a name='ID020'></a>
